@@ -173,3 +173,19 @@ classes.configure {
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
+
+//...
+repositories {
+//...
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+}
+//...
+dependencies {
+//...
+    implementation fg.deobf("curse.maven:manascore-619025:3775765") //The last set of numbers is the file id. Replace this with the file id of the version you want to use
+}

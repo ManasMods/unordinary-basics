@@ -43,11 +43,11 @@ public class BlockRegistry {
         registry.register("dirt_stairs", () -> new StairBlock(() -> Blocks.DIRT.defaultBlockState(),
             BlockBehaviour.Properties.of(Material.DIRT)
             .strength(2F)
-                .sound(SoundType.WET_GRASS)));
+                .sound(SoundType.ROOTED_DIRT)));
 
         registry.register("dirt_slab", () -> new SlabBlock(BlockBehaviour.Properties.of(Material.DIRT)
                 .strength(2F)
-                .sound(SoundType.WET_GRASS)));
+                .sound(SoundType.ROOTED_DIRT)));
     }
     /**
      * This Method allows to create {@link BlockItem} objects with non-default settings.

@@ -1,0 +1,29 @@
+modLoader="javafml"
+loaderVersion="${forgeLoaderVersion}"
+license="All rights reserved"
+[[mods]]
+modId="vanilla_plus"
+version="${modVersion}"
+displayName="Vanilla Plus"
+logoFile="logo.png"
+
+credits="Something here" #optional
+
+authors="Borniuus, MrProfessor, Nieadni"
+
+description='''
+This mod is designed to enchance the vanilla experience. First adding slabs and stairs of most blocks then QoL changes such as changes to crafting recipes.
+'''
+
+[[dependencies.vanilla_plus]]
+    modId="forge"
+    mandatory=true
+    versionRange="${forgeLoaderVersion}"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.vanilla_plus]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="${minecraftVersionCheck}"
+    ordering="NONE"
+    side="BOTH"
