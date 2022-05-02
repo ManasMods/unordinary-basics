@@ -30,3 +30,4 @@ bin/
 /run/
 /build/
 /.idea/
+/.gradle/
