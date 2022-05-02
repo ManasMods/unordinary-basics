@@ -11,13 +11,12 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 import org.apache.logging.log4j.LogManager;
-
-import java.util.logging.Logger;
+import org.apache.logging.log4j.core.Logger;
 
 @Mod(Vanilla_Plus.MOD_ID)
 public class Vanilla_Plus {
     public static final String MOD_ID = "vanilla_plus";
-    private static final Logger LOGGER = (Logger) LogManager.getLogger();
+    private static final org.apache.logging.log4j.Logger LOGGER = LogManager.getLogger();
     @Getter
     private final Vanilla_PlusCommon proxy;
 
@@ -50,7 +49,7 @@ public class Vanilla_Plus {
      * @return the current Logger instance
      */
     public static Logger getLogger() {
-        return LOGGER;
+        return (Logger) LOGGER;
     }
 }
 

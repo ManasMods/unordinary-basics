@@ -1,18 +1,18 @@
-[02May2022 12:38:00.991] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 1.18, --assetsDir, C:\Users\diabl\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 40.0.52, --fml.mcVersion, 1.18.2, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20220404.173914, --mod, vanilla_plus, --all, --output, C:\Users\diabl\Desktop\vanilla_plus\src\generated\resources, --existing, C:\Users\diabl\Desktop\vanilla_plus\src\main\resources]
-[02May2022 12:38:00.996] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 9.1.3+9.1.3+main.9b69c82a starting: java version 17.0.2 by Eclipse Adoptium
-[02May2022 12:38:01.242] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/diabl/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%2322!/ Service=ModLauncher Env=CLIENT
-[02May2022 12:38:04.420] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[02May2022 12:38:04.450] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\diabl\.gradle\caches\forge_gradle\assets, --assetIndex, 1.18, --mod, vanilla_plus, --all, --output, C:\Users\diabl\Desktop\vanilla_plus\src\generated\resources, --existing, C:\Users\diabl\Desktop\vanilla_plus\src\main\resources]
-[02May2022 12:38:04.571] [main/WARN] [mixin/]: Reference map 'manascore.refmap.json' for manascore.mixins.json could not be read. If this is a development environment you can ignore this message
-[02May2022 12:38:04.779] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [vanilla_plus]
-[02May2022 12:38:13.451] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 40.0.52, for MC 1.18.2 with MCP 20220404.173914
-[02May2022 12:38:13.456] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v40.0.52 Initialized
-[02May2022 12:38:14.518] [main/ERROR] [net.minecraftforge.fml.javafmlmod.FMLModContainer/]: Exception caught during firing event: Cannot get property EnumProperty{name=axis, clazz=class net.minecraft.core.Direction$Axis, values=[x, y, z]} as it does not exist in Block{null}
+[02May2022 13:46:16.716] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 1.18, --assetsDir, C:\Users\diabl\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 40.0.52, --fml.mcVersion, 1.18.2, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20220404.173914, --mod, vanilla_plus, --all, --output, C:\Users\diabl\Desktop\vanilla_plus\src\generated\resources, --existing, C:\Users\diabl\Desktop\vanilla_plus\src\main\resources]
+[02May2022 13:46:16.722] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 9.1.3+9.1.3+main.9b69c82a starting: java version 17.0.2 by Eclipse Adoptium
+[02May2022 13:46:16.942] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/diabl/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%2322!/ Service=ModLauncher Env=CLIENT
+[02May2022 13:46:19.953] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[02May2022 13:46:19.978] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\diabl\.gradle\caches\forge_gradle\assets, --assetIndex, 1.18, --mod, vanilla_plus, --all, --output, C:\Users\diabl\Desktop\vanilla_plus\src\generated\resources, --existing, C:\Users\diabl\Desktop\vanilla_plus\src\main\resources]
+[02May2022 13:46:20.112] [main/WARN] [mixin/]: Reference map 'manascore.refmap.json' for manascore.mixins.json could not be read. If this is a development environment you can ignore this message
+[02May2022 13:46:20.350] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [vanilla_plus]
+[02May2022 13:46:29.016] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 40.0.52, for MC 1.18.2 with MCP 20220404.173914
+[02May2022 13:46:29.028] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v40.0.52 Initialized
+[02May2022 13:46:29.815] [main/ERROR] [net.minecraftforge.fml.javafmlmod.FMLModContainer/]: Exception caught during firing event: Cannot get property EnumProperty{name=axis, clazz=class net.minecraft.core.Direction$Axis, values=[x, y, z]} as it does not exist in Block{null}
 	Index: 1
 	Listeners:
 		0: NORMAL
-		1: ASM: net.minecraftforge.registries.DeferredRegister$EventDispatcher@68d59ec0 handleEvent(Lnet/minecraftforge/event/RegistryEvent$Register;)V
-		2: ASM: net.minecraftforge.registries.DeferredRegister$EventDispatcher@74079599 handleEvent(Lnet/minecraftforge/event/RegistryEvent$Register;)V
+		1: ASM: net.minecraftforge.registries.DeferredRegister$EventDispatcher@5fec59b2 handleEvent(Lnet/minecraftforge/event/RegistryEvent$Register;)V
+		2: ASM: net.minecraftforge.registries.DeferredRegister$EventDispatcher@62ff7232 handleEvent(Lnet/minecraftforge/event/RegistryEvent$Register;)V
 java.lang.IllegalArgumentException: Cannot get property EnumProperty{name=axis, clazz=class net.minecraft.core.Direction$Axis, values=[x, y, z]} as it does not exist in Block{null}
 	at TRANSFORMER/minecraft@1.18.2/net.minecraft.world.level.block.state.StateHolder.getValue(StateHolder.java:98)
 	at TRANSFORMER/minecraft@1.18.2/net.minecraft.world.level.block.Blocks.lambda$log$51(Blocks.java:1063)
@@ -81,8 +81,7 @@ java.lang.IllegalArgumentException: Cannot get property EnumProperty{name=axis, 
 	at MC-BOOTSTRAP/eventbus@5.0.7/net.minecraftforge.eventbus.EventBus.post(EventBus.java:283)
 	at LAYER PLUGIN/javafmllanguage@1.18.2-40.0.52/net.minecraftforge.fml.javafmlmod.FMLModContainer.acceptEvent(FMLModContainer.java:106)
 	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModContainer.lambda$buildTransitionHandler$4(ModContainer.java:107)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run$$$capture(CompletableFuture.java:1804)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
 	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModWorkManager$SyncExecutor.driveOne(ModWorkManager.java:42)
 	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModWorkManager$DrivenExecutor.drive(ModWorkManager.java:26)
 	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModLoader.waitForTransition(ModLoader.java:201)
@@ -108,7 +107,7 @@ java.lang.IllegalArgumentException: Cannot get property EnumProperty{name=axis, 
 	at MC-BOOTSTRAP/cpw.mods.modlauncher@9.1.3/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23)
 	at cpw.mods.bootstraplauncher@1.0.0/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:149)
 
-[02May2022 12:38:14.520] [main/ERROR] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Caught exception during event RegistryEvent.Register<minecraft:block> dispatch for modid vanilla_plus
+[02May2022 13:46:29.820] [main/ERROR] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Caught exception during event RegistryEvent.Register<minecraft:block> dispatch for modid vanilla_plus
 java.lang.IllegalArgumentException: Cannot get property EnumProperty{name=axis, clazz=class net.minecraft.core.Direction$Axis, values=[x, y, z]} as it does not exist in Block{null}
 	at net.minecraft.world.level.block.state.StateHolder.getValue(StateHolder.java:98) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2376!/:?]
 	at net.minecraft.world.level.block.Blocks.lambda$log$51(Blocks.java:1063) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2376!/:?]
@@ -177,8 +176,7 @@ java.lang.IllegalArgumentException: Cannot get property EnumProperty{name=axis, 
 	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:283) ~[eventbus-5.0.7.jar%239!/:?]
 	at net.minecraftforge.fml.javafmlmod.FMLModContainer.acceptEvent(FMLModContainer.java:106) ~[javafmllanguage-1.18.2-40.0.52.jar%2377!/:?]
 	at net.minecraftforge.fml.ModContainer.lambda$buildTransitionHandler$4(ModContainer.java:107) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
-	at java.util.concurrent.CompletableFuture$AsyncRun.run$$$capture(CompletableFuture.java:1804) ~[?:?]
-	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java) ~[?:?]
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[?:?]
 	at net.minecraftforge.fml.ModWorkManager$SyncExecutor.driveOne(ModWorkManager.java:42) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
 	at net.minecraftforge.fml.ModWorkManager$DrivenExecutor.drive(ModWorkManager.java:26) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
 	at net.minecraftforge.fml.ModLoader.waitForTransition(ModLoader.java:201) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
@@ -203,12 +201,12 @@ java.lang.IllegalArgumentException: Cannot get property EnumProperty{name=axis, 
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-9.1.3.jar%2310!/:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-9.1.3.jar%2310!/:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:149) [bootstraplauncher-1.0.0.jar:?]
-[02May2022 12:38:14.660] [main/ERROR] [net.minecraftforge.fml.javafmlmod.FMLModContainer/]: Exception caught during firing event: Registry Object not present: vanilla_plus:oak_log_stairs
+[02May2022 13:46:29.909] [main/ERROR] [net.minecraftforge.fml.javafmlmod.FMLModContainer/]: Exception caught during firing event: Registry Object not present: vanilla_plus:oak_log_stairs
 	Index: 2
 	Listeners:
 		0: NORMAL
-		1: ASM: net.minecraftforge.registries.DeferredRegister$EventDispatcher@68d59ec0 handleEvent(Lnet/minecraftforge/event/RegistryEvent$Register;)V
-		2: ASM: net.minecraftforge.registries.DeferredRegister$EventDispatcher@74079599 handleEvent(Lnet/minecraftforge/event/RegistryEvent$Register;)V
+		1: ASM: net.minecraftforge.registries.DeferredRegister$EventDispatcher@5fec59b2 handleEvent(Lnet/minecraftforge/event/RegistryEvent$Register;)V
+		2: ASM: net.minecraftforge.registries.DeferredRegister$EventDispatcher@62ff7232 handleEvent(Lnet/minecraftforge/event/RegistryEvent$Register;)V
 java.lang.NullPointerException: Registry Object not present: vanilla_plus:oak_log_stairs
 	at java.base/java.util.Objects.requireNonNull(Objects.java:334)
 	at TRANSFORMER/forge@40.0.52/net.minecraftforge.registries.RegistryObject.get(RegistryObject.java:320)
@@ -222,8 +220,7 @@ java.lang.NullPointerException: Registry Object not present: vanilla_plus:oak_lo
 	at MC-BOOTSTRAP/eventbus@5.0.7/net.minecraftforge.eventbus.EventBus.post(EventBus.java:283)
 	at LAYER PLUGIN/javafmllanguage@1.18.2-40.0.52/net.minecraftforge.fml.javafmlmod.FMLModContainer.acceptEvent(FMLModContainer.java:106)
 	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModContainer.lambda$buildTransitionHandler$4(ModContainer.java:107)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run$$$capture(CompletableFuture.java:1804)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
 	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModWorkManager$SyncExecutor.driveOne(ModWorkManager.java:42)
 	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModWorkManager$DrivenExecutor.drive(ModWorkManager.java:26)
 	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModLoader.waitForTransition(ModLoader.java:201)
@@ -249,7 +246,7 @@ java.lang.NullPointerException: Registry Object not present: vanilla_plus:oak_lo
 	at MC-BOOTSTRAP/cpw.mods.modlauncher@9.1.3/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23)
 	at cpw.mods.bootstraplauncher@1.0.0/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:149)
 
-[02May2022 12:38:14.664] [main/ERROR] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Caught exception during event RegistryEvent.Register<minecraft:item> dispatch for modid vanilla_plus
+[02May2022 13:46:29.909] [main/ERROR] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Caught exception during event RegistryEvent.Register<minecraft:item> dispatch for modid vanilla_plus
 java.lang.NullPointerException: Registry Object not present: vanilla_plus:oak_log_stairs
 	at java.util.Objects.requireNonNull(Objects.java:334) ~[?:?]
 	at net.minecraftforge.registries.RegistryObject.get(RegistryObject.java:320) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2375%2381!/:?]
@@ -263,8 +260,7 @@ java.lang.NullPointerException: Registry Object not present: vanilla_plus:oak_lo
 	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:283) ~[eventbus-5.0.7.jar%239!/:?]
 	at net.minecraftforge.fml.javafmlmod.FMLModContainer.acceptEvent(FMLModContainer.java:106) ~[javafmllanguage-1.18.2-40.0.52.jar%2377!/:?]
 	at net.minecraftforge.fml.ModContainer.lambda$buildTransitionHandler$4(ModContainer.java:107) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
-	at java.util.concurrent.CompletableFuture$AsyncRun.run$$$capture(CompletableFuture.java:1804) ~[?:?]
-	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java) ~[?:?]
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[?:?]
 	at net.minecraftforge.fml.ModWorkManager$SyncExecutor.driveOne(ModWorkManager.java:42) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
 	at net.minecraftforge.fml.ModWorkManager$DrivenExecutor.drive(ModWorkManager.java:26) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
 	at net.minecraftforge.fml.ModLoader.waitForTransition(ModLoader.java:201) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
@@ -289,6 +285,6 @@ java.lang.NullPointerException: Registry Object not present: vanilla_plus:oak_lo
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-9.1.3.jar%2310!/:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-9.1.3.jar%2310!/:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:149) [bootstraplauncher-1.0.0.jar:?]
-[02May2022 12:38:14.996] [main/FATAL] [net.minecraftforge.registries.GameData/]: Detected errors during registry event dispatch, rolling back to VANILLA state
-[02May2022 12:38:16.229] [main/FATAL] [net.minecraftforge.registries.GameData/]: Detected errors during registry event dispatch, roll back to VANILLA complete
-[02May2022 12:38:16.230] [main/FATAL] [net.minecraftforge.fml.ModLoader/LOADING]: Failed to complete lifecycle event LOAD_REGISTRIES, 2 errors found
+[02May2022 13:46:29.962] [main/FATAL] [net.minecraftforge.registries.GameData/]: Detected errors during registry event dispatch, rolling back to VANILLA state
+[02May2022 13:46:31.579] [main/FATAL] [net.minecraftforge.registries.GameData/]: Detected errors during registry event dispatch, roll back to VANILLA complete
+[02May2022 13:46:31.582] [main/FATAL] [net.minecraftforge.fml.ModLoader/LOADING]: Failed to complete lifecycle event LOAD_REGISTRIES, 2 errors found
