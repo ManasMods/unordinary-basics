@@ -1,12 +1,8 @@
 package com.manasmods.vanilla_plus;
 
-import com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks;
 import com.manasmods.vanilla_plus.data.Vanilla_PlusBlockStateProvider;
 import com.manasmods.vanilla_plus.data.Vanilla_PlusRecipeProvider;
 import lombok.Getter;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.DataProvider;
-import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
@@ -14,15 +10,14 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
 import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
+import java.util.logging.Logger;
 
 @Mod(Vanilla_Plus.MOD_ID)
 public class Vanilla_Plus {
     public static final String MOD_ID = "vanilla_plus";
-    private static final Logger LOGGER = LogManager.getLogger();
+    private static final Logger LOGGER = (Logger) LogManager.getLogger();
     @Getter
     private final Vanilla_PlusCommon proxy;
 
@@ -44,9 +39,9 @@ public class Vanilla_Plus {
     }
 
     private void generateData(final GatherDataEvent event) {
-        final DataGenerator generator = event.getGenerator();
-        event.getGenerator().addProvider((DataProvider) new Vanilla_PlusBlockStateProvider(generator, event.getExistingFileHelper()));
-        event.getGenerator().addProvider(new Vanilla_PlusRecipeProvider(generator));
+        event.getGenerator().addProvider(new Vanilla_PlusBlockStateProvider(event));
+        //event.getGenerator().addProvider(new Vanilla_PlusItemModelProvider(event));
+        event.getGenerator().addProvider(new Vanilla_PlusRecipeProvider(event));
     }
 
     /**

@@ -9,7 +9,7 @@ public class Vanilla_PlusCreativeTab {
     public static final CreativeModeTab BLOCKS = new CreativeModeTab("tensuratab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(Items.DIRT);
+            return new ItemStack(Items.BRICKS);
         }
     };
 

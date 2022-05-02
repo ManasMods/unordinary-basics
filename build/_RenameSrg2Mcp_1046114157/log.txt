@@ -1,0 +1,15 @@
+Java Launcher: C:\Users\diabl\.gradle\jdks\adoptium-17-x64-hotspot-windows\bin\java.exe
+Arguments: '--task, SRG_TO_MCP, --input, C:\Users\diabl\.gradle\caches\modules-2\files-2.1\curse.maven\manascore-619025\3775765\6518d153369a20cee5c8bf387660049ba0204ef\manascore-619025-3775765.jar, --output, C:\Users\diabl\.gradle\caches\forge_gradle\deobf_dependencies\curse\maven\manascore-619025\3775765_mapped_parchment_2022.03.13-1.18.2\manascore-619025-3775765_mapped_parchment_2022.03.13-1.18.2.jar, --mcp, C:\Users\diabl\.gradle\caches\parchmentgradle\org\parchmentmc\data\parchment-1.18.2\2022.03.13\parchment-1.18.2-2022.03.13.zip, --strip-signatures'
+Classpath:
+ - C:\Users\diabl\.gradle\caches\forge_gradle\maven_downloader\net\minecraftforge\installertools\1.2.8\installertools-1.2.8-fatjar.jar
+Working directory: C:\Users\diabl\Desktop\vanilla_plus\build\_RenameSrg2Mcp_1046114157
+Main class: net.minecraftforge.installertools.ConsoleTool
+====================================
+Task: SRG_TO_MCP
+Input:  C:\Users\diabl\.gradle\caches\modules-2\files-2.1\curse.maven\manascore-619025\3775765\6518d153369a20cee5c8bf387660049ba0204ef\manascore-619025-3775765.jar
+Output: C:\Users\diabl\.gradle\caches\forge_gradle\deobf_dependencies\curse\maven\manascore-619025\3775765_mapped_parchment_2022.03.13-1.18.2\manascore-619025-3775765_mapped_parchment_2022.03.13-1.18.2.jar
+MCP:    C:\Users\diabl\.gradle\caches\parchmentgradle\org\parchmentmc\data\parchment-1.18.2\2022.03.13\parchment-1.18.2-2022.03.13.zip
+Loading MCP Data
+Processing ZIP file
+Stripped Manifest of sha digests
+Process complete

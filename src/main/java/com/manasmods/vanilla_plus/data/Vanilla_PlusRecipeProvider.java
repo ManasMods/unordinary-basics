@@ -1,22 +1,11 @@
 package com.manasmods.vanilla_plus.data;
 
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.DataProvider;
-import net.minecraft.data.HashCache;
+import com.github.manasmods.manascore.data.gen.RecipeProvider;
+import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
-import java.io.IOException;
+public abstract class Vanilla_PlusRecipeProvider extends RecipeProvider {
 
-public class Vanilla_PlusRecipeProvider implements DataProvider {
-    public Vanilla_PlusRecipeProvider(DataGenerator generator) {
-    }
-
-    @Override
-    public void run(HashCache pCache) throws IOException {
-
-    }
-
-    @Override
-    public String getName() {
-        return null;
+    public Vanilla_PlusRecipeProvider(GatherDataEvent gatherDataEvent) {
+        super(gatherDataEvent);
     }
 }

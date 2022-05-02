@@ -1,173 +1,197 @@
-[30Apr2022 18:54:55.533] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 1.18, --assetsDir, C:\Users\diabl\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 40.0.52, --fml.mcVersion, 1.18.2, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20220404.173914, --mod, vanilla_plus, --all, --output, C:\Users\diabl\Desktop\vanilla_plus\src\generated\resources, --existing, C:\Users\diabl\Desktop\vanilla_plus\src\main\resources]
-[30Apr2022 18:54:55.543] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 9.1.3+9.1.3+main.9b69c82a starting: java version 17.0.2 by Eclipse Adoptium
-[30Apr2022 18:54:55.574] [main/DEBUG] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Found launch services [fmlclientdev,forgeclient,minecraft,forgegametestserverdev,fmlserveruserdev,fmlclient,fmldatauserdev,forgeserverdev,forgeserveruserdev,forgeclientdev,forgeclientuserdev,forgeserver,forgedatadev,fmlserver,fmlclientuserdev,fmlserverdev,forgedatauserdev,testharness,forgegametestserveruserdev]
-[30Apr2022 18:54:55.596] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Found naming services : [srgtomcp]
-[30Apr2022 18:54:55.616] [main/DEBUG] [cpw.mods.modlauncher.LaunchPluginHandler/MODLAUNCHER]: Found launch plugins: [mixin,eventbus,slf4jfixer,object_holder_definalize,runtime_enum_extender,capability_token_subclass,accesstransformer,runtimedistcleaner]
-[30Apr2022 18:54:55.641] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Discovering transformation services
-[30Apr2022 18:54:55.649] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Found additional transformation services from discovery services: java.util.stream.ReferencePipeline$3@3ecd267f
-[30Apr2022 18:54:55.683] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Found transformer services : [mixin,fml]
-[30Apr2022 18:54:55.685] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services loading
-[30Apr2022 18:54:55.691] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loading service mixin
-[30Apr2022 18:54:55.693] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loaded service mixin
-[30Apr2022 18:54:55.696] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loading service fml
-[30Apr2022 18:54:55.701] [main/DEBUG] [net.minecraftforge.fml.loading.LauncherVersion/CORE]: Found FMLLauncher version 1.0
-[30Apr2022 18:54:55.703] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML 1.0 loading
-[30Apr2022 18:54:55.704] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found ModLauncher version : 9.1.3+9.1.3+main.9b69c82a
-[30Apr2022 18:54:55.707] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found AccessTransformer version : 8.0.4+66+master.c09db6d7
-[30Apr2022 18:54:55.710] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found EventBus version : 5.0.7+5.0.7+master.6d3407cc
-[30Apr2022 18:54:55.711] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Found Runtime Dist Cleaner
-[30Apr2022 18:54:55.722] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found CoreMod version : 5.0.2+5.0.2+master.303343f8
-[30Apr2022 18:54:55.723] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Found ForgeSPI package implementation version 4.0.11+4.0.11+master.ce88bbba
-[30Apr2022 18:54:55.726] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Found ForgeSPI package specification 4
-[30Apr2022 18:54:55.729] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loaded service fml
-[30Apr2022 18:54:55.731] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Configuring option handling for services
-[30Apr2022 18:54:55.741] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services initializing
-[30Apr2022 18:54:55.743] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service mixin
-[30Apr2022 18:54:55.815] [main/DEBUG] [mixin/]: MixinService [ModLauncher] was successfully booted in cpw.mods.cl.ModuleClassLoader@35a50a4c
-[30Apr2022 18:54:55.846] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/diabl/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%2322!/ Service=ModLauncher Env=CLIENT
-[30Apr2022 18:54:55.852] [main/DEBUG] [mixin/]: Initialising Mixin Platform Manager
-[30Apr2022 18:54:55.853] [main/DEBUG] [mixin/]: Adding mixin platform agents for container ModLauncher Root Container(ModLauncher:4f56a0a2)
-[30Apr2022 18:54:55.854] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for ModLauncher Root Container(ModLauncher:4f56a0a2)
-[30Apr2022 18:54:55.856] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container ModLauncher Root Container(ModLauncher:4f56a0a2)
-[30Apr2022 18:54:55.857] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for ModLauncher Root Container(ModLauncher:4f56a0a2)
-[30Apr2022 18:54:55.860] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container ModLauncher Root Container(ModLauncher:4f56a0a2)
-[30Apr2022 18:54:55.865] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service mixin
-[30Apr2022 18:54:55.868] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service fml
-[30Apr2022 18:54:55.870] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Setting up basic FML game directories
-[30Apr2022 18:54:55.880] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing GAMEDIR directory : C:\Users\diabl\Desktop\vanilla_plus\run
-[30Apr2022 18:54:55.881] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path GAMEDIR is C:\Users\diabl\Desktop\vanilla_plus\run
-[30Apr2022 18:54:55.882] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing MODSDIR directory : C:\Users\diabl\Desktop\vanilla_plus\run\mods
-[30Apr2022 18:54:55.882] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path MODSDIR is C:\Users\diabl\Desktop\vanilla_plus\run\mods
-[30Apr2022 18:54:55.883] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing CONFIGDIR directory : C:\Users\diabl\Desktop\vanilla_plus\run\config
-[30Apr2022 18:54:55.885] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path CONFIGDIR is C:\Users\diabl\Desktop\vanilla_plus\run\config
-[30Apr2022 18:54:55.887] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path FMLCONFIG is C:\Users\diabl\Desktop\vanilla_plus\run\config\fml.toml
-[30Apr2022 18:54:55.887] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Loading configuration
-[30Apr2022 18:54:55.960] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing default config directory directory : C:\Users\diabl\Desktop\vanilla_plus\run\defaultconfigs
-[30Apr2022 18:54:55.961] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Preparing ModFile
-[30Apr2022 18:54:55.968] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Preparing launch handler
-[30Apr2022 18:54:55.969] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Using forgedatauserdev as launch service
-[30Apr2022 18:54:56.010] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Received command line version data  : VersionInfo[forgeVersion=40.0.52, mcVersion=1.18.2, mcpVersion=20220404.173914, forgeGroup=net.minecraftforge]
-[30Apr2022 18:54:56.016] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service fml
-[30Apr2022 18:54:56.018] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Current naming domain is 'mcp'
-[30Apr2022 18:54:56.022] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Identified name mapping providers {srg=srgtomcp:1234}
-[30Apr2022 18:54:56.022] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services begin scanning
-[30Apr2022 18:54:56.025] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service mixin
-[30Apr2022 18:54:56.030] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service mixin
-[30Apr2022 18:54:56.031] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service fml
-[30Apr2022 18:54:56.042] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Initiating mod scan
-[30Apr2022 18:54:56.105] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModListHandler/CORE]: Found mod coordinates from lists: []
-[30Apr2022 18:54:56.117] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer/CORE]: Found Mod Locators : (mods folder:null),(maven libs:null),(exploded directory:null),(minecraft:null),(userdev classpath:null)
-[30Apr2022 18:54:56.146] [main/DEBUG] [net.minecraftforge.fml.loading.targets.CommonLaunchHandler/CORE]: Got mod coordinates vanilla_plus%%C:/Users/diabl/Desktop/vanilla_plus\build\resources\main;vanilla_plus%%C:/Users/diabl/Desktop/vanilla_plus\build\classes\java\main from env
-[30Apr2022 18:54:56.153] [main/DEBUG] [net.minecraftforge.fml.loading.targets.CommonLaunchHandler/CORE]: Found supplied mod coordinates [{vanilla_plus=[C:\Users\diabl\Desktop\vanilla_plus\build\resources\main, C:\Users\diabl\Desktop\vanilla_plus\build\classes\java\main]}]
-[30Apr2022 18:54:56.856] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar with {minecraft} mods - versions {1.18.2}
-[30Apr2022 18:54:56.869] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\diabl\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2\forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar with languages [LanguageSpec[languageName=minecraft, acceptedVersions=1]]
-[30Apr2022 18:54:56.872] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\diabl\Desktop\vanilla_plus\build\resources\main
-[30Apr2022 18:54:56.891] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file main with {vanilla_plus} mods - versions {0.0.0.1}
-[30Apr2022 18:54:56.892] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\diabl\Desktop\vanilla_plus\build\resources\main with languages [LanguageSpec[languageName=javafml, acceptedVersions=[40,)]]
-[30Apr2022 18:54:56.894] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate /
-[30Apr2022 18:54:56.899] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file  with {forge} mods - versions {40.0.52}
-[30Apr2022 18:54:56.901] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file / with languages [LanguageSpec[languageName=javafml, acceptedVersions=[24,]]]
-[30Apr2022 18:54:56.995] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod field_to_method with Javascript path coremods/field_to_method.js
-[30Apr2022 18:54:56.995] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod field_to_instanceof with Javascript path coremods/field_to_instanceof.js
-[30Apr2022 18:54:56.996] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod add_bouncer_method with Javascript path coremods/add_bouncer_method.js
-[30Apr2022 18:54:56.996] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod registry_object_binary_compat with Javascript path coremods/registry_object_binary_compat.js
-[30Apr2022 18:54:56.996] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/field_to_method.js
-[30Apr2022 18:54:56.997] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/field_to_instanceof.js
-[30Apr2022 18:54:56.997] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/add_bouncer_method.js
-[30Apr2022 18:54:56.997] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/registry_object_binary_compat.js
-[30Apr2022 18:54:57.004] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service fml
-[30Apr2022 18:54:57.025] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found 2 language providers
-[30Apr2022 18:54:57.029] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found language provider minecraft, version 1.0
-[30Apr2022 18:54:57.030] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found language provider javafml, version 40
-[30Apr2022 18:54:57.046] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/]: Configured system mods: [minecraft, forge]
-[30Apr2022 18:54:57.046] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/]: Found system mod: minecraft
-[30Apr2022 18:54:57.046] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/]: Found system mod: forge
-[30Apr2022 18:54:57.054] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/LOADING]: Found 2 mod requirements (2 mandatory, 0 optional)
-[30Apr2022 18:54:57.057] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/LOADING]: Found 0 mod requirements missing (0 mandatory, 0 optional)
-[30Apr2022 18:54:58.280] [main/DEBUG] [net.minecraftforge.fml.loading.MCPNamingService/CORE]: Loaded 28628 method mappings from methods.csv
-[30Apr2022 18:54:58.308] [main/DEBUG] [net.minecraftforge.fml.loading.MCPNamingService/CORE]: Loaded 27081 field mappings from fields.csv
-[30Apr2022 18:54:58.398] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services loading transformers
-[30Apr2022 18:54:58.407] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformers for transformation service mixin
-[30Apr2022 18:54:58.408] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformers for transformation service mixin
-[30Apr2022 18:54:58.408] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformers for transformation service fml
-[30Apr2022 18:54:58.408] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Loading coremod transformers
-[30Apr2022 18:54:58.409] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/field_to_method.js
-[30Apr2022 18:54:58.919] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
-[30Apr2022 18:54:58.920] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/field_to_instanceof.js
-[30Apr2022 18:54:59.056] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
-[30Apr2022 18:54:59.057] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/add_bouncer_method.js
-[30Apr2022 18:54:59.149] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
-[30Apr2022 18:54:59.151] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/registry_object_binary_compat.js
-[30Apr2022 18:54:59.246] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
-[30Apr2022 18:54:59.261] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@14fa92af to Target : CLASS {Lnet/minecraft/world/effect/MobEffectInstance;} {} {V}
-[30Apr2022 18:54:59.265] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@761956ac to Target : CLASS {Lnet/minecraft/world/level/block/LiquidBlock;} {} {V}
-[30Apr2022 18:54:59.266] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@71978f46 to Target : CLASS {Lnet/minecraft/world/item/BucketItem;} {} {V}
-[30Apr2022 18:54:59.267] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@304d0259 to Target : CLASS {Lnet/minecraft/world/level/block/StairBlock;} {} {V}
-[30Apr2022 18:54:59.268] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@1d23ff23 to Target : CLASS {Lnet/minecraft/world/level/block/FlowerPotBlock;} {} {V}
-[30Apr2022 18:54:59.270] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@2133661d to Target : CLASS {Lnet/minecraft/world/item/ItemStack;} {} {V}
-[30Apr2022 18:54:59.271] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@6c9320c2 to Target : CLASS {Lnet/minecraft/network/play/client/CClientSettingsPacket;} {} {V}
-[30Apr2022 18:54:59.271] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@3414a8c3 to Target : CLASS {Lnet/minecraftforge/registries/RegistryObject;} {} {V}
-[30Apr2022 18:54:59.272] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformers for transformation service fml
-[30Apr2022 18:55:00.471] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
-[30Apr2022 18:55:00.472] [main/DEBUG] [mixin/]: Processing launch tasks for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
-[30Apr2022 18:55:00.472] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(minecraft)
-[30Apr2022 18:55:00.473] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(minecraft)
-[30Apr2022 18:55:00.473] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(minecraft)
-[30Apr2022 18:55:00.473] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(minecraft)
-[30Apr2022 18:55:00.473] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(minecraft)
-[30Apr2022 18:55:00.473] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(minecraft)]
-[30Apr2022 18:55:00.474] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(vanilla_plus)
-[30Apr2022 18:55:00.474] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(vanilla_plus)
-[30Apr2022 18:55:00.475] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(vanilla_plus)
-[30Apr2022 18:55:00.475] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(vanilla_plus)
-[30Apr2022 18:55:00.475] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(vanilla_plus)
-[30Apr2022 18:55:00.476] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(vanilla_plus)]
-[30Apr2022 18:55:00.476] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(forge)
-[30Apr2022 18:55:00.476] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(forge)
-[30Apr2022 18:55:00.477] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(forge)
-[30Apr2022 18:55:00.478] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(forge)
-[30Apr2022 18:55:00.478] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(forge)
-[30Apr2022 18:55:00.478] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(forge)]
-[30Apr2022 18:55:00.478] [main/DEBUG] [mixin/]: inject() running with 4 agents
-[30Apr2022 18:55:00.480] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
-[30Apr2022 18:55:00.480] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(minecraft)]
-[30Apr2022 18:55:00.481] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(vanilla_plus)]
-[30Apr2022 18:55:00.481] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(forge)]
-[30Apr2022 18:55:00.521] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\diabl\.gradle\caches\forge_gradle\assets, --assetIndex, 1.18, --mod, vanilla_plus, --all, --output, C:\Users\diabl\Desktop\vanilla_plus\src\generated\resources, --existing, C:\Users\diabl\Desktop\vanilla_plus\src\main\resources]
-[30Apr2022 18:55:01.025] [main/DEBUG] [mixin/]: Error cleaning class output directory: .mixin.out
-[30Apr2022 18:55:01.032] [main/DEBUG] [mixin/]: Preparing mixins for MixinEnvironment[DEFAULT]
-[30Apr2022 18:55:01.047] [main/DEBUG] [io.netty.util.internal.logging.InternalLoggerFactory/]: Using SLF4J as the default logging framework
-[30Apr2022 18:55:01.058] [main/DEBUG] [io.netty.util.ResourceLeakDetector/]: -Dio.netty.leakDetection.level: simple
-[30Apr2022 18:55:01.059] [main/DEBUG] [io.netty.util.ResourceLeakDetector/]: -Dio.netty.leakDetection.targetRecords: 4
-[30Apr2022 18:55:01.286] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [vanilla_plus]
-[30Apr2022 18:55:02.996] [main/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/LiquidBlock
-[30Apr2022 18:55:03.241] [main/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/StairBlock
-[30Apr2022 18:55:03.476] [main/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/FlowerPotBlock
-[30Apr2022 18:55:05.953] [main/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/item/ItemStack
-[30Apr2022 18:55:12.566] [main/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/item/BucketItem
-[30Apr2022 18:55:12.951] [main/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/effect/MobEffectInstance
-[30Apr2022 18:55:14.949] [main/DEBUG] [net.minecraftforge.fml.ModWorkManager/LOADING]: Using 4 threads for parallel mod-loading
-[30Apr2022 18:55:15.060] [main/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@78cd163b - got cpw.mods.cl.ModuleClassLoader@619bd14c
-[30Apr2022 18:55:15.060] [main/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for com.manasmods.vanilla_plus.Vanilla_Plus
-[30Apr2022 18:55:15.071] [main/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@78cd163b - got cpw.mods.cl.ModuleClassLoader@619bd14c
-[30Apr2022 18:55:15.072] [main/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for net.minecraftforge.common.ForgeMod
-[30Apr2022 18:55:15.480] [modloading-worker-0/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraftforge/registries/RegistryObject
-[30Apr2022 18:55:15.737] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.forge.ForgeVersion/CORE]: Forge Version package package net.minecraftforge.versions.forge, Forge, version 40.0 from cpw.mods.modlauncher.TransformingClassLoader@78cd163b
-[30Apr2022 18:55:15.738] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.forge.ForgeVersion/CORE]: Found Forge version 40.0.52
-[30Apr2022 18:55:15.738] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.forge.ForgeVersion/CORE]: Found Forge spec 40.0
-[30Apr2022 18:55:15.738] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.forge.ForgeVersion/CORE]: Found Forge group net.minecraftforge
-[30Apr2022 18:55:15.739] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.mcp.MCPVersion/CORE]: MCP Version package package net.minecraftforge.versions.mcp, Minecraft, version 1.18.2 from cpw.mods.modlauncher.TransformingClassLoader@78cd163b
-[30Apr2022 18:55:15.739] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.mcp.MCPVersion/CORE]: Found MC version information 1.18.2
-[30Apr2022 18:55:15.739] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.mcp.MCPVersion/CORE]: Found MCP version information 20220404.173914
-[30Apr2022 18:55:15.739] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 40.0.52, for MC 1.18.2 with MCP 20220404.173914
-[30Apr2022 18:55:15.742] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v40.0.52 Initialized
-[30Apr2022 18:55:15.879] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for vanilla_plus
-[30Apr2022 18:55:16.078] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: -Dio.netty.noUnsafe: false
-[30Apr2022 18:55:16.079] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: Java version: 17
-[30Apr2022 18:55:16.080] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: sun.misc.Unsafe.theUnsafe: available
-[30Apr2022 18:55:16.081] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: sun.misc.Unsafe.copyMemory: available
-[30Apr2022 18:55:16.082] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.Buffer.address: available
-[30Apr2022 18:55:16.083] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: direct buffer constructor: unavailable
+[02May2022 12:38:00.991] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 1.18, --assetsDir, C:\Users\diabl\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 40.0.52, --fml.mcVersion, 1.18.2, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20220404.173914, --mod, vanilla_plus, --all, --output, C:\Users\diabl\Desktop\vanilla_plus\src\generated\resources, --existing, C:\Users\diabl\Desktop\vanilla_plus\src\main\resources]
+[02May2022 12:38:00.996] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 9.1.3+9.1.3+main.9b69c82a starting: java version 17.0.2 by Eclipse Adoptium
+[02May2022 12:38:01.027] [main/DEBUG] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Found launch services [fmlclientdev,forgeclient,minecraft,forgegametestserverdev,fmlserveruserdev,fmlclient,fmldatauserdev,forgeserverdev,forgeserveruserdev,forgeclientdev,forgeclientuserdev,forgeserver,forgedatadev,fmlserver,fmlclientuserdev,fmlserverdev,forgedatauserdev,testharness,forgegametestserveruserdev]
+[02May2022 12:38:01.059] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Found naming services : [srgtomcp]
+[02May2022 12:38:01.087] [main/DEBUG] [cpw.mods.modlauncher.LaunchPluginHandler/MODLAUNCHER]: Found launch plugins: [mixin,eventbus,slf4jfixer,object_holder_definalize,runtime_enum_extender,capability_token_subclass,accesstransformer,runtimedistcleaner]
+[02May2022 12:38:01.114] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Discovering transformation services
+[02May2022 12:38:01.121] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Found additional transformation services from discovery services: java.util.stream.ReferencePipeline$3@a5bd950
+[02May2022 12:38:01.148] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Found transformer services : [mixin,fml]
+[02May2022 12:38:01.149] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services loading
+[02May2022 12:38:01.150] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loading service mixin
+[02May2022 12:38:01.152] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loaded service mixin
+[02May2022 12:38:01.152] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loading service fml
+[02May2022 12:38:01.155] [main/DEBUG] [net.minecraftforge.fml.loading.LauncherVersion/CORE]: Found FMLLauncher version 1.0
+[02May2022 12:38:01.156] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML 1.0 loading
+[02May2022 12:38:01.156] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found ModLauncher version : 9.1.3+9.1.3+main.9b69c82a
+[02May2022 12:38:01.158] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found AccessTransformer version : 8.0.4+66+master.c09db6d7
+[02May2022 12:38:01.159] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found EventBus version : 5.0.7+5.0.7+master.6d3407cc
+[02May2022 12:38:01.160] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Found Runtime Dist Cleaner
+[02May2022 12:38:01.163] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: FML found CoreMod version : 5.0.2+5.0.2+master.303343f8
+[02May2022 12:38:01.164] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Found ForgeSPI package implementation version 4.0.11+4.0.11+master.ce88bbba
+[02May2022 12:38:01.164] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Found ForgeSPI package specification 4
+[02May2022 12:38:01.168] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Loaded service fml
+[02May2022 12:38:01.170] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Configuring option handling for services
+[02May2022 12:38:01.179] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services initializing
+[02May2022 12:38:01.180] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service mixin
+[02May2022 12:38:01.218] [main/DEBUG] [mixin/]: MixinService [ModLauncher] was successfully booted in cpw.mods.cl.ModuleClassLoader@5427c60c
+[02May2022 12:38:01.242] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/diabl/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%2322!/ Service=ModLauncher Env=CLIENT
+[02May2022 12:38:01.255] [main/DEBUG] [mixin/]: Initialising Mixin Platform Manager
+[02May2022 12:38:01.256] [main/DEBUG] [mixin/]: Adding mixin platform agents for container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[02May2022 12:38:01.259] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for ModLauncher Root Container(ModLauncher:4f56a0a2)
+[02May2022 12:38:01.264] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[02May2022 12:38:01.267] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for ModLauncher Root Container(ModLauncher:4f56a0a2)
+[02May2022 12:38:01.268] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container ModLauncher Root Container(ModLauncher:4f56a0a2)
+[02May2022 12:38:01.272] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service mixin
+[02May2022 12:38:01.272] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformation service fml
+[02May2022 12:38:01.273] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Setting up basic FML game directories
+[02May2022 12:38:01.276] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing GAMEDIR directory : C:\Users\diabl\Desktop\vanilla_plus\run
+[02May2022 12:38:01.278] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path GAMEDIR is C:\Users\diabl\Desktop\vanilla_plus\run
+[02May2022 12:38:01.282] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing MODSDIR directory : C:\Users\diabl\Desktop\vanilla_plus\run\mods
+[02May2022 12:38:01.284] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path MODSDIR is C:\Users\diabl\Desktop\vanilla_plus\run\mods
+[02May2022 12:38:01.286] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing CONFIGDIR directory : C:\Users\diabl\Desktop\vanilla_plus\run\config
+[02May2022 12:38:01.286] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path CONFIGDIR is C:\Users\diabl\Desktop\vanilla_plus\run\config
+[02May2022 12:38:01.287] [main/DEBUG] [net.minecraftforge.fml.loading.FMLPaths/CORE]: Path FMLCONFIG is C:\Users\diabl\Desktop\vanilla_plus\run\config\fml.toml
+[02May2022 12:38:01.287] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Loading configuration
+[02May2022 12:38:01.361] [main/DEBUG] [net.minecraftforge.fml.loading.FileUtils/CORE]: Found existing default config directory directory : C:\Users\diabl\Desktop\vanilla_plus\run\defaultconfigs
+[02May2022 12:38:01.361] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Preparing ModFile
+[02May2022 12:38:01.365] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Preparing launch handler
+[02May2022 12:38:01.366] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Using forgedatauserdev as launch service
+[02May2022 12:38:01.409] [main/DEBUG] [net.minecraftforge.fml.loading.FMLLoader/CORE]: Received command line version data  : VersionInfo[forgeVersion=40.0.52, mcVersion=1.18.2, mcpVersion=20220404.173914, forgeGroup=net.minecraftforge]
+[02May2022 12:38:01.413] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformation service fml
+[02May2022 12:38:01.414] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Current naming domain is 'mcp'
+[02May2022 12:38:01.416] [main/DEBUG] [cpw.mods.modlauncher.NameMappingServiceHandler/MODLAUNCHER]: Identified name mapping providers {srg=srgtomcp:1234}
+[02May2022 12:38:01.418] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services begin scanning
+[02May2022 12:38:01.420] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service mixin
+[02May2022 12:38:01.421] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service mixin
+[02May2022 12:38:01.422] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Beginning scan trigger - transformation service fml
+[02May2022 12:38:01.422] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Initiating mod scan
+[02May2022 12:38:01.441] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModListHandler/CORE]: Found mod coordinates from lists: []
+[02May2022 12:38:01.443] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModDiscoverer/CORE]: Found Mod Locators : (mods folder:null),(maven libs:null),(exploded directory:null),(minecraft:null),(userdev classpath:null)
+[02May2022 12:38:01.451] [main/DEBUG] [net.minecraftforge.fml.loading.targets.CommonLaunchHandler/CORE]: Got mod coordinates vanilla_plus%%C:/Users/diabl/Desktop/vanilla_plus\build\resources\main;vanilla_plus%%C:/Users/diabl/Desktop/vanilla_plus\build\classes\java\main from env
+[02May2022 12:38:01.453] [main/DEBUG] [net.minecraftforge.fml.loading.targets.CommonLaunchHandler/CORE]: Found supplied mod coordinates [{vanilla_plus=[C:\Users\diabl\Desktop\vanilla_plus\build\resources\main, C:\Users\diabl\Desktop\vanilla_plus\build\classes\java\main]}]
+[02May2022 12:38:01.845] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar with {minecraft} mods - versions {1.18.2}
+[02May2022 12:38:01.849] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\diabl\.gradle\caches\forge_gradle\minecraft_user_repo\net\minecraftforge\forge\1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2\forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar with languages [LanguageSpec[languageName=minecraft, acceptedVersions=1]]
+[02May2022 12:38:01.851] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\diabl\Desktop\vanilla_plus\build\resources\main
+[02May2022 12:38:01.860] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file main with {vanilla_plus} mods - versions {0.0.0.1}
+[02May2022 12:38:01.861] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\diabl\Desktop\vanilla_plus\build\resources\main with languages [LanguageSpec[languageName=javafml, acceptedVersions=[40,)]]
+[02May2022 12:38:01.862] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate /
+[02May2022 12:38:01.867] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file  with {forge} mods - versions {40.0.52}
+[02May2022 12:38:01.867] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file / with languages [LanguageSpec[languageName=javafml, acceptedVersions=[24,]]]
+[02May2022 12:38:01.926] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod field_to_method with Javascript path coremods/field_to_method.js
+[02May2022 12:38:01.928] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod field_to_instanceof with Javascript path coremods/field_to_instanceof.js
+[02May2022 12:38:01.929] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod add_bouncer_method with Javascript path coremods/add_bouncer_method.js
+[02May2022 12:38:01.930] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Found coremod registry_object_binary_compat with Javascript path coremods/registry_object_binary_compat.js
+[02May2022 12:38:01.931] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/field_to_method.js
+[02May2022 12:38:01.931] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/field_to_instanceof.js
+[02May2022 12:38:01.931] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/add_bouncer_method.js
+[02May2022 12:38:01.931] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Found coremod coremods/registry_object_binary_compat.js
+[02May2022 12:38:01.932] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\diabl\.gradle\caches\forge_gradle\deobf_dependencies\curse\maven\manascore-619025\3775765_mapped_parchment_2022.03.13-1.18.2\manascore-619025-3775765_mapped_parchment_2022.03.13-1.18.2.jar
+[02May2022 12:38:01.933] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file manascore-619025-3775765_mapped_parchment_2022.03.13-1.18.2.jar with {manascore} mods - versions {0.0.0.4}
+[02May2022 12:38:01.934] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\diabl\.gradle\caches\forge_gradle\deobf_dependencies\curse\maven\manascore-619025\3775765_mapped_parchment_2022.03.13-1.18.2\manascore-619025-3775765_mapped_parchment_2022.03.13-1.18.2.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[40,)]]
+[02May2022 12:38:01.934] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Considering mod file candidate C:\Users\diabl\.gradle\caches\forge_gradle\deobf_dependencies\curse\maven\manascore-619025\3775765_mapped_parchment_2022.03.13-1.18.2\manascore-619025-3775765_mapped_parchment_2022.03.13-1.18.2.jar
+[02May2022 12:38:01.935] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFileInfo/LOADING]: Found valid mod file manascore-619025-3775765_mapped_parchment_2022.03.13-1.18.2.jar with {manascore} mods - versions {0.0.0.4}
+[02May2022 12:38:01.936] [main/DEBUG] [net.minecraftforge.fml.loading.moddiscovery.ModFile/LOADING]: Loading mod file C:\Users\diabl\.gradle\caches\forge_gradle\deobf_dependencies\curse\maven\manascore-619025\3775765_mapped_parchment_2022.03.13-1.18.2\manascore-619025-3775765_mapped_parchment_2022.03.13-1.18.2.jar with languages [LanguageSpec[languageName=javafml, acceptedVersions=[40,)]]
+[02May2022 12:38:01.939] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: End scan trigger - transformation service fml
+[02May2022 12:38:01.961] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found 2 language providers
+[02May2022 12:38:01.962] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found language provider minecraft, version 1.0
+[02May2022 12:38:01.964] [main/DEBUG] [net.minecraftforge.fml.loading.LanguageLoadingProvider/CORE]: Found language provider javafml, version 40
+[02May2022 12:38:01.970] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/]: Configured system mods: [minecraft, forge]
+[02May2022 12:38:01.971] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/]: Found system mod: minecraft
+[02May2022 12:38:01.971] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/]: Found system mod: forge
+[02May2022 12:38:01.972] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/]: Found 2 mods for first modid manascore, selecting most recent based on version data
+[02May2022 12:38:01.973] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/]: Selected file manascore-619025-3775765_mapped_parchment_2022.03.13-1.18.2.jar for modid manascore with version 0.0.0.4
+[02May2022 12:38:01.978] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/LOADING]: Found 2 mod requirements (2 mandatory, 0 optional)
+[02May2022 12:38:01.979] [main/DEBUG] [net.minecraftforge.fml.loading.ModSorter/LOADING]: Found 0 mod requirements missing (0 mandatory, 0 optional)
+[02May2022 12:38:02.835] [main/DEBUG] [net.minecraftforge.fml.loading.MCPNamingService/CORE]: Loaded 28628 method mappings from methods.csv
+[02May2022 12:38:02.858] [main/DEBUG] [net.minecraftforge.fml.loading.MCPNamingService/CORE]: Loaded 27081 field mappings from fields.csv
+[02May2022 12:38:02.915] [main/DEBUG] [cpw.mods.modlauncher.TransformationServicesHandler/MODLAUNCHER]: Transformation services loading transformers
+[02May2022 12:38:02.916] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformers for transformation service mixin
+[02May2022 12:38:02.917] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformers for transformation service mixin
+[02May2022 12:38:02.918] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initializing transformers for transformation service fml
+[02May2022 12:38:02.918] [main/DEBUG] [net.minecraftforge.fml.loading.FMLServiceProvider/CORE]: Loading coremod transformers
+[02May2022 12:38:02.919] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/field_to_method.js
+[02May2022 12:38:03.192] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
+[02May2022 12:38:03.192] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/field_to_instanceof.js
+[02May2022 12:38:03.288] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
+[02May2022 12:38:03.289] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/add_bouncer_method.js
+[02May2022 12:38:03.346] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
+[02May2022 12:38:03.347] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: Loading CoreMod from coremods/registry_object_binary_compat.js
+[02May2022 12:38:03.408] [main/DEBUG] [net.minecraftforge.coremod.CoreModEngine/COREMOD]: CoreMod loaded successfully
+[02May2022 12:38:03.425] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@71a06021 to Target : CLASS {Lnet/minecraft/world/effect/MobEffectInstance;} {} {V}
+[02May2022 12:38:03.428] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@55e42449 to Target : CLASS {Lnet/minecraft/world/level/block/LiquidBlock;} {} {V}
+[02May2022 12:38:03.428] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@e57e5d6 to Target : CLASS {Lnet/minecraft/world/item/BucketItem;} {} {V}
+[02May2022 12:38:03.429] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@6dfa915a to Target : CLASS {Lnet/minecraft/world/level/block/StairBlock;} {} {V}
+[02May2022 12:38:03.429] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@78054f54 to Target : CLASS {Lnet/minecraft/world/level/block/FlowerPotBlock;} {} {V}
+[02May2022 12:38:03.429] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@cb7fa71 to Target : CLASS {Lnet/minecraft/world/item/ItemStack;} {} {V}
+[02May2022 12:38:03.430] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@3dffc764 to Target : CLASS {Lnet/minecraft/network/play/client/CClientSettingsPacket;} {} {V}
+[02May2022 12:38:03.430] [main/DEBUG] [cpw.mods.modlauncher.TransformStore/MODLAUNCHER]: Adding transformer net.minecraftforge.coremod.transformer.CoreModClassTransformer@4b6e1c0 to Target : CLASS {Lnet/minecraftforge/registries/RegistryObject;} {} {V}
+[02May2022 12:38:03.430] [main/DEBUG] [cpw.mods.modlauncher.TransformationServiceDecorator/MODLAUNCHER]: Initialized transformers for transformation service fml
+[02May2022 12:38:04.385] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
+[02May2022 12:38:04.386] [main/DEBUG] [mixin/]: Processing launch tasks for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
+[02May2022 12:38:04.386] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(minecraft)
+[02May2022 12:38:04.386] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(minecraft)
+[02May2022 12:38:04.387] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(minecraft)
+[02May2022 12:38:04.387] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(minecraft)
+[02May2022 12:38:04.387] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(minecraft)
+[02May2022 12:38:04.387] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(minecraft)]
+[02May2022 12:38:04.387] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(vanilla_plus)
+[02May2022 12:38:04.388] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(vanilla_plus)
+[02May2022 12:38:04.388] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(vanilla_plus)
+[02May2022 12:38:04.388] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(vanilla_plus)
+[02May2022 12:38:04.388] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(vanilla_plus)
+[02May2022 12:38:04.388] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(vanilla_plus)]
+[02May2022 12:38:04.389] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(forge)
+[02May2022 12:38:04.389] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(forge)
+[02May2022 12:38:04.389] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(forge)
+[02May2022 12:38:04.389] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(forge)
+[02May2022 12:38:04.389] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(forge)
+[02May2022 12:38:04.389] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(forge)]
+[02May2022 12:38:04.390] [main/DEBUG] [mixin/]: Adding mixin platform agents for container SecureJarResource(manascore)
+[02May2022 12:38:04.390] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentMinecraftForge for SecureJarResource(manascore)
+[02May2022 12:38:04.390] [main/DEBUG] [mixin/]: MixinPlatformAgentMinecraftForge rejected container SecureJarResource(manascore)
+[02May2022 12:38:04.391] [main/DEBUG] [mixin/]: Instancing new MixinPlatformAgentDefault for SecureJarResource(manascore)
+[02May2022 12:38:04.391] [main/DEBUG] [mixin/]: MixinPlatformAgentDefault accepted container SecureJarResource(manascore)
+[02May2022 12:38:04.391] [main/DEBUG] [mixin/]: Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(manascore)]
+[02May2022 12:38:04.392] [main/DEBUG] [mixin/]: Registering mixin config: manascore.mixins.json
+[02May2022 12:38:04.416] [main/DEBUG] [mixin/]: Compatibility level JAVA_17 specified by manascore.mixins.json is higher than the maximum level supported by this version of mixin (JAVA_13).
+[02May2022 12:38:04.420] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[02May2022 12:38:04.421] [main/DEBUG] [mixin/]: inject() running with 5 agents
+[02May2022 12:38:04.421] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:ModLauncher Root Container(ModLauncher:4f56a0a2)]
+[02May2022 12:38:04.421] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(minecraft)]
+[02May2022 12:38:04.422] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(vanilla_plus)]
+[02May2022 12:38:04.422] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(forge)]
+[02May2022 12:38:04.422] [main/DEBUG] [mixin/]: Processing inject() for PlatformAgent[MixinPlatformAgentDefault:SecureJarResource(manascore)]
+[02May2022 12:38:04.450] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\diabl\.gradle\caches\forge_gradle\assets, --assetIndex, 1.18, --mod, vanilla_plus, --all, --output, C:\Users\diabl\Desktop\vanilla_plus\src\generated\resources, --existing, C:\Users\diabl\Desktop\vanilla_plus\src\main\resources]
+[02May2022 12:38:04.560] [main/DEBUG] [mixin/]: Error cleaning class output directory: .mixin.out
+[02May2022 12:38:04.566] [main/DEBUG] [mixin/]: Preparing mixins for MixinEnvironment[DEFAULT]
+[02May2022 12:38:04.567] [main/DEBUG] [mixin/]: Selecting config manascore.mixins.json
+[02May2022 12:38:04.571] [main/WARN] [mixin/]: Reference map 'manascore.refmap.json' for manascore.mixins.json could not be read. If this is a development environment you can ignore this message
+[02May2022 12:38:04.571] [main/DEBUG] [mixin/]: Preparing manascore.mixins.json (0)
+[02May2022 12:38:04.599] [main/DEBUG] [io.netty.util.internal.logging.InternalLoggerFactory/]: Using SLF4J as the default logging framework
+[02May2022 12:38:04.604] [main/DEBUG] [io.netty.util.ResourceLeakDetector/]: -Dio.netty.leakDetection.level: simple
+[02May2022 12:38:04.604] [main/DEBUG] [io.netty.util.ResourceLeakDetector/]: -Dio.netty.leakDetection.targetRecords: 4
+[02May2022 12:38:04.779] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [vanilla_plus]
+[02May2022 12:38:05.421] [main/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/LiquidBlock
+[02May2022 12:38:05.489] [main/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/StairBlock
+[02May2022 12:38:05.619] [main/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/level/block/FlowerPotBlock
+[02May2022 12:38:06.949] [main/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/item/ItemStack
+[02May2022 12:38:11.035] [main/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/item/BucketItem
+[02May2022 12:38:11.244] [main/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraft/world/effect/MobEffectInstance
+[02May2022 12:38:12.515] [main/DEBUG] [net.minecraftforge.fml.ModWorkManager/LOADING]: Using 4 threads for parallel mod-loading
+[02May2022 12:38:12.527] [main/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@524a076e - got cpw.mods.cl.ModuleClassLoader@2b50150
+[02May2022 12:38:12.527] [main/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for com.manasmods.vanilla_plus.Vanilla_Plus
+[02May2022 12:38:12.536] [main/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@524a076e - got cpw.mods.cl.ModuleClassLoader@2b50150
+[02May2022 12:38:12.536] [main/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for net.minecraftforge.common.ForgeMod
+[02May2022 12:38:12.538] [main/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLJavaModLanguageProvider/LOADING]: Loading FMLModContainer from classloader cpw.mods.modlauncher.TransformingClassLoader@524a076e - got cpw.mods.cl.ModuleClassLoader@2b50150
+[02May2022 12:38:12.538] [main/DEBUG] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Creating FMLModContainer instance for com.github.manasmods.manascore.ManasCore
+[02May2022 12:38:12.810] [modloading-worker-0/DEBUG] [net.minecraftforge.coremod.transformer.CoreModBaseTransformer/COREMOD]: Transforming net/minecraftforge/registries/RegistryObject
+[02May2022 12:38:12.809] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for manascore
+[02May2022 12:38:13.448] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.forge.ForgeVersion/CORE]: Forge Version package package net.minecraftforge.versions.forge, Forge, version 40.0 from cpw.mods.modlauncher.TransformingClassLoader@524a076e
+[02May2022 12:38:13.449] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.forge.ForgeVersion/CORE]: Found Forge version 40.0.52
+[02May2022 12:38:13.450] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.forge.ForgeVersion/CORE]: Found Forge spec 40.0
+[02May2022 12:38:13.450] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.forge.ForgeVersion/CORE]: Found Forge group net.minecraftforge
+[02May2022 12:38:13.451] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.mcp.MCPVersion/CORE]: MCP Version package package net.minecraftforge.versions.mcp, Minecraft, version 1.18.2 from cpw.mods.modlauncher.TransformingClassLoader@524a076e
+[02May2022 12:38:13.451] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.mcp.MCPVersion/CORE]: Found MC version information 1.18.2
+[02May2022 12:38:13.451] [modloading-worker-0/DEBUG] [net.minecraftforge.versions.mcp.MCPVersion/CORE]: Found MCP version information 20220404.173914
+[02May2022 12:38:13.451] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 40.0.52, for MC 1.18.2 with MCP 20220404.173914
+[02May2022 12:38:13.456] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v40.0.52 Initialized
+[02May2022 12:38:13.627] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for vanilla_plus
+[02May2022 12:38:13.800] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: -Dio.netty.noUnsafe: false
+[02May2022 12:38:13.801] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: Java version: 17
+[02May2022 12:38:13.802] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: sun.misc.Unsafe.theUnsafe: available
+[02May2022 12:38:13.802] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: sun.misc.Unsafe.copyMemory: available
+[02May2022 12:38:13.803] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.Buffer.address: available
+[02May2022 12:38:13.804] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: direct buffer constructor: unavailable
 java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
 	at io.netty.util.internal.ReflectionUtil.trySetAccessible(ReflectionUtil.java:31) ~[netty-all-4.1.68.Final.jar%2332!/:4.1.68.Final]
 	at io.netty.util.internal.PlatformDependent0$4.run(PlatformDependent0.java:253) ~[netty-all-4.1.68.Final.jar%2332!/:4.1.68.Final]
@@ -187,15 +211,17 @@ java.lang.UnsupportedOperationException: Reflective setAccessible(true) disabled
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
 	at net.minecraftforge.fml.javafmlmod.FMLModContainer.constructMod(FMLModContainer.java:67) ~[javafmllanguage-1.18.2-40.0.52.jar%2377!/:?]
 	at net.minecraftforge.fml.ModContainer.lambda$buildTransitionHandler$4(ModContainer.java:106) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
-	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) [?:?]
+	at java.util.concurrent.CompletableFuture$AsyncRun.run$$$capture(CompletableFuture.java:1804) [?:?]
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java) [?:?]
 	at java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796) [?:?]
-	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373) [?:?]
+	at java.util.concurrent.ForkJoinTask.doExec$$$capture(ForkJoinTask.java:373) [?:?]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java) [?:?]
 	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182) [?:?]
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) [?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) [?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) [?:?]
-[30Apr2022 18:55:16.224] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.Bits.unaligned: available, true
-[30Apr2022 18:55:16.225] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
+[02May2022 12:38:13.817] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.Bits.unaligned: available, true
+[02May2022 12:38:13.818] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable
 java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent0$6 (in module io.netty.all) cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to module io.netty.all
 	at jdk.internal.reflect.Reflection.newIllegalAccessException(Reflection.java:392) ~[?:?]
 	at java.lang.reflect.AccessibleObject.checkAccess(AccessibleObject.java:674) ~[?:?]
@@ -217,32 +243,445 @@ java.lang.IllegalAccessException: class io.netty.util.internal.PlatformDependent
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
 	at net.minecraftforge.fml.javafmlmod.FMLModContainer.constructMod(FMLModContainer.java:67) ~[javafmllanguage-1.18.2-40.0.52.jar%2377!/:?]
 	at net.minecraftforge.fml.ModContainer.lambda$buildTransitionHandler$4(ModContainer.java:106) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
-	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) [?:?]
+	at java.util.concurrent.CompletableFuture$AsyncRun.run$$$capture(CompletableFuture.java:1804) [?:?]
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java) [?:?]
 	at java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1796) [?:?]
-	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373) [?:?]
+	at java.util.concurrent.ForkJoinTask.doExec$$$capture(ForkJoinTask.java:373) [?:?]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java) [?:?]
 	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1182) [?:?]
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1655) [?:?]
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1622) [?:?]
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:165) [?:?]
-[30Apr2022 18:55:16.230] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.DirectByteBuffer.<init>(long, int): unavailable
-[30Apr2022 18:55:16.230] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: sun.misc.Unsafe: available
-[30Apr2022 18:55:16.231] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: maxDirectMemory: 4280287232 bytes (maybe)
-[30Apr2022 18:55:16.231] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.tmpdir: C:\Users\diabl\AppData\Local\Temp (java.io.tmpdir)
-[30Apr2022 18:55:16.232] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.bitMode: 64 (sun.arch.data.model)
-[30Apr2022 18:55:16.232] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: Platform: Windows
-[30Apr2022 18:55:16.233] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.maxDirectMemory: -1 bytes
-[30Apr2022 18:55:16.233] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.uninitializedArrayAllocationThreshold: -1
-[30Apr2022 18:55:16.235] [modloading-worker-0/DEBUG] [io.netty.util.internal.CleanerJava9/]: java.nio.ByteBuffer.cleaner(): available
-[30Apr2022 18:55:16.236] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.noPreferDirect: false
-[30Apr2022 18:55:16.378] [modloading-worker-0/DEBUG] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Loading Network data for FML net version: FML2
-[30Apr2022 18:55:16.488] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file forge-client.toml for forge tracking
-[30Apr2022 18:55:16.488] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file forge-server.toml for forge tracking
-[30Apr2022 18:55:16.488] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file forge-common.toml for forge tracking
-[30Apr2022 18:55:16.616] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for forge
-[30Apr2022 18:55:16.623] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.common.ForgeSpawnEggItem$CommonHandler to MOD
-[30Apr2022 18:55:16.628] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.common.ForgeSpawnEggItem$ColorRegisterHandler to MOD
-[30Apr2022 18:55:16.638] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.client.model.ModelDataManager to FORGE
-[30Apr2022 18:55:16.641] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.client.ForgeHooksClient$ClientEvents to MOD
-[30Apr2022 18:55:17.281] [main/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/C:/Users/diabl/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2/forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2376!/assets/.mcassetsroot' uses unexpected schema
-[30Apr2022 18:55:17.282] [main/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/C:/Users/diabl/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2/forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2376!/data/.mcassetsroot' uses unexpected schema
-[30Apr2022 18:55:17.808] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: vanilla_plus
+[02May2022 12:38:13.820] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent0/]: java.nio.DirectByteBuffer.<init>(long, int): unavailable
+[02May2022 12:38:13.820] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: sun.misc.Unsafe: available
+[02May2022 12:38:13.821] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: maxDirectMemory: 4280287232 bytes (maybe)
+[02May2022 12:38:13.822] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.tmpdir: C:\Users\diabl\AppData\Local\Temp (java.io.tmpdir)
+[02May2022 12:38:13.822] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.bitMode: 64 (sun.arch.data.model)
+[02May2022 12:38:13.822] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: Platform: Windows
+[02May2022 12:38:13.823] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.maxDirectMemory: -1 bytes
+[02May2022 12:38:13.824] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.uninitializedArrayAllocationThreshold: -1
+[02May2022 12:38:13.826] [modloading-worker-0/DEBUG] [io.netty.util.internal.CleanerJava9/]: java.nio.ByteBuffer.cleaner(): available
+[02May2022 12:38:13.826] [modloading-worker-0/DEBUG] [io.netty.util.internal.PlatformDependent/]: -Dio.netty.noPreferDirect: false
+[02May2022 12:38:14.088] [modloading-worker-0/DEBUG] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Loading Network data for FML net version: FML2
+[02May2022 12:38:14.221] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file forge-client.toml for forge tracking
+[02May2022 12:38:14.221] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file forge-server.toml for forge tracking
+[02May2022 12:38:14.237] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.config.ConfigTracker/CONFIG]: Config file forge-common.toml for forge tracking
+[02May2022 12:38:14.331] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Attempting to inject @EventBusSubscriber classes into the eventbus for forge
+[02May2022 12:38:14.335] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.common.ForgeSpawnEggItem$CommonHandler to MOD
+[02May2022 12:38:14.337] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.common.ForgeSpawnEggItem$ColorRegisterHandler to MOD
+[02May2022 12:38:14.344] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.client.model.ModelDataManager to FORGE
+[02May2022 12:38:14.347] [modloading-worker-0/DEBUG] [net.minecraftforge.fml.javafmlmod.AutomaticEventSubscriber/LOADING]: Auto-subscribing net.minecraftforge.client.ForgeHooksClient$ClientEvents to MOD
+[02May2022 12:38:14.518] [main/ERROR] [net.minecraftforge.fml.javafmlmod.FMLModContainer/]: Exception caught during firing event: Cannot get property EnumProperty{name=axis, clazz=class net.minecraft.core.Direction$Axis, values=[x, y, z]} as it does not exist in Block{null}
+	Index: 1
+	Listeners:
+		0: NORMAL
+		1: ASM: net.minecraftforge.registries.DeferredRegister$EventDispatcher@68d59ec0 handleEvent(Lnet/minecraftforge/event/RegistryEvent$Register;)V
+		2: ASM: net.minecraftforge.registries.DeferredRegister$EventDispatcher@74079599 handleEvent(Lnet/minecraftforge/event/RegistryEvent$Register;)V
+java.lang.IllegalArgumentException: Cannot get property EnumProperty{name=axis, clazz=class net.minecraft.core.Direction$Axis, values=[x, y, z]} as it does not exist in Block{null}
+	at TRANSFORMER/minecraft@1.18.2/net.minecraft.world.level.block.state.StateHolder.getValue(StateHolder.java:98)
+	at TRANSFORMER/minecraft@1.18.2/net.minecraft.world.level.block.Blocks.lambda$log$51(Blocks.java:1063)
+	at TRANSFORMER/minecraft@1.18.2/net.minecraft.world.level.block.state.BlockBehaviour$BlockStateBase.<init>(BlockBehaviour.java:526)
+	at TRANSFORMER/minecraft@1.18.2/net.minecraft.world.level.block.state.BlockState.<init>(BlockState.java:14)
+	at TRANSFORMER/minecraft@1.18.2/net.minecraft.world.level.block.state.StateDefinition.lambda$new$3(StateDefinition.java:62)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.stream.Streams$StreamBuilderImpl.forEachRemaining(Streams.java:411)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at TRANSFORMER/minecraft@1.18.2/net.minecraft.world.level.block.state.StateDefinition.<init>(StateDefinition.java:60)
+	at TRANSFORMER/minecraft@1.18.2/net.minecraft.world.level.block.state.StateDefinition$Builder.create(StateDefinition.java:151)
+	at TRANSFORMER/minecraft@1.18.2/net.minecraft.world.level.block.Block.<init>(Block.java:182)
+	at TRANSFORMER/minecraft@1.18.2/net.minecraft.world.level.block.StairBlock.<init>(StairBlock.java:97)
+	at TRANSFORMER/vanilla_plus@0.0.0.1/com.manasmods.vanilla_plus.registry.BlockRegistry.lambda$registerBlocks$19(BlockRegistry.java:61)
+	at TRANSFORMER/forge@40.0.52/net.minecraftforge.registries.DeferredRegister.lambda$register$0(DeferredRegister.java:214)
+	at TRANSFORMER/forge@40.0.52/net.minecraftforge.registries.DeferredRegister.addEntries(DeferredRegister.java:446)
+	at TRANSFORMER/forge@40.0.52/net.minecraftforge.registries.DeferredRegister$EventDispatcher.handleEvent(DeferredRegister.java:376)
+	at net.minecraftforge.eventbus.ASMEventHandler_0_EventDispatcher_handleEvent_Register.invoke(.dynamic)
+	at MC-BOOTSTRAP/eventbus@5.0.7/net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:85)
+	at MC-BOOTSTRAP/eventbus@5.0.7/net.minecraftforge.eventbus.EventBus.post(EventBus.java:302)
+	at MC-BOOTSTRAP/eventbus@5.0.7/net.minecraftforge.eventbus.EventBus.post(EventBus.java:283)
+	at LAYER PLUGIN/javafmllanguage@1.18.2-40.0.52/net.minecraftforge.fml.javafmlmod.FMLModContainer.acceptEvent(FMLModContainer.java:106)
+	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModContainer.lambda$buildTransitionHandler$4(ModContainer.java:107)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run$$$capture(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java)
+	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModWorkManager$SyncExecutor.driveOne(ModWorkManager.java:42)
+	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModWorkManager$DrivenExecutor.drive(ModWorkManager.java:26)
+	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModLoader.waitForTransition(ModLoader.java:201)
+	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModLoader.lambda$dispatchAndHandleError$21(ModLoader.java:186)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModLoader.dispatchAndHandleError(ModLoader.java:186)
+	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModLoader.lambda$gatherAndInitializeMods$11(ModLoader.java:163)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModLoader.gatherAndInitializeMods(ModLoader.java:163)
+	at TRANSFORMER/forge@40.0.52/net.minecraftforge.data.loading.DatagenModLoader.begin(DatagenModLoader.java:38)
+	at TRANSFORMER/minecraft@1.18.2/net.minecraft.data.Main.main(Main.java:67)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at MC-BOOTSTRAP/fmlloader@1.18.2-40.0.52/net.minecraftforge.fml.loading.targets.ForgeDataUserdevLaunchHandler.lambda$launchService$0(ForgeDataUserdevLaunchHandler.java:27)
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@9.1.3/cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37)
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@9.1.3/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53)
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@9.1.3/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71)
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@9.1.3/cpw.mods.modlauncher.Launcher.run(Launcher.java:106)
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@9.1.3/cpw.mods.modlauncher.Launcher.main(Launcher.java:77)
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@9.1.3/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26)
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@9.1.3/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23)
+	at cpw.mods.bootstraplauncher@1.0.0/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:149)
+
+[02May2022 12:38:14.520] [main/ERROR] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Caught exception during event RegistryEvent.Register<minecraft:block> dispatch for modid vanilla_plus
+java.lang.IllegalArgumentException: Cannot get property EnumProperty{name=axis, clazz=class net.minecraft.core.Direction$Axis, values=[x, y, z]} as it does not exist in Block{null}
+	at net.minecraft.world.level.block.state.StateHolder.getValue(StateHolder.java:98) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2376!/:?]
+	at net.minecraft.world.level.block.Blocks.lambda$log$51(Blocks.java:1063) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2376!/:?]
+	at net.minecraft.world.level.block.state.BlockBehaviour$BlockStateBase.<init>(BlockBehaviour.java:526) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2376!/:?]
+	at net.minecraft.world.level.block.state.BlockState.<init>(BlockState.java:14) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2376!/:?]
+	at net.minecraft.world.level.block.state.StateDefinition.lambda$new$3(StateDefinition.java:62) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2376!/:?]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[?:?]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[?:?]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[?:?]
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992) ~[?:?]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?]
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[?:?]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[?:?]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:?]
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[?:?]
+	at java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276) ~[?:?]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[?:?]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[?:?]
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992) ~[?:?]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?]
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[?:?]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[?:?]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:?]
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[?:?]
+	at java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276) ~[?:?]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[?:?]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[?:?]
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992) ~[?:?]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?]
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[?:?]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[?:?]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:?]
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[?:?]
+	at java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276) ~[?:?]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[?:?]
+	at java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[?:?]
+	at java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:992) ~[?:?]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?]
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[?:?]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[?:?]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:?]
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[?:?]
+	at java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276) ~[?:?]
+	at java.util.stream.Streams$StreamBuilderImpl.forEachRemaining(Streams.java:411) ~[?:?]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?]
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?]
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150) ~[?:?]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173) ~[?:?]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:?]
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[?:?]
+	at net.minecraft.world.level.block.state.StateDefinition.<init>(StateDefinition.java:60) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2376!/:?]
+	at net.minecraft.world.level.block.state.StateDefinition$Builder.create(StateDefinition.java:151) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2376!/:?]
+	at net.minecraft.world.level.block.Block.<init>(Block.java:182) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2376!/:?]
+	at net.minecraft.world.level.block.StairBlock.<init>(StairBlock.java:97) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2376!/:?]
+	at com.manasmods.vanilla_plus.registry.BlockRegistry.lambda$registerBlocks$19(BlockRegistry.java:61) ~[%2380!/:?]
+	at net.minecraftforge.registries.DeferredRegister.lambda$register$0(DeferredRegister.java:214) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2375%2381!/:?]
+	at net.minecraftforge.registries.DeferredRegister.addEntries(DeferredRegister.java:446) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2375%2381!/:?]
+	at net.minecraftforge.registries.DeferredRegister$EventDispatcher.handleEvent(DeferredRegister.java:376) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2375%2381!/:?]
+	at net.minecraftforge.eventbus.ASMEventHandler_0_EventDispatcher_handleEvent_Register.invoke(.dynamic) ~[?:?]
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:85) ~[eventbus-5.0.7.jar%239!/:?]
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:302) ~[eventbus-5.0.7.jar%239!/:?]
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:283) ~[eventbus-5.0.7.jar%239!/:?]
+	at net.minecraftforge.fml.javafmlmod.FMLModContainer.acceptEvent(FMLModContainer.java:106) ~[javafmllanguage-1.18.2-40.0.52.jar%2377!/:?]
+	at net.minecraftforge.fml.ModContainer.lambda$buildTransitionHandler$4(ModContainer.java:107) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
+	at java.util.concurrent.CompletableFuture$AsyncRun.run$$$capture(CompletableFuture.java:1804) ~[?:?]
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java) ~[?:?]
+	at net.minecraftforge.fml.ModWorkManager$SyncExecutor.driveOne(ModWorkManager.java:42) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
+	at net.minecraftforge.fml.ModWorkManager$DrivenExecutor.drive(ModWorkManager.java:26) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
+	at net.minecraftforge.fml.ModLoader.waitForTransition(ModLoader.java:201) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
+	at net.minecraftforge.fml.ModLoader.lambda$dispatchAndHandleError$21(ModLoader.java:186) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
+	at java.util.Optional.ifPresent(Optional.java:178) ~[?:?]
+	at net.minecraftforge.fml.ModLoader.dispatchAndHandleError(ModLoader.java:186) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
+	at net.minecraftforge.fml.ModLoader.lambda$gatherAndInitializeMods$11(ModLoader.java:163) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
+	at java.lang.Iterable.forEach(Iterable.java:75) ~[?:?]
+	at net.minecraftforge.fml.ModLoader.gatherAndInitializeMods(ModLoader.java:163) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
+	at net.minecraftforge.data.loading.DatagenModLoader.begin(DatagenModLoader.java:38) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2375%2381!/:?]
+	at net.minecraft.data.Main.main(Main.java:67) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2376!/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at net.minecraftforge.fml.loading.targets.ForgeDataUserdevLaunchHandler.lambda$launchService$0(ForgeDataUserdevLaunchHandler.java:27) ~[fmlloader-1.18.2-40.0.52.jar%230!/:?]
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-9.1.3.jar%2310!/:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-9.1.3.jar%2310!/:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-9.1.3.jar%2310!/:?]
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:106) [modlauncher-9.1.3.jar%2310!/:?]
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:77) [modlauncher-9.1.3.jar%2310!/:?]
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-9.1.3.jar%2310!/:?]
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-9.1.3.jar%2310!/:?]
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:149) [bootstraplauncher-1.0.0.jar:?]
+[02May2022 12:38:14.536] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:terracotta_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.TERRACOTTA_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.536] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:nether_wart_block_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.NETHER_WART_BLOCK_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.536] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:ice_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.ICE_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.536] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:stripped_crimson_stem_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.STRIPPED_CRIMSON_STEM_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.536] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:cracked_deepslate_brick_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.CRACKED_DEEPSLATE_BRICK_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.536] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:nether_wart_block_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.NETHER_WART_BLOCK_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.536] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:spruce_log_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.SPRUCE_LOG_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.537] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:sand_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.SAND_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.537] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:crimson_stem_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.CRIMSON_STEM_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.537] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:dried_kelp_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.DRIED_KELP_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.537] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:hay_bale_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.HAY_BALE_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.537] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:magma_block_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.MAGMA_BLOCK_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.537] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:packed_ice_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.PACKED_ICE_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.537] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:quartz_pillar_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.QUARTZ_PILLAR_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.538] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:warped_nylium_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.WARPED_NYLIUM_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.538] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:chiseled_nether_brick_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.CHISELED_NETHER_BRICK_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.538] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:obsidian_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.OBSIDIAN_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.538] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:stripped_jungle_log_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.STRIPPED_JUNGLE_LOG_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.538] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:glass_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.GLASS_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.539] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:end_stone_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.END_STONE_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.539] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:chiseled_nether_brick_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.CHISELED_NETHER_BRICK_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.539] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:glass_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.GLASS_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.539] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:stripped_birch_log_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.STRIPPED_BIRCH_LOG_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.587] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:crying_obsidian_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.CRYING_OBSIDIAN_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.587] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:calcite_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.CALCITE_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.590] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:cut_red_sandstone_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.CUT_RED_SANDSTONE_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.595] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:cracked_polished_blackstone_brick_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.595] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:glowstone_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.GLOWSTONE_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.601] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:spruce_log_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.SPRUCE_LOG_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.601] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:packed_ice_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.PACKED_ICE_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.602] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:podzol_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.PODZOL_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.602] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:acacia_log_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.ACACIA_LOG_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.602] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:sea_lantern_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.SEA_LANTERN_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.603] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:block_of_raw_copper_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.BLOCK_OF_RAW_COPPER_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.603] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:snow_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.SNOW_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.603] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:magma_block_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.MAGMA_BLOCK_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.603] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:cracked_stone_brick_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.CRACKED_STONE_BRICK_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.603] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:blue_ice_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.BLUE_ICE_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.604] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:soul_sand_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.SOUL_SAND_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.604] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:mycelium_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.MYCELIUM_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.604] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:stripped_dark_oak_log_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.STRIPPED_DARK_OAK_LOG_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.605] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:jungle_log_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.JUNGLE_LOG_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.605] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:stripped_birch_log_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.STRIPPED_BIRCH_LOG_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.605] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:basalt_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.BASALT_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.606] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:tinted_glass_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.TINTED_GLASS_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.606] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:basalt_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.BASALT_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.606] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:crimson_stem_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.CRIMSON_STEM_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.606] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:stripped_warped_stem_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.STRIPPED_WARPED_STEM_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.607] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:polished_basalt_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.POLISHED_BASALT_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.607] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:stripped_warped_stem_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.STRIPPED_WARPED_STEM_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.607] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:stripped_acacia_log_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.STRIPPED_ACACIA_LOG_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.607] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:melon_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.MELON_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.617] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:jungle_log_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.JUNGLE_LOG_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.617] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:warped_wart_block_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.WARPED_WART_BLOCK_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.618] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:quartz_pillar_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.QUARTZ_PILLAR_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.618] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:cut_sandstone_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.CUT_SANDSTONE_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.618] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:bone_block_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.BONE_BLOCK_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.618] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:pumpkin_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.PUMPKIN_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.618] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:ice_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.ICE_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.618] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:chiseled_deepslate_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.CHISELED_DEEPSLATE_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.619] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:block_of_raw_gold_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.BLOCK_OF_RAW_GOLD_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.619] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:stripped_oak_log_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.STRIPPED_OAK_LOG_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.619] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:stripped_oak_log_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.STRIPPED_OAK_LOG_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.619] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:quartz_brick_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.QUARTZ_BRICK_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.619] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:end_stone_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.END_STONE_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.619] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:quartz_brick_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.QUARTZ_BRICK_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.619] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:grass_block_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.GRASS_BLOCK_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.619] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:glowstone_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.GLOWSTONE_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.620] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:coarse_dirt_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.COARSE_DIRT_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.620] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:warped_stem_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.WARPED_STEM_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.620] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:netherrack_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.NETHERRACK_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.620] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:oak_log_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.OAK_LOG_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.620] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:clay_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.CLAY_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.620] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:obsidian_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.OBSIDIAN_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.620] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:purpur_pillar_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.PURPUR_PILLAR_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.621] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:cracked_deepslate_tile_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.CRACKED_DEEPSLATE_TILE_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.621] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:acacia_log_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.ACACIA_LOG_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.621] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:stripped_spruce_log_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.STRIPPED_SPRUCE_LOG_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.621] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:dirt_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.DIRT_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.623] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:tinted_glass_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.TINTED_GLASS_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.623] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:cracked_deepslate_tile_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.CRACKED_DEEPSLATE_TILE_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.623] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:soul_sand_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.SOUL_SAND_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.623] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:crying_obsidian_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.CRYING_OBSIDIAN_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.623] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:dark_oak_log_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.DARK_OAK_LOG_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.624] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:mycelium_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.MYCELIUM_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.626] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:block_of_raw_iron_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.BLOCK_OF_RAW_IRON_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.626] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:rooted_dirt_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.ROOTED_DIRT_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.626] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:birch_log_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.BIRCH_LOG_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.627] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:block_of_amethyst_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.BLOCK_OF_AMETHYST_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.627] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:stripped_crimson_stem_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.STRIPPED_CRIMSON_STEM_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.627] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:gravel_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.GRAVEL_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.627] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:terracotta_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.TERRACOTTA_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.628] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:stripped_dark_oak_log_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.STRIPPED_DARK_OAK_LOG_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.629] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:snow_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.SNOW_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.629] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:dark_oak_log_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.DARK_OAK_LOG_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.629] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:cracked_stone_brick_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.CRACKED_STONE_BRICK_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.629] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:stripped_spruce_log_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.STRIPPED_SPRUCE_LOG_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.629] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:dripstone_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.DRIPSTONE_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.629] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:warped_stem_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.WARPED_STEM_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.629] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:clay_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.CLAY_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.630] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:soul_soil_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.SOUL_SOIL_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.630] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:dried_kelp_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.DRIED_KELP_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.630] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:tuff_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.TUFF_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.630] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:melon_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.MELON_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.630] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:stripped_acacia_log_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.STRIPPED_ACACIA_LOG_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.630] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:crimson_nylium_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.CRIMSON_NYLIUM_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.631] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:hay_bale_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.HAY_BALE_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.631] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:cracked_polished_blackstone_brick_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.631] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:chiseled_deepslate_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.CHISELED_DEEPSLATE_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.631] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:pumpkin_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.PUMPKIN_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.631] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:purpur_pillar_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.PURPUR_PILLAR_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.632] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:birch_log_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.BIRCH_LOG_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.632] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:netherrack_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.NETHERRACK_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.632] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:bone_block_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.BONE_BLOCK_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.633] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:cracked_nether_brick_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.CRACKED_NETHER_BRICK_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.634] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:blue_ice_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.BLUE_ICE_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.634] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:chiseled_stone_brick_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.CHISELED_STONE_BRICK_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.634] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:warped_wart_block_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.WARPED_WART_BLOCK_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.634] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:stripped_jungle_log_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.STRIPPED_JUNGLE_LOG_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.634] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:cracked_deepslate_brick_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.CRACKED_DEEPSLATE_BRICK_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.634] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:red_sand_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.RED_SAND_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.635] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:cracked_nether_brick_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.CRACKED_NETHER_BRICK_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.635] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:chiseled_quartz_block_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.CHISELED_QUARTZ_BLOCK_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.635] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:soul_soil_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.SOUL_SOIL_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.635] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:chiseled_stone_brick_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.CHISELED_STONE_BRICK_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.635] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:chiseled_quartz_block_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.CHISELED_QUARTZ_BLOCK_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.635] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:oak_log_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.OAK_LOG_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.635] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:sea_lantern_slab for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.SEA_LANTERN_SLAB. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.635] [main/DEBUG] [net.minecraftforge.registries.ObjectHolderRef/]: Unable to lookup vanilla_plus:polished_basalt_stairs for public static net.minecraft.world.level.block.Block com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks.POLISHED_BASALT_STAIRS. This means the object wasn't registered. It's likely just mod options.
+[02May2022 12:38:14.660] [main/ERROR] [net.minecraftforge.fml.javafmlmod.FMLModContainer/]: Exception caught during firing event: Registry Object not present: vanilla_plus:oak_log_stairs
+	Index: 2
+	Listeners:
+		0: NORMAL
+		1: ASM: net.minecraftforge.registries.DeferredRegister$EventDispatcher@68d59ec0 handleEvent(Lnet/minecraftforge/event/RegistryEvent$Register;)V
+		2: ASM: net.minecraftforge.registries.DeferredRegister$EventDispatcher@74079599 handleEvent(Lnet/minecraftforge/event/RegistryEvent$Register;)V
+java.lang.NullPointerException: Registry Object not present: vanilla_plus:oak_log_stairs
+	at java.base/java.util.Objects.requireNonNull(Objects.java:334)
+	at TRANSFORMER/forge@40.0.52/net.minecraftforge.registries.RegistryObject.get(RegistryObject.java:320)
+	at TRANSFORMER/vanilla_plus@0.0.0.1/com.manasmods.vanilla_plus.registry.BlockRegistry.lambda$register$0(BlockRegistry.java:32)
+	at TRANSFORMER/forge@40.0.52/net.minecraftforge.registries.DeferredRegister.lambda$register$0(DeferredRegister.java:214)
+	at TRANSFORMER/forge@40.0.52/net.minecraftforge.registries.DeferredRegister.addEntries(DeferredRegister.java:446)
+	at TRANSFORMER/forge@40.0.52/net.minecraftforge.registries.DeferredRegister$EventDispatcher.handleEvent(DeferredRegister.java:376)
+	at net.minecraftforge.eventbus.ASMEventHandler_0_EventDispatcher_handleEvent_Register.invoke(.dynamic)
+	at MC-BOOTSTRAP/eventbus@5.0.7/net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:85)
+	at MC-BOOTSTRAP/eventbus@5.0.7/net.minecraftforge.eventbus.EventBus.post(EventBus.java:302)
+	at MC-BOOTSTRAP/eventbus@5.0.7/net.minecraftforge.eventbus.EventBus.post(EventBus.java:283)
+	at LAYER PLUGIN/javafmllanguage@1.18.2-40.0.52/net.minecraftforge.fml.javafmlmod.FMLModContainer.acceptEvent(FMLModContainer.java:106)
+	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModContainer.lambda$buildTransitionHandler$4(ModContainer.java:107)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run$$$capture(CompletableFuture.java:1804)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java)
+	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModWorkManager$SyncExecutor.driveOne(ModWorkManager.java:42)
+	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModWorkManager$DrivenExecutor.drive(ModWorkManager.java:26)
+	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModLoader.waitForTransition(ModLoader.java:201)
+	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModLoader.lambda$dispatchAndHandleError$21(ModLoader.java:186)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModLoader.dispatchAndHandleError(ModLoader.java:186)
+	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModLoader.lambda$gatherAndInitializeMods$11(ModLoader.java:163)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModLoader.gatherAndInitializeMods(ModLoader.java:163)
+	at TRANSFORMER/forge@40.0.52/net.minecraftforge.data.loading.DatagenModLoader.begin(DatagenModLoader.java:38)
+	at TRANSFORMER/minecraft@1.18.2/net.minecraft.data.Main.main(Main.java:67)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at MC-BOOTSTRAP/fmlloader@1.18.2-40.0.52/net.minecraftforge.fml.loading.targets.ForgeDataUserdevLaunchHandler.lambda$launchService$0(ForgeDataUserdevLaunchHandler.java:27)
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@9.1.3/cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37)
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@9.1.3/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53)
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@9.1.3/cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71)
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@9.1.3/cpw.mods.modlauncher.Launcher.run(Launcher.java:106)
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@9.1.3/cpw.mods.modlauncher.Launcher.main(Launcher.java:77)
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@9.1.3/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26)
+	at MC-BOOTSTRAP/cpw.mods.modlauncher@9.1.3/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23)
+	at cpw.mods.bootstraplauncher@1.0.0/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:149)
+
+[02May2022 12:38:14.664] [main/ERROR] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Caught exception during event RegistryEvent.Register<minecraft:item> dispatch for modid vanilla_plus
+java.lang.NullPointerException: Registry Object not present: vanilla_plus:oak_log_stairs
+	at java.util.Objects.requireNonNull(Objects.java:334) ~[?:?]
+	at net.minecraftforge.registries.RegistryObject.get(RegistryObject.java:320) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2375%2381!/:?]
+	at com.manasmods.vanilla_plus.registry.BlockRegistry.lambda$register$0(BlockRegistry.java:32) ~[%2380!/:?]
+	at net.minecraftforge.registries.DeferredRegister.lambda$register$0(DeferredRegister.java:214) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2375%2381!/:?]
+	at net.minecraftforge.registries.DeferredRegister.addEntries(DeferredRegister.java:446) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2375%2381!/:?]
+	at net.minecraftforge.registries.DeferredRegister$EventDispatcher.handleEvent(DeferredRegister.java:376) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2375%2381!/:?]
+	at net.minecraftforge.eventbus.ASMEventHandler_0_EventDispatcher_handleEvent_Register.invoke(.dynamic) ~[?:?]
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:85) ~[eventbus-5.0.7.jar%239!/:?]
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:302) ~[eventbus-5.0.7.jar%239!/:?]
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:283) ~[eventbus-5.0.7.jar%239!/:?]
+	at net.minecraftforge.fml.javafmlmod.FMLModContainer.acceptEvent(FMLModContainer.java:106) ~[javafmllanguage-1.18.2-40.0.52.jar%2377!/:?]
+	at net.minecraftforge.fml.ModContainer.lambda$buildTransitionHandler$4(ModContainer.java:107) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
+	at java.util.concurrent.CompletableFuture$AsyncRun.run$$$capture(CompletableFuture.java:1804) ~[?:?]
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java) ~[?:?]
+	at net.minecraftforge.fml.ModWorkManager$SyncExecutor.driveOne(ModWorkManager.java:42) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
+	at net.minecraftforge.fml.ModWorkManager$DrivenExecutor.drive(ModWorkManager.java:26) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
+	at net.minecraftforge.fml.ModLoader.waitForTransition(ModLoader.java:201) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
+	at net.minecraftforge.fml.ModLoader.lambda$dispatchAndHandleError$21(ModLoader.java:186) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
+	at java.util.Optional.ifPresent(Optional.java:178) ~[?:?]
+	at net.minecraftforge.fml.ModLoader.dispatchAndHandleError(ModLoader.java:186) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
+	at net.minecraftforge.fml.ModLoader.lambda$gatherAndInitializeMods$11(ModLoader.java:163) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
+	at java.lang.Iterable.forEach(Iterable.java:75) ~[?:?]
+	at net.minecraftforge.fml.ModLoader.gatherAndInitializeMods(ModLoader.java:163) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
+	at net.minecraftforge.data.loading.DatagenModLoader.begin(DatagenModLoader.java:38) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2375%2381!/:?]
+	at net.minecraft.data.Main.main(Main.java:67) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2376!/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at net.minecraftforge.fml.loading.targets.ForgeDataUserdevLaunchHandler.lambda$launchService$0(ForgeDataUserdevLaunchHandler.java:27) ~[fmlloader-1.18.2-40.0.52.jar%230!/:?]
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-9.1.3.jar%2310!/:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) [modlauncher-9.1.3.jar%2310!/:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) [modlauncher-9.1.3.jar%2310!/:?]
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:106) [modlauncher-9.1.3.jar%2310!/:?]
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:77) [modlauncher-9.1.3.jar%2310!/:?]
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-9.1.3.jar%2310!/:?]
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-9.1.3.jar%2310!/:?]
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:149) [bootstraplauncher-1.0.0.jar:?]
+[02May2022 12:38:14.996] [main/FATAL] [net.minecraftforge.registries.GameData/]: Detected errors during registry event dispatch, rolling back to VANILLA state
+[02May2022 12:38:16.229] [main/FATAL] [net.minecraftforge.registries.GameData/]: Detected errors during registry event dispatch, roll back to VANILLA complete
+[02May2022 12:38:16.230] [main/FATAL] [net.minecraftforge.fml.ModLoader/LOADING]: Failed to complete lifecycle event LOAD_REGISTRIES, 2 errors found
