@@ -6,7 +6,7 @@ import net.minecraft.world.item.Items;
 
 public class Vanilla_PlusCreativeTab {
 
-    public static final CreativeModeTab BLOCKS = new CreativeModeTab("tensuratab") {
+    public static final CreativeModeTab BLOCKS = new CreativeModeTab("vanilla_plustab") {
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(Items.BRICKS);

@@ -108,7 +108,7 @@ repositories {
 //...
     dependencies {
 //...
-        implementation fg.deobf("curse.maven:manascore-619025:3775765") //The last set of numbers is the file id. Replace this with the file id of the version you want to use
+        implementation fg.deobf("curse.maven:manascore-619025:3777460") //The last set of numbers is the file id. Replace this with the file id of the version you want to use
     }
 }
 

@@ -1,6 +1,5 @@
 package com.manasmods.vanilla_plus.data;
 
-import com.manasmods.vanilla_plus.Vanilla_Plus;
 import com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks;
 import com.github.manasmods.manascore.data.gen.BlockStateProvider;
 import net.minecraft.world.level.block.Blocks;
@@ -8,7 +7,7 @@ import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 public class Vanilla_PlusBlockStateProvider extends BlockStateProvider {
     public Vanilla_PlusBlockStateProvider(GatherDataEvent gatherDataEvent) {
-        super(gatherDataEvent, Vanilla_Plus.MOD_ID);
+        super(gatherDataEvent, "<mod_id>");
     }
 
     @Override
@@ -91,6 +90,87 @@ public class Vanilla_PlusBlockStateProvider extends BlockStateProvider {
         stairs(Vanilla_PlusBlocks.CRYING_OBSIDIAN_STAIRS, Blocks.CRYING_OBSIDIAN);
         stairs(Vanilla_PlusBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_STAIRS, Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS);
 
+        stairs(Vanilla_PlusBlocks.WHITE_WOOL_STAIRS, Blocks.WHITE_WOOL);
+        stairs(Vanilla_PlusBlocks.ORANGE_WOOL_STAIRS, Blocks.ORANGE_WOOL);
+        stairs(Vanilla_PlusBlocks.MAGENTA_WOOL_STAIRS, Blocks.MAGENTA_WOOL);
+        stairs(Vanilla_PlusBlocks.LIGHT_BLUE_WOOL_STAIRS, Blocks.LIGHT_BLUE_WOOL);
+        stairs(Vanilla_PlusBlocks.YELLOW_WOOL_STAIRS, Blocks.YELLOW_WOOL);
+        stairs(Vanilla_PlusBlocks.LIME_WOOL_STAIRS, Blocks.LIME_WOOL);
+        stairs(Vanilla_PlusBlocks.PINK_WOOL_STAIRS, Blocks.PINK_WOOL);
+        stairs(Vanilla_PlusBlocks.GRAY_WOOL_STAIRS, Blocks.GRAY_WOOL);
+        stairs(Vanilla_PlusBlocks.LIGHT_GRAY_WOOL_STAIRS, Blocks.LIGHT_GRAY_WOOL);
+        stairs(Vanilla_PlusBlocks.CYAN_WOOL_STAIRS, Blocks.CYAN_WOOL);
+        stairs(Vanilla_PlusBlocks.PURPLE_WOOL_STAIRS, Blocks.PURPLE_WOOL);
+        stairs(Vanilla_PlusBlocks.BLUE_WOOL_STAIRS, Blocks.BLUE_WOOL);
+        stairs(Vanilla_PlusBlocks.BROWN_WOOL_STAIRS, Blocks.BROWN_WOOL);
+        stairs(Vanilla_PlusBlocks.GREEN_WOOL_STAIRS, Blocks.GREEN_WOOL);
+        stairs(Vanilla_PlusBlocks.RED_WOOL_STAIRS, Blocks.RED_WOOL);
+        stairs(Vanilla_PlusBlocks.BLACK_WOOL_STAIRS, Blocks.RED_WOOL);
+        stairs(Vanilla_PlusBlocks.WHITE_TERRACOTTA_STAIRS, Blocks.WHITE_TERRACOTTA);
+        stairs(Vanilla_PlusBlocks.ORANGE_TERRACOTTA_STAIRS, Blocks.ORANGE_TERRACOTTA);
+        stairs(Vanilla_PlusBlocks.MAGENTA_TERRACOTTA_STAIRS, Blocks.MAGENTA_TERRACOTTA);
+        stairs(Vanilla_PlusBlocks.LIGHT_BLUE_TERRACOTTA_STAIRS, Blocks.LIGHT_BLUE_TERRACOTTA);
+        stairs(Vanilla_PlusBlocks.YELLOW_TERRACOTTA_STAIRS, Blocks.YELLOW_TERRACOTTA);
+        stairs(Vanilla_PlusBlocks.LIME_TERRACOTTA_STAIRS, Blocks.LIME_TERRACOTTA);
+        stairs(Vanilla_PlusBlocks.PINK_TERRACOTTA_STAIRS, Blocks.PINK_TERRACOTTA);
+        stairs(Vanilla_PlusBlocks.GRAY_TERRACOTTA_STAIRS, Blocks.GRAY_TERRACOTTA);
+        stairs(Vanilla_PlusBlocks.LIGHT_GRAY_TERRACOTTA_STAIRS, Blocks.LIGHT_GRAY_TERRACOTTA);
+        stairs(Vanilla_PlusBlocks.CYAN_TERRACOTTA_STAIRS, Blocks.CYAN_TERRACOTTA);
+        stairs(Vanilla_PlusBlocks.PURPLE_TERRACOTTA_STAIRS, Blocks.PURPLE_TERRACOTTA);
+        stairs(Vanilla_PlusBlocks.BLUE_TERRACOTTA_STAIRS, Blocks.BLUE_TERRACOTTA);
+        stairs(Vanilla_PlusBlocks.BROWN_TERRACOTTA_STAIRS, Blocks.BROWN_TERRACOTTA);
+        stairs(Vanilla_PlusBlocks.GREEN_TERRACOTTA_STAIRS, Blocks.GREEN_TERRACOTTA);
+        stairs(Vanilla_PlusBlocks.RED_TERRACOTTA_STAIRS, Blocks.RED_TERRACOTTA);
+        stairs(Vanilla_PlusBlocks.BLACK_TERRACOTTA_STAIRS, Blocks.RED_TERRACOTTA);
+        stairs(Vanilla_PlusBlocks.WHITE_STAINED_GLASS_STAIRS, Blocks.WHITE_STAINED_GLASS);
+        stairs(Vanilla_PlusBlocks.ORANGE_STAINED_GLASS_STAIRS, Blocks.ORANGE_STAINED_GLASS);
+        stairs(Vanilla_PlusBlocks.MAGENTA_STAINED_GLASS_STAIRS, Blocks.MAGENTA_STAINED_GLASS);
+        stairs(Vanilla_PlusBlocks.LIGHT_BLUE_STAINED_GLASS_STAIRS, Blocks.LIGHT_BLUE_STAINED_GLASS);
+        stairs(Vanilla_PlusBlocks.YELLOW_STAINED_GLASS_STAIRS, Blocks.YELLOW_STAINED_GLASS);
+        stairs(Vanilla_PlusBlocks.LIME_STAINED_GLASS_STAIRS, Blocks.LIME_STAINED_GLASS);
+        stairs(Vanilla_PlusBlocks.PINK_STAINED_GLASS_STAIRS, Blocks.PINK_STAINED_GLASS);
+        stairs(Vanilla_PlusBlocks.GRAY_STAINED_GLASS_STAIRS, Blocks.GRAY_STAINED_GLASS);
+        stairs(Vanilla_PlusBlocks.LIGHT_GRAY_STAINED_GLASS_STAIRS, Blocks.LIGHT_GRAY_STAINED_GLASS);
+        stairs(Vanilla_PlusBlocks.CYAN_STAINED_GLASS_STAIRS, Blocks.CYAN_STAINED_GLASS);
+        stairs(Vanilla_PlusBlocks.PURPLE_STAINED_GLASS_STAIRS, Blocks.PURPLE_STAINED_GLASS);
+        stairs(Vanilla_PlusBlocks.BLUE_STAINED_GLASS_STAIRS, Blocks.BLUE_STAINED_GLASS);
+        stairs(Vanilla_PlusBlocks.BROWN_STAINED_GLASS_STAIRS, Blocks.BROWN_STAINED_GLASS);
+        stairs(Vanilla_PlusBlocks.GREEN_STAINED_GLASS_STAIRS, Blocks.GREEN_STAINED_GLASS);
+        stairs(Vanilla_PlusBlocks.RED_STAINED_GLASS_STAIRS, Blocks.RED_STAINED_GLASS);
+        stairs(Vanilla_PlusBlocks.BLACK_STAINED_GLASS_STAIRS, Blocks.RED_STAINED_GLASS);
+        stairs(Vanilla_PlusBlocks.WHITE_CONCRETE_STAIRS, Blocks.WHITE_CONCRETE);
+        stairs(Vanilla_PlusBlocks.ORANGE_CONCRETE_STAIRS, Blocks.ORANGE_CONCRETE);
+        stairs(Vanilla_PlusBlocks.MAGENTA_CONCRETE_STAIRS, Blocks.MAGENTA_CONCRETE);
+        stairs(Vanilla_PlusBlocks.LIGHT_BLUE_CONCRETE_STAIRS, Blocks.LIGHT_BLUE_CONCRETE);
+        stairs(Vanilla_PlusBlocks.YELLOW_CONCRETE_STAIRS, Blocks.YELLOW_CONCRETE);
+        stairs(Vanilla_PlusBlocks.LIME_CONCRETE_STAIRS, Blocks.LIME_CONCRETE);
+        stairs(Vanilla_PlusBlocks.PINK_CONCRETE_STAIRS, Blocks.PINK_CONCRETE);
+        stairs(Vanilla_PlusBlocks.GRAY_CONCRETE_STAIRS, Blocks.GRAY_CONCRETE);
+        stairs(Vanilla_PlusBlocks.LIGHT_GRAY_CONCRETE_STAIRS, Blocks.LIGHT_GRAY_CONCRETE);
+        stairs(Vanilla_PlusBlocks.CYAN_CONCRETE_STAIRS, Blocks.CYAN_CONCRETE);
+        stairs(Vanilla_PlusBlocks.PURPLE_CONCRETE_STAIRS, Blocks.PURPLE_CONCRETE);
+        stairs(Vanilla_PlusBlocks.BLUE_CONCRETE_STAIRS, Blocks.BLUE_CONCRETE);
+        stairs(Vanilla_PlusBlocks.BROWN_CONCRETE_STAIRS, Blocks.BROWN_CONCRETE);
+        stairs(Vanilla_PlusBlocks.GREEN_CONCRETE_STAIRS, Blocks.GREEN_CONCRETE);
+        stairs(Vanilla_PlusBlocks.RED_CONCRETE_STAIRS, Blocks.RED_CONCRETE);
+        stairs(Vanilla_PlusBlocks.BLACK_CONCRETE_STAIRS, Blocks.RED_CONCRETE);
+        stairs(Vanilla_PlusBlocks.WHITE_CONCRETE_POWDER_STAIRS, Blocks.WHITE_CONCRETE_POWDER);
+        stairs(Vanilla_PlusBlocks.ORANGE_CONCRETE_POWDER_STAIRS, Blocks.ORANGE_CONCRETE_POWDER);
+        stairs(Vanilla_PlusBlocks.MAGENTA_CONCRETE_POWDER_STAIRS, Blocks.MAGENTA_CONCRETE_POWDER);
+        stairs(Vanilla_PlusBlocks.LIGHT_BLUE_CONCRETE_POWDER_STAIRS, Blocks.LIGHT_BLUE_CONCRETE_POWDER);
+        stairs(Vanilla_PlusBlocks.YELLOW_CONCRETE_POWDER_STAIRS, Blocks.YELLOW_CONCRETE_POWDER);
+        stairs(Vanilla_PlusBlocks.LIME_CONCRETE_POWDER_STAIRS, Blocks.LIME_CONCRETE_POWDER);
+        stairs(Vanilla_PlusBlocks.PINK_CONCRETE_POWDER_STAIRS, Blocks.PINK_CONCRETE_POWDER);
+        stairs(Vanilla_PlusBlocks.GRAY_CONCRETE_POWDER_STAIRS, Blocks.GRAY_CONCRETE_POWDER);
+        stairs(Vanilla_PlusBlocks.LIGHT_GRAY_CONCRETE_POWDER_STAIRS, Blocks.LIGHT_GRAY_CONCRETE_POWDER);
+        stairs(Vanilla_PlusBlocks.CYAN_CONCRETE_POWDER_STAIRS, Blocks.CYAN_CONCRETE_POWDER);
+        stairs(Vanilla_PlusBlocks.PURPLE_CONCRETE_POWDER_STAIRS, Blocks.PURPLE_CONCRETE_POWDER);
+        stairs(Vanilla_PlusBlocks.BLUE_CONCRETE_POWDER_STAIRS, Blocks.BLUE_CONCRETE_POWDER);
+        stairs(Vanilla_PlusBlocks.BROWN_CONCRETE_POWDER_STAIRS, Blocks.BROWN_CONCRETE_POWDER);
+        stairs(Vanilla_PlusBlocks.GREEN_CONCRETE_POWDER_STAIRS, Blocks.GREEN_CONCRETE_POWDER);
+        stairs(Vanilla_PlusBlocks.RED_CONCRETE_POWDER_STAIRS, Blocks.RED_CONCRETE_POWDER);
+        stairs(Vanilla_PlusBlocks.BLACK_CONCRETE_POWDER_STAIRS, Blocks.RED_CONCRETE_POWDER);
+
 
         //SLABS
 
@@ -166,6 +246,108 @@ public class Vanilla_PlusBlockStateProvider extends BlockStateProvider {
         slab(Vanilla_PlusBlocks.DRIED_KELP_SLAB, Blocks.DRIED_KELP_BLOCK);
         slab(Vanilla_PlusBlocks.CRYING_OBSIDIAN_SLAB, Blocks.CRYING_OBSIDIAN);
         slab(Vanilla_PlusBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_SLAB, Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS);
-        
+
+        slab(Vanilla_PlusBlocks.WHITE_WOOL_SLAB, Blocks.WHITE_WOOL);
+        slab(Vanilla_PlusBlocks.ORANGE_WOOL_SLAB, Blocks.ORANGE_WOOL);
+        slab(Vanilla_PlusBlocks.MAGENTA_WOOL_SLAB, Blocks.MAGENTA_WOOL);
+        slab(Vanilla_PlusBlocks.LIGHT_BLUE_WOOL_SLAB, Blocks.LIGHT_BLUE_WOOL);
+        slab(Vanilla_PlusBlocks.YELLOW_WOOL_SLAB, Blocks.YELLOW_WOOL);
+        slab(Vanilla_PlusBlocks.LIME_WOOL_SLAB, Blocks.LIME_WOOL);
+        slab(Vanilla_PlusBlocks.PINK_WOOL_SLAB, Blocks.PINK_WOOL);
+        slab(Vanilla_PlusBlocks.GRAY_WOOL_SLAB, Blocks.GRAY_WOOL);
+        slab(Vanilla_PlusBlocks.LIGHT_GRAY_WOOL_SLAB, Blocks.LIGHT_GRAY_WOOL);
+        slab(Vanilla_PlusBlocks.CYAN_WOOL_SLAB, Blocks.CYAN_WOOL);
+        slab(Vanilla_PlusBlocks.PURPLE_WOOL_SLAB, Blocks.PURPLE_WOOL);
+        slab(Vanilla_PlusBlocks.BLUE_WOOL_SLAB, Blocks.BLUE_WOOL);
+        slab(Vanilla_PlusBlocks.BROWN_WOOL_SLAB, Blocks.BROWN_WOOL);
+        slab(Vanilla_PlusBlocks.GREEN_WOOL_SLAB, Blocks.GREEN_WOOL);
+        slab(Vanilla_PlusBlocks.RED_WOOL_SLAB, Blocks.RED_WOOL);
+        slab(Vanilla_PlusBlocks.BLACK_WOOL_SLAB, Blocks.RED_WOOL);
+        slab(Vanilla_PlusBlocks.WHITE_TERRACOTTA_SLAB, Blocks.WHITE_TERRACOTTA);
+        slab(Vanilla_PlusBlocks.ORANGE_TERRACOTTA_SLAB, Blocks.ORANGE_TERRACOTTA);
+        slab(Vanilla_PlusBlocks.MAGENTA_TERRACOTTA_SLAB, Blocks.MAGENTA_TERRACOTTA);
+        slab(Vanilla_PlusBlocks.LIGHT_BLUE_TERRACOTTA_SLAB, Blocks.LIGHT_BLUE_TERRACOTTA);
+        slab(Vanilla_PlusBlocks.YELLOW_TERRACOTTA_SLAB, Blocks.YELLOW_TERRACOTTA);
+        slab(Vanilla_PlusBlocks.LIME_TERRACOTTA_SLAB, Blocks.LIME_TERRACOTTA);
+        slab(Vanilla_PlusBlocks.PINK_TERRACOTTA_SLAB, Blocks.PINK_TERRACOTTA);
+        slab(Vanilla_PlusBlocks.GRAY_TERRACOTTA_SLAB, Blocks.GRAY_TERRACOTTA);
+        slab(Vanilla_PlusBlocks.LIGHT_GRAY_TERRACOTTA_SLAB, Blocks.LIGHT_GRAY_TERRACOTTA);
+        slab(Vanilla_PlusBlocks.CYAN_TERRACOTTA_SLAB, Blocks.CYAN_TERRACOTTA);
+        slab(Vanilla_PlusBlocks.PURPLE_TERRACOTTA_SLAB, Blocks.PURPLE_TERRACOTTA);
+        slab(Vanilla_PlusBlocks.BLUE_TERRACOTTA_SLAB, Blocks.BLUE_TERRACOTTA);
+        slab(Vanilla_PlusBlocks.BROWN_TERRACOTTA_SLAB, Blocks.BROWN_TERRACOTTA);
+        slab(Vanilla_PlusBlocks.GREEN_TERRACOTTA_SLAB, Blocks.GREEN_TERRACOTTA);
+        slab(Vanilla_PlusBlocks.RED_TERRACOTTA_SLAB, Blocks.RED_TERRACOTTA);
+        slab(Vanilla_PlusBlocks.BLACK_TERRACOTTA_SLAB, Blocks.RED_TERRACOTTA);
+        slab(Vanilla_PlusBlocks.WHITE_STAINED_GLASS_SLAB, Blocks.WHITE_STAINED_GLASS);
+        slab(Vanilla_PlusBlocks.ORANGE_STAINED_GLASS_SLAB, Blocks.ORANGE_STAINED_GLASS);
+        slab(Vanilla_PlusBlocks.MAGENTA_STAINED_GLASS_SLAB, Blocks.MAGENTA_STAINED_GLASS);
+        slab(Vanilla_PlusBlocks.LIGHT_BLUE_STAINED_GLASS_SLAB, Blocks.LIGHT_BLUE_STAINED_GLASS);
+        slab(Vanilla_PlusBlocks.YELLOW_STAINED_GLASS_SLAB, Blocks.YELLOW_STAINED_GLASS);
+        slab(Vanilla_PlusBlocks.LIME_STAINED_GLASS_SLAB, Blocks.LIME_STAINED_GLASS);
+        slab(Vanilla_PlusBlocks.PINK_STAINED_GLASS_SLAB, Blocks.PINK_STAINED_GLASS);
+        slab(Vanilla_PlusBlocks.GRAY_STAINED_GLASS_SLAB, Blocks.GRAY_STAINED_GLASS);
+        slab(Vanilla_PlusBlocks.LIGHT_GRAY_STAINED_GLASS_SLAB, Blocks.LIGHT_GRAY_STAINED_GLASS);
+        slab(Vanilla_PlusBlocks.CYAN_STAINED_GLASS_SLAB, Blocks.CYAN_STAINED_GLASS);
+        slab(Vanilla_PlusBlocks.PURPLE_STAINED_GLASS_SLAB, Blocks.PURPLE_STAINED_GLASS);
+        slab(Vanilla_PlusBlocks.BLUE_STAINED_GLASS_SLAB, Blocks.BLUE_STAINED_GLASS);
+        slab(Vanilla_PlusBlocks.BROWN_STAINED_GLASS_SLAB, Blocks.BROWN_STAINED_GLASS);
+        slab(Vanilla_PlusBlocks.GREEN_STAINED_GLASS_SLAB, Blocks.GREEN_STAINED_GLASS);
+        slab(Vanilla_PlusBlocks.RED_STAINED_GLASS_SLAB, Blocks.RED_STAINED_GLASS);
+        slab(Vanilla_PlusBlocks.BLACK_STAINED_GLASS_SLAB, Blocks.RED_STAINED_GLASS);
+        slab(Vanilla_PlusBlocks.WHITE_CONCRETE_SLAB, Blocks.WHITE_CONCRETE);
+        slab(Vanilla_PlusBlocks.ORANGE_CONCRETE_SLAB, Blocks.ORANGE_CONCRETE);
+        slab(Vanilla_PlusBlocks.MAGENTA_CONCRETE_SLAB, Blocks.MAGENTA_CONCRETE);
+        slab(Vanilla_PlusBlocks.LIGHT_BLUE_CONCRETE_SLAB, Blocks.LIGHT_BLUE_CONCRETE);
+        slab(Vanilla_PlusBlocks.YELLOW_CONCRETE_SLAB, Blocks.YELLOW_CONCRETE);
+        slab(Vanilla_PlusBlocks.LIME_CONCRETE_SLAB, Blocks.LIME_CONCRETE);
+        slab(Vanilla_PlusBlocks.PINK_CONCRETE_SLAB, Blocks.PINK_CONCRETE);
+        slab(Vanilla_PlusBlocks.GRAY_CONCRETE_SLAB, Blocks.GRAY_CONCRETE);
+        slab(Vanilla_PlusBlocks.LIGHT_GRAY_CONCRETE_SLAB, Blocks.LIGHT_GRAY_CONCRETE);
+        slab(Vanilla_PlusBlocks.CYAN_CONCRETE_SLAB, Blocks.CYAN_CONCRETE);
+        slab(Vanilla_PlusBlocks.PURPLE_CONCRETE_SLAB, Blocks.PURPLE_CONCRETE);
+        slab(Vanilla_PlusBlocks.BLUE_CONCRETE_SLAB, Blocks.BLUE_CONCRETE);
+        slab(Vanilla_PlusBlocks.BROWN_CONCRETE_SLAB, Blocks.BROWN_CONCRETE);
+        slab(Vanilla_PlusBlocks.GREEN_CONCRETE_SLAB, Blocks.GREEN_CONCRETE);
+        slab(Vanilla_PlusBlocks.RED_CONCRETE_SLAB, Blocks.RED_CONCRETE);
+        slab(Vanilla_PlusBlocks.BLACK_CONCRETE_SLAB, Blocks.RED_CONCRETE);
+        slab(Vanilla_PlusBlocks.WHITE_CONCRETE_POWDER_SLAB, Blocks.WHITE_CONCRETE_POWDER);
+        slab(Vanilla_PlusBlocks.ORANGE_CONCRETE_POWDER_SLAB, Blocks.ORANGE_CONCRETE_POWDER);
+        slab(Vanilla_PlusBlocks.MAGENTA_CONCRETE_POWDER_SLAB, Blocks.MAGENTA_CONCRETE_POWDER);
+        slab(Vanilla_PlusBlocks.LIGHT_BLUE_CONCRETE_POWDER_SLAB, Blocks.LIGHT_BLUE_CONCRETE_POWDER);
+        slab(Vanilla_PlusBlocks.YELLOW_CONCRETE_POWDER_SLAB, Blocks.YELLOW_CONCRETE_POWDER);
+        slab(Vanilla_PlusBlocks.LIME_CONCRETE_POWDER_SLAB, Blocks.LIME_CONCRETE_POWDER);
+        slab(Vanilla_PlusBlocks.PINK_CONCRETE_POWDER_SLAB, Blocks.PINK_CONCRETE_POWDER);
+        slab(Vanilla_PlusBlocks.GRAY_CONCRETE_POWDER_SLAB, Blocks.GRAY_CONCRETE_POWDER);
+        slab(Vanilla_PlusBlocks.LIGHT_GRAY_CONCRETE_POWDER_SLAB, Blocks.LIGHT_GRAY_CONCRETE_POWDER);
+        slab(Vanilla_PlusBlocks.CYAN_CONCRETE_POWDER_SLAB, Blocks.CYAN_CONCRETE_POWDER);
+        slab(Vanilla_PlusBlocks.PURPLE_CONCRETE_POWDER_SLAB, Blocks.PURPLE_CONCRETE_POWDER);
+        slab(Vanilla_PlusBlocks.BLUE_CONCRETE_POWDER_SLAB, Blocks.BLUE_CONCRETE_POWDER);
+        slab(Vanilla_PlusBlocks.BROWN_CONCRETE_POWDER_SLAB, Blocks.BROWN_CONCRETE_POWDER);
+        slab(Vanilla_PlusBlocks.GREEN_CONCRETE_POWDER_SLAB, Blocks.GREEN_CONCRETE_POWDER);
+        slab(Vanilla_PlusBlocks.RED_CONCRETE_POWDER_SLAB, Blocks.RED_CONCRETE_POWDER);
+        slab(Vanilla_PlusBlocks.BLACK_CONCRETE_POWDER_SLAB, Blocks.RED_CONCRETE_POWDER);
+
+        nonRotatablePillar(Vanilla_PlusBlocks.OAK_LOG, mcLoc("block/oak_log_top"), mcLoc("block/oak_log"));
+        nonRotatablePillar(Vanilla_PlusBlocks.BIRCH_LOG, mcLoc("block/birch_log_top"), mcLoc("block/birch_log"));
+        nonRotatablePillar(Vanilla_PlusBlocks.SPRUCE_LOG, mcLoc("block/spruce_log_top"), mcLoc("block/spruce_log"));
+        nonRotatablePillar(Vanilla_PlusBlocks.ACACIA_LOG, mcLoc("block/acacia_log_top"), mcLoc("block/acacia_log"));
+        nonRotatablePillar(Vanilla_PlusBlocks.DARK_OAK_LOG, mcLoc("block/dark_oak_log_top"), mcLoc("block/dark_oak_log"));
+        nonRotatablePillar(Vanilla_PlusBlocks.JUNGLE_LOG, mcLoc("block/jungle_log_top"), mcLoc("block/jungle_log"));
+        nonRotatablePillar(Vanilla_PlusBlocks.WARPED_STEM, mcLoc("block/warped_stem_top"), mcLoc("block/warped_stem"));
+        nonRotatablePillar(Vanilla_PlusBlocks.CRIMSON_STEM, mcLoc("block/crimson_stem_top"), mcLoc("block/crimson_stem"));
+        nonRotatablePillar(Vanilla_PlusBlocks.STRIPPED_OAK_LOG, mcLoc("block/stripped_oak_log_top"), mcLoc("block/stripped_oak_log"));
+        nonRotatablePillar(Vanilla_PlusBlocks.STRIPPED_BIRCH_LOG, mcLoc("block/stripped_birch_log_top"), mcLoc("block/stripped_birch_log"));
+        nonRotatablePillar(Vanilla_PlusBlocks.STRIPPED_SPRUCE_LOG, mcLoc("block/stripped_spruce_log_top"), mcLoc("block/stripped_spruce_log"));
+        nonRotatablePillar(Vanilla_PlusBlocks.STRIPPED_ACACIA_LOG, mcLoc("block/stripped_acacia_log_top"), mcLoc("block/stripped_acacia_log"));
+        nonRotatablePillar(Vanilla_PlusBlocks.STRIPPED_DARK_OAK_LOG, mcLoc("block/dark_oak_log_top"), mcLoc("block/dark_oak_log"));
+        nonRotatablePillar(Vanilla_PlusBlocks.STRIPPED_JUNGLE_LOG, mcLoc("block/stripped_jungle_log_top"), mcLoc("block/stripped_jungle_log"));
+        nonRotatablePillar(Vanilla_PlusBlocks.STRIPPED_WARPED_STEM, mcLoc("block/stripped_warped_stem_top"), mcLoc("block/stripped_warped_stem"));
+        nonRotatablePillar(Vanilla_PlusBlocks.STRIPPED_CRIMSON_STEM, mcLoc("block/stripped_crimson_stem_top"), mcLoc("block/stripped_crimson_stem"));
+        nonRotatablePillar(Vanilla_PlusBlocks.PURPUR_PILLAR, mcLoc("block/purpur_pillar_top"), mcLoc("block/purpur_pillar"));
+        nonRotatablePillar(Vanilla_PlusBlocks.QUARTZ_PILLAR, mcLoc("block/quartz_pillar_top"), mcLoc("block/quartz_pillar"));
+        nonRotatablePillar(Vanilla_PlusBlocks.HAY_BLOCK, mcLoc("block/hay_block_top"), mcLoc("block/hay_block"));
+
     }
 }
+

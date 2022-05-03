@@ -231,6 +231,246 @@ public class Vanilla_PlusBlocks {
     @ObjectHolder("cracked_polished_blackstone_brick_stairs")
     public static final Block CRACKED_POLISHED_BLACKSTONE_BRICK_STAIRS = null;
 
+    @ObjectHolder("white_wool_stairs")
+    public static final Block WHITE_WOOL_STAIRS = null;
+
+    @ObjectHolder("orange_wool_stairs")
+    public static final Block ORANGE_WOOL_STAIRS = null;
+
+    @ObjectHolder("magenta_wool_stairs")
+    public static final Block MAGENTA_WOOL_STAIRS = null;
+
+    @ObjectHolder("light_blue_wool_stairs")
+    public static final Block LIGHT_BLUE_WOOL_STAIRS = null;
+
+    @ObjectHolder("yellow_wool_stairs")
+    public static final Block YELLOW_WOOL_STAIRS = null;
+
+    @ObjectHolder("lime_wool_stairs")
+    public static final Block LIME_WOOL_STAIRS = null;
+
+    @ObjectHolder("pink_wool_stairs")
+    public static final Block PINK_WOOL_STAIRS = null;
+
+    @ObjectHolder("gray_wool_stairs")
+    public static final Block GRAY_WOOL_STAIRS = null;
+
+    @ObjectHolder("light_gray_wool_stairs")
+    public static final Block LIGHT_GRAY_WOOL_STAIRS = null;
+
+    @ObjectHolder("cyan_wool_stairs")
+    public static final Block CYAN_WOOL_STAIRS = null;
+
+    @ObjectHolder("purple_wool_stairs")
+    public static final Block PURPLE_WOOL_STAIRS = null;
+
+    @ObjectHolder("blue_wool_stairs")
+    public static final Block BLUE_WOOL_STAIRS = null;
+
+    @ObjectHolder("brown_wool_stairs")
+    public static final Block BROWN_WOOL_STAIRS = null;
+
+    @ObjectHolder("green_wool_stairs")
+    public static final Block GREEN_WOOL_STAIRS = null;
+
+    @ObjectHolder("red_wool_stairs")
+    public static final Block RED_WOOL_STAIRS = null;
+
+    @ObjectHolder("black_wool_stairs")
+    public static final Block BLACK_WOOL_STAIRS = null;
+
+    @ObjectHolder("white_terracotta_stairs")
+    public static final Block WHITE_TERRACOTTA_STAIRS = null;
+
+    @ObjectHolder("orange_terracotta_stairs")
+    public static final Block ORANGE_TERRACOTTA_STAIRS = null;
+
+    @ObjectHolder("magenta_terracotta_stairs")
+    public static final Block MAGENTA_TERRACOTTA_STAIRS = null;
+
+    @ObjectHolder("light_blue_terracotta_stairs")
+    public static final Block LIGHT_BLUE_TERRACOTTA_STAIRS = null;
+
+    @ObjectHolder("yellow_terracotta_stairs")
+    public static final Block YELLOW_TERRACOTTA_STAIRS = null;
+
+    @ObjectHolder("lime_terracotta_stairs")
+    public static final Block LIME_TERRACOTTA_STAIRS = null;
+
+    @ObjectHolder("pink_terracotta_stairs")
+    public static final Block PINK_TERRACOTTA_STAIRS = null;
+
+    @ObjectHolder("gray_terracotta_stairs")
+    public static final Block GRAY_TERRACOTTA_STAIRS = null;
+
+    @ObjectHolder("light_gray_terracotta_stairs")
+    public static final Block LIGHT_GRAY_TERRACOTTA_STAIRS = null;
+
+    @ObjectHolder("cyan_terracotta_stairs")
+    public static final Block CYAN_TERRACOTTA_STAIRS = null;
+
+    @ObjectHolder("purple_terracotta_stairs")
+    public static final Block PURPLE_TERRACOTTA_STAIRS = null;
+
+    @ObjectHolder("blue_terracotta_stairs")
+    public static final Block BLUE_TERRACOTTA_STAIRS = null;
+
+    @ObjectHolder("brown_terracotta_stairs")
+    public static final Block BROWN_TERRACOTTA_STAIRS = null;
+
+    @ObjectHolder("green_terracotta_stairs")
+    public static final Block GREEN_TERRACOTTA_STAIRS = null;
+
+    @ObjectHolder("red_terracotta_stairs")
+    public static final Block RED_TERRACOTTA_STAIRS = null;
+
+    @ObjectHolder("black_terracotta_stairs")
+    public static final Block BLACK_TERRACOTTA_STAIRS = null;
+
+    @ObjectHolder("white_stained_glass_stairs")
+    public static final Block WHITE_STAINED_GLASS_STAIRS = null;
+
+    @ObjectHolder("orange_stained_glass_stairs")
+    public static final Block ORANGE_STAINED_GLASS_STAIRS = null;
+
+    @ObjectHolder("magenta_stained_glass_stairs")
+    public static final Block MAGENTA_STAINED_GLASS_STAIRS = null;
+
+    @ObjectHolder("light_blue_stained_glass_stairs")
+    public static final Block LIGHT_BLUE_STAINED_GLASS_STAIRS = null;
+
+    @ObjectHolder("yellow_stained_glass_stairs")
+    public static final Block YELLOW_STAINED_GLASS_STAIRS = null;
+
+    @ObjectHolder("lime_stained_glass_stairs")
+    public static final Block LIME_STAINED_GLASS_STAIRS = null;
+
+    @ObjectHolder("pink_stained_glass_stairs")
+    public static final Block PINK_STAINED_GLASS_STAIRS = null;
+
+    @ObjectHolder("gray_stained_glass_stairs")
+    public static final Block GRAY_STAINED_GLASS_STAIRS = null;
+
+    @ObjectHolder("light_gray_stained_glass_stairs")
+    public static final Block LIGHT_GRAY_STAINED_GLASS_STAIRS = null;
+
+    @ObjectHolder("cyan_stained_glass_stairs")
+    public static final Block CYAN_STAINED_GLASS_STAIRS = null;
+
+    @ObjectHolder("purple_stained_glass_stairs")
+    public static final Block PURPLE_STAINED_GLASS_STAIRS = null;
+
+    @ObjectHolder("blue_stained_glass_stairs")
+    public static final Block BLUE_STAINED_GLASS_STAIRS = null;
+
+    @ObjectHolder("brown_stained_glass_stairs")
+    public static final Block BROWN_STAINED_GLASS_STAIRS = null;
+
+    @ObjectHolder("green_stained_glass_stairs")
+    public static final Block GREEN_STAINED_GLASS_STAIRS = null;
+
+    @ObjectHolder("red_stained_glass_stairs")
+    public static final Block RED_STAINED_GLASS_STAIRS = null;
+
+    @ObjectHolder("black_stained_glass_stairs")
+    public static final Block BLACK_STAINED_GLASS_STAIRS = null;
+
+    @ObjectHolder("white_concrete_stairs")
+    public static final Block WHITE_CONCRETE_STAIRS = null;
+
+    @ObjectHolder("orange_concrete_stairs")
+    public static final Block ORANGE_CONCRETE_STAIRS = null;
+
+    @ObjectHolder("magenta_concrete_stairs")
+    public static final Block MAGENTA_CONCRETE_STAIRS = null;
+
+    @ObjectHolder("light_blue_concrete_stairs")
+    public static final Block LIGHT_BLUE_CONCRETE_STAIRS = null;
+
+    @ObjectHolder("yellow_concrete_stairs")
+    public static final Block YELLOW_CONCRETE_STAIRS = null;
+
+    @ObjectHolder("lime_concrete_stairs")
+    public static final Block LIME_CONCRETE_STAIRS = null;
+
+    @ObjectHolder("pink_concrete_stairs")
+    public static final Block PINK_CONCRETE_STAIRS = null;
+
+    @ObjectHolder("gray_concrete_stairs")
+    public static final Block GRAY_CONCRETE_STAIRS = null;
+
+    @ObjectHolder("light_gray_concrete_stairs")
+    public static final Block LIGHT_GRAY_CONCRETE_STAIRS = null;
+
+    @ObjectHolder("cyan_concrete_stairs")
+    public static final Block CYAN_CONCRETE_STAIRS = null;
+
+    @ObjectHolder("purple_concrete_stairs")
+    public static final Block PURPLE_CONCRETE_STAIRS = null;
+
+    @ObjectHolder("blue_concrete_stairs")
+    public static final Block BLUE_CONCRETE_STAIRS = null;
+
+    @ObjectHolder("brown_concrete_stairs")
+    public static final Block BROWN_CONCRETE_STAIRS = null;
+
+    @ObjectHolder("green_concrete_stairs")
+    public static final Block GREEN_CONCRETE_STAIRS = null;
+
+    @ObjectHolder("red_concrete_stairs")
+    public static final Block RED_CONCRETE_STAIRS = null;
+
+    @ObjectHolder("black_concrete_stairs")
+    public static final Block BLACK_CONCRETE_STAIRS = null;
+
+    @ObjectHolder("white_concrete_powder_stairs")
+    public static final Block WHITE_CONCRETE_POWDER_STAIRS = null;
+
+    @ObjectHolder("orange_concrete_powder_stairs")
+    public static final Block ORANGE_CONCRETE_POWDER_STAIRS = null;
+
+    @ObjectHolder("magenta_concrete_powder_stairs")
+    public static final Block MAGENTA_CONCRETE_POWDER_STAIRS = null;
+
+    @ObjectHolder("light_blue_concrete_powder_stairs")
+    public static final Block LIGHT_BLUE_CONCRETE_POWDER_STAIRS = null;
+
+    @ObjectHolder("yellow_concrete_powder_stairs")
+    public static final Block YELLOW_CONCRETE_POWDER_STAIRS = null;
+
+    @ObjectHolder("lime_concrete_powder_stairs")
+    public static final Block LIME_CONCRETE_POWDER_STAIRS = null;
+
+    @ObjectHolder("pink_concrete_powder_stairs")
+    public static final Block PINK_CONCRETE_POWDER_STAIRS = null;
+
+    @ObjectHolder("gray_concrete_powder_stairs")
+    public static final Block GRAY_CONCRETE_POWDER_STAIRS = null;
+
+    @ObjectHolder("light_gray_concrete_powder_stairs")
+    public static final Block LIGHT_GRAY_CONCRETE_POWDER_STAIRS = null;
+
+    @ObjectHolder("cyan_concrete_powder_stairs")
+    public static final Block CYAN_CONCRETE_POWDER_STAIRS = null;
+
+    @ObjectHolder("purple_concrete_powder_stairs")
+    public static final Block PURPLE_CONCRETE_POWDER_STAIRS = null;
+
+    @ObjectHolder("blue_concrete_powder_stairs")
+    public static final Block BLUE_CONCRETE_POWDER_STAIRS = null;
+
+    @ObjectHolder("brown_concrete_powder_stairs")
+    public static final Block BROWN_CONCRETE_POWDER_STAIRS = null;
+
+    @ObjectHolder("green_concrete_powder_stairs")
+    public static final Block GREEN_CONCRETE_POWDER_STAIRS = null;
+
+    @ObjectHolder("red_concrete_powder_stairs")
+    public static final Block RED_CONCRETE_POWDER_STAIRS = null;
+
+    @ObjectHolder("black_concrete_powder_stairs")
+    public static final Block BLACK_CONCRETE_POWDER_STAIRS = null;
+
     //SLABS
 
     @ObjectHolder("calcite_slab")
@@ -448,4 +688,307 @@ public class Vanilla_PlusBlocks {
 
     @ObjectHolder("cracked_polished_blackstone_brick_slab")
     public static final Block CRACKED_POLISHED_BLACKSTONE_BRICK_SLAB = null;
+
+    @ObjectHolder("white_wool_slab")
+    public static final Block WHITE_WOOL_SLAB = null;
+
+    @ObjectHolder("orange_wool_slab")
+    public static final Block ORANGE_WOOL_SLAB = null;
+
+    @ObjectHolder("magenta_wool_slab")
+    public static final Block MAGENTA_WOOL_SLAB = null;
+
+    @ObjectHolder("light_blue_wool_slab")
+    public static final Block LIGHT_BLUE_WOOL_SLAB = null;
+
+    @ObjectHolder("yellow_wool_slab")
+    public static final Block YELLOW_WOOL_SLAB = null;
+
+    @ObjectHolder("lime_wool_slab")
+    public static final Block LIME_WOOL_SLAB = null;
+
+    @ObjectHolder("pink_wool_slab")
+    public static final Block PINK_WOOL_SLAB = null;
+
+    @ObjectHolder("gray_wool_slab")
+    public static final Block GRAY_WOOL_SLAB = null;
+
+    @ObjectHolder("light_gray_wool_slab")
+    public static final Block LIGHT_GRAY_WOOL_SLAB = null;
+
+    @ObjectHolder("cyan_wool_slab")
+    public static final Block CYAN_WOOL_SLAB = null;
+
+    @ObjectHolder("purple_wool_slab")
+    public static final Block PURPLE_WOOL_SLAB = null;
+
+    @ObjectHolder("blue_wool_slab")
+    public static final Block BLUE_WOOL_SLAB = null;
+
+    @ObjectHolder("brown_wool_slab")
+    public static final Block BROWN_WOOL_SLAB = null;
+
+    @ObjectHolder("green_wool_slab")
+    public static final Block GREEN_WOOL_SLAB = null;
+
+    @ObjectHolder("red_wool_slab")
+    public static final Block RED_WOOL_SLAB = null;
+
+    @ObjectHolder("black_wool_slab")
+    public static final Block BLACK_WOOL_SLAB = null;
+
+    @ObjectHolder("white_terracotta_slab")
+    public static final Block WHITE_TERRACOTTA_SLAB = null;
+
+    @ObjectHolder("orange_terracotta_slab")
+    public static final Block ORANGE_TERRACOTTA_SLAB = null;
+
+    @ObjectHolder("magenta_terracotta_slab")
+    public static final Block MAGENTA_TERRACOTTA_SLAB = null;
+
+    @ObjectHolder("light_blue_terracotta_slab")
+    public static final Block LIGHT_BLUE_TERRACOTTA_SLAB = null;
+
+    @ObjectHolder("yellow_terracotta_slab")
+    public static final Block YELLOW_TERRACOTTA_SLAB = null;
+
+    @ObjectHolder("lime_terracotta_slab")
+    public static final Block LIME_TERRACOTTA_SLAB = null;
+
+    @ObjectHolder("pink_terracotta_slab")
+    public static final Block PINK_TERRACOTTA_SLAB = null;
+
+    @ObjectHolder("gray_terracotta_slab")
+    public static final Block GRAY_TERRACOTTA_SLAB = null;
+
+    @ObjectHolder("light_gray_terracotta_slab")
+    public static final Block LIGHT_GRAY_TERRACOTTA_SLAB = null;
+
+    @ObjectHolder("cyan_terracotta_slab")
+    public static final Block CYAN_TERRACOTTA_SLAB = null;
+
+    @ObjectHolder("purple_terracotta_slab")
+    public static final Block PURPLE_TERRACOTTA_SLAB = null;
+
+    @ObjectHolder("blue_terracotta_slab")
+    public static final Block BLUE_TERRACOTTA_SLAB = null;
+
+    @ObjectHolder("brown_terracotta_slab")
+    public static final Block BROWN_TERRACOTTA_SLAB = null;
+
+    @ObjectHolder("green_terracotta_slab")
+    public static final Block GREEN_TERRACOTTA_SLAB = null;
+
+    @ObjectHolder("red_terracotta_slab")
+    public static final Block RED_TERRACOTTA_SLAB = null;
+
+    @ObjectHolder("black_terracotta_slab")
+    public static final Block BLACK_TERRACOTTA_SLAB = null;
+
+    @ObjectHolder("white_stained_glass_slab")
+    public static final Block WHITE_STAINED_GLASS_SLAB = null;
+
+    @ObjectHolder("orange_stained_glass_slab")
+    public static final Block ORANGE_STAINED_GLASS_SLAB = null;
+
+    @ObjectHolder("magenta_stained_glass_slab")
+    public static final Block MAGENTA_STAINED_GLASS_SLAB = null;
+
+    @ObjectHolder("light_blue_stained_glass_slab")
+    public static final Block LIGHT_BLUE_STAINED_GLASS_SLAB = null;
+
+    @ObjectHolder("yellow_stained_glass_slab")
+    public static final Block YELLOW_STAINED_GLASS_SLAB = null;
+
+    @ObjectHolder("lime_stained_glass_slab")
+    public static final Block LIME_STAINED_GLASS_SLAB = null;
+
+    @ObjectHolder("pink_stained_glass_slab")
+    public static final Block PINK_STAINED_GLASS_SLAB = null;
+
+    @ObjectHolder("gray_stained_glass_slab")
+    public static final Block GRAY_STAINED_GLASS_SLAB = null;
+
+    @ObjectHolder("light_gray_stained_glass_slab")
+    public static final Block LIGHT_GRAY_STAINED_GLASS_SLAB = null;
+
+    @ObjectHolder("cyan_stained_glass_slab")
+    public static final Block CYAN_STAINED_GLASS_SLAB = null;
+
+    @ObjectHolder("purple_stained_glass_slab")
+    public static final Block PURPLE_STAINED_GLASS_SLAB = null;
+
+    @ObjectHolder("blue_stained_glass_slab")
+    public static final Block BLUE_STAINED_GLASS_SLAB = null;
+
+    @ObjectHolder("brown_stained_glass_slab")
+    public static final Block BROWN_STAINED_GLASS_SLAB = null;
+
+    @ObjectHolder("green_stained_glass_slab")
+    public static final Block GREEN_STAINED_GLASS_SLAB = null;
+
+    @ObjectHolder("red_stained_glass_slab")
+    public static final Block RED_STAINED_GLASS_SLAB = null;
+
+    @ObjectHolder("black_stained_glass_slab")
+    public static final Block BLACK_STAINED_GLASS_SLAB = null;
+
+    @ObjectHolder("white_concrete_slab")
+    public static final Block WHITE_CONCRETE_SLAB = null;
+
+    @ObjectHolder("orange_concrete_slab")
+    public static final Block ORANGE_CONCRETE_SLAB = null;
+
+    @ObjectHolder("magenta_concrete_slab")
+    public static final Block MAGENTA_CONCRETE_SLAB = null;
+
+    @ObjectHolder("light_blue_concrete_slab")
+    public static final Block LIGHT_BLUE_CONCRETE_SLAB = null;
+
+    @ObjectHolder("yellow_concrete_slab")
+    public static final Block YELLOW_CONCRETE_SLAB = null;
+
+    @ObjectHolder("lime_concrete_slab")
+    public static final Block LIME_CONCRETE_SLAB = null;
+
+    @ObjectHolder("pink_concrete_slab")
+    public static final Block PINK_CONCRETE_SLAB = null;
+
+    @ObjectHolder("gray_concrete_slab")
+    public static final Block GRAY_CONCRETE_SLAB = null;
+
+    @ObjectHolder("light_gray_concrete_slab")
+    public static final Block LIGHT_GRAY_CONCRETE_SLAB = null;
+
+    @ObjectHolder("cyan_concrete_slab")
+    public static final Block CYAN_CONCRETE_SLAB = null;
+
+    @ObjectHolder("purple_concrete_slab")
+    public static final Block PURPLE_CONCRETE_SLAB = null;
+
+    @ObjectHolder("blue_concrete_slab")
+    public static final Block BLUE_CONCRETE_SLAB = null;
+
+    @ObjectHolder("brown_concrete_slab")
+    public static final Block BROWN_CONCRETE_SLAB = null;
+
+    @ObjectHolder("green_concrete_slab")
+    public static final Block GREEN_CONCRETE_SLAB = null;
+
+    @ObjectHolder("red_concrete_slab")
+    public static final Block RED_CONCRETE_SLAB = null;
+
+    @ObjectHolder("black_concrete_slab")
+    public static final Block BLACK_CONCRETE_SLAB = null;
+
+    @ObjectHolder("white_concrete_powder_slab")
+    public static final Block WHITE_CONCRETE_POWDER_SLAB = null;
+
+    @ObjectHolder("orange_concrete_powder_slab")
+    public static final Block ORANGE_CONCRETE_POWDER_SLAB = null;
+
+    @ObjectHolder("magenta_concrete_powder_slab")
+    public static final Block MAGENTA_CONCRETE_POWDER_SLAB = null;
+
+    @ObjectHolder("light_blue_concrete_powder_slab")
+    public static final Block LIGHT_BLUE_CONCRETE_POWDER_SLAB = null;
+
+    @ObjectHolder("yellow_concrete_powder_slab")
+    public static final Block YELLOW_CONCRETE_POWDER_SLAB = null;
+
+    @ObjectHolder("lime_concrete_powder_slab")
+    public static final Block LIME_CONCRETE_POWDER_SLAB = null;
+
+    @ObjectHolder("pink_concrete_powder_slab")
+    public static final Block PINK_CONCRETE_POWDER_SLAB = null;
+
+    @ObjectHolder("gray_concrete_powder_slab")
+    public static final Block GRAY_CONCRETE_POWDER_SLAB = null;
+
+    @ObjectHolder("light_gray_concrete_powder_slab")
+    public static final Block LIGHT_GRAY_CONCRETE_POWDER_SLAB = null;
+
+    @ObjectHolder("cyan_concrete_powder_slab")
+    public static final Block CYAN_CONCRETE_POWDER_SLAB = null;
+
+    @ObjectHolder("purple_concrete_powder_slab")
+    public static final Block PURPLE_CONCRETE_POWDER_SLAB = null;
+
+    @ObjectHolder("blue_concrete_powder_slab")
+    public static final Block BLUE_CONCRETE_POWDER_SLAB = null;
+
+    @ObjectHolder("brown_concrete_powder_slab")
+    public static final Block BROWN_CONCRETE_POWDER_SLAB = null;
+
+    @ObjectHolder("green_concrete_powder_slab")
+    public static final Block GREEN_CONCRETE_POWDER_SLAB = null;
+
+    @ObjectHolder("red_concrete_powder_slab")
+    public static final Block RED_CONCRETE_POWDER_SLAB = null;
+
+    @ObjectHolder("black_concrete_powder_slab")
+    public static final Block BLACK_CONCRETE_POWDER_SLAB = null;
+
+
+
+    //OTHER
+
+    @ObjectHolder("oak_log")
+    public static final Block OAK_LOG = null;
+
+    @ObjectHolder("birch_log")
+    public static final Block BIRCH_LOG = null;
+
+    @ObjectHolder("spruce_log")
+    public static final Block SPRUCE_LOG = null;
+
+    @ObjectHolder("acacia_log")
+    public static final Block ACACIA_LOG = null;
+
+    @ObjectHolder("dark_oak_log")
+    public static final Block DARK_OAK_LOG = null;
+
+    @ObjectHolder("jungle_log")
+    public static final Block JUNGLE_LOG = null;
+
+    @ObjectHolder("warped_stem")
+    public static final Block WARPED_STEM = null;
+
+    @ObjectHolder("crimson_stem")
+    public static final Block CRIMSON_STEM = null;
+
+    @ObjectHolder("stripped_oak_log")
+    public static final Block STRIPPED_OAK_LOG = null;
+
+    @ObjectHolder("stripped_birch_log")
+    public static final Block STRIPPED_BIRCH_LOG = null;
+
+    @ObjectHolder("stripped_spruce_log")
+    public static final Block STRIPPED_SPRUCE_LOG = null;
+
+    @ObjectHolder("stripped_acacia_log")
+    public static final Block STRIPPED_ACACIA_LOG = null;
+
+    @ObjectHolder("stripped_dark_oak_log")
+    public static final Block STRIPPED_DARK_OAK_LOG = null;
+
+    @ObjectHolder("stripped_jungle_log")
+    public static final Block STRIPPED_JUNGLE_LOG = null;
+
+    @ObjectHolder("stripped_warped_stem")
+    public static final Block STRIPPED_WARPED_STEM = null;
+
+    @ObjectHolder("stripped_crimson_stem")
+    public static final Block STRIPPED_CRIMSON_STEM = null;
+
+    @ObjectHolder("purpur_pillar")
+    public static final Block PURPUR_PILLAR = null;
+
+    @ObjectHolder("quartz_pillar")
+    public static final Block QUARTZ_PILLAR = null;
+
+    @ObjectHolder("hay_block")
+    public static final Block HAY_BLOCK = null;
+
+
 }
