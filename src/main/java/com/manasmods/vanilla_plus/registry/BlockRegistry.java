@@ -3,15 +3,14 @@ package com.manasmods.vanilla_plus.registry;
 import com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks;
 import com.manasmods.vanilla_plus.item.templates.SimpleBlock;
 import com.manasmods.vanilla_plus.item.templates.SimpleBlockItem;
+import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -359,28 +358,28 @@ public class BlockRegistry {
         registry.register("black_concrete_powder_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BLACK_CONCRETE_POWDER)));
 
 
-
         //BLOCKS FOR STAIRS + SLABS
 
-        registry.register("oak_log", () -> new SimpleBlock(Material.WOOD, properties -> BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
-        registry.register("birch_log", () -> new SimpleBlock(Material.WOOD, properties -> BlockBehaviour.Properties.copy(Blocks.BIRCH_LOG)));
-        registry.register("spruce_log", () -> new SimpleBlock(Material.WOOD, properties -> BlockBehaviour.Properties.copy(Blocks.SPRUCE_LOG)));
-        registry.register("acacia_log", () -> new SimpleBlock(Material.WOOD, properties -> BlockBehaviour.Properties.copy(Blocks.ACACIA_LOG)));
-        registry.register("dark_oak_log", () -> new SimpleBlock(Material.WOOD, properties -> BlockBehaviour.Properties.copy(Blocks.DARK_OAK_LOG)));
-        registry.register("jungle_log", () -> new SimpleBlock(Material.WOOD, properties -> BlockBehaviour.Properties.copy(Blocks.JUNGLE_LOG)));
-        registry.register("warped_stem", () -> new SimpleBlock(Material.NETHER_WOOD, properties -> BlockBehaviour.Properties.copy(Blocks.WARPED_STEM)));
-        registry.register("crimson_stem", () -> new SimpleBlock(Material.NETHER_WOOD, properties -> BlockBehaviour.Properties.copy(Blocks.CRIMSON_STEM)));
-        registry.register("stripped_oak_log", () -> new SimpleBlock(Material.WOOD, properties -> BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)));
-        registry.register("stripped_birch_log", () -> new SimpleBlock(Material.WOOD, properties -> BlockBehaviour.Properties.copy(Blocks.STRIPPED_BIRCH_LOG)));
-        registry.register("stripped_spruce_log", () -> new SimpleBlock(Material.WOOD, properties -> BlockBehaviour.Properties.copy(Blocks.STRIPPED_SPRUCE_LOG)));
-        registry.register("stripped_acacia_log", () -> new SimpleBlock(Material.WOOD, properties -> BlockBehaviour.Properties.copy(Blocks.STRIPPED_ACACIA_LOG)));
-        registry.register("stripped_dark_oak_log", () -> new SimpleBlock(Material.WOOD, properties -> BlockBehaviour.Properties.copy(Blocks.STRIPPED_DARK_OAK_LOG)));
-        registry.register("stripped_jungle_log", () -> new SimpleBlock(Material.WOOD, properties -> BlockBehaviour.Properties.copy(Blocks.STRIPPED_JUNGLE_LOG)));
-        registry.register("stripped_warped_stem", () -> new SimpleBlock(Material.NETHER_WOOD, properties -> BlockBehaviour.Properties.copy(Blocks.STRIPPED_WARPED_STEM)));
-        registry.register("stripped_crimson_stem", () -> new SimpleBlock(Material.NETHER_WOOD, properties -> BlockBehaviour.Properties.copy(Blocks.STRIPPED_CRIMSON_STEM)));
-        registry.register("purpur_pillar", () -> new SimpleBlock(Material.STONE, properties -> BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR)));
-        registry.register("quartz_pillar", () -> new SimpleBlock(Material.STONE, properties -> BlockBehaviour.Properties.copy(Blocks.QUARTZ_PILLAR)));
-        registry.register("hay_block", () -> new SimpleBlock(Material.GRASS, properties -> BlockBehaviour.Properties.copy(Blocks.HAY_BLOCK)));
+        registry.register("oak_log", () -> new SimpleBlock(Material.WOOD, properties -> properties.strength(2.0F).sound(SoundType.WOOD)));
+        registry.register("birch_log", () -> new SimpleBlock(Material.WOOD, properties -> properties.strength(2.0F).sound(SoundType.WOOD)));
+        registry.register("spruce_log", () -> new SimpleBlock(Material.WOOD, properties -> properties.strength(2.0F).sound(SoundType.WOOD)));
+        registry.register("acacia_log", () -> new SimpleBlock(Material.WOOD, properties -> properties.strength(2.0F).sound(SoundType.WOOD)));
+        registry.register("dark_oak_log", () -> new SimpleBlock(Material.WOOD, properties -> properties.strength(2.0F).sound(SoundType.WOOD)));
+        registry.register("jungle_log", () -> new SimpleBlock(Material.WOOD, properties -> properties.strength(2.0F).sound(SoundType.WOOD)));
+        registry.register("warped_stem", () -> new SimpleBlock(Material.NETHER_WOOD, properties -> properties.strength(2.0F).sound(SoundType.STEM)));
+        registry.register("crimson_stem", () -> new SimpleBlock(Material.NETHER_WOOD, properties -> properties.strength(2.0F).sound(SoundType.STEM)));
+        registry.register("stripped_oak_log", () -> new SimpleBlock(Material.WOOD, properties -> properties.strength(2.0F).sound(SoundType.WOOD)));
+        registry.register("stripped_birch_log", () -> new SimpleBlock(Material.WOOD, properties -> properties.strength(2.0F).sound(SoundType.WOOD)));
+        registry.register("stripped_spruce_log", () -> new SimpleBlock(Material.WOOD, properties -> properties.strength(2.0F).sound(SoundType.WOOD)));
+        registry.register("stripped_acacia_log", () -> new SimpleBlock(Material.WOOD, properties -> properties.strength(2.0F).sound(SoundType.WOOD)));
+        registry.register("stripped_dark_oak_log", () -> new SimpleBlock(Material.WOOD, properties -> properties.strength(2.0F).sound(SoundType.WOOD)));
+        registry.register("stripped_jungle_log", () -> new SimpleBlock(Material.WOOD, properties -> properties.strength(2.0F).sound(SoundType.WOOD)));
+        registry.register("stripped_warped_stem", () -> new SimpleBlock(Material.NETHER_WOOD, properties -> properties.strength(2.0F).sound(SoundType.STEM)));
+        registry.register("stripped_crimson_stem", () -> new SimpleBlock(Material.NETHER_WOOD, properties -> properties.strength(2.0F).sound(SoundType.STEM)));
+        registry.register("purpur_pillar", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 6.0F)));
+        registry.register("quartz_pillar", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(0.8F)));
+        registry.register("hay_block", () -> new SimpleBlock(Material.GRASS, properties -> properties.strength(0.5F).sound(SoundType.GRASS)));
+
     }
     /**
      * This Method allows to create {@link BlockItem} objects with non-default settings.
@@ -389,4 +388,5 @@ public class BlockRegistry {
     static void registerItems(DeferredRegister<Item> registry) {
         //Custom BlockItems here
     }
+
 }
