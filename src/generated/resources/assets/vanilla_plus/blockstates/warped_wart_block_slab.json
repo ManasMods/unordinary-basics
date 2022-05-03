@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "vanilla_plus:block/warped_wart_block_slab_top"
+    },
+    "type=bottom": {
+      "model": "vanilla_plus:block/warped_wart_block_slab"
+    },
+    "type=double": {
+      "model": "minecraft:block/warped_wart_block"
+    }
+  }
+}
