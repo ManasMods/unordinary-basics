@@ -1,5 +1,6 @@
 package com.manasmods.vanilla_plus.registry;
 
+
 import com.manasmods.vanilla_plus.Vanilla_Plus;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -18,11 +19,10 @@ public class Vanilla_PlusRegistry {
      * @param modEventBus needs to be the modEventbus!
      */
     public static void register(IEventBus modEventBus) {
-        BlockRegistry.register(ITEMS, BLOCKS); //Register Blocks with their BlockItems
-        ItemRegistry.register(ITEMS); //Register Items to our Registry
-
         // Add our Registries to Forge
         BLOCKS.register(modEventBus);
         ITEMS.register(modEventBus);
+        BlockRegistry.register(ITEMS, BLOCKS); //Register Blocks with their BlockItems
+        ItemRegistry.register(ITEMS); //Register Items to our Registry
     }
 }

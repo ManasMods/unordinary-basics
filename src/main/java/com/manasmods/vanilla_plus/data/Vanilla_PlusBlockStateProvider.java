@@ -1,13 +1,15 @@
 package com.manasmods.vanilla_plus.data;
 
+import com.manasmods.vanilla_plus.Vanilla_Plus;
 import com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks;
 import com.github.manasmods.manascore.data.gen.BlockStateProvider;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
+
 public class Vanilla_PlusBlockStateProvider extends BlockStateProvider {
     public Vanilla_PlusBlockStateProvider(GatherDataEvent gatherDataEvent) {
-        super(gatherDataEvent, "<mod_id>");
+        super(gatherDataEvent, Vanilla_Plus.MOD_ID);
     }
 
     @Override
@@ -32,27 +34,27 @@ public class Vanilla_PlusBlockStateProvider extends BlockStateProvider {
         stairs(Vanilla_PlusBlocks.BLOCK_OF_RAW_COPPER_STAIRS, Blocks.RAW_COPPER_BLOCK);
         stairs(Vanilla_PlusBlocks.BLOCK_OF_RAW_GOLD_STAIRS, Blocks.RAW_GOLD_BLOCK);
         stairs(Vanilla_PlusBlocks.BLOCK_OF_AMETHYST_STAIRS, Blocks.AMETHYST_BLOCK);
-        stairs(Vanilla_PlusBlocks.OAK_LOG_STAIRS, Blocks.OAK_LOG);
-        stairs(Vanilla_PlusBlocks.SPRUCE_LOG_STAIRS, Blocks.SPRUCE_LOG);
-        stairs(Vanilla_PlusBlocks.BIRCH_LOG_STAIRS, Blocks.BIRCH_LOG);
-        stairs(Vanilla_PlusBlocks.JUNGLE_LOG_STAIRS, Blocks.JUNGLE_LOG);
-        stairs(Vanilla_PlusBlocks.ACACIA_LOG_STAIRS, Blocks.ACACIA_LOG);
-        stairs(Vanilla_PlusBlocks.DARK_OAK_LOG_STAIRS, Blocks.DARK_OAK_LOG);
-        stairs(Vanilla_PlusBlocks.CRIMSON_STEM_STAIRS, Blocks.CRIMSON_STEM);
-        stairs(Vanilla_PlusBlocks.WARPED_STEM_STAIRS, Blocks.WARPED_STEM);
-        stairs(Vanilla_PlusBlocks.STRIPPED_OAK_LOG_STAIRS, Blocks.STRIPPED_OAK_LOG);
-        stairs(Vanilla_PlusBlocks.STRIPPED_SPRUCE_LOG_STAIRS, Blocks.STRIPPED_SPRUCE_LOG);
-        stairs(Vanilla_PlusBlocks.STRIPPED_BIRCH_LOG_STAIRS, Blocks.STRIPPED_BIRCH_LOG);
-        stairs(Vanilla_PlusBlocks.STRIPPED_JUNGLE_LOG_STAIRS, Blocks.STRIPPED_JUNGLE_LOG);
-        stairs(Vanilla_PlusBlocks.STRIPPED_ACACIA_LOG_STAIRS, Blocks.STRIPPED_ACACIA_LOG);
-        stairs(Vanilla_PlusBlocks.STRIPPED_DARK_OAK_LOG_STAIRS, Blocks.STRIPPED_DARK_OAK_LOG);
-        stairs(Vanilla_PlusBlocks.STRIPPED_CRIMSON_STEM_STAIRS, Blocks.STRIPPED_CRIMSON_STEM);
-        stairs(Vanilla_PlusBlocks.STRIPPED_WARPED_STEM_STAIRS, Blocks.STRIPPED_WARPED_STEM);
+        stairs(Vanilla_PlusBlocks.OAK_LOG_STAIRS, Vanilla_PlusBlocks.OAK_LOG);
+        stairs(Vanilla_PlusBlocks.SPRUCE_LOG_STAIRS, Vanilla_PlusBlocks.SPRUCE_LOG);
+        stairs(Vanilla_PlusBlocks.BIRCH_LOG_STAIRS, Vanilla_PlusBlocks.BIRCH_LOG);
+        stairs(Vanilla_PlusBlocks.JUNGLE_LOG_STAIRS, Vanilla_PlusBlocks.JUNGLE_LOG);
+        stairs(Vanilla_PlusBlocks.ACACIA_LOG_STAIRS, Vanilla_PlusBlocks.ACACIA_LOG);
+        stairs(Vanilla_PlusBlocks.DARK_OAK_LOG_STAIRS, Vanilla_PlusBlocks.DARK_OAK_LOG);
+        stairs(Vanilla_PlusBlocks.CRIMSON_STEM_STAIRS, Vanilla_PlusBlocks.CRIMSON_STEM);
+        stairs(Vanilla_PlusBlocks.WARPED_STEM_STAIRS, Vanilla_PlusBlocks.WARPED_STEM);
+        stairs(Vanilla_PlusBlocks.STRIPPED_OAK_LOG_STAIRS, Vanilla_PlusBlocks.STRIPPED_OAK_LOG);
+        stairs(Vanilla_PlusBlocks.STRIPPED_SPRUCE_LOG_STAIRS, Vanilla_PlusBlocks.STRIPPED_SPRUCE_LOG);
+        stairs(Vanilla_PlusBlocks.STRIPPED_BIRCH_LOG_STAIRS, Vanilla_PlusBlocks.STRIPPED_BIRCH_LOG);
+        stairs(Vanilla_PlusBlocks.STRIPPED_JUNGLE_LOG_STAIRS, Vanilla_PlusBlocks.STRIPPED_JUNGLE_LOG);
+        stairs(Vanilla_PlusBlocks.STRIPPED_ACACIA_LOG_STAIRS, Vanilla_PlusBlocks.STRIPPED_ACACIA_LOG);
+        stairs(Vanilla_PlusBlocks.STRIPPED_DARK_OAK_LOG_STAIRS, Vanilla_PlusBlocks.STRIPPED_DARK_OAK_LOG);
+        stairs(Vanilla_PlusBlocks.STRIPPED_CRIMSON_STEM_STAIRS, Vanilla_PlusBlocks.STRIPPED_CRIMSON_STEM);
+        stairs(Vanilla_PlusBlocks.STRIPPED_WARPED_STEM_STAIRS, Vanilla_PlusBlocks.STRIPPED_WARPED_STEM);
         stairs(Vanilla_PlusBlocks.GLASS_STAIRS, Blocks.GLASS);
         stairs(Vanilla_PlusBlocks.TINTED_GLASS_STAIRS, Blocks.TINTED_GLASS);
         stairs(Vanilla_PlusBlocks.CUT_SANDSTONE_STAIRS, Blocks.CUT_SANDSTONE);
         stairs(Vanilla_PlusBlocks.OBSIDIAN_STAIRS, Blocks.OBSIDIAN);
-        stairs(Vanilla_PlusBlocks.PURPUR_PILLAR_STAIRS, Blocks.PURPUR_PILLAR);
+        stairs(Vanilla_PlusBlocks.PURPUR_PILLAR_STAIRS, Vanilla_PlusBlocks.PURPUR_PILLAR);
         stairs(Vanilla_PlusBlocks.ICE_STAIRS, Blocks.ICE);
         stairs(Vanilla_PlusBlocks.SNOW_STAIRS, Blocks.SNOW_BLOCK);
         stairs(Vanilla_PlusBlocks.CLAY_STAIRS, Blocks.CLAY);
@@ -75,8 +77,8 @@ public class Vanilla_PlusBlockStateProvider extends BlockStateProvider {
         stairs(Vanilla_PlusBlocks.END_STONE_STAIRS, Blocks.END_STONE);
         stairs(Vanilla_PlusBlocks.CHISELED_QUARTZ_BLOCK_STAIRS, Blocks.CHISELED_QUARTZ_BLOCK);
         stairs(Vanilla_PlusBlocks.QUARTZ_BRICK_STAIRS, Blocks.QUARTZ_BRICKS);
-        stairs(Vanilla_PlusBlocks.QUARTZ_PILLAR_STAIRS, Blocks.QUARTZ_PILLAR);
-        stairs(Vanilla_PlusBlocks.HAY_BALE_STAIRS, Blocks.HAY_BLOCK);
+        stairs(Vanilla_PlusBlocks.QUARTZ_PILLAR_STAIRS, Vanilla_PlusBlocks.QUARTZ_PILLAR);
+        stairs(Vanilla_PlusBlocks.HAY_BALE_STAIRS, Vanilla_PlusBlocks.HAY_BLOCK);
         stairs(Vanilla_PlusBlocks.TERRACOTTA_STAIRS, Blocks.TERRACOTTA);
         stairs(Vanilla_PlusBlocks.PACKED_ICE_STAIRS, Blocks.PACKED_ICE);
         stairs(Vanilla_PlusBlocks.SEA_LANTERN_STAIRS, Blocks.SEA_LANTERN);
@@ -191,26 +193,26 @@ public class Vanilla_PlusBlockStateProvider extends BlockStateProvider {
         slab(Vanilla_PlusBlocks.BLOCK_OF_RAW_COPPER_SLAB, Blocks.RAW_COPPER_BLOCK);
         slab(Vanilla_PlusBlocks.BLOCK_OF_RAW_GOLD_SLAB, Blocks.RAW_GOLD_BLOCK);
         slab(Vanilla_PlusBlocks.BLOCK_OF_AMETHYST_SLAB, Blocks.AMETHYST_BLOCK);
-        slab(Vanilla_PlusBlocks.OAK_LOG_SLAB, Blocks.OAK_LOG);
-        slab(Vanilla_PlusBlocks.SPRUCE_LOG_SLAB, Blocks.SPRUCE_LOG);
-        slab(Vanilla_PlusBlocks.BIRCH_LOG_SLAB, Blocks.BIRCH_LOG);
-        slab(Vanilla_PlusBlocks.JUNGLE_LOG_SLAB, Blocks.JUNGLE_LOG);
-        slab(Vanilla_PlusBlocks.ACACIA_LOG_SLAB, Blocks.ACACIA_LOG);
-        slab(Vanilla_PlusBlocks.DARK_OAK_LOG_SLAB, Blocks.DARK_OAK_LOG);
-        slab(Vanilla_PlusBlocks.CRIMSON_STEM_SLAB, Blocks.CRIMSON_STEM);
-        slab(Vanilla_PlusBlocks.WARPED_STEM_SLAB, Blocks.WARPED_STEM);
-        slab(Vanilla_PlusBlocks.STRIPPED_OAK_LOG_SLAB, Blocks.STRIPPED_OAK_LOG);
-        slab(Vanilla_PlusBlocks.STRIPPED_SPRUCE_LOG_SLAB, Blocks.STRIPPED_SPRUCE_LOG);
-        slab(Vanilla_PlusBlocks.STRIPPED_BIRCH_LOG_SLAB, Blocks.STRIPPED_BIRCH_LOG);
-        slab(Vanilla_PlusBlocks.STRIPPED_JUNGLE_LOG_SLAB, Blocks.STRIPPED_JUNGLE_LOG);
-        slab(Vanilla_PlusBlocks.STRIPPED_ACACIA_LOG_SLAB, Blocks.STRIPPED_ACACIA_LOG);
-        slab(Vanilla_PlusBlocks.STRIPPED_DARK_OAK_LOG_SLAB, Blocks.STRIPPED_DARK_OAK_LOG);
-        slab(Vanilla_PlusBlocks.STRIPPED_CRIMSON_STEM_SLAB, Blocks.STRIPPED_CRIMSON_STEM);
-        slab(Vanilla_PlusBlocks.STRIPPED_WARPED_STEM_SLAB, Blocks.STRIPPED_WARPED_STEM);
+        slab(Vanilla_PlusBlocks.OAK_LOG_SLAB, Vanilla_PlusBlocks.OAK_LOG);
+        slab(Vanilla_PlusBlocks.SPRUCE_LOG_SLAB, Vanilla_PlusBlocks.SPRUCE_LOG);
+        slab(Vanilla_PlusBlocks.BIRCH_LOG_SLAB, Vanilla_PlusBlocks.BIRCH_LOG);
+        slab(Vanilla_PlusBlocks.JUNGLE_LOG_SLAB, Vanilla_PlusBlocks.JUNGLE_LOG);
+        slab(Vanilla_PlusBlocks.ACACIA_LOG_SLAB, Vanilla_PlusBlocks.ACACIA_LOG);
+        slab(Vanilla_PlusBlocks.DARK_OAK_LOG_SLAB, Vanilla_PlusBlocks.DARK_OAK_LOG);
+        slab(Vanilla_PlusBlocks.CRIMSON_STEM_SLAB, Vanilla_PlusBlocks.CRIMSON_STEM);
+        slab(Vanilla_PlusBlocks.WARPED_STEM_SLAB, Vanilla_PlusBlocks.WARPED_STEM);
+        slab(Vanilla_PlusBlocks.STRIPPED_OAK_LOG_SLAB, Vanilla_PlusBlocks.STRIPPED_OAK_LOG);
+        slab(Vanilla_PlusBlocks.STRIPPED_SPRUCE_LOG_SLAB, Vanilla_PlusBlocks.STRIPPED_SPRUCE_LOG);
+        slab(Vanilla_PlusBlocks.STRIPPED_BIRCH_LOG_SLAB, Vanilla_PlusBlocks.STRIPPED_BIRCH_LOG);
+        slab(Vanilla_PlusBlocks.STRIPPED_JUNGLE_LOG_SLAB, Vanilla_PlusBlocks.STRIPPED_JUNGLE_LOG);
+        slab(Vanilla_PlusBlocks.STRIPPED_ACACIA_LOG_SLAB, Vanilla_PlusBlocks.STRIPPED_ACACIA_LOG);
+        slab(Vanilla_PlusBlocks.STRIPPED_DARK_OAK_LOG_SLAB, Vanilla_PlusBlocks.STRIPPED_DARK_OAK_LOG);
+        slab(Vanilla_PlusBlocks.STRIPPED_CRIMSON_STEM_SLAB, Vanilla_PlusBlocks.STRIPPED_CRIMSON_STEM);
+        slab(Vanilla_PlusBlocks.STRIPPED_WARPED_STEM_SLAB, Vanilla_PlusBlocks.STRIPPED_WARPED_STEM);
         slab(Vanilla_PlusBlocks.GLASS_SLAB, Blocks.GLASS);
         slab(Vanilla_PlusBlocks.TINTED_GLASS_SLAB, Blocks.TINTED_GLASS);
         slab(Vanilla_PlusBlocks.OBSIDIAN_SLAB, Blocks.OBSIDIAN);
-        slab(Vanilla_PlusBlocks.PURPUR_PILLAR_SLAB, Blocks.PURPUR_PILLAR);
+        slab(Vanilla_PlusBlocks.PURPUR_PILLAR_SLAB, Vanilla_PlusBlocks.PURPUR_PILLAR);
         slab(Vanilla_PlusBlocks.ICE_SLAB, Blocks.ICE);
         slab(Vanilla_PlusBlocks.SNOW_SLAB, Blocks.SNOW_BLOCK);
         slab(Vanilla_PlusBlocks.CLAY_SLAB, Blocks.CLAY);
@@ -233,8 +235,8 @@ public class Vanilla_PlusBlockStateProvider extends BlockStateProvider {
         slab(Vanilla_PlusBlocks.END_STONE_SLAB, Blocks.END_STONE);
         slab(Vanilla_PlusBlocks.CHISELED_QUARTZ_BLOCK_SLAB, Blocks.CHISELED_QUARTZ_BLOCK);
         slab(Vanilla_PlusBlocks.QUARTZ_BRICK_SLAB, Blocks.QUARTZ_BRICKS);
-        slab(Vanilla_PlusBlocks.QUARTZ_PILLAR_SLAB, Blocks.QUARTZ_PILLAR);
-        slab(Vanilla_PlusBlocks.HAY_BALE_SLAB, Blocks.HAY_BLOCK);
+        slab(Vanilla_PlusBlocks.QUARTZ_PILLAR_SLAB, Vanilla_PlusBlocks.QUARTZ_PILLAR);
+        slab(Vanilla_PlusBlocks.HAY_BALE_SLAB, Vanilla_PlusBlocks.HAY_BLOCK);
         slab(Vanilla_PlusBlocks.TERRACOTTA_SLAB, Blocks.TERRACOTTA);
         slab(Vanilla_PlusBlocks.PACKED_ICE_SLAB, Blocks.PACKED_ICE);
         slab(Vanilla_PlusBlocks.SEA_LANTERN_SLAB, Blocks.SEA_LANTERN);

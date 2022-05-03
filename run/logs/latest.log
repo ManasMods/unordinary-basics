@@ -1,21 +1,21 @@
-[03May2022 09:15:24.094] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 1.18, --assetsDir, C:\Users\diabl\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 40.0.52, --fml.mcVersion, 1.18.2, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20220404.173914, --mod, vanilla_plus, --all, --output, C:\Users\diabl\Desktop\vanilla_plus\src\generated\resources, --existing, C:\Users\diabl\Desktop\vanilla_plus\src\main\resources]
-[03May2022 09:15:24.101] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 9.1.3+9.1.3+main.9b69c82a starting: java version 17.0.2 by Eclipse Adoptium
-[03May2022 09:15:24.558] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/diabl/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%2322!/ Service=ModLauncher Env=CLIENT
-[03May2022 09:15:28.171] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[03May2022 09:15:28.204] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\diabl\.gradle\caches\forge_gradle\assets, --assetIndex, 1.18, --mod, vanilla_plus, --all, --output, C:\Users\diabl\Desktop\vanilla_plus\src\generated\resources, --existing, C:\Users\diabl\Desktop\vanilla_plus\src\main\resources]
-[03May2022 09:15:28.312] [main/WARN] [mixin/]: Reference map 'manascore.refmap.json' for manascore.mixins.json could not be read. If this is a development environment you can ignore this message
-[03May2022 09:15:28.489] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [vanilla_plus]
-[03May2022 09:15:37.302] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 40.0.52, for MC 1.18.2 with MCP 20220404.173914
-[03May2022 09:15:37.311] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v40.0.52 Initialized
-[03May2022 09:15:38.629] [main/ERROR] [net.minecraftforge.fml.javafmlmod.FMLModContainer/]: Exception caught during firing event: null
+[03May2022 13:08:04.670] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 1.18, --assetsDir, C:\Users\diabl\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 40.0.52, --fml.mcVersion, 1.18.2, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20220404.173914, --mod, vanilla_plus, --all, --output, C:\Users\diabl\Desktop\vanilla_plus\src\generated\resources, --existing, C:\Users\diabl\Desktop\vanilla_plus\src\main\resources]
+[03May2022 13:08:04.674] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 9.1.3+9.1.3+main.9b69c82a starting: java version 17.0.2 by Eclipse Adoptium
+[03May2022 13:08:04.824] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/diabl/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%2322!/ Service=ModLauncher Env=CLIENT
+[03May2022 13:08:09.204] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[03May2022 13:08:09.245] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\diabl\.gradle\caches\forge_gradle\assets, --assetIndex, 1.18, --mod, vanilla_plus, --all, --output, C:\Users\diabl\Desktop\vanilla_plus\src\generated\resources, --existing, C:\Users\diabl\Desktop\vanilla_plus\src\main\resources]
+[03May2022 13:08:09.944] [main/WARN] [mixin/]: Reference map 'manascore.refmap.json' for manascore.mixins.json could not be read. If this is a development environment you can ignore this message
+[03May2022 13:08:10.253] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [vanilla_plus]
+[03May2022 13:08:20.269] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 40.0.52, for MC 1.18.2 with MCP 20220404.173914
+[03May2022 13:08:20.276] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v40.0.52 Initialized
+[03May2022 13:08:21.251] [main/ERROR] [net.minecraftforge.fml.javafmlmod.FMLModContainer/]: Exception caught during firing event: null
 	Index: 1
 	Listeners:
 		0: NORMAL
-		1: ASM: net.minecraftforge.registries.DeferredRegister$EventDispatcher@22402f36 handleEvent(Lnet/minecraftforge/event/RegistryEvent$Register;)V
-		2: ASM: net.minecraftforge.registries.DeferredRegister$EventDispatcher@1be8355 handleEvent(Lnet/minecraftforge/event/RegistryEvent$Register;)V
+		1: ASM: net.minecraftforge.registries.DeferredRegister$EventDispatcher@5329375e handleEvent(Lnet/minecraftforge/event/RegistryEvent$Register;)V
+		2: ASM: net.minecraftforge.registries.DeferredRegister$EventDispatcher@300778f handleEvent(Lnet/minecraftforge/event/RegistryEvent$Register;)V
 java.lang.NullPointerException
 	at java.base/java.util.Objects.requireNonNull(Objects.java:208)
-	at TRANSFORMER/vanilla_plus@0.0.0.1/com.manasmods.vanilla_plus.registry.BlockRegistry.lambda$registerBlocks$19(BlockRegistry.java:64)
+	at TRANSFORMER/vanilla_plus@0.0.0.1/com.manasmods.vanilla_plus.registry.BlockRegistry.lambda$registerBlocks$19(BlockRegistry.java:67)
 	at TRANSFORMER/forge@40.0.52/net.minecraftforge.registries.DeferredRegister.lambda$register$0(DeferredRegister.java:214)
 	at TRANSFORMER/forge@40.0.52/net.minecraftforge.registries.DeferredRegister.addEntries(DeferredRegister.java:446)
 	at TRANSFORMER/forge@40.0.52/net.minecraftforge.registries.DeferredRegister$EventDispatcher.handleEvent(DeferredRegister.java:376)
@@ -25,8 +25,7 @@ java.lang.NullPointerException
 	at MC-BOOTSTRAP/eventbus@5.0.7/net.minecraftforge.eventbus.EventBus.post(EventBus.java:283)
 	at LAYER PLUGIN/javafmllanguage@1.18.2-40.0.52/net.minecraftforge.fml.javafmlmod.FMLModContainer.acceptEvent(FMLModContainer.java:106)
 	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModContainer.lambda$buildTransitionHandler$4(ModContainer.java:107)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run$$$capture(CompletableFuture.java:1804)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
 	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModWorkManager$SyncExecutor.driveOne(ModWorkManager.java:42)
 	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModWorkManager$DrivenExecutor.drive(ModWorkManager.java:26)
 	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModLoader.waitForTransition(ModLoader.java:201)
@@ -52,10 +51,10 @@ java.lang.NullPointerException
 	at MC-BOOTSTRAP/cpw.mods.modlauncher@9.1.3/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23)
 	at cpw.mods.bootstraplauncher@1.0.0/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:149)
 
-[03May2022 09:15:39.283] [main/ERROR] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Caught exception during event RegistryEvent.Register<minecraft:block> dispatch for modid vanilla_plus
+[03May2022 13:08:21.254] [main/ERROR] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Caught exception during event RegistryEvent.Register<minecraft:block> dispatch for modid vanilla_plus
 java.lang.NullPointerException: null
 	at java.util.Objects.requireNonNull(Objects.java:208) ~[?:?]
-	at com.manasmods.vanilla_plus.registry.BlockRegistry.lambda$registerBlocks$19(BlockRegistry.java:64) ~[%2380!/:?]
+	at com.manasmods.vanilla_plus.registry.BlockRegistry.lambda$registerBlocks$19(BlockRegistry.java:67) ~[%2380!/:?]
 	at net.minecraftforge.registries.DeferredRegister.lambda$register$0(DeferredRegister.java:214) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2375%2381!/:?]
 	at net.minecraftforge.registries.DeferredRegister.addEntries(DeferredRegister.java:446) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2375%2381!/:?]
 	at net.minecraftforge.registries.DeferredRegister$EventDispatcher.handleEvent(DeferredRegister.java:376) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2375%2381!/:?]
@@ -65,8 +64,7 @@ java.lang.NullPointerException: null
 	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:283) ~[eventbus-5.0.7.jar%239!/:?]
 	at net.minecraftforge.fml.javafmlmod.FMLModContainer.acceptEvent(FMLModContainer.java:106) ~[javafmllanguage-1.18.2-40.0.52.jar%2377!/:?]
 	at net.minecraftforge.fml.ModContainer.lambda$buildTransitionHandler$4(ModContainer.java:107) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
-	at java.util.concurrent.CompletableFuture$AsyncRun.run$$$capture(CompletableFuture.java:1804) ~[?:?]
-	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java) ~[?:?]
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[?:?]
 	at net.minecraftforge.fml.ModWorkManager$SyncExecutor.driveOne(ModWorkManager.java:42) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
 	at net.minecraftforge.fml.ModWorkManager$DrivenExecutor.drive(ModWorkManager.java:26) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
 	at net.minecraftforge.fml.ModLoader.waitForTransition(ModLoader.java:201) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
@@ -91,16 +89,16 @@ java.lang.NullPointerException: null
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-9.1.3.jar%2310!/:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-9.1.3.jar%2310!/:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:149) [bootstraplauncher-1.0.0.jar:?]
-[03May2022 09:15:39.345] [main/ERROR] [net.minecraftforge.fml.javafmlmod.FMLModContainer/]: Exception caught during firing event: Registry Object not present: vanilla_plus:oak_log_stairs
+[03May2022 13:08:21.420] [main/ERROR] [net.minecraftforge.fml.javafmlmod.FMLModContainer/]: Exception caught during firing event: Registry Object not present: vanilla_plus:oak_log_stairs
 	Index: 2
 	Listeners:
 		0: NORMAL
-		1: ASM: net.minecraftforge.registries.DeferredRegister$EventDispatcher@22402f36 handleEvent(Lnet/minecraftforge/event/RegistryEvent$Register;)V
-		2: ASM: net.minecraftforge.registries.DeferredRegister$EventDispatcher@1be8355 handleEvent(Lnet/minecraftforge/event/RegistryEvent$Register;)V
+		1: ASM: net.minecraftforge.registries.DeferredRegister$EventDispatcher@5329375e handleEvent(Lnet/minecraftforge/event/RegistryEvent$Register;)V
+		2: ASM: net.minecraftforge.registries.DeferredRegister$EventDispatcher@300778f handleEvent(Lnet/minecraftforge/event/RegistryEvent$Register;)V
 java.lang.NullPointerException: Registry Object not present: vanilla_plus:oak_log_stairs
 	at java.base/java.util.Objects.requireNonNull(Objects.java:334)
 	at TRANSFORMER/forge@40.0.52/net.minecraftforge.registries.RegistryObject.get(RegistryObject.java:320)
-	at TRANSFORMER/vanilla_plus@0.0.0.1/com.manasmods.vanilla_plus.registry.BlockRegistry.lambda$register$0(BlockRegistry.java:35)
+	at TRANSFORMER/vanilla_plus@0.0.0.1/com.manasmods.vanilla_plus.registry.BlockRegistry.lambda$register$0(BlockRegistry.java:38)
 	at TRANSFORMER/forge@40.0.52/net.minecraftforge.registries.DeferredRegister.lambda$register$0(DeferredRegister.java:214)
 	at TRANSFORMER/forge@40.0.52/net.minecraftforge.registries.DeferredRegister.addEntries(DeferredRegister.java:446)
 	at TRANSFORMER/forge@40.0.52/net.minecraftforge.registries.DeferredRegister$EventDispatcher.handleEvent(DeferredRegister.java:376)
@@ -110,8 +108,7 @@ java.lang.NullPointerException: Registry Object not present: vanilla_plus:oak_lo
 	at MC-BOOTSTRAP/eventbus@5.0.7/net.minecraftforge.eventbus.EventBus.post(EventBus.java:283)
 	at LAYER PLUGIN/javafmllanguage@1.18.2-40.0.52/net.minecraftforge.fml.javafmlmod.FMLModContainer.acceptEvent(FMLModContainer.java:106)
 	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModContainer.lambda$buildTransitionHandler$4(ModContainer.java:107)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run$$$capture(CompletableFuture.java:1804)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804)
 	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModWorkManager$SyncExecutor.driveOne(ModWorkManager.java:42)
 	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModWorkManager$DrivenExecutor.drive(ModWorkManager.java:26)
 	at LAYER PLUGIN/fmlcore@1.18.2-40.0.52/net.minecraftforge.fml.ModLoader.waitForTransition(ModLoader.java:201)
@@ -137,11 +134,11 @@ java.lang.NullPointerException: Registry Object not present: vanilla_plus:oak_lo
 	at MC-BOOTSTRAP/cpw.mods.modlauncher@9.1.3/cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23)
 	at cpw.mods.bootstraplauncher@1.0.0/cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:149)
 
-[03May2022 09:15:39.347] [main/ERROR] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Caught exception during event RegistryEvent.Register<minecraft:item> dispatch for modid vanilla_plus
+[03May2022 13:08:21.421] [main/ERROR] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Caught exception during event RegistryEvent.Register<minecraft:item> dispatch for modid vanilla_plus
 java.lang.NullPointerException: Registry Object not present: vanilla_plus:oak_log_stairs
 	at java.util.Objects.requireNonNull(Objects.java:334) ~[?:?]
 	at net.minecraftforge.registries.RegistryObject.get(RegistryObject.java:320) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2375%2381!/:?]
-	at com.manasmods.vanilla_plus.registry.BlockRegistry.lambda$register$0(BlockRegistry.java:35) ~[%2380!/:?]
+	at com.manasmods.vanilla_plus.registry.BlockRegistry.lambda$register$0(BlockRegistry.java:38) ~[%2380!/:?]
 	at net.minecraftforge.registries.DeferredRegister.lambda$register$0(DeferredRegister.java:214) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2375%2381!/:?]
 	at net.minecraftforge.registries.DeferredRegister.addEntries(DeferredRegister.java:446) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2375%2381!/:?]
 	at net.minecraftforge.registries.DeferredRegister$EventDispatcher.handleEvent(DeferredRegister.java:376) ~[forge-1.18.2-40.0.52_mapped_parchment_2022.03.13-1.18.2-recomp.jar%2375%2381!/:?]
@@ -151,8 +148,7 @@ java.lang.NullPointerException: Registry Object not present: vanilla_plus:oak_lo
 	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:283) ~[eventbus-5.0.7.jar%239!/:?]
 	at net.minecraftforge.fml.javafmlmod.FMLModContainer.acceptEvent(FMLModContainer.java:106) ~[javafmllanguage-1.18.2-40.0.52.jar%2377!/:?]
 	at net.minecraftforge.fml.ModContainer.lambda$buildTransitionHandler$4(ModContainer.java:107) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
-	at java.util.concurrent.CompletableFuture$AsyncRun.run$$$capture(CompletableFuture.java:1804) ~[?:?]
-	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java) ~[?:?]
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[?:?]
 	at net.minecraftforge.fml.ModWorkManager$SyncExecutor.driveOne(ModWorkManager.java:42) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
 	at net.minecraftforge.fml.ModWorkManager$DrivenExecutor.drive(ModWorkManager.java:26) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
 	at net.minecraftforge.fml.ModLoader.waitForTransition(ModLoader.java:201) ~[fmlcore-1.18.2-40.0.52.jar%2379!/:?]
@@ -177,6 +173,6 @@ java.lang.NullPointerException: Registry Object not present: vanilla_plus:oak_lo
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) [modlauncher-9.1.3.jar%2310!/:?]
 	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) [modlauncher-9.1.3.jar%2310!/:?]
 	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:149) [bootstraplauncher-1.0.0.jar:?]
-[03May2022 09:15:39.673] [main/FATAL] [net.minecraftforge.registries.GameData/]: Detected errors during registry event dispatch, rolling back to VANILLA state
-[03May2022 09:15:41.744] [main/FATAL] [net.minecraftforge.registries.GameData/]: Detected errors during registry event dispatch, roll back to VANILLA complete
-[03May2022 09:15:41.749] [main/FATAL] [net.minecraftforge.fml.ModLoader/LOADING]: Failed to complete lifecycle event LOAD_REGISTRIES, 2 errors found
+[03May2022 13:08:21.577] [main/FATAL] [net.minecraftforge.registries.GameData/]: Detected errors during registry event dispatch, rolling back to VANILLA state
+[03May2022 13:08:23.292] [main/FATAL] [net.minecraftforge.registries.GameData/]: Detected errors during registry event dispatch, roll back to VANILLA complete
+[03May2022 13:08:23.294] [main/FATAL] [net.minecraftforge.fml.ModLoader/LOADING]: Failed to complete lifecycle event LOAD_REGISTRIES, 2 errors found

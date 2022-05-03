@@ -1,5 +1,6 @@
 package com.manasmods.vanilla_plus.registry;
 
+
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;

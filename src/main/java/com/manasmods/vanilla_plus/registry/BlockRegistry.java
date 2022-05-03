@@ -6,7 +6,10 @@ import com.manasmods.vanilla_plus.item.templates.SimpleBlockItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -81,7 +84,7 @@ public class BlockRegistry {
         registry.register("tinted_glass_stairs", () -> new StairBlock(Blocks.TINTED_GLASS::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.TINTED_GLASS))));
         registry.register("cut_sandstone_stairs", () -> new StairBlock(Blocks.CUT_SANDSTONE::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.CUT_SANDSTONE))));
         registry.register("obsidian_stairs", () -> new StairBlock(Blocks.OBSIDIAN::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.OBSIDIAN))));
-        registry.register("purpur_pillar_stairs", () -> new StairBlock(Blocks.PURPUR_PILLAR::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.PURPUR_PILLAR))));
+        registry.register("purpur_pillar_stairs", () -> new StairBlock(Vanilla_PlusBlocks.PURPUR_PILLAR::defaultBlockState, (BlockBehaviour.Properties.copy(Vanilla_PlusBlocks.PURPUR_PILLAR))));
         registry.register("ice_stairs", () -> new StairBlock(Blocks.ICE::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.ICE))));
         registry.register("snow_stairs", () -> new StairBlock(Blocks.SNOW_BLOCK::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.SNOW_BLOCK))));
         registry.register("clay_stairs", () -> new StairBlock(Blocks.CLAY::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.CLAY))));
@@ -357,7 +360,7 @@ public class BlockRegistry {
 
 
 
-        //BLOCKS FOR STAIRS
+        //BLOCKS FOR STAIRS + SLABS
 
         registry.register("oak_log", () -> new SimpleBlock(Material.WOOD, properties -> BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
         registry.register("birch_log", () -> new SimpleBlock(Material.WOOD, properties -> BlockBehaviour.Properties.copy(Blocks.BIRCH_LOG)));

@@ -1,5 +1,6 @@
 package com.manasmods.vanilla_plus.item.templates;
 
+
 import com.manasmods.vanilla_plus.item.Vanilla_PlusCreativeTab;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.Block;
