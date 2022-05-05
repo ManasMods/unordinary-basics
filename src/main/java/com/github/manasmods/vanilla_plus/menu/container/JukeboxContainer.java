@@ -43,6 +43,6 @@ public class JukeboxContainer extends ItemStackHandler {
 
     @Override
     protected void onContentsChanged(int slot) {
-        this.inventoryListeners.forEach(listener -> listener.onChange(this));
+        this.inventoryListeners.forEach(listener -> listener.onChange(this, slot));
     }
 }

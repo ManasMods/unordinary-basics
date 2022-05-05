@@ -312,6 +312,8 @@
   "block.vanilla_plus.black_concrete_powder_slab": "Black Concrete Powder Slab",
 
   "vanilla_plus.menu.jukebox.title": "Jukebox",
+  "vanilla_plus.jukebox.button.play": "Start Playing",
+  "vanilla_plus.jukebox.button.stop": "Stop Playing",
 
   "itemGroup.vanilla_plustab": "VP Blocks"
 }

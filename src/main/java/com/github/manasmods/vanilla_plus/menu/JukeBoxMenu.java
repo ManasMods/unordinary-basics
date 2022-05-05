@@ -1,6 +1,6 @@
 package com.github.manasmods.vanilla_plus.menu;
 
-import com.github.manasmods.vanilla_plus.menu.container.JukeboxContainer;
+import com.github.manasmods.vanilla_plus.block.entity.JukeboxBlockEntity;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -17,12 +17,14 @@ public class JukeBoxMenu extends AbstractContainerMenu {
     private final InvWrapper playerInvWrapper;
     private final ItemStackHandler container;
     private int lastHotBarIndex, lastInventoryIndex, lastJukeBoxIndex, discPlayerSlotIndex;
+    private final JukeboxBlockEntity blockEntity;
 
-    public JukeBoxMenu(int containerId, Inventory inventory, JukeboxContainer jukeBoxContainer, ContainerLevelAccess levelAccess) {
+    public JukeBoxMenu(int containerId, Inventory inventory, JukeboxBlockEntity blockEntity, ContainerLevelAccess levelAccess) {
         super(Vanilla_PlusMenuTypes.JUKE_BOX_MENU, containerId);
         this.levelAccess = levelAccess;
         this.playerInvWrapper = new InvWrapper(inventory);
-        this.container = jukeBoxContainer;
+        this.container = blockEntity.getContainer();
+        this.blockEntity = blockEntity;
 
         setupJukeBoxSlots();
         setupPlayerSlots();
@@ -150,5 +152,17 @@ public class JukeBoxMenu extends AbstractContainerMenu {
             }
         }
         return stack;
+    }
+
+    public void startPlaying() {
+        this.blockEntity.play();
+    }
+
+    public void stopPlaying() {
+        this.blockEntity.stop();
+    }
+
+    public boolean isPlaying() {
+        return this.blockEntity.isPlaying();
     }
 }

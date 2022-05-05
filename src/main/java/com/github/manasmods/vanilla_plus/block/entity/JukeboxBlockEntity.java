@@ -12,11 +12,17 @@ import net.minecraft.world.level.block.state.BlockState;
 public class JukeboxBlockEntity extends BlockEntity implements Clearable {
     @Getter
     private final JukeboxContainer container = new JukeboxContainer();
+    @Getter
     private boolean isPlaying = false;
 
     public JukeboxBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(Vanilla_PlusBlockEntities.JUKEBOX_BLOCK_ENTITY, pWorldPosition, pBlockState);
-        container.addListener(handler -> setChanged());
+        container.addListener((handler, slot) -> {
+            if (slot == 8) {
+                isPlaying = false;
+            }
+            setChanged();
+        });
     }
 
     public void load(CompoundTag pTag) {
@@ -44,5 +50,15 @@ public class JukeboxBlockEntity extends BlockEntity implements Clearable {
     @Override
     public void clearContent() {
         this.container.clear();
+    }
+
+    public void play() {
+        this.isPlaying = true;
+        setChanged();
+    }
+
+    public void stop() {
+        this.isPlaying = false;
+        setChanged();
     }
 }

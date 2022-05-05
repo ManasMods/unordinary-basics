@@ -21,7 +21,7 @@ class MenuRegistry {
             BlockEntity blockEntity = Vanilla_Plus.getProxy().getLevelOrOverworld().getBlockEntity(pos);
             Level level = ServerLifecycleHooks.getCurrentServer().getLevel(ResourceKey.create(Registry.DIMENSION_REGISTRY, data.readResourceLocation()));
             if (blockEntity instanceof JukeboxBlockEntity jukeboxBlockEntity) {
-                return new JukeBoxMenu(windowId, inv, jukeboxBlockEntity.getContainer(), ContainerLevelAccess.create(level, pos));
+                return new JukeBoxMenu(windowId, inv, jukeboxBlockEntity, ContainerLevelAccess.create(level, pos));
             } else {
                 throw new IllegalStateException("Can not create JukeBoxMenu from non JukeBox block");
             }

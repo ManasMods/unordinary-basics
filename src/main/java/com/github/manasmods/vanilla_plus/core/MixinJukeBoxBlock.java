@@ -55,7 +55,7 @@ public abstract class MixinJukeBoxBlock extends BaseEntityBlock {
         if (!pLevel.isClientSide()) {
             NetworkHooks.openGui((ServerPlayer) pPlayer, new SimpleMenuProvider((pContainerId, pInventory, pPlayer1) -> {
                 JukeboxBlockEntity blockEntity = (JukeboxBlockEntity) pLevel.getBlockEntity(pPos);
-                return new JukeBoxMenu(pContainerId, pPlayer1.getInventory(), blockEntity.getContainer(), ContainerLevelAccess.create(pLevel, pPos));
+                return new JukeBoxMenu(pContainerId, pPlayer1.getInventory(), blockEntity, ContainerLevelAccess.create(pLevel, pPos));
             }, new TranslatableComponent(Vanilla_Plus.MOD_ID + ".menu.jukebox.title")), buffer -> {
                 buffer.writeBlockPos(pPos);
                 buffer.writeResourceLocation(pLevel.dimension().getRegistryName());
