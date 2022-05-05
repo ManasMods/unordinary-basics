@@ -16,18 +16,19 @@ public class JukeboxBlockEntity extends BlockEntity implements Clearable {
 
     public JukeboxBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(Vanilla_PlusBlockEntities.JUKEBOX_BLOCK_ENTITY, pWorldPosition, pBlockState);
+        container.addListener(handler -> setChanged());
     }
 
     public void load(CompoundTag pTag) {
         super.load(pTag);
         this.isPlaying = pTag.getBoolean("isPlaying");
-        container.deserializeNBT(pTag.getCompound("inventory"));
+        container.deserializeNBT(pTag.getCompound("Inventory"));
     }
 
     protected void saveAdditional(CompoundTag pTag) {
         super.saveAdditional(pTag);
         pTag.putBoolean("isPlaying", this.isPlaying);
-        pTag.put("inventory", container.serializeNBT());
+        pTag.put("Inventory", container.serializeNBT());
     }
 
     public ItemStack getRecord() {
@@ -42,6 +43,6 @@ public class JukeboxBlockEntity extends BlockEntity implements Clearable {
 
     @Override
     public void clearContent() {
-
+        this.container.clear();
     }
 }

@@ -5,9 +5,13 @@ import net.minecraft.world.item.RecordItem;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 
 public class JukeboxContainer extends ItemStackHandler {
+    private final List<InventoryListener> inventoryListeners = new ArrayList<>();
+
     public JukeboxContainer() {
         super(17);
     }
@@ -27,5 +31,18 @@ public class JukeboxContainer extends ItemStackHandler {
 
     public void clear() {
         Collections.fill(stacks, ItemStack.EMPTY);
+    }
+
+    public void addListener(InventoryListener listener) {
+        inventoryListeners.add(listener);
+    }
+
+    public void removeListener(InventoryListener listener) {
+        inventoryListeners.remove(listener);
+    }
+
+    @Override
+    protected void onContentsChanged(int slot) {
+        this.inventoryListeners.forEach(listener -> listener.onChange(this));
     }
 }

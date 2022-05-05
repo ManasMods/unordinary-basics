@@ -146,6 +146,7 @@ public class JukeBoxMenu extends AbstractContainerMenu {
             if (currentCurrentSlot.mayPlace(stack)) {
                 stack = currentCurrentSlot.safeInsert(stack);
                 currentCurrentSlot.setChanged();
+
             }
         }
         return stack;
