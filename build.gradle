@@ -64,7 +64,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            args '--mod', "${modId}", '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', "${modId}", '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/'),'--existing-mod', "manascore"
 
             mods {
                 vanilla_plus {
@@ -112,7 +112,7 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.22'
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
 
-    implementation fg.deobf("curse.maven:manascore-619025:3777460")
+    implementation fg.deobf("curse.maven:manascore-619025:3780066")
 }
 
 // Example for how to get properties into the manifest for reading at runtime.

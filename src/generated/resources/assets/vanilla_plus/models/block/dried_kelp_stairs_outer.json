@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "side": "minecraft:block/dried_kelp_top",
+    "bottom": "minecraft:block/dried_kelp_side",
+    "top": "minecraft:block/dried_kelp_side"
+  }
+}

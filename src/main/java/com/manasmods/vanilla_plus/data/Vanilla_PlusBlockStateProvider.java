@@ -1,18 +1,13 @@
 package com.manasmods.vanilla_plus.data;
 
+import com.github.manasmods.manascore.data.gen.BlockStateProvider;
 import com.manasmods.vanilla_plus.Vanilla_Plus;
 import com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks;
-import com.github.manasmods.manascore.data.gen.BlockStateProvider;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 
 public class Vanilla_PlusBlockStateProvider extends BlockStateProvider {
-    private Block block;
-    private ResourceLocation mcLoc;
-    private ResourceLocation mcLoc1;
 
     public Vanilla_PlusBlockStateProvider(GatherDataEvent gatherDataEvent) {
         super(gatherDataEvent, Vanilla_Plus.MOD_ID);
@@ -26,7 +21,7 @@ public class Vanilla_PlusBlockStateProvider extends BlockStateProvider {
         stairs(Vanilla_PlusBlocks.CALCITE_STAIRS, Blocks.CALCITE);
         stairs(Vanilla_PlusBlocks.TUFF_STAIRS, Blocks.TUFF);
         stairs(Vanilla_PlusBlocks.DRIPSTONE_STAIRS, Blocks.DRIPSTONE_BLOCK);
-        stairs(Vanilla_PlusBlocks.GRASS_BLOCK_STAIRS, mcLoc("block/grass_block_top"), mcLoc("block/grass_block"));
+        stairs(Vanilla_PlusBlocks.GRASS_BLOCK_STAIRS, mcLoc("block/grass_block_top"), mcLoc("block/dirt"), mcLoc("block/grass_block_side"), mcLoc("block/grass_block_side_overlay"));
         stairs(Vanilla_PlusBlocks.DIRT_STAIRS, Blocks.DIRT);
         stairs(Vanilla_PlusBlocks.COARSE_DIRT_STAIRS, Blocks.COARSE_DIRT);
         stairs(Vanilla_PlusBlocks.PODZOL_STAIRS, mcLoc("block/podzol_top"), mcLoc("block/podzol_side"));
@@ -83,7 +78,7 @@ public class Vanilla_PlusBlockStateProvider extends BlockStateProvider {
         stairs(Vanilla_PlusBlocks.END_STONE_STAIRS, Blocks.END_STONE);
         stairs(Vanilla_PlusBlocks.CHISELED_QUARTZ_BLOCK_STAIRS, Blocks.CHISELED_QUARTZ_BLOCK);
         stairs(Vanilla_PlusBlocks.QUARTZ_BRICK_STAIRS, Blocks.QUARTZ_BRICKS);
-        stairs(Vanilla_PlusBlocks.QUARTZ_PILLAR_STAIRS, mcLoc("block/quartz_pillar_top"), mcLoc("block/quartz_pillar_side"));
+        //stairs(Vanilla_PlusBlocks.QUARTZ_PILLAR_STAIRS, mcLoc("block/quartz_pillar_top"), mcLoc("block/quartz_pillar_side"));
         stairs(Vanilla_PlusBlocks.HAY_BALE_STAIRS, mcLoc("block/hay_block_top"), mcLoc("block/hay_block_side"));
         stairs(Vanilla_PlusBlocks.TERRACOTTA_STAIRS, Blocks.TERRACOTTA);
         stairs(Vanilla_PlusBlocks.PACKED_ICE_STAIRS, Blocks.PACKED_ICE);
@@ -185,13 +180,13 @@ public class Vanilla_PlusBlockStateProvider extends BlockStateProvider {
         slab(Vanilla_PlusBlocks.CALCITE_SLAB, Blocks.CALCITE);
         slab(Vanilla_PlusBlocks.TUFF_SLAB, Blocks.TUFF);
         slab(Vanilla_PlusBlocks.DRIPSTONE_SLAB, Blocks.DRIPSTONE_BLOCK);
-        slab(Vanilla_PlusBlocks.GRASS_BLOCK_SLAB, mcLoc("block/grass_block_top"), mcLoc("block/grass_block"));
+        slab(Vanilla_PlusBlocks.GRASS_BLOCK_SLAB, Blocks.GRASS_BLOCK, mcLoc("block/grass_block_top"), mcLoc("block/dirt"), mcLoc("block/grass_block_side"), mcLoc("block/grass_block_side_overlay"));
         slab(Vanilla_PlusBlocks.DIRT_SLAB, Blocks.DIRT);
         slab(Vanilla_PlusBlocks.COARSE_DIRT_SLAB, Blocks.COARSE_DIRT);
-        slab(Vanilla_PlusBlocks.PODZOL_SLAB, mcLoc("block/podzol_top"), mcLoc("block/podzol_side"));
+        //slab(Vanilla_PlusBlocks.PODZOL_SLAB, mcLoc("block/podzol_top"), mcLoc("block/podzol_side"));
         slab(Vanilla_PlusBlocks.ROOTED_DIRT_SLAB, Blocks.ROOTED_DIRT);
-        slab(Vanilla_PlusBlocks.CRIMSON_NYLIUM_SLAB, mcLoc("block/crimson_nylium"), mcLoc("block/crimson_nylium_side"));
-        slab(Vanilla_PlusBlocks.WARPED_NYLIUM_SLAB, mcLoc("block/warped_nylium"), mcLoc("block/warped_nylium_side"));
+        //slab(Vanilla_PlusBlocks.CRIMSON_NYLIUM_SLAB, mcLoc("block/crimson_nylium"), mcLoc("block/crimson_nylium_side"));
+        //slab(Vanilla_PlusBlocks.WARPED_NYLIUM_SLAB, mcLoc("block/warped_nylium"), mcLoc("block/warped_nylium_side"));
         slab(Vanilla_PlusBlocks.SAND_SLAB, Blocks.SAND);
         slab(Vanilla_PlusBlocks.RED_SAND_SLAB, Blocks.RED_SAND);
         slab(Vanilla_PlusBlocks.GRAVEL_SLAB, Blocks.GRAVEL);
@@ -199,7 +194,7 @@ public class Vanilla_PlusBlockStateProvider extends BlockStateProvider {
         slab(Vanilla_PlusBlocks.BLOCK_OF_RAW_COPPER_SLAB, Blocks.RAW_COPPER_BLOCK);
         slab(Vanilla_PlusBlocks.BLOCK_OF_RAW_GOLD_SLAB, Blocks.RAW_GOLD_BLOCK);
         slab(Vanilla_PlusBlocks.BLOCK_OF_AMETHYST_SLAB, Blocks.AMETHYST_BLOCK);
-        slab(Vanilla_PlusBlocks.OAK_LOG_SLAB, mcLoc("block/oak_log_top"), mcLoc("block/oak_log"));
+        /*slab(Vanilla_PlusBlocks.OAK_LOG_SLAB, mcLoc("block/oak_log_top"), mcLoc("block/oak_log"));
         slab(Vanilla_PlusBlocks.SPRUCE_LOG_SLAB, mcLoc("block/spruce_log_top"), mcLoc("block/spruce_log"));
         slab(Vanilla_PlusBlocks.BIRCH_LOG_SLAB, mcLoc("block/birch_log_top"), mcLoc("block/birch_log"));
         slab(Vanilla_PlusBlocks.JUNGLE_LOG_SLAB, mcLoc("block/jungle_log_top"), mcLoc("block/jungle_log"));
@@ -214,44 +209,44 @@ public class Vanilla_PlusBlockStateProvider extends BlockStateProvider {
         slab(Vanilla_PlusBlocks.STRIPPED_ACACIA_LOG_SLAB, mcLoc("block/stripped_acacia_log_top"), mcLoc("block/stripped_acacia_log"));
         slab(Vanilla_PlusBlocks.STRIPPED_DARK_OAK_LOG_SLAB, mcLoc("block/stripped_dark_oak_log_top"), mcLoc("block/stripped_dark_oak_log"));
         slab(Vanilla_PlusBlocks.STRIPPED_CRIMSON_STEM_SLAB, mcLoc("block/stripped_crimson_stem_top"), mcLoc("block/stripped_crimson_stem"));
-        slab(Vanilla_PlusBlocks.STRIPPED_WARPED_STEM_SLAB, mcLoc("block/stripped_warped_stem_top"), mcLoc("block/stripped_warped_stem"));
+        slab(Vanilla_PlusBlocks.STRIPPED_WARPED_STEM_SLAB, mcLoc("block/stripped_warped_stem_top"), mcLoc("block/stripped_warped_stem"));*/
         slab(Vanilla_PlusBlocks.GLASS_SLAB, Blocks.GLASS);
         slab(Vanilla_PlusBlocks.TINTED_GLASS_SLAB, Blocks.TINTED_GLASS);
         slab(Vanilla_PlusBlocks.OBSIDIAN_SLAB, Blocks.OBSIDIAN);
-        slab(Vanilla_PlusBlocks.PURPUR_PILLAR_SLAB, mcLoc("block/purpur_pillar_top"), mcLoc("block/purpur_pillar"));
+        //slab(Vanilla_PlusBlocks.PURPUR_PILLAR_SLAB, mcLoc("block/purpur_pillar_top"), mcLoc("block/purpur_pillar"));
         slab(Vanilla_PlusBlocks.ICE_SLAB, Blocks.ICE);
-        slab(Vanilla_PlusBlocks.SNOW_SLAB, mcLoc("block/snow"), mcLoc("block/snow"));
+        //slab(Vanilla_PlusBlocks.SNOW_SLAB, mcLoc("block/snow"), mcLoc("block/snow"));
         slab(Vanilla_PlusBlocks.CLAY_SLAB, Blocks.CLAY);
-        slab(Vanilla_PlusBlocks.PUMPKIN_SLAB, mcLoc("block/pumpkin_top"), mcLoc("block/pumpkin_side"));
+        //slab(Vanilla_PlusBlocks.PUMPKIN_SLAB, mcLoc("block/pumpkin_top"), mcLoc("block/pumpkin_side"));
         slab(Vanilla_PlusBlocks.NETHERRACK_SLAB, Blocks.NETHERRACK);
         slab(Vanilla_PlusBlocks.SOUL_SAND_SLAB, Blocks.SOUL_SAND);
         slab(Vanilla_PlusBlocks.SOUL_SOIL_SLAB, Blocks.SOUL_SOIL);
-        slab(Vanilla_PlusBlocks.BASALT_SLAB, mcLoc("block/basalt_top"), mcLoc("block/basalt_side"));
-        slab(Vanilla_PlusBlocks.POLISHED_BASALT_SLAB, mcLoc("block/polished_basalt_top"), mcLoc("block/polished_basalt_side"));
+        //slab(Vanilla_PlusBlocks.BASALT_SLAB, mcLoc("block/basalt_top"), mcLoc("block/basalt_side"));
+        //slab(Vanilla_PlusBlocks.POLISHED_BASALT_SLAB, mcLoc("block/polished_basalt_top"), mcLoc("block/polished_basalt_side"));
         slab(Vanilla_PlusBlocks.GLOWSTONE_SLAB, Blocks.GLOWSTONE);
         slab(Vanilla_PlusBlocks.CRACKED_STONE_BRICK_SLAB, Blocks.CRACKED_STONE_BRICKS);
         slab(Vanilla_PlusBlocks.CHISELED_STONE_BRICK_SLAB, Blocks.CHISELED_STONE_BRICKS);
         slab(Vanilla_PlusBlocks.CRACKED_DEEPSLATE_BRICK_SLAB, Blocks.CRACKED_DEEPSLATE_BRICKS);
         slab(Vanilla_PlusBlocks.CRACKED_DEEPSLATE_TILE_SLAB, Blocks.CRACKED_DEEPSLATE_TILES);
         slab(Vanilla_PlusBlocks.CHISELED_DEEPSLATE_SLAB, Blocks.CHISELED_DEEPSLATE);
-        slab(Vanilla_PlusBlocks.MELON_SLAB, mcLoc("block/melon_top"), mcLoc("block/melon_side"));
-        slab(Vanilla_PlusBlocks.MYCELIUM_SLAB, mcLoc("block/mycelium_top"), mcLoc("block/mycelium_side"));
+        //slab(Vanilla_PlusBlocks.MELON_SLAB, mcLoc("block/melon_top"), mcLoc("block/melon_side"));
+        //slab(Vanilla_PlusBlocks.MYCELIUM_SLAB, mcLoc("block/mycelium_top"), mcLoc("block/mycelium_side"));
         slab(Vanilla_PlusBlocks.CRACKED_NETHER_BRICK_SLAB, Blocks.CRACKED_NETHER_BRICKS);
         slab(Vanilla_PlusBlocks.CHISELED_NETHER_BRICK_SLAB, Blocks.CHISELED_NETHER_BRICKS);
         slab(Vanilla_PlusBlocks.END_STONE_SLAB, Blocks.END_STONE);
         slab(Vanilla_PlusBlocks.CHISELED_QUARTZ_BLOCK_SLAB, Blocks.CHISELED_QUARTZ_BLOCK);
         slab(Vanilla_PlusBlocks.QUARTZ_BRICK_SLAB, Blocks.QUARTZ_BRICKS);
-        slab(Vanilla_PlusBlocks.QUARTZ_PILLAR_SLAB, mcLoc("block/quartz_pillar_top"), mcLoc("block/quartz_pillar_side"));
-        slab(Vanilla_PlusBlocks.HAY_BALE_SLAB, mcLoc("block/hay_block_top"), mcLoc("block/hay_block_side"));
+        //slab(Vanilla_PlusBlocks.QUARTZ_PILLAR_SLAB, mcLoc("block/quartz_pillar_top"), mcLoc("block/quartz_pillar_side"));
+        //slab(Vanilla_PlusBlocks.HAY_BALE_SLAB, mcLoc("block/hay_block_top"), mcLoc("block/hay_block_side"));
         slab(Vanilla_PlusBlocks.TERRACOTTA_SLAB, Blocks.TERRACOTTA);
         slab(Vanilla_PlusBlocks.PACKED_ICE_SLAB, Blocks.PACKED_ICE);
         slab(Vanilla_PlusBlocks.SEA_LANTERN_SLAB, Blocks.SEA_LANTERN);
-        slab(Vanilla_PlusBlocks.MAGMA_BLOCK_SLAB, mcLoc("block/magma"), mcLoc("block/magma"));
+        //slab(Vanilla_PlusBlocks.MAGMA_BLOCK_SLAB, mcLoc("block/magma"), mcLoc("block/magma"));
         slab(Vanilla_PlusBlocks.NETHER_WART_BLOCK_SLAB, Blocks.NETHER_WART_BLOCK);
         slab(Vanilla_PlusBlocks.WARPED_WART_BLOCK_SLAB, Blocks.WARPED_WART_BLOCK);
-        slab(Vanilla_PlusBlocks.BONE_BLOCK_SLAB, mcLoc("block/bone_block_top"), mcLoc("block/bone_block_side"));
+        //slab(Vanilla_PlusBlocks.BONE_BLOCK_SLAB, mcLoc("block/bone_block_top"), mcLoc("block/bone_block_side"));
         slab(Vanilla_PlusBlocks.BLUE_ICE_SLAB, Blocks.BLUE_ICE);
-        slab(Vanilla_PlusBlocks.DRIED_KELP_SLAB, mcLoc("block/dried_kelp_top"), mcLoc("block/dried_kelp_side"));
+        //slab(Vanilla_PlusBlocks.DRIED_KELP_SLAB, mcLoc("block/dried_kelp_top"), mcLoc("block/dried_kelp_side"));
         slab(Vanilla_PlusBlocks.CRYING_OBSIDIAN_SLAB, Blocks.CRYING_OBSIDIAN);
         slab(Vanilla_PlusBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_SLAB, Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS);
 
@@ -355,19 +350,6 @@ public class Vanilla_PlusBlockStateProvider extends BlockStateProvider {
         nonRotatablePillar(Vanilla_PlusBlocks.PURPUR_PILLAR, mcLoc("block/purpur_pillar_top"), mcLoc("block/purpur_pillar"));
         nonRotatablePillar(Vanilla_PlusBlocks.QUARTZ_PILLAR, mcLoc("block/quartz_pillar_top"), mcLoc("block/quartz_pillar"));
         nonRotatablePillar(Vanilla_PlusBlocks.HAY_BLOCK, mcLoc("block/hay_block_top"), mcLoc("block/hay_block_side"));
-
-    }
-
-    private void slab(Block block, ResourceLocation mcLoc, ResourceLocation mcLoc1) {
-        this.block = block;
-        this.mcLoc = mcLoc;
-        this.mcLoc1 = mcLoc1;
-    }
-
-    private void stairs(Block block, ResourceLocation mcLoc, ResourceLocation mcLoc1) {
-        this.block = block;
-        this.mcLoc = mcLoc;
-        this.mcLoc1 = mcLoc1;
     }
 }
 
