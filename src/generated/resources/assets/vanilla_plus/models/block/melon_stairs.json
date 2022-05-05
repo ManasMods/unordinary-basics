@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/stairs",
   "textures": {
-    "side": "minecraft:block/melon_top",
-    "bottom": "minecraft:block/melon_side",
-    "top": "minecraft:block/melon_side"
+    "side": "minecraft:block/melon_side",
+    "bottom": "minecraft:block/melon_top",
+    "top": "minecraft:block/melon_top"
   }
 }

@@ -17,5 +17,7 @@ public class Vanilla_PlusClient extends Vanilla_PlusCommon {
     public void clientInit() {
         ItemBlockRenderTypes.setRenderLayer(Vanilla_PlusBlocks.GRASS_BLOCK_STAIRS, RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(Vanilla_PlusBlocks.GRASS_BLOCK_SLAB, RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(Vanilla_PlusBlocks.GLASS_STAIRS, RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(Vanilla_PlusBlocks.GLASS_SLAB, RenderType.cutoutMipped());
     }
 }
