@@ -12,6 +12,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.SimpleMenuProvider;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -54,8 +55,11 @@ public abstract class MixinJukeBoxBlock extends BaseEntityBlock {
         if (!pLevel.isClientSide()) {
             NetworkHooks.openGui((ServerPlayer) pPlayer, new SimpleMenuProvider((pContainerId, pInventory, pPlayer1) -> {
                 JukeboxBlockEntity blockEntity = (JukeboxBlockEntity) pLevel.getBlockEntity(pPos);
-                return new JukeBoxMenu(pContainerId, pPlayer1.getInventory(), blockEntity.getContainer());
-            }, new TranslatableComponent(Vanilla_Plus.MOD_ID + ".menu.jukebox.title")), friendlyByteBuf -> friendlyByteBuf.writeBlockPos(pPos));
+                return new JukeBoxMenu(pContainerId, pPlayer1.getInventory(), blockEntity.getContainer(), ContainerLevelAccess.create(pLevel, pPos));
+            }, new TranslatableComponent(Vanilla_Plus.MOD_ID + ".menu.jukebox.title")), buffer -> {
+                buffer.writeBlockPos(pPos);
+                buffer.writeResourceLocation(pLevel.dimension().getRegistryName());
+            });
         }
 
         cir.setReturnValue(InteractionResult.SUCCESS);
