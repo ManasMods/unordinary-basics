@@ -1,7 +1,7 @@
-package com.manasmods.vanilla_plus.data;
+package com.github.manasmods.vanilla_plus.data;
 
 import com.github.manasmods.manascore.data.gen.ItemModelProvider;
-import com.manasmods.vanilla_plus.Vanilla_Plus;
+import com.github.manasmods.vanilla_plus.Vanilla_Plus;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 public class Vanilla_PlusItemModelProvider extends ItemModelProvider {

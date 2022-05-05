@@ -1,16 +1,13 @@
-package com.manasmods.vanilla_plus.registry;
+package com.github.manasmods.vanilla_plus.registry;
 
-import com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks;
-import com.manasmods.vanilla_plus.item.templates.SimpleBlock;
-import com.manasmods.vanilla_plus.item.templates.SimpleBlockItem;
-import net.minecraft.core.Direction;
+import com.github.manasmods.vanilla_plus.item.templates.SimpleBlock;
+import com.github.manasmods.vanilla_plus.item.templates.SimpleBlockItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;

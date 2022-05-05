@@ -1,6 +1,6 @@
-package com.manasmods.vanilla_plus.client.handler;
+package com.github.manasmods.vanilla_plus.client.handler;
 
-import com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks;
+import com.github.manasmods.vanilla_plus.block.Vanilla_PlusBlocks;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.GrassColor;

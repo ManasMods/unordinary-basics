@@ -1,4 +1,4 @@
-package com.manasmods.vanilla_plus.item.templates;
+package com.github.manasmods.vanilla_plus.item.templates;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.material.Material;

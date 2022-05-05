@@ -1,8 +1,8 @@
-package com.manasmods.vanilla_plus.data;
+package com.github.manasmods.vanilla_plus.data;
 
 import com.github.manasmods.manascore.data.gen.BlockStateProvider;
-import com.manasmods.vanilla_plus.Vanilla_Plus;
-import com.manasmods.vanilla_plus.block.Vanilla_PlusBlocks;
+import com.github.manasmods.vanilla_plus.Vanilla_Plus;
+import com.github.manasmods.vanilla_plus.block.Vanilla_PlusBlocks;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 

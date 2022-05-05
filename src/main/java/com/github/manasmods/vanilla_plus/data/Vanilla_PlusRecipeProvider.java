@@ -1,4 +1,4 @@
-package com.manasmods.vanilla_plus.data;
+package com.github.manasmods.vanilla_plus.data;
 
 import com.github.manasmods.manascore.data.gen.RecipeProvider;
 import net.minecraft.data.recipes.FinishedRecipe;

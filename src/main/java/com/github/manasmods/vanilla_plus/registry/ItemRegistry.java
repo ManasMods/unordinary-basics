@@ -1,4 +1,4 @@
-package com.manasmods.vanilla_plus.registry;
+package com.github.manasmods.vanilla_plus.registry;
 
 
 import net.minecraft.world.item.Item;

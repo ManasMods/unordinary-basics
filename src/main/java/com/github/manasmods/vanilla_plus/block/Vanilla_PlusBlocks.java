@@ -1,6 +1,6 @@
-package com.manasmods.vanilla_plus.block;
+package com.github.manasmods.vanilla_plus.block;
 
-import com.manasmods.vanilla_plus.Vanilla_Plus;
+import com.github.manasmods.vanilla_plus.Vanilla_Plus;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.ObjectHolder;
 

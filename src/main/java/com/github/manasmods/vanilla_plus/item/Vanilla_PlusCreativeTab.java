@@ -1,4 +1,4 @@
-package com.manasmods.vanilla_plus.item;
+package com.github.manasmods.vanilla_plus.item;
 
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
