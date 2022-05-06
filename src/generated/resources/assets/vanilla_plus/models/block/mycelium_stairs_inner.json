@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "side": "minecraft:block/mycelium_side",
-    "bottom": "minecraft:block/mycelium_top",
-    "top": "minecraft:block/mycelium_top"
-  }
-}

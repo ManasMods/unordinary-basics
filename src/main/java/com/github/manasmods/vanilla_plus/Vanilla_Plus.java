@@ -2,6 +2,7 @@ package com.github.manasmods.vanilla_plus;
 
 import com.github.manasmods.vanilla_plus.data.Vanilla_PlusBlockStateProvider;
 import com.github.manasmods.vanilla_plus.data.Vanilla_PlusItemModelProvider;
+import com.github.manasmods.vanilla_plus.data.Vanilla_PlusLootTableProvider;
 import com.github.manasmods.vanilla_plus.data.Vanilla_PlusRecipeProvider;
 import lombok.Getter;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -44,6 +45,7 @@ public class Vanilla_Plus {
         event.getGenerator().addProvider(new Vanilla_PlusBlockStateProvider(event));
         event.getGenerator().addProvider(new Vanilla_PlusItemModelProvider(event));
         event.getGenerator().addProvider(new Vanilla_PlusRecipeProvider(event));
+        event.getGenerator().addProvider(new Vanilla_PlusLootTableProvider(event));
     }
 
     /**
