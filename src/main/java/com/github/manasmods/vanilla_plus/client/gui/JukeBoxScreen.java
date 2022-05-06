@@ -1,7 +1,10 @@
 package com.github.manasmods.vanilla_plus.client.gui;
 
+import com.github.manasmods.manascore.client.gui.widget.ImagePredicateButton;
 import com.github.manasmods.vanilla_plus.Vanilla_Plus;
 import com.github.manasmods.vanilla_plus.menu.JukeBoxMenu;
+import com.github.manasmods.vanilla_plus.network.Vanilla_PlusNetwork;
+import com.github.manasmods.vanilla_plus.network.toserver.RequestJukeboxUpdate;
 import com.github.manasmods.vanilla_plus.utils.Translation;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -20,12 +23,12 @@ public class JukeBoxScreen extends AbstractContainerScreen<JukeBoxMenu> {
     public JukeBoxScreen(JukeBoxMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);
         this.playButton = new ImagePredicateButton(0, 0, 12, 12, PLAY_BUTTON, pButton -> {
-            Vanilla_Plus.getLogger().info("Play!");
+            Vanilla_PlusNetwork.getInstance().sendToServer(new RequestJukeboxUpdate(true));
         }, (pButton, pPoseStack, pMouseX, pMouseY) -> {
             renderTooltip(pPoseStack, Translation.of("jukebox.button.play"), pMouseX, pMouseY);
         }, () -> !pMenu.isPlaying());
         this.stopButton = new ImagePredicateButton(0, 0, 12, 12, STOP_BUTTON, pButton -> {
-            Vanilla_Plus.getLogger().info("Stop!");
+            Vanilla_PlusNetwork.getInstance().sendToServer(new RequestJukeboxUpdate(false));
         }, (pButton, pPoseStack, pMouseX, pMouseY) -> {
             renderTooltip(pPoseStack, Translation.of("jukebox.button.stop"), pMouseX, pMouseY);
         }, pMenu::isPlaying);

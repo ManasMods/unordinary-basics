@@ -1,12 +1,14 @@
 package com.github.manasmods.vanilla_plus.menu;
 
 import com.github.manasmods.vanilla_plus.block.entity.JukeboxBlockEntity;
+import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.SlotItemHandler;
@@ -154,6 +156,14 @@ public class JukeBoxMenu extends AbstractContainerMenu {
         return stack;
     }
 
+    public boolean isPlaying() {
+        return this.blockEntity.isPlaying();
+    }
+
+    public BlockPos getPosition() {
+        return this.blockEntity.getBlockPos();
+    }
+
     public void startPlaying() {
         this.blockEntity.play();
     }
@@ -162,7 +172,13 @@ public class JukeBoxMenu extends AbstractContainerMenu {
         this.blockEntity.stop();
     }
 
-    public boolean isPlaying() {
-        return this.blockEntity.isPlaying();
+    public Level getLevel() {
+        return this.blockEntity.getLevel();
+    }
+
+    public void update() {
+        levelAccess.execute((level, pos) -> {
+            level.sendBlockUpdated(pos, blockEntity.getBlockState(), blockEntity.getBlockState(), 2);
+        });
     }
 }

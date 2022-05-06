@@ -1,5 +1,6 @@
 package com.github.manasmods.vanilla_plus;
 
+import com.github.manasmods.vanilla_plus.network.Vanilla_PlusNetwork;
 import com.github.manasmods.vanilla_plus.registry.Vanilla_PlusRegistry;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -19,6 +20,7 @@ public abstract class Vanilla_PlusCommon {
     public void clientInit(FMLClientSetupEvent event) {}
 
     public void init(FMLCommonSetupEvent event) {
+        event.enqueueWork(Vanilla_PlusNetwork::registerPackets);
     }
 
     public abstract Level getLevelOrOverworld();

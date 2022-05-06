@@ -16,6 +16,7 @@ import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.JukeboxBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -58,12 +59,18 @@ public abstract class MixinJukeBoxBlock extends BaseEntityBlock {
                 return new JukeBoxMenu(pContainerId, pPlayer1.getInventory(), blockEntity, ContainerLevelAccess.create(pLevel, pPos));
             }, new TranslatableComponent(Vanilla_Plus.MOD_ID + ".menu.jukebox.title")), buffer -> {
                 buffer.writeBlockPos(pPos);
-                buffer.writeResourceLocation(pLevel.dimension().getRegistryName());
+                buffer.writeResourceLocation(pLevel.dimension().location());
             });
         }
 
         cir.setReturnValue(InteractionResult.SUCCESS);
         cir.cancel();
+    }
+
+    @Inject(method = "setRecord(Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/item/ItemStack;)V", at =
+    @At("HEAD"), cancellable = true)
+    public void onSetRecord(LevelAccessor pLevel, BlockPos pPos, BlockState pState, ItemStack pRecordStack, CallbackInfo ci) {
+        ci.cancel();
     }
 
     @Inject(method = "onRemove", at = @At("HEAD"))
