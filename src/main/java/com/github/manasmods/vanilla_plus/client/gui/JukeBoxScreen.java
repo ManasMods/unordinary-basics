@@ -26,7 +26,7 @@ public class JukeBoxScreen extends AbstractContainerScreen<JukeBoxMenu> {
             Vanilla_PlusNetwork.getInstance().sendToServer(new RequestJukeboxUpdate(true));
         }, (pButton, pPoseStack, pMouseX, pMouseY) -> {
             renderTooltip(pPoseStack, Translation.of("jukebox.button.play"), pMouseX, pMouseY);
-        }, () -> !pMenu.isPlaying());
+        }, () -> !pMenu.isPlaying() && pMenu.hasDisc());
         this.stopButton = new ImagePredicateButton(0, 0, 12, 12, STOP_BUTTON, pButton -> {
             Vanilla_PlusNetwork.getInstance().sendToServer(new RequestJukeboxUpdate(false));
         }, (pButton, pPoseStack, pMouseX, pMouseY) -> {

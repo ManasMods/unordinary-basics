@@ -181,4 +181,8 @@ public class JukeBoxMenu extends AbstractContainerMenu {
             level.sendBlockUpdated(pos, blockEntity.getBlockState(), blockEntity.getBlockState(), 2);
         });
     }
+
+    public boolean hasDisc() {
+        return !blockEntity.getContainer().getCurrentRecord().isEmpty();
+    }
 }

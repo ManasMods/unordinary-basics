@@ -23,6 +23,8 @@ public class RequestJukeboxUpdate {
     public void handle(Supplier<NetworkEvent.Context> ctx) {
         ctx.get().enqueueWork(() -> {
             if (ctx.get().getSender().containerMenu instanceof JukeBoxMenu menu) {
+                if (!menu.hasDisc()) return;
+
                 if (this.playingState) {
                     menu.startPlaying();
                 } else {

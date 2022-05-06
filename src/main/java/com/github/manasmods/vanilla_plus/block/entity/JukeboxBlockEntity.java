@@ -7,6 +7,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.Clearable;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.JukeboxBlock;
@@ -25,6 +26,9 @@ public class JukeboxBlockEntity extends BlockEntity implements Clearable {
         container.addListener((handler, slot) -> {
             if (slot == 8) {
                 isPlaying = false;
+                if (level != null && level instanceof ServerLevel serverLevel) {
+                    serverLevel.sendBlockUpdated(pWorldPosition, getBlockState(), getBlockState(), 2);
+                }
             }
             setChanged();
         });
