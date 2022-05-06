@@ -10,18 +10,20 @@ import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.world.Clearable;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.JukeboxBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
 public class JukeboxBlockEntity extends BlockEntity implements Clearable {
-    private static final int PLAY_RECORD_EVENT = 1010;
+    public static final int PLAY_RECORD_EVENT = 1010;
     @Getter
     private final JukeboxContainer container = new JukeboxContainer();
     @Getter
     private boolean isPlaying;
-    private ItemStack lastDisc;
+    private ItemStack lastDisc = ItemStack.EMPTY;
+    private boolean firstTickDone = false;
 
     public JukeboxBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(Vanilla_PlusBlockEntities.JUKEBOX_BLOCK_ENTITY, pWorldPosition, pBlockState);
@@ -98,5 +100,15 @@ public class JukeboxBlockEntity extends BlockEntity implements Clearable {
         CompoundTag tag = super.getUpdateTag();
         saveAdditional(tag);
         return tag;
+    }
+
+    public static <T extends BlockEntity> void tick(Level level, BlockPos pos, BlockState blockState, T be) {
+        if (be instanceof JukeboxBlockEntity blockEntity) {
+            if (!blockEntity.firstTickDone && blockEntity.isPlaying()) {
+                //Start playing again when the blockEntity ticks the first time
+                blockEntity.play();
+                blockEntity.firstTickDone = true;
+            }
+        }
     }
 }

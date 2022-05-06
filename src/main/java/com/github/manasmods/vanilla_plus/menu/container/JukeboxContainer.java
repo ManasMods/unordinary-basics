@@ -11,6 +11,7 @@ import java.util.List;
 
 public class JukeboxContainer extends ItemStackHandler {
     private final List<InventoryListener> inventoryListeners = new ArrayList<>();
+    private final List<InventoryLoadListener> inventoryLoadListeners = new ArrayList<>();
 
     public JukeboxContainer() {
         super(17);
@@ -44,5 +45,14 @@ public class JukeboxContainer extends ItemStackHandler {
     @Override
     protected void onContentsChanged(int slot) {
         this.inventoryListeners.forEach(listener -> listener.onChange(this, slot));
+    }
+
+    @Override
+    protected void onLoad() {
+        inventoryLoadListeners.forEach(listener -> listener.load(this));
+    }
+
+    public void addLoadListener(InventoryLoadListener listener) {
+        this.inventoryLoadListeners.add(listener);
     }
 }

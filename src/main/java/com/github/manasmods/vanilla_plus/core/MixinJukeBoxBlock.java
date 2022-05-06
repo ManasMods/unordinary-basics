@@ -20,6 +20,8 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.JukeboxBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BlockEntityTicker;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.network.NetworkHooks;
@@ -73,15 +75,22 @@ public abstract class MixinJukeBoxBlock extends BaseEntityBlock {
         ci.cancel();
     }
 
-    @Inject(method = "onRemove", at = @At("HEAD"))
+    @Inject(method = "onRemove", at = @At("HEAD"), cancellable = true)
     public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving, CallbackInfo ci) {
         if (!pState.is(pNewState.getBlock())) {
             super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
+            pLevel.levelEvent(JukeboxBlockEntity.PLAY_RECORD_EVENT, pPos, 0);
         }
+        ci.cancel();
     }
 
     @Inject(method = "newBlockEntity(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;)Lnet/minecraft/world/level/block/entity/BlockEntity;", at = @At("RETURN"), cancellable = true)
     public void onNewBlockEntity(BlockPos pPos, BlockState pState, CallbackInfoReturnable<BlockEntity> cir) {
         cir.setReturnValue(new JukeboxBlockEntity(pPos, pState));
+    }
+
+    @Override
+    public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
+        return JukeboxBlockEntity::tick;
     }
 }
