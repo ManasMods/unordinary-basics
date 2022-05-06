@@ -7,8 +7,8 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.Clearable;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.JukeboxBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -16,29 +16,34 @@ import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
 public class JukeboxBlockEntity extends BlockEntity implements Clearable {
+    private static final int PLAY_RECORD_EVENT = 1010;
     @Getter
     private final JukeboxContainer container = new JukeboxContainer();
     @Getter
     private boolean isPlaying;
+    private ItemStack lastDisc;
 
     public JukeboxBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(Vanilla_PlusBlockEntities.JUKEBOX_BLOCK_ENTITY, pWorldPosition, pBlockState);
         container.addListener((handler, slot) -> {
-            if (slot == 8) {
-                isPlaying = false;
-                if (level != null && level instanceof ServerLevel serverLevel) {
-                    serverLevel.sendBlockUpdated(pWorldPosition, getBlockState(), getBlockState(), 2);
+            if (level != null && !level.isClientSide()) {
+                if (slot == 8) {
+                    if (!lastDisc.equals(handler.getStackInSlot(slot))) {
+                        stop();
+                    }
                 }
+                setChanged();
             }
-            setChanged();
         });
         isPlaying = pBlockState.getValue(JukeboxBlock.HAS_RECORD);
+        container.getCurrentRecord();
     }
 
     public void load(CompoundTag pTag) {
         super.load(pTag);
         this.isPlaying = pTag.getBoolean("isPlaying");
         container.deserializeNBT(pTag.getCompound("Inventory"));
+        lastDisc = container.getCurrentRecord();
     }
 
     protected void saveAdditional(CompoundTag pTag) {
@@ -63,10 +68,13 @@ public class JukeboxBlockEntity extends BlockEntity implements Clearable {
     }
 
     public void play() {
-        this.isPlaying = true;
-        setChanged();
-        if (hasLevel()) {
-            level.setBlock(worldPosition, getBlockState().setValue(JukeboxBlock.HAS_RECORD, true), 2);
+        if (!getRecord().isEmpty()) {
+            this.isPlaying = true;
+            setChanged();
+            if (hasLevel()) {
+                level.setBlock(worldPosition, getBlockState().setValue(JukeboxBlock.HAS_RECORD, true), 2);
+                level.levelEvent(PLAY_RECORD_EVENT, worldPosition, Item.getId(getRecord().getItem()));
+            }
         }
     }
 
@@ -75,6 +83,7 @@ public class JukeboxBlockEntity extends BlockEntity implements Clearable {
         setChanged();
         if (hasLevel()) {
             level.setBlock(worldPosition, getBlockState().setValue(JukeboxBlock.HAS_RECORD, false), 2);
+            level.levelEvent(PLAY_RECORD_EVENT, worldPosition, 0);
         }
     }
 
