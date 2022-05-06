@@ -121,7 +121,7 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.22'
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
 
-    implementation fg.deobf("curse.maven:manascore-619025:3780066")
+    implementation fg.deobf("curse.maven:manascore-619025:3780901")
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
