@@ -1,5 +1,6 @@
 package com.github.manasmods.vanilla_plus;
 
+import com.github.manasmods.vanilla_plus.handler.HoeHandler;
 import com.github.manasmods.vanilla_plus.network.Vanilla_PlusNetwork;
 import com.github.manasmods.vanilla_plus.registry.Vanilla_PlusRegistry;
 import net.minecraft.world.level.Level;
@@ -11,6 +12,7 @@ public abstract class Vanilla_PlusCommon {
 
     public void preInit(IEventBus modEventBus) {
         Vanilla_PlusRegistry.register(modEventBus);
+        HoeHandler.register();
     }
 
     /**
