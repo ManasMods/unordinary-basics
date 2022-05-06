@@ -2,7 +2,13 @@ package com.github.manasmods.vanilla_plus.data;
 
 import com.github.manasmods.manascore.data.gen.RecipeProvider;
 import com.github.manasmods.vanilla_plus.block.Vanilla_PlusBlocks;
+import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
+
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
@@ -16,6 +22,11 @@ public class Vanilla_PlusRecipeProvider extends RecipeProvider {
 
     @Override
     protected void generate(Consumer<FinishedRecipe> consumer) {
+
+        //MISC
+
+        smeltingRecipe(consumer, Ingredient.of(Items.LEATHER), Items.ROTTEN_FLESH, 0.35F, 200);
+        campfireRecipe(consumer, Ingredient.of(Items.LEATHER), Items.ROTTEN_FLESH, 0.35F, 600);
 
         //VANILLA CHANGES
 
@@ -428,5 +439,124 @@ public class Vanilla_PlusRecipeProvider extends RecipeProvider {
         stairs(consumer, Vanilla_PlusBlocks.BLACK_CONCRETE_POWDER_STAIRS, Blocks.BLACK_CONCRETE_POWDER);
         slab(consumer, Vanilla_PlusBlocks.BLACK_CONCRETE_POWDER_SLAB, Blocks.BLACK_CONCRETE_POWDER);
 
+    }
+
+    @Override
+    protected void buildCraftingRecipes(Consumer<FinishedRecipe> pFinishedRecipeConsumer) {
+
+        ShapedRecipeBuilder.shaped(Blocks.DISPENSER)
+                .define('C', Blocks.COBBLED_DEEPSLATE)
+                .define('B', Items.BOW)
+                .define('R', Items.REDSTONE)
+                .pattern("CCC")
+                .pattern("CBC")
+                .pattern("CRC")
+                .unlockedBy("has_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.COBBLED_DEEPSLATE).build()))
+                .save(pFinishedRecipeConsumer);
+        ShapedRecipeBuilder.shaped(Blocks.DROPPER)
+                .define('C', Blocks.COBBLED_DEEPSLATE)
+                .define('R', Items.REDSTONE)
+                .pattern("CCC")
+                .pattern("C C")
+                .pattern("CRC")
+                .unlockedBy("has_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.COBBLED_DEEPSLATE).build()))
+                .save(pFinishedRecipeConsumer);
+        ShapedRecipeBuilder.shaped(Blocks.OBSERVER)
+                .define('C', Blocks.COBBLED_DEEPSLATE)
+                .define('R', Items.REDSTONE)
+                .define('Q', Items.QUARTZ)
+                .pattern("CCC")
+                .pattern("RRQ")
+                .pattern("CCC")
+                .unlockedBy("has_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.COBBLED_DEEPSLATE).build()))
+                .save(pFinishedRecipeConsumer);
+        ShapedRecipeBuilder.shaped(Blocks.PISTON)
+                .define('C', Blocks.COBBLED_DEEPSLATE)
+                .define('R', Items.REDSTONE)
+                .define('I', Items.IRON_INGOT)
+                .define('W', ItemTags.PLANKS)
+                .pattern("WWW")
+                .pattern("CIC")
+                .pattern("CRC")
+                .unlockedBy("has_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.COBBLED_DEEPSLATE).build()))
+                .save(pFinishedRecipeConsumer);
+
+
+
+        ShapedRecipeBuilder.shaped(Items.SADDLE)
+                .define('L', Items.LEATHER)
+                .define('S', Items.STRING)
+                .define('I', Items.IRON_INGOT)
+                .pattern("S S")
+                .pattern("LIL")
+                .pattern("S S")
+                .unlockedBy("has_leather", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.LEATHER).build()))
+                .save(pFinishedRecipeConsumer);
+        ShapedRecipeBuilder.shaped(Items.NAME_TAG)
+                .define('P', Items.PAPER)
+                .define('S', Items.STRING)
+                .pattern("P")
+                .pattern("S")
+                .unlockedBy("has_string", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.PAPER).build()))
+                .save(pFinishedRecipeConsumer);
+        ShapedRecipeBuilder.shaped(Items.LEAD)
+                .define('B', Items.SLIME_BALL)
+                .define('S', Items.STRING)
+                .pattern("SS ")
+                .pattern("SBS")
+                .pattern(" SS")
+                .unlockedBy("has_slime_ball", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.SLIME_BALL).build()))
+                .save(pFinishedRecipeConsumer);
+        ShapedRecipeBuilder.shaped(Items.TRIDENT)
+                .define('I', Items.IRON_INGOT)
+                .define('D', Items.DIAMOND)
+                .define('P', Items.PRISMARINE_SHARD)
+                .pattern("III")
+                .pattern("DPD")
+                .pattern(" P ")
+                .unlockedBy("has_prismarine_shard", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.PRISMARINE_SHARD).build()))
+                .save(pFinishedRecipeConsumer);
+        ShapedRecipeBuilder.shaped(Items.CHAINMAIL_HELMET)
+                .define('I', Items.IRON_INGOT)
+                .define('N', Items.IRON_NUGGET)
+                .pattern("NIN")
+                .pattern("N N")
+                .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.IRON_NUGGET).build()))
+                .save(pFinishedRecipeConsumer);
+        ShapedRecipeBuilder.shaped(Items.CHAINMAIL_CHESTPLATE)
+                .define('I', Items.IRON_INGOT)
+                .define('N', Items.IRON_NUGGET)
+                .pattern("I I")
+                .pattern("NIN")
+                .pattern("NNN")
+                .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.IRON_NUGGET).build()))
+                .save(pFinishedRecipeConsumer);
+        ShapedRecipeBuilder.shaped(Items.CHAINMAIL_LEGGINGS)
+                .define('I', Items.IRON_INGOT)
+                .define('N', Items.IRON_NUGGET)
+                .pattern("NIN")
+                .pattern("I I")
+                .pattern("N N")
+                .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.IRON_NUGGET).build()))
+                .save(pFinishedRecipeConsumer);
+        ShapedRecipeBuilder.shaped(Items.CHAINMAIL_BOOTS)
+                .define('I', Items.IRON_INGOT)
+                .define('N', Items.IRON_NUGGET)
+                .pattern("N N")
+                .pattern("I I")
+                .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.IRON_NUGGET).build()))
+                .save(pFinishedRecipeConsumer);
     }
 }

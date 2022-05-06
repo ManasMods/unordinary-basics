@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CCC",
+    "CBC",
+    "CRC"
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:cobbled_deepslate"
+    },
+    "B": {
+      "item": "minecraft:bow"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "minecraft:dispenser"
+  }
+}
