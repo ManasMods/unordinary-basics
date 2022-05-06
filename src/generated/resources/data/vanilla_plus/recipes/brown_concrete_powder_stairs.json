@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:brown_concrete_powder"
+    }
+  },
+  "result": {
+    "item": "vanilla_plus:brown_concrete_powder_stairs",
+    "count": 8
+  }
+}

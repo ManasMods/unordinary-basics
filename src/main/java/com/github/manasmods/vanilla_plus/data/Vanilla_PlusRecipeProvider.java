@@ -20,7 +20,6 @@ public class Vanilla_PlusRecipeProvider extends RecipeProvider {
         super(gatherDataEvent);
     }
 
-    @Override
     protected void generate(Consumer<FinishedRecipe> consumer) {
 
         //MISC
@@ -439,10 +438,6 @@ public class Vanilla_PlusRecipeProvider extends RecipeProvider {
         stairs(consumer, Vanilla_PlusBlocks.BLACK_CONCRETE_POWDER_STAIRS, Blocks.BLACK_CONCRETE_POWDER);
         slab(consumer, Vanilla_PlusBlocks.BLACK_CONCRETE_POWDER_SLAB, Blocks.BLACK_CONCRETE_POWDER);
 
-    }
-
-    @Override
-    protected void buildCraftingRecipes(Consumer<FinishedRecipe> pFinishedRecipeConsumer) {
 
         ShapedRecipeBuilder.shaped(Blocks.DISPENSER)
                 .define('C', Blocks.COBBLED_DEEPSLATE)
@@ -453,7 +448,7 @@ public class Vanilla_PlusRecipeProvider extends RecipeProvider {
                 .pattern("CRC")
                 .unlockedBy("has_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Blocks.COBBLED_DEEPSLATE).build()))
-                .save(pFinishedRecipeConsumer);
+                .save(consumer);
         ShapedRecipeBuilder.shaped(Blocks.DROPPER)
                 .define('C', Blocks.COBBLED_DEEPSLATE)
                 .define('R', Items.REDSTONE)
@@ -462,7 +457,7 @@ public class Vanilla_PlusRecipeProvider extends RecipeProvider {
                 .pattern("CRC")
                 .unlockedBy("has_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Blocks.COBBLED_DEEPSLATE).build()))
-                .save(pFinishedRecipeConsumer);
+                .save(consumer);
         ShapedRecipeBuilder.shaped(Blocks.OBSERVER)
                 .define('C', Blocks.COBBLED_DEEPSLATE)
                 .define('R', Items.REDSTONE)
@@ -472,7 +467,7 @@ public class Vanilla_PlusRecipeProvider extends RecipeProvider {
                 .pattern("CCC")
                 .unlockedBy("has_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Blocks.COBBLED_DEEPSLATE).build()))
-                .save(pFinishedRecipeConsumer);
+                .save(consumer);
         ShapedRecipeBuilder.shaped(Blocks.PISTON)
                 .define('C', Blocks.COBBLED_DEEPSLATE)
                 .define('R', Items.REDSTONE)
@@ -483,7 +478,7 @@ public class Vanilla_PlusRecipeProvider extends RecipeProvider {
                 .pattern("CRC")
                 .unlockedBy("has_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Blocks.COBBLED_DEEPSLATE).build()))
-                .save(pFinishedRecipeConsumer);
+                .save(consumer);
 
 
 
@@ -496,7 +491,7 @@ public class Vanilla_PlusRecipeProvider extends RecipeProvider {
                 .pattern("S S")
                 .unlockedBy("has_leather", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.LEATHER).build()))
-                .save(pFinishedRecipeConsumer);
+                .save(consumer);
         ShapedRecipeBuilder.shaped(Items.NAME_TAG)
                 .define('P', Items.PAPER)
                 .define('S', Items.STRING)
@@ -504,7 +499,7 @@ public class Vanilla_PlusRecipeProvider extends RecipeProvider {
                 .pattern("S")
                 .unlockedBy("has_string", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.PAPER).build()))
-                .save(pFinishedRecipeConsumer);
+                .save(consumer);
         ShapedRecipeBuilder.shaped(Items.LEAD)
                 .define('B', Items.SLIME_BALL)
                 .define('S', Items.STRING)
@@ -513,7 +508,7 @@ public class Vanilla_PlusRecipeProvider extends RecipeProvider {
                 .pattern(" SS")
                 .unlockedBy("has_slime_ball", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.SLIME_BALL).build()))
-                .save(pFinishedRecipeConsumer);
+                .save(consumer);
         ShapedRecipeBuilder.shaped(Items.TRIDENT)
                 .define('I', Items.IRON_INGOT)
                 .define('D', Items.DIAMOND)
@@ -523,7 +518,7 @@ public class Vanilla_PlusRecipeProvider extends RecipeProvider {
                 .pattern(" P ")
                 .unlockedBy("has_prismarine_shard", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.PRISMARINE_SHARD).build()))
-                .save(pFinishedRecipeConsumer);
+                .save(consumer);
         ShapedRecipeBuilder.shaped(Items.CHAINMAIL_HELMET)
                 .define('I', Items.IRON_INGOT)
                 .define('N', Items.IRON_NUGGET)
@@ -531,7 +526,7 @@ public class Vanilla_PlusRecipeProvider extends RecipeProvider {
                 .pattern("N N")
                 .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.IRON_NUGGET).build()))
-                .save(pFinishedRecipeConsumer);
+                .save(consumer);
         ShapedRecipeBuilder.shaped(Items.CHAINMAIL_CHESTPLATE)
                 .define('I', Items.IRON_INGOT)
                 .define('N', Items.IRON_NUGGET)
@@ -540,7 +535,7 @@ public class Vanilla_PlusRecipeProvider extends RecipeProvider {
                 .pattern("NNN")
                 .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.IRON_NUGGET).build()))
-                .save(pFinishedRecipeConsumer);
+                .save(consumer);
         ShapedRecipeBuilder.shaped(Items.CHAINMAIL_LEGGINGS)
                 .define('I', Items.IRON_INGOT)
                 .define('N', Items.IRON_NUGGET)
@@ -549,7 +544,7 @@ public class Vanilla_PlusRecipeProvider extends RecipeProvider {
                 .pattern("N N")
                 .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.IRON_NUGGET).build()))
-                .save(pFinishedRecipeConsumer);
+                .save(consumer);
         ShapedRecipeBuilder.shaped(Items.CHAINMAIL_BOOTS)
                 .define('I', Items.IRON_INGOT)
                 .define('N', Items.IRON_NUGGET)
@@ -557,6 +552,6 @@ public class Vanilla_PlusRecipeProvider extends RecipeProvider {
                 .pattern("I I")
                 .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.IRON_NUGGET).build()))
-                .save(pFinishedRecipeConsumer);
+                .save(consumer);
     }
 }

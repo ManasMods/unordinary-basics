@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "vanilla_plus:warped_stem_slab"
+    ]
+  },
+  "criteria": {
+    "has_warped_stem": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:warped_stem"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "vanilla_plus:warped_stem_slab"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_warped_stem",
+      "has_the_recipe"
+    ]
+  ]
+}
