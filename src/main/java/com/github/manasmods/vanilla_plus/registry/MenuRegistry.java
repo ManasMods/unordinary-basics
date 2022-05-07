@@ -26,5 +26,15 @@ class MenuRegistry {
                 throw new IllegalStateException("Can not create JukeBoxMenu from non JukeBox block");
             }
         }));
+        registry.register("fletching_table_menu", () -> IForgeMenuType.create((windowId, inv, data) -> {
+            BlockPos pos = data.readBlockPos();
+            BlockEntity blockEntity = Vanilla_Plus.getProxy().getLevelOrOverworld().getBlockEntity(pos);
+            Level level = ServerLifecycleHooks.getCurrentServer().getLevel(ResourceKey.create(Registry.DIMENSION_REGISTRY, data.readResourceLocation()));
+            if (blockEntity instanceof JukeboxBlockEntity jukeboxBlockEntity) {
+                return new JukeBoxMenu(windowId, inv, jukeboxBlockEntity, ContainerLevelAccess.create(level, pos));
+            } else {
+                throw new IllegalStateException("Can not create FletchingTableMenu from non FletchingTable block");
+            }
+        }));
     }
 }

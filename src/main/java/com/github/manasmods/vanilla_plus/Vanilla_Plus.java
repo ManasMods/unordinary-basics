@@ -1,10 +1,6 @@
 package com.github.manasmods.vanilla_plus;
 
-import com.github.manasmods.vanilla_plus.data.Vanilla_PlusBlockTagProvider;
-import com.github.manasmods.vanilla_plus.data.Vanilla_PlusBlockStateProvider;
-import com.github.manasmods.vanilla_plus.data.Vanilla_PlusItemModelProvider;
-import com.github.manasmods.vanilla_plus.data.Vanilla_PlusLootTableProvider;
-import com.github.manasmods.vanilla_plus.data.Vanilla_PlusRecipeProvider;
+import com.github.manasmods.vanilla_plus.data.*;
 import lombok.Getter;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
