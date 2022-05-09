@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "side": "minecraft:block/crimson_nylium_side",
-    "bottom": "minecraft:block/crimson_nylium",
-    "top": "minecraft:block/crimson_nylium"
-  }
-}
