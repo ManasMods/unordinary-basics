@@ -2,6 +2,7 @@ package com.github.manasmods.vanilla_plus.registry;
 
 import com.github.manasmods.vanilla_plus.Vanilla_Plus;
 import com.github.manasmods.vanilla_plus.block.entity.JukeboxBlockEntity;
+import com.github.manasmods.vanilla_plus.menu.FletchingTableMenu;
 import com.github.manasmods.vanilla_plus.menu.JukeBoxMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Registry;
@@ -28,13 +29,9 @@ class MenuRegistry {
         }));
         registry.register("fletching_table_menu", () -> IForgeMenuType.create((windowId, inv, data) -> {
             BlockPos pos = data.readBlockPos();
-            BlockEntity blockEntity = Vanilla_Plus.getProxy().getLevelOrOverworld().getBlockEntity(pos);
             Level level = ServerLifecycleHooks.getCurrentServer().getLevel(ResourceKey.create(Registry.DIMENSION_REGISTRY, data.readResourceLocation()));
-            if (blockEntity instanceof JukeboxBlockEntity jukeboxBlockEntity) {
-                return new JukeBoxMenu(windowId, inv, jukeboxBlockEntity, ContainerLevelAccess.create(level, pos));
-            } else {
-                throw new IllegalStateException("Can not create FletchingTableMenu from non FletchingTable block");
-            }
+                return new FletchingTableMenu(windowId, ContainerLevelAccess.create(level, pos),inv);
+
         }));
     }
 }

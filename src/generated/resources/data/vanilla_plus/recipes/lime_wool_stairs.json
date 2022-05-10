@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:lime_wool"
+    }
+  },
+  "result": {
+    "item": "vanilla_plus:lime_wool_stairs",
+    "count": 8
+  }
+}

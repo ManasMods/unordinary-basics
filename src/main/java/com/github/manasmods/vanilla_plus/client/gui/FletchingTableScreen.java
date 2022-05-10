@@ -34,4 +34,15 @@ public class FletchingTableScreen extends AbstractContainerScreen<FletchingTable
         int y = (height - imageWidth) / 2;
         blit(pPoseStack, x, y, 0, 0, imageWidth, imageHeight, 256, 256);
     }
+
+    @Override
+    protected void init() {
+        super.init();
+        titleLabelX = titleLabelX;
+        titleLabelY = 2;
+        inventoryLabelX = titleLabelX;
+        inventoryLabelY = titleLabelY + 78;
+        imageHeight = 178;
+        imageWidth = 176;
+    }
 }

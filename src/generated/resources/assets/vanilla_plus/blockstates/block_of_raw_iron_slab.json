@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "vanilla_plus:block/block_of_raw_iron_slab_top"
+    },
+    "type=bottom": {
+      "model": "vanilla_plus:block/block_of_raw_iron_slab"
+    },
+    "type=double": {
+      "model": "minecraft:block/raw_iron_block"
+    }
+  }
+}

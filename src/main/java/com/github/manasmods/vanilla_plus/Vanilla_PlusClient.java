@@ -1,6 +1,7 @@
 package com.github.manasmods.vanilla_plus;
 
 import com.github.manasmods.vanilla_plus.block.Vanilla_PlusBlocks;
+import com.github.manasmods.vanilla_plus.client.gui.FletchingTableScreen;
 import com.github.manasmods.vanilla_plus.client.gui.JukeBoxScreen;
 import com.github.manasmods.vanilla_plus.client.handler.Vanilla_PlusColorHandler;
 import com.github.manasmods.vanilla_plus.menu.Vanilla_PlusMenuTypes;
@@ -30,6 +31,7 @@ public class Vanilla_PlusClient extends Vanilla_PlusCommon {
         event.enqueueWork(() ->translucent(Vanilla_PlusBlocks.ICE_SLAB));
 
         event.enqueueWork(() ->MenuScreens.register(Vanilla_PlusMenuTypes.JUKE_BOX_MENU, JukeBoxScreen::new));
+        event.enqueueWork(() ->MenuScreens.register(Vanilla_PlusMenuTypes.FLETCHING_TABLE_MENU, FletchingTableScreen::new));
     }
 
     @Override

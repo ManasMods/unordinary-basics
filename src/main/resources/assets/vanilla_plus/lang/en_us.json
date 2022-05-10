@@ -314,6 +314,7 @@
   "vanilla_plus.menu.jukebox.title": "Jukebox",
   "vanilla_plus.jukebox.button.play": "Start Playing",
   "vanilla_plus.jukebox.button.stop": "Stop Playing",
+  "vanilla_plus.menu.fletching_table.title": "Fletching Table",
 
   "itemGroup.vanilla_plustab": "VP Blocks"
 }
