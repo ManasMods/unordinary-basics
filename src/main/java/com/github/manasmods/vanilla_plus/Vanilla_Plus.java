@@ -5,7 +5,6 @@ import com.github.manasmods.vanilla_plus.data.Vanilla_PlusBlockTagProvider;
 import com.github.manasmods.vanilla_plus.data.Vanilla_PlusItemModelProvider;
 import com.github.manasmods.vanilla_plus.data.Vanilla_PlusLootTableProvider;
 import com.github.manasmods.vanilla_plus.data.Vanilla_PlusRecipeProvider;
-import com.github.manasmods.vanilla_plus.recipe.Vanilla_PlusRecipes;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
@@ -31,8 +30,6 @@ public class Vanilla_Plus {
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::clientSetup);
         modEventBus.addListener(this::generateData);
-        IEventBus eventBus = null;
-        Vanilla_PlusRecipes.register(eventBus);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
