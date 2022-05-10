@@ -2,15 +2,14 @@ package com.github.manasmods.vanilla_plus.menu;
 
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.*;
-import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerLevelAccess;
+import net.minecraft.world.inventory.CraftingContainer;
+import net.minecraft.world.inventory.ResultContainer;
+import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraftforge.items.CapabilityItemHandler;
-import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.wrapper.InvWrapper;
-
-import javax.annotation.Nonnull;
 
 public class FletchingTableMenu extends AbstractContainerMenu {
 
@@ -32,27 +31,19 @@ public class FletchingTableMenu extends AbstractContainerMenu {
     private void setupFletchingTableSlots() {
         int slotIndex = 0;
         //flint
-        this.addSlot(new Slot(this.craftSlots,0,29, 21 - 5));
-
-        //stick
-        this.addSlot(new Slot(this.craftSlots,1,29, 42 - 5));
-
-        //feather
-        this.addSlot(new Slot(this.craftSlots,2,29, 63 - 5));
-
+        this.addSlot(new Slot(this.craftSlots, slotIndex++, 29, 21 - 5));
         //lingering potion
-        this.addSlot(new Slot(this.craftSlots,3,42 + 8, 21 - 5));
-
+        this.addSlot(new Slot(this.craftSlots, slotIndex++, 42 + 8, 21 - 5));
+        //stick
+        this.addSlot(new Slot(this.craftSlots, slotIndex++, 29, 42 - 5));
+        //feather
+        this.addSlot(new Slot(this.craftSlots, slotIndex++, 29, 63 - 5));
         //arrow
-        this.addSlot(new Slot(this.craftSlots,4,42 + 8, 42 - 5));
-
+        this.addSlot(new Slot(this.craftSlots, slotIndex++, 42 + 8, 42 - 5));
         //glowstone
-        this.addSlot(new Slot(this.craftSlots,5,42 + 8, 63 - 5));
-
+        this.addSlot(new Slot(this.craftSlots, slotIndex++, 42 + 8, 63 - 5));
         //result
-        this.addSlot(new Slot(this.resultSlots,6,80, 80));
-
-
+        this.addSlot(new Slot(this.resultSlots, slotIndex, 80, 80));
     }
 
     private void setupPlayerSlots() {

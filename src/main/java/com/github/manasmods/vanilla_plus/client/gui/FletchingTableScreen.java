@@ -15,6 +15,7 @@ public class FletchingTableScreen extends AbstractContainerScreen<FletchingTable
 
     public FletchingTableScreen(FletchingTableMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);
+        imageHeight = 178;
     }
 
     @Override
@@ -31,18 +32,16 @@ public class FletchingTableScreen extends AbstractContainerScreen<FletchingTable
         RenderSystem.setShaderTexture(0, BACKGROUND);
 
         int x = (width - imageWidth) / 2;
-        int y = (height - imageWidth) / 2;
+        int y = (height - imageHeight) / 2;
         blit(pPoseStack, x, y, 0, 0, imageWidth, imageHeight, 256, 256);
     }
 
     @Override
     protected void init() {
         super.init();
-        titleLabelX = titleLabelX;
-        titleLabelY = 2;
-        inventoryLabelX = titleLabelX;
-        inventoryLabelY = titleLabelY + 78;
-        imageHeight = 178;
-        imageWidth = 176;
+        titleLabelX = (imageWidth - font.width(title)) / 2;
+        titleLabelY = 6;
+        inventoryLabelX = imageWidth - font.width(playerInventoryTitle) - 7;
+        inventoryLabelY = imageHeight / 2 - 3;
     }
 }
