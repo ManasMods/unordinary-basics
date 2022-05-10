@@ -54,7 +54,7 @@ public class Vanilla_Plus {
      * @return the current Logger instance
      */
     public static Logger getLogger() {
-        return (Logger) LOGGER;
+        return LOGGER;
     }
 
     public static Vanilla_PlusCommon getProxy() {
