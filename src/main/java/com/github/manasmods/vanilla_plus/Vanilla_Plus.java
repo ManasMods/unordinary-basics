@@ -1,8 +1,11 @@
 package com.github.manasmods.vanilla_plus;
 
-import com.github.manasmods.vanilla_plus.data.*;
+import com.github.manasmods.vanilla_plus.data.Vanilla_PlusBlockStateProvider;
+import com.github.manasmods.vanilla_plus.data.Vanilla_PlusBlockTagProvider;
+import com.github.manasmods.vanilla_plus.data.Vanilla_PlusItemModelProvider;
+import com.github.manasmods.vanilla_plus.data.Vanilla_PlusLootTableProvider;
+import com.github.manasmods.vanilla_plus.data.Vanilla_PlusRecipeProvider;
 import com.github.manasmods.vanilla_plus.recipe.Vanilla_PlusRecipes;
-import lombok.Getter;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
@@ -18,7 +21,6 @@ public class Vanilla_Plus {
     public static final String MOD_ID = "vanilla_plus";
     private static final Logger LOGGER = LogManager.getLogger();
     public static Vanilla_Plus instance;
-    @Getter
     private final Vanilla_PlusCommon proxy;
 
     public Vanilla_Plus() {
