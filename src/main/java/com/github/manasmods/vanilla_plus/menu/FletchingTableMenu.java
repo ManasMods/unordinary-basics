@@ -2,12 +2,11 @@ package com.github.manasmods.vanilla_plus.menu;
 
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.ContainerLevelAccess;
-import net.minecraft.world.inventory.ResultSlot;
+import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.wrapper.InvWrapper;
 
@@ -17,6 +16,9 @@ public class FletchingTableMenu extends AbstractContainerMenu {
 
     private final ContainerLevelAccess levelAccess;
     private final InvWrapper playerInvWrapper;
+    private final CraftingContainer craftSlots = new CraftingContainer(this, 3, 3);
+    private final ResultContainer resultSlots = new ResultContainer();
+
 
     public FletchingTableMenu(int pContainerId, ContainerLevelAccess levelAccess, Inventory playerInvWrapper) {
         super(Vanilla_PlusMenuTypes.FLETCHING_TABLE_MENU, pContainerId);
@@ -29,21 +31,14 @@ public class FletchingTableMenu extends AbstractContainerMenu {
 
     private void setupFletchingTableSlots() {
         int slotIndex = 0;
-        this..getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
-        this.addSlot(new SlotItemHandler(handler, 0, 30, 22));
-        this.addSlot(new SlotItemHandler(handler, 1, 30, 43));
-        this.addSlot(new SlotItemHandler(handler, 2, 30, 64));
-        this.addSlot(new SlotItemHandler(handler, 3, 38, 22));
-        this.addSlot(new SlotItemHandler(handler, 4, 38, 43));
-        this.addSlot(new SlotItemHandler(handler, 5, 38, 64));
-        this.addSlot(new ResultSlot(handler, 6, 76, 42) {
-            @Override
-            public boolean mayPlace(@Nonnull ItemStack stack) {
-                return false;
-            }
-        });
-        });
+        this.addSlot(new Slot(this.craftSlots,0,29, 21 - 5));
+        this.addSlot(new Slot(this.craftSlots,1,29, 42 - 5));
+        this.addSlot(new Slot(this.craftSlots,2,29, 63 - 5));
+        this.addSlot(new Slot(this.craftSlots,3,42 + 8, 21 - 5));
+        this.addSlot(new Slot(this.craftSlots,4,42 + 8, 42 - 5));
+        this.addSlot(new Slot(this.craftSlots,5,42 + 8, 63 - 5));
     }
+
     private void setupPlayerSlots() {
         int index = 0;
 
