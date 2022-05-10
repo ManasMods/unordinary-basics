@@ -1,6 +1,7 @@
 package com.github.manasmods.vanilla_plus;
 
 import com.github.manasmods.vanilla_plus.data.*;
+import com.github.manasmods.vanilla_plus.recipe.Vanilla_PlusRecipes;
 import lombok.Getter;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
@@ -28,6 +29,8 @@ public class Vanilla_Plus {
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::clientSetup);
         modEventBus.addListener(this::generateData);
+        IEventBus eventBus = null;
+        Vanilla_PlusRecipes.register(eventBus);
     }
 
     private void setup(final FMLCommonSetupEvent event) {

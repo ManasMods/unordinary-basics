@@ -31,12 +31,28 @@ public class FletchingTableMenu extends AbstractContainerMenu {
 
     private void setupFletchingTableSlots() {
         int slotIndex = 0;
+        //flint
         this.addSlot(new Slot(this.craftSlots,0,29, 21 - 5));
+
+        //stick
         this.addSlot(new Slot(this.craftSlots,1,29, 42 - 5));
+
+        //feather
         this.addSlot(new Slot(this.craftSlots,2,29, 63 - 5));
+
+        //lingering potion
         this.addSlot(new Slot(this.craftSlots,3,42 + 8, 21 - 5));
+
+        //arrow
         this.addSlot(new Slot(this.craftSlots,4,42 + 8, 42 - 5));
+
+        //glowstone
         this.addSlot(new Slot(this.craftSlots,5,42 + 8, 63 - 5));
+
+        //result
+        this.addSlot(new Slot(this.resultSlots,6,80, 80));
+
+
     }
 
     private void setupPlayerSlots() {
