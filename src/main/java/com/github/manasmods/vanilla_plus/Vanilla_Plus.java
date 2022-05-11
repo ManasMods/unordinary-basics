@@ -2,6 +2,7 @@ package com.github.manasmods.vanilla_plus;
 
 import com.github.manasmods.vanilla_plus.data.Vanilla_PlusBlockStateProvider;
 import com.github.manasmods.vanilla_plus.data.Vanilla_PlusBlockTagProvider;
+import com.github.manasmods.vanilla_plus.data.Vanilla_PlusFletchingRecipeProvider;
 import com.github.manasmods.vanilla_plus.data.Vanilla_PlusItemModelProvider;
 import com.github.manasmods.vanilla_plus.data.Vanilla_PlusLootTableProvider;
 import com.github.manasmods.vanilla_plus.data.Vanilla_PlusRecipeProvider;
@@ -46,6 +47,7 @@ public class Vanilla_Plus {
         event.getGenerator().addProvider(new Vanilla_PlusRecipeProvider(event));
         event.getGenerator().addProvider(new Vanilla_PlusLootTableProvider(event));
         event.getGenerator().addProvider(new Vanilla_PlusBlockTagProvider(event));
+        event.getGenerator().addProvider(new Vanilla_PlusFletchingRecipeProvider(event));
     }
 
     /**
