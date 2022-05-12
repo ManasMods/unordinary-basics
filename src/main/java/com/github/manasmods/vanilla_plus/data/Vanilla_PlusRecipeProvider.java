@@ -553,5 +553,15 @@ public class Vanilla_PlusRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.IRON_NUGGET).build()))
                 .save(consumer);
+
+        ShapedRecipeBuilder.shaped(Items.ENCHANTED_GOLDEN_APPLE)
+                .define('G', Items.GOLD_BLOCK)
+                .define('A', Items.APPLE)
+                .pattern("GGG")
+                .pattern("GAG")
+                .pattern("GGG")
+                .unlockedBy("has_gold_block", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.GOLD_BLOCK).build()))
+                .save(consumer);
     }
 }
