@@ -78,8 +78,8 @@ public class FletchingTableMenu extends AbstractContainerMenu {
         lastCraftingIndex = slots.size();
 
         //result
-        this.addSlot(new ResultSlot(player, craftingContainer, this.resultContainer, slotIndex, 111, 41));
-        resultIndex = slots.size();
+        Slot slot = this.addSlot(new ResultSlot(player, craftingContainer, this.resultContainer, slotIndex, 111, 41));
+        resultIndex = slot.index;
     }
 
     private void setupPlayerSlots() {
@@ -161,13 +161,12 @@ public class FletchingTableMenu extends AbstractContainerMenu {
 
     @Override
     public void slotsChanged(Container pInventory) {
-        levelAccess.execute((level, pos) -> {
-            slotChangedCraftingGrid(this, level, this.player, craftingContainer, resultContainer);
-        });
+        levelAccess.execute((level, pos) -> slotChangedCraftingGrid(this, level, this.player, craftingContainer, resultContainer));
+        super.slotsChanged(pInventory);
     }
 
     protected static void slotChangedCraftingGrid(FletchingTableMenu menu, Level level, Player player, FletchingContainer craftingContainer, ResultContainer resultContainer) {
-        if(player instanceof ServerPlayer serverPlayer){
+        if (player instanceof ServerPlayer serverPlayer) {
             ItemStack itemstack = ItemStack.EMPTY;
 
             Optional<FletchingRecipe> optional = level.getServer().getRecipeManager().getRecipeFor(Vanilla_PlusRecipeTypeRegistry.FLETCHING_RECIPE.get(), craftingContainer, level);
@@ -180,8 +179,14 @@ public class FletchingTableMenu extends AbstractContainerMenu {
 
             resultContainer.setItem(0, itemstack);
             menu.setRemoteSlot(0, itemstack);
-            serverPlayer.connection.send(new ClientboundContainerSetSlotPacket(menu.containerId, menu.incrementStateId(), 0, itemstack));
+            serverPlayer.connection.send(new ClientboundContainerSetSlotPacket(menu.containerId, menu.incrementStateId(), menu.resultIndex, itemstack));
         }
+    }
+
+    @Override
+    public void removed(Player pPlayer) {
+        super.removed(pPlayer);
+        this.levelAccess.execute((level, pos) -> this.clearContainer(pPlayer, craftingContainer));
     }
 }
 

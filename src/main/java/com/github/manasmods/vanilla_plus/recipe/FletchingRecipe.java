@@ -2,6 +2,7 @@ package com.github.manasmods.vanilla_plus.recipe;
 
 import com.github.manasmods.vanilla_plus.menu.container.FletchingContainer;
 import com.github.manasmods.vanilla_plus.registry.Vanilla_PlusRecipeTypeRegistry;
+import com.google.common.collect.Lists;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import net.minecraft.core.NonNullList;
@@ -13,6 +14,8 @@ import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
 
+import java.util.List;
+
 @RequiredArgsConstructor
 public class FletchingRecipe implements Recipe<FletchingContainer> {
     final NonNullList<Ingredient> recipeItems;
@@ -22,22 +25,17 @@ public class FletchingRecipe implements Recipe<FletchingContainer> {
 
     @Override
     public boolean matches(FletchingContainer pCraftingInventory, Level pLevel) {
-        for (int i = 0; i < pCraftingInventory.getWidth(); ++i) {
-            for (int j = 0; j < pCraftingInventory.getHeight(); ++j) {
-                int k = i - 2;
-                int l = j - 3;
-                Ingredient ingredient = Ingredient.EMPTY;
-                if (k >= 0 && l >= 0 && k < 2 && l < 3) {
-                    ingredient = this.recipeItems.get(k + l * 2);
-                }
-
-                if (!ingredient.test(pCraftingInventory.getItem(i + j * pCraftingInventory.getWidth()))) {
-                    return false;
+        List<Ingredient> remainingIngredients = Lists.newArrayList(recipeItems);
+        remainingIngredients.removeIf(ingredient -> {
+            for (int i = 0; i < 6; i++) {
+                if (ingredient.test(pCraftingInventory.getItem(i))) {
+                    return true;
                 }
             }
-        }
+            return false;
+        });
 
-        return true;
+        return remainingIngredients.isEmpty();
     }
 
     @Override
