@@ -39,9 +39,9 @@ public class FletchingTableScreen extends AbstractContainerScreen<FletchingTable
     @Override
     protected void init() {
         super.init();
-        titleLabelX = (imageWidth - font.width(title)) / 2;
+        titleLabelX = 8;
         titleLabelY = 6;
-        inventoryLabelX = imageWidth - font.width(playerInventoryTitle) - 7;
+        inventoryLabelX = 8;
         inventoryLabelY = imageHeight / 2 - 3;
     }
 }
