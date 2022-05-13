@@ -6,7 +6,8 @@
   "refmap": "manascore.refmap.json",
   "mixins": [
     "MixinFletchingTableBlock",
-    "MixinJukeBoxBlock"
+    "MixinJukeBoxBlock",
+    "NBTIngredientAccessor"
   ],
   "client": [
   ],

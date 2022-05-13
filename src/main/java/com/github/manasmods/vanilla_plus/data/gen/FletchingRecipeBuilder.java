@@ -5,15 +5,21 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
 import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import com.mojang.serialization.Dynamic;
+import com.mojang.serialization.JsonOps;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import net.minecraft.advancements.CriterionTriggerInstance;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeBuilder;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtOps;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
@@ -22,6 +28,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Set;
 import java.util.function.Consumer;
 
@@ -32,6 +39,7 @@ public class FletchingRecipeBuilder implements RecipeBuilder {
     private final int count;
     private final List<String> rows = Lists.newArrayList();
     private final Map<Character, Ingredient> key = Maps.newLinkedHashMap();
+    private final Optional<CompoundTag> tags;
 
     @Override
     public FletchingRecipeBuilder unlockedBy(String pCriterionName, CriterionTriggerInstance pCriterionTrigger) {
@@ -46,11 +54,15 @@ public class FletchingRecipeBuilder implements RecipeBuilder {
     @Override
     public void save(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ResourceLocation pRecipeId) {
         this.ensureValid(pRecipeId);
-        pFinishedRecipeConsumer.accept(new Result(pRecipeId, this.result, this.count, this.rows, this.key));
+        pFinishedRecipeConsumer.accept(new Result(pRecipeId, this.result, this.count, this.tags, this.rows, this.key));
+    }
+
+    public static FletchingRecipeBuilder create(ItemStack itemStack) {
+        return new FletchingRecipeBuilder(itemStack.getItem(), itemStack.getCount(), Optional.ofNullable(itemStack.getTag()));
     }
 
     public static FletchingRecipeBuilder create(ItemLike pResult, int pCount) {
-        return new FletchingRecipeBuilder(pResult.asItem(), pCount);
+        return new FletchingRecipeBuilder(pResult.asItem(), pCount, Optional.empty());
     }
 
     public FletchingRecipeBuilder pattern(String pPattern) {
@@ -112,6 +124,7 @@ public class FletchingRecipeBuilder implements RecipeBuilder {
         private final ResourceLocation id;
         private final Item result;
         private final int count;
+        private final Optional<CompoundTag> tags;
         private final List<String> pattern;
         private final Map<Character, Ingredient> key;
 
@@ -135,6 +148,11 @@ public class FletchingRecipeBuilder implements RecipeBuilder {
             if (this.count > 1) {
                 jsonobject1.addProperty("count", this.count);
             }
+
+            tags.ifPresent(compoundTag -> {
+                JsonElement element = Dynamic.convert(NbtOps.INSTANCE, JsonOps.INSTANCE, tags.get());
+                jsonobject1.add("nbt", element);
+            });
 
             pJson.add("result", jsonobject1);
         }

@@ -66,7 +66,7 @@ public class FletchingRecipeSerializer implements RecipeSerializer<FletchingReci
 
     @Override
     public RecipeSerializer<?> setRegistryName(ResourceLocation name) {
-        registryName=name;
+        registryName = name;
         return this;
     }
 
