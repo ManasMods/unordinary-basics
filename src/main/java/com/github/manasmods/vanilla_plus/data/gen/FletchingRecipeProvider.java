@@ -12,6 +12,7 @@ import net.minecraft.data.DataProvider;
 import net.minecraft.data.HashCache;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
 
 import java.io.BufferedWriter;
@@ -84,5 +85,9 @@ public abstract class FletchingRecipeProvider implements DataProvider {
 
     protected FletchingRecipeBuilder fletch(ItemLike result, int amount) {
         return FletchingRecipeBuilder.create(result, amount);
+    }
+
+    protected FletchingRecipeBuilder fletch(ItemStack stack) {
+        return FletchingRecipeBuilder.create(stack);
     }
 }
