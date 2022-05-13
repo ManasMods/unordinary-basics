@@ -2,6 +2,7 @@ package com.github.manasmods.vanilla_plus.menu;
 
 import com.github.manasmods.vanilla_plus.menu.container.FletchingContainer;
 import com.github.manasmods.vanilla_plus.menu.slot.FilteredSlot;
+import com.github.manasmods.vanilla_plus.menu.slot.FletchingResultSlot;
 import com.github.manasmods.vanilla_plus.recipe.FletchingRecipe;
 import com.github.manasmods.vanilla_plus.registry.Vanilla_PlusRecipeTypeRegistry;
 import net.minecraft.network.protocol.game.ClientboundContainerSetSlotPacket;
@@ -12,7 +13,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.inventory.ResultContainer;
-import net.minecraft.world.inventory.ResultSlot;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -78,7 +78,7 @@ public class FletchingTableMenu extends AbstractContainerMenu {
         lastCraftingIndex = slots.size();
 
         //result
-        Slot slot = this.addSlot(new ResultSlot(player, craftingContainer, this.resultContainer, slotIndex, 111, 41));
+        Slot slot = this.addSlot(new FletchingResultSlot(player, craftingContainer, this.resultContainer, slotIndex, 111, 41));
         resultIndex = slot.index;
     }
 
