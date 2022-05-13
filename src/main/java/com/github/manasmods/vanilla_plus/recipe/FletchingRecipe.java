@@ -32,7 +32,13 @@ public class FletchingRecipe implements Recipe<FletchingContainer> {
         remainingIngredients.removeIf(ingredient -> {
             for (int i = 0; i < 6; i++) {
                 if (ingredient.test(pCraftingInventory.getItem(i))) {
-                    return true;
+                    if (ingredient instanceof NBTIngredient nbtIngredient) {
+                        NBTIngredientAccessor accessor = (NBTIngredientAccessor) nbtIngredient;
+                        int requiredCount = accessor.getStack().getCount();
+                        return pCraftingInventory.getItem(i).getCount() >= requiredCount;
+                    } else {
+                        return true;
+                    }
                 }
             }
             return false;
