@@ -19,8 +19,8 @@ apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
 //As described in https://mcforge.readthedocs.io/en/1.18.x/gettingstarted/versioning/#examples
 version = "${minecraftVersion}-${modVersion}"
-group = 'com.manasmods.vanilla_plus' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'vanilla_plus'
+group = 'com.manasmods.unordinary_basics' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = 'unordinary_basics'
 
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
@@ -38,7 +38,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                vanilla_plus {
+                unordinary_basics {
                     source sourceSets.main
                 }
             }
@@ -52,7 +52,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                vanilla_plus {
+                unordinary_basics {
                     source sourceSets.main
                 }
             }
@@ -70,7 +70,7 @@ minecraft {
             args '--mod', "${modId}", '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/'),'--existing-mod', "manascore"
 
             mods {
-                vanilla_plus {
+                unordinary_basics {
                     source sourceSets.main
                 }
             }
@@ -83,7 +83,7 @@ minecraft {
             property 'forge.enabledGameTestNamespaces', "${modId}"
 
             mods {
-                vanilla_plus {
+                unordinary_basics {
                     source sourceSets.main
                     source sourceSets.test
                 }
@@ -144,12 +144,12 @@ dependencies {
 jar {
     manifest {
         attributes([
-                "Specification-Title"     : "vanilla_plus",
-                "Specification-Vendor"    : "vanilla_plussareus",
+                "Specification-Title"     : "unordinary_basics",
+                "Specification-Vendor"    : "unordinary_basicssareus",
                 "Specification-Version"   : "1", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
-                "Implementation-Vendor"   : "vanilla_plussareus",
+                "Implementation-Vendor"   : "unordinary_basicssareus",
                 "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }

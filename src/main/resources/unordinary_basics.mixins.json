@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.github.manasmods.unordinary_basics.core",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "manascore.refmap.json",
+  "mixins": [
+    "MixinFletchingTableBlock",
+    "MixinJukeBoxBlock",
+    "NBTIngredientAccessor"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
