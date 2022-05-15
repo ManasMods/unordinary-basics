@@ -2,7 +2,7 @@ modLoader="javafml"
 loaderVersion="${forgeLoaderVersion}"
 license="All rights reserved"
 [[mods]]
-modId="vanilla_plus"
+modId="unordinary_basics"
 version="${modVersion}"
 displayName="Vanilla Plus"
 logoFile="logo.png"
@@ -15,13 +15,13 @@ description='''
 This mod is designed to enchance the vanilla experience. First adding slabs and stairs of most blocks then QoL changes such as changes to crafting recipes.
 '''
 
-[[dependencies.vanilla_plus]]
+[[dependencies.unordinary_basics]]
     modId="forge"
     mandatory=true
     versionRange="${forgeLoaderVersion}"
     ordering="NONE"
     side="BOTH"
-[[dependencies.vanilla_plus]]
+[[dependencies.unordinary_basics]]
     modId="minecraft"
     mandatory=true
     versionRange="${minecraftVersionCheck}"

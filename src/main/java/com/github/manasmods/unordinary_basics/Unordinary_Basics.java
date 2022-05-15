@@ -18,7 +18,7 @@ import org.apache.logging.log4j.Logger;
 
 @Mod(Unordinary_Basics.MOD_ID)
 public class Unordinary_Basics {
-    public static final String MOD_ID = "vanilla_plus";
+    public static final String MOD_ID = "unordinary_basics";
     private static final Logger LOGGER = LogManager.getLogger();
     public static Unordinary_Basics instance;
     private final Unordinary_BasicsCommon proxy;
