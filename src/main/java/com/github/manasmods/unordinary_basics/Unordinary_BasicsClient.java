@@ -25,9 +25,11 @@ public class Unordinary_BasicsClient extends Unordinary_BasicsCommon {
     public void clientInit(FMLClientSetupEvent event) {
         event.enqueueWork(() -> cutoutMipped(Unordinary_BasicsBlocks.GRASS_BLOCK_STAIRS));
         event.enqueueWork(() -> cutoutMipped(Unordinary_BasicsBlocks.GRASS_BLOCK_SLAB));
-        //Glass Stairs
-        event.enqueueWork(() -> cutout(
-                Unordinary_BasicsBlocks.GLASS_STAIRS,
+
+        event.enqueueWork(() -> cutout(Unordinary_BasicsBlocks.GLASS_STAIRS, Unordinary_BasicsBlocks.GLASS_SLAB));
+
+        event.enqueueWork(() -> translucent(
+                //Stained Glass Stairs
                 Unordinary_BasicsBlocks.WHITE_STAINED_GLASS_STAIRS,
                 Unordinary_BasicsBlocks.ORANGE_STAINED_GLASS_STAIRS,
                 Unordinary_BasicsBlocks.MAGENTA_STAINED_GLASS_STAIRS,
@@ -44,11 +46,8 @@ public class Unordinary_BasicsClient extends Unordinary_BasicsCommon {
                 Unordinary_BasicsBlocks.GREEN_STAINED_GLASS_STAIRS,
                 Unordinary_BasicsBlocks.RED_STAINED_GLASS_STAIRS,
                 Unordinary_BasicsBlocks.BLACK_STAINED_GLASS_STAIRS,
-                Unordinary_BasicsBlocks.TINTED_GLASS_STAIRS
-        ));
-        //Glass Slabs
-        event.enqueueWork(() -> cutout(
-                Unordinary_BasicsBlocks.GLASS_SLAB,
+                Unordinary_BasicsBlocks.TINTED_GLASS_STAIRS,
+                //Stained Glass Slabs
                 Unordinary_BasicsBlocks.WHITE_STAINED_GLASS_SLAB,
                 Unordinary_BasicsBlocks.ORANGE_STAINED_GLASS_SLAB,
                 Unordinary_BasicsBlocks.MAGENTA_STAINED_GLASS_SLAB,
@@ -65,10 +64,11 @@ public class Unordinary_BasicsClient extends Unordinary_BasicsCommon {
                 Unordinary_BasicsBlocks.GREEN_STAINED_GLASS_SLAB,
                 Unordinary_BasicsBlocks.RED_STAINED_GLASS_SLAB,
                 Unordinary_BasicsBlocks.BLACK_STAINED_GLASS_SLAB,
-                Unordinary_BasicsBlocks.TINTED_GLASS_SLAB
+                Unordinary_BasicsBlocks.TINTED_GLASS_SLAB,
+                //Ice
+                Unordinary_BasicsBlocks.ICE_STAIRS,
+                Unordinary_BasicsBlocks.ICE_SLAB
         ));
-        event.enqueueWork(() -> translucent(Unordinary_BasicsBlocks.ICE_STAIRS));
-        event.enqueueWork(() -> translucent(Unordinary_BasicsBlocks.ICE_SLAB));
 
         event.enqueueWork(() -> MenuScreens.register(Vanilla_AdditionsMenuTypes.JUKE_BOX_MENU, JukeBoxScreen::new));
         event.enqueueWork(() -> MenuScreens.register(Vanilla_AdditionsMenuTypes.FLETCHING_TABLE_MENU, FletchingTableScreen::new));
@@ -93,7 +93,9 @@ public class Unordinary_BasicsClient extends Unordinary_BasicsCommon {
         }
     }
 
-    private void translucent(Block block) {
-        ItemBlockRenderTypes.setRenderLayer(block, RenderType.translucent());
+    private void translucent(Block... blocks) {
+        for (Block block : blocks) {
+            ItemBlockRenderTypes.setRenderLayer(block, RenderType.translucent());
+        }
     }
 }
