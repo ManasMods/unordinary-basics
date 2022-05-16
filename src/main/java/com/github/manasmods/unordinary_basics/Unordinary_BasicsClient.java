@@ -25,13 +25,53 @@ public class Unordinary_BasicsClient extends Unordinary_BasicsCommon {
     public void clientInit(FMLClientSetupEvent event) {
         event.enqueueWork(() -> cutoutMipped(Unordinary_BasicsBlocks.GRASS_BLOCK_STAIRS));
         event.enqueueWork(() -> cutoutMipped(Unordinary_BasicsBlocks.GRASS_BLOCK_SLAB));
-        event.enqueueWork(() ->cutout(Unordinary_BasicsBlocks.GLASS_STAIRS));
-        event.enqueueWork(() ->cutout(Unordinary_BasicsBlocks.GLASS_SLAB));
-        event.enqueueWork(() ->translucent(Unordinary_BasicsBlocks.ICE_STAIRS));
-        event.enqueueWork(() ->translucent(Unordinary_BasicsBlocks.ICE_SLAB));
+        //Glass Stairs
+        event.enqueueWork(() -> cutout(
+                Unordinary_BasicsBlocks.GLASS_STAIRS,
+                Unordinary_BasicsBlocks.WHITE_STAINED_GLASS_STAIRS,
+                Unordinary_BasicsBlocks.ORANGE_STAINED_GLASS_STAIRS,
+                Unordinary_BasicsBlocks.MAGENTA_STAINED_GLASS_STAIRS,
+                Unordinary_BasicsBlocks.LIGHT_BLUE_STAINED_GLASS_STAIRS,
+                Unordinary_BasicsBlocks.YELLOW_STAINED_GLASS_STAIRS,
+                Unordinary_BasicsBlocks.LIME_STAINED_GLASS_STAIRS,
+                Unordinary_BasicsBlocks.PINK_STAINED_GLASS_STAIRS,
+                Unordinary_BasicsBlocks.GRAY_STAINED_GLASS_STAIRS,
+                Unordinary_BasicsBlocks.LIGHT_GRAY_STAINED_GLASS_STAIRS,
+                Unordinary_BasicsBlocks.CYAN_STAINED_GLASS_STAIRS,
+                Unordinary_BasicsBlocks.PURPLE_STAINED_GLASS_STAIRS,
+                Unordinary_BasicsBlocks.BLUE_STAINED_GLASS_STAIRS,
+                Unordinary_BasicsBlocks.BROWN_STAINED_GLASS_STAIRS,
+                Unordinary_BasicsBlocks.GREEN_STAINED_GLASS_STAIRS,
+                Unordinary_BasicsBlocks.RED_STAINED_GLASS_STAIRS,
+                Unordinary_BasicsBlocks.BLACK_STAINED_GLASS_STAIRS,
+                Unordinary_BasicsBlocks.TINTED_GLASS_STAIRS
+        ));
+        //Glass Slabs
+        event.enqueueWork(() -> cutout(
+                Unordinary_BasicsBlocks.GLASS_SLAB,
+                Unordinary_BasicsBlocks.WHITE_STAINED_GLASS_SLAB,
+                Unordinary_BasicsBlocks.ORANGE_STAINED_GLASS_SLAB,
+                Unordinary_BasicsBlocks.MAGENTA_STAINED_GLASS_SLAB,
+                Unordinary_BasicsBlocks.LIGHT_BLUE_STAINED_GLASS_SLAB,
+                Unordinary_BasicsBlocks.YELLOW_STAINED_GLASS_SLAB,
+                Unordinary_BasicsBlocks.LIME_STAINED_GLASS_SLAB,
+                Unordinary_BasicsBlocks.PINK_STAINED_GLASS_SLAB,
+                Unordinary_BasicsBlocks.GRAY_STAINED_GLASS_SLAB,
+                Unordinary_BasicsBlocks.LIGHT_GRAY_STAINED_GLASS_SLAB,
+                Unordinary_BasicsBlocks.CYAN_STAINED_GLASS_SLAB,
+                Unordinary_BasicsBlocks.PURPLE_STAINED_GLASS_SLAB,
+                Unordinary_BasicsBlocks.BLUE_STAINED_GLASS_SLAB,
+                Unordinary_BasicsBlocks.BROWN_STAINED_GLASS_SLAB,
+                Unordinary_BasicsBlocks.GREEN_STAINED_GLASS_SLAB,
+                Unordinary_BasicsBlocks.RED_STAINED_GLASS_SLAB,
+                Unordinary_BasicsBlocks.BLACK_STAINED_GLASS_SLAB,
+                Unordinary_BasicsBlocks.TINTED_GLASS_SLAB
+        ));
+        event.enqueueWork(() -> translucent(Unordinary_BasicsBlocks.ICE_STAIRS));
+        event.enqueueWork(() -> translucent(Unordinary_BasicsBlocks.ICE_SLAB));
 
-        event.enqueueWork(() ->MenuScreens.register(Vanilla_AdditionsMenuTypes.JUKE_BOX_MENU, JukeBoxScreen::new));
-        event.enqueueWork(() ->MenuScreens.register(Vanilla_AdditionsMenuTypes.FLETCHING_TABLE_MENU, FletchingTableScreen::new));
+        event.enqueueWork(() -> MenuScreens.register(Vanilla_AdditionsMenuTypes.JUKE_BOX_MENU, JukeBoxScreen::new));
+        event.enqueueWork(() -> MenuScreens.register(Vanilla_AdditionsMenuTypes.FLETCHING_TABLE_MENU, FletchingTableScreen::new));
     }
 
     @Override
@@ -45,6 +85,12 @@ public class Unordinary_BasicsClient extends Unordinary_BasicsCommon {
 
     private void cutout(Block block) {
         ItemBlockRenderTypes.setRenderLayer(block, RenderType.cutout());
+    }
+
+    private void cutout(Block... blocks) {
+        for (Block block : blocks) {
+            cutout(block);
+        }
     }
 
     private void translucent(Block block) {
