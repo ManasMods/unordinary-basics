@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/slab",
+  "parent": "manascore:block/grass_like_slab",
   "textures": {
     "side": "minecraft:block/mycelium_side",
     "bottom": "minecraft:block/dirt",

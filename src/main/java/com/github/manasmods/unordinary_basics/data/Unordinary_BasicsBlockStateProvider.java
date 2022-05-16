@@ -24,10 +24,10 @@ public class Unordinary_BasicsBlockStateProvider extends BlockStateProvider {
             stairs(Unordinary_BasicsBlocks.GRASS_BLOCK_STAIRS, mcLoc("block/grass_block_top"), mcLoc("block/dirt"), mcLoc("block/grass_block_side"), mcLoc("block/grass_block_side_overlay"));
             stairs(Unordinary_BasicsBlocks.DIRT_STAIRS, Blocks.DIRT);
             stairs(Unordinary_BasicsBlocks.COARSE_DIRT_STAIRS, Blocks.COARSE_DIRT);
-            stairs(Unordinary_BasicsBlocks.PODZOL_STAIRS, mcLoc("block/podzol_side"), mcLoc("block/dirt"), mcLoc("block/podzol_top"));
+            sidedStairs(Unordinary_BasicsBlocks.PODZOL_STAIRS, mcLoc("block/podzol_top"), mcLoc("block/dirt"), mcLoc("block/podzol_side"));
             stairs(Unordinary_BasicsBlocks.ROOTED_DIRT_STAIRS, Blocks.ROOTED_DIRT);
-            stairs(Unordinary_BasicsBlocks.CRIMSON_NYLIUM_STAIRS, mcLoc("block/crimson_nylium_side"), mcLoc("block/crimson_nylium"));
-            stairs(Unordinary_BasicsBlocks.WARPED_NYLIUM_STAIRS, mcLoc("block/warped_nylium_side"), mcLoc("block/warped_nylium"));
+            sidedStairs(Unordinary_BasicsBlocks.CRIMSON_NYLIUM_STAIRS, mcLoc("block/crimson_nylium"), mcLoc("block/netherrack"), mcLoc("block/crimson_nylium_side"));
+            sidedStairs(Unordinary_BasicsBlocks.WARPED_NYLIUM_STAIRS, mcLoc("block/warped_nylium"), mcLoc("block/netherrack"), mcLoc("block/warped_nylium_side"));
             stairs(Unordinary_BasicsBlocks.SAND_STAIRS, Blocks.SAND);
             stairs(Unordinary_BasicsBlocks.RED_SAND_STAIRS, Blocks.RED_SAND);
             stairs(Unordinary_BasicsBlocks.GRAVEL_STAIRS, Blocks.GRAVEL);
@@ -72,7 +72,7 @@ public class Unordinary_BasicsBlockStateProvider extends BlockStateProvider {
             stairs(Unordinary_BasicsBlocks.CRACKED_DEEPSLATE_TILE_STAIRS, Blocks.CRACKED_DEEPSLATE_TILES);
             stairs(Unordinary_BasicsBlocks.CHISELED_DEEPSLATE_STAIRS, Blocks.CHISELED_DEEPSLATE);
             stairs(Unordinary_BasicsBlocks.MELON_STAIRS, mcLoc("block/melon_side"), mcLoc("block/melon_top"));
-            stairs(Unordinary_BasicsBlocks.MYCELIUM_STAIRS, mcLoc("block/mycelium_side"), mcLoc("block/mycelium_top"));
+            sidedStairs(Unordinary_BasicsBlocks.MYCELIUM_STAIRS, mcLoc("block/mycelium_top"), mcLoc("block/dirt"), mcLoc("block/mycelium_side"));
             stairs(Unordinary_BasicsBlocks.CRACKED_NETHER_BRICK_STAIRS, Blocks.CRACKED_NETHER_BRICKS);
             stairs(Unordinary_BasicsBlocks.CHISELED_NETHER_BRICK_STAIRS, Blocks.CHISELED_NETHER_BRICKS);
             stairs(Unordinary_BasicsBlocks.END_STONE_STAIRS, Blocks.END_STONE);
@@ -181,13 +181,13 @@ public class Unordinary_BasicsBlockStateProvider extends BlockStateProvider {
             slab(Unordinary_BasicsBlocks.TUFF_SLAB, Blocks.TUFF);
             slab(Unordinary_BasicsBlocks.DRIPSTONE_SLAB, Blocks.DRIPSTONE_BLOCK);
             slab(Unordinary_BasicsBlocks.GRASS_BLOCK_SLAB, Blocks.GRASS_BLOCK, mcLoc("block/grass_block_top"), mcLoc("block/dirt"), mcLoc("block/grass_block_side"),
-                mcLoc("block/grass_block_side_overlay"));
+                    mcLoc("block/grass_block_side_overlay"));
             slab(Unordinary_BasicsBlocks.DIRT_SLAB, Blocks.DIRT);
             slab(Unordinary_BasicsBlocks.COARSE_DIRT_SLAB, Blocks.COARSE_DIRT);
-            slab(Unordinary_BasicsBlocks.PODZOL_SLAB, Blocks.PODZOL, mcLoc("block/podzol_side"), mcLoc("block/dirt"), mcLoc("block/podzol_top"));
+            sidedSlab(Unordinary_BasicsBlocks.PODZOL_SLAB, Blocks.PODZOL, mcLoc("block/podzol_top"), mcLoc("block/dirt"), mcLoc("block/podzol_side"));
             slab(Unordinary_BasicsBlocks.ROOTED_DIRT_SLAB, Blocks.ROOTED_DIRT);
-            slab(Unordinary_BasicsBlocks.CRIMSON_NYLIUM_SLAB, Blocks.CRIMSON_NYLIUM, mcLoc("block/crimson_nylium_side"), mcLoc("block/crimson_nylium"));
-            slab(Unordinary_BasicsBlocks.WARPED_NYLIUM_SLAB, Blocks.WARPED_NYLIUM, mcLoc("block/warped_nylium_side"), mcLoc("block/warped_nylium"));
+            sidedSlab(Unordinary_BasicsBlocks.CRIMSON_NYLIUM_SLAB, Blocks.CRIMSON_NYLIUM, mcLoc("block/crimson_nylium"), mcLoc("block/netherrack"), mcLoc("block/crimson_nylium_side"));
+            sidedSlab(Unordinary_BasicsBlocks.WARPED_NYLIUM_SLAB, Blocks.WARPED_NYLIUM, mcLoc("block/warped_nylium"), mcLoc("block/netherrack"), mcLoc("block/warped_nylium_side"));
             slab(Unordinary_BasicsBlocks.SAND_SLAB, Blocks.SAND);
             slab(Unordinary_BasicsBlocks.RED_SAND_SLAB, Blocks.RED_SAND);
             slab(Unordinary_BasicsBlocks.GRAVEL_SLAB, Blocks.GRAVEL);
@@ -231,7 +231,7 @@ public class Unordinary_BasicsBlockStateProvider extends BlockStateProvider {
             slab(Unordinary_BasicsBlocks.CRACKED_DEEPSLATE_TILE_SLAB, Blocks.CRACKED_DEEPSLATE_TILES);
             slab(Unordinary_BasicsBlocks.CHISELED_DEEPSLATE_SLAB, Blocks.CHISELED_DEEPSLATE);
             slab(Unordinary_BasicsBlocks.MELON_SLAB, Blocks.MELON, mcLoc("block/melon_side"), mcLoc("block/melon_top"));
-            slab(Unordinary_BasicsBlocks.MYCELIUM_SLAB, Blocks.MYCELIUM, mcLoc("block/mycelium_side"), mcLoc("block/dirt"), mcLoc("block/mycelium_top"));
+            sidedSlab(Unordinary_BasicsBlocks.MYCELIUM_SLAB, Blocks.MYCELIUM, mcLoc("block/mycelium_top"), mcLoc("block/dirt"), mcLoc("block/mycelium_side"));
             slab(Unordinary_BasicsBlocks.CRACKED_NETHER_BRICK_SLAB, Blocks.CRACKED_NETHER_BRICKS);
             slab(Unordinary_BasicsBlocks.CHISELED_NETHER_BRICK_SLAB, Blocks.CHISELED_NETHER_BRICKS);
             slab(Unordinary_BasicsBlocks.END_STONE_SLAB, Blocks.END_STONE);
