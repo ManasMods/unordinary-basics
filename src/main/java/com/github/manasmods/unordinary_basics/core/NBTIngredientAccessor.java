@@ -7,6 +7,6 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 
 @Mixin(NBTIngredient.class)
 public interface NBTIngredientAccessor {
-    @Accessor
+    @Accessor(remap = false)
     ItemStack getStack();
 }
