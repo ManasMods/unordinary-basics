@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:block/outer_stairs",
+  "parent": "manascore:block/grass_like_outer_stairs",
   "textures": {
     "side": "minecraft:block/podzol_side",
     "bottom": "minecraft:block/dirt",
