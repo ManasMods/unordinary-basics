@@ -27,3 +27,9 @@ This mod is designed to enchance the vanilla experience. First adding slabs and 
     versionRange="${minecraftVersionCheck}"
     ordering="NONE"
     side="BOTH"
+[[dependencies.unordinary_basics]]
+    modId="manascore"
+    mandatory=true
+    versionRange="${manasVersionCheck}"
+    ordering="NONE"
+    side="BOTH"
