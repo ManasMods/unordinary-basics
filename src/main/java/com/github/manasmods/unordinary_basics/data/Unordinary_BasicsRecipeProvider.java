@@ -129,7 +129,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
         stairs(consumer, Blocks.DEEPSLATE_TILE_STAIRS, Blocks.DEEPSLATE_TILES);
         slab(consumer, Blocks.DEEPSLATE_TILE_SLAB, Blocks.DEEPSLATE_TILES);
 
-        //VANILLA PLUS RECIPES
+        //UNORDINARY BASICS RECIPES
 
         stairs(consumer, Unordinary_BasicsBlocks.CALCITE_STAIRS, Blocks.CALCITE);
         slab(consumer, Unordinary_BasicsBlocks.CALCITE_SLAB, Blocks.CALCITE);

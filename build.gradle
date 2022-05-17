@@ -19,7 +19,7 @@ apply plugin: 'maven-publish'
 apply plugin: 'org.spongepowered.mixin'
 //As described in https://mcforge.readthedocs.io/en/1.18.x/gettingstarted/versioning/#examples
 version = "${minecraftVersion}-${modVersion}"
-group = 'com.manasmods.unordinary_basics' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group = 'com.github.manasmods' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "${modId}"
 
 
@@ -144,9 +144,9 @@ dependencies {
     //implementation fg.deobf("com.github.manasmods:manascore:1.18.2-0.0.0.13")
 
     // compile against the JEI API but do not include it at runtime
-    compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api")
+    compileOnly fg.deobf("mezz.jei:jei-${minecraftVersion}:${jei_version}:api")
     // at runtime, use the full JEI jar
-    runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
+    runtimeOnly fg.deobf("mezz.jei:jei-${minecraftVersion}:${jei_version}")
     //Mixin Anntoation Processor
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
