@@ -66,7 +66,6 @@ public abstract class MixinJukeBoxBlock extends BaseEntityBlock {
         }
 
         cir.setReturnValue(InteractionResult.SUCCESS);
-        cir.cancel();
     }
 
     @Inject(method = "setRecord(Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/item/ItemStack;)V", at =
@@ -78,8 +77,8 @@ public abstract class MixinJukeBoxBlock extends BaseEntityBlock {
     @Inject(method = "onRemove", at = @At("HEAD"), cancellable = true)
     public void onRemove(BlockState pState, Level pLevel, BlockPos pPos, BlockState pNewState, boolean pIsMoving, CallbackInfo ci) {
         if (!pState.is(pNewState.getBlock())) {
-            super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
             pLevel.levelEvent(JukeboxBlockEntity.PLAY_RECORD_EVENT, pPos, 0);
+            super.onRemove(pState, pLevel, pPos, pNewState, pIsMoving);
         }
         ci.cancel();
     }
