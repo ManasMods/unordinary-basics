@@ -20,7 +20,7 @@ apply plugin: 'org.spongepowered.mixin'
 //As described in https://mcforge.readthedocs.io/en/1.18.x/gettingstarted/versioning/#examples
 version = "${minecraftVersion}-${modVersion}"
 group = 'com.manasmods.unordinary_basics' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'unordinary_basics'
+archivesBaseName = "${modId}"
 
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
@@ -105,9 +105,11 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
     maven {
-        url "https://cursemaven.com"
-        content {
-            includeGroup "curse.maven"
+        url = "https://manasmods.bytesafe.dev/maven/manasmods"
+        name = "manasmods"
+        credentials {
+            username System.getenv().getOrDefault("MANAS_REPO_USER", manasmodsUsername)
+            password System.getenv().getOrDefault("MANAS_REPO_USER_PASSWORD", manasmodsPassword)
         }
     }
     maven {
@@ -138,7 +140,7 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.22'
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
 
-    implementation fg.deobf("curse.maven:manascore-619025:3793894")
+    implementation fg.deobf("com.github.manasmods:ManasCore:${minecraftVersion}-${manasCoreVersion}")
     //implementation fg.deobf("com.github.manasmods:manascore:1.18.2-0.0.0.13")
 
     // compile against the JEI API but do not include it at runtime
@@ -178,7 +180,12 @@ publishing {
     }
     repositories {
         maven {
-            url "file://${project.projectDir}/mcmodsrepo"
+            name = "manasmods"
+            credentials {
+                username System.getenv().getOrDefault("MANAS_REPO_USER", manasmodsUsername)
+                password System.getenv().getOrDefault("MANAS_REPO_USER_PASSWORD", manasmodsPassword)
+            }
+            url "https://manasmods.bytesafe.dev/maven/manasmods"
         }
     }
 }
@@ -188,6 +195,7 @@ def replaceResources = tasks.register("replaceResources", Copy) {
     //Copy it into the build dir
     it.from(sourceSets.main.resources) {
         def forgeLoaderVersion = forgeVersion.substring(0, forgeVersion.indexOf('.'))
+        def manasVersionCheck= "[${manasCoreVersion},)"
 
         include "META-INF/mods.toml"
         expand 'modVersion': "${modVersion}", 'forgeLoaderVersion': "[${forgeLoaderVersion},)", 'minecraftVersionCheck': "${minecraftVersionCheck}", 'manasVersionCheck': "${manasVersionCheck}"
