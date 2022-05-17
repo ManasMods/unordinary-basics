@@ -25,6 +25,17 @@ archivesBaseName = "${modId}"
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
+if (!project.hasProperty('manasmodsUsername')) {
+    System.out.println("No ManasMods Repo User found.")
+    //DO NOT WRITE ANYTHING INTO THIS FIELD! ANYONE CEN SEE THIS FIELD!!
+    def manasmodsUsername = ""
+}
+if (!project.hasProperty('manasmodsPassword')) {
+    System.out.println("No ManasMods Repo User password found.")
+    //DO NOT WRITE ANYTHING INTO THIS FIELD! ANYONE CEN SEE THIS FIELD!!
+    def manasmodsPassword = ""
+}
+
 minecraft {
     mappings channel: 'parchment', version: "${parchmentVersion}-${minecraftVersion}"
 
@@ -195,7 +206,7 @@ def replaceResources = tasks.register("replaceResources", Copy) {
     //Copy it into the build dir
     it.from(sourceSets.main.resources) {
         def forgeLoaderVersion = forgeVersion.substring(0, forgeVersion.indexOf('.'))
-        def manasVersionCheck= "[${manasCoreVersion},)"
+        def manasVersionCheck = "[${manasCoreVersion},)"
 
         include "META-INF/mods.toml"
         expand 'modVersion': "${modVersion}", 'forgeLoaderVersion': "[${forgeLoaderVersion},)", 'minecraftVersionCheck': "${minecraftVersionCheck}", 'manasVersionCheck': "${manasVersionCheck}"
