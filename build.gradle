@@ -25,15 +25,18 @@ archivesBaseName = "${modId}"
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
-if (!project.hasProperty('manasmodsUsername')) {
-    System.out.println("No ManasMods Repo User found.")
-    //DO NOT WRITE ANYTHING INTO THIS FIELD! ANYONE CEN SEE THIS FIELD!!
-    def manasmodsUsername = ""
-}
-if (!project.hasProperty('manasmodsPassword')) {
-    System.out.println("No ManasMods Repo User password found.")
-    //DO NOT WRITE ANYTHING INTO THIS FIELD! ANYONE CEN SEE THIS FIELD!!
-    def manasmodsPassword = ""
+ext {
+    if (!project.hasProperty('manasmodsUsername')) {
+        System.out.println("No ManasMods Repo User found.")
+        //DO NOT WRITE ANYTHING INTO THIS FIELD! ANYONE CEN SEE THIS FIELD!!
+        manasmodsUsername = ""
+    }
+
+    if (!project.hasProperty('manasmodsPassword')) {
+        System.out.println("No ManasMods Repo User password found.")
+        //DO NOT WRITE ANYTHING INTO THIS FIELD! ANYONE CEN SEE THIS FIELD!!
+        manasmodsPassword = ""
+    }
 }
 
 minecraft {
