@@ -9,9 +9,9 @@ name: CI
 
 on:
   push:
-    branches: [master]
+    branches: [ master ]
   pull_request:
-    branches: [master]
+    branches: [ master ]
 
 permissions:
   contents: read
@@ -20,6 +20,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    env:
+      MANAS_REPO_USER: ${{ secrets.MANAS_REPO_USER }}
+      MANAS_REPO_USER_PASSWORD: ${{ secrets.MANAS_REPO_USER_PASSWORD }}
 
     steps:
       - uses: actions/checkout@v3
@@ -37,11 +40,11 @@ jobs:
           arguments: build
 
   gameTest:
-    needs: [build]
+    needs: [ build ]
     runs-on: ${{ matrix.os}}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
     steps:
       - uses: actions/checkout@v3
       - name: Set up JDK 17
