@@ -5,6 +5,8 @@ import com.github.manasmods.unordinary_basics.menu.slot.FilteredSlot;
 import com.github.manasmods.unordinary_basics.menu.slot.FletchingResultSlot;
 import com.github.manasmods.unordinary_basics.recipe.FletchingRecipe;
 import com.github.manasmods.unordinary_basics.registry.Unordinary_BasicsRecipeTypeRegistry;
+import lombok.Getter;
+import net.minecraft.core.BlockPos;
 import net.minecraft.network.protocol.game.ClientboundContainerSetSlotPacket;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.Container;
@@ -30,13 +32,16 @@ public class FletchingTableMenu extends AbstractContainerMenu {
     private final ResultContainer resultContainer = new ResultContainer();
     private int lastHotBarIndex, lastInventoryIndex, lastCraftingIndex, resultIndex;
     private final Player player;
+    @Getter
+    private final BlockPos pos;
 
 
-    public FletchingTableMenu(int pContainerId, ContainerLevelAccess levelAccess, Inventory inventory) {
+    public FletchingTableMenu(int pContainerId, ContainerLevelAccess levelAccess, Inventory inventory, BlockPos pos) {
         super(Vanilla_AdditionsMenuTypes.FLETCHING_TABLE_MENU, pContainerId);
         this.levelAccess = levelAccess;
         this.playerInvWrapper = new InvWrapper(inventory);
         this.player = inventory.player;
+        this.pos = pos;
 
         setupFletchingTableSlots();
         setupPlayerSlots();

@@ -6,8 +6,11 @@ import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsFletchingRec
 import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsItemModelProvider;
 import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsLootTableProvider;
 import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsRecipeProvider;
+import com.github.manasmods.unordinary_basics.integration.ApotheosisIntegration;
+import lombok.Getter;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -16,12 +19,17 @@ import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.Optional;
+
 @Mod(Unordinary_Basics.MOD_ID)
 public class Unordinary_Basics {
     public static final String MOD_ID = "unordinary_basics";
     private static final Logger LOGGER = LogManager.getLogger();
-    public static Unordinary_Basics instance;
+    @Getter
+    private static Unordinary_Basics instance;
     private final Unordinary_BasicsCommon proxy;
+    @Getter
+    private Optional<ApotheosisIntegration> apotheosisIntegration = Optional.empty();
 
     public Unordinary_Basics() {
         instance = this;
@@ -34,6 +42,9 @@ public class Unordinary_Basics {
     }
 
     private void setup(final FMLCommonSetupEvent event) {
+        if (ModList.get().isLoaded("apotheosis")) {
+            this.apotheosisIntegration = Optional.of(new ApotheosisIntegration());
+        }
         proxy.init(event);
     }
 

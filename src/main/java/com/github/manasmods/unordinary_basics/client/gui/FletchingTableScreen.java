@@ -1,21 +1,32 @@
 package com.github.manasmods.unordinary_basics.client.gui;
 
+import com.github.manasmods.manascore.client.gui.widget.ImagePredicateButton;
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.integration.ApotheosisIntegration;
 import com.github.manasmods.unordinary_basics.menu.FletchingTableMenu;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
 public class FletchingTableScreen extends AbstractContainerScreen<FletchingTableMenu> {
     private static final ResourceLocation BACKGROUND = new ResourceLocation(Unordinary_Basics.MOD_ID, "textures/gui/fletching_table.png");
+    private static final ResourceLocation APOTHEOSIS_LOGO = new ResourceLocation(Unordinary_Basics.MOD_ID, "textures/gui/apotheosis_logo.png");
+    private final ImagePredicateButton openApotheosisMenuButton;
 
     public FletchingTableScreen(FletchingTableMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);
         imageHeight = 178;
+        this.openApotheosisMenuButton = new ImagePredicateButton(0, 0, 24, 24, APOTHEOSIS_LOGO, pButton -> {
+            Unordinary_Basics.getInstance().getApotheosisIntegration().ifPresent(ApotheosisIntegration::requestApotheosisFletchingMenu);
+        }, (pButton, pPoseStack, pMouseX, pMouseY) -> {
+            renderTooltip(pPoseStack, new TranslatableComponent(Unordinary_Basics.MOD_ID + ".menu.fletching_table.switch.apotheosis"), pMouseX, pMouseY);
+        }, () -> Unordinary_Basics.getInstance().getApotheosisIntegration().isPresent());
+
     }
 
     @Override
@@ -43,5 +54,12 @@ public class FletchingTableScreen extends AbstractContainerScreen<FletchingTable
         titleLabelY = 6;
         inventoryLabelX = 8;
         inventoryLabelY = imageHeight / 2 - 3;
+
+        removeWidget(openApotheosisMenuButton);
+        openApotheosisMenuButton.x = getGuiLeft() + imageWidth - openApotheosisMenuButton.getWidth() - 4;
+        openApotheosisMenuButton.y = getGuiTop() + 6;
+        if (Unordinary_Basics.getInstance().getApotheosisIntegration().isPresent()) {
+            addRenderableWidget(openApotheosisMenuButton);
+        }
     }
 }

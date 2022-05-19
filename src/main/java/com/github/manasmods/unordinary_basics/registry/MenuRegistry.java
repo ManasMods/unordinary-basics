@@ -30,8 +30,7 @@ class MenuRegistry {
         registry.register("fletching_table_menu", () -> IForgeMenuType.create((windowId, inv, data) -> {
             BlockPos pos = data.readBlockPos();
             Level level = ServerLifecycleHooks.getCurrentServer().getLevel(ResourceKey.create(Registry.DIMENSION_REGISTRY, data.readResourceLocation()));
-                return new FletchingTableMenu(windowId, ContainerLevelAccess.create(level, pos),inv);
-
+            return new FletchingTableMenu(windowId, ContainerLevelAccess.create(level, pos), inv, pos);
         }));
     }
 }

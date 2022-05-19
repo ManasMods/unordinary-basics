@@ -11,14 +11,24 @@ import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
 public class Unordinary_BasicsClient extends Unordinary_BasicsCommon {
     @Override
     public void preInit(IEventBus modEventBus) {
         super.preInit(modEventBus);
         Unordinary_BasicsColorHandler.register(modEventBus);
+    }
+
+    @Override
+    public void init(FMLCommonSetupEvent event) {
+        super.init(event);
+        Unordinary_Basics.getInstance().getApotheosisIntegration().ifPresent(apotheosisIntegration -> {
+            event.enqueueWork(() -> MinecraftForge.EVENT_BUS.addListener(apotheosisIntegration::onOpenApotheosisMenu));
+        });
     }
 
     @Override

@@ -315,6 +315,8 @@
   "unordinary_basics.jukebox.button.play": "Start Playing",
   "unordinary_basics.jukebox.button.stop": "Stop Playing",
   "unordinary_basics.menu.fletching_table.title": "Fletching Table",
+  "unordinary_basics.menu.fletching_table.switch.apotheosis": "Open Apotheosis Menu",
+  "unordinary_basics.menu.fletching_table.switch.ub": "Open Unordinary Basics Menu",
 
   "itemGroup.unordinary_basics.tab": "UB Blocks"
 }
