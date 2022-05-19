@@ -136,6 +136,12 @@ repositories {
         name = "ModMaven"
         url = "https://modmaven.dev"
     }
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
 
     /*
     flatDir {
@@ -146,23 +152,37 @@ repositories {
 
 
 dependencies {
-    // Specify the version of Minecraft to use. If this is any group other than 'net.minecraft', it is assumed
-    // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
-    // The userdev artifact is a special name and will get all sorts of transformations applied to it.
+    //Forge
     minecraft "net.minecraftforge:forge:${minecraftVersion}-${forgeVersion}"
 
+    //Lombok
     compileOnly 'org.projectlombok:lombok:1.18.22'
     annotationProcessor 'org.projectlombok:lombok:1.18.22'
 
+    //ManasCore
     implementation fg.deobf("com.github.manasmods:ManasCore:${minecraftVersion}-${manasCoreVersion}")
     //implementation fg.deobf("com.github.manasmods:manascore:1.18.2-0.0.0.13")
 
-    // compile against the JEI API but do not include it at runtime
-    compileOnly fg.deobf("mezz.jei:jei-${minecraftVersion}:${jei_version}:api")
-    // at runtime, use the full JEI jar
-    runtimeOnly fg.deobf("mezz.jei:jei-${minecraftVersion}:${jei_version}")
     //Mixin Anntoation Processor
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+
+    // compile against the JEI API but do not include it at runtime
+    compileOnly fg.deobf("mezz.jei:jei-${minecraftVersion}:${jei_version}:api")
+
+    // at runtime, use the full JEI jar
+    runtimeOnly fg.deobf("mezz.jei:jei-${minecraftVersion}:${jei_version}")
+
+    // Apotheosis + dependencies
+    compileOnly fg.deobf("curse.maven:apotheosis-313970:${apotheosisVersion}")
+    compileOnly fg.deobf("curse.maven:placebo-283644:${placeboVersion}")
+    compileOnly fg.deobf("curse.maven:patchouli-306770:${patchouliVersion}")
+    compileOnly fg.deobf("curse.maven:enchantment-descriptions-250419:${enchantmentDescriptionsVersion}")
+    compileOnly fg.deobf("curse.maven:bookshelf-228525:${bookshelfVersion}")
+    runtimeOnly fg.deobf("curse.maven:apotheosis-313970:${apotheosisVersion}")
+    runtimeOnly fg.deobf("curse.maven:placebo-283644:${placeboVersion}")
+    runtimeOnly fg.deobf("curse.maven:patchouli-306770:${patchouliVersion}")
+    runtimeOnly fg.deobf("curse.maven:enchantment-descriptions-250419:${enchantmentDescriptionsVersion}")
+    runtimeOnly fg.deobf("curse.maven:bookshelf-228525:${bookshelfVersion}")
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
