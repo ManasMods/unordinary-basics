@@ -4,12 +4,12 @@ license="All rights reserved"
 [[mods]]
 modId="unordinary_basics"
 version="${modVersion}"
-displayName="Vanilla Plus"
+displayName="Unordinary Basics"
 logoFile="logo.png"
 
-credits="Something here" #optional
+#credits="Something here" #optional
 
-authors="Borniuus, MrProfessor, Nieadni"
+authors="ManasMods"
 
 description='''
 This mod is designed to enchance the vanilla experience. First adding slabs and stairs of most blocks then QoL changes such as changes to crafting recipes.
