@@ -32,9 +32,7 @@ public abstract class MixinFletchingTableBlock extends CraftingTableBlock {
         if (pLevel.isClientSide) {
             cir.setReturnValue(InteractionResult.SUCCESS);
         } else {
-            NetworkHooks.openGui((ServerPlayer) pPlayer, new SimpleMenuProvider((pContainerId, pInventory, pPlayer1) -> {
-                return new FletchingTableMenu(pContainerId, ContainerLevelAccess.create(pLevel, pPos), pPlayer1.getInventory());
-            }, new TranslatableComponent(Unordinary_Basics.MOD_ID + ".menu.fletching_table.title")), buffer -> {
+            NetworkHooks.openGui((ServerPlayer) pPlayer, new SimpleMenuProvider((pContainerId, pInventory, pPlayer1) -> new FletchingTableMenu(pContainerId, ContainerLevelAccess.create(pLevel, pPos), pPlayer1.getInventory()), new TranslatableComponent(Unordinary_Basics.MOD_ID + ".menu.fletching_table.title")), buffer -> {
                 buffer.writeBlockPos(pPos);
                 buffer.writeResourceLocation(pLevel.dimension().location());});
             cir.setReturnValue(InteractionResult.CONSUME);
