@@ -21,7 +21,7 @@ import shadows.apotheosis.village.fletching.FletchingContainer;
 import shadows.apotheosis.village.fletching.FletchingScreen;
 
 public class ApotheosisIntegration {
-    private static final ResourceLocation UNORDINARY_BASICS_LOGO = new ResourceLocation(Unordinary_Basics.MOD_ID, "textures/gui/apotheosis_logo.png");
+    private static final ResourceLocation UNORDINARY_BASICS_LOGO = new ResourceLocation(Unordinary_Basics.MOD_ID, "textures/gui/ub_logo.png");
 
     public ApotheosisIntegration() {
         Unordinary_Basics.getLogger().info("Apotheosis integration automatically enabled!");
