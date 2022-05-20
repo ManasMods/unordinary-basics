@@ -2,6 +2,7 @@ package com.github.manasmods.unordinary_basics.data;
 
 import com.github.manasmods.manascore.data.gen.RecipeProvider;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
+import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
@@ -20,7 +21,6 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
     public Unordinary_BasicsRecipeProvider(GatherDataEvent gatherDataEvent) {
         super(gatherDataEvent);
     }
-
     protected void generate(Consumer<FinishedRecipe> consumer) {
 
         //MISC
@@ -608,6 +608,23 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .pattern("BAB")
                 .unlockedBy("has_golden_apple", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.GOLDEN_APPLE).build()))
+                .save(consumer);
+
+
+
+        ShapedRecipeBuilder.shaped(Unordinary_BasicsItems.ANIMAL_BAIT)
+                .define('C', Items.CARROT)
+                .define('G', Items.GOLDEN_CARROT)
+                .define('P', Items.POTATO)
+                .define('W', Items.WHEAT)
+                .define('S', Items.WHEAT_SEEDS)
+                .define('#', Items.STRING)
+                .define('L', Items.LEATHER)
+                .pattern("#CL")
+                .pattern("PGW")
+                .pattern("LSL")
+                .unlockedBy("has_leather", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.LEATHER).build()))
                 .save(consumer);
     }
 }
