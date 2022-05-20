@@ -13,5 +13,10 @@ public class Unordinary_BasicsCreativeTab {
             return new ItemStack(Items.BRICKS);
         }
     };
-
+    public static final CreativeModeTab ITEMS = new CreativeModeTab(Unordinary_Basics.MOD_ID + ".tab2") {
+        @Override
+        public ItemStack makeIcon() {
+            return new ItemStack(Items.STICK);
+        }
+    };
 }

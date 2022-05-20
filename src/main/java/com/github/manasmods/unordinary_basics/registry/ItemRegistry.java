@@ -1,6 +1,7 @@
 package com.github.manasmods.unordinary_basics.registry;
 
 
+import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsCreativeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -11,12 +12,11 @@ public class ItemRegistry {
      * It is called though the {@link Unordinary_BasicsRegistry#register(IEventBus)} Method.
      */
     static void register(DeferredRegister<Item> registry) {
-        registerItems(registry);
+        registerMisc(registry);
+    }
+        private static void registerMisc(DeferredRegister<Item> registry) {
+            registry.register("animal_bait", () -> new Item(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS)));
+
     }
 
-    /**
-     * Method to register tool {@link Item} objects
-     */
-    private static void registerItems(DeferredRegister<Item> registry) {
-    }
 }

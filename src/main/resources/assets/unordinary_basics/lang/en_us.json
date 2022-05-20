@@ -318,5 +318,8 @@
   "unordinary_basics.menu.fletching_table.switch.apotheosis": "Open Apotheosis Menu",
   "unordinary_basics.menu.fletching_table.switch.ub": "Open Unordinary Basics Menu",
 
-  "itemGroup.unordinary_basics.tab": "UB Blocks"
+  "itemGroup.unordinary_basics.tab": "UB Blocks",
+  "itemGroup.unordinary_basics.tab2": "UB Items",
+
+  "item.unordinary_basics.animal_bait": "Animal Bait"
 }

@@ -3,6 +3,7 @@ package com.github.manasmods.unordinary_basics.data;
 import com.github.manasmods.manascore.data.gen.RecipeProvider;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
+import com.google.common.collect.ImmutableList;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
@@ -11,6 +12,7 @@ import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
@@ -21,12 +23,21 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
     public Unordinary_BasicsRecipeProvider(GatherDataEvent gatherDataEvent) {
         super(gatherDataEvent);
     }
+    protected static final ImmutableList<ItemLike> COPPER_BLOCK_SMELTABLES = ImmutableList.of(Items.RAW_COPPER_BLOCK);
+    protected static final ImmutableList<ItemLike> GOLD_BLOCK_SMELTABLES = ImmutableList.of(Items.RAW_GOLD_BLOCK);
+    protected static final ImmutableList<ItemLike> IRON_BLOCK_SMELTABLES = ImmutableList.of(Items.RAW_IRON_BLOCK);
     protected void generate(Consumer<FinishedRecipe> consumer) {
 
         //MISC
 
         smeltingRecipe(consumer, Ingredient.of(Items.LEATHER), Items.ROTTEN_FLESH, 0.35F, 200);
         campfireRecipe(consumer, Ingredient.of(Items.LEATHER), Items.ROTTEN_FLESH, 0.35F, 600);
+        smeltingRecipe(consumer, Ingredient.of(Items.RAW_COPPER_BLOCK), Items.COPPER_BLOCK, 0.35F, 500);
+        smeltingRecipe(consumer, Ingredient.of(Items.RAW_GOLD_BLOCK), Items.GOLD_BLOCK, 0.35F, 500);
+        smeltingRecipe(consumer, Ingredient.of(Items.RAW_IRON_BLOCK), Items.IRON_BLOCK, 0.35F, 500);
+        oreBlasting(consumer, COPPER_BLOCK_SMELTABLES, Items.COPPER_BLOCK, 0.35F, 250, "copper");
+        oreBlasting(consumer, GOLD_BLOCK_SMELTABLES, Items.GOLD_BLOCK, 0.35F, 250, "gold");
+        oreBlasting(consumer, IRON_BLOCK_SMELTABLES, Items.IRON_BLOCK, 0.35F, 250, "iron");
 
         //VANILLA CHANGES
 
@@ -500,15 +511,6 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_string", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.PAPER).build()))
                 .save(consumer);
-        ShapedRecipeBuilder.shaped(Items.LEAD)
-                .define('B', Items.SLIME_BALL)
-                .define('S', Items.STRING)
-                .pattern("SS ")
-                .pattern("SBS")
-                .pattern(" SS")
-                .unlockedBy("has_slime_ball", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.SLIME_BALL).build()))
-                .save(consumer);
         ShapedRecipeBuilder.shaped(Items.TRIDENT)
                 .define('I', Items.IRON_INGOT)
                 .define('D', Items.DIAMOND)
@@ -608,6 +610,15 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .pattern("BAB")
                 .unlockedBy("has_golden_apple", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.GOLDEN_APPLE).build()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(Items.GREEN_DYE)
+                .requires(Items.YELLOW_DYE)
+                .requires(Items.BLUE_DYE)
+                .unlockedBy("has_yellow_dye", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.YELLOW_DYE).build()))
+                .unlockedBy("has_blue_dye", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.BLUE_DYE).build()))
                 .save(consumer);
 
 
