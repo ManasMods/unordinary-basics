@@ -1,1 +1,0 @@
-# manas_vanilla_additions
