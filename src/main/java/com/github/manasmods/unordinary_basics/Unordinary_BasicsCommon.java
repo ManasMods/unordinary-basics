@@ -1,6 +1,7 @@
 package com.github.manasmods.unordinary_basics;
 
-import com.github.manasmods.unordinary_basics.handler.HoeHandler;
+import com.github.manasmods.unordinary_basics.handler.UBEntityHandler;
+import com.github.manasmods.unordinary_basics.handler.UBHoeHandler;
 import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
 import com.github.manasmods.unordinary_basics.registry.Unordinary_BasicsRegistry;
 import net.minecraft.world.level.Level;
@@ -12,7 +13,8 @@ public abstract class Unordinary_BasicsCommon {
 
     public void preInit(IEventBus modEventBus) {
         Unordinary_BasicsRegistry.register(modEventBus);
-        HoeHandler.register();
+        UBHoeHandler.register();
+        UBEntityHandler.register();
     }
 
     /**

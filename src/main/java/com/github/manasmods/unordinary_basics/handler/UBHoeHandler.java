@@ -17,12 +17,11 @@ import net.minecraftforge.eventbus.api.IEventBus;
 
 import java.util.List;
 
-public class HoeHandler {
+public class UBHoeHandler {
     public static void register() {
         IEventBus forgeBus = MinecraftForge.EVENT_BUS;
-        forgeBus.addListener(HoeHandler::onHarvest);
+        forgeBus.addListener(UBHoeHandler::onHarvest);
     }
-
 
     private static void onHarvest(final BlockEvent.BreakEvent e) {
         BlockState blockState = e.getState();
