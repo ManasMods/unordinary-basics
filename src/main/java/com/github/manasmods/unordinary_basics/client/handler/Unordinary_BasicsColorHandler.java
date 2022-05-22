@@ -25,4 +25,5 @@ public class Unordinary_BasicsColorHandler {
             return event.getBlockColors().getColor(blockstate, null, null, pTintIndex);
         }, Unordinary_BasicsBlocks.GRASS_BLOCK_SLAB, Unordinary_BasicsBlocks.GRASS_BLOCK_STAIRS);
     }
+
 }

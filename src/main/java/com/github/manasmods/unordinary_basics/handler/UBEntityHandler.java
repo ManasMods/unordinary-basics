@@ -33,7 +33,6 @@ public class UBEntityHandler {
         if (!(event.getEntity() instanceof Villager villager)) return;
         villager.goalSelector.addGoal(3, new TemptGoal(villager, 1.5D, Ingredient.of(Items.EMERALD), false));
         villager.goalSelector.addGoal(3, new TemptGoal(villager, 1.75D, Ingredient.of(Items.EMERALD_BLOCK), false));
-
     }
 
     public static void register() {
