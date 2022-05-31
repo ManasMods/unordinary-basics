@@ -140,7 +140,11 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
         stairs(consumer, Blocks.DEEPSLATE_TILE_STAIRS, Blocks.DEEPSLATE_TILES);
         slab(consumer, Blocks.DEEPSLATE_TILE_SLAB, Blocks.DEEPSLATE_TILES);
 
-        //UNORDINARY BASICS RECIPES
+/*
+
+STAIRS AND SLABS
+
+ */
 
         stairs(consumer, Unordinary_BasicsBlocks.CALCITE_STAIRS, Blocks.CALCITE);
         slab(consumer, Unordinary_BasicsBlocks.CALCITE_SLAB, Blocks.CALCITE);
@@ -288,7 +292,6 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
         slab(consumer, Unordinary_BasicsBlocks.CRYING_OBSIDIAN_SLAB, Blocks.CRYING_OBSIDIAN);
         stairs(consumer, Unordinary_BasicsBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_STAIRS, Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS);
         slab(consumer, Unordinary_BasicsBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_SLAB, Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS);
-
         stairs(consumer, Unordinary_BasicsBlocks.WHITE_WOOL_STAIRS, Blocks.WHITE_WOOL);
         slab(consumer, Unordinary_BasicsBlocks.WHITE_WOOL_SLAB, Blocks.WHITE_WOOL);
         stairs(consumer, Unordinary_BasicsBlocks.ORANGE_WOOL_STAIRS, Blocks.ORANGE_WOOL);
@@ -492,7 +495,6 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                         .of(Blocks.COBBLED_DEEPSLATE).build()))
                 .save(consumer);
 
-
         ShapedRecipeBuilder.shaped(Items.SADDLE)
                 .define('L', Items.LEATHER)
                 .define('S', Items.STRING)
@@ -555,12 +557,10 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.IRON_NUGGET).build()))
                 .save(consumer);
-
         ShapelessRecipeBuilder.shapeless(Items.ARROW)
                 .requires(ItemTags.ARROWS)
                 .unlockedBy("has_arrow", inventoryTrigger(ItemPredicate.Builder.item().of(ItemTags.ARROWS).build()))
                 .save(consumer);
-
         ShapedRecipeBuilder.shaped(Items.LEATHER_HORSE_ARMOR)
                 .define('I', Items.LEATHER)
                 .define('S', Items.STRING)
@@ -600,7 +600,6 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_diamond", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.DIAMOND).build()))
                 .save(consumer);
-
         ShapedRecipeBuilder.shaped(Items.ENCHANTED_GOLDEN_APPLE,2)
                 .define('A', Items.GOLDEN_APPLE)
                 .define('B', Items.GOLD_BLOCK)
@@ -611,7 +610,6 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_golden_apple", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.GOLDEN_APPLE).build()))
                 .save(consumer);
-
         ShapelessRecipeBuilder.shapeless(Items.GREEN_DYE)
                 .requires(Items.YELLOW_DYE)
                 .requires(Items.BLUE_DYE)
@@ -620,8 +618,35 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_blue_dye", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.BLUE_DYE).build()))
                 .save(consumer);
+        ShapedRecipeBuilder.shaped(Items.BROWN_MUSHROOM_BLOCK)
+                .define('M', Items.BROWN_MUSHROOM)
+                .pattern("MM")
+                .pattern("MM")
+                .unlockedBy("has_brown_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.BROWN_MUSHROOM).build()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(Items.RED_MUSHROOM_BLOCK)
+                .define('M', Items.RED_MUSHROOM)
+                .pattern("MM")
+                .pattern("MM")
+                .unlockedBy("has_red_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.RED_MUSHROOM).build()))
+                .save(consumer);
+        ShapedRecipeBuilder.shaped(Items.MUSHROOM_STEM)
+                .define('R', Items.RED_MUSHROOM)
+                .define('B', Items.BROWN_MUSHROOM)
+                .pattern("RB")
+                .pattern("RB")
+                .unlockedBy("has_brown_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.BROWN_MUSHROOM).build()))
+                .unlockedBy("has_red_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.RED_MUSHROOM).build()))
+                .save(consumer);
+/*
 
+MODDED ITEMS
 
+ */
 
         ShapedRecipeBuilder.shaped(Unordinary_BasicsItems.ANIMAL_BAIT)
                 .define('C', Items.CARROT)
