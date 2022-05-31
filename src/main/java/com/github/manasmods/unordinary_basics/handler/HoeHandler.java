@@ -29,7 +29,7 @@ public class HoeHandler {
 
         if (!blockState.is(BlockTags.CROPS)) return;
         if (!(blockState.getBlock() instanceof CropBlock plant)) return;
-        if (blockState.getValue(CropBlock.AGE) < plant.getMaxAge()) return;
+        if (blockState.getValue(plant.getAgeProperty()) < plant.getMaxAge()) return;
         Player player = e.getPlayer();
 
         if (!(player.getLevel() instanceof ServerLevel level)) return;
