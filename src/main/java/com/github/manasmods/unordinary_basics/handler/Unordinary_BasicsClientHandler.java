@@ -1,40 +1,33 @@
-package com.github.manasmods.unordinary_basics.proxy;
+package com.github.manasmods.unordinary_basics.handler;
 
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
 import com.github.manasmods.unordinary_basics.gui.FletchingTableScreen;
 import com.github.manasmods.unordinary_basics.gui.JukeBoxScreen;
-import com.github.manasmods.unordinary_basics.handler.Unordinary_BasicsColorHandler;
 import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisClientHandler;
 import com.github.manasmods.unordinary_basics.menu.Vanilla_AdditionsMenuTypes;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
-public class Unordinary_BasicsClient extends Unordinary_BasicsCommon {
-    @Override
-    public void preInit(IEventBus modEventBus) {
-        super.preInit(modEventBus);
-        Unordinary_BasicsColorHandler.register(modEventBus);
-    }
-
-    @Override
-    public void init(FMLCommonSetupEvent event) {
-        super.init(event);
-        if(Unordinary_Basics.getInstance().getApotheosisIntegration().isPresent()){
+@Mod.EventBusSubscriber(modid = Unordinary_Basics.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+public class Unordinary_BasicsClientHandler {
+    @SubscribeEvent
+    public static void init(FMLCommonSetupEvent event) {
+        if (Unordinary_Basics.getInstance().getApotheosisIntegration().isPresent()) {
             event.enqueueWork(() -> MinecraftForge.EVENT_BUS.addListener(ApotheosisClientHandler::onOpenApotheosisMenu));
         }
     }
 
-    @Override
-    public void clientInit(FMLClientSetupEvent event) {
+    @SubscribeEvent
+    public static void clientInit(FMLClientSetupEvent event) {
         event.enqueueWork(() -> cutoutMipped(Unordinary_BasicsBlocks.GRASS_BLOCK_STAIRS));
         event.enqueueWork(() -> cutoutMipped(Unordinary_BasicsBlocks.GRASS_BLOCK_SLAB));
 
@@ -86,26 +79,21 @@ public class Unordinary_BasicsClient extends Unordinary_BasicsCommon {
         event.enqueueWork(() -> MenuScreens.register(Vanilla_AdditionsMenuTypes.FLETCHING_TABLE_MENU, FletchingTableScreen::new));
     }
 
-    @Override
-    public Level getLevelOrOverworld() {
-        return Minecraft.getInstance().level;
-    }
-
-    private void cutoutMipped(Block block) {
+    private static void cutoutMipped(Block block) {
         ItemBlockRenderTypes.setRenderLayer(block, RenderType.cutoutMipped());
     }
 
-    private void cutout(Block block) {
+    private static void cutout(Block block) {
         ItemBlockRenderTypes.setRenderLayer(block, RenderType.cutout());
     }
 
-    private void cutout(Block... blocks) {
+    private static void cutout(Block... blocks) {
         for (Block block : blocks) {
             cutout(block);
         }
     }
 
-    private void translucent(Block... blocks) {
+    private static void translucent(Block... blocks) {
         for (Block block : blocks) {
             ItemBlockRenderTypes.setRenderLayer(block, RenderType.translucent());
         }
