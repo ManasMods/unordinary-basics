@@ -1,6 +1,5 @@
 package com.github.manasmods.unordinary_basics.registry;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.block.entity.JukeboxBlockEntity;
 import com.github.manasmods.unordinary_basics.menu.FletchingTableMenu;
 import com.github.manasmods.unordinary_basics.menu.JukeBoxMenu;
@@ -19,7 +18,8 @@ class MenuRegistry {
     public static void register(DeferredRegister<MenuType<?>> registry) {
         registry.register("juke_box_menu", () -> IForgeMenuType.create((windowId, inv, data) -> {
             BlockPos pos = data.readBlockPos();
-            BlockEntity blockEntity = Unordinary_Basics.getProxy().getLevelOrOverworld().getBlockEntity(pos);
+
+            BlockEntity blockEntity = inv.player.level.getBlockEntity(pos);
             Level level = ServerLifecycleHooks.getCurrentServer().getLevel(ResourceKey.create(Registry.DIMENSION_REGISTRY, data.readResourceLocation()));
             if (blockEntity instanceof JukeboxBlockEntity jukeboxBlockEntity) {
                 return new JukeBoxMenu(windowId, inv, jukeboxBlockEntity, ContainerLevelAccess.create(level, pos));
