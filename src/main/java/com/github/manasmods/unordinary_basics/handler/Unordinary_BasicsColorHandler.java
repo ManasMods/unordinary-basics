@@ -1,4 +1,4 @@
-package com.github.manasmods.unordinary_basics.client.handler;
+package com.github.manasmods.unordinary_basics.handler;
 
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
 import net.minecraft.client.renderer.BiomeColors;

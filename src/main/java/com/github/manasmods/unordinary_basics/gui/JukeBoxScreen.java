@@ -1,4 +1,4 @@
-package com.github.manasmods.unordinary_basics.client.gui;
+package com.github.manasmods.unordinary_basics.gui;
 
 import com.github.manasmods.manascore.client.gui.widget.ImagePredicateButton;
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;

@@ -1,9 +1,10 @@
-package com.github.manasmods.unordinary_basics;
+package com.github.manasmods.unordinary_basics.proxy;
 
+import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
-import com.github.manasmods.unordinary_basics.client.gui.FletchingTableScreen;
-import com.github.manasmods.unordinary_basics.client.gui.JukeBoxScreen;
-import com.github.manasmods.unordinary_basics.client.handler.Unordinary_BasicsColorHandler;
+import com.github.manasmods.unordinary_basics.gui.FletchingTableScreen;
+import com.github.manasmods.unordinary_basics.gui.JukeBoxScreen;
+import com.github.manasmods.unordinary_basics.handler.Unordinary_BasicsColorHandler;
 import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisClientHandler;
 import com.github.manasmods.unordinary_basics.menu.Vanilla_AdditionsMenuTypes;
 import net.minecraft.client.Minecraft;

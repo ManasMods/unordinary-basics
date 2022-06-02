@@ -1,4 +1,4 @@
-package com.github.manasmods.unordinary_basics;
+package com.github.manasmods.unordinary_basics.proxy;
 
 import net.minecraft.world.level.Level;
 import net.minecraftforge.eventbus.api.IEventBus;

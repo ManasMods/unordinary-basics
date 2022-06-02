@@ -1,4 +1,4 @@
-package com.github.manasmods.unordinary_basics;
+package com.github.manasmods.unordinary_basics.proxy;
 
 import com.github.manasmods.unordinary_basics.handler.HoeHandler;
 import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;

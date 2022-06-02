@@ -1,5 +1,6 @@
 package com.github.manasmods.unordinary_basics;
 
+import com.github.manasmods.unordinary_basics.proxy.Unordinary_BasicsClient;
 import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsBlockStateProvider;
 import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsBlockTagProvider;
 import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsFletchingRecipeProvider;
@@ -7,6 +8,8 @@ import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsItemModelPro
 import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsLootTableProvider;
 import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsRecipeProvider;
 import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisIntegration;
+import com.github.manasmods.unordinary_basics.proxy.Unordinary_BasicsCommon;
+import com.github.manasmods.unordinary_basics.proxy.Unordinary_BasicsServer;
 import lombok.Getter;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
