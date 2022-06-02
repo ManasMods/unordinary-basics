@@ -4,6 +4,7 @@ import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
 import com.github.manasmods.unordinary_basics.client.gui.FletchingTableScreen;
 import com.github.manasmods.unordinary_basics.client.gui.JukeBoxScreen;
 import com.github.manasmods.unordinary_basics.client.handler.Unordinary_BasicsColorHandler;
+import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisClientHandler;
 import com.github.manasmods.unordinary_basics.menu.Vanilla_AdditionsMenuTypes;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -26,9 +27,9 @@ public class Unordinary_BasicsClient extends Unordinary_BasicsCommon {
     @Override
     public void init(FMLCommonSetupEvent event) {
         super.init(event);
-        Unordinary_Basics.getInstance().getApotheosisIntegration().ifPresent(apotheosisIntegration -> {
-            event.enqueueWork(() -> MinecraftForge.EVENT_BUS.addListener(apotheosisIntegration::onOpenApotheosisMenu));
-        });
+        if(Unordinary_Basics.getInstance().getApotheosisIntegration().isPresent()){
+            event.enqueueWork(() -> MinecraftForge.EVENT_BUS.addListener(ApotheosisClientHandler::onOpenApotheosisMenu));
+        }
     }
 
     @Override

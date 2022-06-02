@@ -6,7 +6,7 @@ import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsFletchingRec
 import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsItemModelProvider;
 import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsLootTableProvider;
 import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsRecipeProvider;
-import com.github.manasmods.unordinary_basics.integration.ApotheosisIntegration;
+import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisIntegration;
 import lombok.Getter;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
