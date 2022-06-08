@@ -30,7 +30,7 @@ public class MixinLadderHelper {
                     if (attachedState.isFaceSturdy(level, pos, offsetFacing) && offsetFacing == facing && !attachedPos.equals(alreadyBroken) && !attachedState.is(Blocks.LADDER)) {
                         return true;
                     }
-                } else {
+                } else if (offset != 0) {
                     continue directionLoop;
                 }
             }
@@ -65,8 +65,20 @@ public class MixinLadderHelper {
                         level.destroyBlock(adjacentPos, true);
                         onBreak(level, adjacentPos, adjacentState);
                     }
+                    updateAsChain(level, adjacentPos, Direction.DOWN, pos);
+                    updateAsChain(level, adjacentPos, Direction.UP, pos);
                 }
             }
+        }
+    }
+
+    public static void updateAsChain(LevelAccessor level, BlockPos pos, Direction direction, BlockPos initialBreak) {
+        BlockState state = level.getBlockState(pos);
+        if (state.is(Blocks.LADDER)) {
+            if (!canSurvive(level, pos, state.getValue(LadderBlock.FACING), initialBreak)) {
+                level.destroyBlock(pos, true);
+            }
+            updateAsChain(level, pos.relative(direction), direction, initialBreak);
         }
     }
 }
