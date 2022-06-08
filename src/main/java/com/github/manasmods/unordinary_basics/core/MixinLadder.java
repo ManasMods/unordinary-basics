@@ -1,18 +1,26 @@
 package com.github.manasmods.unordinary_basics.core;
 
+import com.github.manasmods.unordinary_basics.utils.MixinLadderHelper;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LadderBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraftforge.common.Tags;
+import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
@@ -26,55 +34,32 @@ public class MixinLadder extends Block {
 
     @Inject(method = "canSurvive(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;)Z", at = @At("HEAD"), cancellable = true)
     public void canSurvive(BlockState state, LevelReader level, BlockPos pos, CallbackInfoReturnable<Boolean> callback) {
-        callback.setReturnValue(true);
+        callback.setReturnValue(MixinLadderHelper.canSurvive(level, pos, state.getValue(LadderBlock.FACING), null));
     }
 
-    public BlockState getStateForPlacement(BlockPlaceContext context) {
-        BlockState state = defaultBlockState();
-        BlockPos clickedPos = context.getClickedPos();
-        BlockPos belowPos = clickedPos.below();
-        Level level = context.getLevel();
-        BlockState belowState = level.getBlockState(belowPos);
-        if (belowState.is(Blocks.LADDER)) {
-            int distance = getDistance(level, clickedPos);
-            if (distance == 7) {
-                return null;
+    @Override
+    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+        // Attempt to place ladder above or below depending on the player's pitch
+        ItemStack stackInHand = player.getItemInHand(hand);
+        if (stackInHand.getItem() == Items.LADDER) {
+            BlockPos abovePos = pos.above();
+            BlockPos belowPos = pos.below();
+            boolean canPlaceAbove = level.getBlockState(abovePos).is(Blocks.AIR) && MixinLadderHelper.canSurvive(level, abovePos, state.getValue(LadderBlock.FACING), null);
+            boolean canPlaceBelow = level.getBlockState(belowPos).is(Blocks.AIR) && MixinLadderHelper.canSurvive(level, belowPos, state.getValue(LadderBlock.FACING), null);
+            BlockPos toPlaceAt;
+            if (canPlaceAbove && canPlaceBelow) {
+                toPlaceAt = player.getViewXRot(0) < 0 ? abovePos : belowPos;
+            } else if (canPlaceAbove || canPlaceBelow) {
+                toPlaceAt = canPlaceAbove ? abovePos : belowPos;
+            } else {
+                return InteractionResult.PASS;
             }
-            return state
-                    .setValue(LadderBlock.WATERLOGGED, false)
-                    .setValue(LadderBlock.FACING, belowState.getValue(LadderBlock.FACING));
-        } else {
-            FluidState fluidState = level.getFluidState(clickedPos);
-            for (Direction direction : context.getNearestLookingDirections()) {
-                if (direction.getAxis().isHorizontal()) {
-                    BlockPos attachedPos = clickedPos.relative(direction);
-                    BlockState attachedState = level.getBlockState(attachedPos);
-                    if (attachedState.isFaceSturdy(level, attachedPos, direction.getOpposite())) {
-                        return state
-                                .setValue(LadderBlock.FACING, direction.getOpposite())
-                                .setValue(LadderBlock.WATERLOGGED, fluidState.getType() == Fluids.WATER);
-                    }
-                }
+            level.setBlock(toPlaceAt, Blocks.LADDER.defaultBlockState().setValue(LadderBlock.FACING, state.getValue(LadderBlock.FACING)).setValue(LadderBlock.WATERLOGGED, level.getFluidState(toPlaceAt).is(Fluids.WATER)), 3);
+            if (!player.isCreative()) {
+                stackInHand.shrink(1);
             }
-            return null;
+            return InteractionResult.SUCCESS;
         }
-    }
-
-    private static int getDistance(BlockGetter level, BlockPos thisPos) {
-        for (Direction direction : Direction.Plane.VERTICAL) {
-            for (int offset = 1; offset <= 7; offset++) {
-                BlockPos pos = thisPos.relative(direction, offset);
-                BlockState state = level.getBlockState(pos);
-                if (state.is(Blocks.LADDER)) {
-                    Direction facing1 = state.getValue(LadderBlock.FACING);
-                    BlockPos.MutableBlockPos attachedPos1 = pos.mutable().move(facing1.getOpposite());
-                    BlockState attachedState1 = level.getBlockState(attachedPos1);
-                    if (attachedState1.isFaceSturdy(level, pos, facing1)) {
-                        return offset;
-                    }
-                }
-            }
-        }
-        return 7;
+        return InteractionResult.PASS;
     }
 }
