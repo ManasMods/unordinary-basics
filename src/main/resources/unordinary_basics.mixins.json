@@ -10,7 +10,8 @@
     "MixinFletchingTableBlock",
     "MixinJukeBoxBlock",
     "NBTIngredientAccessor",
-    "MixinLadder"
+    "MixinLadder",
+    "MixinFrostWalker"
   ],
   "client": [
     "AbstractContainerScreenAccessor"
