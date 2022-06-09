@@ -6,6 +6,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.enchantment.FrostWalkerEnchantment;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.material.Fluids;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -18,17 +19,18 @@ public class MixinFrostWalker {
     private static void onEntityMoved(LivingEntity livingEntity, Level level, BlockPos pos, int enchantmentLevel, CallbackInfo callback) {
         if (livingEntity.isOnGround()) {
             BlockPos targetPos = livingEntity.blockPosition().below();
-            if (level.getBlockState(targetPos).is(Blocks.LAVA)) {
-                level.setBlock(targetPos, Blocks.BASALT.defaultBlockState(), 3);
-            }
+            tryConvertBlock(level, targetPos);
             if (enchantmentLevel == 2) {
                 for (Direction direction : Direction.Plane.HORIZONTAL) {
-                    BlockPos surroundingPos = targetPos.relative(direction);
-                    if (level.getBlockState(surroundingPos).is(Blocks.LAVA)) {
-                        level.setBlock(surroundingPos, Blocks.BASALT.defaultBlockState(), 3);
-                    }
+                    tryConvertBlock(level, targetPos.relative(direction));
                 }
             }
+        }
+    }
+
+    private static void tryConvertBlock(Level level, BlockPos pos) {
+        if (level.getBlockState(pos).is(Blocks.LAVA) && !level.getFluidState(pos).is(Fluids.FLOWING_LAVA)) {
+            level.setBlock(pos, Blocks.BASALT.defaultBlockState(), 3);
         }
     }
 }
