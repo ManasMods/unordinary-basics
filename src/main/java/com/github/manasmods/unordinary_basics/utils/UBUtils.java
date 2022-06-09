@@ -17,4 +17,13 @@ public class UBUtils {
 
         return false;
     }
+
+    public static int getXpPointsForLevel(int level) {
+        if (level <= 15) {
+            return 2 * level + 7;
+        } else if (level <= 30) {
+            return 5 * level - 38;
+        }
+        return 9 * level - 158;
+    }
 }
