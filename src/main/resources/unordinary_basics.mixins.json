@@ -9,7 +9,7 @@
     "MixinApothFletchingBlock",
     "MixinFletchingTableBlock",
     "MixinFrostWalker",
-    "MixinItem",
+    "MixinItemStack",
     "MixinJukeBoxBlock",
     "MixinLadder",
     "NBTIngredientAccessor"
