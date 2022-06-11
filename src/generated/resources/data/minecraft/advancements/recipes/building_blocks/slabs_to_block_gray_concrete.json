@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:slabs_to_block_gray_concrete"
+    ]
+  },
+  "criteria": {
+    "has_unordinary_basics": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "unordinary_basics:gray_concrete_slab"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:slabs_to_block_gray_concrete"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_unordinary_basics",
+      "has_the_recipe"
+    ]
+  ]
+}

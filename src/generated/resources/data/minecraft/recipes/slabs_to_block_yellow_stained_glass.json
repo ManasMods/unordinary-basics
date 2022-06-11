@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:yellow_stained_glass_slab"
+    },
+    {
+      "item": "unordinary_basics:yellow_stained_glass_slab"
+    }
+  ],
+  "result": {
+    "item": "minecraft:yellow_stained_glass"
+  }
+}
