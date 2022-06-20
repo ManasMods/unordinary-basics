@@ -27,6 +27,11 @@ public class FletchingRecipe implements Recipe<FletchingContainer> {
     private final ResourceLocation id;
 
     @Override
+    public NonNullList<Ingredient> getIngredients() {
+        return recipeItems;
+    }
+
+    @Override
     public boolean matches(FletchingContainer pCraftingInventory, Level pLevel) {
         List<Ingredient> remainingIngredients = Lists.newArrayList(recipeItems);
         remainingIngredients.removeIf(ingredient -> {

@@ -61,17 +61,17 @@ public class FletchingTableRecipeCategory implements IRecipeCategory<FletchingRe
 
     @Override
     public void setRecipe(@Nonnull IRecipeLayoutBuilder builder, @Nonnull FletchingRecipe recipe, @Nonnull IFocusGroup focusGroup) {
-        builder.addSlot(RecipeIngredientRole.INPUT, 29, 21).addIngredients(Ingredient.of((Items.FLINT).getDefaultInstance()));
-        builder.addSlot(RecipeIngredientRole.INPUT, 29, 42).addIngredients(Ingredient.of(Tags.Items.RODS_WOODEN));
-        builder.addSlot(RecipeIngredientRole.INPUT, 29, 63).addIngredients(Ingredient.of((Tags.Items.FEATHERS)));
+        builder.addSlot(RecipeIngredientRole.INPUT, 29, 21).addIngredients(recipe.getIngredients().get(0));
+        builder.addSlot(RecipeIngredientRole.INPUT, 29, 42).addIngredients(recipe.getIngredients().get(1));
+        builder.addSlot(RecipeIngredientRole.INPUT, 29, 63).addIngredients(recipe.getIngredients().get(2));
         builder.addSlot(RecipeIngredientRole.OUTPUT, 111, 41).addItemStack(recipe.getResultItem());
 
-        builder.addSlot(RecipeIngredientRole.INPUT, 50, 42).addIngredients(NBTIngredient.of(new ItemStack(Items.ARROW, 8)));
-        builder.addSlot(RecipeIngredientRole.INPUT, 50, 63).addIngredients(Ingredient.of(Tags.Items.DUSTS_GLOWSTONE));
+        builder.addSlot(RecipeIngredientRole.INPUT, 50, 42).addIngredients(recipe.getIngredients().get(4));
+        builder.addSlot(RecipeIngredientRole.INPUT, 50, 63).addIngredients(recipe.getIngredients().get(5));
         builder.addSlot(RecipeIngredientRole.OUTPUT, 111, 41).addItemStack(recipe.getResultItem());
 
-        builder.addSlot(RecipeIngredientRole.INPUT, 50, 42).addIngredients(Ingredient.of(Items.LINGERING_POTION));
-        builder.addSlot(RecipeIngredientRole.INPUT, 50, 42).addIngredients(NBTIngredient.of(new ItemStack(Items.ARROW, 32)));
+        builder.addSlot(RecipeIngredientRole.INPUT, 50, 21).addIngredients(recipe.getIngredients().get(3));
+        builder.addSlot(RecipeIngredientRole.INPUT, 50, 42).addIngredients(recipe.getIngredients().get(4));
         builder.addSlot(RecipeIngredientRole.OUTPUT, 111, 41).addItemStack(recipe.getResultItem());
     }
 }
