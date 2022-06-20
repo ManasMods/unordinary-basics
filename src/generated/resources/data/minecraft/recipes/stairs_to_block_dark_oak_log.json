@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:dark_oak_log_stairs"
+    },
+    {
+      "item": "unordinary_basics:dark_oak_log_stairs"
+    },
+    {
+      "item": "unordinary_basics:dark_oak_log_stairs"
+    },
+    {
+      "item": "unordinary_basics:dark_oak_log_stairs"
+    }
+  ],
+  "result": {
+    "item": "minecraft:dark_oak_log",
+    "count": 3
+  }
+}

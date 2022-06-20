@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:chiseled_deepslate_stairs"
+    },
+    {
+      "item": "unordinary_basics:chiseled_deepslate_stairs"
+    },
+    {
+      "item": "unordinary_basics:chiseled_deepslate_stairs"
+    },
+    {
+      "item": "unordinary_basics:chiseled_deepslate_stairs"
+    }
+  ],
+  "result": {
+    "item": "minecraft:chiseled_deepslate",
+    "count": 3
+  }
+}

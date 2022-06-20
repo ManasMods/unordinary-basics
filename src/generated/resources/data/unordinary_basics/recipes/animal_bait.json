@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#CL",
+    "PGW",
+    "LSL"
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:carrot"
+    },
+    "G": {
+      "item": "minecraft:golden_carrot"
+    },
+    "P": {
+      "item": "minecraft:potato"
+    },
+    "W": {
+      "item": "minecraft:wheat"
+    },
+    "S": {
+      "item": "minecraft:wheat_seeds"
+    },
+    "#": {
+      "item": "minecraft:string"
+    },
+    "L": {
+      "item": "minecraft:leather"
+    }
+  },
+  "result": {
+    "item": "unordinary_basics:animal_bait"
+  }
+}

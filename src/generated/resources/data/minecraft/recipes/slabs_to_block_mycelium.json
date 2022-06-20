@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:mycelium_slab"
+    },
+    {
+      "item": "unordinary_basics:mycelium_slab"
+    }
+  ],
+  "result": {
+    "item": "minecraft:mycelium"
+  }
+}

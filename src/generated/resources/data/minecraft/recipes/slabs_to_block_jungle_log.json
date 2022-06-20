@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:jungle_log_slab"
+    },
+    {
+      "item": "unordinary_basics:jungle_log_slab"
+    }
+  ],
+  "result": {
+    "item": "minecraft:jungle_log"
+  }
+}

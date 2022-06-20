@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:crimson_stem_slab"
+    },
+    {
+      "item": "unordinary_basics:crimson_stem_slab"
+    }
+  ],
+  "result": {
+    "item": "minecraft:crimson_stem"
+  }
+}

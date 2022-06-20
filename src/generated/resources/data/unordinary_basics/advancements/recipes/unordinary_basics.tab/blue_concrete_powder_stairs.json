@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "unordinary_basics:blue_concrete_powder_stairs"
+    ]
+  },
+  "criteria": {
+    "has_minecraft": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:blue_concrete_powder"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "unordinary_basics:blue_concrete_powder_stairs"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_minecraft",
+      "has_the_recipe"
+    ]
+  ]
+}
