@@ -612,7 +612,7 @@ STAIRS AND SLABS
                 .unlockedBy("has_golden_apple", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.GOLDEN_APPLE).build()))
                 .save(consumer);
-        ShapelessRecipeBuilder.shapeless(Items.GREEN_DYE)
+        ShapelessRecipeBuilder.shapeless(Items.GREEN_DYE,2)
                 .requires(Items.YELLOW_DYE)
                 .requires(Items.BLUE_DYE)
                 .unlockedBy("has_yellow_dye", inventoryTrigger(ItemPredicate.Builder.item()
@@ -620,21 +620,21 @@ STAIRS AND SLABS
                 .unlockedBy("has_blue_dye", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.BLUE_DYE).build()))
                 .save(consumer);
-        ShapedRecipeBuilder.shaped(Items.BROWN_MUSHROOM_BLOCK)
+        ShapedRecipeBuilder.shaped(Items.BROWN_MUSHROOM_BLOCK,4)
                 .define('M', Items.BROWN_MUSHROOM)
                 .pattern("MM")
                 .pattern("MM")
                 .unlockedBy("has_brown_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.BROWN_MUSHROOM).build()))
                 .save(consumer);
-        ShapedRecipeBuilder.shaped(Items.RED_MUSHROOM_BLOCK)
+        ShapedRecipeBuilder.shaped(Items.RED_MUSHROOM_BLOCK,4)
                 .define('M', Items.RED_MUSHROOM)
                 .pattern("MM")
                 .pattern("MM")
                 .unlockedBy("has_red_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.RED_MUSHROOM).build()))
                 .save(consumer);
-        ShapedRecipeBuilder.shaped(Items.MUSHROOM_STEM)
+        ShapedRecipeBuilder.shaped(Items.MUSHROOM_STEM,4)
                 .define('R', Items.RED_MUSHROOM)
                 .define('B', Items.BROWN_MUSHROOM)
                 .pattern("RB")
