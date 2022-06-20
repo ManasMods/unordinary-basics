@@ -62,7 +62,6 @@ public class FletchingRecipe implements Recipe<FletchingContainer> {
         return result;
     }
 
-
     @Override
     public RecipeSerializer<?> getSerializer() {
         return Unordinary_BasicsRecipeSerializers.FLETCHING_RECIPE;
@@ -111,5 +110,12 @@ public class FletchingRecipe implements Recipe<FletchingContainer> {
         }
 
         return containerItems;
+    }
+
+    public static class Type implements RecipeType<FletchingRecipe> {
+        private Type() { }
+        @Getter
+        public static final Type INSTANCE = new Type();
+        public static final String ID = "fletching";
     }
 }
