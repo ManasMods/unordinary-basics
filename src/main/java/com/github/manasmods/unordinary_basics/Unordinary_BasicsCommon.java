@@ -27,5 +27,4 @@ public abstract class Unordinary_BasicsCommon {
         event.enqueueWork(Unordinary_BasicsNetwork::registerPackets);
     }
 
-    public abstract Level getLevelOrOverworld();
 }

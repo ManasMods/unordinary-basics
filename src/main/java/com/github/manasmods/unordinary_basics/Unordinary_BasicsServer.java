@@ -9,9 +9,4 @@ public class Unordinary_BasicsServer extends Unordinary_BasicsCommon {
     public void preInit(IEventBus modEventBus) {
         super.preInit(modEventBus);
     }
-
-    @Override
-    public Level getLevelOrOverworld() {
-        return ServerLifecycleHooks.getCurrentServer().overworld();
-    }
 }

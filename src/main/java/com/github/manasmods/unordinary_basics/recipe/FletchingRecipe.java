@@ -54,7 +54,7 @@ public class FletchingRecipe implements Recipe<FletchingContainer> {
 
     @Override
     public boolean canCraftInDimensions(int pWidth, int pHeight) {
-        return pWidth >= 2 && pHeight >= 3;
+        return pWidth <= 2 && pHeight <= 3;
     }
 
     @Override

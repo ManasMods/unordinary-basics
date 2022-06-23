@@ -31,7 +31,7 @@ public class FletchingTableRecipeCategory implements IRecipeCategory<FletchingRe
 
     public FletchingTableRecipeCategory(IGuiHelper helper) {
         this.background = helper.createDrawable(TEXTURE, 0, 0, 176, 178);
-        this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM, new ItemStack(Blocks.FLETCHING_TABLE));
+        this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(Blocks.CARTOGRAPHY_TABLE));
     }
 
     @Override

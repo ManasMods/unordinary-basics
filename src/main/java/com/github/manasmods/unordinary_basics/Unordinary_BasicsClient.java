@@ -4,6 +4,7 @@ import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
 import com.github.manasmods.unordinary_basics.client.gui.FletchingTableScreen;
 import com.github.manasmods.unordinary_basics.client.gui.JukeBoxScreen;
 import com.github.manasmods.unordinary_basics.client.handler.Unordinary_BasicsColorHandler;
+import com.github.manasmods.unordinary_basics.integration.ApotheosisIntegrationClient;
 import com.github.manasmods.unordinary_basics.menu.Vanilla_AdditionsMenuTypes;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -27,7 +28,7 @@ public class Unordinary_BasicsClient extends Unordinary_BasicsCommon {
     public void init(FMLCommonSetupEvent event) {
         super.init(event);
         Unordinary_Basics.getInstance().getApotheosisIntegration().ifPresent(apotheosisIntegration -> {
-            event.enqueueWork(() -> MinecraftForge.EVENT_BUS.addListener(apotheosisIntegration::onOpenApotheosisMenu));
+            event.enqueueWork(() -> MinecraftForge.EVENT_BUS.addListener(ApotheosisIntegrationClient::onOpenApotheosisMenu));
         });
     }
 
@@ -82,11 +83,6 @@ public class Unordinary_BasicsClient extends Unordinary_BasicsCommon {
 
         event.enqueueWork(() -> MenuScreens.register(Vanilla_AdditionsMenuTypes.JUKE_BOX_MENU, JukeBoxScreen::new));
         event.enqueueWork(() -> MenuScreens.register(Vanilla_AdditionsMenuTypes.FLETCHING_TABLE_MENU, FletchingTableScreen::new));
-    }
-
-    @Override
-    public Level getLevelOrOverworld() {
-        return Minecraft.getInstance().level;
     }
 
     private void cutoutMipped(Block block) {

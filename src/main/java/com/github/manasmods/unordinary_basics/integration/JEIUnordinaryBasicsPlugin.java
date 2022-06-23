@@ -30,6 +30,6 @@ public class JEIUnordinaryBasicsPlugin implements IModPlugin {
     public void registerRecipes(IRecipeRegistration registration) {
         RecipeManager rm = Objects.requireNonNull(Minecraft.getInstance().level).getRecipeManager();
         List<FletchingRecipe> recipes = rm.getAllRecipesFor(FletchingRecipe.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<>(FletchingTableRecipeCategory.UID, FletchingRecipe.class), recipes);
+        registration.addRecipes(new RecipeType<FletchingRecipe>(FletchingTableRecipeCategory.UID, FletchingRecipe.class), recipes);
     }
 }

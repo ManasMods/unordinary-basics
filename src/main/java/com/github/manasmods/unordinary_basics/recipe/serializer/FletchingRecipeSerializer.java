@@ -30,6 +30,7 @@ public class FletchingRecipeSerializer implements RecipeSerializer<FletchingReci
         String[] patternArray = shrink(patternFromJson(GsonHelper.getAsJsonArray(pSerializedRecipe, "pattern")));
         int i = patternArray[0].length();
         int j = patternArray.length;
+        
         NonNullList<Ingredient> dissolvePattern = dissolvePattern(patternArray, ingredientMap, i, j);
         ItemStack result = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pSerializedRecipe, "result"));
 
@@ -41,7 +42,6 @@ public class FletchingRecipeSerializer implements RecipeSerializer<FletchingReci
     public FletchingRecipe fromNetwork(ResourceLocation pRecipeId, FriendlyByteBuf pBuffer) {
         int i = pBuffer.readVarInt();
         int j = pBuffer.readVarInt();
-        String s = pBuffer.readUtf();
         NonNullList<Ingredient> dissolvePattern = NonNullList.withSize(i * j, Ingredient.EMPTY);
 
         for (int k = 0; k < dissolvePattern.size(); ++k) {
@@ -56,8 +56,10 @@ public class FletchingRecipeSerializer implements RecipeSerializer<FletchingReci
     public void toNetwork(FriendlyByteBuf pBuffer, FletchingRecipe pRecipe) {
         pBuffer.writeVarInt(2);
         pBuffer.writeVarInt(3);
-
-        for (Ingredient ingredient : pRecipe.getIngredients()) {
+        
+        NonNullList<Ingredient> ingredients = pRecipe.getIngredients();
+        
+        for (Ingredient ingredient : ingredients) {
             ingredient.toNetwork(pBuffer);
         }
 
@@ -176,7 +178,7 @@ public class FletchingRecipeSerializer implements RecipeSerializer<FletchingReci
     }
 
     static NonNullList<Ingredient> dissolvePattern(String[] pPattern, Map<String, Ingredient> pKeys, int pPatternWidth, int pPatternHeight) {
-        NonNullList<Ingredient> nonnulllist = NonNullList.withSize(pPatternWidth * pPatternHeight, Ingredient.EMPTY);
+        NonNullList<Ingredient> nonnulllist = NonNullList.withSize(6, Ingredient.EMPTY);
         Set<String> set = Sets.newHashSet(pKeys.keySet());
         set.remove(" ");
 
