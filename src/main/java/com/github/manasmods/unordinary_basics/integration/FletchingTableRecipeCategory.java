@@ -9,17 +9,20 @@ import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
 import mezz.jei.api.recipe.category.IRecipeCategory;
+import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraftforge.common.Tags;
-import net.minecraftforge.common.crafting.NBTIngredient;
 
 import javax.annotation.Nonnull;
+import java.util.Arrays;
+import java.util.stream.Collectors;
+import java.util.List;
 
 public class FletchingTableRecipeCategory implements IRecipeCategory<FletchingRecipe> {
     public final static ResourceLocation UID = new ResourceLocation(Unordinary_Basics.MOD_ID, "fletching");
@@ -30,7 +33,7 @@ public class FletchingTableRecipeCategory implements IRecipeCategory<FletchingRe
     private final IDrawable icon;
 
     public FletchingTableRecipeCategory(IGuiHelper helper) {
-        this.background = helper.createDrawable(TEXTURE, 0, 0, 176, 178);
+        this.background = helper.createDrawable(TEXTURE, 5, 5, 166, 86);
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(Blocks.FLETCHING_TABLE));
     }
 
@@ -46,7 +49,7 @@ public class FletchingTableRecipeCategory implements IRecipeCategory<FletchingRe
 
     @Override
     public Component getTitle() {
-        return new TextComponent("Fletching Table");
+        return new TextComponent("Fletching");
     }
 
     @Override
@@ -61,17 +64,44 @@ public class FletchingTableRecipeCategory implements IRecipeCategory<FletchingRe
 
     @Override
     public void setRecipe(@Nonnull IRecipeLayoutBuilder builder, @Nonnull FletchingRecipe recipe, @Nonnull IFocusGroup focusGroup) {
-        builder.addSlot(RecipeIngredientRole.INPUT, 29, 21).addIngredients(recipe.getIngredients().get(0));
-        builder.addSlot(RecipeIngredientRole.INPUT, 29, 42).addIngredients(recipe.getIngredients().get(1));
-        builder.addSlot(RecipeIngredientRole.INPUT, 29, 63).addIngredients(recipe.getIngredients().get(2));
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 111, 41).addItemStack(recipe.getResultItem());
+        NonNullList<Ingredient> recipeIngredients = recipe.getIngredients();
+        List<String> ingredients = recipe.getIngredients().stream().map(i -> Arrays.toString(i.getItems())).collect(Collectors.toList());
+        Unordinary_Basics.getLogger().info(ingredients);
 
-        builder.addSlot(RecipeIngredientRole.INPUT, 50, 42).addIngredients(recipe.getIngredients().get(4));
-        builder.addSlot(RecipeIngredientRole.INPUT, 50, 63).addIngredients(recipe.getIngredients().get(5));
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 111, 41).addItemStack(recipe.getResultItem());
+        boolean[] slotsFilled = new boolean[6];
+        ingredientsLoop:
+        for (int i = 0, size = recipeIngredients.size(); i < size; i++) {
+            Ingredient ingredient = recipeIngredients.get(i);
+            if (ingredient.getItems().length == 0) {
+                for (int j = 0; j < 6; j++) {
+                    if (!slotsFilled[j]) {
+                        builder.addSlot(RecipeIngredientRole.INPUT, 24 + (j % 2) * 21, 16 + Math.floorDiv(j, 2) * 21).addIngredients(ingredient);
+                        slotsFilled[j] = true;
+                        continue ingredientsLoop;
+                    }
+                }
+            }
+            for (int j = 0; j < 6; j++) {
+                if (fitsSlot(ingredient.getItems()[0].getItem(), j)) {
+                    builder.addSlot(RecipeIngredientRole.INPUT, 24 + (j % 2) * 21, 16 + Math.floorDiv(j, 2) * 21).addIngredients(ingredient);
+                    slotsFilled[i] = true;
+                    continue ingredientsLoop;
+                }
+            }
+        }
+        builder.addSlot(RecipeIngredientRole.OUTPUT, 106, 36).addItemStack(recipe.getResultItem());
+    }
 
-        builder.addSlot(RecipeIngredientRole.INPUT, 50, 21).addIngredients(recipe.getIngredients().get(3));
-        builder.addSlot(RecipeIngredientRole.INPUT, 50, 42).addIngredients(recipe.getIngredients().get(4));
-        builder.addSlot(RecipeIngredientRole.OUTPUT, 111, 41).addItemStack(recipe.getResultItem());
+    // Slots numbered top to bottom, left to right, 0 to 5
+    private static boolean fitsSlot(Item item, int slot) {
+        switch (slot) {
+            case 0 -> {return item == Items.FLINT;} // Flint
+            case 1 -> {return item == Items.LINGERING_POTION;} // Potion
+            case 2 -> {return item == Items.STICK;} // Stick
+            case 3 -> {return item == Items.ARROW;} // Arrow
+            case 4 -> {return item == Items.FEATHER;} // Feather
+            case 5 -> {return item == Items.GLOWSTONE_DUST;} // Glowstone
+        }
+        return false;
     }
 }
