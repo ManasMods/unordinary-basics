@@ -2,6 +2,7 @@ package com.github.manasmods.unordinary_basics.integration;
 
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.recipe.FletchingRecipe;
+import com.github.manasmods.unordinary_basics.registry.Unordinary_BasicsRecipeTypeRegistry;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.recipe.RecipeType;
@@ -29,7 +30,7 @@ public class JEIUnordinaryBasicsPlugin implements IModPlugin {
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
         RecipeManager rm = Objects.requireNonNull(Minecraft.getInstance().level).getRecipeManager();
-        List<FletchingRecipe> recipes = rm.getAllRecipesFor(FletchingRecipe.Type.INSTANCE);
-        registration.addRecipes(new RecipeType<FletchingRecipe>(FletchingTableRecipeCategory.UID, FletchingRecipe.class), recipes);
+        List<FletchingRecipe> recipes = rm.getAllRecipesFor(Unordinary_BasicsRecipeTypeRegistry.FLETCHING_RECIPE.get());
+        registration.addRecipes(new RecipeType<>(FletchingTableRecipeCategory.UID, FletchingRecipe.class), recipes);
     }
 }
