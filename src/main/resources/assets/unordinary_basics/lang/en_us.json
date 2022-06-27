@@ -321,5 +321,8 @@
   "itemGroup.unordinary_basics.tab": "UB Blocks",
   "itemGroup.unordinary_basics.tab2": "UB Items",
 
-  "item.unordinary_basics.animal_bait": "Animal Bait"
+  "item.unordinary_basics.animal_bait": "Animal Bait",
+
+  "enchantment.unordinary_basics.master_miner": "Master Miner",
+  "enchantment.unordinary_basics.master_miner.desc": "Mines multiple blocks at once based on the level"
 }

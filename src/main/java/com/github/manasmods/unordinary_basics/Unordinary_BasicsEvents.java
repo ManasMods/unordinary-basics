@@ -1,18 +1,35 @@
 package com.github.manasmods.unordinary_basics;
 
+import com.github.manasmods.unordinary_basics.enchantment.UnordinaryBasicsEnchantments;
 import com.github.manasmods.unordinary_basics.utils.MixinLadderHelper;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
+import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 @Mod.EventBusSubscriber(modid = Unordinary_Basics.MOD_ID)
 public class Unordinary_BasicsEvents {
@@ -34,7 +51,31 @@ public class Unordinary_BasicsEvents {
 
     @SubscribeEvent
     public static void onBlockBreak(BlockEvent.BreakEvent event) {
-        MixinLadderHelper.onBreak(event.getWorld(), event.getPos(), event.getState());
+        BlockPos pos = event.getPos();
+        Player player = event.getPlayer();
+        LevelAccessor level = event.getWorld();
+        // Ladders
+        MixinLadderHelper.onBreak(event.getWorld(), pos, event.getState());
+        // Master miner enchantment
+        ItemStack tool = player.getItemInHand(InteractionHand.MAIN_HAND);
+        int radius = EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.MASTER_MINER, tool);
+        if (radius > 0) {
+            Direction.Axis playerAxis = getFacingDirection(player);
+            Direction.Axis[] axes = Arrays.stream(Direction.Axis.values()).filter(a -> a != playerAxis).toArray(Direction.Axis[]::new);
+            for (int x = -radius; x <= radius; x++) {
+                for (int y = -radius; y <= radius; y++) {
+                    if (x != 0 || y != 0) {
+                        BlockPos newPos = pos.relative(axes[0], x).relative(axes[1], y);
+                        BlockState state = level.getBlockState(newPos);
+                        if ((state.getBlock().defaultDestroyTime() != -1 || player.isCreative()) && level.getFluidState(newPos) == Fluids.EMPTY.defaultFluidState() && !level.getBlockState(newPos).is(Blocks.AIR)) {
+                            level.setBlock(newPos, Blocks.AIR.defaultBlockState(), 3);
+                            if (!player.isCreative() && state.canHarvestBlock(level, newPos, player)) Block.dropResources(state, (Level) level, newPos, level.getBlockEntity(newPos), player, tool);
+                            tool.setDamageValue(tool.getDamageValue() + 1);
+                        }
+                    }
+                }
+            }
+        }
     }
 
     @SubscribeEvent
@@ -56,5 +97,12 @@ public class Unordinary_BasicsEvents {
             }
         }
         return true;
+    }
+
+    private static Direction.Axis getFacingDirection(Entity entity) {
+        if (entity.getXRot() > -45 && entity.getXRot() < 45) {
+            return entity.getDirection().getAxis();
+        }
+        return Direction.Axis.Y;
     }
 }
