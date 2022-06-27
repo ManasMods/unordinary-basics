@@ -6,6 +6,7 @@ import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -20,6 +21,7 @@ public class Unordinary_BasicsRegistry {
     private static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, Unordinary_Basics.MOD_ID);
     private static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS = DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, Unordinary_Basics.MOD_ID);
     private static final DeferredRegister<RecipeType<?>> RECIPE_TYPES = DeferredRegister.create(Registry.RECIPE_TYPE_REGISTRY, Unordinary_Basics.MOD_ID);
+    private static final DeferredRegister<Enchantment> ENCHANTMENTS = DeferredRegister.create(ForgeRegistries.ENCHANTMENTS, Unordinary_Basics.MOD_ID);
 
     public static Iterable<Block> getKnownBlocks() {
         return BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
@@ -38,6 +40,7 @@ public class Unordinary_BasicsRegistry {
         BlockEntityRegistry.register(BLOCK_ENTITIES);
         RecipeSerializerRegistry.register(RECIPE_SERIALIZERS);
         Unordinary_BasicsRecipeTypeRegistry.register(RECIPE_TYPES);
+        EnchantmentsRegistry.register(ENCHANTMENTS);
 
         // Add our Registries to Forge
         BLOCKS.register(modEventBus);
@@ -46,5 +49,6 @@ public class Unordinary_BasicsRegistry {
         BLOCK_ENTITIES.register(modEventBus);
         RECIPE_SERIALIZERS.register(modEventBus);
         RECIPE_TYPES.register(modEventBus);
+        ENCHANTMENTS.register(modEventBus);
     }
 }
