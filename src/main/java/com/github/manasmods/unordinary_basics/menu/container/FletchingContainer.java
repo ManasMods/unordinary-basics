@@ -20,6 +20,10 @@ public class FletchingContainer extends CraftingContainer {
 
     @Override
     public boolean canPlaceItem(int pIndex, ItemStack pStack) {
+        return isSlotValid(pIndex, pStack);
+    }
+
+    public static boolean isSlotValid(int pIndex, ItemStack pStack) {
         return switch (pIndex) {
             case 0 -> pStack.is(Items.FLINT);
             case 1 -> pStack.is(Tags.Items.RODS_WOODEN);
