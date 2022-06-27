@@ -164,11 +164,7 @@ repositories {
         //Mixin Anntoation Processor
         annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
-        // compile against the JEI API but do not include it at runtime
-        compileOnly fg.deobf("mezz.jei:jei-${minecraftVersion}:${jei_version}:api")
-
-        // at runtime, use the full JEI jar
-        runtimeOnly fg.deobf("mezz.jei:jei-${minecraftVersion}:${jei_version}")
+        implementation fg.deobf("mezz.jei:jei-${minecraftVersion}:${jei_version}")
 
         // Apotheosis + dependencies
         compileOnly fg.deobf("curse.maven:apotheosis-313970:${apotheosisVersion}")
