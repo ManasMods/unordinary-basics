@@ -13,6 +13,8 @@ import net.minecraft.core.NonNullList;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -92,16 +94,20 @@ public class FletchingTableRecipeCategory implements IRecipeCategory<FletchingRe
         builder.addSlot(RecipeIngredientRole.OUTPUT, 106, 36).addItemStack(recipe.getResultItem());
     }
 
-    // Slots numbered top to bottom, left to right, 0 to 5
+    // Slots numbered top to bottom, left to right, 0 to 5; conditions will need to be updated if more fletching recipes are added
     private static boolean fitsSlot(Item item, int slot) {
         switch (slot) {
-            case 0 -> {return item == Items.FLINT;} // Flint
-            case 1 -> {return item == Items.LINGERING_POTION;} // Potion
-            case 2 -> {return item == Items.STICK;} // Stick
+            case 0 -> {return item == Items.FLINT;}
+            case 1 -> {return item == Items.LINGERING_POTION;}
+            case 2 -> {return hasForgeTag(item, "rods/wooden");}
             case 3 -> {return item == Items.ARROW;} // Arrow
-            case 4 -> {return item == Items.FEATHER;} // Feather
-            case 5 -> {return item == Items.GLOWSTONE_DUST;} // Glowstone
+            case 4 -> {return hasForgeTag(item, "feathers");}
+            case 5 -> {return item == Items.GLOWSTONE_DUST;}
         }
         return false;
+    }
+
+    private static boolean hasForgeTag(Item item, String tag) {
+        return item.builtInRegistryHolder().is(ItemTags.create(new ResourceLocation("forge", tag)));
     }
 }
