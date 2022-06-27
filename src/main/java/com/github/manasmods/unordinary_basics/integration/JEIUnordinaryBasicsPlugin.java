@@ -2,7 +2,6 @@ package com.github.manasmods.unordinary_basics.integration;
 
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.menu.FletchingTableMenu;
-import com.github.manasmods.unordinary_basics.menu.container.FletchingContainer;
 import com.github.manasmods.unordinary_basics.recipe.FletchingRecipe;
 import com.github.manasmods.unordinary_basics.registry.Unordinary_BasicsRecipeTypeRegistry;
 import mezz.jei.api.IModPlugin;
@@ -42,7 +41,7 @@ public class JEIUnordinaryBasicsPlugin implements IModPlugin {
 
     @Override
     public void registerRecipeTransferHandlers(IRecipeTransferRegistration registration) {
-        registration.addRecipeTransferHandler(FletchingTableMenu.class, FletchingTableRecipeCategory.TYPE, 0, 6, 7, 9 * 4);
+        registration.addRecipeTransferHandler(FletchingTableMenu.class, FletchingTableRecipeCategory.TYPE, 0, 6, 7, 36);
     }
 
     @Override
