@@ -150,7 +150,7 @@
   "block.unordinary_basics.purple_concrete_powder_stairs": "Ступеньки из фиолетового сухого бетона",
   "block.unordinary_basics.blue_concrete_powder_stairs": "Ступеньки из синего сухого бетона",
   "block.unordinary_basics.brown_concrete_powder_stairs": "Ступеньки из коричневого сухого бетона",
-  "block.unordinary_basics.green_concrete_powder_stairs": "Green Concrete Powder Stairs",
+  "block.unordinary_basics.green_concrete_powder_stairs": "Ступеньки из зелёного сухого бетона",
   "block.unordinary_basics.red_concrete_powder_stairs": "Ступеньки из красного сухого бетона",
   "block.unordinary_basics.black_concrete_powder_stairs": "Ступеньки из чёрного сухого бетона",
   "block.unordinary_basics.calcite_slab": "Кальцитовая плита",
@@ -309,7 +309,7 @@
   "unordinary_basics.jukebox.button.play": "Играть",
   "unordinary_basics.jukebox.button.stop": "Стоп",
   "unordinary_basics.menu.fletching_table.title": "Стол лучника",
-  "unordinary_basics.menu.fletching_table.switch.apotheosis": "Open Apotheosis Menu",
-  "unordinary_basics.menu.fletching_table.switch.ub": "Open Unordinary Basics Menu",
-  "itemGroup.unordinary_basics.tab": "UB Blocks"
+  "unordinary_basics.menu.fletching_table.switch.apotheosis": "Открыть меню Apotheosis",
+  "unordinary_basics.menu.fletching_table.switch.ub": "Открыть меню Unordinary Basics",
+  "itemGroup.unordinary_basics.tab": "Блоки из UB"
 }
