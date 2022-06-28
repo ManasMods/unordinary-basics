@@ -30,7 +30,7 @@ public class FletchingRecipeSerializer implements RecipeSerializer<FletchingReci
         String[] patternArray = shrink(patternFromJson(GsonHelper.getAsJsonArray(pSerializedRecipe, "pattern")));
         int i = patternArray[0].length();
         int j = patternArray.length;
-        
+
         NonNullList<Ingredient> dissolvePattern = dissolvePattern(patternArray, ingredientMap, i, j);
         ItemStack result = ShapedRecipe.itemStackFromJson(GsonHelper.getAsJsonObject(pSerializedRecipe, "result"));
 
@@ -56,9 +56,9 @@ public class FletchingRecipeSerializer implements RecipeSerializer<FletchingReci
     public void toNetwork(FriendlyByteBuf pBuffer, FletchingRecipe pRecipe) {
         pBuffer.writeVarInt(2);
         pBuffer.writeVarInt(3);
-        
+
         NonNullList<Ingredient> ingredients = pRecipe.getIngredients();
-        
+
         for (Ingredient ingredient : ingredients) {
             ingredient.toNetwork(pBuffer);
         }
@@ -134,8 +134,8 @@ public class FletchingRecipeSerializer implements RecipeSerializer<FletchingReci
 
         for (int i1 = 0; i1 < pToShrink.length; ++i1) {
             String s = pToShrink[i1];
-            i = Math.min(i, firstNonSpace(s));
-            int j1 = lastNonSpace(s);
+            i = Math.min(i, 0);
+            int j1 = s.length() - 1;
             j = Math.max(j, j1);
             if (j1 < 0) {
                 if (k == i1) {
@@ -161,22 +161,6 @@ public class FletchingRecipeSerializer implements RecipeSerializer<FletchingReci
         }
     }
 
-    private static int firstNonSpace(String pEntry) {
-        int i;
-        for (i = 0; i < pEntry.length() && pEntry.charAt(i) == ' '; ++i) {
-        }
-
-        return i;
-    }
-
-    private static int lastNonSpace(String pEntry) {
-        int i;
-        for (i = pEntry.length() - 1; i >= 0 && pEntry.charAt(i) == ' '; --i) {
-        }
-
-        return i;
-    }
-
     static NonNullList<Ingredient> dissolvePattern(String[] pPattern, Map<String, Ingredient> pKeys, int pPatternWidth, int pPatternHeight) {
         NonNullList<Ingredient> nonnulllist = NonNullList.withSize(6, Ingredient.EMPTY);
         Set<String> set = Sets.newHashSet(pKeys.keySet());
@@ -185,13 +169,20 @@ public class FletchingRecipeSerializer implements RecipeSerializer<FletchingReci
         for (int i = 0; i < pPattern.length; ++i) {
             for (int j = 0; j < pPattern[i].length(); ++j) {
                 String s = pPattern[i].substring(j, j + 1);
-                Ingredient ingredient = pKeys.get(s);
-                if (ingredient == null) {
-                    throw new JsonSyntaxException("Pattern references symbol '" + s + "' but it's not defined in the key");
+                Ingredient ingredient;
+                if (s.equals(" ")) {
+                    ingredient = Ingredient.EMPTY;
+                } else {
+                    ingredient = pKeys.get(s);
+
+                    if (ingredient == null) {
+                        throw new JsonSyntaxException("Pattern references symbol '" + s + "' but it's not defined in the key");
+                    }
+
+                    set.remove(s);
                 }
 
-                set.remove(s);
-                nonnulllist.set(j + pPatternWidth * i, ingredient);
+                nonnulllist.set(i + 3 * j, ingredient);
             }
         }
 
