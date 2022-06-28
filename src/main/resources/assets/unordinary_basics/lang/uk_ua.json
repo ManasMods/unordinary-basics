@@ -309,7 +309,7 @@
   "unordinary_basics.jukebox.button.play": "Грати",
   "unordinary_basics.jukebox.button.stop": "Зупинити",
   "unordinary_basics.menu.fletching_table.title": "Стіл лучника",
-  "unordinary_basics.menu.fletching_table.switch.apotheosis": "Open Apotheosis Menu",
-  "unordinary_basics.menu.fletching_table.switch.ub": "Open Unordinary Basics Menu",
-  "itemGroup.unordinary_basics.tab": "UB Blocks"
+  "unordinary_basics.menu.fletching_table.switch.apotheosis": "Відкрити меню Apotheosis",
+  "unordinary_basics.menu.fletching_table.switch.ub": "Відкрити меню з Unordinary Basics",
+  "itemGroup.unordinary_basics.tab": "Блоки з UB"
 }
