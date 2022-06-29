@@ -14,7 +14,10 @@
     "MixinLadder",
     "NBTIngredientAccessor",
 	"MixinAbstractHorse",
-	"MixinHorse"
+	"MixinHorse",
+	"MixinBedBlock",
+	"MixinBedBlockEntity",
+	"MixinBedRenderer"
   ],
   "client": [
     "AbstractContainerScreenAccessor"

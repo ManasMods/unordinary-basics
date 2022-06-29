@@ -9,12 +9,20 @@ import com.github.manasmods.unordinary_basics.menu.Vanilla_AdditionsMenuTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.Sheets;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.entity.BannerPattern;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 
+@Mod.EventBusSubscriber(modid = Unordinary_Basics.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class Unordinary_BasicsClient extends Unordinary_BasicsCommon {
     @Override
     public void preInit(IEventBus modEventBus) {
@@ -81,6 +89,15 @@ public class Unordinary_BasicsClient extends Unordinary_BasicsCommon {
 
         event.enqueueWork(() -> MenuScreens.register(Vanilla_AdditionsMenuTypes.JUKE_BOX_MENU, JukeBoxScreen::new));
         event.enqueueWork(() -> MenuScreens.register(Vanilla_AdditionsMenuTypes.FLETCHING_TABLE_MENU, FletchingTableScreen::new));
+    }
+    
+    @SubscribeEvent
+    public static void onTextureStitch(TextureStitchEvent.Pre event) {
+        if(event.getAtlas().location() == Sheets.BANNER_SHEET) {
+            for(BannerPattern pattern : BannerPattern.values()) {
+                event.addSprite(new ResourceLocation(Unordinary_Basics.MOD_ID, "entity/banner/" + pattern.getFilename()));
+            }
+        }
     }
 
     private void cutoutMipped(Block block) {
