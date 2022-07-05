@@ -9,4 +9,10 @@ public class UnordinaryBasicsEnchantments {
 
     @ObjectHolder("master_miner")
     public static final Enchantment MASTER_MINER = null;
+    @ObjectHolder("breaking_curse")
+    public static final Enchantment BREAKING_CURSE = null;
+    @ObjectHolder("fatigue_curse")
+    public static final Enchantment FATIGUE_CURSE = null;
+    @ObjectHolder("hallucination_curse")
+    public static final Enchantment HALLUCINATION_CURSE = null;
 }

@@ -1,5 +1,8 @@
 package com.github.manasmods.unordinary_basics;
 
+import com.github.manasmods.unordinary_basics.enchantment.BreakingCurseEnchantment;
+import com.github.manasmods.unordinary_basics.enchantment.FatigueCurseEnchantment;
+import com.github.manasmods.unordinary_basics.enchantment.HallucinationCurseEnchantment;
 import com.github.manasmods.unordinary_basics.enchantment.UnordinaryBasicsEnchantments;
 import com.github.manasmods.unordinary_basics.utils.MixinLadderHelper;
 import net.minecraft.core.BlockPos;
@@ -9,7 +12,6 @@ import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -21,6 +23,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.world.BlockEvent;
@@ -29,10 +32,7 @@ import net.minecraftforge.fml.common.Mod;
 
 import java.util.Arrays;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
 @Mod.EventBusSubscriber(modid = Unordinary_Basics.MOD_ID)
 public class Unordinary_BasicsEvents {
@@ -57,10 +57,10 @@ public class Unordinary_BasicsEvents {
         BlockPos pos = event.getPos();
         Player player = event.getPlayer();
         LevelAccessor level = event.getWorld();
+        ItemStack tool = player.getItemInHand(InteractionHand.MAIN_HAND);
         // Ladders
         MixinLadderHelper.onBreak(event.getWorld(), pos, event.getState());
         // Master miner enchantment
-        ItemStack tool = player.getItemInHand(InteractionHand.MAIN_HAND);
         int radius;
         CompoundTag tag = tool.getTag();
         if (tag != null) {
@@ -78,12 +78,18 @@ public class Unordinary_BasicsEvents {
                         BlockState state = level.getBlockState(newPos);
                         if ((state.getBlock().defaultDestroyTime() != -1 || player.isCreative()) && level.getFluidState(newPos) == Fluids.EMPTY.defaultFluidState() && !level.getBlockState(newPos).is(Blocks.AIR)) {
                             level.setBlock(newPos, Blocks.AIR.defaultBlockState(), 3);
-                            if (!player.isCreative() && state.canHarvestBlock(level, newPos, player)) Block.dropResources(state, (Level) level, newPos, level.getBlockEntity(newPos), player, tool);
-                            tool.setDamageValue(tool.getDamageValue() + 1);
+                            if (!player.isCreative() && state.canHarvestBlock(level, newPos, player)) {
+                                Block.dropResources(state, (Level) level, newPos, level.getBlockEntity(newPos), player, tool);
+                            }
+                            BreakingCurseEnchantment.damageItem(tool);
                         }
                     }
                 }
             }
+        }
+        // Curse of Breaking
+        if (EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.BREAKING_CURSE, tool) > 0 && !player.isCreative()) {
+            BreakingCurseEnchantment.damageItem(tool);
         }
     }
 
@@ -103,16 +109,36 @@ public class Unordinary_BasicsEvents {
     @SubscribeEvent
     public static void onLivingEntityHurt(LivingHurtEvent event) {
         if (event.getEntityLiving() instanceof Player player) {
-            if (fullArmorSet(player, CHAINMAIL_ARMOR) && event.getSource().msgId.equals("arrow")) {
+            // Full armor effects
+            if (hasFullArmorSet(player, CHAINMAIL_ARMOR) && event.getSource().msgId.equals("arrow")) {
                 event.setAmount(event.getAmount() * 0.75f);
             }
-            if (fullArmorSet(player, NETHERITE_ARMOR) && (event.getSource() == DamageSource.LAVA || event.getSource() == DamageSource.IN_FIRE || event.getSource() == DamageSource.ON_FIRE)) {
+            if (hasFullArmorSet(player, NETHERITE_ARMOR) && (event.getSource() == DamageSource.LAVA || event.getSource() == DamageSource.IN_FIRE || event.getSource() == DamageSource.ON_FIRE)) {
                 event.setAmount(event.getAmount() * 0.7f);
+            }
+            // Curse of Breaking
+            for (ItemStack stack : player.getArmorSlots()) {
+                if (EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.BREAKING_CURSE, stack) > 0) {
+                    BreakingCurseEnchantment.damageItem(stack);
+                }
             }
         }
     }
 
-    private static boolean fullArmorSet(Player player, Set<Item> armorSet) {
+    @SubscribeEvent
+    public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
+        Player player = event.player;
+        // Fatigue curse
+        if (EnchantmentHelper.getEnchantmentLevel(UnordinaryBasicsEnchantments.FATIGUE_CURSE, player) > 0) {
+            FatigueCurseEnchantment.applyEffects(player);
+        }
+        // Hallucination curse
+        if (EnchantmentHelper.getEnchantmentLevel(UnordinaryBasicsEnchantments.HALLUCINATION_CURSE, player) > 0) {
+            HallucinationCurseEnchantment.hallucinate(player);
+        }
+    }
+
+    private static boolean hasFullArmorSet(Player player, Set<Item> armorSet) {
         for (ItemStack stack : player.getArmorSlots()) {
             if (!armorSet.contains(stack.getItem())) {
                 return false;
