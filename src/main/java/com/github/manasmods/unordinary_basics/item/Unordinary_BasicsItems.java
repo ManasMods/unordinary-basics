@@ -10,5 +10,7 @@ public class Unordinary_BasicsItems {
 
     @ObjectHolder("animal_bait")
     public static final Item ANIMAL_BAIT = null;
+    @ObjectHolder("rabbit_boots")
+    public static final Item RABBIT_BOOTS = null;
 
 }
