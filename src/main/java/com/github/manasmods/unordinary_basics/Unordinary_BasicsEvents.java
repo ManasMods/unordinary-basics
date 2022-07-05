@@ -4,6 +4,8 @@ import com.github.manasmods.unordinary_basics.enchantment.UnordinaryBasicsEnchan
 import com.github.manasmods.unordinary_basics.utils.MixinLadderHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
@@ -20,6 +22,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -58,7 +61,13 @@ public class Unordinary_BasicsEvents {
         MixinLadderHelper.onBreak(event.getWorld(), pos, event.getState());
         // Master miner enchantment
         ItemStack tool = player.getItemInHand(InteractionHand.MAIN_HAND);
-        int radius = EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.MASTER_MINER, tool);
+        int radius;
+        CompoundTag tag = tool.getTag();
+        if (tag != null) {
+            radius = tag.getInt("masterMinerLevel");
+        } else {
+            radius = EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.MASTER_MINER, tool);
+        }
         if (radius > 0) {
             Direction.Axis playerAxis = getFacingDirection(player);
             Direction.Axis[] axes = Arrays.stream(Direction.Axis.values()).filter(a -> a != playerAxis).toArray(Direction.Axis[]::new);
@@ -75,6 +84,19 @@ public class Unordinary_BasicsEvents {
                     }
                 }
             }
+        }
+    }
+
+    @SubscribeEvent
+    public static void onItemRightClick(PlayerInteractEvent.RightClickItem event) {
+        ItemStack stack = event.getItemStack();
+        int maxLevel = EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.MASTER_MINER, stack);
+        CompoundTag tag = stack.getTag();
+        if (maxLevel > 0 && tag != null) {
+            int currentLevel = tag.getInt("masterMinerLevel");
+            int newLevel = currentLevel == maxLevel ? 0 : currentLevel + 1;
+            tag.putInt("masterMinerLevel", newLevel);
+            event.getPlayer().displayClientMessage(new TextComponent("Using Master Miner level " + newLevel), true);
         }
     }
 

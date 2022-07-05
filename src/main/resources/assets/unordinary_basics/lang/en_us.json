@@ -324,5 +324,5 @@
   "item.unordinary_basics.animal_bait": "Animal Bait",
 
   "enchantment.unordinary_basics.master_miner": "Master Miner",
-  "enchantment.unordinary_basics.master_miner.desc": "Mines multiple blocks at once based on the level"
+  "enchantment.unordinary_basics.master_miner.desc": "Mines multiple blocks at once - right click to change level."
 }
