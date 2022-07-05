@@ -13,7 +13,7 @@ import java.util.function.Supplier;
 
 public enum Unordinary_BasicsArmorMaterials implements ArmorMaterial {
 
-    TECHNOBLADE_CROWN("technoblade_crown", 37, new int[]{1, 1, 1, 1}, 25, SoundEvents.ARMOR_EQUIP_GOLD, 0.0F, 0.0F, () -> Ingredient.of(Items.GOLD_BLOCK));
+    TECHNOBLADE_CROWN("technoblade_crown", 37, new int[]{3, 6, 8, 3}, 25, SoundEvents.ARMOR_EQUIP_GOLD, 3.0F, 0.2F, () -> Ingredient.of(Items.GOLD_BLOCK));
 
     private static final int[] HEALTH_PER_SLOT = new int[]{1, 3, 5, 2};
     private final String name;
