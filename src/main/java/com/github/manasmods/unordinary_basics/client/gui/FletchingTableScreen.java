@@ -2,7 +2,7 @@ package com.github.manasmods.unordinary_basics.client.gui;
 
 import com.github.manasmods.manascore.client.gui.widget.ImagePredicateButton;
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
-import com.github.manasmods.unordinary_basics.integration.ApotheosisIntegration;
+import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisIntegration;
 import com.github.manasmods.unordinary_basics.menu.FletchingTableMenu;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;

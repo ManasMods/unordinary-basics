@@ -4,7 +4,6 @@ import com.github.manasmods.unordinary_basics.handler.UBEntityHandler;
 import com.github.manasmods.unordinary_basics.handler.UBHoeHandler;
 import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
 import com.github.manasmods.unordinary_basics.registry.Unordinary_BasicsRegistry;
-import net.minecraft.world.level.Level;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;

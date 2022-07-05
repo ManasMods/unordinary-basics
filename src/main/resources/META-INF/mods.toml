@@ -3,7 +3,7 @@ loaderVersion="${forgeLoaderVersion}"
 license="All rights reserved"
 [[mods]]
 modId="unordinary_basics"
-version="${modVersion}"
+version="1.0.1.0"
 displayName="Unordinary Basics"
 logoFile="logo.png"
 

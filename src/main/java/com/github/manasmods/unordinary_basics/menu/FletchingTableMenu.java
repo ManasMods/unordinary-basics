@@ -22,6 +22,8 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.wrapper.InvWrapper;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 public class FletchingTableMenu extends AbstractContainerMenu {
@@ -56,8 +58,13 @@ public class FletchingTableMenu extends AbstractContainerMenu {
             //Handle Fletching Table Inventory Shift-Click
             slotItemStack = moveToPlayerInventory(slotItemStack);
         } else {
-            //Handle Inventory Shift-Click
-            slotItemStack = moveToFletchingTableInventory(slotItemStack);
+            if (pIndex == resultIndex) {
+                slots.get(pIndex).onQuickCraft(ItemStack.EMPTY, slotItemStack);
+                return ItemStack.EMPTY;
+            } else {
+                //Handle Inventory Shift-Click
+                slotItemStack = moveToFletchingTableInventory(slotItemStack);
+            }
         }
 
         Slot slot = slots.get(pIndex);
@@ -192,6 +199,24 @@ public class FletchingTableMenu extends AbstractContainerMenu {
     public void removed(Player pPlayer) {
         super.removed(pPlayer);
         this.levelAccess.execute((level, pos) -> this.clearContainer(pPlayer, craftingContainer));
+    }
+
+    public List<Slot> getInputSlots() {
+        List<Slot> inputSlots = new ArrayList<>();
+        for (int i = 0; i < lastCraftingIndex; i++) {
+            inputSlots.add(slots.get(i));
+        }
+
+        return inputSlots;
+    }
+
+    public List<Slot> getInventorySlots() {
+        List<Slot> invSlots = new ArrayList<>();
+        for (int i = resultIndex + 1; i < lastInventoryIndex; i++) {
+            invSlots.add(slots.get(i));
+        }
+
+        return invSlots;
     }
 }
 
