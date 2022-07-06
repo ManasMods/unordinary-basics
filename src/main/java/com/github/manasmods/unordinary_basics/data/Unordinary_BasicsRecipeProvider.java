@@ -6,15 +6,12 @@ import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.data.recipes.RecipeBuilder;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
-
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
@@ -25,13 +22,15 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
     public Unordinary_BasicsRecipeProvider(GatherDataEvent gatherDataEvent) {
         super(gatherDataEvent);
     }
+
     protected static final ImmutableList<ItemLike> COPPER_BLOCK_SMELTABLES = ImmutableList.of(Items.RAW_COPPER_BLOCK);
     protected static final ImmutableList<ItemLike> GOLD_BLOCK_SMELTABLES = ImmutableList.of(Items.RAW_GOLD_BLOCK);
     protected static final ImmutableList<ItemLike> IRON_BLOCK_SMELTABLES = ImmutableList.of(Items.RAW_IRON_BLOCK);
+
+    @SuppressWarnings("ConstantConditions")
     protected void generate(Consumer<FinishedRecipe> consumer) {
 
         //MISC
-
         smeltingRecipe(consumer, Ingredient.of(Items.LEATHER), Items.ROTTEN_FLESH, 0.35F, 200);
         campfireRecipe(consumer, Ingredient.of(Items.LEATHER), Items.ROTTEN_FLESH, 0.35F, 600);
         smeltingRecipe(consumer, Ingredient.of(Items.RAW_COPPER_BLOCK), Items.COPPER_BLOCK, 0.35F, 500);
@@ -42,7 +41,6 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
         oreBlasting(consumer, IRON_BLOCK_SMELTABLES, Items.IRON_BLOCK, 0.35F, 250, "iron");
 
         //VANILLA CHANGES
-
         stairs(consumer, Blocks.OAK_STAIRS, Blocks.OAK_PLANKS);
         slab(consumer, Blocks.OAK_SLAB, Blocks.OAK_PLANKS);
         stairs(consumer, Blocks.SPRUCE_STAIRS, Blocks.SPRUCE_PLANKS);
@@ -457,220 +455,211 @@ STAIRS AND SLABS
 
 
         ShapedRecipeBuilder.shaped(Blocks.DISPENSER)
-                .define('C', Blocks.COBBLED_DEEPSLATE)
-                .define('B', Items.BOW)
-                .define('R', Items.REDSTONE)
-                .pattern("CCC")
-                .pattern("CBC")
-                .pattern("CRC")
-                .unlockedBy("has_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Blocks.COBBLED_DEEPSLATE).build()))
-                .save(consumer);
+            .define('C', Blocks.COBBLED_DEEPSLATE)
+            .define('B', Items.BOW)
+            .define('R', Items.REDSTONE)
+            .pattern("CCC")
+            .pattern("CBC")
+            .pattern("CRC")
+            .unlockedBy("has_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Blocks.COBBLED_DEEPSLATE).build()))
+            .save(consumer);
         ShapedRecipeBuilder.shaped(Blocks.DROPPER)
-                .define('C', Blocks.COBBLED_DEEPSLATE)
-                .define('R', Items.REDSTONE)
-                .pattern("CCC")
-                .pattern("C C")
-                .pattern("CRC")
-                .unlockedBy("has_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Blocks.COBBLED_DEEPSLATE).build()))
-                .save(consumer);
+            .define('C', Blocks.COBBLED_DEEPSLATE)
+            .define('R', Items.REDSTONE)
+            .pattern("CCC")
+            .pattern("C C")
+            .pattern("CRC")
+            .unlockedBy("has_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Blocks.COBBLED_DEEPSLATE).build()))
+            .save(consumer);
         ShapedRecipeBuilder.shaped(Blocks.OBSERVER)
-                .define('C', Blocks.COBBLED_DEEPSLATE)
-                .define('R', Items.REDSTONE)
-                .define('Q', Items.QUARTZ)
-                .pattern("CCC")
-                .pattern("RRQ")
-                .pattern("CCC")
-                .unlockedBy("has_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Blocks.COBBLED_DEEPSLATE).build()))
-                .save(consumer);
+            .define('C', Blocks.COBBLED_DEEPSLATE)
+            .define('R', Items.REDSTONE)
+            .define('Q', Items.QUARTZ)
+            .pattern("CCC")
+            .pattern("RRQ")
+            .pattern("CCC")
+            .unlockedBy("has_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Blocks.COBBLED_DEEPSLATE).build()))
+            .save(consumer);
         ShapedRecipeBuilder.shaped(Blocks.PISTON)
-                .define('C', Blocks.COBBLED_DEEPSLATE)
-                .define('R', Items.REDSTONE)
-                .define('I', Items.IRON_INGOT)
-                .define('W', ItemTags.PLANKS)
-                .pattern("WWW")
-                .pattern("CIC")
-                .pattern("CRC")
-                .unlockedBy("has_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Blocks.COBBLED_DEEPSLATE).build()))
-                .save(consumer);
+            .define('C', Blocks.COBBLED_DEEPSLATE)
+            .define('R', Items.REDSTONE)
+            .define('I', Items.IRON_INGOT)
+            .define('W', ItemTags.PLANKS)
+            .pattern("WWW")
+            .pattern("CIC")
+            .pattern("CRC")
+            .unlockedBy("has_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Blocks.COBBLED_DEEPSLATE).build()))
+            .save(consumer);
 
         ShapedRecipeBuilder.shaped(Items.SADDLE)
-                .define('L', Items.LEATHER)
-                .define('S', Items.STRING)
-                .define('I', Items.IRON_INGOT)
-                .pattern("S S")
-                .pattern("LIL")
-                .pattern("S S")
-                .unlockedBy("has_leather", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.LEATHER).build()))
-                .save(consumer);
+            .define('L', Items.LEATHER)
+            .define('S', Items.STRING)
+            .define('I', Items.IRON_INGOT)
+            .pattern("S S")
+            .pattern("LIL")
+            .pattern("S S")
+            .unlockedBy("has_leather", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.LEATHER).build()))
+            .save(consumer);
         ShapedRecipeBuilder.shaped(Items.NAME_TAG)
-                .define('P', Items.PAPER)
-                .define('S', Items.STRING)
-                .pattern("P")
-                .pattern("S")
-                .unlockedBy("has_string", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.PAPER).build()))
-                .save(consumer);
+            .define('P', Items.PAPER)
+            .define('S', Items.STRING)
+            .pattern("P")
+            .pattern("S")
+            .unlockedBy("has_string", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.PAPER).build()))
+            .save(consumer);
         ShapedRecipeBuilder.shaped(Items.TRIDENT)
-                .define('I', Items.IRON_INGOT)
-                .define('D', Items.DIAMOND)
-                .define('P', Items.PRISMARINE_SHARD)
-                .pattern("III")
-                .pattern("DPD")
-                .pattern(" P ")
-                .unlockedBy("has_prismarine_shard", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.PRISMARINE_SHARD).build()))
-                .save(consumer);
+            .define('I', Items.IRON_INGOT)
+            .define('D', Items.DIAMOND)
+            .define('P', Items.PRISMARINE_SHARD)
+            .pattern("III")
+            .pattern("DPD")
+            .pattern(" P ")
+            .unlockedBy("has_prismarine_shard", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.PRISMARINE_SHARD).build()))
+            .save(consumer);
         ShapedRecipeBuilder.shaped(Items.CHAINMAIL_HELMET)
-                .define('I', Items.IRON_INGOT)
-                .define('N', Items.IRON_NUGGET)
-                .pattern("NIN")
-                .pattern("N N")
-                .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.IRON_NUGGET).build()))
-                .save(consumer);
+            .define('I', Items.IRON_INGOT)
+            .define('N', Items.IRON_NUGGET)
+            .pattern("NIN")
+            .pattern("N N")
+            .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.IRON_NUGGET).build()))
+            .save(consumer);
         ShapedRecipeBuilder.shaped(Items.CHAINMAIL_CHESTPLATE)
-                .define('I', Items.IRON_INGOT)
-                .define('N', Items.IRON_NUGGET)
-                .pattern("I I")
-                .pattern("NIN")
-                .pattern("NNN")
-                .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.IRON_NUGGET).build()))
-                .save(consumer);
+            .define('I', Items.IRON_INGOT)
+            .define('N', Items.IRON_NUGGET)
+            .pattern("I I")
+            .pattern("NIN")
+            .pattern("NNN")
+            .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.IRON_NUGGET).build()))
+            .save(consumer);
         ShapedRecipeBuilder.shaped(Items.CHAINMAIL_LEGGINGS)
-                .define('I', Items.IRON_INGOT)
-                .define('N', Items.IRON_NUGGET)
-                .pattern("NIN")
-                .pattern("I I")
-                .pattern("N N")
-                .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.IRON_NUGGET).build()))
-                .save(consumer);
+            .define('I', Items.IRON_INGOT)
+            .define('N', Items.IRON_NUGGET)
+            .pattern("NIN")
+            .pattern("I I")
+            .pattern("N N")
+            .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.IRON_NUGGET).build()))
+            .save(consumer);
         ShapedRecipeBuilder.shaped(Items.CHAINMAIL_BOOTS)
-                .define('I', Items.IRON_INGOT)
-                .define('N', Items.IRON_NUGGET)
-                .pattern("N N")
-                .pattern("I I")
-                .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.IRON_NUGGET).build()))
-                .save(consumer);
+            .define('I', Items.IRON_INGOT)
+            .define('N', Items.IRON_NUGGET)
+            .pattern("N N")
+            .pattern("I I")
+            .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.IRON_NUGGET).build()))
+            .save(consumer);
         ShapelessRecipeBuilder.shapeless(Items.ARROW)
-                .requires(ItemTags.ARROWS)
-                .unlockedBy("has_arrow", inventoryTrigger(ItemPredicate.Builder.item().of(ItemTags.ARROWS).build()))
-                .save(consumer);
+            .requires(ItemTags.ARROWS)
+            .unlockedBy("has_arrow", inventoryTrigger(ItemPredicate.Builder.item().of(ItemTags.ARROWS).build()))
+            .save(consumer);
         ShapedRecipeBuilder.shaped(Items.LEATHER_HORSE_ARMOR)
-                .define('I', Items.LEATHER)
-                .define('S', Items.STRING)
-                .pattern("IS ")
-                .pattern("III")
-                .pattern("ISI")
-                .unlockedBy("has_leather", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.LEATHER).build()))
-                .save(consumer);
+            .define('I', Items.LEATHER)
+            .define('S', Items.STRING)
+            .pattern("IS ")
+            .pattern("III")
+            .pattern("ISI")
+            .unlockedBy("has_leather", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.LEATHER).build()))
+            .save(consumer);
         ShapedRecipeBuilder.shaped(Items.IRON_HORSE_ARMOR)
-                .define('I', Items.IRON_INGOT)
-                .define('B', Items.IRON_BLOCK)
-                .define('S', Items.STRING)
-                .pattern("IS ")
-                .pattern("IBI")
-                .pattern("ISI")
-                .unlockedBy("has_iron_ingot", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.IRON_INGOT).build()))
-                .save(consumer);
+            .define('I', Items.IRON_INGOT)
+            .define('B', Items.IRON_BLOCK)
+            .define('S', Items.STRING)
+            .pattern("IS ")
+            .pattern("IBI")
+            .pattern("ISI")
+            .unlockedBy("has_iron_ingot", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.IRON_INGOT).build()))
+            .save(consumer);
         ShapedRecipeBuilder.shaped(Items.GOLDEN_HORSE_ARMOR)
-                .define('I', Items.GOLD_INGOT)
-                .define('B', Items.GOLD_BLOCK)
-                .define('S', Items.STRING)
-                .pattern("IS ")
-                .pattern("IBI")
-                .pattern("ISI")
-                .unlockedBy("has_gold_ingot", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.GOLD_INGOT).build()))
-                .save(consumer);
+            .define('I', Items.GOLD_INGOT)
+            .define('B', Items.GOLD_BLOCK)
+            .define('S', Items.STRING)
+            .pattern("IS ")
+            .pattern("IBI")
+            .pattern("ISI")
+            .unlockedBy("has_gold_ingot", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.GOLD_INGOT).build()))
+            .save(consumer);
         ShapedRecipeBuilder.shaped(Items.DIAMOND_HORSE_ARMOR)
-                .define('I', Items.DIAMOND)
-                .define('B', Items.DIAMOND_BLOCK)
-                .define('S', Items.STRING)
-                .pattern("IS ")
-                .pattern("IBI")
-                .pattern("ISI")
-                .unlockedBy("has_diamond", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.DIAMOND).build()))
-                .save(consumer);
-        ShapedRecipeBuilder.shaped(Items.ENCHANTED_GOLDEN_APPLE,2)
-                .define('A', Items.GOLDEN_APPLE)
-                .define('B', Items.GOLD_BLOCK)
-                .define('S', Items.NETHER_STAR)
-                .pattern("BAB")
-                .pattern("ASA")
-                .pattern("BAB")
-                .unlockedBy("has_golden_apple", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.GOLDEN_APPLE).build()))
-                .save(consumer);
-        ShapelessRecipeBuilder.shapeless(Items.GREEN_DYE,2)
-                .requires(Items.YELLOW_DYE)
-                .requires(Items.BLUE_DYE)
-                .unlockedBy("has_yellow_dye", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.YELLOW_DYE).build()))
-                .unlockedBy("has_blue_dye", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.BLUE_DYE).build()))
-                .save(consumer);
-        ShapedRecipeBuilder.shaped(Items.BROWN_MUSHROOM_BLOCK,4)
-                .define('M', Items.BROWN_MUSHROOM)
-                .pattern("MM")
-                .pattern("MM")
-                .unlockedBy("has_brown_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.BROWN_MUSHROOM).build()))
-                .save(consumer);
-        ShapedRecipeBuilder.shaped(Items.RED_MUSHROOM_BLOCK,4)
-                .define('M', Items.RED_MUSHROOM)
-                .pattern("MM")
-                .pattern("MM")
-                .unlockedBy("has_red_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.RED_MUSHROOM).build()))
-                .save(consumer);
-        ShapedRecipeBuilder.shaped(Items.MUSHROOM_STEM,4)
-                .define('R', Items.RED_MUSHROOM)
-                .define('B', Items.BROWN_MUSHROOM)
-                .pattern("RB")
-                .pattern("RB")
-                .unlockedBy("has_brown_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.BROWN_MUSHROOM).build()))
-                .unlockedBy("has_red_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.RED_MUSHROOM).build()))
-                .save(consumer);
-/*
+            .define('I', Items.DIAMOND)
+            .define('B', Items.DIAMOND_BLOCK)
+            .define('S', Items.STRING)
+            .pattern("IS ")
+            .pattern("IBI")
+            .pattern("ISI")
+            .unlockedBy("has_diamond", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.DIAMOND).build()))
+            .save(consumer);
+        ShapedRecipeBuilder.shaped(Items.ENCHANTED_GOLDEN_APPLE, 2)
+            .define('A', Items.GOLDEN_APPLE)
+            .define('B', Items.GOLD_BLOCK)
+            .define('S', Items.NETHER_STAR)
+            .pattern("BAB")
+            .pattern("ASA")
+            .pattern("BAB")
+            .unlockedBy("has_golden_apple", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.GOLDEN_APPLE).build()))
+            .save(consumer);
+        ShapelessRecipeBuilder.shapeless(Items.GREEN_DYE, 2)
+            .requires(Items.YELLOW_DYE)
+            .requires(Items.BLUE_DYE)
+            .unlockedBy("has_yellow_dye", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.YELLOW_DYE).build()))
+            .unlockedBy("has_blue_dye", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.BLUE_DYE).build()))
+            .save(consumer);
+        ShapedRecipeBuilder.shaped(Items.BROWN_MUSHROOM_BLOCK, 4)
+            .define('M', Items.BROWN_MUSHROOM)
+            .pattern("MM")
+            .pattern("MM")
+            .unlockedBy("has_brown_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.BROWN_MUSHROOM).build()))
+            .save(consumer);
+        ShapedRecipeBuilder.shaped(Items.RED_MUSHROOM_BLOCK, 4)
+            .define('M', Items.RED_MUSHROOM)
+            .pattern("MM")
+            .pattern("MM")
+            .unlockedBy("has_red_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.RED_MUSHROOM).build()))
+            .save(consumer);
+        ShapedRecipeBuilder.shaped(Items.MUSHROOM_STEM, 4)
+            .define('R', Items.RED_MUSHROOM)
+            .define('B', Items.BROWN_MUSHROOM)
+            .pattern("RB")
+            .pattern("RB")
+            .unlockedBy("has_brown_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.BROWN_MUSHROOM).build()))
+            .unlockedBy("has_red_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.RED_MUSHROOM).build()))
+            .save(consumer);
 
-MODDED ITEMS
-
- */
-
+        //MODDED ITEMS
         ShapedRecipeBuilder.shaped(Unordinary_BasicsItems.ANIMAL_BAIT)
-                .define('C', Items.CARROT)
-                .define('G', Items.GOLDEN_CARROT)
-                .define('P', Items.POTATO)
-                .define('W', Items.WHEAT)
-                .define('S', Items.WHEAT_SEEDS)
-                .define('#', Items.STRING)
-                .define('L', Items.LEATHER)
-                .pattern("#CL")
-                .pattern("PGW")
-                .pattern("LSL")
-                .unlockedBy("has_leather", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.LEATHER).build()))
-                .save(consumer);
+            .define('C', Items.CARROT)
+            .define('G', Items.GOLDEN_CARROT)
+            .define('P', Items.POTATO)
+            .define('W', Items.WHEAT)
+            .define('S', Items.WHEAT_SEEDS)
+            .define('#', Items.STRING)
+            .define('L', Items.LEATHER)
+            .pattern("#CL")
+            .pattern("PGW")
+            .pattern("LSL")
+            .unlockedBy("has_leather", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.LEATHER).build()))
+            .save(consumer);
 
-/*
-
-STAIRS AND SLABS TO BLOCKS
-
- */
-
+        //STAIRS AND SLABS TO BLOCKS
         stairsToBlock(consumer, Blocks.OAK_STAIRS, Blocks.OAK_PLANKS);
         stairsToBlock(consumer, Blocks.SPRUCE_STAIRS, Blocks.SPRUCE_PLANKS);
         stairsToBlock(consumer, Blocks.BIRCH_STAIRS, Blocks.BIRCH_PLANKS);

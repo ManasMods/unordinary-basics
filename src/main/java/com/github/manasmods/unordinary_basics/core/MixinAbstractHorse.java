@@ -21,8 +21,8 @@ import java.awt.event.ContainerListener;
 
 @Mixin(AbstractHorse.class)
 public abstract class MixinAbstractHorse extends Animal implements ContainerListener, PlayerRideableJumping, Saddleable {
-    protected MixinAbstractHorse(EntityType<? extends Animal> p_27557_, Level p_27558_) {
-        super(p_27557_, p_27558_);
+    protected MixinAbstractHorse(EntityType<? extends Animal> entityType, Level level) {
+        super(entityType, level);
     }
 
     @Shadow

@@ -6,7 +6,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
 public class Unordinary_BasicsCreativeTab {
-
     public static final CreativeModeTab BLOCKS = new CreativeModeTab(Unordinary_Basics.MOD_ID + ".tab") {
         @Override
         public ItemStack makeIcon() {

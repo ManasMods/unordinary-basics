@@ -14,10 +14,13 @@
     "MixinLadder",
     "NBTIngredientAccessor",
 	"MixinAbstractHorse",
-	"MixinHorse"
+	"MixinHorse",
+	"MixinBedBlock",
+	"MixinBedBlockEntity"
   ],
   "client": [
-    "AbstractContainerScreenAccessor"
+    "AbstractContainerScreenAccessor",
+    "MixinBedRenderer"
   ],
   "injectors": {
     "defaultRequire": 1

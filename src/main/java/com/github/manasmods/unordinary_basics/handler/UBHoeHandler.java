@@ -1,5 +1,6 @@
 package com.github.manasmods.unordinary_basics.handler;
 
+import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
@@ -11,19 +12,16 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.world.BlockEvent;
-import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
 
 import java.util.List;
 
+@Mod.EventBusSubscriber(modid = Unordinary_Basics.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class UBHoeHandler {
-    public static void register() {
-        IEventBus forgeBus = MinecraftForge.EVENT_BUS;
-        forgeBus.addListener(UBHoeHandler::onHarvest);
-    }
-
-    private static void onHarvest(final BlockEvent.BreakEvent e) {
+    @SubscribeEvent
+    public static void onHarvest(final BlockEvent.BreakEvent e) {
         BlockState blockState = e.getState();
 
         if (!blockState.is(BlockTags.CROPS)) return;
