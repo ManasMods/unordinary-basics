@@ -8,11 +8,19 @@
     "FletchingContainerAccessor",
     "MixinApothFletchingBlock",
     "MixinFletchingTableBlock",
+    "MixinFrostWalker",
+    "MixinItemStack",
     "MixinJukeBoxBlock",
-    "NBTIngredientAccessor"
+    "MixinLadder",
+    "NBTIngredientAccessor",
+	"MixinAbstractHorse",
+	"MixinHorse",
+	"MixinBedBlock",
+	"MixinBedBlockEntity"
   ],
   "client": [
-    "AbstractContainerScreenAccessor"
+    "AbstractContainerScreenAccessor",
+    "MixinBedRenderer"
   ],
   "injectors": {
     "defaultRequire": 1

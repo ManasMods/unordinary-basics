@@ -10,7 +10,6 @@ import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisI
 import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
 import com.github.manasmods.unordinary_basics.registry.Unordinary_BasicsRegistry;
 import lombok.Getter;
-import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
@@ -34,17 +33,17 @@ public class Unordinary_Basics {
     public Unordinary_Basics() {
         instance = this;
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        modEventBus.addListener(EventPriority.HIGH, this::setup);
-        modEventBus.addListener(this::generateData);
-
         Unordinary_BasicsRegistry.register(modEventBus);
+        modEventBus.addListener(this::setup);
+        modEventBus.addListener(this::generateData);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
-        if (ModList.get().isLoaded("apotheosis")) {
-            this.apotheosisIntegration = Optional.of(new ApotheosisIntegration());
-        }
-
+        event.enqueueWork(() -> {
+            if (ModList.get().isLoaded("apotheosis")) {
+                this.apotheosisIntegration = Optional.of(new ApotheosisIntegration());
+            }
+        });
         event.enqueueWork(Unordinary_BasicsNetwork::registerPackets);
     }
 

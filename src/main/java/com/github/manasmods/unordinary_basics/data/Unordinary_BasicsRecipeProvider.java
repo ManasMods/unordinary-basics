@@ -2,14 +2,16 @@ package com.github.manasmods.unordinary_basics.data;
 
 import com.github.manasmods.manascore.data.gen.RecipeProvider;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
+import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
+import com.google.common.collect.ImmutableList;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
-
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
@@ -21,15 +23,24 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
         super(gatherDataEvent);
     }
 
+    protected static final ImmutableList<ItemLike> COPPER_BLOCK_SMELTABLES = ImmutableList.of(Items.RAW_COPPER_BLOCK);
+    protected static final ImmutableList<ItemLike> GOLD_BLOCK_SMELTABLES = ImmutableList.of(Items.RAW_GOLD_BLOCK);
+    protected static final ImmutableList<ItemLike> IRON_BLOCK_SMELTABLES = ImmutableList.of(Items.RAW_IRON_BLOCK);
+
+    @SuppressWarnings("ConstantConditions")
     protected void generate(Consumer<FinishedRecipe> consumer) {
 
         //MISC
-
         smeltingRecipe(consumer, Ingredient.of(Items.LEATHER), Items.ROTTEN_FLESH, 0.35F, 200);
         campfireRecipe(consumer, Ingredient.of(Items.LEATHER), Items.ROTTEN_FLESH, 0.35F, 600);
+        smeltingRecipe(consumer, Ingredient.of(Items.RAW_COPPER_BLOCK), Items.COPPER_BLOCK, 0.35F, 500);
+        smeltingRecipe(consumer, Ingredient.of(Items.RAW_GOLD_BLOCK), Items.GOLD_BLOCK, 0.35F, 500);
+        smeltingRecipe(consumer, Ingredient.of(Items.RAW_IRON_BLOCK), Items.IRON_BLOCK, 0.35F, 500);
+        oreBlasting(consumer, COPPER_BLOCK_SMELTABLES, Items.COPPER_BLOCK, 0.35F, 250, "copper");
+        oreBlasting(consumer, GOLD_BLOCK_SMELTABLES, Items.GOLD_BLOCK, 0.35F, 250, "gold");
+        oreBlasting(consumer, IRON_BLOCK_SMELTABLES, Items.IRON_BLOCK, 0.35F, 250, "iron");
 
         //VANILLA CHANGES
-
         stairs(consumer, Blocks.OAK_STAIRS, Blocks.OAK_PLANKS);
         slab(consumer, Blocks.OAK_SLAB, Blocks.OAK_PLANKS);
         stairs(consumer, Blocks.SPRUCE_STAIRS, Blocks.SPRUCE_PLANKS);
@@ -129,7 +140,11 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
         stairs(consumer, Blocks.DEEPSLATE_TILE_STAIRS, Blocks.DEEPSLATE_TILES);
         slab(consumer, Blocks.DEEPSLATE_TILE_SLAB, Blocks.DEEPSLATE_TILES);
 
-        //UNORDINARY BASICS RECIPES
+/*
+
+STAIRS AND SLABS
+
+ */
 
         stairs(consumer, Unordinary_BasicsBlocks.CALCITE_STAIRS, Blocks.CALCITE);
         slab(consumer, Unordinary_BasicsBlocks.CALCITE_SLAB, Blocks.CALCITE);
@@ -277,7 +292,6 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
         slab(consumer, Unordinary_BasicsBlocks.CRYING_OBSIDIAN_SLAB, Blocks.CRYING_OBSIDIAN);
         stairs(consumer, Unordinary_BasicsBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_STAIRS, Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS);
         slab(consumer, Unordinary_BasicsBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_SLAB, Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS);
-
         stairs(consumer, Unordinary_BasicsBlocks.WHITE_WOOL_STAIRS, Blocks.WHITE_WOOL);
         slab(consumer, Unordinary_BasicsBlocks.WHITE_WOOL_SLAB, Blocks.WHITE_WOOL);
         stairs(consumer, Unordinary_BasicsBlocks.ORANGE_WOOL_STAIRS, Blocks.ORANGE_WOOL);
@@ -441,173 +455,614 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
 
 
         ShapedRecipeBuilder.shaped(Blocks.DISPENSER)
-                .define('C', Blocks.COBBLED_DEEPSLATE)
-                .define('B', Items.BOW)
-                .define('R', Items.REDSTONE)
-                .pattern("CCC")
-                .pattern("CBC")
-                .pattern("CRC")
-                .unlockedBy("has_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Blocks.COBBLED_DEEPSLATE).build()))
-                .save(consumer);
+            .define('C', Blocks.COBBLED_DEEPSLATE)
+            .define('B', Items.BOW)
+            .define('R', Items.REDSTONE)
+            .pattern("CCC")
+            .pattern("CBC")
+            .pattern("CRC")
+            .unlockedBy("has_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Blocks.COBBLED_DEEPSLATE).build()))
+            .save(consumer);
         ShapedRecipeBuilder.shaped(Blocks.DROPPER)
-                .define('C', Blocks.COBBLED_DEEPSLATE)
-                .define('R', Items.REDSTONE)
-                .pattern("CCC")
-                .pattern("C C")
-                .pattern("CRC")
-                .unlockedBy("has_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Blocks.COBBLED_DEEPSLATE).build()))
-                .save(consumer);
+            .define('C', Blocks.COBBLED_DEEPSLATE)
+            .define('R', Items.REDSTONE)
+            .pattern("CCC")
+            .pattern("C C")
+            .pattern("CRC")
+            .unlockedBy("has_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Blocks.COBBLED_DEEPSLATE).build()))
+            .save(consumer);
         ShapedRecipeBuilder.shaped(Blocks.OBSERVER)
-                .define('C', Blocks.COBBLED_DEEPSLATE)
-                .define('R', Items.REDSTONE)
-                .define('Q', Items.QUARTZ)
-                .pattern("CCC")
-                .pattern("RRQ")
-                .pattern("CCC")
-                .unlockedBy("has_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Blocks.COBBLED_DEEPSLATE).build()))
-                .save(consumer);
+            .define('C', Blocks.COBBLED_DEEPSLATE)
+            .define('R', Items.REDSTONE)
+            .define('Q', Items.QUARTZ)
+            .pattern("CCC")
+            .pattern("RRQ")
+            .pattern("CCC")
+            .unlockedBy("has_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Blocks.COBBLED_DEEPSLATE).build()))
+            .save(consumer);
         ShapedRecipeBuilder.shaped(Blocks.PISTON)
-                .define('C', Blocks.COBBLED_DEEPSLATE)
-                .define('R', Items.REDSTONE)
-                .define('I', Items.IRON_INGOT)
-                .define('W', ItemTags.PLANKS)
-                .pattern("WWW")
-                .pattern("CIC")
-                .pattern("CRC")
-                .unlockedBy("has_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Blocks.COBBLED_DEEPSLATE).build()))
-                .save(consumer);
-
+            .define('C', Blocks.COBBLED_DEEPSLATE)
+            .define('R', Items.REDSTONE)
+            .define('I', Items.IRON_INGOT)
+            .define('W', ItemTags.PLANKS)
+            .pattern("WWW")
+            .pattern("CIC")
+            .pattern("CRC")
+            .unlockedBy("has_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Blocks.COBBLED_DEEPSLATE).build()))
+            .save(consumer);
 
         ShapedRecipeBuilder.shaped(Items.SADDLE)
-                .define('L', Items.LEATHER)
-                .define('S', Items.STRING)
-                .define('I', Items.IRON_INGOT)
-                .pattern("S S")
-                .pattern("LIL")
-                .pattern("S S")
-                .unlockedBy("has_leather", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.LEATHER).build()))
-                .save(consumer);
+            .define('L', Items.LEATHER)
+            .define('S', Items.STRING)
+            .define('I', Items.IRON_INGOT)
+            .pattern("S S")
+            .pattern("LIL")
+            .pattern("S S")
+            .unlockedBy("has_leather", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.LEATHER).build()))
+            .save(consumer);
         ShapedRecipeBuilder.shaped(Items.NAME_TAG)
-                .define('P', Items.PAPER)
-                .define('S', Items.STRING)
-                .pattern("P")
-                .pattern("S")
-                .unlockedBy("has_string", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.PAPER).build()))
-                .save(consumer);
-        ShapedRecipeBuilder.shaped(Items.LEAD)
-                .define('B', Items.SLIME_BALL)
-                .define('S', Items.STRING)
-                .pattern("SS ")
-                .pattern("SBS")
-                .pattern(" SS")
-                .unlockedBy("has_slime_ball", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.SLIME_BALL).build()))
-                .save(consumer);
+            .define('P', Items.PAPER)
+            .define('S', Items.STRING)
+            .pattern("P")
+            .pattern("S")
+            .unlockedBy("has_string", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.PAPER).build()))
+            .save(consumer);
         ShapedRecipeBuilder.shaped(Items.TRIDENT)
-                .define('I', Items.IRON_INGOT)
-                .define('D', Items.DIAMOND)
-                .define('P', Items.PRISMARINE_SHARD)
-                .pattern("III")
-                .pattern("DPD")
-                .pattern(" P ")
-                .unlockedBy("has_prismarine_shard", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.PRISMARINE_SHARD).build()))
-                .save(consumer);
+            .define('I', Items.IRON_INGOT)
+            .define('D', Items.DIAMOND)
+            .define('P', Items.PRISMARINE_SHARD)
+            .pattern("III")
+            .pattern("DPD")
+            .pattern(" P ")
+            .unlockedBy("has_prismarine_shard", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.PRISMARINE_SHARD).build()))
+            .save(consumer);
         ShapedRecipeBuilder.shaped(Items.CHAINMAIL_HELMET)
-                .define('I', Items.IRON_INGOT)
-                .define('N', Items.IRON_NUGGET)
-                .pattern("NIN")
-                .pattern("N N")
-                .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.IRON_NUGGET).build()))
-                .save(consumer);
+            .define('I', Items.IRON_INGOT)
+            .define('N', Items.IRON_NUGGET)
+            .pattern("NIN")
+            .pattern("N N")
+            .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.IRON_NUGGET).build()))
+            .save(consumer);
         ShapedRecipeBuilder.shaped(Items.CHAINMAIL_CHESTPLATE)
-                .define('I', Items.IRON_INGOT)
-                .define('N', Items.IRON_NUGGET)
-                .pattern("I I")
-                .pattern("NIN")
-                .pattern("NNN")
-                .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.IRON_NUGGET).build()))
-                .save(consumer);
+            .define('I', Items.IRON_INGOT)
+            .define('N', Items.IRON_NUGGET)
+            .pattern("I I")
+            .pattern("NIN")
+            .pattern("NNN")
+            .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.IRON_NUGGET).build()))
+            .save(consumer);
         ShapedRecipeBuilder.shaped(Items.CHAINMAIL_LEGGINGS)
-                .define('I', Items.IRON_INGOT)
-                .define('N', Items.IRON_NUGGET)
-                .pattern("NIN")
-                .pattern("I I")
-                .pattern("N N")
-                .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.IRON_NUGGET).build()))
-                .save(consumer);
+            .define('I', Items.IRON_INGOT)
+            .define('N', Items.IRON_NUGGET)
+            .pattern("NIN")
+            .pattern("I I")
+            .pattern("N N")
+            .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.IRON_NUGGET).build()))
+            .save(consumer);
         ShapedRecipeBuilder.shaped(Items.CHAINMAIL_BOOTS)
-                .define('I', Items.IRON_INGOT)
-                .define('N', Items.IRON_NUGGET)
-                .pattern("N N")
-                .pattern("I I")
-                .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.IRON_NUGGET).build()))
-                .save(consumer);
-
+            .define('I', Items.IRON_INGOT)
+            .define('N', Items.IRON_NUGGET)
+            .pattern("N N")
+            .pattern("I I")
+            .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.IRON_NUGGET).build()))
+            .save(consumer);
         ShapelessRecipeBuilder.shapeless(Items.ARROW)
-                .requires(ItemTags.ARROWS)
-                .unlockedBy("has_arrow", inventoryTrigger(ItemPredicate.Builder.item().of(ItemTags.ARROWS).build()))
-                .save(consumer);
-
+            .requires(ItemTags.ARROWS)
+            .unlockedBy("has_arrow", inventoryTrigger(ItemPredicate.Builder.item().of(ItemTags.ARROWS).build()))
+            .save(consumer);
         ShapedRecipeBuilder.shaped(Items.LEATHER_HORSE_ARMOR)
-                .define('I', Items.LEATHER)
-                .define('S', Items.STRING)
-                .pattern("IS ")
-                .pattern("III")
-                .pattern("ISI")
-                .unlockedBy("has_leather", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.LEATHER).build()))
-                .save(consumer);
+            .define('I', Items.LEATHER)
+            .define('S', Items.STRING)
+            .pattern("IS ")
+            .pattern("III")
+            .pattern("ISI")
+            .unlockedBy("has_leather", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.LEATHER).build()))
+            .save(consumer);
         ShapedRecipeBuilder.shaped(Items.IRON_HORSE_ARMOR)
-                .define('I', Items.IRON_INGOT)
-                .define('B', Items.IRON_BLOCK)
-                .define('S', Items.STRING)
-                .pattern("IS ")
-                .pattern("IBI")
-                .pattern("ISI")
-                .unlockedBy("has_iron_ingot", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.IRON_INGOT).build()))
-                .save(consumer);
+            .define('I', Items.IRON_INGOT)
+            .define('B', Items.IRON_BLOCK)
+            .define('S', Items.STRING)
+            .pattern("IS ")
+            .pattern("IBI")
+            .pattern("ISI")
+            .unlockedBy("has_iron_ingot", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.IRON_INGOT).build()))
+            .save(consumer);
         ShapedRecipeBuilder.shaped(Items.GOLDEN_HORSE_ARMOR)
-                .define('I', Items.GOLD_INGOT)
-                .define('B', Items.GOLD_BLOCK)
-                .define('S', Items.STRING)
-                .pattern("IS ")
-                .pattern("IBI")
-                .pattern("ISI")
-                .unlockedBy("has_gold_ingot", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.GOLD_INGOT).build()))
-                .save(consumer);
+            .define('I', Items.GOLD_INGOT)
+            .define('B', Items.GOLD_BLOCK)
+            .define('S', Items.STRING)
+            .pattern("IS ")
+            .pattern("IBI")
+            .pattern("ISI")
+            .unlockedBy("has_gold_ingot", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.GOLD_INGOT).build()))
+            .save(consumer);
         ShapedRecipeBuilder.shaped(Items.DIAMOND_HORSE_ARMOR)
-                .define('I', Items.DIAMOND)
-                .define('B', Items.DIAMOND_BLOCK)
-                .define('S', Items.STRING)
-                .pattern("IS ")
-                .pattern("IBI")
-                .pattern("ISI")
-                .unlockedBy("has_diamond", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.DIAMOND).build()))
-                .save(consumer);
+            .define('I', Items.DIAMOND)
+            .define('B', Items.DIAMOND_BLOCK)
+            .define('S', Items.STRING)
+            .pattern("IS ")
+            .pattern("IBI")
+            .pattern("ISI")
+            .unlockedBy("has_diamond", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.DIAMOND).build()))
+            .save(consumer);
+        ShapedRecipeBuilder.shaped(Items.ENCHANTED_GOLDEN_APPLE, 2)
+            .define('A', Items.GOLDEN_APPLE)
+            .define('B', Items.GOLD_BLOCK)
+            .define('S', Items.NETHER_STAR)
+            .pattern("BAB")
+            .pattern("ASA")
+            .pattern("BAB")
+            .unlockedBy("has_golden_apple", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.GOLDEN_APPLE).build()))
+            .save(consumer);
+        ShapelessRecipeBuilder.shapeless(Items.GREEN_DYE, 2)
+            .requires(Items.YELLOW_DYE)
+            .requires(Items.BLUE_DYE)
+            .unlockedBy("has_yellow_dye", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.YELLOW_DYE).build()))
+            .unlockedBy("has_blue_dye", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.BLUE_DYE).build()))
+            .save(consumer);
+        ShapedRecipeBuilder.shaped(Items.BROWN_MUSHROOM_BLOCK, 4)
+            .define('M', Items.BROWN_MUSHROOM)
+            .pattern("MM")
+            .pattern("MM")
+            .unlockedBy("has_brown_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.BROWN_MUSHROOM).build()))
+            .save(consumer);
+        ShapedRecipeBuilder.shaped(Items.RED_MUSHROOM_BLOCK, 4)
+            .define('M', Items.RED_MUSHROOM)
+            .pattern("MM")
+            .pattern("MM")
+            .unlockedBy("has_red_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.RED_MUSHROOM).build()))
+            .save(consumer);
+        ShapedRecipeBuilder.shaped(Items.MUSHROOM_STEM, 4)
+            .define('R', Items.RED_MUSHROOM)
+            .define('B', Items.BROWN_MUSHROOM)
+            .pattern("RB")
+            .pattern("RB")
+            .unlockedBy("has_brown_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.BROWN_MUSHROOM).build()))
+            .unlockedBy("has_red_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.RED_MUSHROOM).build()))
+            .save(consumer);
 
-        ShapedRecipeBuilder.shaped(Items.ENCHANTED_GOLDEN_APPLE,2)
-                .define('A', Items.GOLDEN_APPLE)
-                .define('B', Items.GOLD_BLOCK)
-                .define('S', Items.NETHER_STAR)
-                .pattern("BAB")
-                .pattern("ASA")
-                .pattern("BAB")
-                .unlockedBy("has_golden_apple", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.GOLDEN_APPLE).build()))
-                .save(consumer);
+        //MODDED ITEMS
+        ShapedRecipeBuilder.shaped(Unordinary_BasicsItems.ANIMAL_BAIT)
+            .define('C', Items.CARROT)
+            .define('G', Items.GOLDEN_CARROT)
+            .define('P', Items.POTATO)
+            .define('W', Items.WHEAT)
+            .define('S', Items.WHEAT_SEEDS)
+            .define('#', Items.STRING)
+            .define('L', Items.LEATHER)
+            .pattern("#CL")
+            .pattern("PGW")
+            .pattern("LSL")
+            .unlockedBy("has_leather", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Items.LEATHER).build()))
+            .save(consumer);
+
+        //STAIRS AND SLABS TO BLOCKS
+        stairsToBlock(consumer, Blocks.OAK_STAIRS, Blocks.OAK_PLANKS);
+        stairsToBlock(consumer, Blocks.SPRUCE_STAIRS, Blocks.SPRUCE_PLANKS);
+        stairsToBlock(consumer, Blocks.BIRCH_STAIRS, Blocks.BIRCH_PLANKS);
+        stairsToBlock(consumer, Blocks.JUNGLE_STAIRS, Blocks.JUNGLE_PLANKS);
+        stairsToBlock(consumer, Blocks.ACACIA_STAIRS, Blocks.ACACIA_PLANKS);
+        stairsToBlock(consumer, Blocks.DARK_OAK_STAIRS, Blocks.DARK_OAK_PLANKS);
+        stairsToBlock(consumer, Blocks.WARPED_STAIRS, Blocks.WARPED_PLANKS);
+        stairsToBlock(consumer, Blocks.CRIMSON_STAIRS, Blocks.CRIMSON_PLANKS);
+        stairsToBlock(consumer, Blocks.STONE_STAIRS, Blocks.STONE);
+        stairsToBlock(consumer, Blocks.COBBLESTONE_STAIRS, Blocks.COBBLESTONE);
+        stairsToBlock(consumer, Blocks.MOSSY_COBBLESTONE_STAIRS, Blocks.MOSSY_COBBLESTONE);
+        stairsToBlock(consumer, Blocks.STONE_BRICK_STAIRS, Blocks.STONE_BRICKS);
+        stairsToBlock(consumer, Blocks.MOSSY_STONE_BRICK_STAIRS, Blocks.MOSSY_STONE_BRICKS);
+        stairsToBlock(consumer, Blocks.ANDESITE_STAIRS, Blocks.ANDESITE);
+        stairsToBlock(consumer, Blocks.POLISHED_ANDESITE_STAIRS, Blocks.POLISHED_ANDESITE);
+        stairsToBlock(consumer, Blocks.DIORITE_STAIRS, Blocks.DIORITE);
+        stairsToBlock(consumer, Blocks.POLISHED_DIORITE_STAIRS, Blocks.POLISHED_DIORITE);
+        stairsToBlock(consumer, Blocks.GRANITE_STAIRS, Blocks.GRANITE);
+        stairsToBlock(consumer, Blocks.POLISHED_GRANITE_STAIRS, Blocks.POLISHED_GRANITE);
+        stairsToBlock(consumer, Blocks.SANDSTONE_STAIRS, Blocks.SANDSTONE);
+        stairsToBlock(consumer, Blocks.SMOOTH_SANDSTONE_STAIRS, Blocks.SMOOTH_SANDSTONE);
+        stairsToBlock(consumer, Blocks.RED_SANDSTONE_STAIRS, Blocks.RED_SANDSTONE);
+        stairsToBlock(consumer, Blocks.SMOOTH_RED_SANDSTONE_STAIRS, Blocks.SMOOTH_RED_SANDSTONE);
+        stairsToBlock(consumer, Blocks.BRICK_STAIRS, Blocks.BRICKS);
+        stairsToBlock(consumer, Blocks.PRISMARINE_STAIRS, Blocks.PRISMARINE);
+        stairsToBlock(consumer, Blocks.PRISMARINE_BRICK_STAIRS, Blocks.PRISMARINE_BRICKS);
+        stairsToBlock(consumer, Blocks.DARK_PRISMARINE_STAIRS, Blocks.DARK_PRISMARINE);
+        stairsToBlock(consumer, Blocks.NETHER_BRICK_STAIRS, Blocks.NETHER_BRICKS);
+        stairsToBlock(consumer, Blocks.RED_NETHER_BRICK_STAIRS, Blocks.RED_NETHER_BRICKS);
+        stairsToBlock(consumer, Blocks.QUARTZ_STAIRS, Blocks.QUARTZ_BLOCK);
+        stairsToBlock(consumer, Blocks.SMOOTH_QUARTZ_STAIRS, Blocks.SMOOTH_QUARTZ);
+        stairsToBlock(consumer, Blocks.PURPUR_STAIRS, Blocks.PURPUR_BLOCK);
+        stairsToBlock(consumer, Blocks.END_STONE_BRICK_STAIRS, Blocks.END_STONE_BRICKS);
+        stairsToBlock(consumer, Blocks.BLACKSTONE_STAIRS, Blocks.BLACKSTONE);
+        stairsToBlock(consumer, Blocks.POLISHED_BLACKSTONE_STAIRS, Blocks.POLISHED_BLACKSTONE);
+        stairsToBlock(consumer, Blocks.POLISHED_BLACKSTONE_BRICK_STAIRS, Blocks.POLISHED_BLACKSTONE_BRICKS);
+        stairsToBlock(consumer, Blocks.CUT_COPPER_STAIRS, Blocks.CUT_COPPER);
+        stairsToBlock(consumer, Blocks.EXPOSED_CUT_COPPER_STAIRS, Blocks.EXPOSED_CUT_COPPER);
+        stairsToBlock(consumer, Blocks.WEATHERED_CUT_COPPER_STAIRS, Blocks.WEATHERED_CUT_COPPER);
+        stairsToBlock(consumer, Blocks.OXIDIZED_CUT_COPPER_STAIRS, Blocks.OXIDIZED_CUT_COPPER);
+        stairsToBlock(consumer, Blocks.WAXED_CUT_COPPER_STAIRS, Blocks.WAXED_CUT_COPPER);
+        stairsToBlock(consumer, Blocks.WAXED_EXPOSED_CUT_COPPER_STAIRS, Blocks.WAXED_EXPOSED_CUT_COPPER);
+        stairsToBlock(consumer, Blocks.WAXED_WEATHERED_CUT_COPPER_STAIRS, Blocks.WAXED_WEATHERED_CUT_COPPER);
+        stairsToBlock(consumer, Blocks.WAXED_OXIDIZED_CUT_COPPER_STAIRS, Blocks.WAXED_OXIDIZED_CUT_COPPER);
+        stairsToBlock(consumer, Blocks.COBBLED_DEEPSLATE_STAIRS, Blocks.COBBLED_DEEPSLATE);
+        stairsToBlock(consumer, Blocks.POLISHED_DEEPSLATE_STAIRS, Blocks.POLISHED_DEEPSLATE);
+        stairsToBlock(consumer, Blocks.DEEPSLATE_BRICK_STAIRS, Blocks.DEEPSLATE_BRICKS);
+        stairsToBlock(consumer, Blocks.DEEPSLATE_TILE_STAIRS, Blocks.DEEPSLATE_TILES);
+        slabsToBlock(consumer, Blocks.OAK_SLAB, Blocks.OAK_PLANKS);
+        slabsToBlock(consumer, Blocks.SPRUCE_SLAB, Blocks.SPRUCE_PLANKS);
+        slabsToBlock(consumer, Blocks.BIRCH_SLAB, Blocks.BIRCH_PLANKS);
+        slabsToBlock(consumer, Blocks.JUNGLE_SLAB, Blocks.JUNGLE_PLANKS);
+        slabsToBlock(consumer, Blocks.ACACIA_SLAB, Blocks.ACACIA_PLANKS);
+        slabsToBlock(consumer, Blocks.DARK_OAK_SLAB, Blocks.DARK_OAK_PLANKS);
+        slabsToBlock(consumer, Blocks.WARPED_SLAB, Blocks.WARPED_PLANKS);
+        slabsToBlock(consumer, Blocks.CRIMSON_SLAB, Blocks.CRIMSON_PLANKS);
+        slabsToBlock(consumer, Blocks.STONE_SLAB, Blocks.STONE);
+        slabsToBlock(consumer, Blocks.COBBLESTONE_SLAB, Blocks.COBBLESTONE);
+        slabsToBlock(consumer, Blocks.MOSSY_COBBLESTONE_SLAB, Blocks.MOSSY_COBBLESTONE);
+        slabsToBlock(consumer, Blocks.STONE_BRICK_SLAB, Blocks.STONE_BRICKS);
+        slabsToBlock(consumer, Blocks.MOSSY_STONE_BRICK_SLAB, Blocks.MOSSY_STONE_BRICKS);
+        slabsToBlock(consumer, Blocks.ANDESITE_SLAB, Blocks.ANDESITE);
+        slabsToBlock(consumer, Blocks.POLISHED_ANDESITE_SLAB, Blocks.POLISHED_ANDESITE);
+        slabsToBlock(consumer, Blocks.DIORITE_SLAB, Blocks.DIORITE);
+        slabsToBlock(consumer, Blocks.POLISHED_DIORITE_SLAB, Blocks.POLISHED_DIORITE);
+        slabsToBlock(consumer, Blocks.GRANITE_SLAB, Blocks.GRANITE);
+        slabsToBlock(consumer, Blocks.POLISHED_GRANITE_SLAB, Blocks.POLISHED_GRANITE);
+        slabsToBlock(consumer, Blocks.SANDSTONE_SLAB, Blocks.SANDSTONE);
+        slabsToBlock(consumer, Blocks.SMOOTH_SANDSTONE_SLAB, Blocks.SMOOTH_SANDSTONE);
+        slabsToBlock(consumer, Blocks.RED_SANDSTONE_SLAB, Blocks.RED_SANDSTONE);
+        slabsToBlock(consumer, Blocks.SMOOTH_RED_SANDSTONE_SLAB, Blocks.SMOOTH_RED_SANDSTONE);
+        slabsToBlock(consumer, Blocks.BRICK_SLAB, Blocks.BRICKS);
+        slabsToBlock(consumer, Blocks.PRISMARINE_SLAB, Blocks.PRISMARINE);
+        slabsToBlock(consumer, Blocks.PRISMARINE_BRICK_SLAB, Blocks.PRISMARINE_BRICKS);
+        slabsToBlock(consumer, Blocks.DARK_PRISMARINE_SLAB, Blocks.DARK_PRISMARINE);
+        slabsToBlock(consumer, Blocks.NETHER_BRICK_SLAB, Blocks.NETHER_BRICKS);
+        slabsToBlock(consumer, Blocks.RED_NETHER_BRICK_SLAB, Blocks.RED_NETHER_BRICKS);
+        slabsToBlock(consumer, Blocks.QUARTZ_SLAB, Blocks.QUARTZ_BLOCK);
+        slabsToBlock(consumer, Blocks.SMOOTH_QUARTZ_SLAB, Blocks.SMOOTH_QUARTZ);
+        slabsToBlock(consumer, Blocks.PURPUR_SLAB, Blocks.PURPUR_BLOCK);
+        slabsToBlock(consumer, Blocks.END_STONE_BRICK_SLAB, Blocks.END_STONE_BRICKS);
+        slabsToBlock(consumer, Blocks.BLACKSTONE_SLAB, Blocks.BLACKSTONE);
+        slabsToBlock(consumer, Blocks.POLISHED_BLACKSTONE_SLAB, Blocks.POLISHED_BLACKSTONE);
+        slabsToBlock(consumer, Blocks.POLISHED_BLACKSTONE_BRICK_SLAB, Blocks.POLISHED_BLACKSTONE_BRICKS);
+        slabsToBlock(consumer, Blocks.CUT_COPPER_SLAB, Blocks.CUT_COPPER);
+        slabsToBlock(consumer, Blocks.EXPOSED_CUT_COPPER_SLAB, Blocks.EXPOSED_CUT_COPPER);
+        slabsToBlock(consumer, Blocks.WEATHERED_CUT_COPPER_SLAB, Blocks.WEATHERED_CUT_COPPER);
+        slabsToBlock(consumer, Blocks.OXIDIZED_CUT_COPPER_SLAB, Blocks.OXIDIZED_CUT_COPPER);
+        slabsToBlock(consumer, Blocks.WAXED_CUT_COPPER_SLAB, Blocks.WAXED_CUT_COPPER);
+        slabsToBlock(consumer, Blocks.WAXED_EXPOSED_CUT_COPPER_SLAB, Blocks.WAXED_EXPOSED_CUT_COPPER);
+        slabsToBlock(consumer, Blocks.WAXED_WEATHERED_CUT_COPPER_SLAB, Blocks.WAXED_WEATHERED_CUT_COPPER);
+        slabsToBlock(consumer, Blocks.WAXED_OXIDIZED_CUT_COPPER_SLAB, Blocks.WAXED_OXIDIZED_CUT_COPPER);
+        slabsToBlock(consumer, Blocks.COBBLED_DEEPSLATE_SLAB, Blocks.COBBLED_DEEPSLATE);
+        slabsToBlock(consumer, Blocks.POLISHED_DEEPSLATE_SLAB, Blocks.POLISHED_DEEPSLATE);
+        slabsToBlock(consumer, Blocks.DEEPSLATE_BRICK_SLAB, Blocks.DEEPSLATE_BRICKS);
+        slabsToBlock(consumer, Blocks.DEEPSLATE_TILE_SLAB, Blocks.DEEPSLATE_TILES);
+
+
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.CALCITE_STAIRS, Blocks.CALCITE);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.CALCITE_SLAB, Blocks.CALCITE);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.TUFF_STAIRS, Blocks.TUFF);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.TUFF_SLAB, Blocks.TUFF);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.DRIPSTONE_STAIRS, Blocks.DRIPSTONE_BLOCK);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.DRIPSTONE_SLAB, Blocks.DRIPSTONE_BLOCK);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.GRASS_BLOCK_STAIRS, Blocks.GRASS_BLOCK);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.GRASS_BLOCK_SLAB, Blocks.GRASS_BLOCK);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.DIRT_STAIRS, Blocks.DIRT);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.DIRT_SLAB, Blocks.DIRT);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.COARSE_DIRT_STAIRS, Blocks.COARSE_DIRT);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.COARSE_DIRT_SLAB, Blocks.COARSE_DIRT);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.PODZOL_STAIRS, Blocks.PODZOL);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.PODZOL_SLAB, Blocks.PODZOL);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.ROOTED_DIRT_STAIRS, Blocks.ROOTED_DIRT);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.ROOTED_DIRT_SLAB, Blocks.ROOTED_DIRT);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.CRIMSON_NYLIUM_STAIRS, Blocks.CRIMSON_NYLIUM);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.CRIMSON_NYLIUM_SLAB, Blocks.CRIMSON_NYLIUM);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.WARPED_NYLIUM_STAIRS, Blocks.WARPED_NYLIUM);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.WARPED_NYLIUM_SLAB, Blocks.WARPED_NYLIUM);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.SAND_STAIRS, Blocks.SAND);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.SAND_SLAB, Blocks.SAND);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.RED_SAND_STAIRS, Blocks.RED_SAND);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.RED_SAND_SLAB, Blocks.RED_SAND);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.GRAVEL_STAIRS, Blocks.GRAVEL);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.GRAVEL_SLAB, Blocks.GRAVEL);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.BLOCK_OF_RAW_IRON_STAIRS, Blocks.RAW_IRON_BLOCK);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.BLOCK_OF_RAW_IRON_SLAB, Blocks.RAW_IRON_BLOCK);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.BLOCK_OF_RAW_COPPER_STAIRS, Blocks.RAW_COPPER_BLOCK);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.BLOCK_OF_RAW_COPPER_SLAB, Blocks.RAW_COPPER_BLOCK);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.BLOCK_OF_RAW_GOLD_STAIRS, Blocks.RAW_GOLD_BLOCK);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.BLOCK_OF_RAW_GOLD_SLAB, Blocks.RAW_GOLD_BLOCK);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.BLOCK_OF_AMETHYST_STAIRS, Blocks.AMETHYST_BLOCK);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.BLOCK_OF_AMETHYST_SLAB, Blocks.AMETHYST_BLOCK);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.OAK_LOG_STAIRS, Blocks.OAK_LOG);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.OAK_LOG_SLAB, Blocks.OAK_LOG);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.SPRUCE_LOG_STAIRS, Blocks.SPRUCE_LOG);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.SPRUCE_LOG_SLAB, Blocks.SPRUCE_LOG);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.BIRCH_LOG_STAIRS, Blocks.BIRCH_LOG);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.BIRCH_LOG_SLAB, Blocks.BIRCH_LOG);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.JUNGLE_LOG_STAIRS, Blocks.JUNGLE_LOG);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.JUNGLE_LOG_SLAB, Blocks.JUNGLE_LOG);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.ACACIA_LOG_STAIRS, Blocks.ACACIA_LOG);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.ACACIA_LOG_SLAB, Blocks.ACACIA_LOG);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.DARK_OAK_LOG_STAIRS, Blocks.DARK_OAK_LOG);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.DARK_OAK_LOG_SLAB, Blocks.DARK_OAK_LOG);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.CRIMSON_STEM_STAIRS, Blocks.CRIMSON_STEM);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.CRIMSON_STEM_SLAB, Blocks.CRIMSON_STEM);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.WARPED_STEM_STAIRS, Blocks.WARPED_STEM);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.WARPED_STEM_SLAB, Blocks.WARPED_STEM);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.STRIPPED_OAK_LOG_STAIRS, Blocks.STRIPPED_OAK_LOG);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.STRIPPED_OAK_LOG_SLAB, Blocks.STRIPPED_OAK_LOG);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.STRIPPED_SPRUCE_LOG_STAIRS, Blocks.STRIPPED_SPRUCE_LOG);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.STRIPPED_SPRUCE_LOG_SLAB, Blocks.STRIPPED_SPRUCE_LOG);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.STRIPPED_BIRCH_LOG_STAIRS, Blocks.STRIPPED_BIRCH_LOG);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.STRIPPED_BIRCH_LOG_SLAB, Blocks.STRIPPED_BIRCH_LOG);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.STRIPPED_JUNGLE_LOG_STAIRS, Blocks.STRIPPED_JUNGLE_LOG);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.STRIPPED_JUNGLE_LOG_SLAB, Blocks.STRIPPED_JUNGLE_LOG);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.STRIPPED_ACACIA_LOG_STAIRS, Blocks.STRIPPED_ACACIA_LOG);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.STRIPPED_ACACIA_LOG_SLAB, Blocks.STRIPPED_ACACIA_LOG);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.STRIPPED_DARK_OAK_LOG_STAIRS, Blocks.STRIPPED_DARK_OAK_LOG);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.STRIPPED_DARK_OAK_LOG_SLAB, Blocks.STRIPPED_DARK_OAK_LOG);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.STRIPPED_CRIMSON_STEM_STAIRS, Blocks.STRIPPED_CRIMSON_STEM);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.STRIPPED_CRIMSON_STEM_SLAB, Blocks.STRIPPED_CRIMSON_STEM);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.STRIPPED_WARPED_STEM_STAIRS, Blocks.STRIPPED_WARPED_STEM);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.STRIPPED_WARPED_STEM_SLAB, Blocks.STRIPPED_WARPED_STEM);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.GLASS_STAIRS, Blocks.GLASS);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.GLASS_SLAB, Blocks.GLASS);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.TINTED_GLASS_STAIRS, Blocks.TINTED_GLASS);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.TINTED_GLASS_SLAB, Blocks.TINTED_GLASS);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.CUT_SANDSTONE_STAIRS, Blocks.CUT_SANDSTONE);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.OBSIDIAN_STAIRS, Blocks.OBSIDIAN);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.OBSIDIAN_SLAB, Blocks.OBSIDIAN);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.PURPUR_PILLAR_STAIRS, Blocks.PURPUR_PILLAR);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.PURPUR_PILLAR_SLAB, Blocks.PURPUR_PILLAR);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.ICE_STAIRS, Blocks.ICE);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.ICE_SLAB, Blocks.ICE);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.SNOW_STAIRS, Blocks.SNOW);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.SNOW_SLAB, Blocks.SNOW);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.CLAY_STAIRS, Blocks.CLAY);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.CLAY_SLAB, Blocks.CLAY);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.PUMPKIN_STAIRS, Blocks.PUMPKIN);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.PUMPKIN_SLAB, Blocks.PUMPKIN);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.NETHERRACK_STAIRS, Blocks.NETHERRACK);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.NETHERRACK_SLAB, Blocks.NETHERRACK);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.SOUL_SAND_STAIRS, Blocks.SOUL_SAND);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.SOUL_SAND_SLAB, Blocks.SOUL_SAND);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.SOUL_SOIL_STAIRS, Blocks.SOUL_SOIL);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.SOUL_SOIL_SLAB, Blocks.SOUL_SOIL);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.BASALT_STAIRS, Blocks.BASALT);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.BASALT_SLAB, Blocks.BASALT);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.POLISHED_BASALT_STAIRS, Blocks.POLISHED_BASALT);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.POLISHED_BASALT_SLAB, Blocks.POLISHED_BASALT);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.GLOWSTONE_STAIRS, Blocks.GLOWSTONE);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.GLOWSTONE_SLAB, Blocks.GLOWSTONE);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.CRACKED_STONE_BRICK_STAIRS, Blocks.CRACKED_STONE_BRICKS);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.CRACKED_STONE_BRICK_SLAB, Blocks.CRACKED_STONE_BRICKS);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.CHISELED_STONE_BRICK_STAIRS, Blocks.CHISELED_STONE_BRICKS);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.CHISELED_STONE_BRICK_SLAB, Blocks.CHISELED_STONE_BRICKS);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.CRACKED_DEEPSLATE_BRICK_STAIRS, Blocks.CRACKED_DEEPSLATE_BRICKS);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.CRACKED_DEEPSLATE_BRICK_SLAB, Blocks.CRACKED_DEEPSLATE_BRICKS);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.CRACKED_DEEPSLATE_TILE_STAIRS, Blocks.CRACKED_DEEPSLATE_TILES);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.CRACKED_DEEPSLATE_TILE_SLAB, Blocks.CRACKED_DEEPSLATE_TILES);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.CHISELED_DEEPSLATE_STAIRS, Blocks.CHISELED_DEEPSLATE);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.CHISELED_DEEPSLATE_SLAB, Blocks.CHISELED_DEEPSLATE);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.MELON_STAIRS, Blocks.MELON);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.MELON_SLAB, Blocks.MELON);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.MYCELIUM_STAIRS, Blocks.MYCELIUM);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.MYCELIUM_SLAB, Blocks.MYCELIUM);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.CRACKED_NETHER_BRICK_STAIRS, Blocks.CRACKED_NETHER_BRICKS);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.CRACKED_NETHER_BRICK_SLAB, Blocks.CRACKED_NETHER_BRICKS);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.CHISELED_NETHER_BRICK_STAIRS, Blocks.CHISELED_NETHER_BRICKS);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.CHISELED_NETHER_BRICK_SLAB, Blocks.CHISELED_NETHER_BRICKS);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.END_STONE_STAIRS, Blocks.END_STONE);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.END_STONE_SLAB, Blocks.END_STONE);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.CHISELED_QUARTZ_BLOCK_STAIRS, Blocks.CHISELED_QUARTZ_BLOCK);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.CHISELED_QUARTZ_BLOCK_SLAB, Blocks.CHISELED_QUARTZ_BLOCK);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.QUARTZ_BRICK_STAIRS, Blocks.QUARTZ_BRICKS);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.QUARTZ_BRICK_SLAB, Blocks.QUARTZ_BRICKS);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.QUARTZ_PILLAR_STAIRS, Blocks.QUARTZ_PILLAR);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.QUARTZ_PILLAR_SLAB, Blocks.QUARTZ_PILLAR);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.HAY_BALE_STAIRS, Blocks.HAY_BLOCK);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.HAY_BALE_SLAB, Blocks.HAY_BLOCK);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.TERRACOTTA_STAIRS, Blocks.TERRACOTTA);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.TERRACOTTA_SLAB, Blocks.TERRACOTTA);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.PACKED_ICE_STAIRS, Blocks.PACKED_ICE);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.PACKED_ICE_SLAB, Blocks.PACKED_ICE);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.SEA_LANTERN_STAIRS, Blocks.SEA_LANTERN);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.SEA_LANTERN_SLAB, Blocks.SEA_LANTERN);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.CUT_RED_SANDSTONE_STAIRS, Blocks.CUT_RED_SANDSTONE);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.MAGMA_BLOCK_STAIRS, Blocks.MAGMA_BLOCK);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.MAGMA_BLOCK_SLAB, Blocks.MAGMA_BLOCK);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.NETHER_WART_BLOCK_STAIRS, Blocks.NETHER_WART_BLOCK);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.NETHER_WART_BLOCK_SLAB, Blocks.NETHER_WART_BLOCK);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.WARPED_WART_BLOCK_STAIRS, Blocks.WARPED_WART_BLOCK);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.WARPED_WART_BLOCK_SLAB, Blocks.WARPED_WART_BLOCK);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.BONE_BLOCK_STAIRS, Blocks.BONE_BLOCK);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.BONE_BLOCK_SLAB, Blocks.BONE_BLOCK);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.BLUE_ICE_STAIRS, Blocks.BLUE_ICE);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.BLUE_ICE_SLAB, Blocks.BLUE_ICE);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.DRIED_KELP_STAIRS, Blocks.DRIED_KELP_BLOCK);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.DRIED_KELP_SLAB, Blocks.DRIED_KELP_BLOCK);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.CRYING_OBSIDIAN_STAIRS, Blocks.CRYING_OBSIDIAN);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.CRYING_OBSIDIAN_SLAB, Blocks.CRYING_OBSIDIAN);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_STAIRS, Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_SLAB, Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.WHITE_WOOL_STAIRS, Blocks.WHITE_WOOL);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.WHITE_WOOL_SLAB, Blocks.WHITE_WOOL);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.ORANGE_WOOL_STAIRS, Blocks.ORANGE_WOOL);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.ORANGE_WOOL_SLAB, Blocks.ORANGE_WOOL);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.MAGENTA_WOOL_STAIRS, Blocks.MAGENTA_WOOL);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.MAGENTA_WOOL_SLAB, Blocks.MAGENTA_WOOL);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.LIGHT_BLUE_WOOL_STAIRS, Blocks.LIGHT_BLUE_WOOL);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.LIGHT_BLUE_WOOL_SLAB, Blocks.LIGHT_BLUE_WOOL);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.YELLOW_WOOL_STAIRS, Blocks.YELLOW_WOOL);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.YELLOW_WOOL_SLAB, Blocks.YELLOW_WOOL);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.LIME_WOOL_STAIRS, Blocks.LIME_WOOL);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.LIME_WOOL_SLAB, Blocks.LIME_WOOL);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.PINK_WOOL_STAIRS, Blocks.PINK_WOOL);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.PINK_WOOL_SLAB, Blocks.PINK_WOOL);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.GRAY_WOOL_STAIRS, Blocks.GRAY_WOOL);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.GRAY_WOOL_SLAB, Blocks.GRAY_WOOL);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.LIGHT_GRAY_WOOL_STAIRS, Blocks.LIGHT_GRAY_WOOL);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.LIGHT_GRAY_WOOL_SLAB, Blocks.LIGHT_GRAY_WOOL);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.CYAN_WOOL_STAIRS, Blocks.CYAN_WOOL);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.CYAN_WOOL_SLAB, Blocks.CYAN_WOOL);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.PURPLE_WOOL_STAIRS, Blocks.PURPLE_WOOL);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.PURPLE_WOOL_SLAB, Blocks.PURPLE_WOOL);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.BLUE_WOOL_STAIRS, Blocks.BLUE_WOOL);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.BLUE_WOOL_SLAB, Blocks.BLUE_WOOL);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.BROWN_WOOL_STAIRS, Blocks.BROWN_WOOL);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.BROWN_WOOL_SLAB, Blocks.BROWN_WOOL);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.GREEN_WOOL_STAIRS, Blocks.GREEN_WOOL);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.GREEN_WOOL_SLAB, Blocks.GREEN_WOOL);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.RED_WOOL_STAIRS, Blocks.RED_WOOL);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.RED_WOOL_SLAB, Blocks.RED_WOOL);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.BLACK_WOOL_STAIRS, Blocks.BLACK_WOOL);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.BLACK_WOOL_SLAB, Blocks.BLACK_WOOL);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.WHITE_TERRACOTTA_STAIRS, Blocks.WHITE_TERRACOTTA);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.WHITE_TERRACOTTA_SLAB, Blocks.WHITE_TERRACOTTA);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.ORANGE_TERRACOTTA_STAIRS, Blocks.ORANGE_TERRACOTTA);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.ORANGE_TERRACOTTA_SLAB, Blocks.ORANGE_TERRACOTTA);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.MAGENTA_TERRACOTTA_STAIRS, Blocks.MAGENTA_TERRACOTTA);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.MAGENTA_TERRACOTTA_SLAB, Blocks.MAGENTA_TERRACOTTA);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.LIGHT_BLUE_TERRACOTTA_STAIRS, Blocks.LIGHT_BLUE_TERRACOTTA);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.LIGHT_BLUE_TERRACOTTA_SLAB, Blocks.LIGHT_BLUE_TERRACOTTA);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.YELLOW_TERRACOTTA_STAIRS, Blocks.YELLOW_TERRACOTTA);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.YELLOW_TERRACOTTA_SLAB, Blocks.YELLOW_TERRACOTTA);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.LIME_TERRACOTTA_STAIRS, Blocks.LIME_TERRACOTTA);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.LIME_TERRACOTTA_SLAB, Blocks.LIME_TERRACOTTA);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.PINK_TERRACOTTA_STAIRS, Blocks.PINK_TERRACOTTA);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.PINK_TERRACOTTA_SLAB, Blocks.PINK_TERRACOTTA);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.GRAY_TERRACOTTA_STAIRS, Blocks.GRAY_TERRACOTTA);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.GRAY_TERRACOTTA_SLAB, Blocks.GRAY_TERRACOTTA);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.LIGHT_GRAY_TERRACOTTA_STAIRS, Blocks.LIGHT_GRAY_TERRACOTTA);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.LIGHT_GRAY_TERRACOTTA_SLAB, Blocks.LIGHT_GRAY_TERRACOTTA);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.CYAN_TERRACOTTA_STAIRS, Blocks.CYAN_TERRACOTTA);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.CYAN_TERRACOTTA_SLAB, Blocks.CYAN_TERRACOTTA);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.PURPLE_TERRACOTTA_STAIRS, Blocks.PURPLE_TERRACOTTA);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.PURPLE_TERRACOTTA_SLAB, Blocks.PURPLE_TERRACOTTA);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.BLUE_TERRACOTTA_STAIRS, Blocks.BLUE_TERRACOTTA);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.BLUE_TERRACOTTA_SLAB, Blocks.BLUE_TERRACOTTA);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.BROWN_TERRACOTTA_STAIRS, Blocks.BROWN_TERRACOTTA);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.BROWN_TERRACOTTA_SLAB, Blocks.BROWN_TERRACOTTA);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.GREEN_TERRACOTTA_STAIRS, Blocks.GREEN_TERRACOTTA);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.GREEN_TERRACOTTA_SLAB, Blocks.GREEN_TERRACOTTA);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.RED_TERRACOTTA_STAIRS, Blocks.RED_TERRACOTTA);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.RED_TERRACOTTA_SLAB, Blocks.RED_TERRACOTTA);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.BLACK_TERRACOTTA_STAIRS, Blocks.BLACK_TERRACOTTA);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.BLACK_TERRACOTTA_SLAB, Blocks.BLACK_TERRACOTTA);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.WHITE_STAINED_GLASS_STAIRS, Blocks.WHITE_STAINED_GLASS);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.WHITE_STAINED_GLASS_SLAB, Blocks.WHITE_STAINED_GLASS);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.ORANGE_STAINED_GLASS_STAIRS, Blocks.ORANGE_STAINED_GLASS);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.ORANGE_STAINED_GLASS_SLAB, Blocks.ORANGE_STAINED_GLASS);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.MAGENTA_STAINED_GLASS_STAIRS, Blocks.MAGENTA_STAINED_GLASS);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.MAGENTA_STAINED_GLASS_SLAB, Blocks.MAGENTA_STAINED_GLASS);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.LIGHT_BLUE_STAINED_GLASS_STAIRS, Blocks.LIGHT_BLUE_STAINED_GLASS);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.LIGHT_BLUE_STAINED_GLASS_SLAB, Blocks.LIGHT_BLUE_STAINED_GLASS);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.YELLOW_STAINED_GLASS_STAIRS, Blocks.YELLOW_STAINED_GLASS);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.YELLOW_STAINED_GLASS_SLAB, Blocks.YELLOW_STAINED_GLASS);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.LIME_STAINED_GLASS_STAIRS, Blocks.LIME_STAINED_GLASS);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.LIME_STAINED_GLASS_SLAB, Blocks.LIME_STAINED_GLASS);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.PINK_STAINED_GLASS_STAIRS, Blocks.PINK_STAINED_GLASS);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.PINK_STAINED_GLASS_SLAB, Blocks.PINK_STAINED_GLASS);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.GRAY_STAINED_GLASS_STAIRS, Blocks.GRAY_STAINED_GLASS);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.GRAY_STAINED_GLASS_SLAB, Blocks.GRAY_STAINED_GLASS);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.LIGHT_GRAY_STAINED_GLASS_STAIRS, Blocks.LIGHT_GRAY_STAINED_GLASS);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.LIGHT_GRAY_STAINED_GLASS_SLAB, Blocks.LIGHT_GRAY_STAINED_GLASS);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.CYAN_STAINED_GLASS_STAIRS, Blocks.CYAN_STAINED_GLASS);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.CYAN_STAINED_GLASS_SLAB, Blocks.CYAN_STAINED_GLASS);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.PURPLE_STAINED_GLASS_STAIRS, Blocks.PURPLE_STAINED_GLASS);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.PURPLE_STAINED_GLASS_SLAB, Blocks.PURPLE_STAINED_GLASS);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.BLUE_STAINED_GLASS_STAIRS, Blocks.BLUE_STAINED_GLASS);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.BLUE_STAINED_GLASS_SLAB, Blocks.BLUE_STAINED_GLASS);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.BROWN_STAINED_GLASS_STAIRS, Blocks.BROWN_STAINED_GLASS);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.BROWN_STAINED_GLASS_SLAB, Blocks.BROWN_STAINED_GLASS);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.GREEN_STAINED_GLASS_STAIRS, Blocks.GREEN_STAINED_GLASS);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.GREEN_STAINED_GLASS_SLAB, Blocks.GREEN_STAINED_GLASS);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.RED_STAINED_GLASS_STAIRS, Blocks.RED_STAINED_GLASS);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.RED_STAINED_GLASS_SLAB, Blocks.RED_STAINED_GLASS);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.BLACK_STAINED_GLASS_STAIRS, Blocks.BLACK_STAINED_GLASS);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.BLACK_STAINED_GLASS_SLAB, Blocks.BLACK_STAINED_GLASS);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.WHITE_CONCRETE_STAIRS, Blocks.WHITE_CONCRETE);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.WHITE_CONCRETE_SLAB, Blocks.WHITE_CONCRETE);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.ORANGE_CONCRETE_STAIRS, Blocks.ORANGE_CONCRETE);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.ORANGE_CONCRETE_SLAB, Blocks.ORANGE_CONCRETE);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.MAGENTA_CONCRETE_STAIRS, Blocks.MAGENTA_CONCRETE);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.MAGENTA_CONCRETE_SLAB, Blocks.MAGENTA_CONCRETE);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.LIGHT_BLUE_CONCRETE_STAIRS, Blocks.LIGHT_BLUE_CONCRETE);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.LIGHT_BLUE_CONCRETE_SLAB, Blocks.LIGHT_BLUE_CONCRETE);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.YELLOW_CONCRETE_STAIRS, Blocks.YELLOW_CONCRETE);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.YELLOW_CONCRETE_SLAB, Blocks.YELLOW_CONCRETE);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.LIME_CONCRETE_STAIRS, Blocks.LIME_CONCRETE);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.LIME_CONCRETE_SLAB, Blocks.LIME_CONCRETE);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.PINK_CONCRETE_STAIRS, Blocks.PINK_CONCRETE);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.PINK_CONCRETE_SLAB, Blocks.PINK_CONCRETE);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.GRAY_CONCRETE_STAIRS, Blocks.GRAY_CONCRETE);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.GRAY_CONCRETE_SLAB, Blocks.GRAY_CONCRETE);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.LIGHT_GRAY_CONCRETE_STAIRS, Blocks.LIGHT_GRAY_CONCRETE);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.LIGHT_GRAY_CONCRETE_SLAB, Blocks.LIGHT_GRAY_CONCRETE);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.CYAN_CONCRETE_STAIRS, Blocks.CYAN_CONCRETE);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.CYAN_CONCRETE_SLAB, Blocks.CYAN_CONCRETE);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.PURPLE_CONCRETE_STAIRS, Blocks.PURPLE_CONCRETE);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.PURPLE_CONCRETE_SLAB, Blocks.PURPLE_CONCRETE);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.BLUE_CONCRETE_STAIRS, Blocks.BLUE_CONCRETE);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.BLUE_CONCRETE_SLAB, Blocks.BLUE_CONCRETE);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.BROWN_CONCRETE_STAIRS, Blocks.BROWN_CONCRETE);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.BROWN_CONCRETE_SLAB, Blocks.BROWN_CONCRETE);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.GREEN_CONCRETE_STAIRS, Blocks.GREEN_CONCRETE);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.GREEN_CONCRETE_SLAB, Blocks.GREEN_CONCRETE);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.RED_CONCRETE_STAIRS, Blocks.RED_CONCRETE);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.RED_CONCRETE_SLAB, Blocks.RED_CONCRETE);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.BLACK_CONCRETE_STAIRS, Blocks.BLACK_CONCRETE);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.BLACK_CONCRETE_SLAB, Blocks.BLACK_CONCRETE);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.WHITE_CONCRETE_POWDER_STAIRS, Blocks.WHITE_CONCRETE_POWDER);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.WHITE_CONCRETE_POWDER_SLAB, Blocks.WHITE_CONCRETE_POWDER);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.ORANGE_CONCRETE_POWDER_STAIRS, Blocks.ORANGE_CONCRETE_POWDER);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.ORANGE_CONCRETE_POWDER_SLAB, Blocks.ORANGE_CONCRETE_POWDER);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.MAGENTA_CONCRETE_POWDER_STAIRS, Blocks.MAGENTA_CONCRETE_POWDER);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.MAGENTA_CONCRETE_POWDER_SLAB, Blocks.MAGENTA_CONCRETE_POWDER);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.LIGHT_BLUE_CONCRETE_POWDER_STAIRS, Blocks.LIGHT_BLUE_CONCRETE_POWDER);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.LIGHT_BLUE_CONCRETE_POWDER_SLAB, Blocks.LIGHT_BLUE_CONCRETE_POWDER);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.YELLOW_CONCRETE_POWDER_STAIRS, Blocks.YELLOW_CONCRETE_POWDER);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.YELLOW_CONCRETE_POWDER_SLAB, Blocks.YELLOW_CONCRETE_POWDER);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.LIME_CONCRETE_POWDER_STAIRS, Blocks.LIME_CONCRETE_POWDER);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.LIME_CONCRETE_POWDER_SLAB, Blocks.LIME_CONCRETE_POWDER);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.PINK_CONCRETE_POWDER_STAIRS, Blocks.PINK_CONCRETE_POWDER);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.PINK_CONCRETE_POWDER_SLAB, Blocks.PINK_CONCRETE_POWDER);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.GRAY_CONCRETE_POWDER_STAIRS, Blocks.GRAY_CONCRETE_POWDER);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.GRAY_CONCRETE_POWDER_SLAB, Blocks.GRAY_CONCRETE_POWDER);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.LIGHT_GRAY_CONCRETE_POWDER_STAIRS, Blocks.LIGHT_GRAY_CONCRETE_POWDER);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.LIGHT_GRAY_CONCRETE_POWDER_SLAB, Blocks.LIGHT_GRAY_CONCRETE_POWDER);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.CYAN_CONCRETE_POWDER_STAIRS, Blocks.CYAN_CONCRETE_POWDER);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.CYAN_CONCRETE_POWDER_SLAB, Blocks.CYAN_CONCRETE_POWDER);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.PURPLE_CONCRETE_POWDER_STAIRS, Blocks.PURPLE_CONCRETE_POWDER);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.PURPLE_CONCRETE_POWDER_SLAB, Blocks.PURPLE_CONCRETE_POWDER);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.BLUE_CONCRETE_POWDER_STAIRS, Blocks.BLUE_CONCRETE_POWDER);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.BLUE_CONCRETE_POWDER_SLAB, Blocks.BLUE_CONCRETE_POWDER);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.BROWN_CONCRETE_POWDER_STAIRS, Blocks.BROWN_CONCRETE_POWDER);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.BROWN_CONCRETE_POWDER_SLAB, Blocks.BROWN_CONCRETE_POWDER);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.GREEN_CONCRETE_POWDER_STAIRS, Blocks.GREEN_CONCRETE_POWDER);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.GREEN_CONCRETE_POWDER_SLAB, Blocks.GREEN_CONCRETE_POWDER);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.RED_CONCRETE_POWDER_STAIRS, Blocks.RED_CONCRETE_POWDER);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.RED_CONCRETE_POWDER_SLAB, Blocks.RED_CONCRETE_POWDER);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.BLACK_CONCRETE_POWDER_STAIRS, Blocks.BLACK_CONCRETE_POWDER);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.BLACK_CONCRETE_POWDER_SLAB, Blocks.BLACK_CONCRETE_POWDER);
     }
 }

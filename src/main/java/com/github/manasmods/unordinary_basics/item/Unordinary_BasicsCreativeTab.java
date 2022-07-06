@@ -6,12 +6,16 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
 public class Unordinary_BasicsCreativeTab {
-
     public static final CreativeModeTab BLOCKS = new CreativeModeTab(Unordinary_Basics.MOD_ID + ".tab") {
         @Override
         public ItemStack makeIcon() {
             return new ItemStack(Items.BRICKS);
         }
     };
-
+    public static final CreativeModeTab ITEMS = new CreativeModeTab(Unordinary_Basics.MOD_ID + ".tab2") {
+        @Override
+        public ItemStack makeIcon() {
+            return new ItemStack(Items.STICK);
+        }
+    };
 }

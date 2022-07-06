@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:hay_bale_stairs"
+    },
+    {
+      "item": "unordinary_basics:hay_bale_stairs"
+    },
+    {
+      "item": "unordinary_basics:hay_bale_stairs"
+    },
+    {
+      "item": "unordinary_basics:hay_bale_stairs"
+    }
+  ],
+  "result": {
+    "item": "minecraft:hay_block",
+    "count": 3
+  }
+}

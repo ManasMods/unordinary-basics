@@ -5,9 +5,9 @@ import com.github.manasmods.unordinary_basics.core.FletchingContainerAccessor;
 import com.github.manasmods.unordinary_basics.menu.FletchingTableMenu;
 import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
 import com.github.manasmods.unordinary_basics.network.toserver.RequestMenuChange;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.TranslatableComponent;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.SimpleMenuProvider;
 import net.minecraft.world.inventory.ContainerLevelAccess;
@@ -17,8 +17,7 @@ import shadows.apotheosis.village.fletching.ApothFletchingBlock;
 import shadows.apotheosis.village.fletching.FletchingContainer;
 
 public class ApotheosisIntegration {
-    static final ResourceLocation UNORDINARY_BASICS_LOGO = new ResourceLocation(Unordinary_Basics.MOD_ID, "textures/gui/ub_logo.png");
-
+    
     public ApotheosisIntegration() {
         Unordinary_Basics.getLogger().info("Apotheosis integration automatically enabled!");
     }

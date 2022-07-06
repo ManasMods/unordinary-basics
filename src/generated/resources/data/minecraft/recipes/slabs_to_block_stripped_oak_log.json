@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:stripped_oak_log_slab"
+    },
+    {
+      "item": "unordinary_basics:stripped_oak_log_slab"
+    }
+  ],
+  "result": {
+    "item": "minecraft:stripped_oak_log"
+  }
+}
