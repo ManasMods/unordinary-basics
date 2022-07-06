@@ -23,7 +23,7 @@ public class TechnobladeCrownItem extends ArmorItem {
     private static final MobEffectInstance SPEED = new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 0);
 
     public TechnobladeCrownItem(Item.Properties properties) {
-        super(Unordinary_BasicsArmorMaterials.TECHNOBLADE_CROWN, EquipmentSlot.HEAD, properties);
+        super(UBArmorMaterials.TECHNOBLADE_CROWN, EquipmentSlot.HEAD, properties);
     }
 
     @Nullable

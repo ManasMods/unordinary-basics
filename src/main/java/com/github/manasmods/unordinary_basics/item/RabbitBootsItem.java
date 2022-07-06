@@ -15,7 +15,7 @@ public class RabbitBootsItem extends ArmorItem {
     private static final MobEffectInstance JUMP_BOOST = new MobEffectInstance(MobEffects.JUMP, 200, 1);
 
     public RabbitBootsItem(Properties properties) {
-        super(Unordinary_BasicsArmorMaterials.RABBIT, EquipmentSlot.FEET, properties);
+        super(UBArmorMaterials.RABBIT, EquipmentSlot.FEET, properties);
     }
 
     @Override

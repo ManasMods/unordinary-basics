@@ -1,4 +1,4 @@
-package com.github.manasmods.unordinary_basics.handler;
+package com.github.manasmods.unordinary_basics.handler.qol;
 
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import net.minecraft.core.BlockPos;
@@ -19,7 +19,7 @@ import net.minecraftforge.fml.common.Mod;
 import java.util.List;
 
 @Mod.EventBusSubscriber(modid = Unordinary_Basics.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
-public class UBHoeHandler {
+public class HoeHandler {
     @SubscribeEvent
     public static void onHarvest(final BlockEvent.BreakEvent e) {
         BlockState blockState = e.getState();
