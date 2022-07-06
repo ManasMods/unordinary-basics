@@ -13,5 +13,6 @@ public class Unordinary_BasicsItemModelProvider extends ItemModelProvider {
     @Override
     protected void generate() {
         singleTexture(Unordinary_BasicsItems.ANIMAL_BAIT);
+        singleTexture(Unordinary_BasicsItems.TECHNOBLADE_CROWN);
     }
 }
