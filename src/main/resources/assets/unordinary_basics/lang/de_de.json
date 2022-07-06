@@ -311,5 +311,10 @@
   "unordinary_basics.menu.fletching_table.title": "Bognertisch",
   "unordinary_basics.menu.fletching_table.switch.apotheosis": "Apotheosis-Menü öffnen",
   "unordinary_basics.menu.fletching_table.switch.ub": "Unordinary Basics-Menü öffnen",
-  "itemGroup.unordinary_basics.tab": "UB Blöcke"
+  "unordinary_basics.fletching": "Pfeilmacherei",
+  "itemGroup.unordinary_basics.tab": "UB Blöcke",
+  "itemGroup.unordinary_basics.tab2": "UB Items",
+  "item.unordinary_basics.animal_bait": "Tierköder",
+  "item.unordinary_basics.technoblade_crown": "Technoblades Krone",
+  "tooltip.unordinary_basics.technoblade_crown": "Eine Krone für einen König und eine Legende, die niemals wirklich sterben wird"
 }

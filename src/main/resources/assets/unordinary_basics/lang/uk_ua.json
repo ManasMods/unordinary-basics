@@ -311,5 +311,10 @@
   "unordinary_basics.menu.fletching_table.title": "Стіл лучника",
   "unordinary_basics.menu.fletching_table.switch.apotheosis": "Відкрити меню Apotheosis",
   "unordinary_basics.menu.fletching_table.switch.ub": "Відкрити меню з Unordinary Basics",
-  "itemGroup.unordinary_basics.tab": "Блоки з UB"
+  "unordinary_basics.fletching": "Створення стріл",
+  "itemGroup.unordinary_basics.tab": "Блоки з UB",
+  "itemGroup.unordinary_basics.tab2": "Предмети з UB",
+  "item.unordinary_basics.animal_bait": "Приманка для тварин",
+  "item.unordinary_basics.technoblade_crown": "Корона Technoblade",
+  "tooltip.unordinary_basics.technoblade_crown": "Корона, підходяща для короля та для легенди, яка насправді ніколи не вмирає"
 }
