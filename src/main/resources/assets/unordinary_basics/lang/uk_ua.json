@@ -196,7 +196,7 @@
   "block.unordinary_basics.pumpkin_slab": "Гарбузова плита",
   "block.unordinary_basics.netherrack_slab": "Плита з незерака",
   "block.unordinary_basics.soul_sand_slab": "Плита з піску душ",
-  "block.unordinary_basics.soul_soil_slab": "Soul Soil Slab",
+  "block.unordinary_basics.soul_soil_slab": "Плита з ґрунту душ",
   "block.unordinary_basics.basalt_slab": "Базальтова плита",
   "block.unordinary_basics.polished_basalt_slab": "Плита з гладкого базальту",
   "block.unordinary_basics.glowstone_slab": "Плита з світлокамню",
@@ -314,7 +314,7 @@
   "unordinary_basics.fletching": "Створення стріл",
   "itemGroup.unordinary_basics.tab": "Блоки з UB",
   "itemGroup.unordinary_basics.tab2": "Предмети з UB",
-  "item.unordinary_basics.animal_bait": "Animal Bait",
+  "item.unordinary_basics.animal_bait": "Приманка для тварин",
   "item.unordinary_basics.technoblade_crown": "Корона Technoblade",
   "tooltip.unordinary_basics.technoblade_crown": "Корона, підходяща для короля та для легенди, яка насправді ніколи не вмирає"
 }
