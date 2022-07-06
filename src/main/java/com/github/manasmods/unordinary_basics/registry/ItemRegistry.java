@@ -1,8 +1,9 @@
 package com.github.manasmods.unordinary_basics.registry;
 
 
-import com.github.manasmods.unordinary_basics.item.TechnobladeCrownItem;
+import com.github.manasmods.unordinary_basics.item.GliderItem;
 import com.github.manasmods.unordinary_basics.item.RabbitBootsItem;
+import com.github.manasmods.unordinary_basics.item.TechnobladeCrownItem;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsCreativeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
@@ -22,5 +23,6 @@ class ItemRegistry {
         registry.register("animal_bait", () -> new Item(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS)));
         registry.register("technoblade_crown", () -> new TechnobladeCrownItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1).rarity(Rarity.EPIC)));
         registry.register("rabbit_boots", () -> new RabbitBootsItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
+        registry.register("glider", () -> new GliderItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1).durability(265)));
     }
 }

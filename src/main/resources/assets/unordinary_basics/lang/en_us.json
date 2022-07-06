@@ -200,7 +200,7 @@
   "block.unordinary_basics.pumpkin_slab": "Pumpkin Slab",
   "block.unordinary_basics.netherrack_slab": "Netherrack Slab",
   "block.unordinary_basics.soul_sand_slab": "Soul Sand Slab",
-  "block.unordinary_basics.soul_soil_slab": "Soul Soil Slab",
+  "block.unordinary_basics.soul_soil_slab": "Soul Soul Slab",
   "block.unordinary_basics.basalt_slab": "Basalt Slab",
   "block.unordinary_basics.polished_basalt_slab": "Polished Basalt Slab",
   "block.unordinary_basics.glowstone_slab": "Glowstone Slab",
@@ -325,6 +325,7 @@
   "item.unordinary_basics.animal_bait": "Animal Bait",
   "item.unordinary_basics.rabbit_boots": "Rabbit Boots",
   "item.unordinary_basics.technoblade_crown": "Technoblade's Crown",
+  "item.unordinary_basics.glider": "Glider",
 
   "enchantment.unordinary_basics.master_miner": "Master Miner",
   "enchantment.unordinary_basics.master_miner.desc": "Mines multiple blocks at once - right click to change level.",
