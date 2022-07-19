@@ -177,6 +177,9 @@ repositories {
         runtimeOnly fg.deobf("curse.maven:patchouli-306770:${patchouliVersion}")
         runtimeOnly fg.deobf("curse.maven:enchantment-descriptions-250419:${enchantmentDescriptionsVersion}")
         runtimeOnly fg.deobf("curse.maven:bookshelf-228525:${bookshelfVersion}")
+
+        // Geckolib
+        implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.18:3.0.29')
     }
 
 // Example for how to get properties into the manifest for reading at runtime.
