@@ -1,6 +1,7 @@
 package com.github.manasmods.unordinary_basics.data;
 
 import com.github.manasmods.manascore.data.gen.RecipeProvider;
+import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
 import com.google.common.collect.ImmutableList;
@@ -644,20 +645,25 @@ STAIRS AND SLABS
             .save(consumer);
 
         //MODDED ITEMS
-        ShapedRecipeBuilder.shaped(Unordinary_BasicsItems.ANIMAL_BAIT)
-            .define('C', Items.CARROT)
-            .define('G', Items.GOLDEN_CARROT)
-            .define('P', Items.POTATO)
-            .define('W', Items.WHEAT)
-            .define('S', Items.WHEAT_SEEDS)
-            .define('#', Items.STRING)
-            .define('L', Items.LEATHER)
-            .pattern("#CL")
-            .pattern("PGW")
-            .pattern("LSL")
-            .unlockedBy("has_leather", inventoryTrigger(ItemPredicate.Builder.item()
-                .of(Items.LEATHER).build()))
+        ShapelessRecipeBuilder.shapeless(Unordinary_BasicsItems.ANIMAL_BAIT)
+            .requires(Items.CARROT)
+            .requires(Items.GOLDEN_CARROT)
+            .requires(Items.POTATO)
+            .requires(Items.WHEAT)
+            .requires(Items.WHEAT_SEEDS)
+            .requires(Unordinary_BasicsItems.POUCH)
+            .unlockedBy("has_pouch", inventoryTrigger(ItemPredicate.Builder.item()
+                .of(Unordinary_BasicsItems.POUCH).build()))
             .save(consumer);
+
+        ShapedRecipeBuilder.shaped(Unordinary_BasicsItems.POUCH)
+                .define('S', Items.STRING)
+                .define('L', Items.LEATHER)
+                .pattern("SL")
+                .pattern("LL")
+                .unlockedBy("has_leather", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.LEATHER).build()))
+                .save(consumer);
 
         //STAIRS AND SLABS TO BLOCKS
         stairsToBlock(consumer, Blocks.OAK_STAIRS, Blocks.OAK_PLANKS);
