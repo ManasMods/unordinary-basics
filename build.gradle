@@ -142,6 +142,8 @@ repositories {
             includeGroup "curse.maven"
         }
     }
+    maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+    }
 
     /*
     flatDir {
@@ -179,7 +181,7 @@ repositories {
         runtimeOnly fg.deobf("curse.maven:bookshelf-228525:${bookshelfVersion}")
 
         // Geckolib
-        implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.18:3.0.29')
+        implementation fg.deobf("software.bernie.geckolib:geckolib-forge-1.18:${geckolibVersion}")
     }
 
 // Example for how to get properties into the manifest for reading at runtime.
