@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CCC",
+    "C C",
+    "CRC"
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:cobbled_deepslate"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "result": {
+    "item": "minecraft:dropper"
+  }
+}
