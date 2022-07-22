@@ -14,4 +14,6 @@ public class Unordinary_BasicsItems {
     public static final Item RABBIT_BOOTS = null;
     @ObjectHolder("glider")
     public static final Item GLIDER = null;
+    @ObjectHolder("grapple_hook")
+    public static final Item GRAPPLE_HOOK = null;
 }
