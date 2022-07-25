@@ -15,6 +15,6 @@ public class Unordinary_BasicsItems {
     public static final Item TECHNOBLADE_CROWN = null;
     @ObjectHolder("glider")
     public static final Item GLIDER = null;
-    @ObjectHolder("grapple_hook")
-    public static final Item GRAPPLE_HOOK = null;
+    @ObjectHolder("leaper")
+    public static final Item LEAPER = null;
 }
