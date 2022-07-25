@@ -6,6 +6,9 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.common.Tags;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class FletchingContainer extends CraftingContainer {
     private static final int size = 6;
 
@@ -33,5 +36,13 @@ public class FletchingContainer extends CraftingContainer {
             case 5 -> pStack.is(Tags.Items.DUSTS_GLOWSTONE);
             default -> false;
         };
+    }
+
+    public List<ItemStack> getItems() {
+        List<ItemStack> items = new ArrayList<>();
+        for (int i = 0; i < size; i++) {
+            items.add(getItem(i));
+        }
+        return items;
     }
 }

@@ -6,11 +6,10 @@ import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = Unordinary_Basics.MOD_ID)
+@Mod.EventBusSubscriber(modid = Unordinary_Basics.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class UBFurnaceFuelHandler {
-
     @SubscribeEvent
-    public static void UBFurnaceFuelBurnTimeEvent(FurnaceFuelBurnTimeEvent event) {
+    public static void onFurnaceFuelBurnTimeEvent(final FurnaceFuelBurnTimeEvent event) {
         if(event.getItemStack().is(Items.LAVA_BUCKET)) {
             event.setBurnTime(38400);
         }

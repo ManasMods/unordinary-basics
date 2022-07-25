@@ -142,6 +142,8 @@ repositories {
             includeGroup "curse.maven"
         }
     }
+    maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+    }
 
     /*
     flatDir {
@@ -164,11 +166,7 @@ repositories {
         //Mixin Anntoation Processor
         annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
-        // compile against the JEI API but do not include it at runtime
-        compileOnly fg.deobf("mezz.jei:jei-${minecraftVersion}:${jei_version}:api")
-
-        // at runtime, use the full JEI jar
-        runtimeOnly fg.deobf("mezz.jei:jei-${minecraftVersion}:${jei_version}")
+        implementation fg.deobf("mezz.jei:jei-${minecraftVersion}:${jei_version}")
 
         // Apotheosis + dependencies
         compileOnly fg.deobf("curse.maven:apotheosis-313970:${apotheosisVersion}")
@@ -181,6 +179,9 @@ repositories {
         runtimeOnly fg.deobf("curse.maven:patchouli-306770:${patchouliVersion}")
         runtimeOnly fg.deobf("curse.maven:enchantment-descriptions-250419:${enchantmentDescriptionsVersion}")
         runtimeOnly fg.deobf("curse.maven:bookshelf-228525:${bookshelfVersion}")
+
+        // Geckolib
+        implementation fg.deobf("software.bernie.geckolib:geckolib-forge-1.18:${geckolibVersion}")
     }
 
 // Example for how to get properties into the manifest for reading at runtime.
@@ -191,7 +192,7 @@ repositories {
                     "Specification-Vendor"    : "unordinary_basicssareus",
                     "Specification-Version"   : "1", // We are version 1 of ourselves
                     "Implementation-Title"    : project.name,
-                    "Implementation-Version"  : project.jar.archiveVersion,
+                    "Implementation-Version"  : modVersion,
                     "Implementation-Vendor"   : "unordinary_basicssareus",
                     "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
             ])
