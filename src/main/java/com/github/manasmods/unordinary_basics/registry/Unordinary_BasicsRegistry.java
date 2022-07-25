@@ -23,7 +23,6 @@ public class Unordinary_BasicsRegistry {
     private static final DeferredRegister<RecipeSerializer<?>> RECIPE_SERIALIZERS = DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, Unordinary_Basics.MOD_ID);
     private static final DeferredRegister<RecipeType<?>> RECIPE_TYPES = DeferredRegister.create(Registry.RECIPE_TYPE_REGISTRY, Unordinary_Basics.MOD_ID);
     private static final DeferredRegister<Enchantment> ENCHANTMENTS = DeferredRegister.create(ForgeRegistries.ENCHANTMENTS, Unordinary_Basics.MOD_ID);
-    private static final DeferredRegister<EntityType<?>> ENTITY_TYPES = DeferredRegister.create(ForgeRegistries.ENTITIES, Unordinary_Basics.MOD_ID);
 
     public static Iterable<Block> getKnownBlocks() {
         return BLOCKS.getEntries().stream().map(RegistryObject::get)::iterator;
@@ -43,7 +42,6 @@ public class Unordinary_BasicsRegistry {
         RecipeSerializerRegistry.register(RECIPE_SERIALIZERS);
         Unordinary_BasicsRecipeTypeRegistry.register(RECIPE_TYPES);
         EnchantmentsRegistry.register(ENCHANTMENTS);
-        EntityTypeRegistry.register(modEventBus);
 
         // Add our Registries to Forge
         BLOCKS.register(modEventBus);

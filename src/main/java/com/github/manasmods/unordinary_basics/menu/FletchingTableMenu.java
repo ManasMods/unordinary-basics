@@ -38,7 +38,7 @@ public class FletchingTableMenu extends AbstractContainerMenu {
 
 
     public FletchingTableMenu(int pContainerId, ContainerLevelAccess levelAccess, Inventory inventory, BlockPos pos) {
-        super(Vanilla_AdditionsMenuTypes.FLETCHING_TABLE_MENU, pContainerId);
+        super(Unordinary_BasicsMenuTypes.FLETCHING_TABLE_MENU, pContainerId);
         this.levelAccess = levelAccess;
         this.playerInvWrapper = new InvWrapper(inventory);
         this.player = inventory.player;

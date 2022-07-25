@@ -5,7 +5,7 @@ import net.minecraft.world.inventory.MenuType;
 import net.minecraftforge.registries.ObjectHolder;
 
 @ObjectHolder(Unordinary_Basics.MOD_ID)
-public class Vanilla_AdditionsMenuTypes {
+public class Unordinary_BasicsMenuTypes {
     @ObjectHolder("juke_box_menu")
     public static final MenuType<JukeBoxMenu> JUKE_BOX_MENU = null;
     @ObjectHolder("fletching_table_menu")

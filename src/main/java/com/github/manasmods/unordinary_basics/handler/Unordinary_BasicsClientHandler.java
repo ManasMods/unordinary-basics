@@ -5,7 +5,7 @@ import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
 import com.github.manasmods.unordinary_basics.gui.FletchingTableScreen;
 import com.github.manasmods.unordinary_basics.gui.JukeBoxScreen;
 import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisIntegrationClient;
-import com.github.manasmods.unordinary_basics.menu.Vanilla_AdditionsMenuTypes;
+import com.github.manasmods.unordinary_basics.menu.Unordinary_BasicsMenuTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -79,8 +79,8 @@ public class Unordinary_BasicsClientHandler {
                 Unordinary_BasicsBlocks.ICE_SLAB
         ));
 
-        event.enqueueWork(() -> MenuScreens.register(Vanilla_AdditionsMenuTypes.JUKE_BOX_MENU, JukeBoxScreen::new));
-        event.enqueueWork(() -> MenuScreens.register(Vanilla_AdditionsMenuTypes.FLETCHING_TABLE_MENU, FletchingTableScreen::new));
+        event.enqueueWork(() -> MenuScreens.register(Unordinary_BasicsMenuTypes.JUKE_BOX_MENU, JukeBoxScreen::new));
+        event.enqueueWork(() -> MenuScreens.register(Unordinary_BasicsMenuTypes.FLETCHING_TABLE_MENU, FletchingTableScreen::new));
     }
     
     @SubscribeEvent
