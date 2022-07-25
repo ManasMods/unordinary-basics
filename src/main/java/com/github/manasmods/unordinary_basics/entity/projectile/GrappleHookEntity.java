@@ -10,6 +10,8 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 
 public class GrappleHookEntity extends AbstractArrow {
 
@@ -20,6 +22,7 @@ public class GrappleHookEntity extends AbstractArrow {
         this.shooter = shooter;
     }
 
+    @OnlyIn(Dist.CLIENT)
     public GrappleHookEntity(EntityType<? extends GrappleHookEntity> entityType, Level level) {
         super(entityType, level);
         shooter = null;
@@ -32,7 +35,6 @@ public class GrappleHookEntity extends AbstractArrow {
 
     @Override
     protected void onHit(HitResult result) {
-        super.onHit(result);
         if (!getLevel().isClientSide()) {
             shooter.moveTo(Vec3.atCenterOf(getOnPos().above()));
         }
