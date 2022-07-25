@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:light_gray_concrete_slab"
+    },
+    {
+      "item": "unordinary_basics:light_gray_concrete_slab"
+    }
+  ],
+  "result": {
+    "item": "minecraft:light_gray_concrete"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:chiseled_nether_bricks"
+    }
+  },
+  "result": {
+    "item": "unordinary_basics:chiseled_nether_brick_slab",
+    "count": 6
+  }
+}
