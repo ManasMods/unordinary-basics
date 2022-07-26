@@ -1,15 +1,18 @@
 package com.github.manasmods.unordinary_basics.handler;
 
+import com.github.manasmods.manascore.tab.InventoryTabRegistry;
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
 import com.github.manasmods.unordinary_basics.gui.FletchingTableScreen;
 import com.github.manasmods.unordinary_basics.gui.JukeBoxScreen;
+import com.github.manasmods.unordinary_basics.gui.Unordinary_BasicsInventoryTab;
 import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisIntegrationClient;
 import com.github.manasmods.unordinary_basics.menu.Unordinary_BasicsMenuTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BannerPattern;
@@ -81,6 +84,7 @@ public class Unordinary_BasicsClientHandler {
 
         event.enqueueWork(() -> MenuScreens.register(Unordinary_BasicsMenuTypes.JUKE_BOX_MENU, JukeBoxScreen::new));
         event.enqueueWork(() -> MenuScreens.register(Unordinary_BasicsMenuTypes.FLETCHING_TABLE_MENU, FletchingTableScreen::new));
+        event.enqueueWork(() -> InventoryTabRegistry.register(new Unordinary_BasicsInventoryTab(new TextComponent("Unordinary Basics"))));
     }
     
     @SubscribeEvent
