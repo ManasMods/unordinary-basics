@@ -14,7 +14,7 @@ updates:
     assignees:
       - "Charismara"
     commit-message:
-      prefix: "[Automatic Update]"
+      prefix: "[Update]"
     target-branch: "master"
 registries:
   manas-maven:
