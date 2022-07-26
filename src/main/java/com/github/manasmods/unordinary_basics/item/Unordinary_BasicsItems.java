@@ -11,10 +11,12 @@ public class Unordinary_BasicsItems {
     public static final Item ANIMAL_BAIT = null;
     @ObjectHolder("rabbit_boots")
     public static final Item RABBIT_BOOTS = null;
+    @ObjectHolder("pouch")
+    public static final Item POUCH = null;
     @ObjectHolder("technoblade_crown")
     public static final Item TECHNOBLADE_CROWN = null;
     @ObjectHolder("glider")
     public static final Item GLIDER = null;
-    @ObjectHolder("grapple_hook")
-    public static final Item GRAPPLE_HOOK = null;
+    @ObjectHolder("leaper")
+    public static final Item LEAPER = null;
 }

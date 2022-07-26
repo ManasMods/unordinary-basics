@@ -1,5 +1,7 @@
 package com.github.manasmods.unordinary_basics.item;
 
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -8,15 +10,19 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
+import org.jetbrains.annotations.Nullable;
 
-public class GrappleHookItem extends BowItem {
+import java.util.List;
+
+public class LeaperItem extends BowItem {
 
     private static final int MAX_CHARGE_TIME = 200; // In game ticks, 20 tps
 
-    public GrappleHookItem(Properties properties) {
+    public LeaperItem(Properties properties) {
         super(properties);
     }
 
@@ -37,7 +43,7 @@ public class GrappleHookItem extends BowItem {
                     stack.hurtAndBreak((int) Math.floor(power), player, (p) -> p.broadcastBreakEvent(player.getUsedItemHand()));
                 }
             }
-            player.getCooldowns().addCooldown(Unordinary_BasicsItems.GRAPPLE_HOOK, 40);
+            player.getCooldowns().addCooldown(Unordinary_BasicsItems.LEAPER, 80);
             player.setDeltaMovement(player.getDeltaMovement().add(getVector(player.getXRot(), player.getYRot(), power)));
             level.playSound(null, player.getX(), player.getY(), player.getZ(), SoundEvents.FISHING_BOBBER_RETRIEVE, SoundSource.PLAYERS, 1.0F, 0.4F);
         }
@@ -61,4 +67,10 @@ public class GrappleHookItem extends BowItem {
     public static float getPowerForTime(int time) {
         return (float) (Math.min(time / (float) MAX_CHARGE_TIME + 0.2, 1) * 7.5F);
     }
+
+    @Override
+    public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
+        pTooltipComponents.add(new TranslatableComponent("tooltip.unordinary_basics.leaper"));
+    }
+
 }

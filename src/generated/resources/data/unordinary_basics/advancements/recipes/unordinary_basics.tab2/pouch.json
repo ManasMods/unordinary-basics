@@ -2,17 +2,17 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "unordinary_basics:animal_bait"
+      "unordinary_basics:pouch"
     ]
   },
   "criteria": {
-    "has_pouch": {
+    "has_leather": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "unordinary_basics:pouch"
+              "minecraft:leather"
             ]
           }
         ]
@@ -21,13 +21,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "unordinary_basics:animal_bait"
+        "recipe": "unordinary_basics:pouch"
       }
     }
   },
   "requirements": [
     [
-      "has_pouch",
+      "has_leather",
       "has_the_recipe"
     ]
   ]
