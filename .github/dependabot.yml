@@ -16,9 +16,9 @@ updates:
     commit-message:
       prefix: "[Automatic Update]"
     target-branch: "master"
-    registries:
-      manas-maven:
-        type: maven-repository
-        url: https://manasmods.bytesafe.dev/maven/manasmods
-        username: ${{secrets.MANAS_MAVEN_USER}}
-        password: ${{secrets.MANAS_MAVEN_PASSWORD}}
+registries:
+  manas-maven:
+    type: maven-repository
+    url: https://manasmods.bytesafe.dev/maven/manasmods
+    username: ${{secrets.MANAS_MAVEN_USER}}
+    password: ${{secrets.MANAS_MAVEN_PASSWORD}}
