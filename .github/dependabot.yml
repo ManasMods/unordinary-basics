@@ -17,7 +17,7 @@ updates:
       prefix: "[Update]"
     target-branch: "master"
 registries:
-  manas-maven:
+  manasmods:
     type: maven-repository
     url: https://manasmods.bytesafe.dev/maven/manasmods
     username: ${{secrets.MANAS_MAVEN_USER}}
