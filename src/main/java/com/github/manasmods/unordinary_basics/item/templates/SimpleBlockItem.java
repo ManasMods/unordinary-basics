@@ -13,6 +13,6 @@ public class SimpleBlockItem extends BlockItem {
      * @param pBlock Parent Block
      */
     public SimpleBlockItem(Block pBlock) {
-        super(pBlock, new Properties().tab(Unordinary_BasicsCreativeTab.BLOCKS));
+        super(pBlock, new Properties().tab(Unordinary_BasicsCreativeTab.STAIRS_AND_SLABS));
     }
 }
