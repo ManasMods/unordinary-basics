@@ -25,6 +25,11 @@ public class HallucinationCurseEnchantment extends Enchantment {
         }
     }
 
+    @Override
+    public boolean isCurse() {
+        return true;
+    }
+
     private static SoundEvent getSoundEvent() {
         float n = RANDOM.nextFloat();
         if (n > 0.75) {
