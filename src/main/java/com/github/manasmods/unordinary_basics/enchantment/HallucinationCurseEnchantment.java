@@ -36,10 +36,14 @@ public class HallucinationCurseEnchantment extends Enchantment {
             return SoundEvents.CREEPER_PRIMED;
         } else if (n > 0.5) {
             return SoundEvents.ZOMBIE_AMBIENT;
-        } else if (n > 0.25) {
+        } else if (n > 0.4) {
             return SoundEvents.SKELETON_AMBIENT;
-        } else {
+        } else if (n > 0.3) {
             return SoundEvents.SPIDER_AMBIENT;
+        } else if (n > 0.2){
+            return SoundEvents.AMBIENT_CAVE;
+        } else {
+            return SoundEvents.ENDERMAN_AMBIENT;
         }
     }
 }
