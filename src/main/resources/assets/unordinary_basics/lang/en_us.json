@@ -155,8 +155,6 @@
   "block.unordinary_basics.red_concrete_powder_stairs": "Red Concrete Powder Stairs",
   "block.unordinary_basics.black_concrete_powder_stairs": "Black Concrete Powder Stairs",
 
-
-
   "block.unordinary_basics.calcite_slab": "Calcite Slab",
   "block.unordinary_basics.tuff_slab": "Tuff Slab",
   "block.unordinary_basics.dripstone_slab": "Dripstone Slab",
@@ -328,7 +326,7 @@
   "item.unordinary_basics.pouch": "Pouch",
   "item.unordinary_basics.technoblade_crown": "Technoblade's Crown",
   "item.unordinary_basics.glider": "Glider",
-  "item.unordinary_basics.leaper": "Self-Launchinator",
+  "item.unordinary_basics.map_book": "Map Book",
 
   "enchantment.unordinary_basics.master_miner": "Master Miner",
   "enchantment.unordinary_basics.master_miner.desc": "Mines multiple blocks at once - right click to change level",
@@ -339,6 +337,5 @@
   "enchantment.unordinary_basics.hallucination_curse": "Curse of Hallucination",
   "enchantment.unordinary_basics.hallucination_curse.desc": "What was that behind you?",
 
-  "tooltip.unordinary_basics.technoblade_crown": "A crown fit for a king, and for a legend who never really dies",
-  "tooltip.unordinary_basics.leaper": "The longer you hold, the further you go! But beware, death may wait where you land."
+  "tooltip.unordinary_basics.technoblade_crown": "A crown fit for a king, and for a legend who never really dies"
 }
