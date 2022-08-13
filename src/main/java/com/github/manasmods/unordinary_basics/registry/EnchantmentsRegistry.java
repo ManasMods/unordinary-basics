@@ -14,8 +14,8 @@ public class EnchantmentsRegistry {
 
     public static void register(DeferredRegister<Enchantment> registry) {
         registry.register("master_miner", () -> new MasterMinerEnchantment(Enchantment.Rarity.UNCOMMON, EnchantmentCategory.DIGGER));
-        registry.register("breaking_curse", () -> new BreakingCurseEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentCategory.BREAKABLE));
-        registry.register("fatigue_curse", () -> new FatigueCurseEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentCategory.BREAKABLE, HEAD, CHEST, LEGS, FEET, MAINHAND, OFFHAND));
-        registry.register("hallucination_curse", () -> new HallucinationCurseEnchantment(Enchantment.Rarity.VERY_RARE, EnchantmentCategory.ARMOR_HEAD, HEAD));
+        registry.register("breaking_curse", () -> new BreakingCurseEnchantment(Enchantment.Rarity.RARE, EnchantmentCategory.BREAKABLE));
+        registry.register("fatigue_curse", () -> new FatigueCurseEnchantment(Enchantment.Rarity.RARE, EnchantmentCategory.BREAKABLE, HEAD, CHEST, LEGS, FEET, MAINHAND, OFFHAND));
+        registry.register("hallucination_curse", () -> new HallucinationCurseEnchantment(Enchantment.Rarity.RARE, EnchantmentCategory.ARMOR_HEAD, HEAD));
     }
 }

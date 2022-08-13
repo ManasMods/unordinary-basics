@@ -320,7 +320,8 @@
   "unordinary_basics.fletching": "Fletching",
 
   "itemGroup.unordinary_basics.tab": "UB Blocks",
-  "itemGroup.unordinary_basics.tab2": "UB Items",
+  "itemGroup.unordinary_basics.tab2": "UB Stairs and Slabs",
+  "itemGroup.unordinary_basics.tab3": "UB Items",
 
   "item.unordinary_basics.animal_bait": "Animal Bait",
   "item.unordinary_basics.rabbit_boots": "Rabbit Boots",
@@ -336,7 +337,7 @@
   "enchantment.unordinary_basics.fatigue_curse": "Curse of Fatigue",
   "enchantment.unordinary_basics.fatigue_curse.desc": "Don't those eyelids feel heavy?",
   "enchantment.unordinary_basics.hallucination_curse": "Curse of Hallucination",
-  "enchantment.unordinary_basics.hallucination_curse.desc": "You occasionally hear monster sounds in your head",
+  "enchantment.unordinary_basics.hallucination_curse.desc": "What was that behind you?",
 
   "tooltip.unordinary_basics.technoblade_crown": "A crown fit for a king, and for a legend who never really dies",
   "tooltip.unordinary_basics.leaper": "The longer you hold, the further you go! But beware, death may wait where you land."
