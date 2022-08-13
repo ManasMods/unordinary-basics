@@ -9,16 +9,18 @@ import net.minecraftforge.registries.ObjectHolder;
 public class Unordinary_BasicsItems {
     @ObjectHolder("animal_bait")
     public static final Item ANIMAL_BAIT = null;
-    @ObjectHolder("rabbit_boots")
-    public static final Item RABBIT_BOOTS = null;
-    @ObjectHolder("pouch")
-    public static final Item POUCH = null;
-    @ObjectHolder("technoblade_crown")
-    public static final Item TECHNOBLADE_CROWN = null;
     @ObjectHolder("glider")
     public static final Item GLIDER = null;
     @ObjectHolder("leaper")
     public static final Item LEAPER = null;
     @ObjectHolder("map_book")
     public static final Item MAP_BOOK = null;
+    @ObjectHolder("pouch")
+    public static final Item POUCH = null;
+    @ObjectHolder("quiver")
+    public static final Item QUIVER = null;
+    @ObjectHolder("rabbit_boots")
+    public static final Item RABBIT_BOOTS = null;
+    @ObjectHolder("technoblade_crown")
+    public static final Item TECHNOBLADE_CROWN = null;
 }

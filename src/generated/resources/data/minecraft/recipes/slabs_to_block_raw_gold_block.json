@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:block_of_raw_gold_slab"
+    },
+    {
+      "item": "unordinary_basics:block_of_raw_gold_slab"
+    }
+  ],
+  "result": {
+    "item": "minecraft:raw_gold_block"
+  }
+}

@@ -5,11 +5,7 @@ import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
 import com.github.manasmods.unordinary_basics.utils.UBUtils;
 import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.ai.goal.TemptGoal;
-import net.minecraft.world.entity.animal.Chicken;
-import net.minecraft.world.entity.animal.Cow;
-import net.minecraft.world.entity.animal.Parrot;
-import net.minecraft.world.entity.animal.Pig;
-import net.minecraft.world.entity.animal.Sheep;
+import net.minecraft.world.entity.animal.*;
 import net.minecraft.world.entity.animal.horse.Donkey;
 import net.minecraft.world.entity.animal.horse.Horse;
 import net.minecraft.world.entity.animal.horse.Mule;
@@ -28,7 +24,7 @@ public class UBEntityHandler {
         //Check if entity is a PathfinderMob
         if (!(event.getEntity() instanceof PathfinderMob mob)) return;
         //Check if mob is one of the targets
-        if (!UBUtils.isInstanceOf(mob, Sheep.class, Cow.class, Pig.class, Chicken.class, Horse.class, Donkey.class, Mule.class, Parrot.class)) return;
+        if (!UBUtils.isInstanceOf(mob, Sheep.class, Cow.class, Pig.class, Chicken.class, Horse.class, Donkey.class, Mule.class, Parrot.class, Rabbit.class)) return;
         //Add Goal
         mob.goalSelector.addGoal(3, new TemptGoal(mob, 1.5D, Ingredient.of(Unordinary_BasicsItems.ANIMAL_BAIT), false));
     }

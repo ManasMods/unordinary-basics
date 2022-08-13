@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:stripped_birch_log_stairs"
+    },
+    {
+      "item": "unordinary_basics:stripped_birch_log_stairs"
+    },
+    {
+      "item": "unordinary_basics:stripped_birch_log_stairs"
+    },
+    {
+      "item": "unordinary_basics:stripped_birch_log_stairs"
+    }
+  ],
+  "result": {
+    "item": "minecraft:stripped_birch_log",
+    "count": 3
+  }
+}

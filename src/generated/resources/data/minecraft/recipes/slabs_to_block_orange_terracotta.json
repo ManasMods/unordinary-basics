@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:orange_terracotta_slab"
+    },
+    {
+      "item": "unordinary_basics:orange_terracotta_slab"
+    }
+  ],
+  "result": {
+    "item": "minecraft:orange_terracotta"
+  }
+}
