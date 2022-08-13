@@ -17,6 +17,8 @@ public class Unordinary_BasicsItems {
     public static final Item TECHNOBLADE_CROWN = null;
     @ObjectHolder("glider")
     public static final Item GLIDER = null;
+    @ObjectHolder("leaper")
+    public static final Item LEAPER = null;
     @ObjectHolder("map_book")
     public static final Item MAP_BOOK = null;
 }
