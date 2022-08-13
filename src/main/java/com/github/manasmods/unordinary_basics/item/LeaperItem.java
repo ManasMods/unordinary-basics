@@ -18,6 +18,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
+@Deprecated(forRemoval = true)
 public class LeaperItem extends BowItem {
 
     private static final int MAX_CHARGE_TIME = 200; // In game ticks, 20 tps
