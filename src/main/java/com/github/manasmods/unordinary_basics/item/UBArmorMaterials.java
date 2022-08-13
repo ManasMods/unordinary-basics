@@ -1,5 +1,6 @@
 package com.github.manasmods.unordinary_basics.item;
 
+import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import net.minecraft.sounds.SoundEvent;
@@ -35,6 +36,10 @@ public enum UBArmorMaterials implements ArmorMaterial {
 
     public int getDefenseForSlot(EquipmentSlot pSlot) {
         return this.slotProtections[pSlot.getIndex()];
+    }
+
+    public String getName() {
+        return Unordinary_Basics.MOD_ID + ":" + this.name;
     }
 
     public Ingredient getRepairIngredient() {

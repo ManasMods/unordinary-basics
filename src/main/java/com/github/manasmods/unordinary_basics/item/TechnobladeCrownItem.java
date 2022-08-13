@@ -1,5 +1,6 @@
 package com.github.manasmods.unordinary_basics.item;
 
+import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.sounds.SoundEvent;
