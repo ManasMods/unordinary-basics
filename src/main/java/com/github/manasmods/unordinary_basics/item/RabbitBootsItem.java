@@ -11,8 +11,10 @@ import net.minecraft.world.level.Level;
 
 public class RabbitBootsItem extends ArmorItem {
 
-    private static final MobEffectInstance SPEED = new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 0);
-    private static final MobEffectInstance JUMP_BOOST = new MobEffectInstance(MobEffects.JUMP, 200, 1);
+    private static final MobEffectInstance SPEED = new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 0, false, false);
+    private static final MobEffectInstance JUMP_BOOST = new MobEffectInstance(MobEffects.JUMP, 200, 1, false, false);
+    private static final MobEffectInstance LUCK = new MobEffectInstance(MobEffects.LUCK, 200, 1, false, false);
+
 
     public RabbitBootsItem(Properties properties) {
         super(UBArmorMaterials.RABBIT, EquipmentSlot.FEET, properties);
@@ -22,6 +24,7 @@ public class RabbitBootsItem extends ArmorItem {
     public void onArmorTick(ItemStack stack, Level level, Player player) {
         player.addEffect(SPEED);
         player.addEffect(JUMP_BOOST);
+        player.addEffect(LUCK);
     }
 
     @Override

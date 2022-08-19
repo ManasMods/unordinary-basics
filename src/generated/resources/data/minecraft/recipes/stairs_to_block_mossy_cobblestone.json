@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:mossy_cobblestone_stairs"
+    },
+    {
+      "item": "minecraft:mossy_cobblestone_stairs"
+    },
+    {
+      "item": "minecraft:mossy_cobblestone_stairs"
+    },
+    {
+      "item": "minecraft:mossy_cobblestone_stairs"
+    }
+  ],
+  "result": {
+    "item": "minecraft:mossy_cobblestone",
+    "count": 3
+  }
+}

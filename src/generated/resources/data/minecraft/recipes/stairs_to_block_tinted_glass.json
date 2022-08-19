@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:tinted_glass_stairs"
+    },
+    {
+      "item": "unordinary_basics:tinted_glass_stairs"
+    },
+    {
+      "item": "unordinary_basics:tinted_glass_stairs"
+    },
+    {
+      "item": "unordinary_basics:tinted_glass_stairs"
+    }
+  ],
+  "result": {
+    "item": "minecraft:tinted_glass",
+    "count": 3
+  }
+}

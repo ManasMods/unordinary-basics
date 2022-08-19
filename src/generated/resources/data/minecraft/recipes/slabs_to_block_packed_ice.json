@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:packed_ice_slab"
+    },
+    {
+      "item": "unordinary_basics:packed_ice_slab"
+    }
+  ],
+  "result": {
+    "item": "minecraft:packed_ice"
+  }
+}

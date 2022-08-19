@@ -664,6 +664,17 @@ STAIRS AND SLABS
                 .unlockedBy("has_leather", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.LEATHER).build()))
                 .save(consumer);
+        ShapedRecipeBuilder.shaped(Unordinary_BasicsItems.RABBIT_BOOTS)
+                .define('F', Items.RABBIT_FOOT)
+                .define('L', Items.RABBIT_HIDE)
+                .define('B', Items.LEATHER_BOOTS)
+                .pattern("LBL")
+                .pattern("F F")
+                .unlockedBy("has_rabbit_hide", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.RABBIT_HIDE).build()))
+                .unlockedBy("has_rabbit_foot", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.RABBIT_FOOT).build()))
+                .save(consumer);
 
         //STAIRS AND SLABS TO BLOCKS
         stairsToBlock(consumer, Blocks.OAK_STAIRS, Blocks.OAK_PLANKS);

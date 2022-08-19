@@ -41,7 +41,6 @@ public enum UBArmorMaterials implements ArmorMaterial {
     public String getName() {
         return Unordinary_Basics.MOD_ID + ":" + this.name;
     }
-
     public Ingredient getRepairIngredient() {
         return this.repairIngredient.get();
     }

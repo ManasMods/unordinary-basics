@@ -1,0 +1,28 @@
+{
+  "type": "unordinary_basics:fletching_recipe",
+  "pattern": [
+    " P",
+    " A",
+    "  "
+  ],
+  "key": {
+    "P": {
+      "type": "forge:nbt",
+      "item": "minecraft:lingering_potion",
+      "count": 1,
+      "nbt": "{Potion:\"apotheosis:long_fatigue\"}"
+    },
+    "A": {
+      "type": "forge:nbt",
+      "item": "minecraft:arrow",
+      "count": 32
+    }
+  },
+  "result": {
+    "item": "minecraft:tipped_arrow",
+    "count": 32,
+    "nbt": {
+      "Potion": "apotheosis:long_fatigue"
+    }
+  }
+}
