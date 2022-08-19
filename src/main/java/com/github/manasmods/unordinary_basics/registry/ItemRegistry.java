@@ -1,7 +1,6 @@
 package com.github.manasmods.unordinary_basics.registry;
 
 
-import com.github.manasmods.unordinary_basics.item.GliderItem;
 import com.github.manasmods.unordinary_basics.item.LeaperItem;
 import com.github.manasmods.unordinary_basics.item.RabbitBootsItem;
 import com.github.manasmods.unordinary_basics.item.TechnobladeCrownItem;
@@ -22,7 +21,6 @@ class ItemRegistry {
 
     private static void registerMisc(DeferredRegister<Item> registry) {
         registry.register("animal_bait", () -> new Item(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
-        registry.register("glider", () -> new GliderItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1).durability(265)));
         registry.register("leaper", () -> new LeaperItem(new Item.Properties().stacksTo(1).durability(80)));
         registry.register("map_book", () -> new Item(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1).durability(265)));
         registry.register("pouch", () -> new Item(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS)));

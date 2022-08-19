@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/stairs",
-  "textures": {
-    "side": "minecraft:block/yellow_stained_glass",
-    "bottom": "minecraft:block/yellow_stained_glass",
-    "top": "minecraft:block/yellow_stained_glass"
-  }
-}
