@@ -14,6 +14,12 @@ public class Unordinary_BasicsBlockTagProvider extends BlockTagProvider {
 
     @Override
     protected void generate() {
+
+        tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(Unordinary_BasicsBlocks.ENCHANTMENT_LIBRARY);
+        tag(BlockTags.NEEDS_IRON_TOOL)
+                .add(Unordinary_BasicsBlocks.ENCHANTMENT_LIBRARY);
+
         tag(BlockTags.STAIRS)
             .add(Unordinary_BasicsBlocks.CALCITE_STAIRS, Unordinary_BasicsBlocks.TUFF_STAIRS, Unordinary_BasicsBlocks.DRIPSTONE_STAIRS, Unordinary_BasicsBlocks.GRASS_BLOCK_STAIRS,
                 Unordinary_BasicsBlocks.DIRT_STAIRS, Unordinary_BasicsBlocks.COARSE_DIRT_STAIRS, Unordinary_BasicsBlocks.PODZOL_STAIRS, Unordinary_BasicsBlocks.ROOTED_DIRT_STAIRS,

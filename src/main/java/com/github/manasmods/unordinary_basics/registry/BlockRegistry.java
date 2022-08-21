@@ -1,5 +1,6 @@
 package com.github.manasmods.unordinary_basics.registry;
 
+import com.github.manasmods.unordinary_basics.block.EnchantmentLibraryBlock;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsCreativeTab;
 import com.github.manasmods.unordinary_basics.item.templates.SimpleBlock;
@@ -10,6 +11,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -22,6 +24,7 @@ public class BlockRegistry {
      * It is called though the {@link Unordinary_BasicsRegistry#register(IEventBus)} Method.
      */
     static void register(DeferredRegister<Item> itemRegistry, DeferredRegister<Block> blockRegistry) {
+        registerMiscBlocks(blockRegistry);
         registerBlocks(blockRegistry); // Registers all Blocks
         registerItems(itemRegistry); // Registers our custom BlockItems
 
@@ -36,6 +39,13 @@ public class BlockRegistry {
                 itemRegistry.register(registryObject.getId().getPath(), () -> new SimpleBlockItem(registryObject.get()));
             }
         });
+    }
+
+    private static void registerMiscBlocks(DeferredRegister<Block> registry) {
+        registry.register("enchantment_library", () -> new EnchantmentLibraryBlock(BlockBehaviour
+                .Properties.of(Material.STONE)
+                .requiresCorrectToolForDrops()
+                .strength(5.0F, 1200.0F)));
     }
 
     /**

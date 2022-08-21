@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:chiseled_quartz_block"
+    }
+  },
+  "result": {
+    "item": "unordinary_basics:chiseled_quartz_block_stairs",
+    "count": 8
+  }
+}

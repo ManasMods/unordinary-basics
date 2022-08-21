@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "unordinary_basics:red_terracotta_stairs"
+    ]
+  },
+  "criteria": {
+    "has_minecraft": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:red_terracotta"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "unordinary_basics:red_terracotta_stairs"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_minecraft",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,8 @@
+== Change Log ==
+
+¬ Added several new inventory slots (back, waist)
+¬ Added some new gear (quiver, backpack, potion belt)
+¬ Added Item Sorter block
+¬ Added Map Book
+¬ Added new enchantments and curses
+¬ Added Enchantment Library

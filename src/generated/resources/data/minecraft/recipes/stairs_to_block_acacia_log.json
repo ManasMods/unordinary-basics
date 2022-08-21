@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:acacia_log_stairs"
+    },
+    {
+      "item": "unordinary_basics:acacia_log_stairs"
+    },
+    {
+      "item": "unordinary_basics:acacia_log_stairs"
+    },
+    {
+      "item": "unordinary_basics:acacia_log_stairs"
+    }
+  ],
+  "result": {
+    "item": "minecraft:acacia_log",
+    "count": 3
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:chiseled_deepslate_slab"
+    },
+    {
+      "item": "unordinary_basics:chiseled_deepslate_slab"
+    }
+  ],
+  "result": {
+    "item": "minecraft:chiseled_deepslate"
+  }
+}
