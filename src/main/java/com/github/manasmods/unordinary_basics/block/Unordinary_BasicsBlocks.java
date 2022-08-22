@@ -990,5 +990,6 @@ public class Unordinary_BasicsBlocks {
     @ObjectHolder("hay_block")
     public static final Block HAY_BLOCK = null;
 
-
+    @ObjectHolder("enchantment_library")
+    public static final Block ENCHANTMENT_LIBRARY = null;
 }

@@ -1,4 +1,4 @@
-package com.github.manasmods.unordinary_basics.item.templates;
+package com.github.manasmods.unordinary_basics.block;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.material.Material;

@@ -326,5 +326,7 @@
   "item.unordinary_basics.pouch": "Pouch",
   "item.unordinary_basics.technoblade_crown": "Technoblade's Crown",
 
-  "tooltip.unordinary_basics.technoblade_crown": "A crown fit for a king, and for a legend who never really dies"
+  "tooltip.unordinary_basics.technoblade_crown": "A crown fit for a king, and for a legend who never really dies",
+
+  "block.unordinary_basics.enchantment_library": "Enchantment Library"
 }

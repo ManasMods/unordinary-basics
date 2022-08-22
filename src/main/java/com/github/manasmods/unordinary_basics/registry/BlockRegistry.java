@@ -1,10 +1,12 @@
 package com.github.manasmods.unordinary_basics.registry;
 
+import com.github.manasmods.unordinary_basics.block.EnchantmentLibraryBlock;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
-import com.github.manasmods.unordinary_basics.item.templates.SimpleBlock;
+import com.github.manasmods.unordinary_basics.block.SimpleBlock;
 import com.github.manasmods.unordinary_basics.item.templates.SimpleBlockItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -63,6 +65,13 @@ public class BlockRegistry {
         RegistryObject<Block> purpur_pillar = registry.register("purpur_pillar", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 6.0F).requiresCorrectToolForDrops()));
         RegistryObject<Block> quartz_pillar = registry.register("quartz_pillar", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(0.8F).requiresCorrectToolForDrops()));
         RegistryObject<Block> hay_block = registry.register("hay_block", () -> new SimpleBlock(Material.GRASS, properties -> properties.strength(0.5F).sound(SoundType.GRASS).requiresCorrectToolForDrops()));
+
+        registry.register("enchantment_library", () -> new EnchantmentLibraryBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                .strength(1F)
+                .sound(SoundType.WOOD)
+                .noOcclusion()
+                .requiresCorrectToolForDrops()));
+
 
         //STAIRS
 
@@ -403,6 +412,8 @@ public class BlockRegistry {
         registry.register("purpur_pillar", () -> new BlockItem(Unordinary_BasicsBlocks.PURPUR_PILLAR, new Item.Properties()));
         registry.register("quartz_pillar", () -> new BlockItem(Unordinary_BasicsBlocks.QUARTZ_PILLAR, new Item.Properties()));
         registry.register("hay_block", () -> new BlockItem(Unordinary_BasicsBlocks.HAY_BLOCK, new Item.Properties()));
+
+        registry.register("enchantment_library", () -> new SimpleBlockItem(Unordinary_BasicsBlocks.ENCHANTMENT_LIBRARY));
     }
 
 }
