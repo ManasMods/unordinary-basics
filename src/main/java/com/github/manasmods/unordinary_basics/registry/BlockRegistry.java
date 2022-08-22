@@ -3,10 +3,10 @@ package com.github.manasmods.unordinary_basics.registry;
 import com.github.manasmods.unordinary_basics.block.EnchantmentLibraryBlock;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
 import com.github.manasmods.unordinary_basics.block.SimpleBlock;
+import com.github.manasmods.unordinary_basics.item.templates.CustomBlockItem;
 import com.github.manasmods.unordinary_basics.item.templates.SimpleBlockItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -413,7 +413,7 @@ public class BlockRegistry {
         registry.register("quartz_pillar", () -> new BlockItem(Unordinary_BasicsBlocks.QUARTZ_PILLAR, new Item.Properties()));
         registry.register("hay_block", () -> new BlockItem(Unordinary_BasicsBlocks.HAY_BLOCK, new Item.Properties()));
 
-        registry.register("enchantment_library", () -> new SimpleBlockItem(Unordinary_BasicsBlocks.ENCHANTMENT_LIBRARY));
+        registry.register("enchantment_library", () -> new CustomBlockItem(Unordinary_BasicsBlocks.ENCHANTMENT_LIBRARY));
     }
 
 }

@@ -1,6 +1,8 @@
 package com.github.manasmods.unordinary_basics.block;
 
+import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsCreativeTab;
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
@@ -16,8 +18,8 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 public class EnchantmentLibraryBlock extends Block {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
-    public EnchantmentLibraryBlock(Properties properties) {
-        super(properties);
+    public EnchantmentLibraryBlock(Properties pProperties) {
+        super(pProperties);
     }
 
     @Override
