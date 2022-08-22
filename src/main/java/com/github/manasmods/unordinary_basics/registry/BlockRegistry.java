@@ -2,16 +2,15 @@ package com.github.manasmods.unordinary_basics.registry;
 
 import com.github.manasmods.unordinary_basics.block.EnchantmentLibraryBlock;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
-import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsCreativeTab;
-import com.github.manasmods.unordinary_basics.item.templates.SimpleBlock;
+import com.github.manasmods.unordinary_basics.block.SimpleBlock;
 import com.github.manasmods.unordinary_basics.item.templates.SimpleBlockItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
@@ -24,7 +23,6 @@ public class BlockRegistry {
      * It is called though the {@link Unordinary_BasicsRegistry#register(IEventBus)} Method.
      */
     static void register(DeferredRegister<Item> itemRegistry, DeferredRegister<Block> blockRegistry) {
-        registerMiscBlocks(blockRegistry);
         registerBlocks(blockRegistry); // Registers all Blocks
         registerItems(itemRegistry); // Registers our custom BlockItems
 
@@ -39,13 +37,6 @@ public class BlockRegistry {
                 itemRegistry.register(registryObject.getId().getPath(), () -> new SimpleBlockItem(registryObject.get()));
             }
         });
-    }
-
-    private static void registerMiscBlocks(DeferredRegister<Block> registry) {
-        registry.register("enchantment_library", () -> new EnchantmentLibraryBlock(BlockBehaviour
-                .Properties.of(Material.STONE)
-                .requiresCorrectToolForDrops()
-                .strength(5.0F, 1200.0F)));
     }
 
     /**
@@ -74,6 +65,13 @@ public class BlockRegistry {
         RegistryObject<Block> purpur_pillar = registry.register("purpur_pillar", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 6.0F).requiresCorrectToolForDrops()));
         RegistryObject<Block> quartz_pillar = registry.register("quartz_pillar", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(0.8F).requiresCorrectToolForDrops()));
         RegistryObject<Block> hay_block = registry.register("hay_block", () -> new SimpleBlock(Material.GRASS, properties -> properties.strength(0.5F).sound(SoundType.GRASS).requiresCorrectToolForDrops()));
+
+        registry.register("enchantment_library", () -> new EnchantmentLibraryBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                .strength(1F)
+                .sound(SoundType.WOOD)
+                .noOcclusion()
+                .requiresCorrectToolForDrops()));
+
 
         //STAIRS
 
@@ -414,6 +412,8 @@ public class BlockRegistry {
         registry.register("purpur_pillar", () -> new BlockItem(Unordinary_BasicsBlocks.PURPUR_PILLAR, new Item.Properties()));
         registry.register("quartz_pillar", () -> new BlockItem(Unordinary_BasicsBlocks.QUARTZ_PILLAR, new Item.Properties()));
         registry.register("hay_block", () -> new BlockItem(Unordinary_BasicsBlocks.HAY_BLOCK, new Item.Properties()));
+
+        registry.register("enchantment_library", () -> new SimpleBlockItem(Unordinary_BasicsBlocks.ENCHANTMENT_LIBRARY));
     }
 
 }

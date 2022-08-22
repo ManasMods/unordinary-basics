@@ -1,10 +1,10 @@
 {
 	"credit": "Made with Blockbench",
-	"parent": "enchantment_library",
+	"parent": "unordinary_basics:enchantment_library",
 	"texture_size": [64, 64],
 	"textures": {
-		"0": "enchantment_library",
-		"particle": "enchantment_library"
+		"0": "unordinary_basics:block/enchantment_library",
+		"particle": "minecraft:block/crying_obsidian"
 	},
 	"elements": [
 		{
@@ -19,5 +19,36 @@
 				"down": {"uv": [4, 4, 0, 8], "texture": "#0", "cullface": "down"}
 			}
 		}
-	]
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [64, 27, 0.5],
+			"scale": [0.32, 0.32, 0.32]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [64, 27, 0.5],
+			"scale": [0.32, 0.32, 0.32]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 45, 2],
+			"translation": [-0.5, -1, -0.5],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 45, 2],
+			"translation": [-0.5, -1, -0.5],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"ground": {
+			"translation": [0, 1, 0],
+			"scale": [0.3, 0.3, 0.3]
+		},
+		"gui": {
+			"rotation": [-164.3, -35.36, 178.89],
+			"scale": [0.6, 0.6, 0.6]
+		},
+		"fixed": {
+			"scale": [0.5, 0.5, 0.5]
+		}
+	}
 }
