@@ -332,6 +332,10 @@
 
   "enchantment.unordinary_basics.master_miner": "Master Miner",
   "enchantment.unordinary_basics.master_miner.desc": "Mines multiple blocks at once - right click to change level",
+  "enchantment.unordinary_basics.vein_miner": "Vein-Miner",
+  "enchantment.unordinary_basics.vein_miner.desc": "Mines an entire ore vein!",
+  "enchantment.unordinary_basics.tree_feller": "Tree-Feller",
+  "enchantment.unordinary_basics.tree_feller.desc": "Fells an entire tree.",
   "enchantment.unordinary_basics.breaking_curse": "Curse of Breaking",
   "enchantment.unordinary_basics.breaking_curse.desc": "Gear breaks twice as fast",
   "enchantment.unordinary_basics.fatigue_curse": "Curse of Fatigue",

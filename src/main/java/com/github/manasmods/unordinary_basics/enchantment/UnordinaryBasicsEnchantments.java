@@ -7,12 +7,24 @@ import net.minecraftforge.registries.ObjectHolder;
 @ObjectHolder(Unordinary_Basics.MOD_ID)
 public class UnordinaryBasicsEnchantments {
 
+    //ENCHANTMENTS
+
     @ObjectHolder("master_miner")
     public static final Enchantment MASTER_MINER = null;
+    @ObjectHolder("tree_feller")
+    public static final Enchantment TREE_FELLER = null;
+    @ObjectHolder("vein_miner")
+    public static final Enchantment VEIN_MINER = null;
+
+    //TODO Tree-Feller and Vein-Miner enchantments
+
+    //CURSES
+
     @ObjectHolder("breaking_curse")
     public static final Enchantment BREAKING_CURSE = null;
     @ObjectHolder("fatigue_curse")
     public static final Enchantment FATIGUE_CURSE = null;
     @ObjectHolder("hallucination_curse")
     public static final Enchantment HALLUCINATION_CURSE = null;
+
 }
