@@ -8,6 +8,7 @@ public class TreeFellerHandler {
 
 /*
 Will only have 1 level. Can only go onto an axe. 4x slower than mining normal log with tool but will chop down 64 logs which are connected + a gap of 3 or something
+Will take away the same durability as how many logs it breaks
  */
 
 }

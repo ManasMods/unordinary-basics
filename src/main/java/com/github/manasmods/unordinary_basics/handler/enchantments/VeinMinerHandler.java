@@ -8,6 +8,7 @@ public class VeinMinerHandler {
 
 /*
 Can only mine ore blocks. May need to make some tag for compatibility or something
+Removed durability respective to how many and what type of ore is mined
  */
 
 }
