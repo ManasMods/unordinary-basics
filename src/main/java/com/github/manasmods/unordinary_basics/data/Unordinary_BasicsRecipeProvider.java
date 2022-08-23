@@ -227,8 +227,6 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                         .of(Items.RED_MUSHROOM).build()))
                 .save(consumer);
 
-        crownSmithing(consumer, Items.NETHERITE_HELMET, Unordinary_BasicsItems.TECHNOBLADE_CROWN);
-
         /****************************** MOD ITEMS ******************************/
 
         ShapelessRecipeBuilder.shapeless(Unordinary_BasicsItems.ANIMAL_BAIT)
@@ -273,6 +271,8 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_pouch", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Unordinary_BasicsItems.POUCH).build()))
                 .save(consumer);
+
+        crownSmithing(consumer, Items.NETHERITE_HELMET, Unordinary_BasicsItems.TECHNOBLADE_CROWN);
 
         /****************************** QOL ITEM SMELTING ******************************/
 
