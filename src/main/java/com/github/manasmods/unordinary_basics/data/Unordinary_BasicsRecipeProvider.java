@@ -227,7 +227,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                         .of(Items.RED_MUSHROOM).build()))
                 .save(consumer);
 
-        smithing(consumer, Items.NETHERITE_HELMET, Unordinary_BasicsItems.TECHNOBLADE_CROWN);
+        crownSmithing(consumer, Items.NETHERITE_HELMET, Unordinary_BasicsItems.TECHNOBLADE_CROWN);
 
         /****************************** MOD ITEMS ******************************/
 
@@ -1102,7 +1102,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
         slabsToBlock(consumer, Unordinary_BasicsBlocks.BLACK_CONCRETE_POWDER_SLAB, Blocks.BLACK_CONCRETE_POWDER);
     }
 
-    protected static void smithing(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item pIngredientItem, Item pResultItem) {
+    protected static void crownSmithing(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item pIngredientItem, Item pResultItem) {
         UpgradeRecipeBuilder.smithing(Ingredient.of(pIngredientItem), Ingredient.of(Items.ENCHANTED_GOLDEN_APPLE), pResultItem).unlocks("has_enchanted_golden_apple", has(Items.ENCHANTED_GOLDEN_APPLE)).save(pFinishedRecipeConsumer, getItemName(pResultItem) + "_smithing");
     }
 }
