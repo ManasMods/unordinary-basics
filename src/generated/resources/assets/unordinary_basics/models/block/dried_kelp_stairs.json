@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "side": "minecraft:block/dried_kelp_side",
+    "bottom": "minecraft:block/dried_kelp_top",
+    "top": "minecraft:block/dried_kelp_top"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "manascore:block/grass_like_outer_stairs",
+  "textures": {
+    "side": "minecraft:block/mycelium_side",
+    "bottom": "minecraft:block/dirt",
+    "top": "minecraft:block/mycelium_top"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:soul_sand_stairs"
+    },
+    {
+      "item": "unordinary_basics:soul_sand_stairs"
+    },
+    {
+      "item": "unordinary_basics:soul_sand_stairs"
+    },
+    {
+      "item": "unordinary_basics:soul_sand_stairs"
+    }
+  ],
+  "result": {
+    "item": "minecraft:soul_sand",
+    "count": 3
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:block_of_raw_copper_slab"
+    },
+    {
+      "item": "unordinary_basics:block_of_raw_copper_slab"
+    }
+  ],
+  "result": {
+    "item": "minecraft:raw_copper_block"
+  }
+}

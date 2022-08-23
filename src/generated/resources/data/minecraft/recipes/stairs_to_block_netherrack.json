@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:netherrack_stairs"
+    },
+    {
+      "item": "unordinary_basics:netherrack_stairs"
+    },
+    {
+      "item": "unordinary_basics:netherrack_stairs"
+    },
+    {
+      "item": "unordinary_basics:netherrack_stairs"
+    }
+  ],
+  "result": {
+    "item": "minecraft:netherrack",
+    "count": 3
+  }
+}

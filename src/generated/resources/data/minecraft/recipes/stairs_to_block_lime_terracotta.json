@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:lime_terracotta_stairs"
+    },
+    {
+      "item": "unordinary_basics:lime_terracotta_stairs"
+    },
+    {
+      "item": "unordinary_basics:lime_terracotta_stairs"
+    },
+    {
+      "item": "unordinary_basics:lime_terracotta_stairs"
+    }
+  ],
+  "result": {
+    "item": "minecraft:lime_terracotta",
+    "count": 3
+  }
+}

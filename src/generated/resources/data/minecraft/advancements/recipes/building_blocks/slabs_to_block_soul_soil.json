@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:slabs_to_block_soul_soil"
+    ]
+  },
+  "criteria": {
+    "has_unordinary_basics": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "unordinary_basics:soul_soil_slab"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:slabs_to_block_soul_soil"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_unordinary_basics",
+      "has_the_recipe"
+    ]
+  ]
+}

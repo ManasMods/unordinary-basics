@@ -16,8 +16,8 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 public class EnchantmentLibraryBlock extends Block {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
-    public EnchantmentLibraryBlock(Properties pProperties) {
-        super(pProperties);
+    public EnchantmentLibraryBlock(Properties properties) {
+        super(properties);
     }
 
     @Override
