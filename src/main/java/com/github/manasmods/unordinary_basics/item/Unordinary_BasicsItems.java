@@ -15,6 +15,8 @@ public class Unordinary_BasicsItems {
     public static final Item LEAPER = null;
     @ObjectHolder("map_book")
     public static final Item MAP_BOOK = null;
+    @ObjectHolder("potion_belt")
+    public static final Item POTION_BELT = null;
     @ObjectHolder("pouch")
     public static final Item POUCH = null;
     @ObjectHolder("quiver")
