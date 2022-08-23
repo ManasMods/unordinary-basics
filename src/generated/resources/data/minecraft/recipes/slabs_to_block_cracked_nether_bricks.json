@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:cracked_nether_brick_slab"
+    },
+    {
+      "item": "unordinary_basics:cracked_nether_brick_slab"
+    }
+  ],
+  "result": {
+    "item": "minecraft:cracked_nether_bricks"
+  }
+}

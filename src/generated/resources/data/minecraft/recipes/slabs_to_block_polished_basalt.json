@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:polished_basalt_slab"
+    },
+    {
+      "item": "unordinary_basics:polished_basalt_slab"
+    }
+  ],
+  "result": {
+    "item": "minecraft:polished_basalt"
+  }
+}

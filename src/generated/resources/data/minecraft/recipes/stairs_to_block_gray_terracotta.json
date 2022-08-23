@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:gray_terracotta_stairs"
+    },
+    {
+      "item": "unordinary_basics:gray_terracotta_stairs"
+    },
+    {
+      "item": "unordinary_basics:gray_terracotta_stairs"
+    },
+    {
+      "item": "unordinary_basics:gray_terracotta_stairs"
+    }
+  ],
+  "result": {
+    "item": "minecraft:gray_terracotta",
+    "count": 3
+  }
+}
