@@ -27,6 +27,7 @@ import java.util.Arrays;
 
 @Mod.EventBusSubscriber(modid = Unordinary_Basics.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class MasterMinerHandler {
+
     @SubscribeEvent
     public static void onBlockBreak(final BlockEvent.BreakEvent event) {
         BlockPos pos = event.getPos();
@@ -65,13 +66,14 @@ public class MasterMinerHandler {
     @SubscribeEvent
     public static void onItemRightClick(final PlayerInteractEvent.RightClickItem event) {
         ItemStack stack = event.getItemStack();
+        Player player = event.getPlayer();
         int maxLevel = EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.MASTER_MINER, stack);
         CompoundTag tag = stack.getTag();
-        if (maxLevel > 0 && tag != null) {
+        if (maxLevel > 0 && tag != null && player.isShiftKeyDown()) {
             int currentLevel = tag.getInt("masterMinerLevel");
             int newLevel = currentLevel == maxLevel ? 0 : currentLevel + 1;
             tag.putInt("masterMinerLevel", newLevel);
-            event.getPlayer().displayClientMessage(new TextComponent("Using Master Miner level " + newLevel), true);
+            player.displayClientMessage(new TextComponent("Using Master Miner level " + newLevel), true);
         }
     }
 

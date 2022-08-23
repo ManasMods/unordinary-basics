@@ -10,6 +10,7 @@
     "MixinApothFletchingBlock",
     "MixinBedBlock",
     "MixinBedBlockEntity",
+    "MixinDestroySpeed",
     "MixinFireworkRocket",
     "MixinFletchingTableBlock",
     "MixinFrostWalker",
