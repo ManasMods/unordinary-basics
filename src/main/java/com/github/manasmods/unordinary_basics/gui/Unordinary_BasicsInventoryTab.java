@@ -3,7 +3,6 @@ package com.github.manasmods.unordinary_basics.gui;
 import com.github.manasmods.manascore.ManasCore;
 import com.github.manasmods.manascore.tab.AbstractInventoryTab;
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.minecraft.client.gui.screens.inventory.InventoryScreen;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.TextComponent;
 import net.minecraft.world.item.ItemStack;

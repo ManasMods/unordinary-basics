@@ -1,8 +1,6 @@
 package com.github.manasmods.unordinary_basics.block;
 
-import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsCreativeTab;
 import net.minecraft.core.BlockPos;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;

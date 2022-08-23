@@ -2,7 +2,6 @@ package com.github.manasmods.unordinary_basics.registry;
 
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import net.minecraft.core.Registry;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.RecipeSerializer;

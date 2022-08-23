@@ -1,11 +1,6 @@
 package com.github.manasmods.unordinary_basics;
 
-import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsBlockStateProvider;
-import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsBlockTagProvider;
-import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsFletchingRecipeProvider;
-import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsItemModelProvider;
-import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsLootTableProvider;
-import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsRecipeProvider;
+import com.github.manasmods.unordinary_basics.data.*;
 import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisIntegration;
 import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
 import com.github.manasmods.unordinary_basics.registry.Unordinary_BasicsRegistry;

@@ -6,18 +6,18 @@
   "refmap": "unordinary_basics.refmap.json",
   "mixins": [
     "FletchingContainerAccessor",
+    "MixinAbstractHorse",
     "MixinApothFletchingBlock",
+    "MixinBedBlock",
+    "MixinBedBlockEntity",
     "MixinFireworkRocket",
     "MixinFletchingTableBlock",
     "MixinFrostWalker",
+    "MixinHorse",
     "MixinItemStack",
     "MixinJukeBoxBlock",
     "MixinLadder",
-    "NBTIngredientAccessor",
-	"MixinAbstractHorse",
-	"MixinHorse",
-	"MixinBedBlock",
-	"MixinBedBlockEntity"
+    "NBTIngredientAccessor"
   ],
   "client": [
     "AbstractContainerScreenAccessor",

@@ -1,8 +1,0 @@
-{
-  "parent": "manascore:block/grass_like_slab_top",
-  "textures": {
-    "side": "minecraft:block/crimson_nylium_side",
-    "bottom": "minecraft:block/netherrack",
-    "top": "minecraft:block/crimson_nylium"
-  }
-}

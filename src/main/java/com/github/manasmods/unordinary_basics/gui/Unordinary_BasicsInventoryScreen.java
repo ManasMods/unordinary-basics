@@ -2,7 +2,6 @@ package com.github.manasmods.unordinary_basics.gui;
 
 import com.github.manasmods.manascore.tab.annotation.ScreenForTab;
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
-import com.mojang.blaze3d.platform.Window;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.gui.screens.Screen;

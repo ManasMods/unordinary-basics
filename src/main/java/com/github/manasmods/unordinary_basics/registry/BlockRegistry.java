@@ -1,8 +1,8 @@
 package com.github.manasmods.unordinary_basics.registry;
 
 import com.github.manasmods.unordinary_basics.block.EnchantmentLibraryBlock;
-import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
 import com.github.manasmods.unordinary_basics.block.SimpleBlock;
+import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
 import com.github.manasmods.unordinary_basics.item.templates.CustomBlockItem;
 import com.github.manasmods.unordinary_basics.item.templates.SimpleBlockItem;
 import net.minecraft.resources.ResourceLocation;

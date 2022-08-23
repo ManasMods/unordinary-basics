@@ -5,7 +5,6 @@ import com.github.manasmods.unordinary_basics.core.FletchingContainerAccessor;
 import com.github.manasmods.unordinary_basics.menu.FletchingTableMenu;
 import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
 import com.github.manasmods.unordinary_basics.network.toserver.RequestMenuChange;
-
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.server.level.ServerPlayer;

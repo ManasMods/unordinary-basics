@@ -1,6 +1,5 @@
 {
 	"credit": "Made with Blockbench",
-	"parent": "unordinary_basics:enchantment_library",
 	"texture_size": [64, 64],
 	"textures": {
 		"0": "unordinary_basics:block/enchantment_library",
