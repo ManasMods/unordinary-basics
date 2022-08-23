@@ -8,7 +8,9 @@ import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
+import net.minecraft.data.recipes.UpgradeRecipeBuilder;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
@@ -224,6 +226,8 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_red_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.RED_MUSHROOM).build()))
                 .save(consumer);
+
+        smithing(consumer, Items.NETHERITE_HELMET, Unordinary_BasicsItems.TECHNOBLADE_CROWN);
 
         /****************************** MOD ITEMS ******************************/
 
@@ -1096,5 +1100,9 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
         slabsToBlock(consumer, Unordinary_BasicsBlocks.RED_CONCRETE_POWDER_SLAB, Blocks.RED_CONCRETE_POWDER);
         stairsToBlock(consumer, Unordinary_BasicsBlocks.BLACK_CONCRETE_POWDER_STAIRS, Blocks.BLACK_CONCRETE_POWDER);
         slabsToBlock(consumer, Unordinary_BasicsBlocks.BLACK_CONCRETE_POWDER_SLAB, Blocks.BLACK_CONCRETE_POWDER);
+    }
+
+    protected static void smithing(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item pIngredientItem, Item pResultItem) {
+        UpgradeRecipeBuilder.smithing(Ingredient.of(pIngredientItem), Ingredient.of(Items.ENCHANTED_GOLDEN_APPLE), pResultItem).unlocks("has_enchanted_golden_apple", has(Items.ENCHANTED_GOLDEN_APPLE)).save(pFinishedRecipeConsumer, getItemName(pResultItem) + "_smithing");
     }
 }
