@@ -1,8 +1,17 @@
 == Change Log ==
 
-¬ Added several new inventory slots (back, waist)
-¬ Added some new gear (quiver, backpack, potion belt)
+¬ Added several new inventory slots
+    - Back Slot
+    - Waist Slot
+¬ Added some new gear
+    - Backpacks
+    - Potion Belt
+    - Quiver
 ¬ Added Item Sorter block
 ¬ Added Map Book
 ¬ Added new enchantments and curses
+    - Curse of Breaking
+    - Curse of Fatigue
+    - Curse of Hallucination
+    - Master Miner
 ¬ Added Enchantment Library
