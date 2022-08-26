@@ -16,8 +16,10 @@ public class Unordinary_BasicsBlockTagProvider extends BlockTagProvider {
     protected void generate() {
 
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(Unordinary_BasicsBlocks.ENCHANTMENT_LIBRARY);
+                .add(Unordinary_BasicsBlocks.ENCHANTMENT_LIBRARY)
+                .add(Unordinary_BasicsBlocks.ITEM_SORTER);
         tag(BlockTags.NEEDS_IRON_TOOL)
+                .add(Unordinary_BasicsBlocks.ITEM_SORTER)
                 .add(Unordinary_BasicsBlocks.ENCHANTMENT_LIBRARY);
 
         tag(BlockTags.STAIRS)

@@ -9,6 +9,8 @@ public class Unordinary_BasicsBlocks {
 
     @ObjectHolder("enchantment_library")
     public static final Block ENCHANTMENT_LIBRARY = null;
+    @ObjectHolder("item_sorter")
+    public static final Block ITEM_SORTER = null;
 
     //STAIRS
 

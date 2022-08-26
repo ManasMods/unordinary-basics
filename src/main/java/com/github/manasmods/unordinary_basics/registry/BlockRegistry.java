@@ -1,6 +1,7 @@
 package com.github.manasmods.unordinary_basics.registry;
 
 import com.github.manasmods.unordinary_basics.block.EnchantmentLibraryBlock;
+import com.github.manasmods.unordinary_basics.block.ItemSorterBlock;
 import com.github.manasmods.unordinary_basics.block.SimpleBlock;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
 import com.github.manasmods.unordinary_basics.item.templates.CustomBlockItem;
@@ -66,9 +67,14 @@ public class BlockRegistry {
         RegistryObject<Block> quartz_pillar = registry.register("quartz_pillar", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(0.8F).requiresCorrectToolForDrops()));
         RegistryObject<Block> hay_block = registry.register("hay_block", () -> new SimpleBlock(Material.GRASS, properties -> properties.strength(0.5F).sound(SoundType.GRASS).requiresCorrectToolForDrops()));
 
-        registry.register("enchantment_library", () -> new EnchantmentLibraryBlock(BlockBehaviour.Properties.of(Material.WOOD)
+        registry.register("enchantment_library", () -> new EnchantmentLibraryBlock(BlockBehaviour.Properties.of(Material.STONE)
                 .strength(1F)
                 .sound(SoundType.WOOD)
+                .noOcclusion()
+                .requiresCorrectToolForDrops()));
+        registry.register("item_sorter", () -> new ItemSorterBlock(BlockBehaviour.Properties.of(Material.METAL)
+                .strength(1F)
+                .sound(SoundType.METAL)
                 .noOcclusion()
                 .requiresCorrectToolForDrops()));
 
@@ -414,6 +420,7 @@ public class BlockRegistry {
         registry.register("hay_block", () -> new BlockItem(Unordinary_BasicsBlocks.HAY_BLOCK, new Item.Properties()));
 
         registry.register("enchantment_library", () -> new CustomBlockItem(Unordinary_BasicsBlocks.ENCHANTMENT_LIBRARY));
+        registry.register("item_sorter", () -> new CustomBlockItem(Unordinary_BasicsBlocks.ITEM_SORTER));
     }
 
 }

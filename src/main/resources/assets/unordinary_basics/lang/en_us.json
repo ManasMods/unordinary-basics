@@ -345,5 +345,6 @@
 
   "tooltip.unordinary_basics.technoblade_crown": "A crown fit for a king, and for a legend who never really dies",
 
-  "block.unordinary_basics.enchantment_library": "Enchantment Library"
+  "block.unordinary_basics.enchantment_library": "Enchantment Library",
+  "block.unordinary_basics.item_sorter": "Item Sorter"
 }
