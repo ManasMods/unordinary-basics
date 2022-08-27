@@ -8,8 +8,8 @@
 	},
 	"elements": [
 		{
-			"from": [-8, 0, -8],
-			"to": [8, 12, 8],
+			"from": [0, 0, 0],
+			"to": [16, 12, 16],
 			"faces": {
 				"north": {"uv": [4, 0, 8, 3], "texture": "#0", "cullface": "north"},
 				"east": {"uv": [4, 3, 8, 6], "texture": "#0", "cullface": "east"},
@@ -45,7 +45,6 @@
 		},
 		"gui": {
 			"rotation": [30, 225, 0],
-			"translation": [-7, 0, 0],
 			"scale": [0.625, 0.625, 0.625]
 		},
 		"fixed": {
