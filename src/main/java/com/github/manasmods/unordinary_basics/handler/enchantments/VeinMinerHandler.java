@@ -27,6 +27,7 @@ import java.util.Set;
 public class VeinMinerHandler {
 
     // TODO: Common utility methods between Vein Miner, Master Miner, Tree Feller
+    // TODO: When mining ores, drop xp too
 
     private static int recursionCounter = 0;
     private static final Set<BlockPos> toBreak = new HashSet<>();
