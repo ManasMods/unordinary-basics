@@ -34,5 +34,7 @@ class ItemRegistry {
     private static void registerSpawnEgg(DeferredRegister<Item> registry) {
         registry.register("grizzly_bear_spawn_egg", () -> new ForgeSpawnEggItem(() -> UBEntityTypes.GRIZZLY_BEAR.get(),
                 new Color(96, 65, 39).getRGB(), new Color(86, 73, 61).getRGB(), new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS)));
+        registry.register("grolar_bear_spawn_egg", () -> new ForgeSpawnEggItem(() -> UBEntityTypes.GROLAR_BEAR.get(),
+                new Color(152, 110, 81).getRGB(), new Color(161, 158, 156).getRGB(), new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS)));
     }
 }

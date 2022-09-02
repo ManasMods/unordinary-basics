@@ -2,6 +2,7 @@ package com.github.manasmods.unordinary_basics.handler;
 
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.entity.GrizzlyBearEntity;
+import com.github.manasmods.unordinary_basics.entity.GrolarBearEntity;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
 import com.github.manasmods.unordinary_basics.registry.UBEntityTypes;
 import com.github.manasmods.unordinary_basics.utils.UBUtils;
@@ -43,11 +44,16 @@ public class UBEntityHandler {
 
     public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
         event.put(UBEntityTypes.GRIZZLY_BEAR.get(), GrizzlyBearEntity.createAttributes().build());
+        event.put(UBEntityTypes.GROLAR_BEAR.get(), GrolarBearEntity.createAttributes().build());
     }
     public static void registerEntityPlacements() {
         SpawnPlacements.register(UBEntityTypes.GRIZZLY_BEAR.get(),
                 SpawnPlacements.Type.IN_WATER,
                 Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 GrizzlyBearEntity::checkGrizzlyBearEntitySpawnRules);
+        SpawnPlacements.register(UBEntityTypes.GROLAR_BEAR.get(),
+                SpawnPlacements.Type.IN_WATER,
+                Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                GrolarBearEntity::checkGrolarBearEntitySpawnRules);
     }
 }

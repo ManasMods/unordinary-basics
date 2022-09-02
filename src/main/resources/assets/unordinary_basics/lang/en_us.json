@@ -351,6 +351,8 @@
 
   "entity.unordinary_basics.grizzly_bear": "Grizzly Bear",
   "item.unordinary_basics.grizzly_bear_spawn_egg": "Grizzly Bear Spawn Egg",
+  "entity.unordinary_basics.grolar_bear": "Grolar Bear",
+  "item.unordinary_basics.grolar_bear_spawn_egg": "Grolar Bear Spawn Egg",
   "unordinary_basics.message.pet.sit": "%s is set to Stay.",
   "unordinary_basics.message.pet.follow": "%s is set to Follow."
 }
