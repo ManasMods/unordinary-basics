@@ -347,5 +347,10 @@
   "tooltip.unordinary_basics.technoblade_crown": "A crown fit for a king, and for a legend who never really dies",
 
   "block.unordinary_basics.enchantment_library": "Enchantment Library",
-  "block.unordinary_basics.item_sorter": "Item Sorter"
+  "block.unordinary_basics.item_sorter": "Item Sorter",
+
+  "entity.unordinary_basics.grizzly_bear": "Grizzly Bear",
+  "item.unordinary_basics.grizzly_bear_spawn_egg": "Grizzly Bear Spawn Egg",
+  "unordinary_basics.message.pet.sit": "%s is set to Stay.",
+  "unordinary_basics.message.pet.follow": "%s is set to Follow."
 }

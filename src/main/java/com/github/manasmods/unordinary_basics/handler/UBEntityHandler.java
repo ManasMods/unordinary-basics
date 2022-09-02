@@ -1,9 +1,12 @@
 package com.github.manasmods.unordinary_basics.handler;
 
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.entity.GrizzlyBearEntity;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
+import com.github.manasmods.unordinary_basics.registry.UBEntityTypes;
 import com.github.manasmods.unordinary_basics.utils.UBUtils;
 import net.minecraft.world.entity.PathfinderMob;
+import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.ai.goal.TemptGoal;
 import net.minecraft.world.entity.animal.*;
 import net.minecraft.world.entity.animal.horse.Donkey;
@@ -12,6 +15,8 @@ import net.minecraft.world.entity.animal.horse.Mule;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -34,5 +39,15 @@ public class UBEntityHandler {
         if (!(event.getEntity() instanceof Villager villager)) return;
         villager.goalSelector.addGoal(3, new TemptGoal(villager, 1.5D, Ingredient.of(Items.EMERALD), false));
         villager.goalSelector.addGoal(3, new TemptGoal(villager, 1.75D, Ingredient.of(Items.EMERALD_BLOCK), false));
+    }
+
+    public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
+        event.put(UBEntityTypes.GRIZZLY_BEAR.get(), GrizzlyBearEntity.createAttributes().build());
+    }
+    public static void registerEntityPlacements() {
+        SpawnPlacements.register(UBEntityTypes.GRIZZLY_BEAR.get(),
+                SpawnPlacements.Type.IN_WATER,
+                Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                GrizzlyBearEntity::checkGrizzlyBearEntitySpawnRules);
     }
 }

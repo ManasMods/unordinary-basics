@@ -1,6 +1,7 @@
 package com.github.manasmods.unordinary_basics;
 
 import com.github.manasmods.unordinary_basics.data.*;
+import com.github.manasmods.unordinary_basics.handler.UBEntityHandler;
 import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisIntegration;
 import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
 import com.github.manasmods.unordinary_basics.registry.Unordinary_BasicsRegistry;
@@ -31,6 +32,7 @@ public class Unordinary_Basics {
         Unordinary_BasicsRegistry.register(modEventBus);
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::generateData);
+        modEventBus.addListener(UBEntityHandler::entityAttributeEvent);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
@@ -40,6 +42,7 @@ public class Unordinary_Basics {
             }
         });
         event.enqueueWork(Unordinary_BasicsNetwork::registerPackets);
+        event.enqueueWork(UBEntityHandler::registerEntityPlacements);
     }
 
     private void generateData(final GatherDataEvent event) {
