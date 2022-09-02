@@ -16,4 +16,9 @@
     - Master Miner
     - Vein Miner
     - Tree Feller
-¬ Added Enchantment Library
+¬ Added Enchantment Library (no functionality yet)
+¬ Added Grizzly Bear
+¬ Added Grolar Bear
+¬ Updated tames
+    - Fox
+    - Polar Bear

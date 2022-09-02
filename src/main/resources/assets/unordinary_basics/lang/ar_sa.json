@@ -73,6 +73,7 @@
   "block.unordinary_basics.dried_kelp_stairs": "Dried Kelp Stairs",
   "block.unordinary_basics.crying_obsidian_stairs": "Crying Obsidian Stairs",
   "block.unordinary_basics.cracked_polished_blackstone_brick_stairs": "Cracked Polished Blackstone Brick Stairs",
+
   "block.unordinary_basics.white_wool_stairs": "White Wool Stairs",
   "block.unordinary_basics.orange_wool_stairs": "Orange Wool Stairs",
   "block.unordinary_basics.magenta_wool_stairs": "Magenta Wool Stairs",
@@ -153,6 +154,7 @@
   "block.unordinary_basics.green_concrete_powder_stairs": "Green Concrete Powder Stairs",
   "block.unordinary_basics.red_concrete_powder_stairs": "Red Concrete Powder Stairs",
   "block.unordinary_basics.black_concrete_powder_stairs": "Black Concrete Powder Stairs",
+
   "block.unordinary_basics.calcite_slab": "Calcite Slab",
   "block.unordinary_basics.tuff_slab": "Tuff Slab",
   "block.unordinary_basics.dripstone_slab": "Dripstone Slab",
@@ -225,6 +227,7 @@
   "block.unordinary_basics.dried_kelp_slab": "Dried Kelp Slab",
   "block.unordinary_basics.crying_obsidian_slab": "Crying Obsidian Slab",
   "block.unordinary_basics.cracked_polished_blackstone_brick_slab": "Cracked Polished Blackstone Brick Slab",
+
   "block.unordinary_basics.white_wool_slab": "White Wool Slab",
   "block.unordinary_basics.orange_wool_slab": "Orange Wool Slab",
   "block.unordinary_basics.magenta_wool_slab": "Magenta Wool Slab",
@@ -305,6 +308,7 @@
   "block.unordinary_basics.green_concrete_powder_slab": "Green Concrete Powder Slab",
   "block.unordinary_basics.red_concrete_powder_slab": "Red Concrete Powder Slab",
   "block.unordinary_basics.black_concrete_powder_slab": "Black Concrete Powder Slab",
+
   "unordinary_basics.menu.jukebox.title": "Jukebox",
   "unordinary_basics.jukebox.button.play": "Start Playing",
   "unordinary_basics.jukebox.button.stop": "Stop Playing",
@@ -312,10 +316,43 @@
   "unordinary_basics.menu.fletching_table.switch.apotheosis": "Open Apotheosis Menu",
   "unordinary_basics.menu.fletching_table.switch.ub": "Open Unordinary Basics Menu",
   "unordinary_basics.fletching": "Fletching",
+
   "itemGroup.unordinary_basics.tab": "UB Blocks",
   "itemGroup.unordinary_basics.tab2": "UB Items",
+  "itemGroup.unordinary_basics.tab3": "UB Stairs and Slabs",
+  "itemGroup.unordinary_basics.tab4": "UB Items",
+
   "item.unordinary_basics.animal_bait": "Animal Bait",
+  "item.unordinary_basics.glider": "Glider",
+  "item.unordinary_basics.map_book": "Map Book",
+  "item.unordinary_basics.potion_belt": "Potion Belt",
   "item.unordinary_basics.pouch": "Pouch",
+  "item.unordinary_basics.quiver": "Quiver",
+  "item.unordinary_basics.rabbit_boots": "Rabbit Boots",
   "item.unordinary_basics.technoblade_crown": "Technoblade's Crown",
-  "tooltip.unordinary_basics.technoblade_crown": "A crown fit for a king, and for a legend who never really dies"
+
+  "enchantment.unordinary_basics.master_miner": "Master Miner",
+  "enchantment.unordinary_basics.master_miner.desc": "Mines multiple blocks at once! - Shift + right click to change level",
+  "enchantment.unordinary_basics.vein_miner": "Vein-Miner",
+  "enchantment.unordinary_basics.vein_miner.desc": "Mines an entire ore vein! - Shift + right click to change level",
+  "enchantment.unordinary_basics.tree_feller": "Tree-Feller",
+  "enchantment.unordinary_basics.tree_feller.desc": "Fells an entire tree! - Shift + right click to change level",
+  "enchantment.unordinary_basics.breaking_curse": "Curse of Breaking",
+  "enchantment.unordinary_basics.breaking_curse.desc": "Gear breaks twice as fast",
+  "enchantment.unordinary_basics.fatigue_curse": "Curse of Fatigue",
+  "enchantment.unordinary_basics.fatigue_curse.desc": "Don't those eyelids feel heavy?",
+  "enchantment.unordinary_basics.hallucination_curse": "Curse of Hallucination",
+  "enchantment.unordinary_basics.hallucination_curse.desc": "What was that behind you?",
+
+  "tooltip.unordinary_basics.technoblade_crown": "A crown fit for a king, and for a legend who never really dies",
+
+  "block.unordinary_basics.enchantment_library": "Enchantment Library",
+  "block.unordinary_basics.item_sorter": "Item Sorter",
+
+  "entity.unordinary_basics.grizzly_bear": "Grizzly Bear",
+  "item.unordinary_basics.grizzly_bear_spawn_egg": "Grizzly Bear Spawn Egg",
+  "entity.unordinary_basics.grolar_bear": "Grolar Bear",
+  "item.unordinary_basics.grolar_bear_spawn_egg": "Grolar Bear Spawn Egg",
+  "unordinary_basics.message.pet.sit": "%s is set to Stay.",
+  "unordinary_basics.message.pet.follow": "%s is set to Follow."
 }

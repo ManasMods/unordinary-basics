@@ -73,6 +73,7 @@
   "block.unordinary_basics.dried_kelp_stairs": "Ступеньки из сушёной ламинарии",
   "block.unordinary_basics.crying_obsidian_stairs": "Ступеньки из плачущего обсидиана",
   "block.unordinary_basics.cracked_polished_blackstone_brick_stairs": "Ступеньки из потрескавшегося полированно-чернитного кирпича",
+
   "block.unordinary_basics.white_wool_stairs": "Ступеньки из белой шерсти",
   "block.unordinary_basics.orange_wool_stairs": "Ступеньки из оранжевой шерсти",
   "block.unordinary_basics.magenta_wool_stairs": "Ступеньки из пурпурной шерсти",
@@ -153,6 +154,7 @@
   "block.unordinary_basics.green_concrete_powder_stairs": "Ступеньки из зелёного сухого бетона",
   "block.unordinary_basics.red_concrete_powder_stairs": "Ступеньки из красного сухого бетона",
   "block.unordinary_basics.black_concrete_powder_stairs": "Ступеньки из чёрного сухого бетона",
+
   "block.unordinary_basics.calcite_slab": "Кальцитовая плита",
   "block.unordinary_basics.tuff_slab": "Туфовая плита",
   "block.unordinary_basics.dripstone_slab": "Капельниковая плита",
@@ -225,6 +227,7 @@
   "block.unordinary_basics.dried_kelp_slab": "Плита из сушёной ламинарии",
   "block.unordinary_basics.crying_obsidian_slab": "Плита из плачущего обсидиана",
   "block.unordinary_basics.cracked_polished_blackstone_brick_slab": "Плита из потрескавшегося полированно-чернитного кирпича",
+
   "block.unordinary_basics.white_wool_slab": "Плита из белой шерсти",
   "block.unordinary_basics.orange_wool_slab": "Плита из оранжевой шерсти",
   "block.unordinary_basics.magenta_wool_slab": "Плита из пурпурной шерсти",
@@ -305,6 +308,7 @@
   "block.unordinary_basics.green_concrete_powder_slab": "Плита из зелёного сухого бетона",
   "block.unordinary_basics.red_concrete_powder_slab": "Плита из красного сухого бетона",
   "block.unordinary_basics.black_concrete_powder_slab": "Плита из чёрного сухого бетона",
+
   "unordinary_basics.menu.jukebox.title": "Проигрыватель",
   "unordinary_basics.jukebox.button.play": "Играть",
   "unordinary_basics.jukebox.button.stop": "Стоп",
@@ -312,10 +316,43 @@
   "unordinary_basics.menu.fletching_table.switch.apotheosis": "Открыть меню Apotheosis",
   "unordinary_basics.menu.fletching_table.switch.ub": "Открыть меню Unordinary Basics",
   "unordinary_basics.fletching": "Создание Стрел",
+
   "itemGroup.unordinary_basics.tab": "Блоки из UB",
   "itemGroup.unordinary_basics.tab2": "Предметы из UB",
+  "itemGroup.unordinary_basics.tab3": "UB Stairs and Slabs",
+  "itemGroup.unordinary_basics.tab4": "UB Items",
+
   "item.unordinary_basics.animal_bait": "Приманка для животных",
+  "item.unordinary_basics.glider": "Glider",
+  "item.unordinary_basics.map_book": "Map Book",
+  "item.unordinary_basics.potion_belt": "Potion Belt",
   "item.unordinary_basics.pouch": "Мешочек",
+  "item.unordinary_basics.quiver": "Quiver",
+  "item.unordinary_basics.rabbit_boots": "Rabbit Boots",
   "item.unordinary_basics.technoblade_crown": "Корона Technoblade",
-  "tooltip.unordinary_basics.technoblade_crown": "Корона, подходящая для короля и для легенды, которая никогда действительно не умрёт"
+
+  "enchantment.unordinary_basics.master_miner": "Master Miner",
+  "enchantment.unordinary_basics.master_miner.desc": "Mines multiple blocks at once! - Shift + right click to change level",
+  "enchantment.unordinary_basics.vein_miner": "Vein-Miner",
+  "enchantment.unordinary_basics.vein_miner.desc": "Mines an entire ore vein! - Shift + right click to change level",
+  "enchantment.unordinary_basics.tree_feller": "Tree-Feller",
+  "enchantment.unordinary_basics.tree_feller.desc": "Fells an entire tree! - Shift + right click to change level",
+  "enchantment.unordinary_basics.breaking_curse": "Curse of Breaking",
+  "enchantment.unordinary_basics.breaking_curse.desc": "Gear breaks twice as fast",
+  "enchantment.unordinary_basics.fatigue_curse": "Curse of Fatigue",
+  "enchantment.unordinary_basics.fatigue_curse.desc": "Don't those eyelids feel heavy?",
+  "enchantment.unordinary_basics.hallucination_curse": "Curse of Hallucination",
+  "enchantment.unordinary_basics.hallucination_curse.desc": "What was that behind you?",
+
+  "tooltip.unordinary_basics.technoblade_crown": "Корона, подходящая для короля и для легенды, которая никогда действительно не умрёт",
+
+  "block.unordinary_basics.enchantment_library": "Enchantment Library",
+  "block.unordinary_basics.item_sorter": "Item Sorter",
+
+  "entity.unordinary_basics.grizzly_bear": "Grizzly Bear",
+  "item.unordinary_basics.grizzly_bear_spawn_egg": "Grizzly Bear Spawn Egg",
+  "entity.unordinary_basics.grolar_bear": "Grolar Bear",
+  "item.unordinary_basics.grolar_bear_spawn_egg": "Grolar Bear Spawn Egg",
+  "unordinary_basics.message.pet.sit": "%s is set to Stay.",
+  "unordinary_basics.message.pet.follow": "%s is set to Follow."
 }

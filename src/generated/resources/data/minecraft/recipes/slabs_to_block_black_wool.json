@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:black_wool_slab"
+    },
+    {
+      "item": "unordinary_basics:black_wool_slab"
+    }
+  ],
+  "result": {
+    "item": "minecraft:black_wool"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:cut_copper_slab"
+    },
+    {
+      "item": "minecraft:cut_copper_slab"
+    }
+  ],
+  "result": {
+    "item": "minecraft:cut_copper"
+  }
+}

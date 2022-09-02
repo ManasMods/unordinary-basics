@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:orange_concrete_powder_stairs"
+    },
+    {
+      "item": "unordinary_basics:orange_concrete_powder_stairs"
+    },
+    {
+      "item": "unordinary_basics:orange_concrete_powder_stairs"
+    },
+    {
+      "item": "unordinary_basics:orange_concrete_powder_stairs"
+    }
+  ],
+  "result": {
+    "item": "minecraft:orange_concrete_powder",
+    "count": 3
+  }
+}

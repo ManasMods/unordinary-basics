@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "unordinary_basics:polished_basalt_stairs"
+    ]
+  },
+  "criteria": {
+    "has_minecraft": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:polished_basalt"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "unordinary_basics:polished_basalt_stairs"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_minecraft",
+      "has_the_recipe"
+    ]
+  ]
+}

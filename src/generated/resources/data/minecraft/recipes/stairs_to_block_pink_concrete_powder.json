@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:pink_concrete_powder_stairs"
+    },
+    {
+      "item": "unordinary_basics:pink_concrete_powder_stairs"
+    },
+    {
+      "item": "unordinary_basics:pink_concrete_powder_stairs"
+    },
+    {
+      "item": "unordinary_basics:pink_concrete_powder_stairs"
+    }
+  ],
+  "result": {
+    "item": "minecraft:pink_concrete_powder",
+    "count": 3
+  }
+}
