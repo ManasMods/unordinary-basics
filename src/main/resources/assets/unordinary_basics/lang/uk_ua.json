@@ -322,9 +322,14 @@
   "itemGroup.unordinary_basics.tab3": "UB Stairs and Slabs",
   "itemGroup.unordinary_basics.tab4": "UB Items",
 
+  "item.minecraft.milk_bucket": "Bucket of Cow's Milk",
+
   "item.unordinary_basics.animal_bait": "Приманка для тварин",
   "item.unordinary_basics.glider": "Glider",
+  "item.unordinary_basics.goat_milk_bottle": "Bottle of Goat's Milk",
+  "item.unordinary_basics.goat_milk_bucket": "Bucket of Goat's Milk",
   "item.unordinary_basics.map_book": "Map Book",
+  "item.unordinary_basics.milk_bottle": "Bottle of Cow's Milk",
   "item.unordinary_basics.potion_belt": "Potion Belt",
   "item.unordinary_basics.pouch": "Мішечок",
   "item.unordinary_basics.quiver": "Quiver",

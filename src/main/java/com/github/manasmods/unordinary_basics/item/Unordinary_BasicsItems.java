@@ -9,12 +9,18 @@ import net.minecraftforge.registries.ObjectHolder;
 public class Unordinary_BasicsItems {
     @ObjectHolder("animal_bait")
     public static final Item ANIMAL_BAIT = null;
+    @ObjectHolder("goat_milk_bottle")
+    public static final Item GOAT_MILK_BOTTLE = null;
     @ObjectHolder("glider")
     public static final Item GLIDER = null;
+    @ObjectHolder("goat_milk_bucket")
+    public static final Item GOAT_MILK_BUCKET = null;
     @ObjectHolder("leaper")
     public static final Item LEAPER = null;
     @ObjectHolder("map_book")
     public static final Item MAP_BOOK = null;
+    @ObjectHolder("milk_bottle")
+    public static final Item MILK_BOTTLE = null;
     @ObjectHolder("potion_belt")
     public static final Item POTION_BELT = null;
     @ObjectHolder("pouch")
@@ -25,6 +31,4 @@ public class Unordinary_BasicsItems {
     public static final Item RABBIT_BOOTS = null;
     @ObjectHolder("technoblade_crown")
     public static final Item TECHNOBLADE_CROWN = null;
-    @ObjectHolder("goat_milk_bucket")
-    public static final Item GOAT_MILK_BUCKET = null;
 }
