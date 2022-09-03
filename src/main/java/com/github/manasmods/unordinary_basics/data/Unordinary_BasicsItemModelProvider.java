@@ -19,6 +19,6 @@ public class Unordinary_BasicsItemModelProvider extends ItemModelProvider {
         singleTexture(Unordinary_BasicsItems.RABBIT_BOOTS);
         singleTexture(Unordinary_BasicsItems.TECHNOBLADE_CROWN);
         singleTexture(Unordinary_BasicsItems.POTION_BELT);
-
+        singleTexture(Unordinary_BasicsItems.GOAT_MILK_BUCKET);
     }
 }
