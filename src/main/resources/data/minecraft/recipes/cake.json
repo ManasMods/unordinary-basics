@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "AAA",
+    "BEB",
+    "CCC"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:air"
+    },
+    "B": {
+      "item": "minecraft:air"
+    },
+    "C": {
+      "item": "minecraft:air"
+    },
+    "E": {
+      "item": "minecraft:air"
+    }
+  },
+  "result": {
+    "item": "minecraft:air"
+  }
+}

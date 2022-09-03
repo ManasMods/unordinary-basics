@@ -44,6 +44,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Blocks.COBBLED_DEEPSLATE).build()))
                 .save(consumer);
+
         ShapedRecipeBuilder.shaped(Blocks.DROPPER)
                 .define('C', Blocks.COBBLED_DEEPSLATE)
                 .define('R', Items.REDSTONE)
@@ -53,6 +54,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Blocks.COBBLED_DEEPSLATE).build()))
                 .save(consumer);
+
         ShapedRecipeBuilder.shaped(Blocks.OBSERVER)
                 .define('C', Blocks.COBBLED_DEEPSLATE)
                 .define('R', Items.REDSTONE)
@@ -63,6 +65,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_cobbled_deepslate", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Blocks.COBBLED_DEEPSLATE).build()))
                 .save(consumer);
+
         ShapedRecipeBuilder.shaped(Blocks.PISTON)
                 .define('C', Blocks.COBBLED_DEEPSLATE)
                 .define('R', Items.REDSTONE)
@@ -85,6 +88,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_leather", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.LEATHER).build()))
                 .save(consumer);
+
         ShapedRecipeBuilder.shaped(Items.NAME_TAG)
                 .define('P', Items.PAPER)
                 .define('S', Items.STRING)
@@ -93,6 +97,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_string", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.PAPER).build()))
                 .save(consumer);
+
         ShapedRecipeBuilder.shaped(Items.TRIDENT)
                 .define('I', Items.IRON_INGOT)
                 .define('D', Items.DIAMOND)
@@ -103,6 +108,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_prismarine_shard", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.PRISMARINE_SHARD).build()))
                 .save(consumer);
+
         ShapedRecipeBuilder.shaped(Items.CHAINMAIL_HELMET)
                 .define('I', Items.IRON_INGOT)
                 .define('N', Items.IRON_NUGGET)
@@ -111,6 +117,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.IRON_NUGGET).build()))
                 .save(consumer);
+
         ShapedRecipeBuilder.shaped(Items.CHAINMAIL_CHESTPLATE)
                 .define('I', Items.IRON_INGOT)
                 .define('N', Items.IRON_NUGGET)
@@ -120,6 +127,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.IRON_NUGGET).build()))
                 .save(consumer);
+
         ShapedRecipeBuilder.shaped(Items.CHAINMAIL_LEGGINGS)
                 .define('I', Items.IRON_INGOT)
                 .define('N', Items.IRON_NUGGET)
@@ -129,6 +137,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.IRON_NUGGET).build()))
                 .save(consumer);
+
         ShapedRecipeBuilder.shaped(Items.CHAINMAIL_BOOTS)
                 .define('I', Items.IRON_INGOT)
                 .define('N', Items.IRON_NUGGET)
@@ -137,10 +146,12 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.IRON_NUGGET).build()))
                 .save(consumer);
+
         ShapelessRecipeBuilder.shapeless(Items.ARROW)
                 .requires(ItemTags.ARROWS)
                 .unlockedBy("has_arrow", inventoryTrigger(ItemPredicate.Builder.item().of(ItemTags.ARROWS).build()))
                 .save(consumer);
+
         ShapedRecipeBuilder.shaped(Items.LEATHER_HORSE_ARMOR)
                 .define('I', Items.LEATHER)
                 .define('S', Items.STRING)
@@ -150,6 +161,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_leather", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.LEATHER).build()))
                 .save(consumer);
+
         ShapedRecipeBuilder.shaped(Items.IRON_HORSE_ARMOR)
                 .define('I', Items.IRON_INGOT)
                 .define('B', Items.IRON_BLOCK)
@@ -160,6 +172,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_iron_ingot", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.IRON_INGOT).build()))
                 .save(consumer);
+
         ShapedRecipeBuilder.shaped(Items.GOLDEN_HORSE_ARMOR)
                 .define('I', Items.GOLD_INGOT)
                 .define('B', Items.GOLD_BLOCK)
@@ -170,6 +183,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_gold_ingot", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.GOLD_INGOT).build()))
                 .save(consumer);
+
         ShapedRecipeBuilder.shaped(Items.DIAMOND_HORSE_ARMOR)
                 .define('I', Items.DIAMOND)
                 .define('B', Items.DIAMOND_BLOCK)
@@ -180,6 +194,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_diamond", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.DIAMOND).build()))
                 .save(consumer);
+
         ShapedRecipeBuilder.shaped(Items.ENCHANTED_GOLDEN_APPLE, 2)
                 .define('A', Items.GOLDEN_APPLE)
                 .define('B', Items.GOLD_BLOCK)
@@ -227,6 +242,21 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                         .of(Items.RED_MUSHROOM).build()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(Items.CAKE, 1)
+                .define('#', Unordinary_BasicsItems.GOAT_MILK_BOTTLE)
+                .define('W', Items.WHEAT)
+                .define('E', Items.EGG)
+                .define('S', Items.SUGAR)
+                .pattern("###")
+                .pattern("SES")
+                .pattern("WWW")
+                .unlockedBy("has_goat_milk_bottle", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Unordinary_BasicsItems.GOAT_MILK_BOTTLE).build()))
+                .unlockedBy("has_milk_bottle", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Unordinary_BasicsItems.MILK_BOTTLE).build()))
+                .save(consumer);
+
+
         /****************************** MOD ITEMS ******************************/
 
         ShapelessRecipeBuilder.shapeless(Unordinary_BasicsItems.ANIMAL_BAIT)
@@ -270,6 +300,20 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .pattern(" LP")
                 .unlockedBy("has_pouch", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Unordinary_BasicsItems.POUCH).build()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(Unordinary_BasicsItems.MILK_BOTTLE, 3)
+                .requires(Items.MILK_BUCKET)
+                .requires(Items.GLASS_BOTTLE, 3)
+                .unlockedBy("has_milk_bucket", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.MILK_BUCKET).build()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(Unordinary_BasicsItems.GOAT_MILK_BOTTLE, 3)
+                .requires(Unordinary_BasicsItems.GOAT_MILK_BUCKET)
+                .requires(Items.GLASS_BOTTLE, 3)
+                .unlockedBy("has_goat_milk_bucket", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Unordinary_BasicsItems.GOAT_MILK_BUCKET).build()))
                 .save(consumer);
 
         crownSmithing(consumer, Items.NETHERITE_HELMET, Unordinary_BasicsItems.TECHNOBLADE_CROWN);
