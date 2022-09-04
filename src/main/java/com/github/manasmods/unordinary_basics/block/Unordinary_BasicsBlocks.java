@@ -12,6 +12,58 @@ public class Unordinary_BasicsBlocks {
     @ObjectHolder("item_sorter")
     public static final Block ITEM_SORTER = null;
 
+    @ObjectHolder("calcite_bricks")
+    public static final Block CALCITE_BRICKS = null;
+    @ObjectHolder("tuff_bricks")
+    public static final Block TUFF_BRICKS = null;
+    @ObjectHolder("polished_tuff")
+    public static final Block POLISHED_TUFF = null;
+    @ObjectHolder("dripstone_bricks")
+    public static final Block DRIPSTONE_BRICKS = null;
+    @ObjectHolder("soul_sandstone")
+    public static final Block SOUL_SANDSTONE = null;
+    @ObjectHolder("chiseled_soul_sandstone")
+    public static final Block CHISELLED_SOUL_SANDSTONE = null;
+    @ObjectHolder("cut_soul_sandstone")
+    public static final Block CUT_SOUL_SANDSTONE = null;
+    @ObjectHolder("smooth_soul_sandstone")
+    public static final Block SMOOTH_SOUL_SANDSTONE = null;
+
+    @ObjectHolder("calcite_bricks_slab")
+    public static final Block CALCITE_BRICK_SLAB = null;
+    @ObjectHolder("tuff_bricks_slab")
+    public static final Block TUFF_BRICK_SLAB = null;
+    @ObjectHolder("polished_tuff_slab")
+    public static final Block POLISHED_TUFF_SLAB = null;
+    @ObjectHolder("dripstone_bricks_slab")
+    public static final Block DRIPSTONE_BRICK_SLAB = null;
+    @ObjectHolder("soul_sandstone_slab")
+    public static final Block SOUL_SANDSTONE_SLAB = null;
+    @ObjectHolder("chiseled_soul_sandstone_slab")
+    public static final Block CHISELLED_SOUL_SANDSTONE_SLAB = null;
+    @ObjectHolder("cut_soul_sandstone_slab")
+    public static final Block CUT_SOUL_SANDSTONE_SLAB = null;
+    @ObjectHolder("smooth_soul_sandstone_slab")
+    public static final Block SMOOTH_SOUL_SANDSTONE_SLAB = null;
+
+    @ObjectHolder("calcite_bricks_stairs")
+    public static final Block CALCITE_BRICK_STAIRS = null;
+    @ObjectHolder("tuff_bricks_stairs")
+    public static final Block TUFF_BRICK_STAIRS = null;
+    @ObjectHolder("polished_tuff_stairs")
+    public static final Block POLISHED_TUFF_STAIRS = null;
+    @ObjectHolder("dripstone_bricks_stairs")
+    public static final Block DRIPSTONE_BRICK_STAIRS = null;
+    @ObjectHolder("soul_sandstone_stairs")
+    public static final Block SOUL_SANDSTONE_STAIRS = null;
+    @ObjectHolder("chiseled_soul_sandstone_stairs")
+    public static final Block CHISELLED_SOUL_SANDSTONE_STAIRS = null;
+    @ObjectHolder("cut_soul_sandstone_stairs")
+    public static final Block CUT_SOUL_SANDSTONE_STAIRS = null;
+    @ObjectHolder("smooth_soul_sandstone_stairs")
+    public static final Block SMOOTH_SOUL_SANDSTONE_STAIRS = null;
+
+
     //STAIRS
 
     @ObjectHolder("calcite_stairs")

@@ -45,6 +45,47 @@ public class BlockRegistry {
      */
     private static void registerBlocks(DeferredRegister<Block> registry) {
 
+        //UB STUFF
+
+        registry.register("enchantment_library", () -> new EnchantmentLibraryBlock(BlockBehaviour.Properties.of(Material.STONE)
+                .strength(1F)
+                .sound(SoundType.WOOD)
+                .noOcclusion()
+                .requiresCorrectToolForDrops()));
+        registry.register("item_sorter", () -> new ItemSorterBlock(BlockBehaviour.Properties.of(Material.METAL)
+                .strength(1F)
+                .sound(SoundType.METAL)
+                .noOcclusion()
+                .requiresCorrectToolForDrops()));
+        /* //TODO: Register the blocks
+        registry.register("calcite_bricks", () -> new SimpleBlock(Blocks.CALCITE::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.BRICKS).requiresCorrectToolForDrops())));
+        registry.register("tuff_bricks", () -> new SimpleBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.BRICKS).requiresCorrectToolForDrops())));
+        registry.register("polished_tuff", () -> new SimpleBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.POLISHED_ANDESITE).requiresCorrectToolForDrops())));
+        registry.register("dripstone_bricks", () -> new SimpleBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.BRICKS).requiresCorrectToolForDrops())));
+        registry.register("soul_sandstone", () -> new SimpleBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.SANDSTONE).requiresCorrectToolForDrops())));
+        registry.register("chiseled_soul_sandstone", () -> new SimpleBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.CHISELED_SANDSTONE).requiresCorrectToolForDrops())));
+        registry.register("cut_soul_sandstone", () -> new SimpleBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.CUT_SANDSTONE).requiresCorrectToolForDrops())));
+        registry.register("smooth_soul_sandstone", () -> new SimpleBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.SMOOTH_SANDSTONE).requiresCorrectToolForDrops())));
+
+        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
+        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
+        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
+        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
+        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
+        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
+        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
+        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
+
+        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
+        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
+        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
+        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
+        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
+        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
+        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
+        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
+*/
+
         //BLOCKS FOR STAIRS + SLABS
 
         RegistryObject<Block> oak_log = registry.register("oak_log", () -> new SimpleBlock(Material.WOOD, properties -> properties.strength(2.0F).sound(SoundType.WOOD).requiresCorrectToolForDrops()));
@@ -66,18 +107,6 @@ public class BlockRegistry {
         RegistryObject<Block> purpur_pillar = registry.register("purpur_pillar", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 6.0F).requiresCorrectToolForDrops()));
         RegistryObject<Block> quartz_pillar = registry.register("quartz_pillar", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(0.8F).requiresCorrectToolForDrops()));
         RegistryObject<Block> hay_block = registry.register("hay_block", () -> new SimpleBlock(Material.GRASS, properties -> properties.strength(0.5F).sound(SoundType.GRASS).requiresCorrectToolForDrops()));
-
-        registry.register("enchantment_library", () -> new EnchantmentLibraryBlock(BlockBehaviour.Properties.of(Material.STONE)
-                .strength(1F)
-                .sound(SoundType.WOOD)
-                .noOcclusion()
-                .requiresCorrectToolForDrops()));
-        registry.register("item_sorter", () -> new ItemSorterBlock(BlockBehaviour.Properties.of(Material.METAL)
-                .strength(1F)
-                .sound(SoundType.METAL)
-                .noOcclusion()
-                .requiresCorrectToolForDrops()));
-
 
         //STAIRS
 
