@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": {
-      "item": "unordinary_basics:goat_milk_bottle"
+      "tag": "forge:items/milk_bottle"
     },
     "W": {
       "item": "minecraft:wheat"

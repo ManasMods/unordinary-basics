@@ -2,29 +2,17 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "minecraft:cake"
+      "unordinary_basics:milk_bottle"
     ]
   },
   "criteria": {
-    "has_goat_milk_bottle": {
+    "has_milk_bucket": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "unordinary_basics:goat_milk_bottle"
-            ]
-          }
-        ]
-      }
-    },
-    "has_milk_bottle": {
-      "trigger": "minecraft:inventory_changed",
-      "conditions": {
-        "items": [
-          {
-            "items": [
-              "unordinary_basics:milk_bottle"
+              "minecraft:milk_bucket"
             ]
           }
         ]
@@ -33,14 +21,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "minecraft:cake"
+        "recipe": "unordinary_basics:milk_bottle"
       }
     }
   },
   "requirements": [
     [
-      "has_goat_milk_bottle",
-      "has_milk_bottle",
+      "has_milk_bucket",
       "has_the_recipe"
     ]
   ]

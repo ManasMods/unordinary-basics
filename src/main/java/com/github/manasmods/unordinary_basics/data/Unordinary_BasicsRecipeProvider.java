@@ -3,6 +3,7 @@ package com.github.manasmods.unordinary_basics.data;
 import com.github.manasmods.manascore.data.gen.RecipeProvider;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
+import com.github.manasmods.unordinary_basics.utils.UBTags;
 import com.google.common.collect.ImmutableList;
 import net.minecraft.advancements.critereon.ItemPredicate;
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -243,7 +244,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(Items.CAKE, 1)
-                .define('#', Unordinary_BasicsItems.GOAT_MILK_BOTTLE)
+                .define('#', UBTags.Items.MILK_BOTTLE)
                 .define('W', Items.WHEAT)
                 .define('E', Items.EGG)
                 .define('S', Items.SUGAR)
