@@ -21,6 +21,8 @@ public class UBTags {public static class Blocks {
 
     public static class Items {
         public static TagKey<Item> MILK_BOTTLE = forgeTag("items/milk_bottle");
+        public static TagKey<Item> BEAR_FOOD = forgeTag("items/milk_bottle");
+        public static TagKey<Item> TAME_BEAR_FOOD = forgeTag("items/milk_bottle");
 
         static TagKey<Item> modTag(String name) {
             return ItemTags.create(new ResourceLocation(Unordinary_Basics.MOD_ID, name));
