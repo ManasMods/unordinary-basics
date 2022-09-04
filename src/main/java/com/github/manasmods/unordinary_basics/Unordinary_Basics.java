@@ -52,6 +52,9 @@ public class Unordinary_Basics {
         event.getGenerator().addProvider(new Unordinary_BasicsLootTableProvider(event));
         event.getGenerator().addProvider(new Unordinary_BasicsBlockTagProvider(event));
         event.getGenerator().addProvider(new Unordinary_BasicsFletchingRecipeProvider(event));
+        Unordinary_BasicsBlockTagProvider blockTagProvider = new Unordinary_BasicsBlockTagProvider(event);
+        event.getGenerator().addProvider(blockTagProvider);
+        event.getGenerator().addProvider(new Unordinary_BasicsItemTagProvider(event, blockTagProvider));
     }
 
     /**
