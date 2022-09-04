@@ -1,5 +1,6 @@
-package com.github.manasmods.unordinary_basics.item;
+package com.github.manasmods.unordinary_basics.item.custom;
 
+import com.github.manasmods.unordinary_basics.item.UBArmorMaterials;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;

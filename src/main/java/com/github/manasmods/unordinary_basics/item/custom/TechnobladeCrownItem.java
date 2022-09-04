@@ -1,5 +1,6 @@
-package com.github.manasmods.unordinary_basics.item;
+package com.github.manasmods.unordinary_basics.item.custom;
 
+import com.github.manasmods.unordinary_basics.item.UBArmorMaterials;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.sounds.SoundEvent;

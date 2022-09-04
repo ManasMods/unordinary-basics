@@ -22,5 +22,11 @@ public class Unordinary_BasicsItemModelProvider extends ItemModelProvider {
         singleTexture(Unordinary_BasicsItems.QUIVER);
         singleTexture(Unordinary_BasicsItems.RABBIT_BOOTS);
         singleTexture(Unordinary_BasicsItems.TECHNOBLADE_CROWN);
+
+        singleTexture(Unordinary_BasicsItems.UNKNOWN_BLADE_FRAGMENT);
+        singleTexture(Unordinary_BasicsItems.UNKNOWN_HANDLE_FRAGMENT);
+        singleTexture(Unordinary_BasicsItems.UNKNOWN_HILT_FRAGMENT);
+        singleTexture(Unordinary_BasicsItems.ZENITH);
+
     }
 }

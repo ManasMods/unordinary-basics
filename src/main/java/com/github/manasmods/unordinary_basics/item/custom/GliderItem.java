@@ -1,4 +1,4 @@
-package com.github.manasmods.unordinary_basics.item;
+package com.github.manasmods.unordinary_basics.item.custom;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;

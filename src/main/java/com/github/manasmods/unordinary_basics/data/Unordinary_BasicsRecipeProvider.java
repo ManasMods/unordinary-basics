@@ -319,6 +319,14 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
 
         crownSmithing(consumer, Items.NETHERITE_HELMET, Unordinary_BasicsItems.TECHNOBLADE_CROWN);
 
+        ShapelessRecipeBuilder.shapeless(Unordinary_BasicsItems.ZENITH)
+                .requires(Unordinary_BasicsItems.UNKNOWN_BLADE_FRAGMENT)
+                .requires(Unordinary_BasicsItems.UNKNOWN_HANDLE_FRAGMENT)
+                .requires(Unordinary_BasicsItems.UNKNOWN_HILT_FRAGMENT)
+                .unlockedBy("has_fragment", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Unordinary_BasicsItems.UNKNOWN_BLADE_FRAGMENT,Unordinary_BasicsItems.UNKNOWN_HANDLE_FRAGMENT,Unordinary_BasicsItems.UNKNOWN_HILT_FRAGMENT).build()))
+                .save(consumer);
+
         /****************************** QOL ITEM SMELTING ******************************/
 
         smeltingRecipe(consumer, Ingredient.of(Items.LEATHER), Items.ROTTEN_FLESH, 0.35F, 200);
