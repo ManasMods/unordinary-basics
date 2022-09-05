@@ -10,4 +10,6 @@ public class Unordinary_BasicsMenuTypes {
     public static final MenuType<JukeBoxMenu> JUKE_BOX_MENU = null;
     @ObjectHolder("fletching_table_menu")
     public static final MenuType<FletchingTableMenu> FLETCHING_TABLE_MENU = null;
+    @ObjectHolder("inventory_menu")
+    public static final MenuType<UBInventoryMenu> INVENTORY_MENU = null;
 }
