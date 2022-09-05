@@ -1,7 +1,9 @@
-package com.github.manasmods.unordinary_basics.gui;
+package com.github.manasmods.unordinary_basics.client.gui;
 
 import com.github.manasmods.manascore.tab.annotation.ScreenForTab;
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.menu.UBInventoryMenu;
+import com.github.manasmods.unordinary_basics.tab.Unordinary_BasicsInventoryTab;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -9,26 +11,33 @@ import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
 @ScreenForTab(Unordinary_BasicsInventoryTab.class)
 @OnlyIn(Dist.CLIENT)
-public class Unordinary_BasicsInventoryScreen extends AbstractContainerScreen<Unordinary_BasicsInventoryMenu> {
+public class Unordinary_BasicsInventoryScreen extends AbstractContainerScreen<UBInventoryMenu> {
 
     public static final ResourceLocation UB_INVENTORY_LOCATION = new ResourceLocation(Unordinary_Basics.MOD_ID, "textures/gui/ub_inventory.png");
 
-    public Unordinary_BasicsInventoryScreen(Unordinary_BasicsInventoryMenu menu, Inventory inventory, Component title) {
+    public Unordinary_BasicsInventoryScreen(UBInventoryMenu menu, Inventory inventory, Component title) {
         super(menu, inventory, title);
     }
 
     @Override
-    public void render(PoseStack poseStack, int mouseX, int mouseY, float partialTick) {
-        renderBackground(poseStack);
-        renderBg(poseStack, partialTick, mouseX, mouseY);
-        minecraft.getItemRenderer().renderAndDecorateFakeItem(new ItemStack(Items.LIME_WOOL), 50, 50);
+    protected void init() {
+        super.init();
+    }
+
+    @Override
+    public void render(PoseStack pPoseStack, int pMouseX, int pMouseY, float pPartialTick) {
+        super.render(pPoseStack, pMouseX, pMouseY, pPartialTick);
+        renderTooltip(pPoseStack, pMouseX, pMouseY);
+    }
+
+    @Override
+    protected void renderLabels(PoseStack pPoseStack, int pMouseX, int pMouseY) {
+
     }
 
     @Override

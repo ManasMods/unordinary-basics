@@ -1,12 +1,10 @@
-package com.github.manasmods.unordinary_basics.gui;
+package com.github.manasmods.unordinary_basics.tab;
 
-import com.github.manasmods.manascore.ManasCore;
 import com.github.manasmods.manascore.tab.AbstractInventoryTab;
+import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
+import com.github.manasmods.unordinary_basics.network.toserver.RequestUBInventoryMenu;
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
@@ -25,12 +23,6 @@ public class Unordinary_BasicsInventoryTab extends AbstractInventoryTab {
 
     @Override
     public void sendOpenContainerPacket() {
-        LocalPlayer player = minecraft.player;
-        if (player == null) {
-            ManasCore.getLogger().fatal("Local Player is null!?");
-        } else {
-            Inventory inventory = player.getInventory();
-            this.minecraft.setScreen(new Unordinary_BasicsInventoryScreen(new Unordinary_BasicsInventoryMenu(inventory, true, player), inventory, new TextComponent("Unordinary Basics")));
-        }
+        Unordinary_BasicsNetwork.getInstance().sendToServer(new RequestUBInventoryMenu());
     }
 }
