@@ -1,13 +1,11 @@
 == Change Log ==
 
-¬ Added several new inventory slots
-    - Back Slot
-    - Waist Slot
+/** Items **/
+
 ¬ Added some new gear
     - Backpacks
     - Potion Belt
     - Quiver
-¬ Added Item Sorter block
 ¬ Added Map Book
 ¬ Added new enchantments and curses
     - Curse of Breaking
@@ -16,11 +14,23 @@
     - Master Miner
     - Vein Miner
     - Tree Feller
+¬ Added an end-game sword
+
+/** Blocks **/
+
+¬ Added Item Sorter block
 ¬ Added Enchantment Library (no functionality yet)
+
+/** Misc Changes **/
+
+¬ Added several new inventory slots
+    - Back Slot
+    - Waist Slot
 ¬ Added Grizzly Bear
 ¬ Added Grolar Bear
 ¬ Updated tames
     - Fox
     - Polar Bear
 ¬ Updated some vanilla words
-¬ Added an end-game sword
+
+== End of Change Log ==
