@@ -23,6 +23,7 @@ public class UBTags {public static class Blocks {
         public static TagKey<Item> MILK_BOTTLE = forgeTag("items/milk_bottle");
         public static TagKey<Item> BEAR_FOOD = forgeTag("items/bear_food");
         public static TagKey<Item> TAME_BEAR_FOOD = forgeTag("items/tame_bear_food");
+        public static TagKey<Item> STONE = forgeTag("items/stone");
 
         static TagKey<Item> modTag(String name) {
             return ItemTags.create(new ResourceLocation(Unordinary_Basics.MOD_ID, name));
