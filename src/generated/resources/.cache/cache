@@ -1449,6 +1449,7 @@ a023553a3628942b89175bf557e65a83e0723bae assets/unordinary_basics/models/item/ye
 985b76cb7ff4d5ae5dfe23d073a4512dc56bf4f2 assets/unordinary_basics/models/item/zenith.json
 a1c89bb98cb3e0cb2ee4cc6fe1b34964aee526af data/forge/tags/blocks/needs_wood_tool.json
 fcaa1a2e4102937ca2709b9a1e8c6790cf7a1950 data/forge/tags/items/items/bear_food.json
+612cad61b7c93ef636ef69e8d3f5abf3ec2f1220 data/forge/tags/items/items/black_dyes.json
 6e71146a9cc3364131d14bb79f0e78fb360a6029 data/forge/tags/items/items/milk_bottle.json
 0d47f5ec55051488ce338fe000988312e166fb55 data/forge/tags/items/items/stone.json
 3ea6e3edc4e9d233f12fb1d497979cbe65642531 data/forge/tags/items/items/tame_bear_food.json
@@ -1971,6 +1972,7 @@ c1524bf0c8d95505bf382efa74568845815feb05 data/minecraft/advancements/recipes/foo
 f67eadf23292bfe9c2d75d566a54bf955142e31a data/minecraft/advancements/recipes/food/enchanted_golden_apple.json
 aba24f39f9f87a35232fd45542c2a01e634f4a62 data/minecraft/advancements/recipes/food/rotten_flesh_from_campfire_cooking.json
 2e371fa35c1ec03bfdef808b8f36bf372747bb9e data/minecraft/advancements/recipes/food/rotten_flesh_from_smelting.json
+db4575c90ebeef9cdf451198af9ee24861251673 data/minecraft/advancements/recipes/misc/black_dye.json
 d1076569251d58aea825e4ced99abb47a0518032 data/minecraft/advancements/recipes/misc/diamond_horse_armor.json
 a89e5249b85f739350574418b2a2847984be3b6b data/minecraft/advancements/recipes/misc/golden_horse_armor.json
 2ac1482de74accdafe3b4b44229cd7106afdea93 data/minecraft/advancements/recipes/misc/green_dye.json
@@ -1990,6 +1992,7 @@ d1932727162622c893a810c67af1d5d3f6ff2633 data/minecraft/advancements/recipes/tra
 a20fcca185b7d4008dd0e8f4b1700ca03320264e data/minecraft/recipes/arrow.json
 4ca2aba3523732e1baa2d0d061400e211b7eff03 data/minecraft/recipes/birch_slab.json
 6e170590ccb5947063d9e97288decb042ce886d3 data/minecraft/recipes/birch_stairs.json
+2c00e3b0347c2ab1730b7be14d298f8554ac49d2 data/minecraft/recipes/black_dye.json
 be741c7f2aab59a47540ef5e2ca880036b310410 data/minecraft/recipes/blackstone_slab.json
 83504374578610f2e7e94fd7cd6f03642fc729eb data/minecraft/recipes/blackstone_stairs.json
 9b16a3c88f537844f2612f33643725c623ee20bb data/minecraft/recipes/brick_slab.json

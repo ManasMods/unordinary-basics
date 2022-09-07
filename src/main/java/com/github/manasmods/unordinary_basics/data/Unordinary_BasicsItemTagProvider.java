@@ -27,5 +27,7 @@ public class Unordinary_BasicsItemTagProvider extends ItemTagProvider {
                 .add(Items.SWEET_BERRIES, Items.SALMON);
         tag(UBTags.Items.STONE)
                 .add(Item.byBlock(Blocks.COBBLESTONE),Item.byBlock(Blocks.COBBLED_DEEPSLATE),Item.byBlock(Blocks.BASALT));
+        tag(UBTags.Items.BLACK_DYES)
+                .add(Items.CHARCOAL, Items.COAL, Items.INK_SAC);
     }
 }

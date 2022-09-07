@@ -216,6 +216,12 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                         .of(Items.BLUE_DYE).build()))
                 .save(consumer);
 
+        ShapelessRecipeBuilder.shapeless(Items.BLACK_DYE, 2)
+                .requires(UBTags.Items.BLACK_DYES)
+                .unlockedBy("has_black_dyes", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(UBTags.Items.BLACK_DYES).build()))
+                .save(consumer);
+
         ShapedRecipeBuilder.shaped(Items.BROWN_MUSHROOM_BLOCK, 4)
                 .define('M', Items.BROWN_MUSHROOM)
                 .pattern("MM")
