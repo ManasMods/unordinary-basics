@@ -35,6 +35,15 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
 
         /****************************** VANILLA RECIPE CHANGES ******************************/
 
+        ShapedRecipeBuilder.shaped(Blocks.FURNACE)
+                .define('#', UBTags.Items.STONE)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###")
+                .unlockedBy("has_stones", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(UBTags.Items.STONE).build()))
+                .save(consumer);
+
         ShapedRecipeBuilder.shaped(Blocks.DISPENSER)
                 .define('#', UBTags.Items.STONE)
                 .define('B', Items.BOW)
