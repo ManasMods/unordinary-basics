@@ -2,18 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "minecraft:rotten_flesh_from_campfire_cooking"
+      "minecraft:furnace"
     ]
   },
   "criteria": {
-    "has_leather": {
+    "has_stones": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:leather"
-            ]
+            "tag": "forge:items/stone"
           }
         ]
       }
@@ -21,13 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "minecraft:rotten_flesh_from_campfire_cooking"
+        "recipe": "minecraft:furnace"
       }
     }
   },
   "requirements": [
     [
-      "has_leather",
+      "has_stones",
       "has_the_recipe"
     ]
   ]

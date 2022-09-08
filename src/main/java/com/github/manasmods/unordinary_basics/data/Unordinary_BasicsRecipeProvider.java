@@ -344,8 +344,8 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
 
         /****************************** QOL ITEM SMELTING ******************************/
 
-        smeltingRecipe(consumer, Ingredient.of(Items.LEATHER), Items.ROTTEN_FLESH, 0.35F, 200);
-        campfireRecipe(consumer, Ingredient.of(Items.LEATHER), Items.ROTTEN_FLESH, 0.35F, 600);
+        smeltingRecipe(consumer, Ingredient.of(Items.ROTTEN_FLESH), Items.LEATHER, 0.35F, 200);
+        campfireRecipe(consumer, Ingredient.of(Items.ROTTEN_FLESH), Items.LEATHER, 0.35F, 600);
         smeltingRecipe(consumer, Ingredient.of(Items.RAW_COPPER_BLOCK), Items.COPPER_BLOCK, 0.35F, 500);
         smeltingRecipe(consumer, Ingredient.of(Items.RAW_GOLD_BLOCK), Items.GOLD_BLOCK, 0.35F, 500);
         smeltingRecipe(consumer, Ingredient.of(Items.RAW_IRON_BLOCK), Items.IRON_BLOCK, 0.35F, 500);
