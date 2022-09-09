@@ -3,6 +3,8 @@ package com.github.manasmods.unordinary_basics.registry;
 
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsCreativeTab;
 import com.github.manasmods.unordinary_basics.item.custom.*;
+import com.github.manasmods.unordinary_basics.item.templates.MusicDiscItem;
+import com.github.manasmods.unordinary_basics.sound.UBSounds;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.MilkBucketItem;
 import net.minecraft.world.item.Rarity;
@@ -27,8 +29,8 @@ class ItemRegistry {
         registry.register("animal_bait", () -> new Item(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
         registry.register("potion_belt", () -> new Item(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
         registry.register("goat_milk_bucket", () -> new MilkBucketItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
-        registry.register("goat_milk_bottle", () -> new MilkBucketItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(16)));
-        registry.register("milk_bottle", () -> new MilkBucketItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(16)));
+        registry.register("goat_milk_bottle", () -> new MilkBucketItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
+        registry.register("milk_bottle", () -> new MilkBucketItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
         registry.register("map_book", () -> new Item(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1).durability(265)));
         registry.register("unknown_blade_fragment", () -> new Item(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
         registry.register("unknown_handle_fragment", () -> new Item(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
@@ -39,6 +41,9 @@ class ItemRegistry {
         registry.register("rabbit_boots", () -> new RabbitBootsItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
         registry.register("technoblade_crown", () -> new TechnobladeCrownItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1).rarity(Rarity.EPIC)));
         registry.register("glider", () -> new GliderItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
+
+        registry.register("music_disc_queen", () -> new MusicDiscItem(() -> UBSounds.QUEEN));
+
 
     }
     private static void registerSpawnEgg(DeferredRegister<Item> registry) {

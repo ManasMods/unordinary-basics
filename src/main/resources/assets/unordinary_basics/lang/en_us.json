@@ -335,12 +335,14 @@
   "item.unordinary_basics.quiver": "Quiver",
   "item.unordinary_basics.rabbit_boots": "Rabbit Boots",
   "item.unordinary_basics.technoblade_crown": "Technoblade's Crown",
+  "item.unordinary_basics.music_disc_queen": "Music Disc",
 
   "item.unordinary_basics.unknown_blade_fragment": "Unknown Blade Fragment",
   "item.unordinary_basics.unknown_handle_fragment": "Unknown Handle Fragment",
   "item.unordinary_basics.unknown_hilt_fragment": "Unknown Hilt Fragment",
   "item.unordinary_basics.zenith": "Zenith",
   "item.unordinary_basics.zenith.desc": "'The journey may have been long and hard but all what matters is that you made it; you may have had moments of sadness, anger joy but now, the world is yours for the taking! The only limit is your imagination.'",
+  "item.unordinary_basics.music_disc_queen.desc": "God Save The Queen",
 
   "enchantment.unordinary_basics.master_miner": "Master Miner",
   "enchantment.unordinary_basics.master_miner.desc": "Mines multiple blocks at once! - Shift + right click to change level",
