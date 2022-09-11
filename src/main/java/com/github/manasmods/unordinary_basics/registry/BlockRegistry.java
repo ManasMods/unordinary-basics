@@ -57,34 +57,7 @@ public class BlockRegistry {
                 .sound(SoundType.METAL)
                 .noOcclusion()
                 .requiresCorrectToolForDrops()));
-        /* //TODO: Register the blocks
-        registry.register("calcite_bricks", () -> new SimpleBlock(Blocks.CALCITE::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.BRICKS).requiresCorrectToolForDrops())));
-        registry.register("tuff_bricks", () -> new SimpleBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.BRICKS).requiresCorrectToolForDrops())));
-        registry.register("polished_tuff", () -> new SimpleBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.POLISHED_ANDESITE).requiresCorrectToolForDrops())));
-        registry.register("dripstone_bricks", () -> new SimpleBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.BRICKS).requiresCorrectToolForDrops())));
-        registry.register("soul_sandstone", () -> new SimpleBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.SANDSTONE).requiresCorrectToolForDrops())));
-        registry.register("chiseled_soul_sandstone", () -> new SimpleBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.CHISELED_SANDSTONE).requiresCorrectToolForDrops())));
-        registry.register("cut_soul_sandstone", () -> new SimpleBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.CUT_SANDSTONE).requiresCorrectToolForDrops())));
-        registry.register("smooth_soul_sandstone", () -> new SimpleBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.SMOOTH_SANDSTONE).requiresCorrectToolForDrops())));
 
-        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
-        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
-        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
-        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
-        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
-        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
-        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
-        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
-
-        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
-        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
-        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
-        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
-        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
-        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
-        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
-        registry.register("a", () -> new StairBlock(Blocks.A::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.A).requiresCorrectToolForDrops())));
-*/
 
         //BLOCKS FOR STAIRS + SLABS
 

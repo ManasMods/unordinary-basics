@@ -2,7 +2,9 @@
   "replace": false,
   "values": [
     "minecraft:cobblestone",
+    "minecraft:stone",
     "minecraft:cobbled_deepslate",
+    "minecraft:deepslate",
     "minecraft:basalt"
   ]
 }

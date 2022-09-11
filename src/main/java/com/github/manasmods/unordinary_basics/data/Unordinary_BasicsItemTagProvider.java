@@ -8,7 +8,6 @@ import com.github.manasmods.unordinary_basics.utils.UBTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraftforge.common.Tags;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 public class Unordinary_BasicsItemTagProvider extends ItemTagProvider {
@@ -26,8 +25,8 @@ public class Unordinary_BasicsItemTagProvider extends ItemTagProvider {
         tag(UBTags.Items.TAME_BEAR_FOOD)
                 .add(Items.SWEET_BERRIES, Items.SALMON);
         tag(UBTags.Items.STONE)
-                .add(Item.byBlock(Blocks.COBBLESTONE),Item.byBlock(Blocks.COBBLED_DEEPSLATE),Item.byBlock(Blocks.BASALT));
+                .add(Item.byBlock(Blocks.COBBLESTONE),Item.byBlock(Blocks.STONE),Item.byBlock(Blocks.COBBLED_DEEPSLATE),Item.byBlock(Blocks.DEEPSLATE),Item.byBlock(Blocks.BASALT));
         tag(UBTags.Items.BLACK_DYES)
-                .add(Items.CHARCOAL, Items.COAL, Items.INK_SAC);
+                .add(Items.CHARCOAL, Items.COAL, Items.INK_SAC, Items.WITHER_ROSE);
     }
 }

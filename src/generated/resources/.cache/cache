@@ -1450,9 +1450,9 @@ a023553a3628942b89175bf557e65a83e0723bae assets/unordinary_basics/models/item/ye
 985b76cb7ff4d5ae5dfe23d073a4512dc56bf4f2 assets/unordinary_basics/models/item/zenith.json
 a1c89bb98cb3e0cb2ee4cc6fe1b34964aee526af data/forge/tags/blocks/needs_wood_tool.json
 fcaa1a2e4102937ca2709b9a1e8c6790cf7a1950 data/forge/tags/items/items/bear_food.json
-612cad61b7c93ef636ef69e8d3f5abf3ec2f1220 data/forge/tags/items/items/black_dyes.json
+ff57a29a3ec472141464748888ead06b79e9a598 data/forge/tags/items/items/black_dyes.json
 6e71146a9cc3364131d14bb79f0e78fb360a6029 data/forge/tags/items/items/milk_bottle.json
-0d47f5ec55051488ce338fe000988312e166fb55 data/forge/tags/items/items/stone.json
+9296416fcc389ee3b52dd4316694270ae4dbcf13 data/forge/tags/items/items/stone.json
 3ea6e3edc4e9d233f12fb1d497979cbe65642531 data/forge/tags/items/items/tame_bear_food.json
 fca60478819090099b0c0e4ae8870df63eaaa106 data/minecraft/advancements/recipes/building_blocks/acacia_slab.json
 58443d37b58ac9b3cb94503712ce92a8145d791c data/minecraft/advancements/recipes/building_blocks/acacia_stairs.json
