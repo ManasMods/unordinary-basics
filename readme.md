@@ -19,3 +19,17 @@ Feel free to join the [Discord](https://discord.gg/frqHUnJeVg) server if you wan
 **Adding Compatibility**
 
 May eventually have a guide on adding mod compatibility with UB.
+
+****
+
+**Credits**
+
+Contrabass26
+GenMedia2
+Herranne
+Kohaku
+Nieadni
+Nightishaman
+Professor
+[Mickey Joe Alpha](https://www.YouTube.com/c/MickeyJoeAlpha-G)
+VeganNatureQueen
