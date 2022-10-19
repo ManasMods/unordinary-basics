@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:light_blue_terracotta_stairs"
+    },
+    {
+      "item": "unordinary_basics:light_blue_terracotta_stairs"
+    },
+    {
+      "item": "unordinary_basics:light_blue_terracotta_stairs"
+    },
+    {
+      "item": "unordinary_basics:light_blue_terracotta_stairs"
+    }
+  ],
+  "result": {
+    "item": "minecraft:light_blue_terracotta",
+    "count": 3
+  }
+}

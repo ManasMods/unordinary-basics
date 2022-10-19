@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:calcite_stairs"
+    },
+    {
+      "item": "unordinary_basics:calcite_stairs"
+    },
+    {
+      "item": "unordinary_basics:calcite_stairs"
+    },
+    {
+      "item": "unordinary_basics:calcite_stairs"
+    }
+  ],
+  "result": {
+    "item": "minecraft:calcite",
+    "count": 3
+  }
+}

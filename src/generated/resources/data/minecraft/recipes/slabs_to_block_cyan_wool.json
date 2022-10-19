@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:cyan_wool_slab"
+    },
+    {
+      "item": "unordinary_basics:cyan_wool_slab"
+    }
+  ],
+  "result": {
+    "item": "minecraft:cyan_wool"
+  }
+}

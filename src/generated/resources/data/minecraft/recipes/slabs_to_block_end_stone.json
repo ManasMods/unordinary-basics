@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:end_stone_slab"
+    },
+    {
+      "item": "unordinary_basics:end_stone_slab"
+    }
+  ],
+  "result": {
+    "item": "minecraft:end_stone"
+  }
+}

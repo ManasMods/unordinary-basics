@@ -18,7 +18,7 @@ class ItemRegistry {
      */
     static void register(DeferredRegister<Item> registry) {
         registerMisc(registry);
-        registerSpawnEgg(registry);
+//        registerSpawnEgg(registry);
     }
 
     private static void registerMisc(DeferredRegister<Item> registry) {

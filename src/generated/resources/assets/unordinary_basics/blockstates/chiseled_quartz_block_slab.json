@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "unordinary_basics:block/chiseled_quartz_block_slab_top"
+    },
+    "type=bottom": {
+      "model": "unordinary_basics:block/chiseled_quartz_block_slab"
+    },
+    "type=double": {
+      "model": "minecraft:block/chiseled_quartz_block"
+    }
+  }
+}

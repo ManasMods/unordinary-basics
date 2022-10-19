@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:crimson_stem_stairs"
+    },
+    {
+      "item": "unordinary_basics:crimson_stem_stairs"
+    },
+    {
+      "item": "unordinary_basics:crimson_stem_stairs"
+    },
+    {
+      "item": "unordinary_basics:crimson_stem_stairs"
+    }
+  ],
+  "result": {
+    "item": "minecraft:crimson_stem",
+    "count": 3
+  }
+}

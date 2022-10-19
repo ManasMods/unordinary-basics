@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:tuff"
+    }
+  },
+  "result": {
+    "item": "unordinary_basics:tuff_stairs",
+    "count": 8
+  }
+}

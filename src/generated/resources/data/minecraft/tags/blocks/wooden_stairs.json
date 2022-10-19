@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "unordinary_basics:oak_log_stairs",
+    "unordinary_basics:birch_log_stairs",
+    "unordinary_basics:spruce_log_stairs",
+    "unordinary_basics:acacia_log_stairs",
+    "unordinary_basics:dark_oak_log_stairs",
+    "unordinary_basics:jungle_log_stairs",
+    "unordinary_basics:stripped_oak_log_stairs",
+    "unordinary_basics:stripped_birch_log_stairs",
+    "unordinary_basics:stripped_spruce_log_stairs",
+    "unordinary_basics:stripped_acacia_log_stairs",
+    "unordinary_basics:stripped_dark_oak_log_stairs",
+    "unordinary_basics:stripped_jungle_log_stairs",
+    "unordinary_basics:crimson_stem_stairs",
+    "unordinary_basics:warped_stem_stairs",
+    "unordinary_basics:stripped_crimson_stem_stairs",
+    "unordinary_basics:stripped_warped_stem_stairs"
+  ]
+}
