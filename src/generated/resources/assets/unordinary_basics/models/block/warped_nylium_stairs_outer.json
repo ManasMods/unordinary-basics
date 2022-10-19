@@ -1,8 +1,0 @@
-{
-  "parent": "manascore:block/grass_like_outer_stairs",
-  "textures": {
-    "side": "minecraft:block/warped_nylium_side",
-    "bottom": "minecraft:block/netherrack",
-    "top": "minecraft:block/warped_nylium"
-  }
-}

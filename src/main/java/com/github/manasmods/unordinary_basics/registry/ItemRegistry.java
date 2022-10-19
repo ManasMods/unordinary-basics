@@ -8,11 +8,8 @@ import com.github.manasmods.unordinary_basics.sound.UBSounds;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.MilkBucketItem;
 import net.minecraft.world.item.Rarity;
-import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
-
-import java.awt.*;
 
 class ItemRegistry {
     /**
@@ -46,10 +43,14 @@ class ItemRegistry {
 
 
     }
+
+    //TODO: Please remove the Grizzly and Grolar Bear. Though in a way similar to the Leaper Item where the code still exists for future use.
+    /*
     private static void registerSpawnEgg(DeferredRegister<Item> registry) {
         registry.register("grizzly_bear_spawn_egg", () -> new ForgeSpawnEggItem(() -> UBEntityTypes.GRIZZLY_BEAR.get(),
                 new Color(96, 65, 39).getRGB(), new Color(86, 73, 61).getRGB(), new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS)));
         registry.register("grolar_bear_spawn_egg", () -> new ForgeSpawnEggItem(() -> UBEntityTypes.GROLAR_BEAR.get(),
                 new Color(152, 110, 81).getRGB(), new Color(161, 158, 156).getRGB(), new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS)));
     }
+     */
 }
