@@ -4,6 +4,7 @@ import com.github.manasmods.unordinary_basics.data.*;
 import com.github.manasmods.unordinary_basics.handler.UBEntityHandler;
 import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisIntegration;
 import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
+import com.github.manasmods.unordinary_basics.painting.UBPaintings;
 import com.github.manasmods.unordinary_basics.registry.Unordinary_BasicsRegistry;
 import lombok.Getter;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -33,6 +34,7 @@ public class Unordinary_Basics {
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::generateData);
         modEventBus.addListener(UBEntityHandler::entityAttributeEvent);
+        UBPaintings.register(modEventBus);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
