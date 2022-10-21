@@ -30,6 +30,15 @@ public class UBPaintings {
     public static final RegistryObject<Motive> CAT =
             PAINTING_MOVTIES.register("cat", () -> new Motive(16, 16));
 
+    public static final RegistryObject<Motive> JIN =
+            PAINTING_MOVTIES.register("jin", () -> new Motive(16, 16));
+    public static final RegistryObject<Motive> NAO =
+            PAINTING_MOVTIES.register("nao", () -> new Motive(16, 16));
+    public static final RegistryObject<Motive> YUKI =
+            PAINTING_MOVTIES.register("yuki", () -> new Motive(16, 16));
+    public static final RegistryObject<Motive> TOMO =
+            PAINTING_MOVTIES.register("tomo", () -> new Motive(16, 16));
+
     /** **/
 
     public static void register(IEventBus eventBus) {
