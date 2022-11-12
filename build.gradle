@@ -118,14 +118,7 @@ mixin {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
-    maven {
-        url = "https://manasmods.bytesafe.dev/maven/manasmods"
-        name = "manasmods"
-        credentials {
-            username System.getenv().getOrDefault("MANAS_REPO_USER", manasmodsUsername)
-            password System.getenv().getOrDefault("MANAS_REPO_USER_PASSWORD", manasmodsPassword)
-        }
-    }
+    maven { url "https://dl.cloudsmith.io/public/manasmods/manascore/maven/" }
     maven {
         // location of the maven that hosts JEI files
         name = "Progwml6 maven"

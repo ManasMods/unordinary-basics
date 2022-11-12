@@ -1,7 +1,7 @@
 package com.github.manasmods.unordinary_basics.data;
 
-import com.github.manasmods.manascore.data.gen.BlockTagProvider;
-import com.github.manasmods.manascore.data.gen.ItemTagProvider;
+import com.github.manasmods.manascore.api.data.gen.BlockTagProvider;
+import com.github.manasmods.manascore.api.data.gen.ItemTagProvider;
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
 import com.github.manasmods.unordinary_basics.utils.UBTags;

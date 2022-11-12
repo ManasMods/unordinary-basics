@@ -1,6 +1,6 @@
 package com.github.manasmods.unordinary_basics.client.gui;
 
-import com.github.manasmods.manascore.tab.annotation.ScreenForTab;
+import com.github.manasmods.manascore.api.tab.annotation.ScreenForTab;
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.menu.UBInventoryMenu;
 import com.github.manasmods.unordinary_basics.tab.Unordinary_BasicsInventoryTab;

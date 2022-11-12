@@ -1,6 +1,6 @@
 package com.github.manasmods.unordinary_basics.tab;
 
-import com.github.manasmods.manascore.tab.AbstractInventoryTab;
+import com.github.manasmods.manascore.api.tab.AbstractInventoryTab;
 import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
 import com.github.manasmods.unordinary_basics.network.toserver.RequestUBInventoryMenu;
 import com.mojang.blaze3d.vertex.PoseStack;
