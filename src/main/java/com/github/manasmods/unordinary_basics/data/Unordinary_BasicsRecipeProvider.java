@@ -32,8 +32,14 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
 
     @SuppressWarnings("ConstantConditions")
     protected void generate(Consumer<FinishedRecipe> consumer) {
+        vanillaRecipes(consumer);
+        modRecipes(consumer);
+        vanillaQOLSmelting(consumer);
+        modStairsAndSlabs(consumer);
+        modBlockToBlock(consumer);
+    }
 
-        /****************************** VANILLA RECIPE CHANGES ******************************/
+    private void vanillaRecipes(Consumer<FinishedRecipe> consumer) {
 
         ShapedRecipeBuilder.shaped(Blocks.FURNACE)
                 .define('#', UBTags.Items.STONE)
@@ -272,8 +278,9 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                         .of(Unordinary_BasicsItems.MILK_BOTTLE).build()))
                 .save(consumer);
 
+    }
 
-        /****************************** MOD ITEMS ******************************/
+    private void modRecipes(Consumer<FinishedRecipe> consumer) {
 
         ShapelessRecipeBuilder.shapeless(Unordinary_BasicsItems.ANIMAL_BAIT)
                 .requires(Items.CARROT)
@@ -339,10 +346,12 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .requires(Unordinary_BasicsItems.UNKNOWN_HANDLE_FRAGMENT)
                 .requires(Unordinary_BasicsItems.UNKNOWN_HILT_FRAGMENT)
                 .unlockedBy("has_fragment", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Unordinary_BasicsItems.UNKNOWN_BLADE_FRAGMENT,Unordinary_BasicsItems.UNKNOWN_HANDLE_FRAGMENT,Unordinary_BasicsItems.UNKNOWN_HILT_FRAGMENT).build()))
+                        .of(Unordinary_BasicsItems.UNKNOWN_BLADE_FRAGMENT, Unordinary_BasicsItems.UNKNOWN_HANDLE_FRAGMENT, Unordinary_BasicsItems.UNKNOWN_HILT_FRAGMENT).build()))
                 .save(consumer);
 
-        /****************************** QOL ITEM SMELTING ******************************/
+    }
+
+    private void vanillaQOLSmelting(Consumer<FinishedRecipe> consumer) {
 
         smeltingRecipe(consumer, Ingredient.of(Items.ROTTEN_FLESH), Items.LEATHER, 0.35F, 200);
         campfireRecipe(consumer, Ingredient.of(Items.ROTTEN_FLESH), Items.LEATHER, 0.35F, 600);
@@ -353,7 +362,9 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
         oreBlasting(consumer, GOLD_BLOCK_SMELTABLES, Items.GOLD_BLOCK, 0.35F, 250, "gold");
         oreBlasting(consumer, IRON_BLOCK_SMELTABLES, Items.IRON_BLOCK, 0.35F, 250, "iron");
 
-        /****************************** QOL RECIPE CHANGES FOR SLAB AND STAIR ******************************/
+    }
+
+    private void modImprovedRecipes(Consumer<FinishedRecipe> consumer) {
 
         stairs(consumer, Blocks.OAK_STAIRS, Blocks.OAK_PLANKS);
         slab(consumer, Blocks.OAK_SLAB, Blocks.OAK_PLANKS);
@@ -454,7 +465,9 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
         stairs(consumer, Blocks.DEEPSLATE_TILE_STAIRS, Blocks.DEEPSLATE_TILES);
         slab(consumer, Blocks.DEEPSLATE_TILE_SLAB, Blocks.DEEPSLATE_TILES);
 
-        /****************************** MOD STAIR AND SLAB ******************************/
+    }
+
+    private void modStairsAndSlabs(Consumer<FinishedRecipe> consumer) {
 
         stairs(consumer, Unordinary_BasicsBlocks.CALCITE_STAIRS, Blocks.CALCITE);
         slab(consumer, Unordinary_BasicsBlocks.CALCITE_SLAB, Blocks.CALCITE);
@@ -763,7 +776,9 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
         stairs(consumer, Unordinary_BasicsBlocks.BLACK_CONCRETE_POWDER_STAIRS, Blocks.BLACK_CONCRETE_POWDER);
         slab(consumer, Unordinary_BasicsBlocks.BLACK_CONCRETE_POWDER_SLAB, Blocks.BLACK_CONCRETE_POWDER);
 
-        /****************************** STAIR AND SLAB TO BLOCK ******************************/
+    }
+
+    private void modBlockToBlock(Consumer<FinishedRecipe> consumer) {
 
         stairsToBlock(consumer, Blocks.OAK_STAIRS, Blocks.OAK_PLANKS);
         stairsToBlock(consumer, Blocks.SPRUCE_STAIRS, Blocks.SPRUCE_PLANKS);
@@ -1170,7 +1185,8 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
         slabsToBlock(consumer, Unordinary_BasicsBlocks.BLACK_CONCRETE_POWDER_SLAB, Blocks.BLACK_CONCRETE_POWDER);
     }
 
-    protected static void crownSmithing(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item pIngredientItem, Item pResultItem) {
+    protected static void crownSmithing(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item
+            pIngredientItem, Item pResultItem) {
         UpgradeRecipeBuilder.smithing(Ingredient.of(pIngredientItem), Ingredient.of(Items.ENCHANTED_GOLDEN_APPLE), pResultItem).unlocks("has_enchanted_golden_apple", has(Items.ENCHANTED_GOLDEN_APPLE)).save(pFinishedRecipeConsumer, getItemName(pResultItem) + "_smithing");
     }
 }
