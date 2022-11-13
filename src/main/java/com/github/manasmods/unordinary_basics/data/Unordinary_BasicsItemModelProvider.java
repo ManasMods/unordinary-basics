@@ -2,7 +2,9 @@ package com.github.manasmods.unordinary_basics.data;
 
 import com.github.manasmods.manascore.api.data.gen.ItemModelProvider;
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
+import net.minecraft.world.item.Item;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 public class Unordinary_BasicsItemModelProvider extends ItemModelProvider {
@@ -29,5 +31,7 @@ public class Unordinary_BasicsItemModelProvider extends ItemModelProvider {
         singleTexture(Unordinary_BasicsItems.ZENITH);
 
         singleTexture(Unordinary_BasicsItems.MUSIC_DISC_QUEEN);
+
+        singleTexture(Item.byBlock(Unordinary_BasicsBlocks.ITEM_SORTER));
     }
 }
