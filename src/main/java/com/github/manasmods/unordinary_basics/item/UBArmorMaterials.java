@@ -14,7 +14,7 @@ import net.minecraft.world.item.crafting.Ingredient;
 @RequiredArgsConstructor
 public enum UBArmorMaterials implements ArmorMaterial {
     RABBIT("rabbit", 6, new int[]{1, 2, 3, 1},new int[]{13, 15, 16, 11}, 15, SoundEvents.ARMOR_EQUIP_LEATHER, 0.0F, 0.0F, new LazyLoadedValue<>(() -> Ingredient.of(Items.RABBIT_HIDE))),
-    TECHNOBLADE_CROWN("technoblade_crown", 37, new int[]{3, 6, 8, 3},new int[]{1, 3, 5, 2}, 25, SoundEvents.ARMOR_EQUIP_GOLD, 3.0F, 0.2F, new LazyLoadedValue<>(() -> Ingredient.of(Items.GOLD_BLOCK)));
+    TECHNOBLADE_CROWN("technoblade_crown", 37, new int[]{3, 6, 8, 3},new int[]{1, 3, 5, 2}, 30, SoundEvents.ARMOR_EQUIP_GOLD, 3.0F, 0.2F, new LazyLoadedValue<>(() -> Ingredient.of(Items.GOLD_BLOCK)));
 
     @Getter
     private final String name;
