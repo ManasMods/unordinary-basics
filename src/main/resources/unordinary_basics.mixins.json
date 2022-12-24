@@ -9,6 +9,7 @@
     "MixinAbstractHorse",
     "MixinAnvilScreen",
     "MixinApothFletchingBlock",
+    "MixinArmorTooltips",
     "MixinBedBlock",
     "MixinBedBlockEntity",
     "MixinDestroySpeed",
