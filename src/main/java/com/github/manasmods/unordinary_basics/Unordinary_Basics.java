@@ -1,6 +1,12 @@
 package com.github.manasmods.unordinary_basics;
 
-import com.github.manasmods.unordinary_basics.data.*;
+import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsBlockStateProvider;
+import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsBlockTagProvider;
+import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsFletchingRecipeProvider;
+import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsItemModelProvider;
+import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsItemTagProvider;
+import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsLootTableProvider;
+import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsRecipeProvider;
 import com.github.manasmods.unordinary_basics.handler.UBEntityHandler;
 import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisIntegration;
 import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
@@ -16,6 +22,10 @@ import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Optional;
 
 @Mod(Unordinary_Basics.MOD_ID)
@@ -45,6 +55,9 @@ public class Unordinary_Basics {
         });
         event.enqueueWork(Unordinary_BasicsNetwork::registerPackets);
         event.enqueueWork(UBEntityHandler::registerEntityPlacements);
+
+        copyImprovedTexturesIfMissing();
+
     }
 
     private void generateData(final GatherDataEvent event) {
@@ -67,6 +80,29 @@ public class Unordinary_Basics {
     public static Logger getLogger() {
         return LOGGER;
     }
+
+    private static void copyImprovedTexturesIfMissing() {
+        File dir = new File(".", "resourcepacks");
+        File target = new File(dir, "Improved Textures.zip");
+
+        if(!target.exists())
+            try {
+                dir.mkdirs();
+                InputStream in = Unordinary_Basics.class.getResourceAsStream("/assets/unordinary_basics/improved_textures.zip");
+                FileOutputStream out = new FileOutputStream(target);
+
+                byte[] buf = new byte[16384];
+                int len;
+                while((len = in.read(buf)) > 0)
+                    out.write(buf, 0, len);
+
+                in.close();
+                out.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+    }
+
 }
 
 
