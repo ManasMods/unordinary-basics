@@ -41,4 +41,6 @@ public class Unordinary_BasicsItems {
     public static final Item ZENITH = null;
     @ObjectHolder("music_disc_queen")
     public static final Item MUSIC_DISC_QUEEN = null;
+    @ObjectHolder("builders_glove")
+    public static final Item BUILDERS_GLOVE = null;
 }

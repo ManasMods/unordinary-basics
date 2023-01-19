@@ -9,10 +9,15 @@ import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsLootTablePro
 import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsRecipeProvider;
 import com.github.manasmods.unordinary_basics.handler.UBEntityHandler;
 import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisIntegration;
+import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
 import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
 import com.github.manasmods.unordinary_basics.painting.UBPaintings;
 import com.github.manasmods.unordinary_basics.registry.Unordinary_BasicsRegistry;
 import lombok.Getter;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.BlockItem;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
@@ -40,9 +45,11 @@ public class Unordinary_Basics {
     public Unordinary_Basics() {
         instance = this;
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        IEventBus forgeBus = MinecraftForge.EVENT_BUS;
         Unordinary_BasicsRegistry.register(modEventBus);
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::generateData);
+        forgeBus.addListener(this::entityPlaceEvent);
         modEventBus.addListener(UBEntityHandler::entityAttributeEvent);
         UBPaintings.register(modEventBus);
     }
@@ -70,6 +77,14 @@ public class Unordinary_Basics {
         Unordinary_BasicsBlockTagProvider blockTagProvider = new Unordinary_BasicsBlockTagProvider(event);
         event.getGenerator().addProvider(blockTagProvider);
         event.getGenerator().addProvider(new Unordinary_BasicsItemTagProvider(event, blockTagProvider));
+    }
+
+    private void entityPlaceEvent(final BlockEvent.EntityPlaceEvent event){
+        if (event.getEntity() instanceof Player &&
+                ((Player) event.getEntity()).getMainHandItem().getItem() == Unordinary_BasicsItems.BUILDERS_GLOVE
+                && ((Player) event.getEntity()).getInventory().offhand.get(0).getItem() instanceof BlockItem){
+            event.setCanceled(true);
+        }
     }
 
     /**

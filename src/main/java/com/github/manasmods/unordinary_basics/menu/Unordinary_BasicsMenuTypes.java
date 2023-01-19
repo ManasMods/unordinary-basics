@@ -12,4 +12,6 @@ public class Unordinary_BasicsMenuTypes {
     public static final MenuType<FletchingTableMenu> FLETCHING_TABLE_MENU = null;
     @ObjectHolder("inventory_menu")
     public static final MenuType<UBInventoryMenu> INVENTORY_MENU = null;
+    @ObjectHolder("builders_glove_menu")
+    public static final MenuType<BuildersGloveMenu> BUILDERS_GLOVE_MENU = null;
 }

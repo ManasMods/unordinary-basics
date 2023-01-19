@@ -3,6 +3,7 @@ package com.github.manasmods.unordinary_basics.client;
 import com.github.manasmods.manascore.tab.InventoryTabRegistry;
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
+import com.github.manasmods.unordinary_basics.client.gui.BuildersGloveScreen;
 import com.github.manasmods.unordinary_basics.client.gui.FletchingTableScreen;
 import com.github.manasmods.unordinary_basics.client.gui.JukeBoxScreen;
 import com.github.manasmods.unordinary_basics.entity.client.GrizzlyBearRenderer;
@@ -64,6 +65,7 @@ public class UBClient {
         MenuScreens.register(Unordinary_BasicsMenuTypes.FLETCHING_TABLE_MENU, FletchingTableScreen::new);
         MenuScreens.register(Unordinary_BasicsMenuTypes.JUKE_BOX_MENU, JukeBoxScreen::new);
         MenuScreens.register(Unordinary_BasicsMenuTypes.INVENTORY_MENU, Unordinary_BasicsInventoryScreen::new);
+        MenuScreens.register(Unordinary_BasicsMenuTypes.BUILDERS_GLOVE_MENU, BuildersGloveScreen::new);
     }
 
     private static void registerBlockTransparencies(){
