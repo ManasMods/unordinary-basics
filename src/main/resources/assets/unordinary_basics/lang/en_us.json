@@ -320,7 +320,6 @@
   "itemGroup.unordinary_basics.tab": "UB Blocks",
   "itemGroup.unordinary_basics.tab2": "UB Stairs and Slabs",
   "itemGroup.unordinary_basics.tab3": "UB Items",
-  "itemGroup.unordinary_basics.tab4": "UB Items",
 
   "item.minecraft.milk_bucket": "Bucket of Cow's Milk",
 
@@ -346,11 +345,11 @@
   "item.unordinary_basics.music_disc_queen.desc": "God Save The Queen",
 
   "enchantment.unordinary_basics.master_miner": "Master Miner",
-  "enchantment.unordinary_basics.master_miner.desc": "Mines multiple blocks at once! - Shift + right click to change level",
+  "enchantment.unordinary_basics.master_miner.desc": "Mines multiple blocks at once! - Shift + Right Click to change level",
   "enchantment.unordinary_basics.vein_miner": "Vein-Miner",
-  "enchantment.unordinary_basics.vein_miner.desc": "Mines an entire ore vein! - Shift + right click to change level",
+  "enchantment.unordinary_basics.vein_miner.desc": "Mines an entire ore vein! - Shift + Right Click to change level",
   "enchantment.unordinary_basics.tree_feller": "Tree-Feller",
-  "enchantment.unordinary_basics.tree_feller.desc": "Fells an entire tree! - Shift + right click to change level",
+  "enchantment.unordinary_basics.tree_feller.desc": "Fells an entire tree! - Shift + Right Click to change level",
   "enchantment.unordinary_basics.breaking_curse": "Curse of Breaking",
   "enchantment.unordinary_basics.breaking_curse.desc": "Gear breaks twice as fast",
   "enchantment.unordinary_basics.fatigue_curse": "Curse of Fatigue",
@@ -375,3 +374,4 @@
 
   "warning.unordinary_basics.tool_not_strong_enough": "Your tool isn't strong enough to replace that block!"
 }
+
