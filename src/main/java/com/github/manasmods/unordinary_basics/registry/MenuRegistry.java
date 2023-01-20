@@ -1,6 +1,7 @@
 package com.github.manasmods.unordinary_basics.registry;
 
 import com.github.manasmods.unordinary_basics.block.entity.JukeboxBlockEntity;
+import com.github.manasmods.unordinary_basics.menu.BuildersGloveMenu;
 import com.github.manasmods.unordinary_basics.menu.FletchingTableMenu;
 import com.github.manasmods.unordinary_basics.menu.JukeBoxMenu;
 import com.github.manasmods.unordinary_basics.menu.UBInventoryMenu;
@@ -33,5 +34,7 @@ class MenuRegistry {
             return new FletchingTableMenu(windowId, ContainerLevelAccess.create(level, pos), inv, pos);
         }));
         registry.register("inventory_menu", () -> IForgeMenuType.create((windowId, inv, data) -> new UBInventoryMenu(windowId, inv, inv.player)));
+
+        registry.register("builders_glove_menu", () -> IForgeMenuType.create(BuildersGloveMenu::new));
     }
 }

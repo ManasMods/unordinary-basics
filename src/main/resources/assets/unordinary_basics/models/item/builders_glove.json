@@ -1,0 +1,47 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "builders_glove",
+	"textures": {
+		"0": "unordinary_basics:item/builders_glove_mt",
+		"particle": "minecraft:item/leather"
+	},
+	"elements": [
+		{
+			"from": [6, 0, 5.5],
+			"to": [10, 4, 10.5],
+			"faces": {
+				"north": {"uv": [0, 8, 4, 12], "texture": "#0"},
+				"east": {"uv": [0, 0, 5, 4], "texture": "#0"},
+				"south": {"uv": [9, 0, 13, 4], "texture": "#0"},
+				"west": {"uv": [0, 4, 5, 8], "texture": "#0"},
+				"up": {"uv": [9, 5, 5, 0], "texture": "#0"},
+				"down": {"uv": [9, 5, 5, 10], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, 4.25, 2.5],
+			"scale": [1.03977, 1.03977, 1.03977]
+		},
+		"thirdperson_lefthand": {
+			"translation": [0, 4.25, 2.5],
+			"scale": [1.03977, 1.03977, 1.03977]
+		},
+		"firstperson_righthand": {
+			"translation": [0.5, 5.5, 2.5],
+			"scale": [1.03977, 1.03977, 1.03977]
+		},
+		"firstperson_lefthand": {
+			"translation": [0.5, 5.5, 2.5],
+			"scale": [1.03977, 1.03977, 1.03977]
+		},
+		"gui": {
+			"translation": [0, 5.75, 0]
+		},
+		"fixed": {
+			"rotation": [0, 180, 0],
+			"translation": [0, 6.5, 0]
+		}
+	}
+}
