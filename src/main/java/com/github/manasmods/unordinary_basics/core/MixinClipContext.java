@@ -27,16 +27,17 @@ public abstract class MixinClipContext {
         if (handling) return;
         handling = true;
         LocalPlayer player = Minecraft.getInstance().player;
-        assert player != null;
-        if (state.getCollisionShape(level, pos).isEmpty()) {
-            Vec3 eyePosition = player.getEyePosition();
-            double range = Math.max(0, player.getAttackRange());
-            Vec3 view = player.getViewVector(1.0F);
-            Vec3 plusRange = eyePosition.add(view.x * range, view.y * range, view.z * range);
-            AABB box = player.getBoundingBox().expandTowards(view.scale(range)).inflate(1.0D, 1.0D, 1.0D);
-            double squaredDistance = range * range;
-            if (ProjectileUtil.getEntityHitResult(player, eyePosition, plusRange, box, e -> true, squaredDistance) != null) {
-                callback.setReturnValue(Shapes.empty());
+        if (player != null) {
+            if (state.getCollisionShape(level, pos).isEmpty()) {
+                Vec3 eyePosition = player.getEyePosition();
+                double range = Math.max(0, player.getAttackRange());
+                Vec3 view = player.getViewVector(1.0F);
+                Vec3 plusRange = eyePosition.add(view.x * range, view.y * range, view.z * range);
+                AABB box = player.getBoundingBox().expandTowards(view.scale(range)).inflate(1.0D, 1.0D, 1.0D);
+                double squaredDistance = range * range;
+                if (ProjectileUtil.getEntityHitResult(player, eyePosition, plusRange, box, e -> true, squaredDistance) != null) {
+                    callback.setReturnValue(Shapes.empty());
+                }
             }
         }
         handling = false;
