@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:clay_stairs"
+    },
+    {
+      "item": "unordinary_basics:clay_stairs"
+    },
+    {
+      "item": "unordinary_basics:clay_stairs"
+    },
+    {
+      "item": "unordinary_basics:clay_stairs"
+    }
+  ],
+  "result": {
+    "item": "minecraft:clay",
+    "count": 3
+  }
+}

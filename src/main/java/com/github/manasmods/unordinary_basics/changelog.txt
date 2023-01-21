@@ -26,11 +26,8 @@
 ¬ Added several new inventory slots
     - Back Slot
     - Waist Slot
-¬ Added Grizzly Bear
-¬ Added Grolar Bear
 ¬ Updated tames
     - Fox
-    - Polar Bear
 ¬ Updated some vanilla words
 
 == End of Change Log ==

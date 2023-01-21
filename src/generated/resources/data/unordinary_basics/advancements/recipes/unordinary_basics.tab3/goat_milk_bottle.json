@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "unordinary_basics:goat_milk_bottle"
+    ]
+  },
+  "criteria": {
+    "has_goat_milk_bucket": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "unordinary_basics:goat_milk_bucket"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "unordinary_basics:goat_milk_bottle"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_goat_milk_bucket",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:mycelium_stairs"
+    },
+    {
+      "item": "unordinary_basics:mycelium_stairs"
+    },
+    {
+      "item": "unordinary_basics:mycelium_stairs"
+    },
+    {
+      "item": "unordinary_basics:mycelium_stairs"
+    }
+  ],
+  "result": {
+    "item": "minecraft:mycelium",
+    "count": 3
+  }
+}
