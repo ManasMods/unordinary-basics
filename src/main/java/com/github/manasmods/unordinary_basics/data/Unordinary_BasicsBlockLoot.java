@@ -13,6 +13,9 @@ public class Unordinary_BasicsBlockLoot extends BlockLoot {
     }
 
     protected void addTables() {
+        this.dropSelf(Unordinary_BasicsBlocks.ENCHANTMENT_LIBRARY);
+        this.dropSelf(Unordinary_BasicsBlocks.ITEM_SORTER);
+
         this.dropSelf(Unordinary_BasicsBlocks.CALCITE_STAIRS);
         this.dropSelf(Unordinary_BasicsBlocks.CALCITE_SLAB);
         this.dropSelf(Unordinary_BasicsBlocks.TUFF_STAIRS);

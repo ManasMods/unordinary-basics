@@ -2,12 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "WWW",
-    "CIC",
-    "CRC"
+    "#I#",
+    "#R#"
   ],
   "key": {
-    "C": {
-      "item": "minecraft:cobbled_deepslate"
+    "#": {
+      "tag": "forge:items/stone"
     },
     "R": {
       "item": "minecraft:redstone"

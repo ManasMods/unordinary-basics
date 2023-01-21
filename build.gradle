@@ -118,14 +118,7 @@ mixin {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
-    maven {
-        url = "https://manasmods.bytesafe.dev/maven/manasmods"
-        name = "manasmods"
-        credentials {
-            username System.getenv().getOrDefault("MANAS_REPO_USER", manasmodsUsername)
-            password System.getenv().getOrDefault("MANAS_REPO_USER_PASSWORD", manasmodsPassword)
-        }
-    }
+    maven { url "https://dl.cloudsmith.io/public/manasmods/manascore/maven/" }
     maven {
         // location of the maven that hosts JEI files
         name = "Progwml6 maven"
@@ -141,6 +134,8 @@ repositories {
         content {
             includeGroup "curse.maven"
         }
+    }
+    maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
     }
 
     /*
@@ -177,6 +172,9 @@ repositories {
         runtimeOnly fg.deobf("curse.maven:patchouli-306770:${patchouliVersion}")
         runtimeOnly fg.deobf("curse.maven:enchantment-descriptions-250419:${enchantmentDescriptionsVersion}")
         runtimeOnly fg.deobf("curse.maven:bookshelf-228525:${bookshelfVersion}")
+
+        // Geckolib
+        implementation fg.deobf("software.bernie.geckolib:geckolib-forge-1.18:${geckolibVersion}")
     }
 
 // Example for how to get properties into the manifest for reading at runtime.

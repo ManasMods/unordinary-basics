@@ -1,5 +1,11 @@
 package com.github.manasmods.unordinary_basics.utils;
 
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+
+import java.util.Set;
+
 public class UBUtils {
 
     /**
@@ -25,5 +31,14 @@ public class UBUtils {
             return 5 * level - 38;
         }
         return 9 * level - 158;
+    }
+
+    public static boolean hasFullArmorSet(Player player, Set<Item> armorSet) {
+        for (ItemStack stack : player.getArmorSlots()) {
+            if (!armorSet.contains(stack.getItem())) {
+                return false;
+            }
+        }
+        return true;
     }
 }
