@@ -15,18 +15,8 @@ public class Unordinary_BasicsBlockTagProvider extends BlockTagProvider {
         super(gatherDataEvent, Unordinary_Basics.MOD_ID);
     }
 
-    public static final TagKey<Block> TREE_FELLER_VALID = createTag("unordinary_basics","tree_feller_valid");
-    public static final TagKey<Block> VEIN_MINER_VALID = createTag("unordinary_basics","vein_miner_valid");
-
-    @Override
-    protected void addTags() {
-        tag(TREE_FELLER_VALID).addTag(BlockTags.LOGS);
-        tag(VEIN_MINER_VALID).addTag(Tags.Blocks.ORES);
-    }
-
     @Override
     protected void generate() {
-
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(Unordinary_BasicsBlocks.ENCHANTMENT_LIBRARY)
                 .add(Unordinary_BasicsBlocks.ITEM_SORTER);

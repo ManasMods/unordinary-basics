@@ -8,7 +8,11 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
-public class UBTags {public static class Blocks {
+public class UBTags {
+    public static class Blocks {
+
+        public static TagKey<Block> VEIN_MINER_VALID = modTag("blocks/vein_miner_valid");
+        public static TagKey<Block> TREE_FELLER_VALID = modTag("blocks/tree_feller_valid");
 
     static TagKey<Block> modTag(String name) {
         return BlockTags.create(new ResourceLocation(Unordinary_Basics.MOD_ID, name));
