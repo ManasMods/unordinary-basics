@@ -19,8 +19,6 @@ public class VeinMinerEnchantment extends Enchantment {
     public boolean canEnchant(ItemStack stack) {
         return super.canEnchant(stack)
                 && EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.MASTER_MINER, stack) == 0
-                && (stack.getItem() instanceof PickaxeItem
-                    || stack.getItem() instanceof ShovelItem
-                    || stack.getItem() instanceof HoeItem);
+                && (stack.getItem() instanceof PickaxeItem);
     }
 }
