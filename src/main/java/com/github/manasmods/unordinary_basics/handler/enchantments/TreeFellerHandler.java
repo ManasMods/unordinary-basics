@@ -1,11 +1,14 @@
 package com.github.manasmods.unordinary_basics.handler.enchantments;
 
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsBlockTagProvider;
 import com.github.manasmods.unordinary_basics.enchantment.UnordinaryBasicsEnchantments;
+import com.github.manasmods.unordinary_basics.utils.BlockBreakHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.player.Player;
@@ -26,48 +29,20 @@ import java.util.Set;
 @Mod.EventBusSubscriber(modid = Unordinary_Basics.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class TreeFellerHandler {
 
-    private static int recursionCounter = 0;
-    private static final Set<BlockPos> toBreak = new HashSet<>();
-
+    //If this isn't working, try rerunning data, as the tags may not be present
     @SubscribeEvent
     public static void onBlockBreak(BlockEvent.BreakEvent event) {
         Player player = event.getPlayer();
         ItemStack tool = player.getItemInHand(InteractionHand.MAIN_HAND);
         BlockPos pos = event.getPos();
-        if (EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.TREE_FELLER, tool) > 0 && tool.getTag().getBoolean("treeFellerOn") && event.getWorld().getBlockState(pos).is(BlockTags.LOGS)) {
-            toBreak.add(pos);
-            executeBreak(event);
+        int enchantLevel = EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.TREE_FELLER, tool);
+        if (enchantLevel > 0 && tool.getTag().getBoolean("treeFellerOn") && event.getWorld().getBlockState(pos).is(Unordinary_BasicsBlockTagProvider.TREE_FELLER_VALID)) {
+            tool.getOrCreateTag().putBoolean("treeFellerOn",false);
+            BlockBreakHelper.floodMineOnBlock(27 ,pos,player.getLevel(),player.getOnPos().above(),tool,player,event.getWorld().getBlockState(pos).getBlock());
+            tool.getOrCreateTag().putBoolean("treeFellerOn",true);
         }
     }
 
-    private static void executeBreak(BlockEvent.BreakEvent event) {
-        LevelAccessor level = event.getWorld();
-        Player player = event.getPlayer();
-        BlockPos adjacentPos = getIdenticalAdjacent(level, event.getPos());
-        if (adjacentPos != null && recursionCounter < 63) {
-            recursionCounter++;
-            toBreak.add(adjacentPos);
-            executeBreak(new BlockEvent.BreakEvent((Level) level, adjacentPos, level.getBlockState(adjacentPos), player));
-        } else {
-            recursionCounter = 0;
-            toBreak.forEach(pos -> level.destroyBlock(pos, !player.isCreative(), player));
-            if (!player.isCreative())
-                player.getItemInHand(InteractionHand.MAIN_HAND).hurtAndBreak(toBreak.size() - 1, player, s -> {});
-            toBreak.clear();
-        }
-    }
-
-    @Nullable
-    private static BlockPos getIdenticalAdjacent(LevelAccessor level, BlockPos pos) {
-        Block block = level.getBlockState(pos).getBlock();
-        for (Direction direction : Direction.values()) {
-            BlockPos adjacentPos = pos.relative(direction);
-            if (level.getBlockState(adjacentPos).is(block) && !toBreak.contains(adjacentPos)) {
-                return adjacentPos;
-            }
-        }
-        return null;
-    }
 
     @SubscribeEvent
     public static void onItemRightClick(final PlayerInteractEvent.RightClickItem event) {
@@ -78,7 +53,7 @@ public class TreeFellerHandler {
         if (maxLevel > 0 && tag != null && player.isShiftKeyDown()) {
             boolean isOn = tag.getBoolean("treeFellerOn");
             tag.putBoolean("treeFellerOn", !isOn);
-            player.displayClientMessage(new TextComponent("Turned Tree Feller " + (isOn ? "off" : "on")), true);
+            player.displayClientMessage(new TranslatableComponent("unordinary_basics.message.tree_feller_toggle",(isOn ? new TranslatableComponent("unordinary_basics.message.off") : new TranslatableComponent("unordinary_basics.message.on"))), true);
         }
     }
 }

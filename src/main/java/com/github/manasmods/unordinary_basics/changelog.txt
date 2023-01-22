@@ -6,6 +6,7 @@
     - Backpacks
     - Potion Belt
     - Quiver
+    - Builder's Glove
 ¬ Added Map Book
 ¬ Added new enchantments and curses
     - Curse of Breaking
@@ -29,5 +30,6 @@
 ¬ Updated tames
     - Fox
 ¬ Updated some vanilla words
+¬ Improved vein-miner/tree-feller enchantments
 
 == End of Change Log ==

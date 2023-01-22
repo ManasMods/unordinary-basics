@@ -3,13 +3,25 @@ package com.github.manasmods.unordinary_basics.data;
 import com.github.manasmods.manascore.api.data.gen.BlockTagProvider;
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 public class Unordinary_BasicsBlockTagProvider extends BlockTagProvider {
     public Unordinary_BasicsBlockTagProvider(GatherDataEvent gatherDataEvent) {
         super(gatherDataEvent, Unordinary_Basics.MOD_ID);
+    }
+
+    public static final TagKey<Block> TREE_FELLER_VALID = createTag("unordinary_basics","tree_feller_valid");
+    public static final TagKey<Block> VEIN_MINER_VALID = createTag("unordinary_basics","vein_miner_valid");
+
+    @Override
+    protected void addTags() {
+        tag(TREE_FELLER_VALID).addTag(BlockTags.LOGS);
+        tag(VEIN_MINER_VALID).addTag(Tags.Blocks.ORES);
     }
 
     @Override
@@ -225,5 +237,9 @@ public class Unordinary_BasicsBlockTagProvider extends BlockTagProvider {
                 Unordinary_BasicsBlocks.BLUE_CONCRETE_POWDER_STAIRS, Unordinary_BasicsBlocks.BROWN_CONCRETE_POWDER_STAIRS, Unordinary_BasicsBlocks.GREEN_CONCRETE_POWDER_STAIRS,
                 Unordinary_BasicsBlocks.RED_CONCRETE_POWDER_STAIRS, Unordinary_BasicsBlocks.BLACK_CONCRETE_POWDER_STAIRS);
 
+    }
+
+    public static TagKey<Block> createTag(String nameSpace, String tag){
+        return BlockTags.create(new ResourceLocation(nameSpace,tag));
     }
 }
