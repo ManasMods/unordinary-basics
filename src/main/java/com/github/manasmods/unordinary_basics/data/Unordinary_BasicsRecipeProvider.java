@@ -325,6 +325,17 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                         .of(Unordinary_BasicsItems.POUCH).build()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(Unordinary_BasicsItems.SLIME_COMPASS)
+                .define('C', Items.COMPASS)
+                .define('S', Items.SLIME_BALL)
+                .define('A', Items.AMETHYST_SHARD)
+                .pattern("ASA")
+                .pattern("SCS")
+                .pattern("ASA")
+                .unlockedBy("has_compass", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.COMPASS).build()))
+                .save(consumer);
+
         ShapelessRecipeBuilder.shapeless(Unordinary_BasicsItems.MILK_BOTTLE, 3)
                 .requires(Items.MILK_BUCKET)
                 .requires(Items.GLASS_BOTTLE, 3)
@@ -339,7 +350,6 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                         .of(Unordinary_BasicsItems.GOAT_MILK_BUCKET).build()))
                 .save(consumer);
 
-        crownSmithing(consumer, Items.NETHERITE_HELMET, Unordinary_BasicsItems.TECHNOBLADE_CROWN);
 
         ShapelessRecipeBuilder.shapeless(Unordinary_BasicsItems.ZENITH)
                 .requires(Unordinary_BasicsItems.UNKNOWN_BLADE_FRAGMENT)
@@ -349,6 +359,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                         .of(Unordinary_BasicsItems.UNKNOWN_BLADE_FRAGMENT, Unordinary_BasicsItems.UNKNOWN_HANDLE_FRAGMENT, Unordinary_BasicsItems.UNKNOWN_HILT_FRAGMENT).build()))
                 .save(consumer);
 
+        crownSmithing(consumer, Items.NETHERITE_HELMET, Unordinary_BasicsItems.TECHNOBLADE_CROWN);
     }
 
     private void vanillaQOLSmelting(Consumer<FinishedRecipe> consumer) {
