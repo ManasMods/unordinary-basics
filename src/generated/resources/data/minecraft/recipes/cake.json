@@ -7,7 +7,7 @@
   ],
   "key": {
     "#": {
-      "tag": "forge:items/milk_bottle"
+      "tag": "forge:milk_bottle"
     },
     "W": {
       "item": "minecraft:wheat"

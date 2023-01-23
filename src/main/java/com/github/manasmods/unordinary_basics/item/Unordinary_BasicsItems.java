@@ -43,4 +43,6 @@ public class Unordinary_BasicsItems {
     public static final Item MUSIC_DISC_QUEEN = null;
     @ObjectHolder("builders_glove")
     public static final Item BUILDERS_GLOVE = null;
+    @ObjectHolder("slime_compass")
+    public static final Item SLIME_COMPASS = null;
 }

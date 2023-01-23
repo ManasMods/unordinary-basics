@@ -3,6 +3,7 @@ package com.github.manasmods.unordinary_basics.data;
 import com.github.manasmods.manascore.api.data.gen.BlockTagProvider;
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
+import com.github.manasmods.unordinary_basics.utils.UBTags;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
@@ -17,6 +18,11 @@ public class Unordinary_BasicsBlockTagProvider extends BlockTagProvider {
 
     @Override
     protected void generate() {
+        tag(UBTags.Blocks.VEIN_MINER_VALID)
+                .addTag(Tags.Blocks.ORES);
+        tag(UBTags.Blocks.TREE_FELLER_VALID)
+                .addTag(BlockTags.LOGS);
+
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(Unordinary_BasicsBlocks.ENCHANTMENT_LIBRARY)
                 .add(Unordinary_BasicsBlocks.ITEM_SORTER);
@@ -227,9 +233,5 @@ public class Unordinary_BasicsBlockTagProvider extends BlockTagProvider {
                 Unordinary_BasicsBlocks.BLUE_CONCRETE_POWDER_STAIRS, Unordinary_BasicsBlocks.BROWN_CONCRETE_POWDER_STAIRS, Unordinary_BasicsBlocks.GREEN_CONCRETE_POWDER_STAIRS,
                 Unordinary_BasicsBlocks.RED_CONCRETE_POWDER_STAIRS, Unordinary_BasicsBlocks.BLACK_CONCRETE_POWDER_STAIRS);
 
-    }
-
-    public static TagKey<Block> createTag(String nameSpace, String tag){
-        return BlockTags.create(new ResourceLocation(nameSpace,tag));
     }
 }

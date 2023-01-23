@@ -6,6 +6,8 @@ import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
+import net.minecraftforge.client.model.generators.ItemModelBuilder;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 public class Unordinary_BasicsItemModelProvider extends ItemModelProvider {
@@ -35,6 +37,21 @@ public class Unordinary_BasicsItemModelProvider extends ItemModelProvider {
 
         singleTexture(Item.byBlock(Unordinary_BasicsBlocks.ITEM_SORTER));
 
-        basicItem(new ResourceLocation("unordinary_basics","builders_glove_gui"));
+        basicItem(new ResourceLocation(Unordinary_Basics.MOD_ID,"builders_glove_gui"));
+
+        //generate models for slime compass
+        for (int i = 0; i < 32; ++i){
+            if (i >= 10) {
+                basicItem(new ResourceLocation(Unordinary_Basics.MOD_ID, "compass/compass_" + i),new ResourceLocation("unordinary_basics", "item/compass/compass_" + i));
+            } else basicItem(new ResourceLocation(Unordinary_Basics.MOD_ID, "compass/compass_0" + i),new ResourceLocation("unordinary_basics", "item/compass/compass_0" + i));
+        }
+    }
+
+    //for seperate model location
+    public ItemModelBuilder basicItem(ResourceLocation item, ResourceLocation modelLocation)
+    {
+        return getBuilder(modelLocation.toString())
+                .parent(new ModelFile.UncheckedModelFile("item/generated"))
+                .texture("layer0", new ResourceLocation(item.getNamespace(), "item/" + item.getPath()));
     }
 }
