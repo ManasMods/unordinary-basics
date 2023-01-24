@@ -1,0 +1,10 @@
+{
+  "queen": {
+    "sounds": [
+      {
+        "name": "unordinary_basics:queen",
+        "stream": true
+      }
+    ]
+  }
+}

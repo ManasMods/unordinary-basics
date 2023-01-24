@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "unordinary_basics:block/enchantment_library" },
+    "facing=east": { "model": "unordinary_basics:block/enchantment_library", "y": 90 },
+    "facing=south": { "model": "unordinary_basics:block/enchantment_library", "y": 180 },
+    "facing=west": { "model": "unordinary_basics:block/enchantment_library", "y": 270 }
+  }
+}

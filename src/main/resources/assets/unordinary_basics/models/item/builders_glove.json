@@ -1,0 +1,18 @@
+{
+	"loader":"forge:separate-perspective",
+	"parent": "item/generated",
+	"base": {
+		"parent": "unordinary_basics:item/builders_glove_hand"
+	},
+	"perspectives": {
+		"gui": {
+			"parent": "unordinary_basics:item/builders_glove_gui"
+		},
+		"ground": {
+			"parent": "unordinary_basics:item/builders_glove_gui"
+		},
+		"fixed": {
+			"parent": "unordinary_basics:item/builders_glove_gui"
+		}
+	}
+}
