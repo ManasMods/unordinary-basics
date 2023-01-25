@@ -1,6 +1,6 @@
 # Unordinary Basics
 
-![GitHub](https://img.shields.io/github/last-commit/ManasMods/unordinary_basics?logo=git&logoColor=FFFFFF)
+![GitHub](https://img.shields.io/github/last-commit/ManasMods/unordinary-basics?logo=git&logoColor=FFFFFF)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/b659e6afad474179a81579681ff34ccf)](https://www.codacy.com/gh/ManasMods/unordinary_basics/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ManasMods/reincarnated_mod&amp;utm_campaign=Badge_Grade)
 [![DownloadCount](https://cf.way2muchnoise.eu/full_620821_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/unordinary-basics)
 [![Discord](https://img.shields.io/discord/982644537031811102.svg?color=7289DA&label=discord&logo=discord&logoColor=FFFFFF)](https://discord.gg/frqHUnJeVg)
