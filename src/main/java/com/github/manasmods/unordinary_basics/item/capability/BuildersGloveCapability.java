@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Capability holder used for the inventory inside the Builder's Glove
+ * Capability holder used for the inventory inside the Builder's Glove - should probably merged into one general holder
  */
 public class BuildersGloveCapability implements ICapabilityProvider {
 

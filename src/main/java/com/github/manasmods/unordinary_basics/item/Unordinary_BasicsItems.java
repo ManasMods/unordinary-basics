@@ -45,4 +45,6 @@ public class Unordinary_BasicsItems {
     public static final Item BUILDERS_GLOVE = null;
     @ObjectHolder("slime_compass")
     public static final Item SLIME_COMPASS = null;
+    @ObjectHolder("redstone_pouch")
+    public static final Item REDSTONE_POUCH = null;
 }
