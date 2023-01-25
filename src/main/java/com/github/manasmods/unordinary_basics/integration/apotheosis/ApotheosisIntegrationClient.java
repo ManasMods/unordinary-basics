@@ -1,9 +1,8 @@
 package com.github.manasmods.unordinary_basics.integration.apotheosis;
 
-import com.github.manasmods.manascore.client.gui.widget.ImagePredicateButton;
+import com.github.manasmods.manascore.api.client.gui.widget.ImagePredicateButton;
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.core.AbstractContainerScreenAccessor;
-
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.client.event.ScreenEvent;

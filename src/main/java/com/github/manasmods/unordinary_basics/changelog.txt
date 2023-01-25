@@ -1,0 +1,35 @@
+== Change Log ==
+
+/** Items **/
+
+¬ Added some new gear
+    - Backpacks
+    - Potion Belt
+    - Quiver
+    - Builder's Glove
+¬ Added Map Book
+¬ Added new enchantments and curses
+    - Curse of Breaking
+    - Curse of Fatigue
+    - Curse of Hallucination
+    - Master Miner
+    - Vein Miner
+    - Tree Feller
+¬ Added an end-game sword
+
+/** Blocks **/
+
+¬ Added Item Sorter block
+¬ Added Enchantment Library (no functionality yet)
+
+/** Misc Changes **/
+
+¬ Added several new inventory slots
+    - Back Slot
+    - Waist Slot
+¬ Updated tames
+    - Fox
+¬ Updated some vanilla words
+¬ Improved vein-miner/tree-feller enchantments
+
+== End of Change Log ==

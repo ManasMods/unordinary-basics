@@ -6,14 +6,12 @@
     ]
   },
   "criteria": {
-    "has_cobbled_deepslate": {
+    "has_stones": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:cobbled_deepslate"
-            ]
+            "tag": "forge:stone"
           }
         ]
       }
@@ -27,7 +25,7 @@
   },
   "requirements": [
     [
-      "has_cobbled_deepslate",
+      "has_stones",
       "has_the_recipe"
     ]
   ]

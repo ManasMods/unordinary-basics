@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:black_dyes"
+    }
+  ],
+  "result": {
+    "item": "minecraft:black_dye",
+    "count": 2
+  }
+}

@@ -1,13 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "CCC",
-    "CBC",
-    "CRC"
+    "###",
+    "#B#",
+    "#R#"
   ],
   "key": {
-    "C": {
-      "item": "minecraft:cobbled_deepslate"
+    "#": {
+      "tag": "forge:stone"
     },
     "B": {
       "item": "minecraft:bow"

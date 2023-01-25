@@ -1,7 +1,10 @@
 package com.github.manasmods.unordinary_basics.registry;
 
+import com.github.manasmods.unordinary_basics.block.EnchantmentLibraryBlock;
+import com.github.manasmods.unordinary_basics.block.ItemSorterBlock;
+import com.github.manasmods.unordinary_basics.block.SimpleBlock;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
-import com.github.manasmods.unordinary_basics.item.templates.SimpleBlock;
+import com.github.manasmods.unordinary_basics.item.templates.CustomBlockItem;
 import com.github.manasmods.unordinary_basics.item.templates.SimpleBlockItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
@@ -41,6 +44,20 @@ public class BlockRegistry {
      * This Method will register all custom {@link Block} object to Forge.
      */
     private static void registerBlocks(DeferredRegister<Block> registry) {
+
+        //UB STUFF
+
+        registry.register("enchantment_library", () -> new EnchantmentLibraryBlock(BlockBehaviour.Properties.of(Material.STONE)
+                .strength(1F)
+                .sound(SoundType.WOOD)
+                .noOcclusion()
+                .requiresCorrectToolForDrops()));
+        registry.register("item_sorter", () -> new ItemSorterBlock(BlockBehaviour.Properties.of(Material.METAL)
+                .strength(1F)
+                .sound(SoundType.METAL)
+                .noOcclusion()
+                .requiresCorrectToolForDrops()));
+
 
         //BLOCKS FOR STAIRS + SLABS
 
@@ -403,6 +420,9 @@ public class BlockRegistry {
         registry.register("purpur_pillar", () -> new BlockItem(Unordinary_BasicsBlocks.PURPUR_PILLAR, new Item.Properties()));
         registry.register("quartz_pillar", () -> new BlockItem(Unordinary_BasicsBlocks.QUARTZ_PILLAR, new Item.Properties()));
         registry.register("hay_block", () -> new BlockItem(Unordinary_BasicsBlocks.HAY_BLOCK, new Item.Properties()));
+
+        registry.register("enchantment_library", () -> new CustomBlockItem(Unordinary_BasicsBlocks.ENCHANTMENT_LIBRARY));
+        registry.register("item_sorter", () -> new CustomBlockItem(Unordinary_BasicsBlocks.ITEM_SORTER));
     }
 
 }

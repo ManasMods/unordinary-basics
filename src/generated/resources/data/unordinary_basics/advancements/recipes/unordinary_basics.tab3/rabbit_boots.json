@@ -1,0 +1,47 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "unordinary_basics:rabbit_boots"
+    ]
+  },
+  "criteria": {
+    "has_rabbit_hide": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:rabbit_hide"
+            ]
+          }
+        ]
+      }
+    },
+    "has_rabbit_foot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:rabbit_foot"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "unordinary_basics:rabbit_boots"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_rabbit_hide",
+      "has_rabbit_foot",
+      "has_the_recipe"
+    ]
+  ]
+}

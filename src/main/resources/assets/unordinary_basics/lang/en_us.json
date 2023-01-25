@@ -22,6 +22,8 @@
   "item.unordinary_basics.music_disc_queen": "Music Disc",
   "item.unordinary_basics.music_disc_queen.desc": "God Save The Queen",
   "item.unordinary_basics.builders_glove": "Builder's Glove",
+  "item.unordinary_basics.slime_compass": "Slime Compass",
+  "item.unordinary_basics.redstone_pouch": "Redstone Pouch",
 
   "item.unordinary_basics.unknown_blade_fragment": "Unknown Blade Fragment",
   "item.unordinary_basics.unknown_handle_fragment": "Unknown Handle Fragment",
@@ -40,9 +42,9 @@
   "enchantment.unordinary_basics.master_miner": "Master Miner",
   "enchantment.unordinary_basics.master_miner.desc": "Mines multiple blocks at once! - Shift + Right Click to change level",
   "enchantment.unordinary_basics.vein_miner": "Vein-Miner",
-  "enchantment.unordinary_basics.vein_miner.desc": "Mines an entire ore vein! - Shift + Right Click to change level",
+  "enchantment.unordinary_basics.vein_miner.desc": "Mines an entire ore vein! - Shift + Right Click to toggle",
   "enchantment.unordinary_basics.tree_feller": "Tree-Feller",
-  "enchantment.unordinary_basics.tree_feller.desc": "Fells an entire tree! - Shift + Right Click to change level",
+  "enchantment.unordinary_basics.tree_feller.desc": "Fells an entire tree! - Shift + Right Click to toggle",
   "enchantment.unordinary_basics.breaking_curse": "Curse of Breaking",
   "enchantment.unordinary_basics.breaking_curse.desc": "Gear breaks twice as fast",
   "enchantment.unordinary_basics.fatigue_curse": "Curse of Fatigue",
@@ -53,7 +55,8 @@
   "tooltip.unordinary_basics.technoblade_crown": "A crown fit for a king, and for a legend who never really dies",
   "tooltip.unordinary_basics.chainmail_armor": "When wearing a full set, take 25% less damage from arrows",
   "tooltip.unordinary_basics.netherite_armor": "When wearing a full set, take 30% less damage from fire",
-  "tooltip.unordinary_basics.builders_glove": "Places blocks randomly, press §e[SHIFT]§r + §e[RMB]§r to open its inventory. \nRight click a block while you have another block in your offhand to replace that block.",
+  "tooltip.unordinary_basics.builders_glove": "Places blocks randomly, press §e[ALT]§r + §e[RMB]§r to open its inventory. \nRight click a block while you have another block in your offhand to replace that block.",
+  "tooltip.unordinary_basics.redstone_pouch": "§l§4Redstone:§r %s",
 
   "entity.unordinary_basics.grizzly_bear": "Grizzly Bear",
   "item.unordinary_basics.grizzly_bear_spawn_egg": "Grizzly Bear Spawn Egg",
@@ -61,9 +64,13 @@
   "item.unordinary_basics.grolar_bear_spawn_egg": "Grolar Bear Spawn Egg",
   "unordinary_basics.message.pet.sit": "%s is set to Stay.",
   "unordinary_basics.message.pet.follow": "%s is set to Follow.",
+  "unordinary_basics.message.vein_miner_toggle": "Turned Vein Miner %s",
+  "unordinary_basics.message.tree_feller_toggle": "Turned Tree Feller %s",
+  "unordinary_basics.message.on": "on",
+  "unordinary_basics.message.off": "off",
 
   "warning.unordinary_basics.tool_not_strong_enough": "Your tool isn't strong enough to replace that block!",
-
+  "warning.unordinary_basics.no_slime_chunk_found": "§4Compass wasn't able to locate a slime chunk!",
 
 
   "block.unordinary_basics.calcite_stairs": "Calcite Stairs",
@@ -265,7 +272,7 @@
   "block.unordinary_basics.pumpkin_slab": "Pumpkin Slab",
   "block.unordinary_basics.netherrack_slab": "Netherrack Slab",
   "block.unordinary_basics.soul_sand_slab": "Soul Sand Slab",
-  "block.unordinary_basics.soul_soil_slab": "Soul Soul Slab",
+  "block.unordinary_basics.soul_soil_slab": "Soul Soil Slab",
   "block.unordinary_basics.basalt_slab": "Basalt Slab",
   "block.unordinary_basics.polished_basalt_slab": "Polished Basalt Slab",
   "block.unordinary_basics.glowstone_slab": "Glowstone Slab",

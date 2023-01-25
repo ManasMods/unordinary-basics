@@ -1,9 +1,13 @@
 package com.github.manasmods.unordinary_basics.data;
 
-import com.github.manasmods.manascore.data.gen.BlockTagProvider;
+import com.github.manasmods.manascore.api.data.gen.BlockTagProvider;
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
+import com.github.manasmods.unordinary_basics.utils.UBTags;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
@@ -14,6 +18,19 @@ public class Unordinary_BasicsBlockTagProvider extends BlockTagProvider {
 
     @Override
     protected void generate() {
+        tag(UBTags.Blocks.VEIN_MINER_VALID)
+                .addTag(Tags.Blocks.ORES);
+        tag(UBTags.Blocks.TREE_FELLER_VALID)
+                .addTag(BlockTags.LOGS);
+
+        tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(Unordinary_BasicsBlocks.ENCHANTMENT_LIBRARY)
+                .add(Unordinary_BasicsBlocks.ITEM_SORTER);
+        tag(BlockTags.NEEDS_STONE_TOOL)
+                .add(Unordinary_BasicsBlocks.ITEM_SORTER);
+        tag(BlockTags.NEEDS_DIAMOND_TOOL)
+                .add(Unordinary_BasicsBlocks.ENCHANTMENT_LIBRARY);
+
         tag(BlockTags.STAIRS)
             .add(Unordinary_BasicsBlocks.CALCITE_STAIRS, Unordinary_BasicsBlocks.TUFF_STAIRS, Unordinary_BasicsBlocks.DRIPSTONE_STAIRS, Unordinary_BasicsBlocks.GRASS_BLOCK_STAIRS,
                 Unordinary_BasicsBlocks.DIRT_STAIRS, Unordinary_BasicsBlocks.COARSE_DIRT_STAIRS, Unordinary_BasicsBlocks.PODZOL_STAIRS, Unordinary_BasicsBlocks.ROOTED_DIRT_STAIRS,

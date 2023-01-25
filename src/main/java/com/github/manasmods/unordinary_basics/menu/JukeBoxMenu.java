@@ -22,7 +22,7 @@ public class JukeBoxMenu extends AbstractContainerMenu {
     private final JukeboxBlockEntity blockEntity;
 
     public JukeBoxMenu(int containerId, Inventory inventory, JukeboxBlockEntity blockEntity, ContainerLevelAccess levelAccess) {
-        super(Vanilla_AdditionsMenuTypes.JUKE_BOX_MENU, containerId);
+        super(Unordinary_BasicsMenuTypes.JUKE_BOX_MENU, containerId);
         this.levelAccess = levelAccess;
         this.playerInvWrapper = new InvWrapper(inventory);
         this.container = blockEntity.getContainer();
