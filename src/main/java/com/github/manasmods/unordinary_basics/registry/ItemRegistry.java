@@ -40,6 +40,7 @@ class ItemRegistry {
         registry.register("glider", () -> new GliderItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
         registry.register("builders_glove", () -> new BuildersGloveItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
         registry.register("slime_compass", () -> new SlimeCompassItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
+        registry.register("redstone_pouch", () -> new RedstonePouchItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
 
         registry.register("music_disc_queen", () -> new MusicDiscItem(() -> UBSounds.QUEEN));
 

@@ -336,6 +336,16 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                         .of(Items.COMPASS).build()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(Unordinary_BasicsItems.REDSTONE_POUCH)
+                .define('X', Unordinary_BasicsItems.POUCH)
+                .define('R', Items.REDSTONE)
+                .pattern("RRR")
+                .pattern("RXR")
+                .pattern("RRR")
+                .unlockedBy("has_pouch", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Unordinary_BasicsItems.POUCH).build()))
+                .save(consumer);
+
         ShapelessRecipeBuilder.shapeless(Unordinary_BasicsItems.MILK_BOTTLE, 3)
                 .requires(Items.MILK_BUCKET)
                 .requires(Items.GLASS_BOTTLE, 3)
