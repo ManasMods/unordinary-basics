@@ -55,7 +55,7 @@
   "tooltip.unordinary_basics.technoblade_crown": "A crown fit for a king, and for a legend who never really dies",
   "tooltip.unordinary_basics.chainmail_armor": "When wearing a full set, take 25% less damage from arrows",
   "tooltip.unordinary_basics.netherite_armor": "When wearing a full set, take 30% less damage from fire",
-  "tooltip.unordinary_basics.builders_glove": "Places blocks randomly, press §e[ALT]§r + §e[RMB]§r to open its inventory. \nRight click a block while you have another block in your offhand to replace that block.",
+  "tooltip.unordinary_basics.builders_glove": "Places blocks randomly, press §e[SHIFT]§r + §e[RMB]§r to open its inventory. \nRight click a block while you have another block in your offhand to replace that block.",
   "tooltip.unordinary_basics.redstone_pouch": "§l§4Redstone:§r %s",
 
   "entity.unordinary_basics.grizzly_bear": "Grizzly Bear",
