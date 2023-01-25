@@ -1,12 +1,14 @@
 package com.github.manasmods.unordinary_basics.item.capability;
 
 import net.minecraft.core.Direction;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.common.util.LazyOptional;
@@ -180,11 +182,77 @@ public class RedstonePouchCapability implements ICapabilityProvider {
         return -8;
     }
 
+    /**
+     * Gets the total number of items in an IItemhandler
+     */
     public static int getItemAmount(IItemHandler handler){
             int count = 0;
             for (int i = 0; i < handler.getSlots(); ++i){
                 count = count + handler.getStackInSlot(i).getCount();
             }
             return count;
+    }
+
+    /**
+     * Drops one item from an IItemhandler directly to the world
+     * @return false if operation was unsuccessful
+     */
+    public static boolean dropOneItem(IItemHandler handler, Player player){
+        int availableSlot = getFirstNonEmptySlot(handler);
+
+        if (availableSlot == -8) return false;
+
+        spawnAtLocationWithVelocity(new ItemStack(handler.getStackInSlot(availableSlot).getItem()),1f,player);
+        handler.extractItem(availableSlot,1,false);
+        return true;
+    }
+
+    public static boolean dropOneStack(IItemHandler handler, Player player, Item type){
+        int removed = 0;
+        int availableSlot;
+
+        while (removed < 64){
+            availableSlot = getFirstNonEmptySlot(handler);
+            if (availableSlot == -8){
+                if (removed > 0){
+                    ItemStack stack = new ItemStack(type,removed);
+                    spawnAtLocationWithVelocity(stack,1f,player);
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
+            int currentlyChecked = handler.getStackInSlot(availableSlot).getCount();
+            if (currentlyChecked + removed < 64){
+                removed = removed + currentlyChecked;
+                handler.extractItem(availableSlot,currentlyChecked,false);
+            } else if (currentlyChecked + removed >= 64){
+                handler.extractItem(availableSlot, 64 - removed,false);
+                removed = 64;
+                spawnAtLocationWithVelocity(new ItemStack(type,removed),1f,player);
+                return true;
+            }
         }
+
+        return false;
+    }
+
+    public static ItemEntity spawnAtLocationWithVelocity(ItemStack pStack, float pOffsetY, Player pPlayer) {
+        if (pStack.isEmpty()) {
+            return null;
+        } else if (pPlayer.level.isClientSide) {
+            return null;
+        } else {
+
+            Vec3 viewVector = pPlayer.getViewVector(1.0F);
+
+            ItemEntity itementity = new ItemEntity(pPlayer.level, pPlayer.getX(), pPlayer.getY() + (double)pOffsetY, pPlayer.getZ(), pStack, viewVector.x * 0.35, viewVector.y * 0.35, viewVector.z * 0.35);
+            itementity.setDefaultPickUpDelay();
+            if (pPlayer.captureDrops() != null) pPlayer.captureDrops().add(itementity);
+            else
+                pPlayer.level.addFreshEntity(itementity);
+            return itementity;
+        }
+    }
 }

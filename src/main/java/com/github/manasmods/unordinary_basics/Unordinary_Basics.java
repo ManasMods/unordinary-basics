@@ -15,6 +15,9 @@ import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
 import com.github.manasmods.unordinary_basics.painting.UBPaintings;
 import com.github.manasmods.unordinary_basics.registry.Unordinary_BasicsRegistry;
 import lombok.Getter;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
@@ -24,6 +27,7 @@ import net.minecraftforge.event.entity.item.ItemTossEvent;
 import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
@@ -40,6 +44,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Optional;
+import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
 @Mod(Unordinary_Basics.MOD_ID)
@@ -60,6 +65,7 @@ public class Unordinary_Basics {
         modEventBus.addListener(this::generateData);
         forgeBus.addListener(this::entityPlaceEvent);
         forgeBus.addListener(this::entityPickupEvent);
+        forgeBus.addListener(this::itemTossEvent);
         modEventBus.addListener(UBEntityHandler::entityAttributeEvent);
         UBPaintings.register(modEventBus);
     }
@@ -98,6 +104,35 @@ public class Unordinary_Basics {
     }
 
     private void itemTossEvent(final ItemTossEvent event){
+        if (!event.getEntityItem().getItem().getItem().equals(Unordinary_BasicsItems.REDSTONE_POUCH)) return;
+        if (Screen.hasShiftDown()) return;
+        if (event.getPlayer().getLevel().isClientSide) return;
+        if (Minecraft.getInstance().screen != null) return;
+
+        ItemStack stack = event.getEntityItem().getItem();
+        ItemStack toReplaceWith = stack.copy();
+        Player player = event.getPlayer();
+        Inventory inv = player.getInventory();
+        int slotToModify;
+
+        slotToModify = inv.selected;
+
+        AtomicBoolean result = new AtomicBoolean(false);
+        toReplaceWith.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
+            ((ItemStackHandler)handler).deserializeNBT(toReplaceWith.getOrCreateTag().getCompound("inventory"));
+            if (Screen.hasControlDown()){
+                result.set(RedstonePouchCapability.dropOneStack(handler,player,Items.REDSTONE));
+            } else {
+                result.set(RedstonePouchCapability.dropOneItem(handler,player));
+            }
+            toReplaceWith.getOrCreateTag().put("inventory",((ItemStackHandler)handler).serializeNBT());
+        });
+
+        if (result.get()){
+            event.setCanceled(true);
+            event.setResult(Event.Result.DENY);
+            inv.setItem(slotToModify,toReplaceWith);
+        }
 
     }
 
@@ -105,6 +140,7 @@ public class Unordinary_Basics {
         Player player = event.getPlayer();
         final ItemStack stackToPickup = event.getItem().getItem();
 
+        if (player.level.isClientSide) return;
         if (!stackToPickup.getItem().equals(Items.REDSTONE)) return;
 
         ItemStack pouchItem = RedstonePouchCapability.findFirstItemInInventory(player,Unordinary_BasicsItems.REDSTONE_POUCH);
@@ -119,7 +155,7 @@ public class Unordinary_Basics {
             });
 
         stackToPickup.setCount(remainingCount.get());
-
+        event.setResult(Event.Result.DEFAULT);
         if (stackToPickup.isEmpty()) event.setResult(Event.Result.ALLOW);
     }
 

@@ -2,24 +2,26 @@ package com.github.manasmods.unordinary_basics.item.custom;
 
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.item.capability.RedstonePouchCapability;
+import com.google.common.util.concurrent.AtomicDouble;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.SlotAccess;
-import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.ClickAction;
 import net.minecraft.world.inventory.Slot;
-import net.minecraft.world.item.*;
+import net.minecraft.world.inventory.tooltip.TooltipComponent;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.Vec3;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
-import net.minecraftforge.event.entity.item.ItemTossEvent;
 import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
@@ -27,6 +29,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
@@ -53,7 +56,7 @@ public class RedstonePouchItem extends Item {
                     e.printStackTrace();
                 }
 
-                if (hitResult != null) {
+                if (hitResult != null && RedstonePouchCapability.getFirstNonEmptySlot(handler) != -8) {
                     ItemStack blockStack = handler.getStackInSlot(RedstonePouchCapability.getFirstNonEmptySlot(handler));
                     UseOnContext customContext = new UseOnContext(pContext.getLevel(), pContext.getPlayer(), pContext.getHand(), blockStack, hitResult);
                     result.set(blockStack.getItem().useOn(customContext));
@@ -139,8 +142,41 @@ public class RedstonePouchItem extends Item {
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         AtomicInteger itemCount = new AtomicInteger();
 
-        pStack.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> itemCount.set(RedstonePouchCapability.getItemAmount(handler)));
+        pStack.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
+            ((ItemStackHandler)handler).deserializeNBT(pStack.getOrCreateTag().getCompound("inventory"));
+            itemCount.set(RedstonePouchCapability.getItemAmount(handler));
+        });
 
-        pTooltipComponents.add(new TextComponent("Redstone: " + itemCount.get()));
+        pTooltipComponents.add(new TranslatableComponent("tooltip.unordinary_basics.redstone_pouch",itemCount));
+    }
+
+    /*@Override
+    public boolean shouldCauseReequipAnimation(ItemStack oldStack, ItemStack newStack, boolean slotChanged) {
+        return oldStack.getItem().equals(newStack.getItem());
+    }*/
+
+    @Override
+    public int getBarWidth(ItemStack pStack) {
+        AtomicInteger width = new AtomicInteger(0);
+        pStack.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
+            ((ItemStackHandler)handler).deserializeNBT(pStack.getOrCreateTag().getCompound("inventory"));
+            width.set(Math.round((13.0F * RedstonePouchCapability.getItemAmount(handler)) / (handler.getSlots() * 64)));
+        });
+        return width.get();
+    }
+
+    @Override
+    public int getBarColor(ItemStack pStack) {
+        AtomicDouble color = new AtomicDouble();
+        pStack.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
+            ((ItemStackHandler)handler).deserializeNBT(pStack.getOrCreateTag().getCompound("inventory"));
+            color.set(Math.max(0.0F, ((float) (handler.getSlots() * 64) - ((handler.getSlots() * 64) - RedstonePouchCapability.getItemAmount(handler))) / (handler.getSlots() * 64)));
+        });
+        return Mth.hsvToRgb((float) (color.get() / 3.0F), 1.0F, 1.0F);
+    }
+
+    @Override
+    public boolean isBarVisible(ItemStack pStack) {
+        return true;
     }
 }
