@@ -7,6 +7,9 @@
     - Potion Belt
     - Quiver
     - Builder's Glove
+    - Slime Compass
+    - Redstone Pouch
+    - Glider
 ¬ Added Map Book
 ¬ Added new enchantments and curses
     - Curse of Breaking
@@ -30,6 +33,6 @@
 ¬ Updated tames
     - Fox
 ¬ Updated some vanilla words
-¬ Improved vein-miner/tree-feller enchantments
+¬ Ability to hit through foliage
 
 == End of Change Log ==
