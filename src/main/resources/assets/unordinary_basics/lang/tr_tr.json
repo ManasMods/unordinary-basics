@@ -48,7 +48,7 @@
   "tooltip.unordinary_basics.technoblade_crown": "Bir krala ve asla ölmeyen bir efsaneye uygun bir taç",
   "tooltip.unordinary_basics.chainmail_armor": "Tam bir set giyerken, oklardan %25 daha az hasar al",
   "tooltip.unordinary_basics.netherite_armor": "Tam bir set giyerken, ateşten %30 daha az hasar al",
-  "tooltip.unordinary_basics.builders_glove": "Rastgele blok koyar, envaterini açmak için §e[ALT]§r + §e[SK]§r'ye bas. \nİkinci elinde başka bir blok varken bir bloğa sağ tıklarsan tıkladığın blok ikinci elindeki blok ile değiştirilecektir.",
+  "tooltip.unordinary_basics.builders_glove": "Places blocks randomly, press §e[SHIFT]§r + §e[RMB]§r to open its inventory. \nRight click a block while you have another block in your offhand to replace that block.",
   "tooltip.unordinary_basics.redstone_pouch": "§l§4Redstone:§r %s",
   "entity.unordinary_basics.grizzly_bear": "Boz Ayı",
   "item.unordinary_basics.grizzly_bear_spawn_egg": "Boz Ayı Çağırma Yumurtası",
