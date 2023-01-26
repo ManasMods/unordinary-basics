@@ -25,7 +25,8 @@
   ],
   "client": [
     "AbstractContainerScreenAccessor",
-    "MixinBedRenderer"
+    "MixinBedRenderer",
+    "MixinPlayerModel"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -346,6 +346,17 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                         .of(Unordinary_BasicsItems.POUCH).build()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(Unordinary_BasicsItems.GLIDER)
+                .define('P', Items.PHANTOM_MEMBRANE)
+                .define('S', Items.STRING)
+                .define('I', Items.STICK)
+                .pattern("PPP")
+                .pattern("SIS")
+                .pattern("I I")
+                .unlockedBy("has_pouch", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Unordinary_BasicsItems.POUCH).build()))
+                .save(consumer);
+
         ShapelessRecipeBuilder.shapeless(Unordinary_BasicsItems.MILK_BOTTLE, 3)
                 .requires(Items.MILK_BUCKET)
                 .requires(Items.GLASS_BOTTLE, 3)
