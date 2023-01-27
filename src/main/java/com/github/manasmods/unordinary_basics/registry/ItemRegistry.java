@@ -47,7 +47,6 @@ class ItemRegistry {
 
     }
 
-    //TODO: Please remove the Grizzly and Grolar Bear. Though in a way similar to the Leaper Item where the code still exists for future use.
     /*
     private static void registerSpawnEgg(DeferredRegister<Item> registry) {
         registry.register("grizzly_bear_spawn_egg", () -> new ForgeSpawnEggItem(() -> UBEntityTypes.GRIZZLY_BEAR.get(),
