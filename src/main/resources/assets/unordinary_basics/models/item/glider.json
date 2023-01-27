@@ -499,12 +499,12 @@
 		"thirdperson_righthand": {
 			"rotation": [-83.68, 0, 0],
 			"translation": [-6, -1.25, -2.25],
-			"scale": [1.30313, 1.30313, 1.30313]
+			"scale": [1.6, 1.6, 1.6]
 		},
 		"thirdperson_lefthand": {
 			"rotation": [-83.68, 0, 0],
 			"translation": [-6, -1.25, -2.25],
-			"scale": [1.30313, 1.30313, 1.30313]
+			"scale": [1.6, 1.6, 1.6]
 		},
 		"firstperson_righthand": {
 			"translation": [-9.25, 14.75, 2.5]
