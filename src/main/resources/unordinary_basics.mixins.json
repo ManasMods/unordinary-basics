@@ -20,7 +20,8 @@
     "MixinItemStack",
     "MixinJukeBoxBlock",
     "MixinLadder",
-    "NBTIngredientAccessor"
+    "NBTIngredientAccessor",
+    "MixinItemEntity"
   ],
   "client": [
     "AbstractContainerScreenAccessor",

@@ -34,7 +34,7 @@ public class GliderItem extends Item {
 
         Level level = entity.getLevel();
 
-        return level.getBlockState(entity.getOnPos().below()).is(Blocks.AIR) && level.getBlockState(entity.getOnPos().below(2)).is(Blocks.AIR);
+        return level.getBlockState(entity.getOnPos()).is(Blocks.AIR) && level.getBlockState(entity.getOnPos().below()).is(Blocks.AIR);
     }
 
     @Override
