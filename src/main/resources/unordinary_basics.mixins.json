@@ -13,7 +13,6 @@
     "MixinBedBlock",
     "MixinBedBlockEntity",
     "MixinDestroySpeed",
-    "MixinClipContext",
     "MixinFireworkRocket",
     "MixinFletchingTableBlock",
     "MixinFrostWalker",
@@ -25,7 +24,8 @@
   ],
   "client": [
     "AbstractContainerScreenAccessor",
-    "MixinBedRenderer"
+    "MixinBedRenderer",
+    "MixinClipContext"
   ],
   "injectors": {
     "defaultRequire": 1
