@@ -42,6 +42,7 @@ import java.util.Random;
 import java.util.UUID;
 import java.util.function.Predicate;
 
+@Deprecated(forRemoval = true)
 public class GrolarBearEntity extends TamableAnimal implements NeutralMob {
     private static final EntityDataAccessor<Boolean> DATA_STANDING_ID = SynchedEntityData.defineId(GrolarBearEntity.class, EntityDataSerializers.BOOLEAN);
     private float clientSideStandAnimationO;
