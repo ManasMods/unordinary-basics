@@ -1,5 +1,7 @@
 package com.github.manasmods.unordinary_basics;
 
+import com.github.manasmods.manascore.client.keybinding.KeybindingRegistry;
+import com.github.manasmods.unordinary_basics.client.keybind.Keybindings;
 import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsBlockStateProvider;
 import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsBlockTagProvider;
 import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsFletchingRecipeProvider;
@@ -68,6 +70,8 @@ public class Unordinary_Basics {
         forgeBus.addListener(this::itemTossEvent);
         modEventBus.addListener(UBEntityHandler::entityAttributeEvent);
         UBPaintings.register(modEventBus);
+
+        registerKeybinds();
     }
 
     private void setup(final FMLCommonSetupEvent event) {
@@ -101,6 +105,12 @@ public class Unordinary_Basics {
                 && ((Player) event.getEntity()).getInventory().offhand.get(0).getItem() instanceof BlockItem){
             event.setCanceled(true);
         }
+    }
+
+    private void registerKeybinds(){
+        KeybindingRegistry.register(
+                Keybindings.SET_PRONE
+        );
     }
 
     private void itemTossEvent(final ItemTossEvent event){
