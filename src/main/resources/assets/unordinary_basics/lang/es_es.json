@@ -65,6 +65,8 @@
   "unordinary_basics.message.off": "off",
   "warning.unordinary_basics.tool_not_strong_enough": "Your tool isn't strong enough to replace that block!",
   "warning.unordinary_basics.no_slime_chunk_found": "§4Compass wasn't able to locate a slime chunk!",
+  "unordinary_basics.keybinding.set_prone": "Prone (Hold)",
+  "manascore.category.unordinary_basics": "Unordinary Basics",
   "block.unordinary_basics.calcite_stairs": "Escaleras de calcita",
   "block.unordinary_basics.tuff_stairs": "Escaleras de toba",
   "block.unordinary_basics.dripstone_stairs": "Escaleras de espeleotema",
