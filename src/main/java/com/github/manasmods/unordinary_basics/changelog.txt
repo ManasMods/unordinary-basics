@@ -10,6 +10,7 @@
     - Slime Compass
     - Redstone Pouch
     - Glider
+    - Rabbit Boots
 ¬ Added Map Book
 ¬ Added new enchantments and curses
     - Curse of Breaking
@@ -34,5 +35,8 @@
     - Fox
 ¬ Updated some vanilla words
 ¬ Ability to hit through foliage
+¬ Added a keybinding to enter prone mode
+¬ Removed the experience limit on the anvil
+¬ Gave special properties to some armor sets
 
 == End of Change Log ==
