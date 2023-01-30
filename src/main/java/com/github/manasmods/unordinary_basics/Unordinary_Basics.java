@@ -1,14 +1,6 @@
 package com.github.manasmods.unordinary_basics;
 
-import com.github.manasmods.manascore.client.keybinding.KeybindingRegistry;
-import com.github.manasmods.unordinary_basics.client.keybind.Keybindings;
-import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsBlockStateProvider;
-import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsBlockTagProvider;
-import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsFletchingRecipeProvider;
-import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsItemModelProvider;
-import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsItemTagProvider;
-import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsLootTableProvider;
-import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsRecipeProvider;
+import com.github.manasmods.unordinary_basics.data.*;
 import com.github.manasmods.unordinary_basics.handler.UBEntityHandler;
 import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisIntegration;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
@@ -29,7 +21,6 @@ import net.minecraftforge.event.entity.item.ItemTossEvent;
 import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
@@ -70,8 +61,6 @@ public class Unordinary_Basics {
         forgeBus.addListener(this::itemTossEvent);
         modEventBus.addListener(UBEntityHandler::entityAttributeEvent);
         UBPaintings.register(modEventBus);
-
-        registerKeybinds();
     }
 
     private void setup(final FMLCommonSetupEvent event) {
@@ -105,12 +94,6 @@ public class Unordinary_Basics {
                 && ((Player) event.getEntity()).getInventory().offhand.get(0).getItem() instanceof BlockItem){
             event.setCanceled(true);
         }
-    }
-
-    private void registerKeybinds(){
-        KeybindingRegistry.register(
-                Keybindings.SET_PRONE
-        );
     }
 
     private void itemTossEvent(final ItemTossEvent event){
