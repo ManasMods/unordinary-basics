@@ -1,5 +1,6 @@
 package com.github.manasmods.unordinary_basics.client;
 
+import com.github.manasmods.manascore.client.keybinding.KeybindingRegistry;
 import com.github.manasmods.manascore.tab.InventoryTabRegistry;
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
@@ -7,6 +8,7 @@ import com.github.manasmods.unordinary_basics.client.gui.BuildersGloveScreen;
 import com.github.manasmods.unordinary_basics.client.gui.FletchingTableScreen;
 import com.github.manasmods.unordinary_basics.client.gui.JukeBoxScreen;
 import com.github.manasmods.unordinary_basics.client.gui.Unordinary_BasicsInventoryScreen;
+import com.github.manasmods.unordinary_basics.client.keybind.Keybindings;
 import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisIntegrationClient;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
 import com.github.manasmods.unordinary_basics.item.custom.SlimeCompassItem;
@@ -61,6 +63,7 @@ public class UBClient {
         e.enqueueWork(UBClient::registerEntityRenderer);
         e.enqueueWork(UBClient::registerMenuScreens);
         e.enqueueWork(UBClient::registerItemProperties);
+        e.enqueueWork(UBClient::registerKeybinds);
     }
 
     @SubscribeEvent
@@ -70,6 +73,12 @@ public class UBClient {
                 event.addSprite(new ResourceLocation(Unordinary_Basics.MOD_ID, "entity/banner/" + pattern.getFilename()));
             }
         }
+    }
+
+    private static void registerKeybinds(){
+        KeybindingRegistry.register(
+                Keybindings.SET_PRONE
+        );
     }
 
     private static void registerEntityRenderer() {
