@@ -1,9 +1,6 @@
 package com.github.manasmods.unordinary_basics.registry;
 
-import com.github.manasmods.unordinary_basics.block.EnchantmentLibraryBlock;
-import com.github.manasmods.unordinary_basics.block.ItemSorterBlock;
-import com.github.manasmods.unordinary_basics.block.SimpleBlock;
-import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
+import com.github.manasmods.unordinary_basics.block.*;
 import com.github.manasmods.unordinary_basics.item.templates.CustomBlockItem;
 import com.github.manasmods.unordinary_basics.item.templates.SimpleBlockItem;
 import net.minecraft.resources.ResourceLocation;
@@ -245,7 +242,7 @@ public class BlockRegistry {
         registry.register("tuff_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
         registry.register("dripstone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK).requiresCorrectToolForDrops()));
         registry.register("grass_block_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK).requiresCorrectToolForDrops()));
-        registry.register("dirt_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).requiresCorrectToolForDrops()));
+        registry.register("dirt_slab", () -> new GrassSproutableSlabBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).requiresCorrectToolForDrops(), Unordinary_BasicsBlocks.MYCELIUM_SLAB, Unordinary_BasicsBlocks.GRASS_BLOCK_SLAB));
         registry.register("coarse_dirt_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COARSE_DIRT).requiresCorrectToolForDrops()));
         registry.register("podzol_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.PODZOL).requiresCorrectToolForDrops()));
         registry.register("rooted_dirt_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.ROOTED_DIRT).requiresCorrectToolForDrops()));
