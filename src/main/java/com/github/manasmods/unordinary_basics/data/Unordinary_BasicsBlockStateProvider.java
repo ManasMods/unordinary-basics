@@ -177,6 +177,7 @@ public class Unordinary_BasicsBlockStateProvider extends BlockStateProvider {
             stairs(Unordinary_BasicsBlocks.GREEN_CONCRETE_POWDER_STAIRS, Blocks.GREEN_CONCRETE_POWDER);
             stairs(Unordinary_BasicsBlocks.RED_CONCRETE_POWDER_STAIRS, Blocks.RED_CONCRETE_POWDER);
             stairs(Unordinary_BasicsBlocks.BLACK_CONCRETE_POWDER_STAIRS, Blocks.BLACK_CONCRETE_POWDER);
+            stairs(Unordinary_BasicsBlocks.DIRT_PATH_STAIRS,modLoc("block/dirt_path_side"),mcLoc("block/dirt_path_top"));
             
         }
         
@@ -254,6 +255,7 @@ public class Unordinary_BasicsBlockStateProvider extends BlockStateProvider {
         slab(Unordinary_BasicsBlocks.DRIED_KELP_SLAB, Blocks.DRIED_KELP_BLOCK, mcLoc("block/dried_kelp_side"), mcLoc("block/dried_kelp_top"));
         slab(Unordinary_BasicsBlocks.CRYING_OBSIDIAN_SLAB, Blocks.CRYING_OBSIDIAN);
         slab(Unordinary_BasicsBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_SLAB, Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS);
+        sidedSlab(Unordinary_BasicsBlocks.DIRT_PATH_SLAB,Blocks.DIRT_PATH,mcLoc("block/dirt_path_top"),mcLoc("block/dirt"),modLoc("block/dirt_path_side"));
 
         slab(Unordinary_BasicsBlocks.WHITE_WOOL_SLAB, Blocks.WHITE_WOOL);
         slab(Unordinary_BasicsBlocks.ORANGE_WOOL_SLAB, Blocks.ORANGE_WOOL);
