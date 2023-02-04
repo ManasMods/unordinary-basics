@@ -221,6 +221,7 @@
   "block.unordinary_basics.green_concrete_powder_stairs": "Ступеньки из зелёного сухого бетона",
   "block.unordinary_basics.red_concrete_powder_stairs": "Ступеньки из красного сухого бетона",
   "block.unordinary_basics.black_concrete_powder_stairs": "Ступеньки из чёрного сухого бетона",
+  "block.unordinary_basics.dirt_path_stairs": "Dirt Path Stairs",
   "block.unordinary_basics.calcite_slab": "Кальцитовая плита",
   "block.unordinary_basics.tuff_slab": "Туфовая плита",
   "block.unordinary_basics.dripstone_slab": "Капельниковая плита",
@@ -372,6 +373,7 @@
   "block.unordinary_basics.brown_concrete_powder_slab": "Плита из коричневого сухого бетона",
   "block.unordinary_basics.green_concrete_powder_slab": "Плита из зелёного сухого бетона",
   "block.unordinary_basics.red_concrete_powder_slab": "Плита из красного сухого бетона",
-  "block.unordinary_basics.black_concrete_powder_slab": "Плита из чёрного сухого бетона"
+  "block.unordinary_basics.black_concrete_powder_slab": "Плита из чёрного сухого бетона",
+  "block.unordinary_basics.dirt_path_slab": "Dirt Path Slab"
 }
 
