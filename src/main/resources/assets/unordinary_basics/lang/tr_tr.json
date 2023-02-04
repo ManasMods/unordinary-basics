@@ -221,7 +221,7 @@
   "block.unordinary_basics.green_concrete_powder_stairs": "Yeşil Beton Tozu Merdiven",
   "block.unordinary_basics.red_concrete_powder_stairs": "Kırmızı Beton Tozu Merdiven",
   "block.unordinary_basics.black_concrete_powder_stairs": "Siyah Beton Tozu Merdiven",
-  "block.unordinary_basics.dirt_path_stairs": "Dirt Path Stairs",
+  "block.unordinary_basics.dirt_path_stairs": "Toprak Yol Merdiven",
   "block.unordinary_basics.calcite_slab": "Kalsit Basamak",
   "block.unordinary_basics.tuff_slab": "Tüf Basamak",
   "block.unordinary_basics.dripstone_slab": "Damla Taş Basamak",
@@ -374,6 +374,6 @@
   "block.unordinary_basics.green_concrete_powder_slab": "Yeşil Beton Tozu Basamak",
   "block.unordinary_basics.red_concrete_powder_slab": "Kırmızı Beton Tozu Basamak",
   "block.unordinary_basics.black_concrete_powder_slab": "Siyah Beton Tozu Basamak",
-  "block.unordinary_basics.dirt_path_slab": "Dirt Path Slab"
+  "block.unordinary_basics.dirt_path_slab": "Toprak Yol Basamak"
 }
 
