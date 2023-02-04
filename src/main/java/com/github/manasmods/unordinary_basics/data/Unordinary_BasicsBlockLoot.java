@@ -162,6 +162,8 @@ public class Unordinary_BasicsBlockLoot extends BlockLoot {
         this.dropSelf(Unordinary_BasicsBlocks.CRYING_OBSIDIAN_SLAB);
         this.dropSelf(Unordinary_BasicsBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_STAIRS);
         this.dropSelf(Unordinary_BasicsBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_SLAB);
+        this.dropSelf(Unordinary_BasicsBlocks.BLACK_CONCRETE_POWDER_SLAB);
+        this.dropSelf(Unordinary_BasicsBlocks.DIRT_PATH_SLAB);
         
         this.dropSelf(Unordinary_BasicsBlocks.WHITE_WOOL_STAIRS);
         this.dropSelf(Unordinary_BasicsBlocks.WHITE_WOOL_SLAB);
@@ -322,7 +324,7 @@ public class Unordinary_BasicsBlockLoot extends BlockLoot {
         this.dropSelf(Unordinary_BasicsBlocks.RED_CONCRETE_POWDER_STAIRS);
         this.dropSelf(Unordinary_BasicsBlocks.RED_CONCRETE_POWDER_SLAB);
         this.dropSelf(Unordinary_BasicsBlocks.BLACK_CONCRETE_POWDER_STAIRS);
-        this.dropSelf(Unordinary_BasicsBlocks.BLACK_CONCRETE_POWDER_SLAB);
+        this.dropSelf(Unordinary_BasicsBlocks.DIRT_PATH_STAIRS);
 
         this.dropSelf(Unordinary_BasicsBlocks.OAK_LOG);
         this.dropSelf(Unordinary_BasicsBlocks.BIRCH_LOG);

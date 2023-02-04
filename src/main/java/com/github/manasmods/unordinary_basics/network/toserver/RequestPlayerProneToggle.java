@@ -28,7 +28,6 @@ public class RequestPlayerProneToggle {
                 player.setPos(player.getDirection().getStepX() / 2 + player.getX(),player.getY(),player.getDirection().getStepZ() / 2 + player.getZ());
                 player.setSwimming(true);
                 player.setPose(Pose.SWIMMING);
-                System.out.println(player.getPose());
             }
 
         });

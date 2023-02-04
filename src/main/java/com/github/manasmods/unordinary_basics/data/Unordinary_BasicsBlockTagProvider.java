@@ -8,6 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
@@ -22,6 +23,19 @@ public class Unordinary_BasicsBlockTagProvider extends BlockTagProvider {
                 .addTag(Tags.Blocks.ORES);
         tag(UBTags.Blocks.TREE_FELLER_VALID)
                 .addTag(BlockTags.LOGS);
+
+        tag(UBTags.Blocks.GRASS_BLOCKS)
+                .add(Blocks.GRASS)
+                .add(Unordinary_BasicsBlocks.GRASS_BLOCK_SLAB)
+                .add(Unordinary_BasicsBlocks.GRASS_BLOCK_STAIRS);
+        tag(UBTags.Blocks.MYCELIUM_BLOCKS)
+                .add(Blocks.MYCELIUM)
+                .add(Unordinary_BasicsBlocks.MYCELIUM_SLAB)
+                .add(Unordinary_BasicsBlocks.MYCELIUM_STAIRS);
+        tag(UBTags.Blocks.PODZOL_BLOCKS)
+                .add(Blocks.PODZOL)
+                .add(Unordinary_BasicsBlocks.PODZOL_SLAB)
+                .add(Unordinary_BasicsBlocks.PODZOL_STAIRS);
 
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(Unordinary_BasicsBlocks.ENCHANTMENT_LIBRARY)

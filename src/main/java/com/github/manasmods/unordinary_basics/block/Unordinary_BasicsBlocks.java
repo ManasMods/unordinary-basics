@@ -374,6 +374,8 @@ public class Unordinary_BasicsBlocks {
     public static final Block RED_CONCRETE_POWDER_STAIRS = null;
     @ObjectHolder("black_concrete_powder_stairs")
     public static final Block BLACK_CONCRETE_POWDER_STAIRS = null;
+    @ObjectHolder("dirt_path_stairs")
+    public static final Block DIRT_PATH_STAIRS = null;
     //SLABS
 
     @ObjectHolder("calcite_slab")
@@ -680,6 +682,8 @@ public class Unordinary_BasicsBlocks {
     public static final Block RED_CONCRETE_POWDER_SLAB = null;
     @ObjectHolder("black_concrete_powder_slab")
     public static final Block BLACK_CONCRETE_POWDER_SLAB = null;
+    @ObjectHolder("dirt_path_slab")
+    public static final Block DIRT_PATH_SLAB = null;
 
 
     //OTHER

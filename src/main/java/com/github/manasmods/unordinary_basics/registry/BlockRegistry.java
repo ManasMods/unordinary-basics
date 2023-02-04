@@ -83,11 +83,11 @@ public class BlockRegistry {
         registry.register("calcite_stairs", () -> new StairBlock(Blocks.CALCITE::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.CALCITE).requiresCorrectToolForDrops())));
         registry.register("tuff_stairs", () -> new StairBlock(Blocks.TUFF::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops())));
         registry.register("dripstone_stairs", () -> new StairBlock(Blocks.DRIPSTONE_BLOCK::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK).requiresCorrectToolForDrops())));
-        registry.register("grass_block_stairs", () -> new StairBlock(Blocks.GRASS_BLOCK::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK).requiresCorrectToolForDrops())));
-        registry.register("dirt_stairs", () -> new StairBlock(Blocks.DIRT::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.DIRT).requiresCorrectToolForDrops())));
-        registry.register("coarse_dirt_stairs", () -> new StairBlock(Blocks.COARSE_DIRT::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.COARSE_DIRT).requiresCorrectToolForDrops())));
-        registry.register("podzol_stairs", () -> new StairBlock(Blocks.PODZOL::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.PODZOL).requiresCorrectToolForDrops())));
-        registry.register("rooted_dirt_stairs", () -> new StairBlock(Blocks.ROOTED_DIRT::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.ROOTED_DIRT).requiresCorrectToolForDrops())));
+        registry.register("grass_block_stairs", () -> new DirtWiltableStairBlock(Blocks.GRASS_BLOCK::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK).requiresCorrectToolForDrops()),() -> Unordinary_BasicsBlocks.DIRT_STAIRS,() -> Unordinary_BasicsBlocks.DIRT_PATH_STAIRS));
+        registry.register("dirt_stairs", () -> new GrassSproutableStairBlock(Blocks.DIRT::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.DIRT).requiresCorrectToolForDrops()),() -> Unordinary_BasicsBlocks.MYCELIUM_STAIRS,() -> Unordinary_BasicsBlocks.GRASS_BLOCK_STAIRS,() -> Unordinary_BasicsBlocks.PODZOL_STAIRS,() -> Unordinary_BasicsBlocks.DIRT_PATH_STAIRS));
+        registry.register("coarse_dirt_stairs", () -> new PathableStairBlock(Blocks.COARSE_DIRT::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.COARSE_DIRT).requiresCorrectToolForDrops()),() -> Unordinary_BasicsBlocks.DIRT_PATH_STAIRS));
+        registry.register("podzol_stairs", () -> new DirtWiltableStairBlock(Blocks.PODZOL::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.PODZOL).requiresCorrectToolForDrops()),() -> Unordinary_BasicsBlocks.DIRT_STAIRS,() -> Unordinary_BasicsBlocks.DIRT_PATH_STAIRS));
+        registry.register("rooted_dirt_stairs", () -> new PathableStairBlock(Blocks.ROOTED_DIRT::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.ROOTED_DIRT).requiresCorrectToolForDrops()),() -> Unordinary_BasicsBlocks.DIRT_PATH_STAIRS));
         registry.register("crimson_nylium_stairs", () -> new StairBlock(Blocks.CRIMSON_NYLIUM::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.CRIMSON_NYLIUM).requiresCorrectToolForDrops())));
         registry.register("warped_nylium_stairs", () -> new StairBlock(Blocks.WARPED_NYLIUM::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.WARPED_NYLIUM).requiresCorrectToolForDrops())));
         registry.register("sand_stairs", () -> new StairBlock(Blocks.SAND::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.SAND).requiresCorrectToolForDrops())));
@@ -134,7 +134,7 @@ public class BlockRegistry {
         registry.register("cracked_deepslate_tile_stairs", () -> new StairBlock(Blocks.CRACKED_DEEPSLATE_TILES::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.CRACKED_DEEPSLATE_TILES).requiresCorrectToolForDrops())));
         registry.register("chiseled_deepslate_stairs", () -> new StairBlock(Blocks.CHISELED_DEEPSLATE::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.CHISELED_DEEPSLATE).requiresCorrectToolForDrops())));
         registry.register("melon_stairs", () -> new StairBlock(Blocks.MELON::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.MELON).requiresCorrectToolForDrops())));
-        registry.register("mycelium_stairs", () -> new StairBlock(Blocks.MYCELIUM::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.MYCELIUM).requiresCorrectToolForDrops())));
+        registry.register("mycelium_stairs", () -> new DirtWiltableStairBlock(Blocks.MYCELIUM::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.MYCELIUM).requiresCorrectToolForDrops()),() -> Unordinary_BasicsBlocks.DIRT_STAIRS,() -> Unordinary_BasicsBlocks.DIRT_PATH_STAIRS));
         registry.register("cracked_nether_brick_stairs", () -> new StairBlock(Blocks.CRACKED_NETHER_BRICKS::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.CRACKED_NETHER_BRICKS).requiresCorrectToolForDrops())));
         registry.register("chiseled_nether_brick_stairs", () -> new StairBlock(Blocks.CHISELED_NETHER_BRICKS::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.CHISELED_NETHER_BRICKS).requiresCorrectToolForDrops())));
         registry.register("end_stone_stairs", () -> new StairBlock(Blocks.END_STONE::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.END_STONE).requiresCorrectToolForDrops())));
@@ -234,6 +234,7 @@ public class BlockRegistry {
         registry.register("green_concrete_powder_stairs", () -> new StairBlock(Blocks.GREEN_CONCRETE_POWDER::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.GREEN_CONCRETE_POWDER).requiresCorrectToolForDrops())));
         registry.register("red_concrete_powder_stairs", () -> new StairBlock(Blocks.RED_CONCRETE_POWDER::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.RED_CONCRETE_POWDER).requiresCorrectToolForDrops())));
         registry.register("black_concrete_powder_stairs", () -> new StairBlock(Blocks.BLACK_CONCRETE_POWDER::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.BLACK_CONCRETE_POWDER).requiresCorrectToolForDrops())));
+        registry.register("dirt_path_stairs", () -> new DirtWiltableStairBlock(Blocks.DIRT_PATH::defaultBlockState, (BlockBehaviour.Properties.copy(Blocks.DIRT_PATH).requiresCorrectToolForDrops()),() -> Unordinary_BasicsBlocks.DIRT_STAIRS,null));
 
 
         //SLABS
@@ -241,11 +242,11 @@ public class BlockRegistry {
         registry.register("calcite_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CALCITE).requiresCorrectToolForDrops()));
         registry.register("tuff_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
         registry.register("dripstone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK).requiresCorrectToolForDrops()));
-        registry.register("grass_block_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK).requiresCorrectToolForDrops()));
-        registry.register("dirt_slab", () -> new GrassSproutableSlabBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).requiresCorrectToolForDrops(), Unordinary_BasicsBlocks.MYCELIUM_SLAB, Unordinary_BasicsBlocks.GRASS_BLOCK_SLAB));
-        registry.register("coarse_dirt_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.COARSE_DIRT).requiresCorrectToolForDrops()));
-        registry.register("podzol_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.PODZOL).requiresCorrectToolForDrops()));
-        registry.register("rooted_dirt_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.ROOTED_DIRT).requiresCorrectToolForDrops()));
+        registry.register("grass_block_slab", () -> new DirtWiltableSlabBlock(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK).requiresCorrectToolForDrops(),() -> Unordinary_BasicsBlocks.DIRT_SLAB,() -> Unordinary_BasicsBlocks.DIRT_PATH_SLAB));
+        registry.register("dirt_slab", () -> new GrassSproutableSlabBlock(BlockBehaviour.Properties.copy(Blocks.DIRT).requiresCorrectToolForDrops(), () -> Unordinary_BasicsBlocks.MYCELIUM_SLAB, () -> Unordinary_BasicsBlocks.GRASS_BLOCK_SLAB, () -> Unordinary_BasicsBlocks.PODZOL_SLAB,() -> Unordinary_BasicsBlocks.DIRT_PATH_SLAB));
+        registry.register("coarse_dirt_slab", () -> new PathableSlabBlock(BlockBehaviour.Properties.copy(Blocks.COARSE_DIRT).requiresCorrectToolForDrops(),() -> Unordinary_BasicsBlocks.DIRT_PATH_SLAB));
+        registry.register("podzol_slab", () -> new DirtWiltableSlabBlock(BlockBehaviour.Properties.copy(Blocks.PODZOL).requiresCorrectToolForDrops(),() -> Unordinary_BasicsBlocks.DIRT_SLAB,() -> Unordinary_BasicsBlocks.DIRT_PATH_SLAB));
+        registry.register("rooted_dirt_slab", () -> new PathableSlabBlock(BlockBehaviour.Properties.copy(Blocks.ROOTED_DIRT).requiresCorrectToolForDrops(),() -> Unordinary_BasicsBlocks.DIRT_PATH_SLAB));
         registry.register("crimson_nylium_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CRIMSON_NYLIUM).requiresCorrectToolForDrops()));
         registry.register("warped_nylium_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_NYLIUM).requiresCorrectToolForDrops()));
         registry.register("sand_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.SAND).requiresCorrectToolForDrops()));
@@ -291,7 +292,7 @@ public class BlockRegistry {
         registry.register("cracked_deepslate_tile_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CRACKED_DEEPSLATE_TILES).requiresCorrectToolForDrops()));
         registry.register("chiseled_deepslate_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CHISELED_DEEPSLATE).requiresCorrectToolForDrops()));
         registry.register("melon_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.MELON).requiresCorrectToolForDrops()));
-        registry.register("mycelium_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.MYCELIUM).requiresCorrectToolForDrops()));
+        registry.register("mycelium_slab", () -> new DirtWiltableSlabBlock(BlockBehaviour.Properties.copy(Blocks.MYCELIUM).requiresCorrectToolForDrops(),() -> Unordinary_BasicsBlocks.DIRT_SLAB,() -> Unordinary_BasicsBlocks.DIRT_PATH_SLAB));
         registry.register("cracked_nether_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CRACKED_NETHER_BRICKS).requiresCorrectToolForDrops()));
         registry.register("chiseled_nether_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CHISELED_NETHER_BRICKS).requiresCorrectToolForDrops()));
         registry.register("end_stone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE).requiresCorrectToolForDrops()));
@@ -390,6 +391,7 @@ public class BlockRegistry {
         registry.register("green_concrete_powder_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.GREEN_CONCRETE_POWDER).requiresCorrectToolForDrops()));
         registry.register("red_concrete_powder_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.RED_CONCRETE_POWDER).requiresCorrectToolForDrops()));
         registry.register("black_concrete_powder_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.BLACK_CONCRETE_POWDER).requiresCorrectToolForDrops()));
+        registry.register("dirt_path_slab", () -> new DirtPathSlab(BlockBehaviour.Properties.copy(Blocks.DIRT_PATH).requiresCorrectToolForDrops()));
     }
     /**
      * This Method allows to create {@link BlockItem} objects with non-default settings.
