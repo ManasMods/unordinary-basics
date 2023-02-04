@@ -221,6 +221,7 @@
   "block.unordinary_basics.green_concrete_powder_stairs": "Escaleras de polvo de concreto verde",
   "block.unordinary_basics.red_concrete_powder_stairs": "Escaleras de polvo de concreto rojo",
   "block.unordinary_basics.black_concrete_powder_stairs": "Escaleras de polvo de concreto negro",
+  "block.unordinary_basics.dirt_path_stairs": "Dirt Path Stairs",
   "block.unordinary_basics.calcite_slab": "Losa de calcita",
   "block.unordinary_basics.tuff_slab": "Losa de toba",
   "block.unordinary_basics.dripstone_slab": "Losa de espeleotema",
@@ -372,6 +373,7 @@
   "block.unordinary_basics.brown_concrete_powder_slab": "Losa de polvo de concreto café",
   "block.unordinary_basics.green_concrete_powder_slab": "Losa de polvo de concreto verde",
   "block.unordinary_basics.red_concrete_powder_slab": "Losa de polvo de concreto rojo",
-  "block.unordinary_basics.black_concrete_powder_slab": "Losa de polvo de concreto negro"
+  "block.unordinary_basics.black_concrete_powder_slab": "Losa de polvo de concreto negro",
+  "block.unordinary_basics.dirt_path_slab": "Dirt Path Slab"
 }
 
