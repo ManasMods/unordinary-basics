@@ -221,6 +221,7 @@
   "block.unordinary_basics.green_concrete_powder_stairs": "Green Concrete Powder Stairs",
   "block.unordinary_basics.red_concrete_powder_stairs": "Red Concrete Powder Stairs",
   "block.unordinary_basics.black_concrete_powder_stairs": "Black Concrete Powder Stairs",
+  "block.unordinary_basics.dirt_path_stairs": "Dirt Path Stairs",
   "block.unordinary_basics.calcite_slab": "Calcite Slab",
   "block.unordinary_basics.tuff_slab": "Tuff Slab",
   "block.unordinary_basics.dripstone_slab": "Dripstone Slab",
@@ -372,6 +373,7 @@
   "block.unordinary_basics.brown_concrete_powder_slab": "Brown Concrete Powder Slab",
   "block.unordinary_basics.green_concrete_powder_slab": "Green Concrete Powder Slab",
   "block.unordinary_basics.red_concrete_powder_slab": "Red Concrete Powder Slab",
-  "block.unordinary_basics.black_concrete_powder_slab": "Black Concrete Powder Slab"
+  "block.unordinary_basics.black_concrete_powder_slab": "Black Concrete Powder Slab",
+  "block.unordinary_basics.dirt_path_slab": "Dirt Path Slab"
 }
 
