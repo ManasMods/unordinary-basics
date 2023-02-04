@@ -221,6 +221,7 @@
   "block.unordinary_basics.green_concrete_powder_stairs": "Grüne Trockenbetontreppe",
   "block.unordinary_basics.red_concrete_powder_stairs": "Rote Trockenbetontreppe",
   "block.unordinary_basics.black_concrete_powder_stairs": "Schwarze Trockenbetontreppe",
+  "block.unordinary_basics.dirt_path_stairs": "Dirt Path Stairs",
   "block.unordinary_basics.calcite_slab": "Kalzitstufe",
   "block.unordinary_basics.tuff_slab": "Tuffsteinstufe",
   "block.unordinary_basics.dripstone_slab": "Tropfsteinstufe",
@@ -372,6 +373,7 @@
   "block.unordinary_basics.brown_concrete_powder_slab": "Braune Trockenbetonstufe",
   "block.unordinary_basics.green_concrete_powder_slab": "Grüne Trockenbetonstufe",
   "block.unordinary_basics.red_concrete_powder_slab": "Rote Trockenbetonstufe",
-  "block.unordinary_basics.black_concrete_powder_slab": "Schwarze Trockenbetonstufe"
+  "block.unordinary_basics.black_concrete_powder_slab": "Schwarze Trockenbetonstufe",
+  "block.unordinary_basics.dirt_path_slab": "Dirt Path Slab"
 }
 
