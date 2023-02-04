@@ -221,6 +221,7 @@
   "block.unordinary_basics.green_concrete_powder_stairs": "绿色混凝土粉末楼梯",
   "block.unordinary_basics.red_concrete_powder_stairs": "红色混凝土粉末楼梯",
   "block.unordinary_basics.black_concrete_powder_stairs": "黑色混凝土粉末楼梯",
+  "block.unordinary_basics.dirt_path_stairs": "Dirt Path Stairs",
   "block.unordinary_basics.calcite_slab": "方解石台阶",
   "block.unordinary_basics.tuff_slab": "凝灰岩台阶",
   "block.unordinary_basics.dripstone_slab": "滴水石台阶",
@@ -372,6 +373,7 @@
   "block.unordinary_basics.brown_concrete_powder_slab": "棕色混凝土粉末台阶",
   "block.unordinary_basics.green_concrete_powder_slab": "绿色混凝土粉末台阶",
   "block.unordinary_basics.red_concrete_powder_slab": "红色混凝土粉末台阶",
-  "block.unordinary_basics.black_concrete_powder_slab": "黑色混凝土粉末台阶"
+  "block.unordinary_basics.black_concrete_powder_slab": "黑色混凝土粉末台阶",
+  "block.unordinary_basics.dirt_path_slab": "Dirt Path Slab"
 }
 
