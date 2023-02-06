@@ -149,7 +149,7 @@ repositories {
         minecraft "net.minecraftforge:forge:${minecraftVersion}-${forgeVersion}"
 
         //Lombok
-        compileOnly 'org.projectlombok:lombok:1.18.24'
+        compileOnly 'org.projectlombok:lombok:1.18.26'
         annotationProcessor 'org.projectlombok:lombok:1.18.24'
 
         //ManasCore
