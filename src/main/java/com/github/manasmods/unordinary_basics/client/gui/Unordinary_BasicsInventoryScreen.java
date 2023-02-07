@@ -42,6 +42,8 @@ public class Unordinary_BasicsInventoryScreen extends AbstractContainerScreen<UB
     public void render(PoseStack pPoseStack, int pMouseX, int pMouseY, float pPartialTick) {
         super.render(pPoseStack, pMouseX, pMouseY, pPartialTick);
         renderTooltip(pPoseStack, pMouseX, pMouseY);
+        this.xMouse = pMouseX;
+        this.yMouse = pMouseY;
     }
 
     @Override
@@ -57,7 +59,7 @@ public class Unordinary_BasicsInventoryScreen extends AbstractContainerScreen<UB
         int i = this.leftPos;
         int j = this.topPos;
         this.blit(poseStack, i, j, 0, 0, this.imageWidth, this.imageHeight);
-        //renderEntityInInventory(i + 51, j + 75, 30, (float)(i + 51) - this.xMouse, (float)(j + 75 - 50) - this.yMouse, this.minecraft.player);
+        renderEntityInInventory(i + 51, j + 75, 30, (float)(i + 51) - this.xMouse, (float)(j + 75 - 50) - this.yMouse, this.minecraft.player);
     }
 
     //taken from InventoryScreen class
