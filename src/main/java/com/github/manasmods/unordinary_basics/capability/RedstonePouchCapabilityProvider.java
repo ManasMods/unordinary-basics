@@ -1,4 +1,4 @@
-package com.github.manasmods.unordinary_basics.item.capability;
+package com.github.manasmods.unordinary_basics.capability;
 
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -19,12 +19,11 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Capability holder for the redstone pouch - additionally contains many utility methods
  */
-public class RedstonePouchCapability implements ICapabilityProvider {
+public class RedstonePouchCapabilityProvider implements ICapabilityProvider {
 
     public ItemStackHandler stackHandler = new ItemStackHandler(64){
         @Override

@@ -57,9 +57,10 @@ public class Unordinary_BasicsInventoryScreen extends AbstractContainerScreen<UB
         int i = this.leftPos;
         int j = this.topPos;
         this.blit(poseStack, i, j, 0, 0, this.imageWidth, this.imageHeight);
-        renderEntityInInventory(i + 86, j + 75, 30, (float)(i + 51) - this.xMouse, (float)(j + 75 - 50) - this.yMouse, this.minecraft.player);
+        //renderEntityInInventory(i + 51, j + 75, 30, (float)(i + 51) - this.xMouse, (float)(j + 75 - 50) - this.yMouse, this.minecraft.player);
     }
 
+    //taken from InventoryScreen class
     public static void renderEntityInInventory(int pPosX, int pPosY, int pScale, float pMouseX, float pMouseY, LivingEntity pLivingEntity) {
         float f = (float)Math.atan((double)(pMouseX / 40.0F));
         float f1 = (float)Math.atan((double)(pMouseY / 40.0F));

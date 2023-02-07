@@ -1,4 +1,4 @@
-package com.github.manasmods.unordinary_basics.item.capability;
+package com.github.manasmods.unordinary_basics.capability;
 
 import net.minecraft.core.Direction;
 import net.minecraftforge.common.capabilities.Capability;
@@ -13,7 +13,7 @@ import org.jetbrains.annotations.Nullable;
 /**
  * Capability holder used for the inventory inside the Builder's Glove - should probably merged into one general holder
  */
-public class BuildersGloveCapability implements ICapabilityProvider {
+public class BuildersGloveCapabilityProvider implements ICapabilityProvider {
 
     public ItemStackHandler stackHandler = new ItemStackHandler(18);
 
