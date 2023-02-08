@@ -43,8 +43,8 @@ public class Unordinary_BasicsItemModelProvider extends ItemModelProvider {
         //generate models for slime compass
         for (int i = 0; i < 32; ++i){
             if (i >= 10) {
-                basicItem(new ResourceLocation(Unordinary_Basics.MOD_ID, "compass/compass_" + i),new ResourceLocation("unordinary_basics", "item/compass/compass_" + i));
-            } else basicItem(new ResourceLocation(Unordinary_Basics.MOD_ID, "compass/compass_0" + i),new ResourceLocation("unordinary_basics", "item/compass/compass_0" + i));
+                basicItem(new ResourceLocation(Unordinary_Basics.MOD_ID, "slime_compass/slime_compass_" + i),new ResourceLocation("unordinary_basics", "item/slime_compass/slime_compass_" + i));
+            } else basicItem(new ResourceLocation(Unordinary_Basics.MOD_ID, "slime_compass/slime_compass_0" + i),new ResourceLocation("unordinary_basics", "item/slime_compass/slime_compass_0" + i));
         }
     }
 
