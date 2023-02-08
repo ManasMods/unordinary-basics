@@ -2,7 +2,6 @@ package com.github.manasmods.unordinary_basics.capability;
 
 import com.github.manasmods.unordinary_basics.client.gui.Unordinary_BasicsInventoryScreen;
 import com.github.manasmods.unordinary_basics.menu.UBInventoryMenu;
-import com.github.manasmods.unordinary_basics.menu.slot.IUBItemSlot;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -28,7 +27,6 @@ public interface IUBInventoryItem {
      * This method should be overridden in order to add slots that this item may contain. You should handle any item capabilities yourself, possibly using {@link ItemStackHandlerCapabilityProvider} <br> <br>
      * Method is called in the constructor for the menu. <br> <br>
      * Method may be used to conduct other operations on the menu that'd usually be done in the constructor, however it is discouraged. <br> <br>
-     * <b>ONLY USE slot types that implement {@link IUBItemSlot}</b> <br> <br>
      * All parameters are directly transferred over.
      */
     void addSlots(int windowId, Inventory inventory, Player player, UBInventoryMenu menu, ItemStack stack);

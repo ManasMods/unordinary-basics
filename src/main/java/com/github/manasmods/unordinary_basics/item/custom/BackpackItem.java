@@ -6,8 +6,6 @@ import com.github.manasmods.unordinary_basics.capability.IUBInventoryItem;
 import com.github.manasmods.unordinary_basics.capability.ItemStackHandlerCapabilityProvider;
 import com.github.manasmods.unordinary_basics.client.gui.Unordinary_BasicsInventoryScreen;
 import com.github.manasmods.unordinary_basics.menu.UBInventoryMenu;
-import com.github.manasmods.unordinary_basics.menu.slot.IUBItemSlot;
-import com.github.manasmods.unordinary_basics.menu.slot.UBItemSlot;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.nbt.CompoundTag;
@@ -16,8 +14,6 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
@@ -54,7 +50,7 @@ public class BackpackItem extends Item implements IUBInventoryItem {
                 int index = 0;
                 for (int col = 0; col < 3; ++col){
                     for (int row = 0; row < 8; ++row){
-                        menu.addSlotEx(new UBItemSlot(stackHandler,index,8 + col * 18 - 64,12 + row * 18));
+                        menu.addSlotEx(new SlotItemHandler(stackHandler,index,8 + col * 18 - 64,12 + row * 18));
                         ++index;
                     }
                 }

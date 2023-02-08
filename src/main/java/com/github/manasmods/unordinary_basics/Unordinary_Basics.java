@@ -18,11 +18,13 @@ import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
@@ -31,7 +33,9 @@ import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.entity.item.ItemTossEvent;
+import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -51,6 +55,8 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -75,6 +81,7 @@ public class Unordinary_Basics {
         forgeBus.addListener(this::entityPlaceEvent);
         forgeBus.addListener(this::entityPickupEvent);
         forgeBus.addListener(this::itemTossEvent);
+        forgeBus.addListener(this::handleUBInventoryDrops);
         forgeBus.addGenericListener(Entity.class,this::attachCapabilities);
         modEventBus.addListener(UBEntityHandler::entityAttributeEvent);
         UBPaintings.register(modEventBus);
@@ -146,6 +153,25 @@ public class Unordinary_Basics {
         };
 
         event.addCapability(new ResourceLocation(Unordinary_Basics.MOD_ID,"ub_inventory"),provider);
+    }
+
+    private void handleUBInventoryDrops(final LivingDropsEvent event){
+        if (!(event.getEntity() instanceof Player player)) return;
+
+        Level level = player.getLevel();
+        List<ItemStack> drops = new ArrayList<>();
+
+        player.getCapability(CapabilityUBInventory.UB_INVENTORY_CAPABILITY).ifPresent(handler -> {
+            for (int i = 0; i < handler.getSlots(); ++i){
+                if (!handler.getStackInSlot(i).isEmpty()) {
+                    drops.add(handler.getStackInSlot(i));
+                }
+            }
+        });
+        for (ItemStack drop : drops) {
+            ItemEntity dropEntity = new ItemEntity(level, player.getX(), player.getY(), player.getZ(), drop);
+            event.getDrops().add(dropEntity);
+        }
     }
 
     private void itemTossEvent(final ItemTossEvent event){

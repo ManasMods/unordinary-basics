@@ -6,17 +6,26 @@ import com.github.manasmods.unordinary_basics.capability.UBInventoryItemStackHan
 import com.github.manasmods.unordinary_basics.menu.slot.SlotUBInventory;
 import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
 import com.github.manasmods.unordinary_basics.network.toserver.RequestUBInventoryMenu;
+import net.minecraft.network.protocol.game.ClientboundContainerSetSlotPacket;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.Container;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.StackedContents;
 import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.CraftingRecipe;
+import net.minecraft.world.item.crafting.Recipe;
+import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.wrapper.InvWrapper;
 import net.minecraftforge.items.wrapper.PlayerArmorInvWrapper;
 import net.minecraftforge.items.wrapper.PlayerOffhandInvWrapper;
 
-public class UBInventoryMenu extends AbstractContainerMenu {
+import java.util.Optional;
+
+public class UBInventoryMenu extends RecipeBookMenu<CraftingContainer> {
     private final Player player;
 
     private final InvWrapper inventoryHelper;
@@ -79,7 +88,7 @@ public class UBInventoryMenu extends AbstractContainerMenu {
     WHICH IS NOT SUPPOSED TO BE DONE.
     If anyone has any idea on how to make the above code work without the game throwing an error that literally doesn't point out any part of this code for whatever reason,
     GO FOR IT. I WILL NOT. rant over
-     */
+    */
     public void resetScreen(){
         Unordinary_BasicsNetwork.getInstance().sendToServer(new RequestUBInventoryMenu());
     }
@@ -143,6 +152,77 @@ public class UBInventoryMenu extends AbstractContainerMenu {
         resultSlots.clearContent();
         if (!pPlayer.level.isClientSide) {
             this.clearContainer(pPlayer, this.craftSlots);
+        }
+    }
+
+
+    @Override
+    public void fillCraftSlotsStackedContents(StackedContents pItemHelper) {
+        this.craftSlots.fillStackedContents(pItemHelper);
+    }
+
+    @Override
+    public void clearCraftingContent() {
+        this.resultSlots.clearContent();
+        this.craftSlots.clearContent();
+    }
+
+    @Override
+    public boolean recipeMatches(Recipe<? super CraftingContainer> pRecipe) {
+        return pRecipe.matches(this.craftSlots, this.player.level);
+    }
+
+    @Override
+    public int getResultSlotIndex() {
+        return 0;
+    }
+
+    @Override
+    public int getGridWidth() {
+        return 2;
+    }
+
+    @Override
+    public int getGridHeight() {
+        return 2;
+    }
+
+    @Override
+    public int getSize() {
+        return 0;
+    }
+
+    @Override
+    public RecipeBookType getRecipeBookType() {
+        return RecipeBookType.CRAFTING;
+    }
+
+    @Override
+    public boolean shouldMoveToInventory(int pSlotIndex) {
+        return pSlotIndex != this.getResultSlotIndex();
+    }
+
+    @Override
+    public void slotsChanged(Container pContainer) {
+        slotChangedCraftingGrid(this, this.player.level, this.player, this.craftSlots, this.resultSlots);
+    }
+
+    //from CraftingContainer class, since it's protected
+    private static void slotChangedCraftingGrid(AbstractContainerMenu pMenu, Level pLevel, Player pPlayer, CraftingContainer pContainer, ResultContainer pResult) {
+        if (!pLevel.isClientSide) {
+            ServerPlayer serverplayer = (ServerPlayer)pPlayer;
+            ItemStack itemstack = ItemStack.EMPTY;
+            Optional<CraftingRecipe> optional = pLevel.getServer().getRecipeManager().getRecipeFor(RecipeType.CRAFTING, pContainer, pLevel);
+            if (optional.isPresent()) {
+                CraftingRecipe craftingrecipe = optional.get();
+                if (pResult.setRecipeUsed(pLevel, serverplayer, craftingrecipe)) {
+                    itemstack = craftingrecipe.assemble(pContainer);
+                }
+            }
+
+            pResult.setItem(0, itemstack);
+            pMenu.setRemoteSlot(0, itemstack);
+            serverplayer.connection.send(new ClientboundContainerSetSlotPacket(pMenu.containerId, pMenu.incrementStateId(), 0, itemstack));
         }
     }
 }

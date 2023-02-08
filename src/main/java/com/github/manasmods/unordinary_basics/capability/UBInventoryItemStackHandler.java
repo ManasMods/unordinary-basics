@@ -36,17 +36,20 @@ public class UBInventoryItemStackHandler implements IUBInventoryHandler, INBTSer
     //---UB---
 
     /**
-     * @return true - if given item exists in the handler
+     * @return true - if given itemstack exists in the handler
      */
     public boolean isItemEquipped(ItemStack stack){
         if (stack.getItem() instanceof IUBInventoryItem){
             for (int i = 0; i < this.getSlots(); ++i){
-                if (this.getStackInSlot(i).getItem().equals(stack.getItem())) return true;
+                if (this.getStackInSlot(i).equals(stack)) return true;
             }
         }
         return false;
     }
 
+    /**
+     * @return true - if given item type exists in handler
+     */
     public boolean isItemEquipped(Item item){
         if (item instanceof IUBInventoryItem){
             for (int i = 0; i < this.getSlots(); ++i){
