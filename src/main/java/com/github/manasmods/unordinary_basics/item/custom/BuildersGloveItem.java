@@ -1,7 +1,7 @@
 package com.github.manasmods.unordinary_basics.item.custom;
 
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
-import com.github.manasmods.unordinary_basics.capability.BuildersGloveCapabilityProvider;
+import com.github.manasmods.unordinary_basics.capability.ItemStackHandlerCapabilityProvider;
 import com.github.manasmods.unordinary_basics.menu.BuildersGloveMenu;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.nbt.CompoundTag;
@@ -193,7 +193,7 @@ public class BuildersGloveItem extends Item {
     @Nullable
     @Override
     public ICapabilityProvider initCapabilities(ItemStack stack, @Nullable CompoundTag nbt) {
-        return new BuildersGloveCapabilityProvider();
+        return new ItemStackHandlerCapabilityProvider(18);
     }
 
     //this doesn't work when a menu is open :(

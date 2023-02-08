@@ -1,9 +1,11 @@
 package com.github.manasmods.unordinary_basics.capability;
 
+import com.github.manasmods.unordinary_basics.menu.UBInventoryMenu;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.Tag;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.util.INBTSerializable;
 import net.minecraftforge.items.ItemHandlerHelper;
@@ -12,10 +14,12 @@ import net.minecraftforge.items.ItemStackHandler;
 import javax.annotation.Nonnull;
 
 /**
- * Copy of {@link ItemStackHandler} with some minor changes.
+ * Copy of {@link ItemStackHandler} with some minor changes. <br> <br>
+ * Slot indexes should generally be obtained with {@link CapabilityUBInventory}'s SLOT_INDEX and {@link CapabilityUBInventory.UBSlot}
  */
 public class UBInventoryItemStackHandler implements IUBInventoryHandler, INBTSerializable<CompoundTag> {
     protected NonNullList<ItemStack> stacks;
+    private UBInventoryMenu menu;
 
     public UBInventoryItemStackHandler()
     {
@@ -26,8 +30,40 @@ public class UBInventoryItemStackHandler implements IUBInventoryHandler, INBTSer
     {
         if (stacks.size() == 2) {
             this.stacks = stacks;
-        } else throw new RuntimeException("Array " + stacks + "'s length is not appropriate. Should be 2 when it is " + stacks.size());
+        } else throw new IndexOutOfBoundsException("Array " + stacks + "'s length is not appropriate. Should be 2 when it is " + stacks.size());
     }
+
+    //---UB---
+
+    /**
+     * @return true - if given item exists in the handler
+     */
+    public boolean isItemEquipped(ItemStack stack){
+        if (stack.getItem() instanceof IUBInventoryItem){
+            for (int i = 0; i < this.getSlots(); ++i){
+                if (this.getStackInSlot(i).getItem().equals(stack.getItem())) return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean isItemEquipped(Item item){
+        if (item instanceof IUBInventoryItem){
+            for (int i = 0; i < this.getSlots(); ++i){
+                if (this.getStackInSlot(i).getItem().equals(item)) return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Don't call this unless working on {@link UBInventoryMenu}
+     */
+    public void setMenu(UBInventoryMenu menu) {
+        this.menu = menu;
+    }
+
+    //---FORGE---
 
     public void setSize(int size)
     {
@@ -60,7 +96,7 @@ public class UBInventoryItemStackHandler implements IUBInventoryHandler, INBTSer
     @Nonnull
     public ItemStack insertItem(int slot, @Nonnull ItemStack stack, boolean simulate)
     {
-        //if (!isItemValid(stack,slot)) return stack;
+        if (!isItemValid(stack,slot)) return stack;
 
         if (stack.isEmpty())
             return ItemStack.EMPTY;
@@ -196,6 +232,9 @@ public class UBInventoryItemStackHandler implements IUBInventoryHandler, INBTSer
 
     protected void onContentsChanged(int slot)
     {
+        if (menu != null){
+            menu.resetScreen();
+        }
 
     }
 
