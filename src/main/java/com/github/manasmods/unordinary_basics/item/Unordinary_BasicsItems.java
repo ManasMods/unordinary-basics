@@ -47,6 +47,8 @@ public class Unordinary_BasicsItems {
     public static final Item SLIME_COMPASS = null;
     @ObjectHolder("redstone_pouch")
     public static final Item REDSTONE_POUCH = null;
-    @ObjectHolder("backpack")
-    public static final Item BACKPACK = null;
+    @ObjectHolder("barrel_backpack")
+    public static final Item BARREL_BACKPACK = null;
+    @ObjectHolder("chest_backpack")
+    public static final Item CHEST_BACKPACK = null;
 }
