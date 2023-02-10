@@ -27,11 +27,9 @@ public abstract class MixinPlayer extends LivingEntity implements net.minecraftf
 
     @Inject(method = "getProjectile", at = @At("HEAD"), cancellable = true)
     public void getProjectile(ItemStack pShootable, CallbackInfoReturnable<ItemStack> cir) {
-        System.out.println("Mixin!");
         if (!(pShootable.getItem() instanceof BowItem)) return;
         AtomicReference<ItemStack> returnValue = new AtomicReference<>();
         player.getCapability(CapabilityUBInventory.UB_INVENTORY_CAPABILITY).ifPresent(handler -> {
-            System.out.println("checks passed");
             if (!(handler instanceof UBInventoryItemStackHandler)) return;
             UBInventoryItemStackHandler stackHandler = (UBInventoryItemStackHandler)handler;
             if (!stackHandler.isItemEquipped(Unordinary_BasicsItems.QUIVER)) return;

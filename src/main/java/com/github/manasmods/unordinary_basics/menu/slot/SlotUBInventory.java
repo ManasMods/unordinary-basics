@@ -1,6 +1,8 @@
 package com.github.manasmods.unordinary_basics.menu.slot;
 
 import com.github.manasmods.unordinary_basics.capability.IUBInventoryHandler;
+import com.mojang.datafixers.util.Pair;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Player;
@@ -19,6 +21,14 @@ public class SlotUBInventory extends Slot {
         super(emptyInventory, index, xPosition, yPosition);
         this.itemHandler = itemHandler;
         this.index = index;
+    }
+
+    public SlotUBInventory(IUBInventoryHandler itemHandler, int index, int xPosition, int yPosition, Pair<ResourceLocation,ResourceLocation> background)
+    {
+        super(emptyInventory, index, xPosition, yPosition);
+        this.itemHandler = itemHandler;
+        this.index = index;
+        this.setBackground(background.getFirst(),background.getSecond());
     }
 
     @Override

@@ -31,6 +31,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.decoration.ItemFrame;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.block.Block;
@@ -48,6 +49,7 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 
 import javax.annotation.Nullable;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 @Mod.EventBusSubscriber(modid = Unordinary_Basics.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -74,6 +76,19 @@ public class UBClient {
         if(event.getAtlas().location() == Sheets.BANNER_SHEET) {
             for(BannerPattern pattern : BannerPattern.values()) {
                 event.addSprite(new ResourceLocation(Unordinary_Basics.MOD_ID, "entity/banner/" + pattern.getFilename()));
+            }
+        }
+
+        if (event.getAtlas().location() == InventoryMenu.BLOCK_ATLAS) {
+            List<String> registerValues = List.of(
+                    "waist",
+                    "back_pack",
+                    "back_quiver",
+                    "back_wings"
+            );
+
+            for (String s : registerValues) {
+                event.addSprite(new ResourceLocation(Unordinary_Basics.MOD_ID, "item/empty_slots/empty_armor_slot_" + s));
             }
         }
     }

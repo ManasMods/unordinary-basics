@@ -16,6 +16,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 import java.util.function.Consumer;
@@ -375,6 +376,16 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .pattern(" P ")
                 .unlockedBy("has_chest", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.CHEST).build()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(Unordinary_BasicsItems.QUIVER)
+                .define('L', Items.LEATHER)
+                .define('S', Tags.Items.STRING)
+                .pattern("LS")
+                .pattern("LS")
+                .pattern("LS")
+                .unlockedBy("has_leather", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.LEATHER).build()))
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(Unordinary_BasicsItems.MILK_BOTTLE, 3)
