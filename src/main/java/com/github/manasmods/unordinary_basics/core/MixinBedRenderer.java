@@ -1,6 +1,5 @@
 package com.github.manasmods.unordinary_basics.core;
 
-import com.github.manasmods.unordinary_basics.block.IColorable;
 import com.github.manasmods.unordinary_basics.block.IPatternable;
 import com.github.manasmods.unordinary_basics.utils.ClientUtils;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -72,18 +71,8 @@ public abstract class MixinBedRenderer implements BlockEntityRenderer<BedBlockEn
             }
         }
 
-        if (entity != null && entity instanceof IColorable) {
-            IColorable color = (IColorable) this.entity;
-
-            float[] afloat = color.getColor().getTextureDiffuseColors();
-
-            VertexConsumer vertexconsumer = pMaterial.buffer(pBufferSource, RenderType::entitySolid);
-            pModelPart.render(pPoseStack, vertexconsumer, pPackedLight, pPackedOverlay, afloat[0], afloat[1], afloat[2], 1.0F);
-        } else {
-            VertexConsumer vertexconsumer = pMaterial.buffer(pBufferSource, RenderType::entitySolid);
-
-            pModelPart.render(pPoseStack, vertexconsumer, pPackedLight, pPackedOverlay);
-        }
+        VertexConsumer vertexconsumer = pMaterial.buffer(pBufferSource, RenderType::entitySolid);
+        pModelPart.render(pPoseStack, vertexconsumer, pPackedLight, pPackedOverlay);
 
 
         pPoseStack.popPose();
