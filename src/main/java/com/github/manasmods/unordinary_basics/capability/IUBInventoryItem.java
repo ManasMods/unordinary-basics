@@ -18,6 +18,11 @@ public interface IUBInventoryItem {
     CapabilityUBInventory.UBSlot getSlot();
 
     /**
+     * Should return the amount of slots that this item adds.
+     */
+    int getSlotCount();
+
+    /**
      * This method should be overridden to determine how the visual changes made by this item will be rendered when equipped. <br> <br>
      * All parameters are directly transferred over from the given screen's native <b>renderBg</b> method.
      */

@@ -12,6 +12,7 @@ import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.items.ItemStackHandler;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 /**
  * Copy of {@link ItemStackHandler} with some minor changes. <br> <br>
@@ -57,6 +58,14 @@ public class UBInventoryItemStackHandler implements IUBInventoryHandler, INBTSer
             }
         }
         return false;
+    }
+
+    @Nullable
+    public ItemStack findFirstInstanceOf(Item item){
+        for (int i = 0; i < this.getSlots(); i++){
+            if (this.getStackInSlot(i).getItem().equals(item)) return this.getStackInSlot(i);
+        }
+        return null;
     }
 
     /**

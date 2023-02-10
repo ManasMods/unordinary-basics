@@ -36,7 +36,7 @@ class ItemRegistry {
         registry.register("unknown_hilt_fragment", () -> new TooltipItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1),new TranslatableComponent("tooltip.unordinary_basics.unknown_hilt_fragment")));
         registry.register("zenith", ZenithItem::new);
         registry.register("leaper", () -> new LeaperItem(new Item.Properties().stacksTo(1).durability(80)));
-        registry.register("quiver", () -> new Item(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1).durability(265)));
+        registry.register("quiver", () -> new QuiverItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
         registry.register("rabbit_boots", () -> new RabbitBootsItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
         registry.register("technoblade_crown", () -> new TechnobladeCrownItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1).rarity(Rarity.EPIC)));
         registry.register("glider", () -> new GliderItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));

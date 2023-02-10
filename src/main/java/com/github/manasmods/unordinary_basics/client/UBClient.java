@@ -44,8 +44,11 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.items.ItemStackHandler;
 
 import javax.annotation.Nullable;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 @Mod.EventBusSubscriber(modid = Unordinary_Basics.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class UBClient {
@@ -241,6 +244,21 @@ public class UBClient {
                     this.rotation = Mth.positiveModulo(this.rotation + this.deltaRotation, 1.0D);
                 }
             }
+        });
+
+        ItemProperties.register(Unordinary_BasicsItems.QUIVER,new ResourceLocation("filled"),(stack,level,entity,seed) -> {
+            AtomicBoolean isFilled = new AtomicBoolean();
+
+            stack.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
+                for (int i = 0; i < handler.getSlots(); ++i){
+                    if (!handler.getStackInSlot(i).isEmpty()) {
+                        isFilled.set(true);
+                        break;
+                    }
+                }
+            });
+
+            return isFilled.get() ? 1.0F : 0F;
         });
     }
 
