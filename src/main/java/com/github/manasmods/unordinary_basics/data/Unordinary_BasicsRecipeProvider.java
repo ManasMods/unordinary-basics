@@ -357,6 +357,26 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                         .of(Unordinary_BasicsItems.POUCH).build()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(Unordinary_BasicsItems.BARREL_BACKPACK)
+                .define('S', Items.STRING)
+                .define('P', ItemTags.PLANKS)
+                .define('C', Items.BARREL)
+                .pattern("SCS")
+                .pattern(" P ")
+                .unlockedBy("has_barrel", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.BARREL).build()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(Unordinary_BasicsItems.CHEST_BACKPACK)
+                .define('S', Items.STRING)
+                .define('P', ItemTags.PLANKS)
+                .define('C', Items.CHEST)
+                .pattern("SCS")
+                .pattern(" P ")
+                .unlockedBy("has_chest", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.CHEST).build()))
+                .save(consumer);
+
         ShapelessRecipeBuilder.shapeless(Unordinary_BasicsItems.MILK_BOTTLE, 3)
                 .requires(Items.MILK_BUCKET)
                 .requires(Items.GLASS_BOTTLE, 3)

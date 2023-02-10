@@ -2,6 +2,7 @@ package com.github.manasmods.unordinary_basics.client.gui;
 
 import com.github.manasmods.manascore.api.tab.annotation.ScreenForTab;
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.capability.IUBInventoryItem;
 import com.github.manasmods.unordinary_basics.menu.UBInventoryMenu;
 import com.github.manasmods.unordinary_basics.tab.Unordinary_BasicsInventoryTab;
 import com.mojang.blaze3d.platform.Lighting;
@@ -15,6 +16,7 @@ import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRenderDispatcher;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Inventory;
@@ -30,7 +32,8 @@ public class Unordinary_BasicsInventoryScreen extends AbstractContainerScreen<UB
     private float yMouse;
 
     public Unordinary_BasicsInventoryScreen(UBInventoryMenu menu, Inventory inventory, Component title) {
-        super(menu, inventory, title);
+        super(menu, inventory, new TranslatableComponent("container.crafting"));
+        this.titleLabelX = 97;
     }
 
     @Override
@@ -40,13 +43,16 @@ public class Unordinary_BasicsInventoryScreen extends AbstractContainerScreen<UB
 
     @Override
     public void render(PoseStack pPoseStack, int pMouseX, int pMouseY, float pPartialTick) {
+        renderBackground(pPoseStack);
         super.render(pPoseStack, pMouseX, pMouseY, pPartialTick);
         renderTooltip(pPoseStack, pMouseX, pMouseY);
+        this.xMouse = pMouseX;
+        this.yMouse = pMouseY;
     }
 
     @Override
     protected void renderLabels(PoseStack pPoseStack, int pMouseX, int pMouseY) {
-
+        this.font.draw(pPoseStack, this.title, (float)this.titleLabelX, (float)this.titleLabelY, 4210752);
     }
 
     @Override
@@ -57,9 +63,16 @@ public class Unordinary_BasicsInventoryScreen extends AbstractContainerScreen<UB
         int i = this.leftPos;
         int j = this.topPos;
         this.blit(poseStack, i, j, 0, 0, this.imageWidth, this.imageHeight);
-        renderEntityInInventory(i + 86, j + 75, 30, (float)(i + 51) - this.xMouse, (float)(j + 75 - 50) - this.yMouse, this.minecraft.player);
+        renderEntityInInventory(i + 51, j + 75, 30, (float)(i + 51) - this.xMouse, (float)(j + 75 - 50) - this.yMouse, this.minecraft.player);
+
+        for (int k = 0; k < menu.getStackHandler().getSlots(); ++k){
+            if (menu.getStackHandler().getStackInSlot(k).isEmpty()) continue;
+            IUBInventoryItem item = (IUBInventoryItem)menu.getStackHandler().getStackInSlot(k).getItem();
+            item.renderUsed(poseStack,mouseX,mouseY,partialTick,this);
+        }
     }
 
+    //taken from InventoryScreen class
     public static void renderEntityInInventory(int pPosX, int pPosY, int pScale, float pMouseX, float pMouseY, LivingEntity pLivingEntity) {
         float f = (float)Math.atan((double)(pMouseX / 40.0F));
         float f1 = (float)Math.atan((double)(pMouseY / 40.0F));

@@ -1,24 +1,41 @@
 package com.github.manasmods.unordinary_basics;
 
+import com.github.manasmods.unordinary_basics.capability.CapabilityUBInventory;
+import com.github.manasmods.unordinary_basics.capability.IUBInventoryHandler;
+import com.github.manasmods.unordinary_basics.capability.UBInventoryItemStackHandler;
 import com.github.manasmods.unordinary_basics.data.*;
 import com.github.manasmods.unordinary_basics.handler.UBEntityHandler;
 import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisIntegration;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
-import com.github.manasmods.unordinary_basics.item.capability.RedstonePouchCapability;
+import com.github.manasmods.unordinary_basics.capability.RedstonePouchCapabilityProvider;
 import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
 import com.github.manasmods.unordinary_basics.painting.UBPaintings;
 import com.github.manasmods.unordinary_basics.registry.Unordinary_BasicsRegistry;
 import lombok.Getter;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.core.Direction;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.Level;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.ICapabilityProvider;
+import net.minecraftforge.common.capabilities.ICapabilitySerializable;
+import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent;
+import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.entity.item.ItemTossEvent;
+import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -31,11 +48,15 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -56,9 +77,12 @@ public class Unordinary_Basics {
         Unordinary_BasicsRegistry.register(modEventBus);
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::generateData);
+        modEventBus.addListener(this::registerCapabilities);
         forgeBus.addListener(this::entityPlaceEvent);
         forgeBus.addListener(this::entityPickupEvent);
         forgeBus.addListener(this::itemTossEvent);
+        forgeBus.addListener(this::handleUBInventoryDrops);
+        forgeBus.addGenericListener(Entity.class,this::attachCapabilities);
         modEventBus.addListener(UBEntityHandler::entityAttributeEvent);
         UBPaintings.register(modEventBus);
     }
@@ -96,6 +120,60 @@ public class Unordinary_Basics {
         }
     }
 
+    private void registerCapabilities(RegisterCapabilitiesEvent event){
+        event.register(IUBInventoryHandler.class);
+    }
+
+    private void attachCapabilities(final AttachCapabilitiesEvent<Entity> event){
+        if (!(event.getObject() instanceof Player)) return;
+
+        UBInventoryItemStackHandler stackHandler = new UBInventoryItemStackHandler();
+        LazyOptional<IUBInventoryHandler> handlerLazyOptional = LazyOptional.of(() -> stackHandler);
+
+        ICapabilityProvider provider = new ICapabilitySerializable<CompoundTag>() {
+
+            @Override
+            public CompoundTag serializeNBT() {
+                return stackHandler.serializeNBT();
+            }
+
+            @Override
+            public void deserializeNBT(CompoundTag nbt) {
+                stackHandler.deserializeNBT(nbt);
+            }
+
+            @NotNull
+            @Override
+            public <T> LazyOptional<T> getCapability(@NotNull Capability<T> cap, @Nullable Direction side) {
+                if (cap == CapabilityUBInventory.UB_INVENTORY_CAPABILITY){
+                    return handlerLazyOptional.cast();
+                }
+                return LazyOptional.empty();
+            }
+        };
+
+        event.addCapability(new ResourceLocation(Unordinary_Basics.MOD_ID,"ub_inventory"),provider);
+    }
+
+    private void handleUBInventoryDrops(final LivingDropsEvent event){
+        if (!(event.getEntity() instanceof Player player)) return;
+
+        Level level = player.getLevel();
+        List<ItemStack> drops = new ArrayList<>();
+
+        player.getCapability(CapabilityUBInventory.UB_INVENTORY_CAPABILITY).ifPresent(handler -> {
+            for (int i = 0; i < handler.getSlots(); ++i){
+                if (!handler.getStackInSlot(i).isEmpty()) {
+                    drops.add(handler.getStackInSlot(i));
+                }
+            }
+        });
+        for (ItemStack drop : drops) {
+            ItemEntity dropEntity = new ItemEntity(level, player.getX(), player.getY(), player.getZ(), drop);
+            event.getDrops().add(dropEntity);
+        }
+    }
+
     private void itemTossEvent(final ItemTossEvent event){
         if (!event.getEntityItem().getItem().getItem().equals(Unordinary_BasicsItems.REDSTONE_POUCH)) return;
         if (Screen.hasShiftDown()) return;
@@ -114,9 +192,9 @@ public class Unordinary_Basics {
         toReplaceWith.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
             ((ItemStackHandler)handler).deserializeNBT(toReplaceWith.getOrCreateTag().getCompound("inventory"));
             if (Screen.hasControlDown()){
-                result.set(RedstonePouchCapability.dropOneStack(handler,player,Items.REDSTONE));
+                result.set(RedstonePouchCapabilityProvider.dropOneStack(handler,player,Items.REDSTONE));
             } else {
-                result.set(RedstonePouchCapability.dropOneItem(handler,player));
+                result.set(RedstonePouchCapabilityProvider.dropOneItem(handler,player));
             }
             toReplaceWith.getOrCreateTag().put("inventory",((ItemStackHandler)handler).serializeNBT());
         });
@@ -136,14 +214,14 @@ public class Unordinary_Basics {
         if (player.level.isClientSide) return;
         if (!stackToPickup.getItem().equals(Items.REDSTONE)) return;
 
-        ItemStack pouchItem = RedstonePouchCapability.findFirstItemInInventory(player,Unordinary_BasicsItems.REDSTONE_POUCH);
+        ItemStack pouchItem = RedstonePouchCapabilityProvider.findFirstItemInInventory(player,Unordinary_BasicsItems.REDSTONE_POUCH);
         AtomicInteger remainingCount = new AtomicInteger(stackToPickup.getCount());
 
         if (pouchItem == null) return;
 
             pouchItem.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
                 ((ItemStackHandler) handler).deserializeNBT(pouchItem.getOrCreateTag().getCompound("inventory"));
-                remainingCount.set(RedstonePouchCapability.dumpItemStackInt(stackToPickup, handler));
+                remainingCount.set(RedstonePouchCapabilityProvider.dumpItemStackInt(stackToPickup, handler));
                 pouchItem.getOrCreateTag().put("inventory", ((ItemStackHandler) handler).serializeNBT());
             });
 
