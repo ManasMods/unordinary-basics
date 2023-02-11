@@ -15,6 +15,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
@@ -41,14 +42,14 @@ public class BackpackItem extends Item implements IUBInventoryItem {
 
     @Override
     public void renderUsed(PoseStack pPoseStack, int pMouseX, int pMouseY, float pPartialTick, Unordinary_BasicsInventoryScreen screen) {
-        int imageWidth = 64;
-        int imageHeight = 165;
+        int imageWidth = 65;
+        int imageHeight = 166;
 
         int x = (screen.width - 176) / 2;
         int y = (screen.height - 166) / 2;
 
         RenderSystem.setShaderTexture(0,TEXTURE);
-        screen.blit(pPoseStack,x - imageWidth,y,0,0,imageWidth,imageHeight);
+        screen.blit(pPoseStack,x - imageWidth + 4,y,0,0,imageWidth,imageHeight);
     }
 
     @Override
@@ -59,7 +60,7 @@ public class BackpackItem extends Item implements IUBInventoryItem {
                 int index = 0;
                 for (int col = 0; col < 3; ++col){
                     for (int row = 0; row < 8; ++row){
-                        menu.addSlotEx(new SlotItemHandler(stackHandler,index,8 + col * 18 - 64,12 + row * 18){
+                        menu.addSlotEx(new SlotItemHandler(stackHandler,index,8 + col * 18 - 64 + 4,12 + row * 18){
                             @Override
                             public boolean mayPlace(@NotNull ItemStack stack) {
                                 if (stack.getItem().equals(Unordinary_BasicsItems.CHEST_BACKPACK) || stack.getItem().equals(Unordinary_BasicsItems.BARREL_BACKPACK)) return false;

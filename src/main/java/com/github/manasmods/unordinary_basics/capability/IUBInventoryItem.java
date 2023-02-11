@@ -24,6 +24,7 @@ public interface IUBInventoryItem {
 
     /**
      * This method should be overridden to determine how the visual changes made by this item will be rendered when equipped. <br> <br>
+     * This will be rendered <b>over</b> all other rendered layers. <br> <br>
      * All parameters are directly transferred over from the given screen's native <b>renderBg</b> method.
      */
     void renderUsed(PoseStack pPoseStack, int pMouseX, int pMouseY, float pPartialTick, Unordinary_BasicsInventoryScreen screen);
