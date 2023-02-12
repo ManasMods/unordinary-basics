@@ -91,7 +91,7 @@ public class UBInventoryMenu extends RecipeBookMenu<CraftingContainer> {
     private int getExternalSlotCount(){
         int slotCount = 0;
         for (int i = 0; i < stackHandler.getSlots(); ++i){
-            if (stackHandler.getStackInSlot(i).isEmpty()) continue;
+            if (stackHandler.getStackInSlot(i).isEmpty() || !(stackHandler.getStackInSlot(i).getItem() instanceof IUBInventoryItem)) continue;
             IUBInventoryItem item = (IUBInventoryItem)stackHandler.getStackInSlot(i).getItem();
             slotCount += item.getSlotCount();
         }
@@ -110,7 +110,7 @@ public class UBInventoryMenu extends RecipeBookMenu<CraftingContainer> {
         slots.removeAll(removeList);*/
 
         for (int i = 0; i < stackHandler.getSlots(); ++i){
-            if (stackHandler.getStackInSlot(i).isEmpty()) continue;
+            if (stackHandler.getStackInSlot(i).isEmpty() || !(stackHandler.getStackInSlot(i).getItem() instanceof IUBInventoryItem)) continue;
             IUBInventoryItem item = (IUBInventoryItem)stackHandler.getStackInSlot(i).getItem();
             item.addSlots(windowId,inventory,player,this,stackHandler.getStackInSlot(i));
         }

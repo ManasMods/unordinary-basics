@@ -3,14 +3,19 @@ package com.github.manasmods.unordinary_basics.core;
 import com.github.manasmods.unordinary_basics.capability.CapabilityUBInventory;
 import com.github.manasmods.unordinary_basics.capability.UBInventoryItemStackHandler;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.items.CapabilityItemHandler;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
@@ -19,6 +24,8 @@ import java.util.concurrent.atomic.AtomicReference;
 
 @Mixin(Player.class)
 public abstract class MixinPlayer extends LivingEntity implements net.minecraftforge.common.extensions.IForgePlayer {
+    @Shadow protected abstract boolean freeAt(BlockPos pPos);
+
     protected MixinPlayer(EntityType<? extends LivingEntity> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
@@ -48,6 +55,30 @@ public abstract class MixinPlayer extends LivingEntity implements net.minecraftf
         if (returnValue.get() != null){
             cir.setReturnValue(net.minecraftforge.common.ForgeHooks.getProjectile(this, pShootable, returnValue.get()));
         }
+    }
+
+    @Inject(method = "tryToStartFallFlying", at = @At("HEAD"), cancellable = true)
+    public void tryToStartFallFlying(CallbackInfoReturnable<Boolean> cir) {
+        cir.cancel();
+        boolean returnValue = false;
+
+        if (!this.onGround && !this.isFallFlying() && !this.isInWater() && !this.hasEffect(MobEffects.LEVITATION)) {
+            ItemStack itemstack = this.getItemBySlot(EquipmentSlot.CHEST);
+            if (!itemstack.is(Items.ELYTRA)) {
+                AtomicReference<ItemStack> stackAtomicReference = new AtomicReference<>();
+                player.getCapability(CapabilityUBInventory.UB_INVENTORY_CAPABILITY).ifPresent(handler -> {
+                    stackAtomicReference.set(handler.getStackInSlot(CapabilityUBInventory.SLOT_INDEX.get(CapabilityUBInventory.UBSlot.BACK)));
+                });
+                if (stackAtomicReference.get().is(Items.ELYTRA)) {
+                    itemstack = stackAtomicReference.get();
+                    if (itemstack.canElytraFly(this)) {
+                        player.startFallFlying();
+                        returnValue = true;
+                    }
+                }
+            }
+        }
+        cir.setReturnValue(returnValue);
     }
 
 }

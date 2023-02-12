@@ -67,7 +67,7 @@ public class Unordinary_BasicsInventoryScreen extends AbstractContainerScreen<UB
 
         for (int k = 0; k < menu.getStackHandler().getSlots(); ++k){
             if (menu.getStackHandler().getStackInSlot(k).isEmpty()) continue;
-            IUBInventoryItem item = (IUBInventoryItem)menu.getStackHandler().getStackInSlot(k).getItem();
+            if (menu.getStackHandler().getStackInSlot(k).getItem() instanceof IUBInventoryItem item)
             item.renderUsed(poseStack,mouseX,mouseY,partialTick,this);
         }
     }

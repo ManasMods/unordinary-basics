@@ -3,10 +3,12 @@ package com.github.manasmods.unordinary_basics.core;
 import com.github.manasmods.unordinary_basics.capability.CapabilityUBInventory;
 import com.github.manasmods.unordinary_basics.capability.UBInventoryItemStackHandler;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
+import com.github.manasmods.unordinary_basics.utils.ItemStackHandlerHelper;
 import com.github.manasmods.unordinary_basics.utils.UBTags;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.stats.Stats;
+import net.minecraft.util.Tuple;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -15,6 +17,7 @@ import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.items.ItemStackHandler;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -59,7 +62,14 @@ public abstract class MixinPotionItem extends Item {
                                    if (itemHandler.getStackInSlot(i).isEmpty() || itemHandler.getStackInSlot(i).is(UBTags.Items.POTION_BELT_ITEMS) || itemHandler.getStackInSlot(i).getItem() instanceof ThrowablePotionItem) continue;
                                    player.getInventory().setItem(player.getInventory().selected,itemHandler.getStackInSlot(i));
                                    itemHandler.extractItem(i,1,false);
-                                   itemHandler.insertItem(i,new ItemStack(Items.GLASS_BOTTLE),false);
+
+                                   Tuple<Boolean,Integer> itemExistResult = ItemStackHandlerHelper.itemExistsInAvailableSlot(Items.GLASS_BOTTLE, (ItemStackHandler) itemHandler);
+                                   if (itemExistResult.getA()){
+                                       itemHandler.insertItem(itemExistResult.getB(),new ItemStack(Items.GLASS_BOTTLE),false);
+                                   } else {
+                                       itemHandler.insertItem(i,new ItemStack(Items.GLASS_BOTTLE),false);
+                                   }
+
                                    flag1.set(true);
                                    break;
                                }

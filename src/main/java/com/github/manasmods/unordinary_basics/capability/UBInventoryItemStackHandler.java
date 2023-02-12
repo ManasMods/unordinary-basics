@@ -3,10 +3,12 @@ package com.github.manasmods.unordinary_basics.capability;
 import com.github.manasmods.unordinary_basics.menu.UBInventoryMenu;
 import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
 import com.github.manasmods.unordinary_basics.network.toclient.UBInventoryClientSync;
+import com.github.manasmods.unordinary_basics.utils.UBTags;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.Tag;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.util.INBTSerializable;
@@ -271,7 +273,17 @@ public class UBInventoryItemStackHandler implements IUBInventoryHandler, INBTSer
 
     @Override
     public boolean isItemValid(ItemStack stack, int slot){
-        if (stack.getItem() instanceof IUBInventoryItem){
+        if (stack.getItem() instanceof IUBInventoryItem || stack.is(UBTags.Items.UB_SLOT_BACK) || stack.is(UBTags.Items.UB_SLOT_WAIST)){
+            boolean isBackTagged = stack.is(UBTags.Items.UB_SLOT_BACK);
+            boolean isWaistTagged = stack.is(UBTags.Items.UB_SLOT_WAIST);
+
+            TagKey<Item> itemTagKey;
+
+            if (isBackTagged || isWaistTagged){
+                itemTagKey = isBackTagged ? UBTags.Items.UB_SLOT_BACK : UBTags.Items.UB_SLOT_WAIST;
+                return slot == CapabilityUBInventory.SLOT_INDEX_TAG.get(itemTagKey);
+            }
+
             return slot == CapabilityUBInventory.SLOT_INDEX.get(((IUBInventoryItem)stack.getItem()).getSlot());
         }
         return false;

@@ -24,13 +24,15 @@
     "MixinItemEntity",
     "MixinPlayer",
     "MixinPotionItem",
-    "MixinThrowablePotionItem"
+    "MixinThrowablePotionItem",
+    "MixinLivingEntity"
   ],
   "client": [
     "AbstractContainerScreenAccessor",
     "MixinBedRenderer",
     "MixinClipContext",
-    "MixinPlayerModel"
+    "MixinPlayerModel",
+    "MixinLocalPlayer"
   ],
   "injectors": {
     "defaultRequire": 1
