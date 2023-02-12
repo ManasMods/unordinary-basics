@@ -32,6 +32,7 @@
     "MixinBedRenderer",
     "MixinClipContext",
     "MixinPlayerModel",
+    "MixinElytraLayer",
     "MixinLocalPlayer"
   ],
   "injectors": {
