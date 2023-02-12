@@ -388,6 +388,15 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                         .of(Items.LEATHER).build()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(Unordinary_BasicsItems.BUILDERS_GLOVE)
+                .define('L', Items.LEATHER)
+                .define('W', ItemTags.WOOL)
+                .pattern("LLL")
+                .pattern("LWL")
+                .unlockedBy("has_leather", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.LEATHER).build()))
+                .save(consumer);
+
         ShapelessRecipeBuilder.shapeless(Unordinary_BasicsItems.MILK_BOTTLE, 3)
                 .requires(Items.MILK_BUCKET)
                 .requires(Items.GLASS_BOTTLE, 3)
