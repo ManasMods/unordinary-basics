@@ -86,7 +86,8 @@ public class UBClient {
                     "waist",
                     "back_pack",
                     "back_quiver",
-                    "back_wings"
+                    "back_wings",
+                    "potion_belt"
             );
 
             for (String s : registerValues) {

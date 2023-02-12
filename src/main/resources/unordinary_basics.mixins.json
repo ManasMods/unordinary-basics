@@ -22,7 +22,9 @@
     "MixinLadder",
     "NBTIngredientAccessor",
     "MixinItemEntity",
-    "MixinPlayer"
+    "MixinPlayer",
+    "MixinPotionItem",
+    "MixinThrowablePotionItem"
   ],
   "client": [
     "AbstractContainerScreenAccessor",

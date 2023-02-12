@@ -31,6 +31,8 @@ public class UBTags {
 }
 
     public static class Items {
+        public static TagKey<Item> POTION_BELT_ITEMS = modTag("potion_belt_items");
+
         public static TagKey<Item> MILK_BOTTLE = forgeTag("milk_bottle");
         public static TagKey<Item> BEAR_FOOD = forgeTag("bear_food");
         public static TagKey<Item> TAME_BEAR_FOOD = forgeTag("tame_bear_food");

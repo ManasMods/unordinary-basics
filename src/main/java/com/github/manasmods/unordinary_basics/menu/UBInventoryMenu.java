@@ -256,7 +256,6 @@ public class UBInventoryMenu extends RecipeBookMenu<CraftingContainer> {
             itemstack = itemstack1.copy();
 
             if (index == 42 + externalSlotCount + 5) {
-                System.out.println("helo");
                 if (!this.moveItemStackTo(itemstack1, 1, 36, true)) {
                     return ItemStack.EMPTY;
                 }

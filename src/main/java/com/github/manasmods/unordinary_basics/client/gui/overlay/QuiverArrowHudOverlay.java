@@ -1,6 +1,5 @@
 package com.github.manasmods.unordinary_basics.client.gui.overlay;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.capability.CapabilityUBInventory;
 import com.github.manasmods.unordinary_basics.capability.IUBInventoryHandler;
 import com.github.manasmods.unordinary_basics.capability.UBInventoryItemStackHandler;
@@ -9,9 +8,7 @@ import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiComponent;
-import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.resources.ResourceLocation;
