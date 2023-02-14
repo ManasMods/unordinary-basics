@@ -1,6 +1,8 @@
 package com.github.manasmods.unordinary_basics.core;
 
 import com.github.manasmods.unordinary_basics.capability.CapabilityUBInventory;
+import com.github.manasmods.unordinary_basics.capability.IUBInventoryHandler;
+import com.github.manasmods.unordinary_basics.client.ClientUBInventoryData;
 import com.mojang.authlib.GameProfile;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.player.AbstractClientPlayer;
@@ -30,9 +32,8 @@ public class MixinLocalPlayer extends AbstractClientPlayer {
         if (!itemstack.is(Items.ELYTRA)){
             AtomicReference<ItemStack> stackAtomicReference = new AtomicReference<>();
 
-            localPlayer.getCapability(CapabilityUBInventory.UB_INVENTORY_CAPABILITY).ifPresent(handler -> {
-                stackAtomicReference.set(handler.getStackInSlot(CapabilityUBInventory.SLOT_INDEX.get(CapabilityUBInventory.UBSlot.BACK)));
-            });
+            IUBInventoryHandler handler = ClientUBInventoryData.getHandler();
+            stackAtomicReference.set(handler.getStackInSlot(CapabilityUBInventory.SLOT_INDEX.get(CapabilityUBInventory.UBSlot.BACK)));
 
             if (stackAtomicReference.get().is(Items.ELYTRA)){
                 itemstack = stackAtomicReference.get();
