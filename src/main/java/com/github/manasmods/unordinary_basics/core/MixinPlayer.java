@@ -1,7 +1,9 @@
 package com.github.manasmods.unordinary_basics.core;
 
 import com.github.manasmods.unordinary_basics.capability.CapabilityUBInventory;
+import com.github.manasmods.unordinary_basics.capability.IUBInventoryHandler;
 import com.github.manasmods.unordinary_basics.capability.UBInventoryItemStackHandler;
+import com.github.manasmods.unordinary_basics.client.ClientUBInventoryData;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.effect.MobEffects;
@@ -66,12 +68,20 @@ public abstract class MixinPlayer extends LivingEntity implements net.minecraftf
             ItemStack itemstack = this.getItemBySlot(EquipmentSlot.CHEST);
             if (!itemstack.is(Items.ELYTRA)) {
                 AtomicReference<ItemStack> stackAtomicReference = new AtomicReference<>();
-                player.getCapability(CapabilityUBInventory.UB_INVENTORY_CAPABILITY).ifPresent(handler -> {
-                    stackAtomicReference.set(handler.getStackInSlot(CapabilityUBInventory.SLOT_INDEX.get(CapabilityUBInventory.UBSlot.BACK)));
-                });
+
+                AtomicReference<IUBInventoryHandler> handler = new AtomicReference<>();
+
+                if(!player.level.isClientSide) {
+                    player.getCapability(CapabilityUBInventory.UB_INVENTORY_CAPABILITY).ifPresent(ubhandler -> {
+                        handler.set(ubhandler);
+                    });
+                } else handler.set(ClientUBInventoryData.getHandler());
+
+                stackAtomicReference.set(handler.get().getStackInSlot(CapabilityUBInventory.SLOT_INDEX.get(CapabilityUBInventory.UBSlot.BACK)));
+
                 if (stackAtomicReference.get().is(Items.ELYTRA)) {
                     itemstack = stackAtomicReference.get();
-                    if (itemstack.canElytraFly(this)) {
+                    if (itemstack.canElytraFly(player)) {
                         player.startFallFlying();
                         returnValue = true;
                     }

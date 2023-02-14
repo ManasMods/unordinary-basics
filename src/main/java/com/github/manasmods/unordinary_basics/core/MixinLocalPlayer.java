@@ -30,13 +30,13 @@ public class MixinLocalPlayer extends AbstractClientPlayer {
     public void aiStep(CallbackInfo ci){
         ItemStack itemstack = localPlayer.getItemBySlot(EquipmentSlot.CHEST);
         if (!itemstack.is(Items.ELYTRA)){
-            AtomicReference<ItemStack> stackAtomicReference = new AtomicReference<>();
+            ItemStack stack;
 
             IUBInventoryHandler handler = ClientUBInventoryData.getHandler();
-            stackAtomicReference.set(handler.getStackInSlot(CapabilityUBInventory.SLOT_INDEX.get(CapabilityUBInventory.UBSlot.BACK)));
+            stack = handler.getStackInSlot(CapabilityUBInventory.SLOT_INDEX.get(CapabilityUBInventory.UBSlot.BACK));
 
-            if (stackAtomicReference.get().is(Items.ELYTRA)){
-                itemstack = stackAtomicReference.get();
+            if (stack.is(Items.ELYTRA)){
+                itemstack = stack;
                 if (itemstack.canElytraFly(localPlayer) && localPlayer.tryToStartFallFlying()) {
                     localPlayer.connection.send(new ServerboundPlayerCommandPacket(localPlayer, ServerboundPlayerCommandPacket.Action.START_FALL_FLYING));
                 }
