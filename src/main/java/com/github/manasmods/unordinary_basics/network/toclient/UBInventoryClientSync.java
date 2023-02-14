@@ -23,15 +23,13 @@ public class UBInventoryClientSync {
             NonNullList<ItemStack> created = NonNullList.withSize(2,ItemStack.EMPTY);
             for (int i = 0; i < 2; ++i) {
                 ItemStack stack = buf.readItem();
-                int finalI = i;
 
-                if (stack == null) continue;
                 stack.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(itemHandler -> {
                     if (itemHandler instanceof ItemStackHandler stackHandler) {
                         stackHandler.deserializeNBT(stack.getOrCreateTag().getCompound("inventory"));
-                        created.set(finalI,stack);
                     }
                 });
+                created.set(i,stack);
             }
             this.handler = new UBInventoryItemStackHandler(created);
         }
