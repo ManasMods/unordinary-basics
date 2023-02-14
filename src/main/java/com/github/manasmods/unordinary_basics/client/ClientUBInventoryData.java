@@ -4,7 +4,6 @@ import com.github.manasmods.unordinary_basics.capability.IUBInventoryHandler;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class ClientUBInventoryData {
     private static IUBInventoryHandler handler;
 
