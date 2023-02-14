@@ -8,6 +8,7 @@ import com.github.manasmods.unordinary_basics.client.gui.BuildersGloveScreen;
 import com.github.manasmods.unordinary_basics.client.gui.FletchingTableScreen;
 import com.github.manasmods.unordinary_basics.client.gui.JukeBoxScreen;
 import com.github.manasmods.unordinary_basics.client.gui.Unordinary_BasicsInventoryScreen;
+import com.github.manasmods.unordinary_basics.client.gui.overlay.QuiverArrowHudOverlay;
 import com.github.manasmods.unordinary_basics.client.keybind.Keybindings;
 import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisIntegrationClient;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
@@ -31,6 +32,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.decoration.ItemFrame;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.block.Block;
@@ -38,14 +40,19 @@ import net.minecraft.world.level.block.entity.BannerPattern;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.items.ItemStackHandler;
 
 import javax.annotation.Nullable;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 @Mod.EventBusSubscriber(modid = Unordinary_Basics.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class UBClient {
@@ -71,6 +78,20 @@ public class UBClient {
         if(event.getAtlas().location() == Sheets.BANNER_SHEET) {
             for(BannerPattern pattern : BannerPattern.values()) {
                 event.addSprite(new ResourceLocation(Unordinary_Basics.MOD_ID, "entity/banner/" + pattern.getFilename()));
+            }
+        }
+
+        if (event.getAtlas().location() == InventoryMenu.BLOCK_ATLAS) {
+            List<String> registerValues = List.of(
+                    "waist",
+                    "back_pack",
+                    "back_quiver",
+                    "back_wings",
+                    "potion_belt"
+            );
+
+            for (String s : registerValues) {
+                event.addSprite(new ResourceLocation(Unordinary_Basics.MOD_ID, "item/empty_slots/empty_armor_slot_" + s));
             }
         }
     }
@@ -241,6 +262,21 @@ public class UBClient {
                     this.rotation = Mth.positiveModulo(this.rotation + this.deltaRotation, 1.0D);
                 }
             }
+        });
+
+        ItemProperties.register(Unordinary_BasicsItems.QUIVER,new ResourceLocation("filled"),(stack,level,entity,seed) -> {
+            AtomicBoolean isFilled = new AtomicBoolean();
+
+            stack.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
+                for (int i = 0; i < handler.getSlots(); ++i){
+                    if (!handler.getStackInSlot(i).isEmpty()) {
+                        isFilled.set(true);
+                        break;
+                    }
+                }
+            });
+
+            return isFilled.get() ? 1.0F : 0F;
         });
     }
 

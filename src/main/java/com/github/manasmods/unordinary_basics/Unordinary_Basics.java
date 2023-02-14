@@ -8,15 +8,22 @@ import com.github.manasmods.unordinary_basics.handler.UBEntityHandler;
 import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisIntegration;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
 import com.github.manasmods.unordinary_basics.capability.RedstonePouchCapabilityProvider;
+import com.github.manasmods.unordinary_basics.menu.UBInventoryMenu;
 import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
+import com.github.manasmods.unordinary_basics.network.toclient.UBInventoryClientSync;
+import com.github.manasmods.unordinary_basics.network.toserver.RequestUBInventoryMenu;
 import com.github.manasmods.unordinary_basics.painting.UBPaintings;
 import com.github.manasmods.unordinary_basics.registry.Unordinary_BasicsRegistry;
 import lombok.Getter;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.SimpleMenuProvider;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Inventory;
@@ -32,6 +39,8 @@ import net.minecraftforge.common.capabilities.ICapabilitySerializable;
 import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.event.entity.item.ItemTossEvent;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
@@ -46,6 +55,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
+import net.minecraftforge.network.NetworkHooks;
+import net.minecraftforge.network.PacketDistributor;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
@@ -82,6 +93,8 @@ public class Unordinary_Basics {
         forgeBus.addListener(this::entityPickupEvent);
         forgeBus.addListener(this::itemTossEvent);
         forgeBus.addListener(this::handleUBInventoryDrops);
+        forgeBus.addListener(this::playerJoinWorld);
+        forgeBus.addListener(this::playerTick);
         forgeBus.addGenericListener(Entity.class,this::attachCapabilities);
         modEventBus.addListener(UBEntityHandler::entityAttributeEvent);
         UBPaintings.register(modEventBus);
@@ -117,6 +130,26 @@ public class Unordinary_Basics {
                 ((Player) event.getEntity()).getMainHandItem().getItem() == Unordinary_BasicsItems.BUILDERS_GLOVE
                 && ((Player) event.getEntity()).getInventory().offhand.get(0).getItem() instanceof BlockItem){
             event.setCanceled(true);
+        }
+    }
+
+    public void playerJoinWorld(EntityJoinWorldEvent event){
+        if(!event.getWorld().isClientSide()) {
+            if(event.getEntity() instanceof ServerPlayer player) {
+                player.getCapability(CapabilityUBInventory.UB_INVENTORY_CAPABILITY).ifPresent(handler -> {
+                    Unordinary_BasicsNetwork.getInstance().send(PacketDistributor.PLAYER.with(() -> player), new UBInventoryClientSync(handler));
+                });
+            }
+        }
+    }
+
+    public void playerTick(TickEvent.PlayerTickEvent event){
+        if (!event.player.level.isClientSide){
+            if (event.player instanceof ServerPlayer player){
+                player.getCapability(CapabilityUBInventory.UB_INVENTORY_CAPABILITY).ifPresent(handler -> {
+                    Unordinary_BasicsNetwork.getInstance().send(PacketDistributor.PLAYER.with(() -> player), new UBInventoryClientSync(handler));
+                });
+            }
         }
     }
 

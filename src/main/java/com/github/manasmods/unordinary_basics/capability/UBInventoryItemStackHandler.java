@@ -1,17 +1,23 @@
 package com.github.manasmods.unordinary_basics.capability;
 
 import com.github.manasmods.unordinary_basics.menu.UBInventoryMenu;
+import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
+import com.github.manasmods.unordinary_basics.network.toclient.UBInventoryClientSync;
+import com.github.manasmods.unordinary_basics.utils.UBTags;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.Tag;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.util.INBTSerializable;
 import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.items.ItemStackHandler;
+import net.minecraftforge.network.PacketDistributor;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 
 /**
  * Copy of {@link ItemStackHandler} with some minor changes. <br> <br>
@@ -30,7 +36,7 @@ public class UBInventoryItemStackHandler implements IUBInventoryHandler, INBTSer
     {
         if (stacks.size() == 2) {
             this.stacks = stacks;
-        } else throw new IndexOutOfBoundsException("Array " + stacks + "'s length is not appropriate. Should be 2 when it is " + stacks.size());
+        } else throw new IndexOutOfBoundsException("NonNullList " + stacks + "'s length is not appropriate. Should be 2 when it is " + stacks.size());
     }
 
     //---UB---
@@ -54,6 +60,30 @@ public class UBInventoryItemStackHandler implements IUBInventoryHandler, INBTSer
         if (item instanceof IUBInventoryItem){
             for (int i = 0; i < this.getSlots(); ++i){
                 if (this.getStackInSlot(i).getItem().equals(item)) return true;
+            }
+        }
+        return false;
+    }
+
+    @Nullable
+    public ItemStack findFirstInstanceOf(Item item){
+        for (int i = 0; i < this.getSlots(); i++){
+            if (this.getStackInSlot(i).getItem().equals(item)) return this.getStackInSlot(i);
+        }
+        return null;
+    }
+
+    public static ItemStack findFirstInstanceOf(Item item, IUBInventoryHandler handler){
+        for (int i = 0; i < handler.getSlots(); i++){
+            if (handler.getStackInSlot(i).getItem().equals(item)) return handler.getStackInSlot(i);
+        }
+        return null;
+    }
+
+    public static boolean isItemEquipped(Item item, IUBInventoryHandler handler){
+        if (item instanceof IUBInventoryItem){
+            for (int i = 0; i < handler.getSlots(); ++i){
+                if (handler.getStackInSlot(i).getItem().equals(item)) return true;
             }
         }
         return false;
@@ -243,7 +273,17 @@ public class UBInventoryItemStackHandler implements IUBInventoryHandler, INBTSer
 
     @Override
     public boolean isItemValid(ItemStack stack, int slot){
-        if (stack.getItem() instanceof IUBInventoryItem){
+        if (stack.getItem() instanceof IUBInventoryItem || stack.is(UBTags.Items.UB_SLOT_BACK) || stack.is(UBTags.Items.UB_SLOT_WAIST)){
+            boolean isBackTagged = stack.is(UBTags.Items.UB_SLOT_BACK);
+            boolean isWaistTagged = stack.is(UBTags.Items.UB_SLOT_WAIST);
+
+            TagKey<Item> itemTagKey;
+
+            if (isBackTagged || isWaistTagged){
+                itemTagKey = isBackTagged ? UBTags.Items.UB_SLOT_BACK : UBTags.Items.UB_SLOT_WAIST;
+                return slot == CapabilityUBInventory.SLOT_INDEX_TAG.get(itemTagKey);
+            }
+
             return slot == CapabilityUBInventory.SLOT_INDEX.get(((IUBInventoryItem)stack.getItem()).getSlot());
         }
         return false;

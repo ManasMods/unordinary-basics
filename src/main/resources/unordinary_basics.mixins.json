@@ -21,13 +21,19 @@
     "MixinJukeBoxBlock",
     "MixinLadder",
     "NBTIngredientAccessor",
-    "MixinItemEntity"
+    "MixinItemEntity",
+    "MixinPlayer",
+    "MixinPotionItem",
+    "MixinThrowablePotionItem",
+    "MixinLivingEntity"
   ],
   "client": [
     "AbstractContainerScreenAccessor",
     "MixinBedRenderer",
     "MixinClipContext",
-    "MixinPlayerModel"
+    "MixinPlayerModel",
+    "MixinElytraLayer",
+    "MixinLocalPlayer"
   ],
   "injectors": {
     "defaultRequire": 1

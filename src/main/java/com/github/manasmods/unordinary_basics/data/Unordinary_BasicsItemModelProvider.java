@@ -24,7 +24,6 @@ public class Unordinary_BasicsItemModelProvider extends ItemModelProvider {
         singleTexture(Unordinary_BasicsItems.MILK_BOTTLE);
         singleTexture(Unordinary_BasicsItems.POTION_BELT);
         singleTexture(Unordinary_BasicsItems.POUCH);
-        singleTexture(Unordinary_BasicsItems.QUIVER);
         singleTexture(Unordinary_BasicsItems.RABBIT_BOOTS);
         singleTexture(Unordinary_BasicsItems.TECHNOBLADE_CROWN);
         singleTexture(Unordinary_BasicsItems.REDSTONE_POUCH);
@@ -39,6 +38,9 @@ public class Unordinary_BasicsItemModelProvider extends ItemModelProvider {
         singleTexture(Unordinary_BasicsItems.MUSIC_DISC_QUEEN);
 
         singleTexture(Item.byBlock(Unordinary_BasicsBlocks.ITEM_SORTER));
+
+        basicItem(new ResourceLocation(Unordinary_Basics.MOD_ID,"quiver_no_items"));
+        basicItem(new ResourceLocation(Unordinary_Basics.MOD_ID,"quiver_has_items"));
 
         basicItem(new ResourceLocation(Unordinary_Basics.MOD_ID,"builders_glove_gui"));
 
