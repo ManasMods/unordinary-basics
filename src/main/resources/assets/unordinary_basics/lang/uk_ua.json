@@ -68,6 +68,7 @@
   "warning.unordinary_basics.tool_not_strong_enough": "Your tool isn't strong enough to replace that block!",
   "warning.unordinary_basics.no_slime_chunk_found": "§4Compass wasn't able to locate a slime chunk!",
   "unordinary_basics.keybinding.set_prone": "Prone (Hold)",
+  "unordinary_basics.keybinding.open_ub_inv": "Open Unordinary Basics Inventory",
   "manascore.category.unordinary_basics": "Unordinary Basics",
   "block.unordinary_basics.calcite_stairs": "Сходи з кальциту",
   "block.unordinary_basics.tuff_stairs": "Сходи з туфу",
