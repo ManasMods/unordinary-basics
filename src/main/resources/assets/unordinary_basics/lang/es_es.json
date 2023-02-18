@@ -68,6 +68,7 @@
   "warning.unordinary_basics.tool_not_strong_enough": "¡Tu herramienta no tiene suficiente fuerza para reemplazar ese bloque!",
   "warning.unordinary_basics.no_slime_chunk_found": "§4La brújula no pudo localizar un chunk de slime!",
   "unordinary_basics.keybinding.set_prone": "Pronar (sostener)",
+  "unordinary_basics.keybinding.open_ub_inv": "Open Unordinary Basics Inventory",
   "manascore.category.unordinary_basics": "Unordinary Basics",
   "block.unordinary_basics.calcite_stairs": "Escaleras de calcita",
   "block.unordinary_basics.tuff_stairs": "Escaleras de toba",
