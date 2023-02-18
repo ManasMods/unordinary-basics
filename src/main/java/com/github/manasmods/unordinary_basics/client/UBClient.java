@@ -8,8 +8,7 @@ import com.github.manasmods.unordinary_basics.client.gui.BuildersGloveScreen;
 import com.github.manasmods.unordinary_basics.client.gui.FletchingTableScreen;
 import com.github.manasmods.unordinary_basics.client.gui.JukeBoxScreen;
 import com.github.manasmods.unordinary_basics.client.gui.Unordinary_BasicsInventoryScreen;
-import com.github.manasmods.unordinary_basics.client.gui.overlay.QuiverArrowHudOverlay;
-import com.github.manasmods.unordinary_basics.client.keybind.Keybindings;
+import com.github.manasmods.unordinary_basics.client.keybind.UBKeybindings;
 import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisIntegrationClient;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
 import com.github.manasmods.unordinary_basics.item.custom.SlimeCompassItem;
@@ -40,7 +39,6 @@ import net.minecraft.world.level.block.entity.BannerPattern;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -48,7 +46,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.items.CapabilityItemHandler;
-import net.minecraftforge.items.ItemStackHandler;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -98,7 +95,8 @@ public class UBClient {
 
     private static void registerKeybinds(){
         KeybindingRegistry.register(
-                Keybindings.SET_PRONE
+                UBKeybindings.SET_PRONE,
+                UBKeybindings.OPEN_UB_INV
         );
     }
 

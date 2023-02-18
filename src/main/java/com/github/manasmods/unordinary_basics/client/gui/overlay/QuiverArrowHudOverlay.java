@@ -44,8 +44,9 @@ public class QuiverArrowHudOverlay extends GuiComponent {
     }
 
     //TODO: whenever we make configs, the x and y should be made adjustable
-    public void drawHUD(PoseStack poseStack) {
+    public void drawHUD(PoseStack poseStack, int x, int y) {
         Tuple<Boolean,ItemStack> displayData = shouldDisplay();
+
         if(!displayData.getA()) return;
         if(!(Minecraft.getInstance().player.getMainHandItem().getItem() instanceof BowItem)) return;
 
@@ -53,11 +54,11 @@ public class QuiverArrowHudOverlay extends GuiComponent {
         RenderSystem.setShader(GameRenderer::getPositionTexShader);
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
 
-        renderer.renderAndDecorateFakeItem(displayData.getB(),419,417);
+        renderer.renderAndDecorateFakeItem(displayData.getB(),x + 4,y + 4);
 
         RenderSystem.setShaderTexture(0,new ResourceLocation("textures/gui/widgets.png"));
-        blit(poseStack,415,413,0,0,24,24,256,256);
-        blit(poseStack,415,413,0,22,24,24,256,256);
+        blit(poseStack,x,y,0,0,24,24,256,256);
+        blit(poseStack,x,y,0,22,24,24,256,256);
     }
 
 }

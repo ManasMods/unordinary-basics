@@ -1,8 +1,10 @@
 package com.github.manasmods.unordinary_basics;
 
+import com.github.manasmods.manascore.client.keybinding.KeybindingRegistry;
 import com.github.manasmods.unordinary_basics.capability.CapabilityUBInventory;
 import com.github.manasmods.unordinary_basics.capability.IUBInventoryHandler;
 import com.github.manasmods.unordinary_basics.capability.UBInventoryItemStackHandler;
+import com.github.manasmods.unordinary_basics.client.keybind.UBKeybindings;
 import com.github.manasmods.unordinary_basics.data.*;
 import com.github.manasmods.unordinary_basics.handler.UBEntityHandler;
 import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisIntegration;
