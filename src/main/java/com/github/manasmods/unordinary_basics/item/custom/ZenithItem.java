@@ -14,7 +14,7 @@ import java.util.List;
 
 public class ZenithItem extends SwordItem {
     public ZenithItem() {
-        super(UBToolTiers.ZENITH, 19, -2.5F,
+        super(UBToolTiers.ZENITH, 15, -2.5F,
                 new Properties().tab(Unordinary_BasicsCreativeTab.ITEMS)
                         .durability(3000)
                         .fireResistant());
