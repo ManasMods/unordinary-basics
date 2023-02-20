@@ -43,17 +43,17 @@ public class UBEntityHandler {
     }
 
     public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
-        event.put(UBEntityTypes.GRIZZLY_BEAR.get(), GrizzlyBearEntity.createAttributes().build());
-        event.put(UBEntityTypes.GROLAR_BEAR.get(), GrolarBearEntity.createAttributes().build());
+//        event.put(UBEntityTypes.GRIZZLY_BEAR.get(), GrizzlyBearEntity.createAttributes().build());
+//        event.put(UBEntityTypes.GROLAR_BEAR.get(), GrolarBearEntity.createAttributes().build());
     }
     public static void registerEntityPlacements() {
-        SpawnPlacements.register(UBEntityTypes.GRIZZLY_BEAR.get(),
-                SpawnPlacements.Type.IN_WATER,
-                Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                GrizzlyBearEntity::checkGrizzlyBearEntitySpawnRules);
-        SpawnPlacements.register(UBEntityTypes.GROLAR_BEAR.get(),
-                SpawnPlacements.Type.IN_WATER,
-                Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                GrolarBearEntity::checkGrolarBearEntitySpawnRules);
+//        SpawnPlacements.register(UBEntityTypes.GRIZZLY_BEAR.get(),
+//                SpawnPlacements.Type.IN_WATER,
+//                Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+//                GrizzlyBearEntity::checkGrizzlyBearEntitySpawnRules);
+//        SpawnPlacements.register(UBEntityTypes.GROLAR_BEAR.get(),
+//                SpawnPlacements.Type.IN_WATER,
+//                Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+//                GrolarBearEntity::checkGrolarBearEntitySpawnRules);
     }
 }

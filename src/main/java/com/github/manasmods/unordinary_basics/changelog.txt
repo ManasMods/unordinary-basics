@@ -1,5 +1,7 @@
 == Change Log ==
 
+¬ Added a Custom Inventory
+
 /** Items **/
 
 ¬ Added some new gear
@@ -7,6 +9,10 @@
     - Potion Belt
     - Quiver
     - Builder's Glove
+    - Slime Compass
+    - Redstone Pouch
+    - Glider
+    - Rabbit Boots
 ¬ Added Map Book
 ¬ Added new enchantments and curses
     - Curse of Breaking
@@ -30,6 +36,11 @@
 ¬ Updated tames
     - Fox
 ¬ Updated some vanilla words
-¬ Improved vein-miner/tree-feller enchantments
+¬ Ability to hit through foliage
+¬ Added a keybinding to enter prone mode
+¬ Removed the experience limit on the anvil
+¬ Gave special properties to some armor sets
+¬ Made it so dirt-like slabs and stairs behave like their full-block counterparts
+¬ Fixed a bug with bed banner patterns
 
 == End of Change Log ==

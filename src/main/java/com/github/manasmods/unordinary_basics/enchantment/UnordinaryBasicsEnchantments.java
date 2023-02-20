@@ -16,8 +16,6 @@ public class UnordinaryBasicsEnchantments {
     @ObjectHolder("vein_miner")
     public static final Enchantment VEIN_MINER = null;
 
-    //TODO Tree-Feller and Vein-Miner enchantments
-
     //CURSES
 
     @ObjectHolder("breaking_curse")

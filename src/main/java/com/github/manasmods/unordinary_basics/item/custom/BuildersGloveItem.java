@@ -1,7 +1,7 @@
 package com.github.manasmods.unordinary_basics.item.custom;
 
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
-import com.github.manasmods.unordinary_basics.item.capability.BuildersGloveCapability;
+import com.github.manasmods.unordinary_basics.capability.ItemStackHandlerCapabilityProvider;
 import com.github.manasmods.unordinary_basics.menu.BuildersGloveMenu;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.nbt.CompoundTag;
@@ -40,7 +40,7 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
 
 public class BuildersGloveItem extends Item {
-    //TODO: fix the model for this
+
     public BuildersGloveItem(Properties pProperties) {
         super(pProperties);
     }
@@ -58,7 +58,6 @@ public class BuildersGloveItem extends Item {
                 boolean canBreakBlock = false;
 
                 List<DiggerItem> diggerItems = getDiggerItems(pContext);
-                System.out.println(diggerItems);
 
                 for (DiggerItem diggerItem : diggerItems) {
                     if (diggerItem.isCorrectToolForDrops(new ItemStack(diggerItem), clickedOnState)) {
@@ -111,7 +110,6 @@ public class BuildersGloveItem extends Item {
 
                     if (hitResult != null) {
                         ItemStack blockStack = handler.getStackInSlot(slotList.get(toPlace));
-                        System.out.println(blockStack.getItem());
                         UseOnContext customContext = new UseOnContext(pContext.getLevel(), pContext.getPlayer(), pContext.getHand(), blockStack, hitResult);
                         result.set(blockStack.getItem().useOn(customContext));
                         gloveItem.getOrCreateTag().put("inventory", ((ItemStackHandler) handler).serializeNBT());
@@ -195,7 +193,7 @@ public class BuildersGloveItem extends Item {
     @Nullable
     @Override
     public ICapabilityProvider initCapabilities(ItemStack stack, @Nullable CompoundTag nbt) {
-        return new BuildersGloveCapability();
+        return new ItemStackHandlerCapabilityProvider(18);
     }
 
     //this doesn't work when a menu is open :(

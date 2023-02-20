@@ -4,7 +4,9 @@ package com.github.manasmods.unordinary_basics.registry;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsCreativeTab;
 import com.github.manasmods.unordinary_basics.item.custom.*;
 import com.github.manasmods.unordinary_basics.item.templates.MusicDiscItem;
+import com.github.manasmods.unordinary_basics.item.templates.TooltipItem;
 import com.github.manasmods.unordinary_basics.sound.UBSounds;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.MilkBucketItem;
 import net.minecraft.world.item.Rarity;
@@ -24,28 +26,31 @@ class ItemRegistry {
     private static void registerMisc(DeferredRegister<Item> registry) {
         registry.register("pouch", () -> new Item(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS)));
         registry.register("animal_bait", () -> new Item(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
-        registry.register("potion_belt", () -> new Item(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
+        registry.register("potion_belt", () -> new PotionBeltItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
         registry.register("goat_milk_bucket", () -> new MilkBucketItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
         registry.register("goat_milk_bottle", () -> new MilkBucketItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
         registry.register("milk_bottle", () -> new MilkBucketItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
         registry.register("map_book", () -> new Item(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1).durability(265)));
-        registry.register("unknown_blade_fragment", () -> new Item(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
-        registry.register("unknown_handle_fragment", () -> new Item(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
-        registry.register("unknown_hilt_fragment", () -> new Item(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
+        registry.register("unknown_blade_fragment", () -> new TooltipItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1),new TranslatableComponent("tooltip.unordinary_basics.unknown_blade_fragment")));
+        registry.register("unknown_handle_fragment", () -> new TooltipItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1),new TranslatableComponent("tooltip.unordinary_basics.unknown_handle_fragment")));
+        registry.register("unknown_hilt_fragment", () -> new TooltipItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1),new TranslatableComponent("tooltip.unordinary_basics.unknown_hilt_fragment")));
         registry.register("zenith", ZenithItem::new);
         registry.register("leaper", () -> new LeaperItem(new Item.Properties().stacksTo(1).durability(80)));
-        registry.register("quiver", () -> new Item(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1).durability(265)));
+        registry.register("quiver", () -> new QuiverItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
         registry.register("rabbit_boots", () -> new RabbitBootsItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
         registry.register("technoblade_crown", () -> new TechnobladeCrownItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1).rarity(Rarity.EPIC)));
         registry.register("glider", () -> new GliderItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
         registry.register("builders_glove", () -> new BuildersGloveItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
+        registry.register("slime_compass", () -> new SlimeCompassItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
+        registry.register("redstone_pouch", () -> new RedstonePouchItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
+        registry.register("barrel_backpack", () -> new BackpackItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
+        registry.register("chest_backpack", () -> new BackpackItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
 
         registry.register("music_disc_queen", () -> new MusicDiscItem(() -> UBSounds.QUEEN));
 
 
     }
 
-    //TODO: Please remove the Grizzly and Grolar Bear. Though in a way similar to the Leaper Item where the code still exists for future use.
     /*
     private static void registerSpawnEgg(DeferredRegister<Item> registry) {
         registry.register("grizzly_bear_spawn_egg", () -> new ForgeSpawnEggItem(() -> UBEntityTypes.GRIZZLY_BEAR.get(),

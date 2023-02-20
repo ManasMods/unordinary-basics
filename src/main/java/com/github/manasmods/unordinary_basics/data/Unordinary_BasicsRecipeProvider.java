@@ -16,6 +16,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
 import java.util.function.Consumer;
@@ -325,6 +326,77 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                         .of(Unordinary_BasicsItems.POUCH).build()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(Unordinary_BasicsItems.SLIME_COMPASS)
+                .define('C', Items.COMPASS)
+                .define('S', Items.SLIME_BALL)
+                .define('A', Items.AMETHYST_SHARD)
+                .pattern("ASA")
+                .pattern("SCS")
+                .pattern("ASA")
+                .unlockedBy("has_compass", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.COMPASS).build()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(Unordinary_BasicsItems.REDSTONE_POUCH)
+                .define('X', Unordinary_BasicsItems.POUCH)
+                .define('R', Items.REDSTONE)
+                .pattern("RRR")
+                .pattern("RXR")
+                .pattern("RRR")
+                .unlockedBy("has_pouch", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Unordinary_BasicsItems.POUCH).build()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(Unordinary_BasicsItems.GLIDER)
+                .define('P', Items.PHANTOM_MEMBRANE)
+                .define('S', Items.STRING)
+                .define('I', Items.STICK)
+                .pattern("PPP")
+                .pattern("SIS")
+                .pattern("I I")
+                .unlockedBy("has_pouch", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Unordinary_BasicsItems.POUCH).build()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(Unordinary_BasicsItems.BARREL_BACKPACK)
+                .define('S', Items.STRING)
+                .define('P', ItemTags.PLANKS)
+                .define('C', Items.BARREL)
+                .pattern("SCS")
+                .pattern(" P ")
+                .unlockedBy("has_barrel", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.BARREL).build()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(Unordinary_BasicsItems.CHEST_BACKPACK)
+                .define('S', Items.STRING)
+                .define('P', ItemTags.PLANKS)
+                .define('C', Items.CHEST)
+                .pattern("SCS")
+                .pattern(" P ")
+                .unlockedBy("has_chest", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.CHEST).build()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(Unordinary_BasicsItems.QUIVER)
+                .define('L', Items.LEATHER)
+                .define('S', Tags.Items.STRING)
+                .pattern("LS")
+                .pattern("LS")
+                .pattern("LS")
+                .unlockedBy("has_leather", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.LEATHER).build()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(Unordinary_BasicsItems.BUILDERS_GLOVE)
+                .define('L', Items.LEATHER)
+                .define('W', ItemTags.WOOL)
+                .pattern("LLL")
+                .pattern("LWL")
+                .unlockedBy("has_leather", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.LEATHER).build()))
+                .save(consumer);
+
         ShapelessRecipeBuilder.shapeless(Unordinary_BasicsItems.MILK_BOTTLE, 3)
                 .requires(Items.MILK_BUCKET)
                 .requires(Items.GLASS_BOTTLE, 3)
@@ -340,15 +412,6 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .save(consumer);
 
         crownSmithing(consumer, Items.NETHERITE_HELMET, Unordinary_BasicsItems.TECHNOBLADE_CROWN);
-
-        ShapelessRecipeBuilder.shapeless(Unordinary_BasicsItems.ZENITH)
-                .requires(Unordinary_BasicsItems.UNKNOWN_BLADE_FRAGMENT)
-                .requires(Unordinary_BasicsItems.UNKNOWN_HANDLE_FRAGMENT)
-                .requires(Unordinary_BasicsItems.UNKNOWN_HILT_FRAGMENT)
-                .unlockedBy("has_fragment", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Unordinary_BasicsItems.UNKNOWN_BLADE_FRAGMENT, Unordinary_BasicsItems.UNKNOWN_HANDLE_FRAGMENT, Unordinary_BasicsItems.UNKNOWN_HILT_FRAGMENT).build()))
-                .save(consumer);
-
     }
 
     private void vanillaQOLSmelting(Consumer<FinishedRecipe> consumer) {

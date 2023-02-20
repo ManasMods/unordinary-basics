@@ -3,10 +3,12 @@ package com.github.manasmods.unordinary_basics.data;
 import com.github.manasmods.manascore.api.data.gen.BlockTagProvider;
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
+import com.github.manasmods.unordinary_basics.utils.UBTags;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 
@@ -15,17 +17,25 @@ public class Unordinary_BasicsBlockTagProvider extends BlockTagProvider {
         super(gatherDataEvent, Unordinary_Basics.MOD_ID);
     }
 
-    public static final TagKey<Block> TREE_FELLER_VALID = createTag("unordinary_basics","tree_feller_valid");
-    public static final TagKey<Block> VEIN_MINER_VALID = createTag("unordinary_basics","vein_miner_valid");
-
-    @Override
-    protected void addTags() {
-        tag(TREE_FELLER_VALID).addTag(BlockTags.LOGS);
-        tag(VEIN_MINER_VALID).addTag(Tags.Blocks.ORES);
-    }
-
     @Override
     protected void generate() {
+        tag(UBTags.Blocks.VEIN_MINER_VALID)
+                .addTag(Tags.Blocks.ORES);
+        tag(UBTags.Blocks.TREE_FELLER_VALID)
+                .addTag(BlockTags.LOGS);
+
+        tag(UBTags.Blocks.GRASS_BLOCKS)
+                .add(Blocks.GRASS)
+                .add(Unordinary_BasicsBlocks.GRASS_BLOCK_SLAB)
+                .add(Unordinary_BasicsBlocks.GRASS_BLOCK_STAIRS);
+        tag(UBTags.Blocks.MYCELIUM_BLOCKS)
+                .add(Blocks.MYCELIUM)
+                .add(Unordinary_BasicsBlocks.MYCELIUM_SLAB)
+                .add(Unordinary_BasicsBlocks.MYCELIUM_STAIRS);
+        tag(UBTags.Blocks.PODZOL_BLOCKS)
+                .add(Blocks.PODZOL)
+                .add(Unordinary_BasicsBlocks.PODZOL_SLAB)
+                .add(Unordinary_BasicsBlocks.PODZOL_STAIRS);
 
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(Unordinary_BasicsBlocks.ENCHANTMENT_LIBRARY)
@@ -237,9 +247,5 @@ public class Unordinary_BasicsBlockTagProvider extends BlockTagProvider {
                 Unordinary_BasicsBlocks.BLUE_CONCRETE_POWDER_STAIRS, Unordinary_BasicsBlocks.BROWN_CONCRETE_POWDER_STAIRS, Unordinary_BasicsBlocks.GREEN_CONCRETE_POWDER_STAIRS,
                 Unordinary_BasicsBlocks.RED_CONCRETE_POWDER_STAIRS, Unordinary_BasicsBlocks.BLACK_CONCRETE_POWDER_STAIRS);
 
-    }
-
-    public static TagKey<Block> createTag(String nameSpace, String tag){
-        return BlockTags.create(new ResourceLocation(nameSpace,tag));
     }
 }

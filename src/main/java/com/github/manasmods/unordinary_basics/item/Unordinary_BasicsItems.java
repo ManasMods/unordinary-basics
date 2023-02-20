@@ -43,4 +43,12 @@ public class Unordinary_BasicsItems {
     public static final Item MUSIC_DISC_QUEEN = null;
     @ObjectHolder("builders_glove")
     public static final Item BUILDERS_GLOVE = null;
+    @ObjectHolder("slime_compass")
+    public static final Item SLIME_COMPASS = null;
+    @ObjectHolder("redstone_pouch")
+    public static final Item REDSTONE_POUCH = null;
+    @ObjectHolder("barrel_backpack")
+    public static final Item BARREL_BACKPACK = null;
+    @ObjectHolder("chest_backpack")
+    public static final Item CHEST_BACKPACK = null;
 }

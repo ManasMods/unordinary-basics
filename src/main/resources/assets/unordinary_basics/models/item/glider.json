@@ -497,14 +497,14 @@
 	],
 	"display": {
 		"thirdperson_righthand": {
-			"rotation": [96, 8.5, -75.93],
-			"translation": [4.75, -1.75, -2.25],
-			"scale": [1.1, 1.1, 1.1]
+			"rotation": [-83.68, 0, 0],
+			"translation": [-6, -1.25, -2.25],
+			"scale": [1.6, 1.6, 1.6]
 		},
 		"thirdperson_lefthand": {
-			"rotation": [96, 8.5, -75.93],
-			"translation": [4.75, -1.75, -2.25],
-			"scale": [1.1, 1.1, 1.1]
+			"rotation": [-83.68, 0, 0],
+			"translation": [-6, -1.25, -2.25],
+			"scale": [1.6, 1.6, 1.6]
 		},
 		"firstperson_righthand": {
 			"translation": [-9.25, 14.75, 2.5]
@@ -537,119 +537,89 @@
 			"name": "group",
 			"origin": [8, 8, 8],
 			"color": 0,
-			"nbt": "{}",
-			"armAnimationEnabled": false,
 			"children": [
 				{
 					"name": "group",
 					"origin": [16, 0, 0],
 					"color": 0,
-					"nbt": "{}",
-					"armAnimationEnabled": false,
 					"children": [0, 1, 2, 3]
 				},
 				{
 					"name": "group",
 					"origin": [16, 0, 0],
 					"color": 0,
-					"nbt": "{}",
-					"armAnimationEnabled": false,
 					"children": [4, 5, 6, 7]
 				},
 				{
 					"name": "group",
 					"origin": [16, 0, 0],
 					"color": 0,
-					"nbt": "{}",
-					"armAnimationEnabled": false,
 					"children": [8, 9, 10, 11]
 				},
 				{
 					"name": "group",
 					"origin": [16, 0, 0],
 					"color": 0,
-					"nbt": "{}",
-					"armAnimationEnabled": false,
 					"children": [12, 13, 14, 15]
 				},
 				{
 					"name": "group",
 					"origin": [16, 0, 0],
 					"color": 0,
-					"nbt": "{}",
-					"armAnimationEnabled": false,
 					"children": [16, 17, 18, 19]
 				},
 				{
 					"name": "group",
 					"origin": [0, 0, 0],
 					"color": 0,
-					"nbt": "{}",
-					"armAnimationEnabled": false,
 					"children": [20, 21, 22, 23]
 				},
 				{
 					"name": "group",
 					"origin": [0, 0, 0],
 					"color": 0,
-					"nbt": "{}",
-					"armAnimationEnabled": false,
 					"children": [24]
 				},
 				{
 					"name": "group",
 					"origin": [0, 0, 0],
 					"color": 0,
-					"nbt": "{}",
-					"armAnimationEnabled": false,
 					"children": [25]
 				},
 				{
 					"name": "group",
 					"origin": [0, 0, 0],
 					"color": 0,
-					"nbt": "{}",
-					"armAnimationEnabled": false,
 					"children": [26]
 				},
 				{
 					"name": "group",
 					"origin": [0, 0, 0],
 					"color": 0,
-					"nbt": "{}",
-					"armAnimationEnabled": false,
 					"children": [27]
 				},
 				{
 					"name": "group",
 					"origin": [0, 0, 0],
 					"color": 0,
-					"nbt": "{}",
-					"armAnimationEnabled": false,
 					"children": [28]
 				},
 				{
 					"name": "group",
 					"origin": [0, 0, 0],
 					"color": 0,
-					"nbt": "{}",
-					"armAnimationEnabled": false,
 					"children": [29]
 				},
 				{
 					"name": "group",
 					"origin": [8, 8, 8],
 					"color": 0,
-					"nbt": "{}",
-					"armAnimationEnabled": false,
 					"children": [30]
 				},
 				{
 					"name": "group",
 					"origin": [8, 8, 8],
 					"color": 0,
-					"nbt": "{}",
-					"armAnimationEnabled": false,
 					"children": [31]
 				},
 				32,

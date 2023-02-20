@@ -4,6 +4,7 @@ import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.data.Unordinary_BasicsBlockTagProvider;
 import com.github.manasmods.unordinary_basics.enchantment.UnordinaryBasicsEnchantments;
 import com.github.manasmods.unordinary_basics.utils.BlockBreakHelper;
+import com.github.manasmods.unordinary_basics.utils.UBTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
@@ -36,7 +37,7 @@ public class TreeFellerHandler {
         ItemStack tool = player.getItemInHand(InteractionHand.MAIN_HAND);
         BlockPos pos = event.getPos();
         int enchantLevel = EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.TREE_FELLER, tool);
-        if (enchantLevel > 0 && tool.getTag().getBoolean("treeFellerOn") && event.getWorld().getBlockState(pos).is(Unordinary_BasicsBlockTagProvider.TREE_FELLER_VALID)) {
+        if (enchantLevel > 0 && tool.getTag().getBoolean("treeFellerOn") && event.getWorld().getBlockState(pos).is(UBTags.Blocks.TREE_FELLER_VALID)) {
             tool.getOrCreateTag().putBoolean("treeFellerOn",false);
             BlockBreakHelper.floodMineOnBlock(27 ,pos,player.getLevel(),player.getOnPos().above(),tool,player,event.getWorld().getBlockState(pos).getBlock());
             tool.getOrCreateTag().putBoolean("treeFellerOn",true);

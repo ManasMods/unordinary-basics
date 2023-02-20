@@ -18,6 +18,13 @@ public class Unordinary_BasicsItemTagProvider extends ItemTagProvider {
 
     @Override
     protected void generate() {
+        tag(UBTags.Items.POTION_BELT_ITEMS)
+                .addTag(UBTags.Items.MILK_BOTTLE)
+                .add(Items.GLASS_BOTTLE,Items.DRAGON_BREATH,Items.HONEY_BOTTLE);
+        tag(UBTags.Items.UB_SLOT_BACK)
+                .add(Items.ELYTRA);
+        tag(UBTags.Items.UB_SLOT_WAIST);
+
         tag(UBTags.Items.MILK_BOTTLE)
                 .add(Unordinary_BasicsItems.MILK_BOTTLE, Unordinary_BasicsItems.GOAT_MILK_BOTTLE);
         tag(UBTags.Items.BEAR_FOOD)

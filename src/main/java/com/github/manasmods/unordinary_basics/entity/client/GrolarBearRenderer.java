@@ -1,6 +1,5 @@
 package com.github.manasmods.unordinary_basics.entity.client;
 
-import com.github.manasmods.unordinary_basics.entity.GrizzlyBearEntity;
 import com.github.manasmods.unordinary_basics.entity.GrolarBearEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.model.geom.ModelLayers;

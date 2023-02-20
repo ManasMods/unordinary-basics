@@ -56,10 +56,7 @@ public class BuildersGloveMenu extends AbstractContainerMenu {
         });
     }
 
-
-
-    // THIS YOU HAVE TO DEFINE!
-    private static final int TE_INVENTORY_SLOT_COUNT = 18;  // must be the number of slots you have!
+    private static final int SLOT_COUNT = 18;  // must be the number of slots you have!
 
     @Override
     public ItemStack quickMoveStack(Player playerIn, int index) {
@@ -70,11 +67,11 @@ public class BuildersGloveMenu extends AbstractContainerMenu {
             final ItemStack itemstack1 = slot.getItem();
             itemstack = itemstack1.copy();
 
-            if (index < TE_INVENTORY_SLOT_COUNT) {
-                if (!moveItemStackTo(itemstack1, TE_INVENTORY_SLOT_COUNT, slots.size(), true)) {
+            if (index < SLOT_COUNT) {
+                if (!moveItemStackTo(itemstack1, SLOT_COUNT, slots.size(), true)) {
                     return ItemStack.EMPTY;
                 }
-            } else if (!moveItemStackTo(itemstack1, 0, TE_INVENTORY_SLOT_COUNT, false)) {
+            } else if (!moveItemStackTo(itemstack1, 0, SLOT_COUNT, false)) {
                 return ItemStack.EMPTY;
             }
 

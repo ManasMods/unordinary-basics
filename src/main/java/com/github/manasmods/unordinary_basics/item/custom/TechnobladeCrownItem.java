@@ -24,7 +24,6 @@ import java.util.function.Consumer;
 public class TechnobladeCrownItem extends ArmorItem {
 
     private static final MobEffectInstance STRENGTH = new MobEffectInstance(MobEffects.DAMAGE_BOOST, 1, 0, false, false);
-    private static final MobEffectInstance SPEED = new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 1, 0, false, false);
 
     public TechnobladeCrownItem(Item.Properties properties) {
         super(UBArmorMaterials.TECHNOBLADE_CROWN, EquipmentSlot.HEAD, properties);
@@ -55,7 +54,6 @@ public class TechnobladeCrownItem extends ArmorItem {
     @Override
     public void onArmorTick(ItemStack stack, Level level, Player player) {
         player.addEffect(STRENGTH);
-        player.addEffect(SPEED);
     }
 
     @Override

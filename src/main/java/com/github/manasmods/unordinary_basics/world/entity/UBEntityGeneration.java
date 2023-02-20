@@ -18,8 +18,8 @@ import java.util.List;
 public class UBEntityGeneration {
     @SubscribeEvent
     public static void onEntitySpawn(final BiomeLoadingEvent event) {
-        addEntityToAllOverworldBiomes(event, UBEntityTypes.GRIZZLY_BEAR.get(),
-                2, 1, 3);
+//        addEntityToAllOverworldBiomes(event, UBEntityTypes.GRIZZLY_BEAR.get(),
+//                2, 1, 3);
     }
 
     private static void addEntityToAllBiomesExceptThese(BiomeLoadingEvent event, EntityType<?> type,
