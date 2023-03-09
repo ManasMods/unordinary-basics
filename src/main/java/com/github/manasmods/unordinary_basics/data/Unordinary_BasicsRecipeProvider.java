@@ -42,6 +42,14 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
 
     private void vanillaRecipes(Consumer<FinishedRecipe> consumer) {
 
+        ShapedRecipeBuilder.shaped(Blocks.HOPPER)
+                .define('I', Items.IRON_INGOT)
+                .define('B', Items.BARREL)
+                .pattern("I I")
+                .pattern("IBI")
+                .pattern(" I ")
+                .save(consumer);
+
         ShapedRecipeBuilder.shaped(Blocks.FURNACE)
                 .define('#', UBTags.Items.STONE)
                 .pattern("###")
