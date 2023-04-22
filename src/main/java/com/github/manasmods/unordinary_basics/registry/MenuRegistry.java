@@ -1,10 +1,7 @@
 package com.github.manasmods.unordinary_basics.registry;
 
 import com.github.manasmods.unordinary_basics.block.entity.JukeboxBlockEntity;
-import com.github.manasmods.unordinary_basics.menu.BuildersGloveMenu;
-import com.github.manasmods.unordinary_basics.menu.FletchingTableMenu;
-import com.github.manasmods.unordinary_basics.menu.JukeBoxMenu;
-import com.github.manasmods.unordinary_basics.menu.UBInventoryMenu;
+import com.github.manasmods.unordinary_basics.menu.*;
 import com.github.manasmods.unordinary_basics.utils.ClientUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.inventory.ContainerLevelAccess;
@@ -36,5 +33,7 @@ class MenuRegistry {
         registry.register("inventory_menu", () -> IForgeMenuType.create((windowId, inv, data) -> new UBInventoryMenu(windowId, inv, inv.player)));
 
         registry.register("builders_glove_menu", () -> IForgeMenuType.create(BuildersGloveMenu::new));
+
+        registry.register("item_sorter_menu", () -> IForgeMenuType.create(ItemSorterMenu::new));
     }
 }

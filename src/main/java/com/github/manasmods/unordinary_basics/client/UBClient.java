@@ -4,10 +4,7 @@ import com.github.manasmods.manascore.client.keybinding.KeybindingRegistry;
 import com.github.manasmods.manascore.tab.InventoryTabRegistry;
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
-import com.github.manasmods.unordinary_basics.client.gui.BuildersGloveScreen;
-import com.github.manasmods.unordinary_basics.client.gui.FletchingTableScreen;
-import com.github.manasmods.unordinary_basics.client.gui.JukeBoxScreen;
-import com.github.manasmods.unordinary_basics.client.gui.Unordinary_BasicsInventoryScreen;
+import com.github.manasmods.unordinary_basics.client.gui.*;
 import com.github.manasmods.unordinary_basics.client.gui.overlay.QuiverArrowHudOverlay;
 import com.github.manasmods.unordinary_basics.client.keybind.Keybindings;
 import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisIntegrationClient;
@@ -112,6 +109,7 @@ public class UBClient {
         MenuScreens.register(Unordinary_BasicsMenuTypes.JUKE_BOX_MENU, JukeBoxScreen::new);
         MenuScreens.register(Unordinary_BasicsMenuTypes.INVENTORY_MENU, Unordinary_BasicsInventoryScreen::new);
         MenuScreens.register(Unordinary_BasicsMenuTypes.BUILDERS_GLOVE_MENU, BuildersGloveScreen::new);
+        MenuScreens.register(Unordinary_BasicsMenuTypes.ITEM_SORTER_MENU, ItemSorterScreen::new);
     }
 
     private static void registerBlockTransparencies(){
