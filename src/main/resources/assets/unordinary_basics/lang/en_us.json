@@ -35,6 +35,7 @@
 
   "unordinary_basics.menu.jukebox.title": "Jukebox",
   "unordinary_basics.menu.item_sorter.title": "Item Sorter Filter",
+  "unordinary_basics.menu.item_sorter.editbox": "Text",
   "unordinary_basics.jukebox.button.play": "Start Playing",
   "unordinary_basics.jukebox.button.stop": "Stop Playing",
   "unordinary_basics.fletching": "Fletching",

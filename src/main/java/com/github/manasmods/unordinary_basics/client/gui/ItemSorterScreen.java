@@ -1,16 +1,18 @@
 package com.github.manasmods.unordinary_basics.client.gui;
 
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
-import com.github.manasmods.unordinary_basics.menu.BuildersGloveMenu;
 import com.github.manasmods.unordinary_basics.menu.ItemSorterMenu;
 import com.github.manasmods.unordinary_basics.menu.slot.GhostSlot;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.ItemStack;
@@ -18,9 +20,43 @@ import net.minecraft.world.item.ItemStack;
 public class ItemSorterScreen extends AbstractContainerScreen<ItemSorterMenu> {
     private static final ResourceLocation TEXTURE =
             new ResourceLocation(Unordinary_Basics.MOD_ID, "textures/gui/item_sorter.png");
+    private EditBox text;
 
     public ItemSorterScreen(ItemSorterMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);
+    }
+
+    @Override
+    protected void init() {
+        super.init();
+        this.subInit();
+    }
+
+    @Override
+    protected void containerTick() {
+        super.containerTick();
+        this.text.tick();
+    }
+
+    protected void subInit() {
+        this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
+        int i = (this.width - this.imageWidth) / 2;
+        int j = (this.height - this.imageHeight) / 2;
+        this.text = new EditBox(this.font, i + 10, j + 20, 88, 10, new TranslatableComponent("unordinary_basics.menu.item_sorter.editbox"));
+        this.text.setCanLoseFocus(false);
+        this.text.setTextColor(-1);
+        this.text.setTextColorUneditable(-1);
+        this.text.setBordered(false);
+        this.text.setMaxLength(35);
+        this.text.setResponder(this::onTextChanged);
+        this.text.setValue("");
+        this.addWidget(this.text);
+        this.setInitialFocus(this.text);
+        this.text.setEditable(true);
+    }
+
+    private void onTextChanged(String s) {
+        this.menu.blockEntity.setMessage(2,new TextComponent(s));
     }
 
     @Override
@@ -50,6 +86,20 @@ public class ItemSorterScreen extends AbstractContainerScreen<ItemSorterMenu> {
         super.render(pPoseStack, pMouseX, pMouseY, pPartialTick);
         renderTooltip(pPoseStack,pMouseX,pMouseY);
         renderGhostItems(x,y);
+        RenderSystem.disableBlend();
+        renderFg(pPoseStack,pMouseX,pMouseY,pPartialTick);
+    }
+
+    public boolean keyPressed(int pKeyCode, int pScanCode, int pModifiers) {
+        if (pKeyCode == 256) {
+            this.minecraft.player.closeContainer();
+        }
+
+        return !this.text.keyPressed(pKeyCode, pScanCode, pModifiers) && !this.text.canConsumeInput() ? super.keyPressed(pKeyCode, pScanCode, pModifiers) : true;
+    }
+
+    public void renderFg(PoseStack pPoseStack, int pMouseX, int pMouseY, float pPartialTick) {
+        this.text.render(pPoseStack, pMouseX, pMouseY, pPartialTick);
     }
 
     public void renderGhostItems(int pX, int pY){

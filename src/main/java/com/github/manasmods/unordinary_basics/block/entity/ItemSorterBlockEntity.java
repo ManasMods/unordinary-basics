@@ -1,7 +1,6 @@
 package com.github.manasmods.unordinary_basics.block.entity;
 
 import com.github.manasmods.unordinary_basics.block.ItemSorterBlock;
-import com.github.manasmods.unordinary_basics.capability.RedstonePouchCapabilityProvider;
 import com.github.manasmods.unordinary_basics.menu.ItemSorterMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
@@ -9,10 +8,12 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TextComponent;
 import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.util.FormattedCharSequence;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -27,9 +28,18 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.function.Function;
+
 public class ItemSorterBlockEntity extends BlockEntity implements MenuProvider {
 
     public NonNullList<Item> filterItems = NonNullList.withSize(6, Items.AIR);
+
+    private FormattedCharSequence[] renderMessages;
+    private boolean renderMessagedFiltered;
+    private final Component[] messages = new Component[]{TextComponent.EMPTY, TextComponent.EMPTY, TextComponent.EMPTY, TextComponent.EMPTY};
+    private final Component[] filteredMessages = new Component[]{TextComponent.EMPTY, TextComponent.EMPTY, TextComponent.EMPTY, TextComponent.EMPTY};
+    private static final String[] RAW_TEXT_FIELD_NAMES = new String[]{"Text1", "Text2", "Text3", "Text4"};
+    private static final String[] FILTERED_TEXT_FIELD_NAMES = new String[]{"FilteredText1", "FilteredText2", "FilteredText3", "FilteredText4"};
 
     public ItemSorterBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(Unordinary_BasicsBlockEntities.ITEM_SORTER_BLOCK_ENTITY, pWorldPosition, pBlockState);
@@ -39,11 +49,35 @@ public class ItemSorterBlockEntity extends BlockEntity implements MenuProvider {
     public void load(CompoundTag pTag) {
         super.load(pTag);
         deserializeFilterItems(pTag.getCompound("filterItems"));
+
+        for(int i = 0; i < 4; ++i) {
+            String s = pTag.getString(RAW_TEXT_FIELD_NAMES[i]);
+            Component component = this.deserializeTextSafe(s);
+            this.messages[i] = component;
+            String s1 = FILTERED_TEXT_FIELD_NAMES[i];
+            if (pTag.contains(s1, 8)) {
+                this.filteredMessages[i] = this.deserializeTextSafe(pTag.getString(s1));
+            } else {
+                this.filteredMessages[i] = component;
+            }
+        }
+
+        this.renderMessages = null;
     }
 
     protected void saveAdditional(CompoundTag pTag) {
         super.saveAdditional(pTag);
         pTag.put("filterItems",serializeFilterItems());
+
+        for(int i = 0; i < 4; ++i) {
+            Component component = this.messages[i];
+            String s = Component.Serializer.toJson(component);
+            pTag.putString(RAW_TEXT_FIELD_NAMES[i], s);
+            Component component1 = this.filteredMessages[i];
+            if (!component1.equals(component)) {
+                pTag.putString(FILTERED_TEXT_FIELD_NAMES[i], Component.Serializer.toJson(component1));
+            }
+        }
     }
 
     private CompoundTag serializeFilterItems(){
@@ -76,6 +110,18 @@ public class ItemSorterBlockEntity extends BlockEntity implements MenuProvider {
             }
         }
         onLoad();
+    }
+
+    private Component deserializeTextSafe(String pText) {
+        try {
+            Component component = Component.Serializer.fromJson(pText);
+            if (component != null) {
+                return component;
+            }
+        } catch (Exception exception) {
+        }
+
+        return TextComponent.EMPTY;
     }
 
     @Override
@@ -123,12 +169,12 @@ public class ItemSorterBlockEntity extends BlockEntity implements MenuProvider {
         while (stack.getCount() > 0){
             availableSlot = getFirstAvailableSlot(stack,handler);
             if (availableSlot == -8) return stack.getCount();
-            if (handler.getStackInSlot(availableSlot).getCount() + stack.getCount() <= 64){
+            if (handler.getStackInSlot(availableSlot).getCount() + stack.getCount() <= stack.getMaxStackSize()){
                 handler.insertItem(availableSlot, new ItemStack(stack.getItem(),stack.getCount()),false);
                 stack.shrink(stack.getCount());
                 return 0;
             } else {
-                int toFill = 64 - handler.getStackInSlot(availableSlot).getCount();
+                int toFill = stack.getMaxStackSize() - handler.getStackInSlot(availableSlot).getCount();
                 handler.insertItem(availableSlot, new ItemStack(stack.getItem(),stack.getCount()),false);
                 stack.shrink(toFill);
             }
@@ -143,6 +189,37 @@ public class ItemSorterBlockEntity extends BlockEntity implements MenuProvider {
             }
         }
         return -8;
+    }
+
+    public void setMessage(int pLine, Component pMessage) {
+        this.setMessage(pLine, pMessage, pMessage);
+    }
+
+    public Component getMessage(int pIndex, boolean pFiltered) {
+        return this.getMessages(pFiltered)[pIndex];
+    }
+
+    public void setMessage(int pLine, Component pMessage, Component pFilteredMessage) {
+        this.messages[pLine] = pMessage;
+        this.filteredMessages[pLine] = pFilteredMessage;
+        this.renderMessages = null;
+    }
+
+    public FormattedCharSequence[] getRenderMessages(boolean pRenderMessagedFiltered, Function<Component, FormattedCharSequence> pMessageTransformer) {
+        if (this.renderMessages == null || this.renderMessagedFiltered != pRenderMessagedFiltered) {
+            this.renderMessagedFiltered = pRenderMessagedFiltered;
+            this.renderMessages = new FormattedCharSequence[4];
+
+            for(int i = 0; i < 4; ++i) {
+                this.renderMessages[i] = pMessageTransformer.apply(this.getMessage(i, pRenderMessagedFiltered));
+            }
+        }
+
+        return this.renderMessages;
+    }
+
+    private Component[] getMessages(boolean pFiltered) {
+        return pFiltered ? this.filteredMessages : this.messages;
     }
 
     public static <T extends BlockEntity> void tick(Level level, BlockPos pos, BlockState blockState, T be) {

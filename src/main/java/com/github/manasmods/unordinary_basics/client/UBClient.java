@@ -4,6 +4,8 @@ import com.github.manasmods.manascore.client.keybinding.KeybindingRegistry;
 import com.github.manasmods.manascore.tab.InventoryTabRegistry;
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
+import com.github.manasmods.unordinary_basics.block.entity.Unordinary_BasicsBlockEntities;
+import com.github.manasmods.unordinary_basics.client.block_entity_renderer.ItemSorterBlockEntityRenderer;
 import com.github.manasmods.unordinary_basics.client.gui.*;
 import com.github.manasmods.unordinary_basics.client.gui.overlay.QuiverArrowHudOverlay;
 import com.github.manasmods.unordinary_basics.client.keybind.Keybindings;
@@ -37,6 +39,7 @@ import net.minecraft.world.level.block.entity.BannerPattern;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.common.MinecraftForge;
@@ -68,6 +71,12 @@ public class UBClient {
         e.enqueueWork(UBClient::registerMenuScreens);
         e.enqueueWork(UBClient::registerItemProperties);
         e.enqueueWork(UBClient::registerKeybinds);
+    }
+
+    @SubscribeEvent
+    public static void registerRenderers(final EntityRenderersEvent.RegisterRenderers event) {
+        event.registerBlockEntityRenderer(Unordinary_BasicsBlockEntities.ITEM_SORTER_BLOCK_ENTITY,
+                ItemSorterBlockEntityRenderer::new);
     }
 
     @SubscribeEvent

@@ -3,6 +3,7 @@ package com.github.manasmods.unordinary_basics.menu;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
 import com.github.manasmods.unordinary_basics.block.entity.ItemSorterBlockEntity;
 import com.github.manasmods.unordinary_basics.menu.slot.GhostSlot;
+import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
