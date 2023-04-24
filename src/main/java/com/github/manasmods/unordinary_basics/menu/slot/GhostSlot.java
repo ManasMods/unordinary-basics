@@ -41,9 +41,7 @@ public class GhostSlot extends Slot {
             }
 
             @Override
-            public void setItem(int pSlot, ItemStack pStack) {
-
-            }
+            public void setItem(int pSlot, ItemStack pStack) {}
 
             @Override
             public void setChanged() {
@@ -69,7 +67,7 @@ public class GhostSlot extends Slot {
     @Override
     public boolean mayPlace(ItemStack pStack) {
         this.currentItem = pStack.getItem();
-        itemSorterBlockEntity.filterItems.set(this.slotIndex,this.currentItem);
+        itemSorterBlockEntity.setFilterItems(this.slotIndex,this.currentItem);
         return false;
     }
 

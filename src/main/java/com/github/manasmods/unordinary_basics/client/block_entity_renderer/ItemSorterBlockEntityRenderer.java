@@ -9,7 +9,6 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRenderer;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.util.FormattedCharSequence;
 import net.minecraft.util.Mth;
-import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.List;
 
@@ -35,16 +34,21 @@ public class ItemSorterBlockEntityRenderer implements BlockEntityRenderer<ItemSo
         pPoseStack.scale(0.010416667F, -0.010416667F, 0.010416667F);
         int i = 16777215;
         FormattedCharSequence[] aformattedcharsequence = pBlockEntity.getRenderMessages(Minecraft.getInstance().isTextFilteringEnabled(), (text) -> {
-            List<FormattedCharSequence> list = this.font.split(text, MAX_LINE_WIDTH);
-            return list.isEmpty() ? FormattedCharSequence.EMPTY : list.get(0);
+            if (text != null) {
+                List<FormattedCharSequence> list = this.font.split(text, MAX_LINE_WIDTH);
+                return list.isEmpty() ? FormattedCharSequence.EMPTY : list.get(0);
+            }
+            return null;
         });
         int l = pPackedLight;
 
         for(int i1 = 0; i1 < 4; ++i1) {
-            FormattedCharSequence formattedcharsequence = aformattedcharsequence[i1];
-            float f1 = (float)(-this.font.width(formattedcharsequence) / 2 + 50);
-            this.font.drawInBatch8xOutline(formattedcharsequence, f1, (float)(i1 * 10 - 40), i, 0, pPoseStack.last().pose(), pBufferSource, l);
-            this.font.drawInBatch(formattedcharsequence, f1, (float)(i1 * 10 - 40), i, false, pPoseStack.last().pose(), pBufferSource, false, 0, l);
+            if (aformattedcharsequence[i1] != null) {
+                FormattedCharSequence formattedcharsequence = aformattedcharsequence[i1];
+                float f1 = (float) (-this.font.width(formattedcharsequence) / 2 + 50);
+                this.font.drawInBatch8xOutline(formattedcharsequence, f1, (float) (i1 * 10 - 40), i, 0, pPoseStack.last().pose(), pBufferSource, l);
+                this.font.drawInBatch(formattedcharsequence, f1, (float) (i1 * 10 - 40), i, false, pPoseStack.last().pose(), pBufferSource, false, 0, l);
+            }
         }
 
         pPoseStack.popPose();

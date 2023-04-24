@@ -53,10 +53,14 @@ public class ItemSorterScreen extends AbstractContainerScreen<ItemSorterMenu> {
         this.addWidget(this.text);
         this.setInitialFocus(this.text);
         this.text.setEditable(true);
+        this.text.insertText(this.menu.blockEntity.getMessage(2,false).getString());
     }
 
     private void onTextChanged(String s) {
-        this.menu.blockEntity.setMessage(2,new TextComponent(s));
+        if (!s.isEmpty()) {
+            this.menu.blockEntity.setMessage(2, new TextComponent(s));
+            this.menu.blockEntity.setChanged();
+        }
     }
 
     @Override

@@ -32,15 +32,15 @@ import java.util.function.Function;
 
 public class ItemSorterBlockEntity extends BlockEntity implements MenuProvider {
 
-    public NonNullList<Item> filterItems = NonNullList.withSize(6, Items.AIR);
+    private final NonNullList<Item> filterItems = NonNullList.withSize(6, Items.AIR);
 
     private FormattedCharSequence[] renderMessages;
+
     private boolean renderMessagedFiltered;
     private final Component[] messages = new Component[]{TextComponent.EMPTY, TextComponent.EMPTY, TextComponent.EMPTY, TextComponent.EMPTY};
     private final Component[] filteredMessages = new Component[]{TextComponent.EMPTY, TextComponent.EMPTY, TextComponent.EMPTY, TextComponent.EMPTY};
     private static final String[] RAW_TEXT_FIELD_NAMES = new String[]{"Text1", "Text2", "Text3", "Text4"};
     private static final String[] FILTERED_TEXT_FIELD_NAMES = new String[]{"FilteredText1", "FilteredText2", "FilteredText3", "FilteredText4"};
-
     public ItemSorterBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
         super(Unordinary_BasicsBlockEntities.ITEM_SORTER_BLOCK_ENTITY, pWorldPosition, pBlockState);
 
@@ -78,6 +78,15 @@ public class ItemSorterBlockEntity extends BlockEntity implements MenuProvider {
                 pTag.putString(FILTERED_TEXT_FIELD_NAMES[i], Component.Serializer.toJson(component1));
             }
         }
+    }
+
+    public NonNullList<Item> getFilterItems() {
+        return filterItems;
+    }
+
+    public void setFilterItems(int index, Item item){
+        filterItems.set(index,item);
+        setChanged();
     }
 
     private CompoundTag serializeFilterItems(){
@@ -144,7 +153,7 @@ public class ItemSorterBlockEntity extends BlockEntity implements MenuProvider {
     @Override
     public CompoundTag getUpdateTag() {
         CompoundTag tag = super.getUpdateTag();
-        saveAdditional(tag);
+        this.saveAdditional(tag);
         return tag;
     }
 
@@ -203,6 +212,7 @@ public class ItemSorterBlockEntity extends BlockEntity implements MenuProvider {
         this.messages[pLine] = pMessage;
         this.filteredMessages[pLine] = pFilteredMessage;
         this.renderMessages = null;
+        this.setChanged();
     }
 
     public FormattedCharSequence[] getRenderMessages(boolean pRenderMessagedFiltered, Function<Component, FormattedCharSequence> pMessageTransformer) {
@@ -215,6 +225,7 @@ public class ItemSorterBlockEntity extends BlockEntity implements MenuProvider {
             }
         }
 
+        setChanged();
         return this.renderMessages;
     }
 
@@ -224,5 +235,10 @@ public class ItemSorterBlockEntity extends BlockEntity implements MenuProvider {
 
     public static <T extends BlockEntity> void tick(Level level, BlockPos pos, BlockState blockState, T be) {
 
+    }
+
+    @Override
+    public void setChanged() {
+        super.setChanged();
     }
 }

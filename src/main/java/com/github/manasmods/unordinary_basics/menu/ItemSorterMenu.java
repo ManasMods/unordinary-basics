@@ -37,7 +37,7 @@ public class ItemSorterMenu extends AbstractContainerMenu {
         this.level = inv.player.level;
         this.blockEntity = (ItemSorterBlockEntity) entity;
 
-        NonNullList<Item> filterItems = blockEntity.filterItems;
+        NonNullList<Item> filterItems = blockEntity.getFilterItems();
 
         addGhostSlots(filterItems);
         addPlayerHotbar(inv);
