@@ -3,7 +3,6 @@ package com.github.manasmods.unordinary_basics.block;
 import com.github.manasmods.unordinary_basics.block.entity.ItemSorterBlockEntity;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -21,9 +20,9 @@ import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraftforge.common.Tags;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.network.NetworkHooks;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class ItemSorterBlock extends BaseEntityBlock {
@@ -34,17 +33,13 @@ public class ItemSorterBlock extends BaseEntityBlock {
     }
 
     @Override
-    public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-        switch((Direction)pState.getValue(FACING)) {
-            case NORTH:
-                return Block.box(2.0D, 2.0D, 15.0D, 14.0D, 12.0D, 17.0D);
-            case EAST:
-                return Block.box(-1.0D, 2.0D, 2.0D, 1.0D, 12.0D, 14.0D);
-            case SOUTH:
-                return Block.box(2.0D, 2.0D, -1.0D, 14.0D, 12.0D, 1.0D);
-            default:
-                return Block.box(15.0D, 2.0D, 2.0D, 17.0D, 12.0D, 14.0D);
-        }
+    public @NotNull VoxelShape getShape(BlockState pState, @NotNull BlockGetter pLevel, @NotNull BlockPos pPos, @NotNull CollisionContext pContext) {
+        return switch (pState.getValue(FACING)) {
+            case NORTH -> Block.box(2.0D, 2.0D, 15.0D, 14.0D, 12.0D, 17.0D);
+            case EAST -> Block.box(-1.0D, 2.0D, 2.0D, 1.0D, 12.0D, 14.0D);
+            case SOUTH -> Block.box(2.0D, 2.0D, -1.0D, 14.0D, 12.0D, 1.0D);
+            default -> Block.box(15.0D, 2.0D, 2.0D, 17.0D, 12.0D, 14.0D);
+        };
     }
     /* FACING */
     @Override
@@ -80,7 +75,7 @@ public class ItemSorterBlock extends BaseEntityBlock {
         if (!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
             if (entity instanceof ItemSorterBlockEntity itemSorterBlockEntity) {
-                if (Screen.hasShiftDown()) {
+                if (Screen.hasShiftDown() || pPlayer.getMainHandItem().isEmpty()) {
                     NetworkHooks.openGui(((ServerPlayer) pPlayer), itemSorterBlockEntity, pPos);
                 } else {
                     itemSorterBlockEntity.filterItemsOfPlayer(pPlayer,pPos,pState,pLevel);
