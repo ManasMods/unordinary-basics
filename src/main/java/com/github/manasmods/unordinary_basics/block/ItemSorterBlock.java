@@ -75,7 +75,7 @@ public class ItemSorterBlock extends BaseEntityBlock {
         if (!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
             if (entity instanceof ItemSorterBlockEntity itemSorterBlockEntity) {
-                if (Screen.hasShiftDown() || pPlayer.getMainHandItem().isEmpty()) {
+                if (Screen.hasShiftDown() && pPlayer.getMainHandItem().isEmpty()) {
                     NetworkHooks.openGui(((ServerPlayer) pPlayer), itemSorterBlockEntity, pPos);
                 } else {
                     itemSorterBlockEntity.filterItemsOfPlayer(pPlayer,pPos,pState,pLevel);
