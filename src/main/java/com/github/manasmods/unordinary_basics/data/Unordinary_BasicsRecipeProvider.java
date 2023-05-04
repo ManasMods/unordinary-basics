@@ -44,10 +44,14 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
 
         ShapedRecipeBuilder.shaped(Blocks.HOPPER)
                 .define('I', Items.IRON_INGOT)
-                .define('B', Items.BARREL)
+                .define('#', UBTags.Items.WOODEN_STORAGE)
                 .pattern("I I")
-                .pattern("IBI")
+                .pattern("I#I")
                 .pattern(" I ")
+                .unlockedBy("has_iron_ingot", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.IRON_INGOT).build()))
+                .unlockedBy("has_wooden_storage", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(UBTags.Items.WOODEN_STORAGE).build()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(Blocks.FURNACE)

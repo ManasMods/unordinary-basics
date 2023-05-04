@@ -13,7 +13,7 @@
     - Redstone Pouch
     - Glider
     - Rabbit Boots
-¬ Added Map Book
+¬ Added Map Book (no functionality yet)
 ¬ Added new enchantments and curses
     - Curse of Breaking
     - Curse of Fatigue
@@ -39,7 +39,7 @@
 ¬ Ability to hit through foliage
 ¬ Added a keybinding to enter prone mode
 ¬ Removed the experience limit on the anvil
-¬ Gave special properties to some armor sets
+¬ Gave special properties to some armour sets
 ¬ Made it so dirt-like slabs and stairs behave like their full-block counterparts
 ¬ Fixed a bug with bed banner patterns
 

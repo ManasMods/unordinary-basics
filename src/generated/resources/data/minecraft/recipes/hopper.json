@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "I I",
+    "I#I",
+    " I "
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "#": {
+      "tag": "forge:wooden_storage"
+    }
+  },
+  "result": {
+    "item": "minecraft:hopper"
+  }
+}

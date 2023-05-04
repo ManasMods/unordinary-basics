@@ -18,6 +18,7 @@ Most of the ideas for the mod came about from playthroughs the devs have made. F
 - GenMedia2
 - Herrane
 - Kohaku
+- MinhEragon
 - Nexoner
 - Nieadni
 - Professor

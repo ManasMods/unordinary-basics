@@ -15,7 +15,6 @@ public class UBTags {
     public static class Blocks {
         public static TagKey<Block> VEIN_MINER_VALID = modTag("vein_miner_valid");
         public static TagKey<Block> TREE_FELLER_VALID = modTag("tree_feller_valid");
-
         public static TagKey<Block> GRASS_BLOCKS = forgeTag("grass_block");
         public static TagKey<Block> MYCELIUM_BLOCKS = forgeTag("mycelium");
         public static TagKey<Block> PODZOL_BLOCKS = forgeTag("podzol");
@@ -34,12 +33,13 @@ public class UBTags {
         public static TagKey<Item> POTION_BELT_ITEMS = modTag("potion_belt_items");
         public static TagKey<Item> UB_SLOT_BACK = modTag("ub_slot_back");
         public static TagKey<Item> UB_SLOT_WAIST = modTag("ub_slot_waist");
-
         public static TagKey<Item> MILK_BOTTLE = forgeTag("milk_bottle");
         public static TagKey<Item> BEAR_FOOD = forgeTag("bear_food");
         public static TagKey<Item> TAME_BEAR_FOOD = forgeTag("tame_bear_food");
         public static TagKey<Item> STONE = forgeTag("stone");
+        public static TagKey<Item> WOODEN_STORAGE = forgeTag("wooden_storage");
         public static TagKey<Item> BLACK_DYES = forgeTag("black_dyes");
+
 
 
         static TagKey<Item> modTag(String name) {
