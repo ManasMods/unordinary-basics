@@ -36,6 +36,6 @@ public class Unordinary_BasicsItemTagProvider extends ItemTagProvider {
         tag(UBTags.Items.BLACK_DYES)
                 .add(Items.CHARCOAL, Items.COAL, Items.INK_SAC, Items.WITHER_ROSE);
         tag(UBTags.Items.WOODEN_STORAGE)
-                .add(Item.byBlock(Blocks.CHEST),Item.byBlock(Blocks.BARREL));
+                .add(Item.byBlock(Blocks.CHEST),Item.byBlock(Blocks.TRAPPED_CHEST),Item.byBlock(Blocks.BARREL));
     }
 }
