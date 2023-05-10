@@ -39,7 +39,7 @@ public class UBTags {
         public static TagKey<Item> MILK_BOTTLE = forgeTag("milk_bottle");
         public static TagKey<Item> BEAR_FOOD = forgeTag("bear_food");
         public static TagKey<Item> TAME_BEAR_FOOD = forgeTag("tame_bear_food");
-        public static TagKey<Item> WOODEN_STORAGE = forgeTag("wooden_storage");
+        public static TagKey<Item> STORAGE_WOODEN = forgeTag("storage_wooden");
 
 
 

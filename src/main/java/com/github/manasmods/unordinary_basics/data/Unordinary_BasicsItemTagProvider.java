@@ -30,8 +30,8 @@ public class Unordinary_BasicsItemTagProvider extends ItemTagProvider {
                 .add(Items.APPLE, Items.COD, Items.CHICKEN, Items.BEEF, Items.MUTTON);
         tag(UBTags.Items.TAME_BEAR_FOOD)
                 .add(Items.SWEET_BERRIES, Items.SALMON);
-        tag(UBTags.Items.WOODEN_STORAGE)
-                .addTag(Tags.Items.BARRELS).addTag(Tags.Items.CHESTS);
+        tag(UBTags.Items.STORAGE_WOODEN)
+                .addTag(Tags.Items.BARRELS_WOODEN).addTag(Tags.Items.CHESTS_WOODEN);
         tag(UBTags.Items.STONE)
                 .add(Items.COBBLESTONE,Items.STONE,Items.BLACKSTONE,Items.DEEPSLATE,Items.BASALT);
         tag(UBTags.Items.BLACK_DYE_RESOURCES)

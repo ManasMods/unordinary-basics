@@ -1,0 +1,8 @@
+{
+  "parent": "manascore:block/grass_like_slab_top",
+  "textures": {
+    "side": "unordinary_basics:block/dirt_path_side",
+    "bottom": "minecraft:block/dirt",
+    "top": "minecraft:block/dirt_path_top"
+  }
+}

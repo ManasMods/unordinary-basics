@@ -49,14 +49,14 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
 
         ShapedRecipeBuilder.shaped(Items.HOPPER)
                 .define('I', Items.IRON_INGOT)
-                .define('#', UBTags.Items.WOODEN_STORAGE)
+                .define('#', UBTags.Items.STORAGE_WOODEN)
                 .pattern("I I")
                 .pattern("I#I")
                 .pattern(" I ")
                 .unlockedBy("has_iron_ingot", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.IRON_INGOT).build()))
                 .unlockedBy("has_wooden_storage", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(UBTags.Items.WOODEN_STORAGE).build()))
+                        .of(UBTags.Items.STORAGE_WOODEN).build()))
                 .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Items.HOPPER.getRegistryName().getPath()));
 
         ShapedRecipeBuilder.shaped(Blocks.FURNACE)
@@ -139,18 +139,6 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
         ShapedRecipeBuilder.shaped(Items.STONE_AXE)
                 .define('#', UBTags.Items.STONE)
                 .define('S', Items.STICK)
-                .pattern(" ##")
-                .pattern(" S#")
-                .pattern(" S ")
-                .unlockedBy("has_stones", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(UBTags.Items.STONE).build()))
-                .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.STICK).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Items.STONE_AXE.getRegistryName().getPath()));
-
-        ShapedRecipeBuilder.shaped(Items.STONE_AXE)
-                .define('#', UBTags.Items.STONE)
-                .define('S', Items.STICK)
                 .pattern("## ")
                 .pattern("#S ")
                 .pattern(" S ")
@@ -176,18 +164,6 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .define('#', UBTags.Items.STONE)
                 .define('S', Items.STICK)
                 .pattern("## ")
-                .pattern(" S ")
-                .pattern(" S ")
-                .unlockedBy("has_stones", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(UBTags.Items.STONE).build()))
-                .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Items.STICK).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Items.STONE_HOE.getRegistryName().getPath()));
-
-        ShapedRecipeBuilder.shaped(Items.STONE_HOE)
-                .define('#', UBTags.Items.STONE)
-                .define('S', Items.STICK)
-                .pattern(" ##")
                 .pattern(" S ")
                 .pattern(" S ")
                 .unlockedBy("has_stones", inventoryTrigger(ItemPredicate.Builder.item()
@@ -345,7 +321,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .pattern("MM")
                 .unlockedBy("has_brown_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.BROWN_MUSHROOM).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Blocks.HOPPER.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Blocks.BROWN_MUSHROOM_BLOCK.getRegistryName().getPath()));
 
         ShapedRecipeBuilder.shaped(Items.RED_MUSHROOM_BLOCK, 4)
                 .define('M', Items.RED_MUSHROOM)
@@ -353,7 +329,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .pattern("MM")
                 .unlockedBy("has_red_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.RED_MUSHROOM).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Blocks.HOPPER.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Blocks.RED_MUSHROOM_BLOCK.getRegistryName().getPath()));
 
         ShapedRecipeBuilder.shaped(Items.MUSHROOM_STEM, 4)
                 .define('R', Items.RED_MUSHROOM)

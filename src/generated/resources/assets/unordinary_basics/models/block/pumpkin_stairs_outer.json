@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "side": "minecraft:block/pumpkin_side",
+    "bottom": "minecraft:block/pumpkin_top",
+    "top": "minecraft:block/pumpkin_top"
+  }
+}
