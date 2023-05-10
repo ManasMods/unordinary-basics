@@ -56,8 +56,8 @@ public class MixinItemEntity {
         AtomicBoolean flag3 = new AtomicBoolean(false);
 
         for(ItemEntity itementity : entity.level.getEntitiesOfClass(ItemEntity.class, entity.getBoundingBox().inflate(0.5D, 0.0D, 0.5D),itemEntity -> itemEntity.getItem().is(Unordinary_BasicsItems.UNKNOWN_BLADE_FRAGMENT)
-                || itemEntity.getItem().is(Unordinary_BasicsItems.UNKNOWN_HANDLE_FRAGMENT) || itemEntity.getItem().is(Items.NETHER_STAR))){
-            if (itementity.getItem().is(Unordinary_BasicsItems.UNKNOWN_HANDLE_FRAGMENT)){
+                || itemEntity.getItem().is(Unordinary_BasicsItems.UNKNOWN_SWORD_HANDLE_FRAGMENT) || itemEntity.getItem().is(Items.NETHER_STAR))){
+            if (itementity.getItem().is(Unordinary_BasicsItems.UNKNOWN_SWORD_HANDLE_FRAGMENT)){
                 if (!flag1.get()) itemEntities.add(itementity);
                 flag1.set(true);
             }

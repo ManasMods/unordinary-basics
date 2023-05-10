@@ -33,8 +33,8 @@ public class Unordinary_BasicsItems {
     public static final Item TECHNOBLADE_CROWN = null;
     @ObjectHolder("unknown_blade_fragment")
     public static final Item UNKNOWN_BLADE_FRAGMENT = null;
-    @ObjectHolder("unknown_handle_fragment")
-    public static final Item UNKNOWN_HANDLE_FRAGMENT = null;
+    @ObjectHolder("unknown_sword_handle_fragment")
+    public static final Item UNKNOWN_SWORD_HANDLE_FRAGMENT = null;
     @ObjectHolder("unknown_hilt_fragment")
     public static final Item UNKNOWN_HILT_FRAGMENT = null;
     @ObjectHolder("zenith")

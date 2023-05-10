@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "unordinary_basics:item/unknown_handle_fragment"
+    "layer0": "unordinary_basics:item/unknown_sword_handle_fragment"
   }
 }
