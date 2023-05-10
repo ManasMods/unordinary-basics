@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "unordinary_basics:item/slime_compass/slime_compass_07"
-  }
-}

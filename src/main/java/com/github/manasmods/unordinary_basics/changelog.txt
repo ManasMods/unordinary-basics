@@ -22,6 +22,8 @@
     - Vein Miner
     - Tree Feller
 ¬ Added an end-game sword
+¬ Updated Recipes
+¬ Added New Recipes for Stone Tools
 
 /** Blocks **/
 

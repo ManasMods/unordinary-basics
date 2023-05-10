@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "unordinary_basics:item/music_disc_queen"
-  }
-}
