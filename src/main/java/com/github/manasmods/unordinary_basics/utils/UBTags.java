@@ -33,12 +33,13 @@ public class UBTags {
         public static TagKey<Item> POTION_BELT_ITEMS = modTag("potion_belt_items");
         public static TagKey<Item> UB_SLOT_BACK = modTag("ub_slot_back");
         public static TagKey<Item> UB_SLOT_WAIST = modTag("ub_slot_waist");
+        public static TagKey<Item> STONE = modTag("stone");
+        public static TagKey<Item> BLACK_DYE_RESOURCES = modTag("black_dye_resources");
+
         public static TagKey<Item> MILK_BOTTLE = forgeTag("milk_bottle");
         public static TagKey<Item> BEAR_FOOD = forgeTag("bear_food");
         public static TagKey<Item> TAME_BEAR_FOOD = forgeTag("tame_bear_food");
-        public static TagKey<Item> STONE = forgeTag("stone");
         public static TagKey<Item> WOODEN_STORAGE = forgeTag("wooden_storage");
-        public static TagKey<Item> BLACK_DYES = forgeTag("black_dyes");
 
 
 

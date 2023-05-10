@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "minecraft:hopper"
+      "unordinary_basics:hopper"
     ]
   },
   "criteria": {
@@ -31,7 +31,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "minecraft:hopper"
+        "recipe": "unordinary_basics:hopper"
       }
     }
   },

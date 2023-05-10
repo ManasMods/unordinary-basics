@@ -1,6 +1,7 @@
 package com.github.manasmods.unordinary_basics.data;
 
 import com.github.manasmods.manascore.api.data.gen.RecipeProvider;
+import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
 import com.github.manasmods.unordinary_basics.utils.UBTags;
@@ -10,6 +11,7 @@ import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.data.recipes.UpgradeRecipeBuilder;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -42,7 +44,10 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
 
     private void vanillaRecipes(Consumer<FinishedRecipe> consumer) {
 
-        ShapedRecipeBuilder.shaped(Blocks.HOPPER)
+        //IMPORTANT! For recipes that already have vanilla counterparts (e.g. hoppers, chests)
+        //make sure to save the new recipe with our own modid
+
+        ShapedRecipeBuilder.shaped(Items.HOPPER)
                 .define('I', Items.IRON_INGOT)
                 .define('#', UBTags.Items.WOODEN_STORAGE)
                 .pattern("I I")
@@ -52,7 +57,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                         .of(Items.IRON_INGOT).build()))
                 .unlockedBy("has_wooden_storage", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(UBTags.Items.WOODEN_STORAGE).build()))
-                .save(consumer);
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Items.HOPPER.getRegistryName().getPath()));
 
         ShapedRecipeBuilder.shaped(Blocks.FURNACE)
                 .define('#', UBTags.Items.STONE)
@@ -245,9 +250,9 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(Items.BLACK_DYE, 2)
-                .requires(UBTags.Items.BLACK_DYES)
+                .requires(UBTags.Items.BLACK_DYE_RESOURCES)
                 .unlockedBy("has_black_dyes", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(UBTags.Items.BLACK_DYES).build()))
+                        .of(UBTags.Items.BLACK_DYE_RESOURCES).build()))
                 .save(consumer);
 
         ShapedRecipeBuilder.shaped(Items.BROWN_MUSHROOM_BLOCK, 4)

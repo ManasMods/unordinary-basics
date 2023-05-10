@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "tag": "forge:black_dyes"
+      "tag": "unordinary_basics:black_dye_resources"
     }
   ],
   "result": {
