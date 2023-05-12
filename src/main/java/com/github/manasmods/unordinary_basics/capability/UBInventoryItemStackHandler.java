@@ -15,6 +15,7 @@ import net.minecraftforge.common.util.INBTSerializable;
 import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.network.PacketDistributor;
+import org.spongepowered.asm.mixin.injection.invoke.arg.ArgumentCountException;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -36,7 +37,7 @@ public class UBInventoryItemStackHandler implements IUBInventoryHandler, INBTSer
     {
         if (stacks.size() == 2) {
             this.stacks = stacks;
-        } else throw new IndexOutOfBoundsException("NonNullList " + stacks + "'s length is not appropriate. Should be 2 when it is " + stacks.size());
+        } else throw new IllegalArgumentException("When creating a new UBInventoryItemStackHandler, the passed in NonNullList should be of size 2. The current is " + stacks.size());
     }
 
     //---UB---

@@ -3,7 +3,9 @@ package com.github.manasmods.unordinary_basics.item.custom;
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.capability.ItemStackHandlerCapabilityProvider;
 import com.github.manasmods.unordinary_basics.menu.BuildersGloveMenu;
+import com.github.manasmods.unordinary_basics.utils.BlockBreakHelper;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
@@ -48,10 +50,10 @@ public class BuildersGloveItem extends Item {
     @Override
     public InteractionResult useOn(UseOnContext pContext) {
         AtomicReference<InteractionResult> result = new AtomicReference<>(InteractionResult.FAIL);
+        Level level = pContext.getLevel();
         //Block Replace Function
         if (pContext.getPlayer().getInventory().offhand.get(0).getItem() instanceof BlockItem) {
             if (pContext.getLevel().getBlockState(pContext.getClickedPos()).getBlock() != Blocks.AIR){
-                Level level = pContext.getLevel();
                 Block clickedOn = level.getBlockState(pContext.getClickedPos()).getBlock();
                 BlockState clickedOnState = level.getBlockState(pContext.getClickedPos());
 
@@ -59,23 +61,39 @@ public class BuildersGloveItem extends Item {
 
                 List<DiggerItem> diggerItems = getDiggerItems(pContext);
 
+                DiggerItem correctItem = null;
+
                 for (DiggerItem diggerItem : diggerItems) {
                     if (diggerItem.isCorrectToolForDrops(new ItemStack(diggerItem), clickedOnState)) {
                         canBreakBlock = true;
+                        correctItem = diggerItem;
                         break;
                     }
                 }
 
                 //Check if the player has the right item to be able to break the block, or if the block is really easy to break
+                if (level.isClientSide) return result.get();
                 if (canBreakBlock || clickedOnState.getDestroySpeed(pContext.getLevel(),pContext.getClickedPos()) <= 1 || pContext.getPlayer().getAbilities().instabuild){
                     if (clickedOn != ((BlockItem) pContext.getPlayer().getInventory().offhand.get(0).getItem()).getBlock()) {
+
+                        //Break the block
+                        ItemStack tool = new ItemStack(correctItem);
+                        List<ItemStack> drops = BlockBreakHelper.breakBlockAndReturnDrops(pContext.getClickedPos(),level,pContext.getPlayer().getOnPos().above(),
+                                pContext.getClickedPos(),tool,pContext.getPlayer());
+
+                        //Place the new block
                         level.setBlockAndUpdate(pContext.getClickedPos(), ((BlockItem) pContext.getPlayer().getInventory().offhand.get(0).getItem()).getBlock().defaultBlockState());
                         level.updateNeighborsAt(pContext.getClickedPos(), ((BlockItem) pContext.getPlayer().getInventory().offhand.get(0).getItem()).getBlock());
 
                         //No point spawning blocks in creative
 
                         if (!pContext.getPlayer().getAbilities().instabuild) {
-                            level.addFreshEntity(new ItemEntity(level, pContext.getClickedPos().getX(), pContext.getClickedPos().getY(), pContext.getClickedPos().getZ(), new ItemStack(clickedOn.asItem())));
+
+                            BlockPos spawnPos = pContext.getPlayer().getOnPos().above();
+                            drops.forEach(itemStack -> {
+                                ItemEntity entity = new ItemEntity(level,spawnPos.getX(),spawnPos.getY(),spawnPos.getZ(),itemStack);
+                                level.addFreshEntity(entity);
+                            });
 
                             pContext.getPlayer().getInventory().offhand.get(0).shrink(1);
                         }
@@ -90,12 +108,14 @@ public class BuildersGloveItem extends Item {
             }
         } else {
             //Block Place Function
+            if (level.isClientSide) return result.get();
+
             ItemStack gloveItem = pContext.getItemInHand();
             gloveItem.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
                 ((ItemStackHandler) handler).deserializeNBT(gloveItem.getOrCreateTag().getCompound("inventory"));
                 List<Integer> slotList = new ArrayList<>();
-                for (int i = 0; i < handler.getSlots(); ++i){
-                    if (handler.getStackInSlot(i).getItem() instanceof BlockItem){
+                for (int i = 0; i < handler.getSlots(); ++i) {
+                    if (handler.getStackInSlot(i).getItem() instanceof BlockItem) {
                         slotList.add(i);
                     }
                 }
@@ -103,7 +123,7 @@ public class BuildersGloveItem extends Item {
                     int toPlace = (int) (Math.random() * (slotList.size()));
                     BlockHitResult hitResult = null;
                     try {
-                        hitResult = (BlockHitResult) ObfuscationReflectionHelper.findMethod(pContext.getClass(),"getHitResult").invoke(pContext);
+                        hitResult = (BlockHitResult) ObfuscationReflectionHelper.findMethod(pContext.getClass(), "getHitResult").invoke(pContext);
                     } catch (IllegalAccessException | InvocationTargetException e) {
                         e.printStackTrace();
                     }
@@ -117,7 +137,6 @@ public class BuildersGloveItem extends Item {
                         Unordinary_Basics.getLogger().error("Couldn't get hit result! Unable to place block.");
                     }
                 }
-
             });
         }
 
