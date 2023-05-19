@@ -1,7 +1,9 @@
 package com.github.manasmods.unordinary_basics.client.block_entity_renderer;
 
+import com.github.manasmods.unordinary_basics.block.ItemSorterBlock;
 import com.github.manasmods.unordinary_basics.block.entity.ItemSorterBlockEntity;
 import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.math.Vector3f;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -30,7 +32,23 @@ public class ItemSorterBlockEntityRenderer implements BlockEntityRenderer<ItemSo
         pPoseStack.pushPose();
         pPoseStack.scale(0.6666667F, -0.6666667F, -0.6666667F);
         pPoseStack.popPose();
-        pPoseStack.translate(0.0D, (double)0.33333334F, (double)0.063F);
+
+        switch (pBlockEntity.getBlockState().getValue(ItemSorterBlock.FACING)) {
+            case NORTH -> {
+                pPoseStack.translate(1.0D, 0.33333334F, 0.937D);
+                pPoseStack.mulPose(Vector3f.YN.rotationDegrees(180));
+            }
+            case EAST -> {
+                pPoseStack.translate(0.063D, 0.33333334F, 1.0D);
+                pPoseStack.mulPose(Vector3f.YN.rotationDegrees(270));
+            }
+            case WEST -> {
+                pPoseStack.translate(0.937D, 0.33333334F, 0.0D);
+                pPoseStack.mulPose(Vector3f.YN.rotationDegrees(90));
+            }
+            default -> pPoseStack.translate(0.0D, 0.33333334F, 0.063F);
+        }
+
         pPoseStack.scale(0.010416667F, -0.010416667F, 0.010416667F);
         int i = 16777215;
         FormattedCharSequence[] aformattedcharsequence = pBlockEntity.getRenderMessages(Minecraft.getInstance().isTextFilteringEnabled(), (text) -> {
