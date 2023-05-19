@@ -29,6 +29,8 @@
   "item.unordinary_basics.zenith": "§5Zenith§",
   "item.unordinary_basics.zenith.desc": "'The journey may have been long and hard but all what matters is that you made it; you may have had moments of sadness, anger and joy but now, the world is yours for the taking! The only limit is your imagination.'",
   "unordinary_basics.menu.jukebox.title": "Jukebox",
+  "unordinary_basics.menu.item_sorter.title": "Item Sorter Filter",
+  "unordinary_basics.menu.item_sorter.editbox": "Text",
   "unordinary_basics.jukebox.button.play": "Start Playing",
   "unordinary_basics.jukebox.button.stop": "Stop Playing",
   "unordinary_basics.fletching": "Fletching",
