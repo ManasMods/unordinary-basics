@@ -38,6 +38,7 @@ public abstract class MixinThrowablePotionItem extends PotionItem {
                         pPlayer.getInventory().setItem(pPlayer.getInventory().selected, itemHandler.getStackInSlot(i));
                         itemHandler.extractItem(i, 1, false);
                         cir.setReturnValue(InteractionResultHolder.success(pPlayer.getItemInHand(pHand)));
+                        break;
                     }
                 });
             }

@@ -8,4 +8,6 @@ import net.minecraftforge.registries.ObjectHolder;
 public class Unordinary_BasicsBlockEntities {
     @ObjectHolder("jukebox_block_entity")
     public static final BlockEntityType<JukeboxBlockEntity> JUKEBOX_BLOCK_ENTITY = null;
+    @ObjectHolder("item_sorter_block_entity")
+    public static final BlockEntityType<ItemSorterBlockEntity> ITEM_SORTER_BLOCK_ENTITY = null;
 }

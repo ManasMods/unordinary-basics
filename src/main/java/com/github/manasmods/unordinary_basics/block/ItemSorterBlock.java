@@ -1,20 +1,31 @@
 package com.github.manasmods.unordinary_basics.block;
 
+import com.github.manasmods.unordinary_basics.block.entity.ItemSorterBlockEntity;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Mirror;
-import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.network.NetworkHooks;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
-public class ItemSorterBlock extends Block {
+public class ItemSorterBlock extends BaseEntityBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
     public ItemSorterBlock(Properties properties) {
@@ -22,17 +33,13 @@ public class ItemSorterBlock extends Block {
     }
 
     @Override
-    public VoxelShape getShape(BlockState pState, BlockGetter pLevel, BlockPos pPos, CollisionContext pContext) {
-        switch((Direction)pState.getValue(FACING)) {
-            case NORTH:
-                return Block.box(2.0D, 2.0D, 15.0D, 14.0D, 12.0D, 17.0D);
-            case EAST:
-                return Block.box(-1.0D, 2.0D, 2.0D, 1.0D, 12.0D, 14.0D);
-            case SOUTH:
-                return Block.box(2.0D, 2.0D, -1.0D, 14.0D, 12.0D, 1.0D);
-            default:
-                return Block.box(15.0D, 2.0D, 2.0D, 17.0D, 12.0D, 14.0D);
-        }
+    public @NotNull VoxelShape getShape(BlockState pState, @NotNull BlockGetter pLevel, @NotNull BlockPos pPos, @NotNull CollisionContext pContext) {
+        return switch (pState.getValue(FACING)) {
+            case NORTH -> Block.box(2.0D, 2.0D, 15.0D, 14.0D, 12.0D, 17.0D);
+            case EAST -> Block.box(-1.0D, 2.0D, 2.0D, 1.0D, 12.0D, 14.0D);
+            case SOUTH -> Block.box(2.0D, 2.0D, -1.0D, 14.0D, 12.0D, 1.0D);
+            default -> Block.box(15.0D, 2.0D, 2.0D, 17.0D, 12.0D, 14.0D);
+        };
     }
     /* FACING */
     @Override
@@ -53,5 +60,42 @@ public class ItemSorterBlock extends Block {
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
         pBuilder.add(FACING);
+    }
+
+    @Override
+    public boolean canSurvive(BlockState pState, LevelReader pLevel, BlockPos pPos) {
+        if (pLevel.getBlockEntity(pPos.relative(pState.getValue(FACING).getOpposite())) != null) {
+            return pLevel.getBlockEntity(pPos.relative(pState.getValue(FACING).getOpposite())).getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).isPresent();
+        }
+        return false;
+    }
+
+    @Override
+    public InteractionResult use(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit) {
+        if (!pLevel.isClientSide()) {
+            BlockEntity entity = pLevel.getBlockEntity(pPos);
+            if (entity instanceof ItemSorterBlockEntity itemSorterBlockEntity) {
+                if (Screen.hasShiftDown() && pPlayer.getMainHandItem().isEmpty()) {
+                    NetworkHooks.openGui(((ServerPlayer) pPlayer), itemSorterBlockEntity, pPos);
+                } else {
+                    itemSorterBlockEntity.filterItemsOfPlayer(pPlayer,pPos,pState,pLevel);
+                }
+            } else {
+                throw new IllegalStateException("Container provider wasn't able to be located!");
+            }
+        }
+
+        return InteractionResult.sidedSuccess(pLevel.isClientSide());
+    }
+
+    @Override
+    public RenderShape getRenderShape(BlockState pState) {
+        return RenderShape.MODEL;
+    }
+
+    @Nullable
+    @Override
+    public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
+        return new ItemSorterBlockEntity(pPos,pState);
     }
 }

@@ -9,6 +9,9 @@ import com.github.manasmods.unordinary_basics.client.gui.FletchingTableScreen;
 import com.github.manasmods.unordinary_basics.client.gui.JukeBoxScreen;
 import com.github.manasmods.unordinary_basics.client.gui.Unordinary_BasicsInventoryScreen;
 import com.github.manasmods.unordinary_basics.client.keybind.UBKeybindings;
+import com.github.manasmods.unordinary_basics.block.entity.Unordinary_BasicsBlockEntities;
+import com.github.manasmods.unordinary_basics.client.block_entity_renderer.ItemSorterBlockEntityRenderer;
+import com.github.manasmods.unordinary_basics.client.gui.*;
 import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisIntegrationClient;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
 import com.github.manasmods.unordinary_basics.item.custom.SlimeCompassItem;
@@ -39,6 +42,8 @@ import net.minecraft.world.level.block.entity.BannerPattern;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.client.event.EntityRenderersEvent;
+import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -68,6 +73,12 @@ public class UBClient {
         e.enqueueWork(UBClient::registerMenuScreens);
         e.enqueueWork(UBClient::registerItemProperties);
         e.enqueueWork(UBClient::registerKeybinds);
+    }
+
+    @SubscribeEvent
+    public static void registerRenderers(final EntityRenderersEvent.RegisterRenderers event) {
+        event.registerBlockEntityRenderer(Unordinary_BasicsBlockEntities.ITEM_SORTER_BLOCK_ENTITY,
+                ItemSorterBlockEntityRenderer::new);
     }
 
     @SubscribeEvent
@@ -110,6 +121,7 @@ public class UBClient {
         MenuScreens.register(Unordinary_BasicsMenuTypes.JUKE_BOX_MENU, JukeBoxScreen::new);
         MenuScreens.register(Unordinary_BasicsMenuTypes.INVENTORY_MENU, Unordinary_BasicsInventoryScreen::new);
         MenuScreens.register(Unordinary_BasicsMenuTypes.BUILDERS_GLOVE_MENU, BuildersGloveScreen::new);
+        MenuScreens.register(Unordinary_BasicsMenuTypes.ITEM_SORTER_MENU, ItemSorterScreen::new);
     }
 
     private static void registerBlockTransparencies(){
