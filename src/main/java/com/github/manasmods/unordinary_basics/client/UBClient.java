@@ -4,6 +4,11 @@ import com.github.manasmods.manascore.client.keybinding.KeybindingRegistry;
 import com.github.manasmods.manascore.tab.InventoryTabRegistry;
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
+import com.github.manasmods.unordinary_basics.client.gui.BuildersGloveScreen;
+import com.github.manasmods.unordinary_basics.client.gui.FletchingTableScreen;
+import com.github.manasmods.unordinary_basics.client.gui.JukeBoxScreen;
+import com.github.manasmods.unordinary_basics.client.gui.Unordinary_BasicsInventoryScreen;
+import com.github.manasmods.unordinary_basics.client.keybind.UBKeybindings;
 import com.github.manasmods.unordinary_basics.block.entity.Unordinary_BasicsBlockEntities;
 import com.github.manasmods.unordinary_basics.client.block_entity_renderer.ItemSorterBlockEntityRenderer;
 import com.github.manasmods.unordinary_basics.client.gui.*;
@@ -48,7 +53,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.items.CapabilityItemHandler;
-import net.minecraftforge.items.ItemStackHandler;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -104,7 +108,8 @@ public class UBClient {
 
     private static void registerKeybinds(){
         KeybindingRegistry.register(
-                Keybindings.SET_PRONE
+                UBKeybindings.SET_PRONE,
+                UBKeybindings.OPEN_UB_INV
         );
     }
 

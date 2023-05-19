@@ -17,9 +17,11 @@ Most of the ideas for the mod came about from playthroughs the devs have made. F
 - Contrabass26
 - GenMedia2
 - Herrane
+- JustSomebody
 - Kohaku
+- MinhEragon
 - Nexoner
 - Nieadni
 - Professor
-- [Vanilla Tweaks](https://vanillatweaks.net/)
+- [Vanilla Tweaks](https://vanillatweaks.net/) - For resources used in the Improved Textures Pack
 - VeganNatureQueen

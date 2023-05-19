@@ -15,6 +15,9 @@ public class OverlayEventHandler {
     public static void renderOverlays(final RenderGameOverlayEvent.Post event){
         if (event.getType() != RenderGameOverlayEvent.ElementType.ALL) return;
 
-        quiverOverlay.drawHUD(event.getMatrixStack());
+        int x = (event.getWindow().getGuiScaledWidth() - 24) / 2;
+        int y = event.getWindow().getGuiScaledHeight() - 64;
+
+        quiverOverlay.drawHUD(event.getMatrixStack(),x,y);
     }
 }

@@ -60,7 +60,7 @@ public class BackpackItem extends Item implements IUBInventoryItem {
                 int index = 0;
                 for (int col = 0; col < 3; ++col){
                     for (int row = 0; row < 8; ++row){
-                        menu.addSlotEx(new SlotItemHandler(stackHandler,index,8 + col * 18 - 64 + 4,12 + row * 18){
+                        menu.addSlotEx(new SlotItemHandler(stackHandler,index,8 + col * 18 - 64 + 3,12 + row * 18){
                             @Override
                             public boolean mayPlace(@NotNull ItemStack stack) {
                                 if (stack.getItem().equals(Unordinary_BasicsItems.CHEST_BACKPACK) || stack.getItem().equals(Unordinary_BasicsItems.BARREL_BACKPACK)) return false;

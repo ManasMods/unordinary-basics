@@ -39,7 +39,7 @@ public class VeinMinerHandler {
         int enchantLevel = EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.VEIN_MINER, tool);
         if (enchantLevel > 0 && tool.getTag().getBoolean("veinMinerOn") && event.getWorld().getBlockState(pos).is(UBTags.Blocks.VEIN_MINER_VALID)) {
             tool.getOrCreateTag().putBoolean("veinMinerOn",false);
-            BlockBreakHelper.floodMineOnBlock(27 ,pos,player.getLevel(),player.getOnPos().above(),tool,player,event.getWorld().getBlockState(pos).getBlock());
+            BlockBreakHelper.floodMineOnBlock(128 ,pos,player.getLevel(),player.getOnPos().above(),tool,player,event.getWorld().getBlockState(pos).getBlock());
             tool.getOrCreateTag().putBoolean("veinMinerOn",true);
         }
     }

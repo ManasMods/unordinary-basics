@@ -1,8 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "minecraft:grass",
-    "unordinary_basics:grass_block_slab",
-    "unordinary_basics:grass_block_stairs"
-  ]
-}
