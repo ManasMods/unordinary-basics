@@ -3,6 +3,9 @@ package com.github.manasmods.unordinary_basics.client.gui;
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.menu.ItemSorterMenu;
 import com.github.manasmods.unordinary_basics.menu.slot.GhostSlot;
+import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
+import com.github.manasmods.unordinary_basics.network.toserver.RequestJukeboxUpdate;
+import com.github.manasmods.unordinary_basics.network.toserver.SetItemSorterMessage;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Minecraft;
@@ -59,6 +62,7 @@ public class ItemSorterScreen extends AbstractContainerScreen<ItemSorterMenu> {
     private void onTextChanged(String s) {
         if (!s.isEmpty()) {
             this.menu.blockEntity.setMessage(2, new TextComponent(s));
+            Unordinary_BasicsNetwork.getInstance().sendToServer(new SetItemSorterMessage(this.menu.blockEntity.getBlockPos(),new TextComponent(s)));
             this.menu.blockEntity.setChanged();
         }
     }
