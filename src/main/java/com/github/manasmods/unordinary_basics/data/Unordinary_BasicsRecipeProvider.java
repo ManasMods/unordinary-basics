@@ -397,6 +397,16 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                         .of(Items.LEATHER).build()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(Unordinary_BasicsBlocks.ITEM_SORTER)
+                .define('H', Items.HOPPER)
+                .define('N', Items.IRON_NUGGET)
+                .define('T', ItemTags.SIGNS)
+                .pattern("NTN")
+                .pattern(" H ")
+                .unlockedBy("has_hopper", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.HOPPER).build()))
+                .save(consumer);
+
         ShapelessRecipeBuilder.shapeless(Unordinary_BasicsItems.MILK_BOTTLE, 3)
                 .requires(Items.MILK_BUCKET)
                 .requires(Items.GLASS_BOTTLE, 3)

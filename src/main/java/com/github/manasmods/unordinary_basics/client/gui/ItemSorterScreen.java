@@ -50,7 +50,7 @@ public class ItemSorterScreen extends AbstractContainerScreen<ItemSorterMenu> {
         this.text.setTextColor(-1);
         this.text.setTextColorUneditable(-1);
         this.text.setBordered(false);
-        this.text.setMaxLength(35);
+        this.text.setMaxLength(8);
         this.text.setResponder(this::onTextChanged);
         this.text.setValue("");
         this.addWidget(this.text);

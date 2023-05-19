@@ -16,7 +16,7 @@ import java.util.List;
 
 public class ItemSorterBlockEntityRenderer implements BlockEntityRenderer<ItemSorterBlockEntity> {
 
-    public static final int MAX_LINE_WIDTH = 70;
+    public static final int MAX_LINE_WIDTH = 50;
     private static final int LINE_HEIGHT = 10;
     private static final int BLACK_TEXT_OUTLINE_COLOR = -988212;
     private static final int OUTLINE_RENDER_DISTANCE = Mth.square(16);
@@ -63,7 +63,7 @@ public class ItemSorterBlockEntityRenderer implements BlockEntityRenderer<ItemSo
         for(int i1 = 0; i1 < 4; ++i1) {
             if (aformattedcharsequence[i1] != null) {
                 FormattedCharSequence formattedcharsequence = aformattedcharsequence[i1];
-                float f1 = (float) (-this.font.width(formattedcharsequence) / 2 + 50);
+                float f1 = (float) (-this.font.width(formattedcharsequence) / 2 + 47.5);
                 this.font.drawInBatch8xOutline(formattedcharsequence, f1, (float) (i1 * 10 - 40), i, 0, pPoseStack.last().pose(), pBufferSource, l);
                 this.font.drawInBatch(formattedcharsequence, f1, (float) (i1 * 10 - 40), i, false, pPoseStack.last().pose(), pBufferSource, false, 0, l);
             }
