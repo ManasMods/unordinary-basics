@@ -12,8 +12,6 @@ import com.github.manasmods.unordinary_basics.client.keybind.UBKeybindings;
 import com.github.manasmods.unordinary_basics.block.entity.Unordinary_BasicsBlockEntities;
 import com.github.manasmods.unordinary_basics.client.block_entity_renderer.ItemSorterBlockEntityRenderer;
 import com.github.manasmods.unordinary_basics.client.gui.*;
-import com.github.manasmods.unordinary_basics.client.gui.overlay.QuiverArrowHudOverlay;
-import com.github.manasmods.unordinary_basics.client.keybind.Keybindings;
 import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisIntegrationClient;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
 import com.github.manasmods.unordinary_basics.item.custom.SlimeCompassItem;
