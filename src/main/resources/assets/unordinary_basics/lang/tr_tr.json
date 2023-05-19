@@ -29,6 +29,8 @@
   "item.unordinary_basics.zenith": "§5Zenit§",
   "item.unordinary_basics.zenith.desc": "'Yol uzun ve zor olabilirdi ama önemli olan tek şey bitmiş olması; üzüldüğün, sinirlendiğin, veya tebessüm ettiğin anlar olmuş olabilir, ama dünya artık senin elinde! Tek sınır kendi hayal gücün.'",
   "unordinary_basics.menu.jukebox.title": "Müzik Kutusu",
+  "unordinary_basics.menu.item_sorter.title": "Item Sorter Filter",
+  "unordinary_basics.menu.item_sorter.editbox": "Text",
   "unordinary_basics.jukebox.button.play": "Çalmaya Başla",
   "unordinary_basics.jukebox.button.stop": "Çalmayı Bırak",
   "unordinary_basics.fletching": "Okçuluk",
