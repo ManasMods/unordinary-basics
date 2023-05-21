@@ -17,6 +17,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
@@ -619,12 +620,12 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
 
     private void modStairsAndSlabs(Consumer<FinishedRecipe> consumer) {
 
-        stairs(consumer, Unordinary_BasicsBlocks.CALCITE_STAIRS, Blocks.CALCITE);
-        slab(consumer, Unordinary_BasicsBlocks.CALCITE_SLAB, Blocks.CALCITE);
-        stairs(consumer, Unordinary_BasicsBlocks.TUFF_STAIRS, Blocks.TUFF);
-        slab(consumer, Unordinary_BasicsBlocks.TUFF_SLAB, Blocks.TUFF);
-        stairs(consumer, Unordinary_BasicsBlocks.DRIPSTONE_STAIRS, Blocks.DRIPSTONE_BLOCK);
-        slab(consumer, Unordinary_BasicsBlocks.DRIPSTONE_SLAB, Blocks.DRIPSTONE_BLOCK);
+        stoneStairs(consumer, Unordinary_BasicsBlocks.CALCITE_STAIRS, Blocks.CALCITE);
+        stoneSlab(consumer, Unordinary_BasicsBlocks.CALCITE_SLAB, Blocks.CALCITE);
+        stoneStairs(consumer, Unordinary_BasicsBlocks.TUFF_STAIRS, Blocks.TUFF);
+        stoneSlab(consumer, Unordinary_BasicsBlocks.TUFF_SLAB, Blocks.TUFF);
+        stoneStairs(consumer, Unordinary_BasicsBlocks.DRIPSTONE_STAIRS, Blocks.DRIPSTONE_BLOCK);
+        stoneSlab(consumer, Unordinary_BasicsBlocks.DRIPSTONE_SLAB, Blocks.DRIPSTONE_BLOCK);
         stairs(consumer, Unordinary_BasicsBlocks.GRASS_BLOCK_STAIRS, Blocks.GRASS_BLOCK);
         slab(consumer, Unordinary_BasicsBlocks.GRASS_BLOCK_SLAB, Blocks.GRASS_BLOCK);
         stairs(consumer, Unordinary_BasicsBlocks.DIRT_STAIRS, Blocks.DIRT);
@@ -689,11 +690,11 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
         slab(consumer, Unordinary_BasicsBlocks.GLASS_SLAB, Blocks.GLASS);
         stairs(consumer, Unordinary_BasicsBlocks.TINTED_GLASS_STAIRS, Blocks.TINTED_GLASS);
         slab(consumer, Unordinary_BasicsBlocks.TINTED_GLASS_SLAB, Blocks.TINTED_GLASS);
-        stairs(consumer, Unordinary_BasicsBlocks.CUT_SANDSTONE_STAIRS, Blocks.CUT_SANDSTONE);
+        stoneStairs(consumer, Unordinary_BasicsBlocks.CUT_SANDSTONE_STAIRS, Blocks.CUT_SANDSTONE);
         stairs(consumer, Unordinary_BasicsBlocks.OBSIDIAN_STAIRS, Blocks.OBSIDIAN);
         slab(consumer, Unordinary_BasicsBlocks.OBSIDIAN_SLAB, Blocks.OBSIDIAN);
-        stairs(consumer, Unordinary_BasicsBlocks.PURPUR_PILLAR_STAIRS, Blocks.PURPUR_PILLAR);
-        slab(consumer, Unordinary_BasicsBlocks.PURPUR_PILLAR_SLAB, Blocks.PURPUR_PILLAR);
+        stoneStairs(consumer, Unordinary_BasicsBlocks.PURPUR_PILLAR_STAIRS, Blocks.PURPUR_PILLAR);
+        stoneSlab(consumer, Unordinary_BasicsBlocks.PURPUR_PILLAR_SLAB, Blocks.PURPUR_PILLAR);
         stairs(consumer, Unordinary_BasicsBlocks.ICE_STAIRS, Blocks.ICE);
         slab(consumer, Unordinary_BasicsBlocks.ICE_SLAB, Blocks.ICE);
         stairs(consumer, Unordinary_BasicsBlocks.SNOW_STAIRS, Blocks.SNOW);
@@ -708,22 +709,22 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
         slab(consumer, Unordinary_BasicsBlocks.SOUL_SAND_SLAB, Blocks.SOUL_SAND);
         stairs(consumer, Unordinary_BasicsBlocks.SOUL_SOIL_STAIRS, Blocks.SOUL_SOIL);
         slab(consumer, Unordinary_BasicsBlocks.SOUL_SOIL_SLAB, Blocks.SOUL_SOIL);
-        stairs(consumer, Unordinary_BasicsBlocks.BASALT_STAIRS, Blocks.BASALT);
-        slab(consumer, Unordinary_BasicsBlocks.BASALT_SLAB, Blocks.BASALT);
-        stairs(consumer, Unordinary_BasicsBlocks.POLISHED_BASALT_STAIRS, Blocks.POLISHED_BASALT);
-        slab(consumer, Unordinary_BasicsBlocks.POLISHED_BASALT_SLAB, Blocks.POLISHED_BASALT);
+        stoneStairs(consumer, Unordinary_BasicsBlocks.BASALT_STAIRS, Blocks.BASALT);
+        stoneSlab(consumer, Unordinary_BasicsBlocks.BASALT_SLAB, Blocks.BASALT);
+        stoneStairs(consumer, Unordinary_BasicsBlocks.POLISHED_BASALT_STAIRS, Blocks.POLISHED_BASALT);
+        stoneSlab(consumer, Unordinary_BasicsBlocks.POLISHED_BASALT_SLAB, Blocks.POLISHED_BASALT);
         stairs(consumer, Unordinary_BasicsBlocks.GLOWSTONE_STAIRS, Blocks.GLOWSTONE);
         slab(consumer, Unordinary_BasicsBlocks.GLOWSTONE_SLAB, Blocks.GLOWSTONE);
-        stairs(consumer, Unordinary_BasicsBlocks.CRACKED_STONE_BRICK_STAIRS, Blocks.CRACKED_STONE_BRICKS);
-        slab(consumer, Unordinary_BasicsBlocks.CRACKED_STONE_BRICK_SLAB, Blocks.CRACKED_STONE_BRICKS);
-        stairs(consumer, Unordinary_BasicsBlocks.CHISELED_STONE_BRICK_STAIRS, Blocks.CHISELED_STONE_BRICKS);
-        slab(consumer, Unordinary_BasicsBlocks.CHISELED_STONE_BRICK_SLAB, Blocks.CHISELED_STONE_BRICKS);
-        stairs(consumer, Unordinary_BasicsBlocks.CRACKED_DEEPSLATE_BRICK_STAIRS, Blocks.CRACKED_DEEPSLATE_BRICKS);
-        slab(consumer, Unordinary_BasicsBlocks.CRACKED_DEEPSLATE_BRICK_SLAB, Blocks.CRACKED_DEEPSLATE_BRICKS);
-        stairs(consumer, Unordinary_BasicsBlocks.CRACKED_DEEPSLATE_TILE_STAIRS, Blocks.CRACKED_DEEPSLATE_TILES);
-        slab(consumer, Unordinary_BasicsBlocks.CRACKED_DEEPSLATE_TILE_SLAB, Blocks.CRACKED_DEEPSLATE_TILES);
-        stairs(consumer, Unordinary_BasicsBlocks.CHISELED_DEEPSLATE_STAIRS, Blocks.CHISELED_DEEPSLATE);
-        slab(consumer, Unordinary_BasicsBlocks.CHISELED_DEEPSLATE_SLAB, Blocks.CHISELED_DEEPSLATE);
+        stoneStairs(consumer, Unordinary_BasicsBlocks.CRACKED_STONE_BRICK_STAIRS, Blocks.CRACKED_STONE_BRICKS);
+        stoneSlab(consumer, Unordinary_BasicsBlocks.CRACKED_STONE_BRICK_SLAB, Blocks.CRACKED_STONE_BRICKS);
+        stoneStairs(consumer, Unordinary_BasicsBlocks.CHISELED_STONE_BRICK_STAIRS, Blocks.CHISELED_STONE_BRICKS);
+        stoneSlab(consumer, Unordinary_BasicsBlocks.CHISELED_STONE_BRICK_SLAB, Blocks.CHISELED_STONE_BRICKS);
+        stoneStairs(consumer, Unordinary_BasicsBlocks.CRACKED_DEEPSLATE_BRICK_STAIRS, Blocks.CRACKED_DEEPSLATE_BRICKS);
+        stoneSlab(consumer, Unordinary_BasicsBlocks.CRACKED_DEEPSLATE_BRICK_SLAB, Blocks.CRACKED_DEEPSLATE_BRICKS);
+        stoneStairs(consumer, Unordinary_BasicsBlocks.CRACKED_DEEPSLATE_TILE_STAIRS, Blocks.CRACKED_DEEPSLATE_TILES);
+        stoneSlab(consumer, Unordinary_BasicsBlocks.CRACKED_DEEPSLATE_TILE_SLAB, Blocks.CRACKED_DEEPSLATE_TILES);
+        stoneStairs(consumer, Unordinary_BasicsBlocks.CHISELED_DEEPSLATE_STAIRS, Blocks.CHISELED_DEEPSLATE);
+        stoneSlab(consumer, Unordinary_BasicsBlocks.CHISELED_DEEPSLATE_SLAB, Blocks.CHISELED_DEEPSLATE);
         stairs(consumer, Unordinary_BasicsBlocks.MELON_STAIRS, Blocks.MELON);
         slab(consumer, Unordinary_BasicsBlocks.MELON_SLAB, Blocks.MELON);
         stairs(consumer, Unordinary_BasicsBlocks.MYCELIUM_STAIRS, Blocks.MYCELIUM);
@@ -732,8 +733,8 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
         slab(consumer, Unordinary_BasicsBlocks.CRACKED_NETHER_BRICK_SLAB, Blocks.CRACKED_NETHER_BRICKS);
         stairs(consumer, Unordinary_BasicsBlocks.CHISELED_NETHER_BRICK_STAIRS, Blocks.CHISELED_NETHER_BRICKS);
         slab(consumer, Unordinary_BasicsBlocks.CHISELED_NETHER_BRICK_SLAB, Blocks.CHISELED_NETHER_BRICKS);
-        stairs(consumer, Unordinary_BasicsBlocks.END_STONE_STAIRS, Blocks.END_STONE);
-        slab(consumer, Unordinary_BasicsBlocks.END_STONE_SLAB, Blocks.END_STONE);
+        stoneStairs(consumer, Unordinary_BasicsBlocks.END_STONE_STAIRS, Blocks.END_STONE);
+        stoneSlab(consumer, Unordinary_BasicsBlocks.END_STONE_SLAB, Blocks.END_STONE);
         stairs(consumer, Unordinary_BasicsBlocks.CHISELED_QUARTZ_BLOCK_STAIRS, Blocks.CHISELED_QUARTZ_BLOCK);
         slab(consumer, Unordinary_BasicsBlocks.CHISELED_QUARTZ_BLOCK_SLAB, Blocks.CHISELED_QUARTZ_BLOCK);
         stairs(consumer, Unordinary_BasicsBlocks.QUARTZ_BRICK_STAIRS, Blocks.QUARTZ_BRICKS);
@@ -742,13 +743,13 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
         slab(consumer, Unordinary_BasicsBlocks.QUARTZ_PILLAR_SLAB, Blocks.QUARTZ_PILLAR);
         stairs(consumer, Unordinary_BasicsBlocks.HAY_BALE_STAIRS, Blocks.HAY_BLOCK);
         slab(consumer, Unordinary_BasicsBlocks.HAY_BALE_SLAB, Blocks.HAY_BLOCK);
-        stairs(consumer, Unordinary_BasicsBlocks.TERRACOTTA_STAIRS, Blocks.TERRACOTTA);
-        slab(consumer, Unordinary_BasicsBlocks.TERRACOTTA_SLAB, Blocks.TERRACOTTA);
+        stoneStairs(consumer, Unordinary_BasicsBlocks.TERRACOTTA_STAIRS, Blocks.TERRACOTTA);
+        stoneSlab(consumer, Unordinary_BasicsBlocks.TERRACOTTA_SLAB, Blocks.TERRACOTTA);
         stairs(consumer, Unordinary_BasicsBlocks.PACKED_ICE_STAIRS, Blocks.PACKED_ICE);
         slab(consumer, Unordinary_BasicsBlocks.PACKED_ICE_SLAB, Blocks.PACKED_ICE);
         stairs(consumer, Unordinary_BasicsBlocks.SEA_LANTERN_STAIRS, Blocks.SEA_LANTERN);
         slab(consumer, Unordinary_BasicsBlocks.SEA_LANTERN_SLAB, Blocks.SEA_LANTERN);
-        stairs(consumer, Unordinary_BasicsBlocks.CUT_RED_SANDSTONE_STAIRS, Blocks.CUT_RED_SANDSTONE);
+        stoneStairs(consumer, Unordinary_BasicsBlocks.CUT_RED_SANDSTONE_STAIRS, Blocks.CUT_RED_SANDSTONE);
         stairs(consumer, Unordinary_BasicsBlocks.MAGMA_BLOCK_STAIRS, Blocks.MAGMA_BLOCK);
         slab(consumer, Unordinary_BasicsBlocks.MAGMA_BLOCK_SLAB, Blocks.MAGMA_BLOCK);
         stairs(consumer, Unordinary_BasicsBlocks.NETHER_WART_BLOCK_STAIRS, Blocks.NETHER_WART_BLOCK);
@@ -763,8 +764,8 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
         slab(consumer, Unordinary_BasicsBlocks.DRIED_KELP_SLAB, Blocks.DRIED_KELP_BLOCK);
         stairs(consumer, Unordinary_BasicsBlocks.CRYING_OBSIDIAN_STAIRS, Blocks.CRYING_OBSIDIAN);
         slab(consumer, Unordinary_BasicsBlocks.CRYING_OBSIDIAN_SLAB, Blocks.CRYING_OBSIDIAN);
-        stairs(consumer, Unordinary_BasicsBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_STAIRS, Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS);
-        slab(consumer, Unordinary_BasicsBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_SLAB, Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS);
+        stoneStairs(consumer, Unordinary_BasicsBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_STAIRS, Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS);
+        stoneSlab(consumer, Unordinary_BasicsBlocks.CRACKED_POLISHED_BLACKSTONE_BRICK_SLAB, Blocks.CRACKED_POLISHED_BLACKSTONE_BRICKS);
         stairs(consumer, Unordinary_BasicsBlocks.WHITE_WOOL_STAIRS, Blocks.WHITE_WOOL);
         slab(consumer, Unordinary_BasicsBlocks.WHITE_WOOL_SLAB, Blocks.WHITE_WOOL);
         stairs(consumer, Unordinary_BasicsBlocks.ORANGE_WOOL_STAIRS, Blocks.ORANGE_WOOL);
@@ -1104,8 +1105,8 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
         slabsToBlock(consumer, Unordinary_BasicsBlocks.PURPUR_PILLAR_SLAB, Blocks.PURPUR_PILLAR);
         stairsToBlock(consumer, Unordinary_BasicsBlocks.ICE_STAIRS, Blocks.ICE);
         slabsToBlock(consumer, Unordinary_BasicsBlocks.ICE_SLAB, Blocks.ICE);
-        stairsToBlock(consumer, Unordinary_BasicsBlocks.SNOW_STAIRS, Blocks.SNOW);
-        slabsToBlock(consumer, Unordinary_BasicsBlocks.SNOW_SLAB, Blocks.SNOW);
+        stairsToBlock(consumer, Unordinary_BasicsBlocks.SNOW_STAIRS, Blocks.SNOW_BLOCK);
+        slabsToBlock(consumer, Unordinary_BasicsBlocks.SNOW_SLAB, Blocks.SNOW_BLOCK);
         stairsToBlock(consumer, Unordinary_BasicsBlocks.CLAY_STAIRS, Blocks.CLAY);
         slabsToBlock(consumer, Unordinary_BasicsBlocks.CLAY_SLAB, Blocks.CLAY);
         stairsToBlock(consumer, Unordinary_BasicsBlocks.PUMPKIN_STAIRS, Blocks.PUMPKIN);
@@ -1338,5 +1339,15 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
     protected static void crownSmithing(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Item
             pIngredientItem, Item pResultItem) {
         UpgradeRecipeBuilder.smithing(Ingredient.of(pIngredientItem), Ingredient.of(Items.ENCHANTED_GOLDEN_APPLE), pResultItem).unlocks("has_enchanted_golden_apple", has(Items.ENCHANTED_GOLDEN_APPLE)).save(pFinishedRecipeConsumer, getItemName(pResultItem) + "_smithing");
+    }
+
+    private void stoneSlab(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Block pSlab, Block pMaterial){
+        slab(pFinishedRecipeConsumer,pSlab,pMaterial);
+        stonecutterResultFromBase(pFinishedRecipeConsumer,pSlab,pMaterial,2);
+    }
+
+    private void stoneStairs(Consumer<FinishedRecipe> pFinishedRecipeConsumer, Block pStair, Block pMaterial){
+        stairs(pFinishedRecipeConsumer,pStair,pMaterial);
+        stonecutterResultFromBase(pFinishedRecipeConsumer,pStair,pMaterial);
     }
 }

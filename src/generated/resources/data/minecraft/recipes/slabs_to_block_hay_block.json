@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:hay_bale_slab"
+    },
+    {
+      "item": "unordinary_basics:hay_bale_slab"
+    }
+  ],
+  "result": {
+    "item": "minecraft:hay_block"
+  }
+}

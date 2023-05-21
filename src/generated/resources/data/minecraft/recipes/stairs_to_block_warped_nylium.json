@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:warped_nylium_stairs"
+    },
+    {
+      "item": "unordinary_basics:warped_nylium_stairs"
+    },
+    {
+      "item": "unordinary_basics:warped_nylium_stairs"
+    },
+    {
+      "item": "unordinary_basics:warped_nylium_stairs"
+    }
+  ],
+  "result": {
+    "item": "minecraft:warped_nylium",
+    "count": 3
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:brown_concrete_stairs"
+    },
+    {
+      "item": "unordinary_basics:brown_concrete_stairs"
+    },
+    {
+      "item": "unordinary_basics:brown_concrete_stairs"
+    },
+    {
+      "item": "unordinary_basics:brown_concrete_stairs"
+    }
+  ],
+  "result": {
+    "item": "minecraft:brown_concrete",
+    "count": 3
+  }
+}

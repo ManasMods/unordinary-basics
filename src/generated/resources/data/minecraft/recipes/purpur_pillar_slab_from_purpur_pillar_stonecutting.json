@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:purpur_pillar"
+  },
+  "result": "unordinary_basics:purpur_pillar_slab",
+  "count": 2
+}

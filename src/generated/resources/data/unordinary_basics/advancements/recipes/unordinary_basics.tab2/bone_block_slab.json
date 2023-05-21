@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "unordinary_basics:bone_block_slab"
+    ]
+  },
+  "criteria": {
+    "has_bone_block": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:bone_block"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "unordinary_basics:bone_block_slab"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_bone_block",
+      "has_the_recipe"
+    ]
+  ]
+}

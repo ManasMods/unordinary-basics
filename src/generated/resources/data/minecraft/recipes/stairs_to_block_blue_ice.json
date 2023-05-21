@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:blue_ice_stairs"
+    },
+    {
+      "item": "unordinary_basics:blue_ice_stairs"
+    },
+    {
+      "item": "unordinary_basics:blue_ice_stairs"
+    },
+    {
+      "item": "unordinary_basics:blue_ice_stairs"
+    }
+  ],
+  "result": {
+    "item": "minecraft:blue_ice",
+    "count": 3
+  }
+}
