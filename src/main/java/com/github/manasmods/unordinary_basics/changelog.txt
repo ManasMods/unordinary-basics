@@ -29,14 +29,13 @@
 
 ¬ Added Item Sorter block
 ¬ Added Enchantment Library (no functionality yet)
+¬ Added New Recipes for some blocks crafted with stone
 
 /** Misc Changes **/
 
 ¬ Added several new inventory slots
     - Back Slot
     - Waist Slot
-¬ Updated tames
-    - Fox
 ¬ Updated some vanilla words
 ¬ Ability to hit through foliage
 ¬ Added a keybinding to enter prone mode
