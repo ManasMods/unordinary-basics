@@ -26,7 +26,8 @@
     "MixinPlayer",
     "MixinPotionItem",
     "MixinThrowablePotionItem",
-    "MixinLivingEntity"
+    "MixinLivingEntity",
+    "MixinCrossbow"
   ],
   "client": [
     "AbstractContainerScreenAccessor",
