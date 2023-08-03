@@ -1,8 +1,6 @@
 package com.github.manasmods.unordinary_basics.capability;
 
 import com.github.manasmods.unordinary_basics.menu.UBInventoryMenu;
-import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
-import com.github.manasmods.unordinary_basics.network.toclient.UBInventoryClientSync;
 import com.github.manasmods.unordinary_basics.utils.UBTags;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
@@ -14,8 +12,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.util.INBTSerializable;
 import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.items.ItemStackHandler;
-import net.minecraftforge.network.PacketDistributor;
-import org.spongepowered.asm.mixin.injection.invoke.arg.ArgumentCountException;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;

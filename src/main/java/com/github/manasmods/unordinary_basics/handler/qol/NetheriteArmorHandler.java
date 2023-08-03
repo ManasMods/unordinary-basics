@@ -18,7 +18,7 @@ public class NetheriteArmorHandler {
 
     @SubscribeEvent
     public static void onLivingEntityHurt(LivingHurtEvent event) {
-        if (event.getEntityLiving() instanceof Player player) {
+        if (event.getEntity() instanceof Player player) {
             if (UBUtils.hasFullArmorSet(player, NETHERITE_ARMOR) && (event.getSource() == DamageSource.LAVA || event.getSource() == DamageSource.IN_FIRE || event.getSource() == DamageSource.ON_FIRE)) {
                 event.setAmount(event.getAmount() * 0.7f);
             }

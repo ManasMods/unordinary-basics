@@ -2,7 +2,6 @@ package com.github.manasmods.unordinary_basics.item.custom;
 
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
@@ -72,7 +71,7 @@ public class LeaperItem extends BowItem {
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
-        pTooltipComponents.add(new TranslatableComponent("tooltip.unordinary_basics.leaper"));
+        pTooltipComponents.add(Component.translatable("tooltip.unordinary_basics.leaper"));
     }
 
 }

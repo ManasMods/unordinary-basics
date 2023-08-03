@@ -3,7 +3,7 @@ package com.github.manasmods.unordinary_basics.core;
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.menu.FletchingTableMenu;
 import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -32,7 +32,7 @@ public abstract class MixinFletchingTableBlock extends CraftingTableBlock {
         if (pLevel.isClientSide) {
             cir.setReturnValue(InteractionResult.SUCCESS);
         } else {
-            NetworkHooks.openGui((ServerPlayer) pPlayer, new SimpleMenuProvider((pContainerId, pInventory, pPlayer1) -> new FletchingTableMenu(pContainerId, ContainerLevelAccess.create(pLevel, pPos), pPlayer1.getInventory(), pPos), new TranslatableComponent(Unordinary_Basics.MOD_ID + ".menu.fletching_table.title")), buffer -> {
+            NetworkHooks.openScreen((ServerPlayer) pPlayer, new SimpleMenuProvider((pContainerId, pInventory, pPlayer1) -> new FletchingTableMenu(pContainerId, ContainerLevelAccess.create(pLevel, pPos), pPlayer1.getInventory(), pPos), Component.translatable(Unordinary_Basics.MOD_ID + ".menu.fletching_table.title")), buffer -> {
                 buffer.writeBlockPos(pPos);
                 buffer.writeResourceLocation(pLevel.dimension().location());
             });

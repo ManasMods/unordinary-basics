@@ -2,21 +2,11 @@ package com.github.manasmods.unordinary_basics.registry;
 
 
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsCreativeTab;
-import com.github.manasmods.unordinary_basics.item.custom.BackpackItem;
-import com.github.manasmods.unordinary_basics.item.custom.BuildersGloveItem;
-import com.github.manasmods.unordinary_basics.item.custom.GliderItem;
-import com.github.manasmods.unordinary_basics.item.custom.LeaperItem;
-import com.github.manasmods.unordinary_basics.item.custom.PotionBeltItem;
-import com.github.manasmods.unordinary_basics.item.custom.QuiverItem;
-import com.github.manasmods.unordinary_basics.item.custom.RabbitBootsItem;
-import com.github.manasmods.unordinary_basics.item.custom.RedstonePouchItem;
-import com.github.manasmods.unordinary_basics.item.custom.SlimeCompassItem;
-import com.github.manasmods.unordinary_basics.item.custom.TechnobladeCrownItem;
-import com.github.manasmods.unordinary_basics.item.custom.ZenithItem;
+import com.github.manasmods.unordinary_basics.item.custom.*;
 import com.github.manasmods.unordinary_basics.item.templates.MusicDiscItem;
 import com.github.manasmods.unordinary_basics.item.templates.TooltipItem;
 import com.github.manasmods.unordinary_basics.sound.UBSounds;
-import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.MilkBucketItem;
 import net.minecraft.world.item.Rarity;
@@ -41,9 +31,9 @@ class ItemRegistry {
         registry.register("goat_milk_bottle", () -> new MilkBucketItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
         registry.register("milk_bottle", () -> new MilkBucketItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
         registry.register("map_book", () -> new Item(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1).durability(265)));
-        registry.register("unknown_blade_fragment", () -> new TooltipItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1),new TranslatableComponent("tooltip.unordinary_basics.unknown_blade_fragment")));
-        registry.register("unknown_sword_handle_fragment", () -> new TooltipItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1),new TranslatableComponent("tooltip.unordinary_basics.unknown_sword_handle_fragment")));
-        registry.register("unknown_hilt_fragment", () -> new TooltipItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1),new TranslatableComponent("tooltip.unordinary_basics.unknown_hilt_fragment")));
+        registry.register("unknown_blade_fragment", () -> new TooltipItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1),Component.translatable("tooltip.unordinary_basics.unknown_blade_fragment")));
+        registry.register("unknown_sword_handle_fragment", () -> new TooltipItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1),Component.translatable("tooltip.unordinary_basics.unknown_sword_handle_fragment")));
+        registry.register("unknown_hilt_fragment", () -> new TooltipItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1), Component.translatable("tooltip.unordinary_basics.unknown_hilt_fragment")));
         registry.register("zenith", ZenithItem::new);
         registry.register("leaper", () -> new LeaperItem(new Item.Properties().stacksTo(1).durability(80)));
         registry.register("quiver", () -> new QuiverItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));

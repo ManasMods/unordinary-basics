@@ -1,31 +1,23 @@
 package com.github.manasmods.unordinary_basics;
 
-import com.github.manasmods.manascore.client.keybinding.KeybindingRegistry;
 import com.github.manasmods.unordinary_basics.capability.CapabilityUBInventory;
 import com.github.manasmods.unordinary_basics.capability.IUBInventoryHandler;
+import com.github.manasmods.unordinary_basics.capability.RedstonePouchCapabilityProvider;
 import com.github.manasmods.unordinary_basics.capability.UBInventoryItemStackHandler;
-import com.github.manasmods.unordinary_basics.client.keybind.UBKeybindings;
 import com.github.manasmods.unordinary_basics.data.*;
 import com.github.manasmods.unordinary_basics.handler.UBEntityHandler;
 import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisIntegration;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
-import com.github.manasmods.unordinary_basics.capability.RedstonePouchCapabilityProvider;
-import com.github.manasmods.unordinary_basics.menu.UBInventoryMenu;
 import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
 import com.github.manasmods.unordinary_basics.network.toclient.UBInventoryClientSync;
-import com.github.manasmods.unordinary_basics.network.toserver.RequestUBInventoryMenu;
 import com.github.manasmods.unordinary_basics.painting.UBPaintings;
 import com.github.manasmods.unordinary_basics.registry.Unordinary_BasicsRegistry;
-import lombok.Getter;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.SimpleMenuProvider;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Inventory;
@@ -35,34 +27,29 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.capabilities.Capability;
-import net.minecraftforge.common.capabilities.ICapabilityProvider;
-import net.minecraftforge.common.capabilities.ICapabilitySerializable;
-import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent;
+import net.minecraftforge.common.capabilities.*;
 import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.event.entity.EntityJoinWorldEvent;
+import net.minecraftforge.event.entity.EntityJoinLevelEvent;
 import net.minecraftforge.event.entity.item.ItemTossEvent;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.event.world.BlockEvent;
+import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
-import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
-import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.network.PacketDistributor;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.openjdk.nashorn.internal.objects.annotations.Getter;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -78,9 +65,16 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class Unordinary_Basics {
     public static final String MOD_ID = "unordinary_basics";
     private static final Logger LOGGER = LogManager.getLogger();
-    @Getter
+
+    public static Unordinary_Basics getInstance() {
+        return instance;
+    }
+
+    public Optional<ApotheosisIntegration> getApotheosisIntegration() {
+        return apotheosisIntegration;
+    }
+
     private static Unordinary_Basics instance;
-    @Getter
     private Optional<ApotheosisIntegration> apotheosisIntegration = Optional.empty();
 
     public Unordinary_Basics() {
@@ -116,15 +110,15 @@ public class Unordinary_Basics {
     }
 
     private void generateData(final GatherDataEvent event) {
-        event.getGenerator().addProvider(new Unordinary_BasicsBlockStateProvider(event));
-        event.getGenerator().addProvider(new Unordinary_BasicsItemModelProvider(event));
-        event.getGenerator().addProvider(new Unordinary_BasicsRecipeProvider(event));
-        event.getGenerator().addProvider(new Unordinary_BasicsLootTableProvider(event));
-        event.getGenerator().addProvider(new Unordinary_BasicsBlockTagProvider(event));
-        event.getGenerator().addProvider(new Unordinary_BasicsFletchingRecipeProvider(event));
+        event.getGenerator().addProvider(event.includeClient(),new Unordinary_BasicsBlockStateProvider(event));
+        event.getGenerator().addProvider(event.includeClient(),new Unordinary_BasicsItemModelProvider(event));
+        event.getGenerator().addProvider(event.includeServer(),new Unordinary_BasicsRecipeProvider(event));
+        event.getGenerator().addProvider(event.includeServer(),new Unordinary_BasicsLootTableProvider(event));
+        event.getGenerator().addProvider(event.includeServer(),new Unordinary_BasicsBlockTagProvider(event));
+        event.getGenerator().addProvider(event.includeServer(),new Unordinary_BasicsFletchingRecipeProvider(event));
         Unordinary_BasicsBlockTagProvider blockTagProvider = new Unordinary_BasicsBlockTagProvider(event);
-        event.getGenerator().addProvider(blockTagProvider);
-        event.getGenerator().addProvider(new Unordinary_BasicsItemTagProvider(event, blockTagProvider));
+        event.getGenerator().addProvider(event.includeServer(),blockTagProvider);
+        event.getGenerator().addProvider(event.includeServer(),new Unordinary_BasicsItemTagProvider(event, blockTagProvider));
     }
 
     private void entityPlaceEvent(final BlockEvent.EntityPlaceEvent event){
@@ -135,8 +129,8 @@ public class Unordinary_Basics {
         }
     }
 
-    public void playerJoinWorld(EntityJoinWorldEvent event){
-        if(!event.getWorld().isClientSide()) {
+    public void playerJoinWorld(EntityJoinLevelEvent event){
+        if(!event.getLevel().isClientSide()) {
             if(event.getEntity() instanceof ServerPlayer player) {
                 player.getCapability(CapabilityUBInventory.UB_INVENTORY_CAPABILITY).ifPresent(handler -> {
                     Unordinary_BasicsNetwork.getInstance().send(PacketDistributor.PLAYER.with(() -> player), new UBInventoryClientSync(handler));
@@ -210,12 +204,12 @@ public class Unordinary_Basics {
     }
 
     private void itemTossEvent(final ItemTossEvent event){
-        if (!event.getEntityItem().getItem().getItem().equals(Unordinary_BasicsItems.REDSTONE_POUCH)) return;
+        if (!event.getEntity().getItem().getItem().equals(Unordinary_BasicsItems.REDSTONE_POUCH)) return;
         if (Screen.hasShiftDown()) return;
         if (event.getPlayer().getLevel().isClientSide) return;
         if (Minecraft.getInstance().screen != null) return;
 
-        ItemStack stack = event.getEntityItem().getItem();
+        ItemStack stack = event.getEntity().getItem();
         ItemStack toReplaceWith = stack.copy();
         Player player = event.getPlayer();
         Inventory inv = player.getInventory();
@@ -224,7 +218,7 @@ public class Unordinary_Basics {
         slotToModify = inv.selected;
 
         AtomicBoolean result = new AtomicBoolean(false);
-        toReplaceWith.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
+        toReplaceWith.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
             ((ItemStackHandler)handler).deserializeNBT(toReplaceWith.getOrCreateTag().getCompound("inventory"));
             if (Screen.hasControlDown()){
                 result.set(RedstonePouchCapabilityProvider.dropOneStack(handler,player,Items.REDSTONE));
@@ -243,7 +237,7 @@ public class Unordinary_Basics {
     }
 
     private void entityPickupEvent(final EntityItemPickupEvent event){
-        Player player = event.getPlayer();
+        Player player = event.getEntity();
         final ItemStack stackToPickup = event.getItem().getItem();
 
         if (player.level.isClientSide) return;
@@ -254,7 +248,7 @@ public class Unordinary_Basics {
 
         if (pouchItem == null) return;
 
-            pouchItem.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
+            pouchItem.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
                 ((ItemStackHandler) handler).deserializeNBT(pouchItem.getOrCreateTag().getCompound("inventory"));
                 remainingCount.set(RedstonePouchCapabilityProvider.dumpItemStackInt(stackToPickup, handler));
                 pouchItem.getOrCreateTag().put("inventory", ((ItemStackHandler) handler).serializeNBT());

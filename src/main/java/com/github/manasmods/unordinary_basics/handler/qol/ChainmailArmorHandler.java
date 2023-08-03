@@ -17,7 +17,7 @@ public class ChainmailArmorHandler {
 
     @SubscribeEvent
     public static void onLivingEntityHurt(LivingHurtEvent event) {
-        if (event.getEntityLiving() instanceof Player player) {
+        if (event.getEntity() instanceof Player player) {
             if (UBUtils.hasFullArmorSet(player, CHAINMAIL_ARMOR) && event.getSource().msgId.equals("arrow")) {
                 event.setAmount(event.getAmount() * 0.75f);
             }

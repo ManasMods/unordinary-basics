@@ -2,7 +2,6 @@ package com.github.manasmods.unordinary_basics.item.custom;
 
 import com.github.manasmods.unordinary_basics.item.UBArmorMaterials;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -48,7 +47,7 @@ public class TechnobladeCrownItem extends ArmorItem {
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
-        pTooltipComponents.add(new TranslatableComponent("tooltip.unordinary_basics.technoblade_crown"));
+        pTooltipComponents.add(Component.translatable("tooltip.unordinary_basics.technoblade_crown"));
     }
 
     @Override

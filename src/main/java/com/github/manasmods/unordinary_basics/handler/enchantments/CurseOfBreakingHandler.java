@@ -8,7 +8,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
-import net.minecraftforge.event.world.BlockEvent;
+import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -25,7 +25,7 @@ public class CurseOfBreakingHandler {
 
     @SubscribeEvent
     public static void onLivingEntityHurt(LivingHurtEvent event) {
-        if (event.getEntityLiving() instanceof Player player) {
+        if (event.getEntity() instanceof Player player) {
             for (ItemStack stack : player.getArmorSlots()) {
                 if (EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.BREAKING_CURSE, stack) > 0) {
                     BreakingCurseEnchantment.damageItem(stack);

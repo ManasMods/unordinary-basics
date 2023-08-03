@@ -1,11 +1,10 @@
 package com.github.manasmods.unordinary_basics.world.entity;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
-import com.github.manasmods.unordinary_basics.registry.UBEntityTypes;
+//We don't generate entities currently, and biome loading event has been removed. I'm just leaving this commented for now.
+/*import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -73,4 +72,4 @@ public class UBEntityGeneration {
         List<MobSpawnSettings.SpawnerData> base = event.getSpawns().getSpawner(type.getCategory());
         base.add(new MobSpawnSettings.SpawnerData(type,weight, minCount, maxCount));
     }
-}
+}*/

@@ -120,12 +120,6 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 repositories {
     maven { url "https://dl.cloudsmith.io/public/manasmods/manascore/maven/" }
     maven {
-        // location of the maven that hosts JEI files
-        name = "Progwml6 maven"
-        url = "https://dvs1.progwml6.com/files/maven/"
-    }
-    maven {
-        // location of a maven mirror for JEI files, as a fallback
         name = "ModMaven"
         url = "https://modmaven.dev"
     }
@@ -135,8 +129,19 @@ repositories {
             includeGroup "curse.maven"
         }
     }
-    maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+    maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'}
+
+    maven {
+        // location of the maven that hosts JEI files before January 2023
+        name = "Progwml6's maven"
+        url = "https://dvs1.progwml6.com/files/maven/"
     }
+    maven {
+        // location of the maven that hosts JEI files since January 2023
+        name = "Jared's maven"
+        url = "https://maven.blamejared.com/"
+    }
+    maven { url 'https://jitpack.io' }
 
     /*
     flatDir {
@@ -149,17 +154,21 @@ repositories {
         minecraft "net.minecraftforge:forge:${minecraftVersion}-${forgeVersion}"
 
         //Lombok
-        compileOnly 'org.projectlombok:lombok:1.18.26'
-        annotationProcessor 'org.projectlombok:lombok:1.18.26'
+        compileOnly 'org.projectlombok:lombok:1.18.28'
+        annotationProcessor 'org.projectlombok:lombok:1.18.28'
+
+        implementation("com.github.LlamaLad7:MixinExtras:0.1.1")
+        //annotationProcessor("com.github.LlamaLad7:MixinExtras:0.1.1")
 
         //ManasCore
         implementation fg.deobf("com.github.manasmods:ManasCore:${minecraftVersion}-${manasCoreVersion}")
-        //implementation fg.deobf("com.github.manasmods:manascore:1.18.2-0.0.0.13")
 
         //Mixin Anntoation Processor
         annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
-        implementation fg.deobf("mezz.jei:jei-${minecraftVersion}:${jei_version}")
+        compileOnly(fg.deobf("mezz.jei:jei-${minecraftVersion}-common-api:${jei_version}"))
+        compileOnly(fg.deobf("mezz.jei:jei-${minecraftVersion}-forge-api:${jei_version}"))
+        runtimeOnly(fg.deobf("mezz.jei:jei-${minecraftVersion}-forge:${jei_version}"))
 
         // Apotheosis + dependencies
         compileOnly fg.deobf("curse.maven:apotheosis-313970:${apotheosisVersion}")
@@ -174,7 +183,7 @@ repositories {
         runtimeOnly fg.deobf("curse.maven:bookshelf-228525:${bookshelfVersion}")
 
         // Geckolib
-        implementation fg.deobf("software.bernie.geckolib:geckolib-forge-1.18:${geckolibVersion}")
+        //implementation fg.deobf("software.bernie.geckolib:geckolib-forge-${minecraftVersion}:${geckolibVersion}")
     }
 
 // Example for how to get properties into the manifest for reading at runtime.

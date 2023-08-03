@@ -6,7 +6,7 @@ import com.github.manasmods.unordinary_basics.menu.FletchingTableMenu;
 import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
 import com.github.manasmods.unordinary_basics.network.toserver.RequestMenuChange;
 import net.minecraft.core.BlockPos;
-import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.SimpleMenuProvider;
 import net.minecraft.world.inventory.ContainerLevelAccess;
@@ -38,7 +38,7 @@ public class ApotheosisIntegration {
 
         BlockState blockState = player.level.getBlockState(fletchingTableMenu.getPos());
         if (!(blockState.getBlock() instanceof ApothFletchingBlock fletchingBlock)) return;
-        NetworkHooks.openGui(player, fletchingBlock.getMenuProvider(blockState, player.level, fletchingTableMenu.getPos()));
+        NetworkHooks.openScreen(player, fletchingBlock.getMenuProvider(blockState, player.level, fletchingTableMenu.getPos()));
     }
 
     public void openUnordinaryBasicsFletchingMenu(ServerPlayer player) {
@@ -48,7 +48,8 @@ public class ApotheosisIntegration {
         }
 
         BlockPos pos = ((FletchingContainerAccessor) fletchingContainer).getPos();
-        NetworkHooks.openGui(player, new SimpleMenuProvider((pContainerId, pInventory, pPlayer1) -> new FletchingTableMenu(pContainerId, ContainerLevelAccess.create(player.level, pos), pPlayer1.getInventory(), pos), new TranslatableComponent(Unordinary_Basics.MOD_ID + ".menu.fletching_table.title")), buffer -> {
+        NetworkHooks.openScreen(player, new SimpleMenuProvider((pContainerId, pInventory, pPlayer1) -> new FletchingTableMenu(pContainerId, ContainerLevelAccess.create(player.level, pos), pPlayer1.getInventory(), pos),
+                Component.translatable(Unordinary_Basics.MOD_ID + ".menu.fletching_table.title")), buffer -> {
             buffer.writeBlockPos(pos);
             buffer.writeResourceLocation(player.level.dimension().location());
         });

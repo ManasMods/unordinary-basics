@@ -4,14 +4,10 @@ import com.github.manasmods.manascore.client.keybinding.KeybindingRegistry;
 import com.github.manasmods.manascore.tab.InventoryTabRegistry;
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
-import com.github.manasmods.unordinary_basics.client.gui.BuildersGloveScreen;
-import com.github.manasmods.unordinary_basics.client.gui.FletchingTableScreen;
-import com.github.manasmods.unordinary_basics.client.gui.JukeBoxScreen;
-import com.github.manasmods.unordinary_basics.client.gui.Unordinary_BasicsInventoryScreen;
-import com.github.manasmods.unordinary_basics.client.keybind.UBKeybindings;
 import com.github.manasmods.unordinary_basics.block.entity.Unordinary_BasicsBlockEntities;
 import com.github.manasmods.unordinary_basics.client.block_entity_renderer.ItemSorterBlockEntityRenderer;
 import com.github.manasmods.unordinary_basics.client.gui.*;
+import com.github.manasmods.unordinary_basics.client.keybind.UBKeybindings;
 import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisIntegrationClient;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
 import com.github.manasmods.unordinary_basics.item.custom.SlimeCompassItem;
@@ -26,7 +22,7 @@ import net.minecraft.client.renderer.item.ClampedItemPropertyFunction;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
@@ -43,14 +39,13 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.EntityRenderersEvent;
-import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.event.TextureStitchEvent;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.items.CapabilityItemHandler;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -68,7 +63,7 @@ public class UBClient {
     @SubscribeEvent
     public static void init(final FMLClientSetupEvent e) {
         e.enqueueWork(UBClient::registerBlockTransparencies);
-        e.enqueueWork(() -> InventoryTabRegistry.register(new Unordinary_BasicsInventoryTab(new TextComponent("Unordinary Basics"))));
+        e.enqueueWork(() -> InventoryTabRegistry.register(new Unordinary_BasicsInventoryTab(Component.literal("Unordinary Basics"))));
         e.enqueueWork(UBClient::registerEntityRenderer);
         e.enqueueWork(UBClient::registerMenuScreens);
         e.enqueueWork(UBClient::registerItemProperties);
@@ -277,7 +272,7 @@ public class UBClient {
         ItemProperties.register(Unordinary_BasicsItems.QUIVER,new ResourceLocation("filled"),(stack,level,entity,seed) -> {
             AtomicBoolean isFilled = new AtomicBoolean();
 
-            stack.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
+            stack.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
                 for (int i = 0; i < handler.getSlots(); ++i){
                     if (!handler.getStackInSlot(i).isEmpty()) {
                         isFilled.set(true);

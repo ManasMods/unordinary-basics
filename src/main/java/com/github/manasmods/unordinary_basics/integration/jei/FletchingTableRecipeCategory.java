@@ -15,7 +15,8 @@ import mezz.jei.api.recipe.RecipeIngredientRole;
 import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
 import net.minecraft.core.NonNullList;
-import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -35,23 +36,16 @@ public class FletchingTableRecipeCategory implements IRecipeCategory<FletchingRe
     @Getter
     private final IDrawable icon;
     @Getter
-    private final TranslatableComponent title = Translation.of("fletching");
+    private final MutableComponent title = Component.translatable("fletching");
 
     public FletchingTableRecipeCategory(IGuiHelper helper) {
         this.background = helper.createDrawable(TEXTURE, 5, 5, 166, 86);
         this.icon = helper.createDrawableIngredient(VanillaTypes.ITEM_STACK, new ItemStack(Blocks.FLETCHING_TABLE));
     }
 
-    @SuppressWarnings("removal")
     @Override
-    public ResourceLocation getUid() {
-        return UID;
-    }
-
-    @SuppressWarnings("removal")
-    @Override
-    public Class<? extends FletchingRecipe> getRecipeClass() {
-        return FletchingRecipe.class;
+    public RecipeType<FletchingRecipe> getRecipeType() {
+        return RecipeType.create(Unordinary_Basics.MOD_ID,"fletching",FletchingRecipe.class);
     }
 
     @Override

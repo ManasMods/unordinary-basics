@@ -16,7 +16,6 @@ import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRenderDispatcher;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Inventory;
@@ -32,7 +31,7 @@ public class Unordinary_BasicsInventoryScreen extends AbstractContainerScreen<UB
     private float yMouse;
 
     public Unordinary_BasicsInventoryScreen(UBInventoryMenu menu, Inventory inventory, Component title) {
-        super(menu, inventory, new TranslatableComponent("container.crafting"));
+        super(menu, inventory, Component.translatable("container.crafting"));
         this.titleLabelX = 97;
     }
 

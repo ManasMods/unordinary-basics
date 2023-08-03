@@ -14,7 +14,7 @@ import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.common.crafting.NBTIngredient;
+import net.minecraftforge.common.crafting.StrictNBTIngredient;
 
 import java.util.List;
 
@@ -32,7 +32,7 @@ public class FletchingRecipe implements Recipe<FletchingContainer> {
         remainingIngredients.removeIf(ingredient -> {
             for (int i = 0; i < 6; i++) {
                 if (ingredient.test(pCraftingInventory.getItem(i))) {
-                    if (ingredient instanceof NBTIngredient nbtIngredient) {
+                    if (ingredient instanceof StrictNBTIngredient nbtIngredient) {
                         NBTIngredientAccessor accessor = (NBTIngredientAccessor) nbtIngredient;
                         int requiredCount = accessor.getStack().getCount();
                         return pCraftingInventory.getItem(i).getCount() >= requiredCount;
@@ -78,14 +78,14 @@ public class FletchingRecipe implements Recipe<FletchingContainer> {
         //set initial values
         for (int i = 0; i < containerItems.size(); ++i) {
             ItemStack item = pContainer.getItem(i);
-            if (item.hasContainerItem()) {
-                containerItems.set(i, item.getContainerItem());
+            if (item.hasCraftingRemainingItem()) {
+                containerItems.set(i, item.getCraftingRemainingItem());
             }
         }
 
         //update amounts
         for (Ingredient ingredient : this.recipeItems) {
-            if (ingredient instanceof NBTIngredient nbtIngredient) {
+            if (ingredient instanceof StrictNBTIngredient nbtIngredient) {
                 //Handle NBTIngredient
                 NBTIngredientAccessor accessor = (NBTIngredientAccessor) nbtIngredient;
                 ItemStack recipeStack = accessor.getStack();

@@ -1,7 +1,6 @@
 package com.github.manasmods.unordinary_basics.item.custom;
 
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -83,7 +82,7 @@ public class SlimeCompassItem extends Item {
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         if (!pStack.getOrCreateTag().getBoolean("found")){
-            pTooltipComponents.add(new TranslatableComponent("warning.unordinary_basics.no_slime_chunk_found"));
+            pTooltipComponents.add(Component.translatable("warning.unordinary_basics.no_slime_chunk_found"));
         }
     }
 }

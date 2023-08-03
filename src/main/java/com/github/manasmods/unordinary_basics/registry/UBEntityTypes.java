@@ -1,11 +1,8 @@
 package com.github.manasmods.unordinary_basics.registry;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.entity.GrizzlyBearEntity;
 import com.github.manasmods.unordinary_basics.entity.GrolarBearEntity;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.MobCategory;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 

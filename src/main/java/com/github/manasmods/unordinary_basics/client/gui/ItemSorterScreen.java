@@ -4,7 +4,6 @@ import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.menu.ItemSorterMenu;
 import com.github.manasmods.unordinary_basics.menu.slot.GhostSlot;
 import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
-import com.github.manasmods.unordinary_basics.network.toserver.RequestJukeboxUpdate;
 import com.github.manasmods.unordinary_basics.network.toserver.SetItemSorterMessage;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -14,8 +13,6 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.client.renderer.entity.ItemRenderer;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.item.ItemStack;
@@ -45,7 +42,7 @@ public class ItemSorterScreen extends AbstractContainerScreen<ItemSorterMenu> {
         this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
         int i = (this.width - this.imageWidth) / 2;
         int j = (this.height - this.imageHeight) / 2;
-        this.text = new EditBox(this.font, i + 10, j + 20, 88, 10, new TranslatableComponent("unordinary_basics.menu.item_sorter.editbox"));
+        this.text = new EditBox(this.font, i + 10, j + 20, 88, 10, Component.translatable("unordinary_basics.menu.item_sorter.editbox"));
         this.text.setCanLoseFocus(false);
         this.text.setTextColor(-1);
         this.text.setTextColorUneditable(-1);
@@ -61,8 +58,8 @@ public class ItemSorterScreen extends AbstractContainerScreen<ItemSorterMenu> {
 
     private void onTextChanged(String s) {
         if (!s.isEmpty()) {
-            this.menu.blockEntity.setMessage(2, new TextComponent(s));
-            Unordinary_BasicsNetwork.getInstance().sendToServer(new SetItemSorterMessage(this.menu.blockEntity.getBlockPos(),new TextComponent(s)));
+            this.menu.blockEntity.setMessage(2, Component.literal(s));
+            Unordinary_BasicsNetwork.getInstance().sendToServer(new SetItemSorterMessage(this.menu.blockEntity.getBlockPos(),Component.literal(s)));
             this.menu.blockEntity.setChanged();
         }
     }

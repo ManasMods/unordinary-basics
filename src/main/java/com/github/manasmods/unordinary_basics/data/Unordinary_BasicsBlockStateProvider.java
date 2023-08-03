@@ -4,7 +4,7 @@ import com.github.manasmods.manascore.api.data.gen.BlockStateProvider;
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
+import net.minecraftforge.data.event.GatherDataEvent;
 
 
 public class Unordinary_BasicsBlockStateProvider extends BlockStateProvider {

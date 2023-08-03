@@ -1,43 +1,41 @@
 package com.github.manasmods.unordinary_basics.painting;
 
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
-import net.minecraft.world.entity.decoration.Motive;
+import net.minecraft.world.entity.decoration.Painting;
+import net.minecraft.world.entity.decoration.PaintingVariant;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class UBPaintings {
-    public static final DeferredRegister<Motive> PAINTING_MOVTIES =
-            DeferredRegister.create(ForgeRegistries.PAINTING_TYPES, Unordinary_Basics.MOD_ID);
+    public static final DeferredRegister<PaintingVariant> PAINTING_MOVTIES =
+            DeferredRegister.create(ForgeRegistries.PAINTING_VARIANTS, Unordinary_Basics.MOD_ID);
 
     /** **/
 
-    public static final RegistryObject<Motive> TROJAN_RABBIT =
-            PAINTING_MOVTIES.register("trojan_rabbit", () -> new Motive(64, 32));
-
-    public static final RegistryObject<Motive> BIRCH =
-            PAINTING_MOVTIES.register("birch", () -> new Motive(96, 48));
-    public static final RegistryObject<Motive> MANGROVE =
-            PAINTING_MOVTIES.register("mangrove", () -> new Motive(96, 48));
-    public static final RegistryObject<Motive> SWAMP =
-            PAINTING_MOVTIES.register("swamp", () -> new Motive(96, 48));
-    public static final RegistryObject<Motive> WILD =
-            PAINTING_MOVTIES.register("wild", () -> new Motive(96, 48));
-    public static final RegistryObject<Motive> FORTRESS =
-            PAINTING_MOVTIES.register("fortress", () -> new Motive(64, 32));
-
-    public static final RegistryObject<Motive> CAT =
-            PAINTING_MOVTIES.register("cat", () -> new Motive(16, 16));
-
-    public static final RegistryObject<Motive> JIN =
-            PAINTING_MOVTIES.register("jin", () -> new Motive(16, 16));
-    public static final RegistryObject<Motive> NAO =
-            PAINTING_MOVTIES.register("nao", () -> new Motive(16, 16));
-    public static final RegistryObject<Motive> YUKI =
-            PAINTING_MOVTIES.register("yuki", () -> new Motive(16, 16));
-    public static final RegistryObject<Motive> TOMO =
-            PAINTING_MOVTIES.register("tomo", () -> new Motive(16, 16));
+    public static final RegistryObject<PaintingVariant> TROJAN_RABBIT =
+            PAINTING_MOVTIES.register("trojan_rabbit", () -> new PaintingVariant(64, 32));
+    public static final RegistryObject<PaintingVariant> BIRCH =
+            PAINTING_MOVTIES.register("birch", () -> new PaintingVariant(96, 48));
+    public static final RegistryObject<PaintingVariant> MANGROVE =
+            PAINTING_MOVTIES.register("mangrove", () -> new PaintingVariant(96, 48));
+    public static final RegistryObject<PaintingVariant> SWAMP =
+            PAINTING_MOVTIES.register("swamp", () -> new PaintingVariant(96, 48));
+    public static final RegistryObject<PaintingVariant> WILD =
+            PAINTING_MOVTIES.register("wild", () -> new PaintingVariant(96, 48));
+    public static final RegistryObject<PaintingVariant> FORTRESS =
+            PAINTING_MOVTIES.register("fortress", () -> new PaintingVariant(64, 32));
+    public static final RegistryObject<PaintingVariant> CAT =
+            PAINTING_MOVTIES.register("cat", () -> new PaintingVariant(16, 16));
+    public static final RegistryObject<PaintingVariant> JIN =
+            PAINTING_MOVTIES.register("jin", () -> new PaintingVariant(16, 16));
+    public static final RegistryObject<PaintingVariant> NAO =
+            PAINTING_MOVTIES.register("nao", () -> new PaintingVariant(16, 16));
+    public static final RegistryObject<PaintingVariant> YUKI =
+            PAINTING_MOVTIES.register("yuki", () -> new PaintingVariant(16, 16));
+    public static final RegistryObject<PaintingVariant> TOMO =
+            PAINTING_MOVTIES.register("tomo", () -> new PaintingVariant(16, 16));
 
     /** **/
 

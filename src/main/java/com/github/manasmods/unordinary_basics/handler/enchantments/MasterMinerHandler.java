@@ -6,7 +6,7 @@ import com.github.manasmods.unordinary_basics.enchantment.UnordinaryBasicsEnchan
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.chat.TextComponent;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
@@ -19,7 +19,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
-import net.minecraftforge.event.world.BlockEvent;
+import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -32,7 +32,7 @@ public class MasterMinerHandler {
     public static void onBlockBreak(final BlockEvent.BreakEvent event) {
         BlockPos pos = event.getPos();
         Player player = event.getPlayer();
-        LevelAccessor level = event.getWorld();
+        LevelAccessor level = event.getLevel();
         ItemStack tool = player.getItemInHand(InteractionHand.MAIN_HAND);
         int radius;
         CompoundTag tag = tool.getTag();
@@ -66,14 +66,14 @@ public class MasterMinerHandler {
     @SubscribeEvent
     public static void onItemRightClick(final PlayerInteractEvent.RightClickItem event) {
         ItemStack stack = event.getItemStack();
-        Player player = event.getPlayer();
+        Player player = event.getEntity();
         int maxLevel = EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.MASTER_MINER, stack);
         CompoundTag tag = stack.getTag();
         if (maxLevel > 0 && tag != null && player.isShiftKeyDown()) {
             int currentLevel = tag.getInt("masterMinerLevel");
             int newLevel = currentLevel == maxLevel ? 0 : currentLevel + 1;
             tag.putInt("masterMinerLevel", newLevel);
-            player.displayClientMessage(new TextComponent("Using Master Miner level " + newLevel), true);
+            player.displayClientMessage(Component.translatable("Using Master Miner level " + newLevel), true);
         }
     }
 

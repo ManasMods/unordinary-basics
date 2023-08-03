@@ -9,7 +9,6 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.GameRenderer;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
@@ -24,7 +23,7 @@ public class FletchingTableScreen extends AbstractContainerScreen<FletchingTable
         this.openApotheosisMenuButton = new ImagePredicateButton(0, 0, 24, 24, APOTHEOSIS_LOGO, pButton -> {
             Unordinary_Basics.getInstance().getApotheosisIntegration().ifPresent(ApotheosisIntegration::requestApotheosisFletchingMenu);
         }, (pButton, pPoseStack, pMouseX, pMouseY) -> {
-            renderTooltip(pPoseStack, new TranslatableComponent(Unordinary_Basics.MOD_ID + ".menu.fletching_table.switch.apotheosis"), pMouseX, pMouseY);
+            renderTooltip(pPoseStack, Component.translatable(Unordinary_Basics.MOD_ID + ".menu.fletching_table.switch.apotheosis"), pMouseX, pMouseY);
         }, () -> Unordinary_Basics.getInstance().getApotheosisIntegration().isPresent());
 
     }

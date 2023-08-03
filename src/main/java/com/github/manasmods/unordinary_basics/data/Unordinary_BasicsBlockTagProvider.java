@@ -4,13 +4,10 @@ import com.github.manasmods.manascore.api.data.gen.BlockTagProvider;
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
 import com.github.manasmods.unordinary_basics.utils.UBTags;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
-import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
+import net.minecraftforge.data.event.GatherDataEvent;
 
 public class Unordinary_BasicsBlockTagProvider extends BlockTagProvider {
     public Unordinary_BasicsBlockTagProvider(GatherDataEvent gatherDataEvent) {

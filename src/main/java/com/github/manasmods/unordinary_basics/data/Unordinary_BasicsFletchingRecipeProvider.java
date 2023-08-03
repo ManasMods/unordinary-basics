@@ -9,8 +9,8 @@ import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.Tags;
-import net.minecraftforge.common.crafting.NBTIngredient;
-import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
+import net.minecraftforge.common.crafting.StrictNBTIngredient;
+import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Consumer;
@@ -35,7 +35,7 @@ public class Unordinary_BasicsFletchingRecipeProvider extends FletchingRecipePro
             .pattern("  ")
             .pattern(" A")
             .pattern(" G")
-            .define('A', NBTIngredient.of(new ItemStack(Items.ARROW, 8)))
+            .define('A', StrictNBTIngredient.of(new ItemStack(Items.ARROW, 8)))
             .define('G', Ingredient.of(Tags.Items.DUSTS_GLOWSTONE))
             .save(pFinishedRecipeConsumer);
 
@@ -53,8 +53,8 @@ public class Unordinary_BasicsFletchingRecipeProvider extends FletchingRecipePro
                 .pattern(" P")
                 .pattern(" A")
                 .pattern("  ")
-                .define('P', NBTIngredient.of(potionStack))
-                .define('A', NBTIngredient.of(new ItemStack(Items.ARROW, 32)))
+                .define('P', StrictNBTIngredient.of(potionStack))
+                .define('A', StrictNBTIngredient.of(new ItemStack(Items.ARROW, 32)))
                 .save(pFinishedRecipeConsumer, new ResourceLocation("minecraft", "tipped_arrow_" + potion.getRegistryName().getPath()));
         });
     }

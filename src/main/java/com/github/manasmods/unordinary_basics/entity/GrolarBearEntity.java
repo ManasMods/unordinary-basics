@@ -4,8 +4,8 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -83,14 +83,14 @@ public class GrolarBearEntity extends TamableAnimal implements NeutralMob {
                 .add(Attributes.ATTACK_DAMAGE, 10.0D);
     }
 
-    public static boolean checkGrolarBearEntitySpawnRules(EntityType<GrolarBearEntity> p_29550_, LevelAccessor p_29551_, MobSpawnType p_29552_, BlockPos p_29553_, Random p_29554_) {
+    /*public static boolean checkGrolarBearEntitySpawnRules(EntityType<GrolarBearEntity> p_29550_, LevelAccessor p_29551_, MobSpawnType p_29552_, BlockPos p_29553_, Random p_29554_) {
         Holder<Biome> holder = p_29551_.getBiome(p_29553_);
         if (holder.is(Biomes.PLAINS) || holder.is(Biomes.FOREST) ||
                 holder.is(Biomes.TAIGA) || holder.is(Biomes.STONY_PEAKS)){
             return checkAnimalSpawnRules(p_29550_, p_29551_, p_29552_, p_29553_, p_29554_);
         }
         return false;
-    }
+    }*/
 
     /**
      * (abstract) Protected helper method to read subclass entity data from NBT.
@@ -243,9 +243,9 @@ public class GrolarBearEntity extends TamableAnimal implements NeutralMob {
                 if ((!actionresulttype.consumesAction()) && this.isOwnedBy(player)) {
                     this.setOrderedToSit(!this.isOrderedToSit());
                     if (this.isOrderedToSit()) {
-                        player.displayClientMessage(new TranslatableComponent("unordinary_basics.message.pet.sit", this.getDisplayName()).setStyle(Style.EMPTY.withColor(ChatFormatting.DARK_GREEN).withBold(true)), false);
+                        player.displayClientMessage(Component.translatable("unordinary_basics.message.pet.sit", this.getDisplayName()).setStyle(Style.EMPTY.withColor(ChatFormatting.DARK_GREEN).withBold(true)), false);
                     } else {
-                        player.displayClientMessage(new TranslatableComponent("unordinary_basics.message.pet.follow", this.getDisplayName()).setStyle(Style.EMPTY.withColor(ChatFormatting.DARK_GREEN).withBold(true)), false);
+                        player.displayClientMessage(Component.translatable("unordinary_basics.message.pet.follow", this.getDisplayName()).setStyle(Style.EMPTY.withColor(ChatFormatting.DARK_GREEN).withBold(true)), false);
                     }
                     this.jumping = false;
                     this.navigation.stop();

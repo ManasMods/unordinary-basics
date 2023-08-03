@@ -8,8 +8,6 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
@@ -24,7 +22,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.items.IItemHandler;
 import org.jetbrains.annotations.Nullable;
 
@@ -37,8 +35,8 @@ public class ItemSorterBlockEntity extends BlockEntity implements MenuProvider {
     private FormattedCharSequence[] renderMessages;
 
     private boolean renderMessagedFiltered;
-    private final Component[] messages = new Component[]{TextComponent.EMPTY, TextComponent.EMPTY, TextComponent.EMPTY, TextComponent.EMPTY};
-    private final Component[] filteredMessages = new Component[]{TextComponent.EMPTY, TextComponent.EMPTY, TextComponent.EMPTY, TextComponent.EMPTY};
+    private final Component[] messages = new Component[]{(Component) Component.EMPTY, (Component) Component.EMPTY, (Component) Component.EMPTY, (Component) Component.EMPTY};
+    private final Component[] filteredMessages = new Component[]{(Component) Component.EMPTY, (Component) Component.EMPTY, (Component) Component.EMPTY, (Component) Component.EMPTY};
     private static final String[] RAW_TEXT_FIELD_NAMES = new String[]{"Text1", "Text2", "Text3", "Text4"};
     private static final String[] FILTERED_TEXT_FIELD_NAMES = new String[]{"FilteredText1", "FilteredText2", "FilteredText3", "FilteredText4"};
     public ItemSorterBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {
@@ -130,12 +128,12 @@ public class ItemSorterBlockEntity extends BlockEntity implements MenuProvider {
         } catch (Exception exception) {
         }
 
-        return TextComponent.EMPTY;
+        return (Component) Component.EMPTY;
     }
 
     @Override
     public Component getDisplayName() {
-        return new TranslatableComponent("unordinary_basics.menu.item_sorter.title");
+        return Component.translatable("unordinary_basics.menu.item_sorter.title");
     }
 
     @Nullable
@@ -160,7 +158,7 @@ public class ItemSorterBlockEntity extends BlockEntity implements MenuProvider {
     public void filterItemsOfPlayer(Player pPlayer, BlockPos pPos, BlockState pState, Level pLevel){
         BlockEntity entity = pLevel.getBlockEntity(pPos.relative(pState.getValue(ItemSorterBlock.FACING).getOpposite()));
 
-        if (entity != null) entity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
+        if (entity != null) entity.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
             Inventory inv = pPlayer.getInventory();
             for (int i = 0; i < inv.getContainerSize(); i++) {
                 if (filterItems.contains(inv.getItem(i).getItem())){

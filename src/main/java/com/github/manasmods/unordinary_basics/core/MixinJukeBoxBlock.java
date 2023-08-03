@@ -5,11 +5,12 @@ import com.github.manasmods.unordinary_basics.block.entity.JukeboxBlockEntity;
 import com.github.manasmods.unordinary_basics.menu.JukeBoxMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.SimpleMenuProvider;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.ContainerLevelAccess;
@@ -56,10 +57,10 @@ public abstract class MixinJukeBoxBlock extends BaseEntityBlock {
     @Inject(method = "use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;", at = @At("HEAD"), cancellable = true)
     public void onUse(BlockState pState, Level pLevel, BlockPos pPos, Player pPlayer, InteractionHand pHand, BlockHitResult pHit, CallbackInfoReturnable<InteractionResult> cir) {
         if (!pLevel.isClientSide()) {
-            NetworkHooks.openGui((ServerPlayer) pPlayer, new SimpleMenuProvider((pContainerId, pInventory, pPlayer1) -> {
+            NetworkHooks.openScreen((ServerPlayer) pPlayer, new SimpleMenuProvider((pContainerId, pInventory, pPlayer1) -> {
                 JukeboxBlockEntity blockEntity = (JukeboxBlockEntity) pLevel.getBlockEntity(pPos);
                 return new JukeBoxMenu(pContainerId, pPlayer1.getInventory(), blockEntity, ContainerLevelAccess.create(pLevel, pPos));
-            }, new TranslatableComponent(Unordinary_Basics.MOD_ID + ".menu.jukebox.title")), buffer -> {
+            }, Component.translatable(Unordinary_Basics.MOD_ID + ".menu.jukebox.title")), buffer -> {
                 buffer.writeBlockPos(pPos);
                 buffer.writeResourceLocation(pLevel.dimension().location());
             });
@@ -68,9 +69,9 @@ public abstract class MixinJukeBoxBlock extends BaseEntityBlock {
         cir.setReturnValue(InteractionResult.SUCCESS);
     }
 
-    @Inject(method = "setRecord(Lnet/minecraft/world/level/LevelAccessor;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/item/ItemStack;)V", at =
+    @Inject(method = "setRecord", at =
     @At("HEAD"), cancellable = true)
-    public void onSetRecord(LevelAccessor pLevel, BlockPos pPos, BlockState pState, ItemStack pRecordStack, CallbackInfo ci) {
+    public void onSetRecord(Entity pEntity, LevelAccessor pLevel, BlockPos pPos, BlockState pState, ItemStack pStack, CallbackInfo ci) {
         ci.cancel();
     }
 
