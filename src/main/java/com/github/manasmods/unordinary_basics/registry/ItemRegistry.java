@@ -46,7 +46,7 @@ class ItemRegistry {
         registry.register("barrel_backpack", () -> new BackpackItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
         registry.register("chest_backpack", () -> new BackpackItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
 
-        registry.register("music_disc_queen", () -> new MusicDiscItem(() -> UBSounds.QUEEN));
+        registry.register("music_disc_queen", () -> new MusicDiscItem((() -> UBSounds.QUEEN),2700));
 
 
     }

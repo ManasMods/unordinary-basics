@@ -61,7 +61,7 @@ public abstract class MixinLivingEntity extends Entity {
                             });
                         }
 
-                        this.gameEvent(GameEvent.ELYTRA_FREE_FALL);
+                        this.gameEvent(GameEvent.ELYTRA_GLIDE);
                     }
                 } else {
                     flag = false;

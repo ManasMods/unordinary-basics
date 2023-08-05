@@ -63,23 +63,6 @@ public class FletchingRecipeSerializer implements RecipeSerializer<FletchingReci
         pBuffer.writeItem(pRecipe.getResultItem());
     }
 
-    @Override
-    public RecipeSerializer<?> setRegistryName(ResourceLocation name) {
-        registryName = name;
-        return this;
-    }
-
-    @Nullable
-    @Override
-    public ResourceLocation getRegistryName() {
-        return registryName;
-    }
-
-    @Override
-    public Class<RecipeSerializer<?>> getRegistryType() {
-        return ForgeRegistries.RECIPE_SERIALIZERS.getRegistrySuperType();
-    }
-
     static Map<String, Ingredient> keyFromJson(JsonObject pKeyEntry) {
         Map<String, Ingredient> map = Maps.newHashMap();
 

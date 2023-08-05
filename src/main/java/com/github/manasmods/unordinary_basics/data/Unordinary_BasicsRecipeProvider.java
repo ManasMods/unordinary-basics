@@ -21,6 +21,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.data.event.GatherDataEvent;
+import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Consumer;
 
@@ -58,7 +59,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                         .of(Items.IRON_INGOT).build()))
                 .unlockedBy("has_wooden_storage", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(UBTags.Items.STORAGE_WOODEN).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Items.HOPPER.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.HOPPER).getPath()));
 
         ShapedRecipeBuilder.shaped(Blocks.FURNACE)
                 .define('#', UBTags.Items.STONE)
@@ -67,7 +68,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .pattern("###")
                 .unlockedBy("has_stones", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(UBTags.Items.STONE).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Blocks.FURNACE.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.FURNACE).getPath()));
 
         ShapedRecipeBuilder.shaped(Blocks.DISPENSER)
                 .define('#', UBTags.Items.STONE)
@@ -78,7 +79,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .pattern("#R#")
                 .unlockedBy("has_stones", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(UBTags.Items.STONE).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Blocks.DISPENSER.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.DISPENSER).getPath()));
 
         ShapedRecipeBuilder.shaped(Blocks.DROPPER)
                 .define('#', UBTags.Items.STONE)
@@ -88,7 +89,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .pattern("#R#")
                 .unlockedBy("has_stones", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(UBTags.Items.STONE).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Blocks.DROPPER.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.DROPPER).getPath()));
 
         ShapedRecipeBuilder.shaped(Blocks.OBSERVER)
                 .define('#', UBTags.Items.STONE)
@@ -99,7 +100,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .pattern("###")
                 .unlockedBy("has_stones", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(UBTags.Items.STONE).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Blocks.OBSERVER.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.OBSERVER).getPath()));
 
         ShapedRecipeBuilder.shaped(Blocks.PISTON)
                 .define('#', UBTags.Items.STONE)
@@ -111,7 +112,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .pattern("#R#")
                 .unlockedBy("has_stones", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(UBTags.Items.STONE).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Blocks.PISTON.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.PISTON).getPath()));
 
         ShapedRecipeBuilder.shaped(Items.STONE_SWORD)
                 .define('#', UBTags.Items.STONE)
@@ -123,7 +124,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                         .of(UBTags.Items.STONE).build()))
                 .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.STICK).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Items.STONE_SWORD.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.STONE_SWORD).getPath()));
 
         ShapedRecipeBuilder.shaped(Items.STONE_PICKAXE)
                 .define('#', UBTags.Items.STONE)
@@ -135,7 +136,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                         .of(UBTags.Items.STONE).build()))
                 .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.STICK).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Items.STONE_PICKAXE.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.STONE_PICKAXE).getPath()));
 
         ShapedRecipeBuilder.shaped(Items.STONE_AXE)
                 .define('#', UBTags.Items.STONE)
@@ -147,7 +148,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                         .of(UBTags.Items.STONE).build()))
                 .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.STICK).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Items.STONE_AXE.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.STONE_AXE).getPath()));
 
         ShapedRecipeBuilder.shaped(Items.STONE_SHOVEL)
                 .define('#', UBTags.Items.STONE)
@@ -159,7 +160,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                         .of(UBTags.Items.STONE).build()))
                 .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.STICK).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Items.STONE_SHOVEL.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.STONE_SHOVEL).getPath()));
 
         ShapedRecipeBuilder.shaped(Items.STONE_HOE)
                 .define('#', UBTags.Items.STONE)
@@ -171,7 +172,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                         .of(UBTags.Items.STONE).build()))
                 .unlockedBy("has_stick", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.STICK).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Items.STONE_HOE.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.STONE_HOE).getPath()));
 
         ShapedRecipeBuilder.shaped(Items.SADDLE)
                 .define('L', Items.LEATHER)
@@ -182,7 +183,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .pattern("S S")
                 .unlockedBy("has_leather", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.LEATHER).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Items.SADDLE.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.SADDLE).getPath()));
 
         ShapedRecipeBuilder.shaped(Items.NAME_TAG)
                 .define('P', Items.PAPER)
@@ -191,7 +192,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .pattern("S")
                 .unlockedBy("has_string", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.PAPER).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Items.NAME_TAG.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.NAME_TAG).getPath()));
 
         ShapedRecipeBuilder.shaped(Items.TRIDENT)
                 .define('I', Items.IRON_INGOT)
@@ -202,7 +203,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .pattern(" P ")
                 .unlockedBy("has_prismarine_shard", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.PRISMARINE_SHARD).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Items.TRIDENT.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.TRIDENT).getPath()));
 
         ShapedRecipeBuilder.shaped(Items.CHAINMAIL_HELMET)
                 .define('I', Items.IRON_INGOT)
@@ -211,7 +212,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .pattern("N N")
                 .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.IRON_NUGGET).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Items.CHAINMAIL_HELMET.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.CHAINMAIL_HELMET).getPath()));
 
         ShapedRecipeBuilder.shaped(Items.CHAINMAIL_CHESTPLATE)
                 .define('I', Items.IRON_INGOT)
@@ -221,7 +222,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .pattern("NNN")
                 .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.IRON_NUGGET).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Items.CHAINMAIL_CHESTPLATE.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.CHAINMAIL_CHESTPLATE).getPath()));
 
         ShapedRecipeBuilder.shaped(Items.CHAINMAIL_LEGGINGS)
                 .define('I', Items.IRON_INGOT)
@@ -231,7 +232,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .pattern("N N")
                 .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.IRON_NUGGET).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Items.CHAINMAIL_LEGGINGS.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.CHAINMAIL_LEGGINGS).getPath()));
 
         ShapedRecipeBuilder.shaped(Items.CHAINMAIL_BOOTS)
                 .define('I', Items.IRON_INGOT)
@@ -240,7 +241,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .pattern("I I")
                 .unlockedBy("has_iron_nugget", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.IRON_NUGGET).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Items.CHAINMAIL_BOOTS.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.CHAINMAIL_BOOTS).getPath()));
 
         ShapelessRecipeBuilder.shapeless(Items.ARROW)
                 .requires(ItemTags.ARROWS)
@@ -255,7 +256,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .pattern("ISI")
                 .unlockedBy("has_leather", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.LEATHER).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Items.LEATHER_HORSE_ARMOR.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.LEATHER_HORSE_ARMOR).getPath()));
 
         ShapedRecipeBuilder.shaped(Items.IRON_HORSE_ARMOR)
                 .define('I', Items.IRON_INGOT)
@@ -266,7 +267,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .pattern("ISI")
                 .unlockedBy("has_iron_ingot", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.IRON_INGOT).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Items.IRON_HORSE_ARMOR.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.IRON_HORSE_ARMOR).getPath()));
 
         ShapedRecipeBuilder.shaped(Items.GOLDEN_HORSE_ARMOR)
                 .define('I', Items.GOLD_INGOT)
@@ -277,7 +278,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .pattern("ISI")
                 .unlockedBy("has_gold_ingot", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.GOLD_INGOT).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Items.GOLDEN_HORSE_ARMOR.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.GOLDEN_HORSE_ARMOR).getPath()));
 
         ShapedRecipeBuilder.shaped(Items.DIAMOND_HORSE_ARMOR)
                 .define('I', Items.DIAMOND)
@@ -288,7 +289,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .pattern("ISI")
                 .unlockedBy("has_diamond", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.DIAMOND).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Items.DIAMOND_HORSE_ARMOR.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.DIAMOND_HORSE_ARMOR).getPath()));
 
         ShapedRecipeBuilder.shaped(Items.ENCHANTED_GOLDEN_APPLE, 2)
                 .define('A', Items.GOLDEN_APPLE)
@@ -299,7 +300,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .pattern("BAB")
                 .unlockedBy("has_golden_apple", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.GOLDEN_APPLE).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Items.ENCHANTED_GOLDEN_APPLE.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.ENCHANTED_GOLDEN_APPLE).getPath()));
 
         ShapelessRecipeBuilder.shapeless(Items.GREEN_DYE, 2)
                 .requires(Items.YELLOW_DYE)
@@ -308,13 +309,13 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                         .of(Items.YELLOW_DYE).build()))
                 .unlockedBy("has_blue_dye", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.BLUE_DYE).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Items.GREEN_DYE.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.GREEN_DYE).getPath()));
 
         ShapelessRecipeBuilder.shapeless(Items.BLACK_DYE, 2)
                 .requires(UBTags.Items.BLACK_DYE_RESOURCES)
                 .unlockedBy("has_black_dyes", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(UBTags.Items.BLACK_DYE_RESOURCES).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Items.BLACK_DYE.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.BLACK_DYE).getPath()));
 
         ShapedRecipeBuilder.shaped(Items.BROWN_MUSHROOM_BLOCK, 4)
                 .define('M', Items.BROWN_MUSHROOM)
@@ -322,7 +323,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .pattern("MM")
                 .unlockedBy("has_brown_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.BROWN_MUSHROOM).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Blocks.BROWN_MUSHROOM_BLOCK.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.BROWN_MUSHROOM_BLOCK).getPath()));
 
         ShapedRecipeBuilder.shaped(Items.RED_MUSHROOM_BLOCK, 4)
                 .define('M', Items.RED_MUSHROOM)
@@ -330,7 +331,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .pattern("MM")
                 .unlockedBy("has_red_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.RED_MUSHROOM).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Blocks.RED_MUSHROOM_BLOCK.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.RED_MUSHROOM_BLOCK).getPath()));
 
         ShapedRecipeBuilder.shaped(Items.MUSHROOM_STEM, 4)
                 .define('R', Items.RED_MUSHROOM)
@@ -341,7 +342,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                         .of(Items.BROWN_MUSHROOM).build()))
                 .unlockedBy("has_red_mushroom", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.RED_MUSHROOM).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Blocks.MUSHROOM_STEM.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.MUSHROOM_STEM).getPath()));
 
         ShapedRecipeBuilder.shaped(Items.CAKE, 1)
                 .define('#', UBTags.Items.MILK_BOTTLE)
@@ -355,7 +356,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                         .of(Unordinary_BasicsItems.GOAT_MILK_BOTTLE).build()))
                 .unlockedBy("has_milk_bottle", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Unordinary_BasicsItems.MILK_BOTTLE).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,Blocks.CAKE.getRegistryName().getPath()));
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.CAKE).getPath()));
 
     }
 

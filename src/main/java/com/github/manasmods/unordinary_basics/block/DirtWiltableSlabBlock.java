@@ -2,6 +2,7 @@ package com.github.manasmods.unordinary_basics.block;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.state.BlockState;
@@ -21,7 +22,7 @@ public class DirtWiltableSlabBlock extends PathableSlabBlock {
     }
 
     @Override
-    public void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, Random pRandom) {
+    public void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
         if (pRandom.nextBoolean()) return;
         if (!pLevel.getBlockState(pPos.above()).getCollisionShape(pLevel,pPos.above()).isEmpty() && !pState.getValue(SlabBlock.TYPE).equals(SlabType.BOTTOM)){
 

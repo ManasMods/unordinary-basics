@@ -12,12 +12,13 @@ public class OverlayEventHandler {
     private static final QuiverArrowHudOverlay quiverOverlay = new QuiverArrowHudOverlay();
 
     @SubscribeEvent
-    public static void renderOverlays(final RenderGuiOverlayEvent.Post event){
-        if (event.getType() != RenderGuiOverlayEvent.ElementType.ALL) return;
+    public static void renderOverlays(final RenderGuiOverlayEvent event){
+        //I wrote this but forgot what it does so I can't port it now
+        //if (event.getOverlay() != RenderGuiOverlayEvent.ElementType.ALL) return;
 
         int x = (event.getWindow().getGuiScaledWidth() - 24) / 2;
         int y = event.getWindow().getGuiScaledHeight() - 64;
 
-        quiverOverlay.drawHUD(event.getMatrixStack(),x,y);
+        quiverOverlay.drawHUD(event.getPoseStack(),x,y);
     }
 }

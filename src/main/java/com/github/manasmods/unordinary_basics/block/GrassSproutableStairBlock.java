@@ -3,6 +3,7 @@ package com.github.manasmods.unordinary_basics.block;
 import com.github.manasmods.unordinary_basics.utils.UBTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.StairBlock;
@@ -70,7 +71,7 @@ public class GrassSproutableStairBlock extends PathableStairBlock {
     }
 
     @Override
-    public void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, Random pRandom) {
+    public void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
         if (pRandom.nextBoolean()) {
             trySprout(pLevel, pPos);
         }

@@ -78,11 +78,12 @@ public class UBClient {
 
     @SubscribeEvent
     public static void onTextureStitch(TextureStitchEvent.Pre event) {
-        if(event.getAtlas().location() == Sheets.BANNER_SHEET) {
+        //TODO: FIX THIS, I don't know what the point of this is, but the methods it uses seem to be gone
+        /*if(event.getAtlas().location() == Sheets.BANNER_SHEET) {
             for(BannerPattern pattern : BannerPattern.values()) {
                 event.addSprite(new ResourceLocation(Unordinary_Basics.MOD_ID, "entity/banner/" + pattern.getFilename()));
             }
-        }
+        }*/
 
         if (event.getAtlas().location() == InventoryMenu.BLOCK_ATLAS) {
             List<String> registerValues = List.of(

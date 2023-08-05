@@ -1,5 +1,7 @@
 package com.github.manasmods.unordinary_basics.data.gen;
 
+//TODO: FIX THE CACHING PART OF THIS
+
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.google.common.collect.Sets;
 import com.google.gson.Gson;
@@ -7,6 +9,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import lombok.RequiredArgsConstructor;
+import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.HashCache;
@@ -23,13 +26,13 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.function.Consumer;
 
-@RequiredArgsConstructor
+/*@RequiredArgsConstructor
 public abstract class FletchingRecipeProvider implements DataProvider {
     private static final Gson GSON = (new GsonBuilder()).setPrettyPrinting().create();
     private final DataGenerator generator;
 
     @Override
-    public void run(HashCache pCache) {
+    public void run(CachedOutput pCache) {
         Path path = this.generator.getOutputFolder();
         Set<ResourceLocation> set = Sets.newHashSet();
         buildCraftingRecipes((finishedFletchingRecipe) -> {
@@ -42,7 +45,7 @@ public abstract class FletchingRecipeProvider implements DataProvider {
         });
     }
 
-    private static void saveRecipe(HashCache pCache, JsonObject pRecipeJson, Path pPath) {
+    private static void saveRecipe(CachedOutput pCache, JsonObject pRecipeJson, Path pPath) {
         try {
             String s = GSON.toJson((JsonElement) pRecipeJson);
             String s1 = SHA1.hashUnencodedChars(s).toString();
@@ -90,4 +93,4 @@ public abstract class FletchingRecipeProvider implements DataProvider {
     protected FletchingRecipeBuilder fletch(ItemStack stack) {
         return FletchingRecipeBuilder.create(stack);
     }
-}
+}*/

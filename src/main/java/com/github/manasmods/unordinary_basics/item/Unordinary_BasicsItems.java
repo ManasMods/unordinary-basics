@@ -5,50 +5,50 @@ import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.ObjectHolder;
 
 @SuppressWarnings("unused")
-@ObjectHolder(Unordinary_Basics.MOD_ID)
+
 public class Unordinary_BasicsItems {
-    @ObjectHolder("animal_bait")
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:animal_bait")
     public static final Item ANIMAL_BAIT = null;
-    @ObjectHolder("goat_milk_bottle")
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:goat_milk_bottle")
     public static final Item GOAT_MILK_BOTTLE = null;
-    @ObjectHolder("glider")
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:glider")
     public static final Item GLIDER = null;
-    @ObjectHolder("goat_milk_bucket")
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:goat_milk_bucket")
     public static final Item GOAT_MILK_BUCKET = null;
-    @ObjectHolder("leaper")
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:leaper")
     public static final Item LEAPER = null;
-    @ObjectHolder("map_book")
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:map_book")
     public static final Item MAP_BOOK = null;
-    @ObjectHolder("milk_bottle")
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:milk_bottle")
     public static final Item MILK_BOTTLE = null;
-    @ObjectHolder("potion_belt")
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:potion_belt")
     public static final Item POTION_BELT = null;
-    @ObjectHolder("pouch")
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:pouch")
     public static final Item POUCH = null;
-    @ObjectHolder("quiver")
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:quiver")
     public static final Item QUIVER = null;
-    @ObjectHolder("rabbit_boots")
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:rabbit_boots")
     public static final Item RABBIT_BOOTS = null;
-    @ObjectHolder("technoblade_crown")
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:technoblade_crown")
     public static final Item TECHNOBLADE_CROWN = null;
-    @ObjectHolder("unknown_blade_fragment")
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:unknown_blade_fragment")
     public static final Item UNKNOWN_BLADE_FRAGMENT = null;
-    @ObjectHolder("unknown_sword_handle_fragment")
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:unknown_sword_handle_fragment")
     public static final Item UNKNOWN_SWORD_HANDLE_FRAGMENT = null;
-    @ObjectHolder("unknown_hilt_fragment")
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:unknown_hilt_fragment")
     public static final Item UNKNOWN_HILT_FRAGMENT = null;
-    @ObjectHolder("zenith")
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:zenith")
     public static final Item ZENITH = null;
-    @ObjectHolder("music_disc_queen")
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:music_disc_queen")
     public static final Item MUSIC_DISC_QUEEN = null;
-    @ObjectHolder("builders_glove")
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:builders_glove")
     public static final Item BUILDERS_GLOVE = null;
-    @ObjectHolder("slime_compass")
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:slime_compass")
     public static final Item SLIME_COMPASS = null;
-    @ObjectHolder("redstone_pouch")
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:redstone_pouch")
     public static final Item REDSTONE_POUCH = null;
-    @ObjectHolder("barrel_backpack")
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:barrel_backpack")
     public static final Item BARREL_BACKPACK = null;
-    @ObjectHolder("chest_backpack")
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:chest_backpack")
     public static final Item CHEST_BACKPACK = null;
 }

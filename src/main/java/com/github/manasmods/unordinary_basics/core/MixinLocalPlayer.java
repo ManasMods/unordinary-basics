@@ -9,6 +9,7 @@ import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.network.protocol.game.ServerboundPlayerCommandPacket;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.player.ProfilePublicKey;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import org.spongepowered.asm.mixin.Mixin;
@@ -16,10 +17,12 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import javax.annotation.Nullable;
+
 @Mixin(LocalPlayer.class)
 public class MixinLocalPlayer extends AbstractClientPlayer {
-    public MixinLocalPlayer(ClientLevel pClientLevel, GameProfile pGameProfile) {
-        super(pClientLevel, pGameProfile);
+    public MixinLocalPlayer(ClientLevel pClientLevel, GameProfile pGameProfile, @Nullable ProfilePublicKey pProfilePublicKey) {
+        super(pClientLevel, pGameProfile, pProfilePublicKey);
     }
 
     LocalPlayer localPlayer = (LocalPlayer) (Object)this;

@@ -16,7 +16,7 @@ import net.minecraft.world.item.*;
 import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
-import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.items.ItemStackHandler;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -57,7 +57,7 @@ public abstract class MixinPotionItem extends Item {
                 player.getCapability(CapabilityUBInventory.UB_INVENTORY_CAPABILITY).ifPresent(handler -> {
                    if (handler instanceof UBInventoryItemStackHandler stackHandler){
                        if (stackHandler.isItemEquipped(Unordinary_BasicsItems.POTION_BELT)){
-                           stackHandler.findFirstInstanceOf(Unordinary_BasicsItems.POTION_BELT).getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(itemHandler -> {
+                           stackHandler.findFirstInstanceOf(Unordinary_BasicsItems.POTION_BELT).getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(itemHandler -> {
                                for (int i = 0; i < itemHandler.getSlots(); i++) {
                                    if (itemHandler.getStackInSlot(i).isEmpty() || itemHandler.getStackInSlot(i).is(UBTags.Items.POTION_BELT_ITEMS) || itemHandler.getStackInSlot(i).getItem() instanceof ThrowablePotionItem) continue;
                                    player.getInventory().setItem(player.getInventory().selected,itemHandler.getStackInSlot(i));
@@ -93,7 +93,7 @@ public abstract class MixinPotionItem extends Item {
             }
         }
 
-        pLevel.gameEvent(pEntityLiving, GameEvent.DRINKING_FINISH, pEntityLiving.eyeBlockPosition());
+        pLevel.gameEvent(pEntityLiving, GameEvent.DRINK, pEntityLiving.getEyePosition());
         cir.setReturnValue(pStack);
     }
 

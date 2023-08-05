@@ -1,6 +1,6 @@
 package com.github.manasmods.unordinary_basics.data;
 
-import com.github.manasmods.unordinary_basics.data.gen.FletchingRecipeProvider;
+//import com.github.manasmods.unordinary_basics.data.gen.FletchingRecipeProvider;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
@@ -15,7 +15,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Consumer;
 
-public class Unordinary_BasicsFletchingRecipeProvider extends FletchingRecipeProvider {
+/*public class Unordinary_BasicsFletchingRecipeProvider extends FletchingRecipeProvider {
     public Unordinary_BasicsFletchingRecipeProvider(GatherDataEvent gatherDataEvent) {
         super(gatherDataEvent.getGenerator());
     }
@@ -55,7 +55,7 @@ public class Unordinary_BasicsFletchingRecipeProvider extends FletchingRecipePro
                 .pattern("  ")
                 .define('P', StrictNBTIngredient.of(potionStack))
                 .define('A', StrictNBTIngredient.of(new ItemStack(Items.ARROW, 32)))
-                .save(pFinishedRecipeConsumer, new ResourceLocation("minecraft", "tipped_arrow_" + potion.getRegistryName().getPath()));
+                .save(pFinishedRecipeConsumer, new ResourceLocation("minecraft", "tipped_arrow_" + ForgeRegistries.POTIONS.getKey(potion).getPath()));
         });
     }
-}
+}*/
