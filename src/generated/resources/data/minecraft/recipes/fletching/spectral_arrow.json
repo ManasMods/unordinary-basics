@@ -1,22 +1,22 @@
 {
   "type": "unordinary_basics:fletching_recipe",
-  "pattern": [
-    "  ",
-    " A",
-    " G"
-  ],
   "key": {
     "A": {
       "type": "forge:nbt",
-      "item": "minecraft:arrow",
-      "count": 8
+      "count": 8,
+      "item": "minecraft:arrow"
     },
     "G": {
       "tag": "forge:dusts/glowstone"
     }
   },
+  "pattern": [
+    "  ",
+    " A",
+    " G"
+  ],
   "result": {
-    "item": "minecraft:spectral_arrow",
-    "count": 8
+    "count": 8,
+    "item": "minecraft:spectral_arrow"
   }
 }

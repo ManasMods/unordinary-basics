@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#  ",
-    "## ",
-    "###"
-  ],
   "key": {
     "#": {
       "item": "minecraft:snow"
     }
   },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
   "result": {
-    "item": "unordinary_basics:snow_stairs",
-    "count": 8
+    "count": 8,
+    "item": "unordinary_basics:snow_stairs"
   }
 }

@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#  ",
-    "## ",
-    "###"
-  ],
   "key": {
     "#": {
       "item": "minecraft:mycelium"
     }
   },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
   "result": {
-    "item": "unordinary_basics:mycelium_stairs",
-    "count": 8
+    "count": 8,
+    "item": "unordinary_basics:mycelium_stairs"
   }
 }

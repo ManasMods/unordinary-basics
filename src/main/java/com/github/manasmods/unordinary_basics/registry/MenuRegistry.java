@@ -10,8 +10,10 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.common.extensions.IForgeMenuType;
 import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.RegistryObject;
 
 class MenuRegistry {
+
     public static void register(DeferredRegister<MenuType<?>> registry) {
         registry.register("juke_box_menu", () -> IForgeMenuType.create((windowId, inv, data) -> {
             BlockPos pos = data.readBlockPos();
@@ -24,6 +26,7 @@ class MenuRegistry {
                 throw new IllegalStateException("Can not create JukeBoxMenu from non JukeBox block");
             }
         }));
+
         registry.register("fletching_table_menu", () -> IForgeMenuType.create((windowId, inv, data) -> {
             BlockPos pos = data.readBlockPos();
             //This gets called by the client only at all times
@@ -31,6 +34,8 @@ class MenuRegistry {
             return new FletchingTableMenu(windowId, ContainerLevelAccess.create(level, pos), inv, pos);
         }));
         registry.register("inventory_menu", () -> IForgeMenuType.create((windowId, inv, data) -> new UBInventoryMenu(windowId, inv, inv.player)));
+
+        registry.register("item_inventory_menu", () -> IForgeMenuType.create((windowId, inv, data) -> new UBItemInventoryMenu(windowId, inv, inv.player)));
 
         registry.register("builders_glove_menu", () -> IForgeMenuType.create(BuildersGloveMenu::new));
 

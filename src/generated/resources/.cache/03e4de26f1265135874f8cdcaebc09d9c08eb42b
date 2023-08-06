@@ -1,0 +1,10 @@
+// 1.19.2	2023-08-06T00:09:34.6991311	Tags for minecraft:item
+8697a43c0dfd4099d819e80caece0ed5cd7de6d2 data/forge/tags/items/bear_food.json
+ea31892b8558cdc6c530b01ec8a661337183d63f data/forge/tags/items/milk_bottle.json
+79e3ae7abe580ea8f6097ba19e0a8f29bcf963eb data/forge/tags/items/storage_wooden.json
+156161578fe55da755f09f012faeec44d23982ec data/forge/tags/items/tame_bear_food.json
+ea0c7a8847e282b9f16ff0c132dec142c34b0d29 data/unordinary_basics/tags/items/black_dye_resources.json
+aa6ec9c1bbfe5929df162a50fc46c82238c85760 data/unordinary_basics/tags/items/potion_belt_items.json
+016c8c449fce6bb93a02f16d34eac7bdbaa1c9c2 data/unordinary_basics/tags/items/stone.json
+e6a557e0f0c7023bf91eaaf1ba66fadae53fd806 data/unordinary_basics/tags/items/ub_slot_back.json
+35133e95f1c8fdd7a1c21afcc231fc0bffefb9a8 data/unordinary_basics/tags/items/ub_slot_waist.json

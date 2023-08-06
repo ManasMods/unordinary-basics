@@ -1,26 +1,26 @@
 {
   "type": "unordinary_basics:fletching_recipe",
+  "key": {
+    "A": {
+      "type": "forge:nbt",
+      "count": 32,
+      "item": "minecraft:arrow"
+    },
+    "P": {
+      "type": "forge:nbt",
+      "count": 1,
+      "item": "minecraft:lingering_potion",
+      "nbt": "{Potion:\"apotheosis:long_wither\"}"
+    }
+  },
   "pattern": [
     " P",
     " A",
     "  "
   ],
-  "key": {
-    "P": {
-      "type": "forge:nbt",
-      "item": "minecraft:lingering_potion",
-      "count": 1,
-      "nbt": "{Potion:\"apotheosis:long_wither\"}"
-    },
-    "A": {
-      "type": "forge:nbt",
-      "item": "minecraft:arrow",
-      "count": 32
-    }
-  },
   "result": {
-    "item": "minecraft:tipped_arrow",
     "count": 32,
+    "item": "minecraft:tipped_arrow",
     "nbt": {
       "Potion": "apotheosis:long_wither"
     }

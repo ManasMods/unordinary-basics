@@ -12,7 +12,7 @@ import net.minecraft.world.item.ItemStack;
 import javax.annotation.Nonnull;
 
 public class SlotUBInventory extends Slot {
-    private static Container emptyInventory = new SimpleContainer(0);
+    private static final Container emptyInventory = new SimpleContainer(0);
     private final IUBInventoryHandler itemHandler;
     private final int index;
 

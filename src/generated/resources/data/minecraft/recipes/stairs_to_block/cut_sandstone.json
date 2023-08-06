@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:cut_sandstone_stairs"
+    },
+    {
+      "item": "unordinary_basics:cut_sandstone_stairs"
+    },
+    {
+      "item": "unordinary_basics:cut_sandstone_stairs"
+    },
+    {
+      "item": "unordinary_basics:cut_sandstone_stairs"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "minecraft:cut_sandstone"
+  }
+}

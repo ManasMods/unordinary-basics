@@ -1,21 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "PPP",
-    "SIS",
-    "I I"
-  ],
   "key": {
+    "I": {
+      "item": "minecraft:stick"
+    },
     "P": {
       "item": "minecraft:phantom_membrane"
     },
     "S": {
       "item": "minecraft:string"
-    },
-    "I": {
-      "item": "minecraft:stick"
     }
   },
+  "pattern": [
+    "PPP",
+    "SIS",
+    "I I"
+  ],
   "result": {
     "item": "unordinary_basics:glider"
   }

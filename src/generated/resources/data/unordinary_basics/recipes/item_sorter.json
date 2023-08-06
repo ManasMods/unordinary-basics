@@ -1,9 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "NTN",
-    " H "
-  ],
   "key": {
     "H": {
       "item": "minecraft:hopper"
@@ -15,6 +11,10 @@
       "tag": "minecraft:signs"
     }
   },
+  "pattern": [
+    "NTN",
+    " H "
+  ],
   "result": {
     "item": "unordinary_basics:item_sorter"
   }

@@ -1,21 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "ASA",
-    "SCS",
-    "ASA"
-  ],
   "key": {
+    "A": {
+      "item": "minecraft:amethyst_shard"
+    },
     "C": {
       "item": "minecraft:compass"
     },
     "S": {
       "item": "minecraft:slime_ball"
-    },
-    "A": {
-      "item": "minecraft:amethyst_shard"
     }
   },
+  "pattern": [
+    "ASA",
+    "SCS",
+    "ASA"
+  ],
   "result": {
     "item": "unordinary_basics:slime_compass"
   }

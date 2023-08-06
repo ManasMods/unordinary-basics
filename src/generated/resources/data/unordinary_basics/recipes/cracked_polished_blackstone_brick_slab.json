@@ -1,15 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###"
-  ],
   "key": {
     "#": {
       "item": "minecraft:cracked_polished_blackstone_bricks"
     }
   },
+  "pattern": [
+    "###"
+  ],
   "result": {
-    "item": "unordinary_basics:cracked_polished_blackstone_brick_slab",
-    "count": 6
+    "count": 6,
+    "item": "unordinary_basics:cracked_polished_blackstone_brick_slab"
   }
 }

@@ -1,20 +1,20 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "LBL",
-    "F F"
-  ],
   "key": {
+    "B": {
+      "item": "minecraft:leather_boots"
+    },
     "F": {
       "item": "minecraft:rabbit_foot"
     },
     "L": {
       "item": "minecraft:rabbit_hide"
-    },
-    "B": {
-      "item": "minecraft:leather_boots"
     }
   },
+  "pattern": [
+    "LBL",
+    "F F"
+  ],
   "result": {
     "item": "unordinary_basics:rabbit_boots"
   }

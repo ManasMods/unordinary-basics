@@ -1,23 +1,23 @@
 {
   "type": "unordinary_basics:fletching_recipe",
-  "pattern": [
-    "F ",
-    "S ",
-    "A "
-  ],
   "key": {
+    "A": {
+      "tag": "forge:feathers"
+    },
     "F": {
       "item": "minecraft:flint"
     },
     "S": {
       "tag": "forge:rods/wooden"
-    },
-    "A": {
-      "tag": "forge:feathers"
     }
   },
+  "pattern": [
+    "F ",
+    "S ",
+    "A "
+  ],
   "result": {
-    "item": "minecraft:arrow",
-    "count": 8
+    "count": 8,
+    "item": "minecraft:arrow"
   }
 }

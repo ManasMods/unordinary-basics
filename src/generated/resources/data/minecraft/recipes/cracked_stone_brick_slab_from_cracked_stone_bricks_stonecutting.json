@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
+  "count": 2,
   "ingredient": {
     "item": "minecraft:cracked_stone_bricks"
   },
-  "result": "unordinary_basics:cracked_stone_brick_slab",
-  "count": 2
+  "result": "unordinary_basics:cracked_stone_brick_slab"
 }

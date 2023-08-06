@@ -63,12 +63,6 @@ public class Unordinary_BasicsInventoryScreen extends AbstractContainerScreen<UB
         int j = this.topPos;
         this.blit(poseStack, i, j, 0, 0, this.imageWidth, this.imageHeight);
         renderEntityInInventory(i + 51, j + 75, 30, (float)(i + 51) - this.xMouse, (float)(j + 75 - 50) - this.yMouse, this.minecraft.player);
-
-        for (int k = 0; k < menu.getStackHandler().getSlots(); ++k){
-            if (menu.getStackHandler().getStackInSlot(k).isEmpty()) continue;
-            if (menu.getStackHandler().getStackInSlot(k).getItem() instanceof IUBInventoryItem item)
-            item.renderUsed(poseStack,mouseX,mouseY,partialTick,this);
-        }
     }
 
     //taken from InventoryScreen class

@@ -2,6 +2,7 @@ package com.github.manasmods.unordinary_basics.client;
 
 import com.github.manasmods.manascore.client.keybinding.KeybindingRegistry;
 import com.github.manasmods.manascore.tab.InventoryTabRegistry;
+import com.github.manasmods.manascore.tab.TabPosition;
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
 import com.github.manasmods.unordinary_basics.block.entity.Unordinary_BasicsBlockEntities;
@@ -13,6 +14,7 @@ import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
 import com.github.manasmods.unordinary_basics.item.custom.SlimeCompassItem;
 import com.github.manasmods.unordinary_basics.menu.Unordinary_BasicsMenuTypes;
 import com.github.manasmods.unordinary_basics.tab.Unordinary_BasicsInventoryTab;
+import com.github.manasmods.unordinary_basics.tab.Unordinary_BasicsItemInventoryTab;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -63,11 +65,13 @@ public class UBClient {
     @SubscribeEvent
     public static void init(final FMLClientSetupEvent e) {
         e.enqueueWork(UBClient::registerBlockTransparencies);
-        e.enqueueWork(() -> InventoryTabRegistry.register(new Unordinary_BasicsInventoryTab(Component.literal("Unordinary Basics"))));
         e.enqueueWork(UBClient::registerEntityRenderer);
         e.enqueueWork(UBClient::registerMenuScreens);
         e.enqueueWork(UBClient::registerItemProperties);
         e.enqueueWork(UBClient::registerKeybinds);
+        e.enqueueWork(() -> InventoryTabRegistry.register(new Unordinary_BasicsInventoryTab(Component.literal("Unordinary Basics"))));
+        Unordinary_BasicsItemInventoryTab itemInventoryTab = new Unordinary_BasicsItemInventoryTab(Component.literal("Unordinary Basics Items")); itemInventoryTab.setPosition(TabPosition.LEFT_BOT);
+        e.enqueueWork(() -> InventoryTabRegistry.register(itemInventoryTab));
     }
 
     @SubscribeEvent
@@ -116,6 +120,7 @@ public class UBClient {
         MenuScreens.register(Unordinary_BasicsMenuTypes.FLETCHING_TABLE_MENU, FletchingTableScreen::new);
         MenuScreens.register(Unordinary_BasicsMenuTypes.JUKE_BOX_MENU, JukeBoxScreen::new);
         MenuScreens.register(Unordinary_BasicsMenuTypes.INVENTORY_MENU, Unordinary_BasicsInventoryScreen::new);
+        MenuScreens.register(Unordinary_BasicsMenuTypes.ITEM_INVENTORY_MENU, Unordinary_BasicsItemInventoryScreen::new);
         MenuScreens.register(Unordinary_BasicsMenuTypes.BUILDERS_GLOVE_MENU, BuildersGloveScreen::new);
         MenuScreens.register(Unordinary_BasicsMenuTypes.ITEM_SORTER_MENU, ItemSorterScreen::new);
     }

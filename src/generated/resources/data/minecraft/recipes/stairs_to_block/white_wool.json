@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:white_wool_stairs"
+    },
+    {
+      "item": "unordinary_basics:white_wool_stairs"
+    },
+    {
+      "item": "unordinary_basics:white_wool_stairs"
+    },
+    {
+      "item": "unordinary_basics:white_wool_stairs"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "minecraft:white_wool"
+  }
+}

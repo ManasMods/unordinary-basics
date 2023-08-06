@@ -8,6 +8,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
@@ -35,8 +36,8 @@ public class ItemSorterBlockEntity extends BlockEntity implements MenuProvider {
     private FormattedCharSequence[] renderMessages;
 
     private boolean renderMessagedFiltered;
-    private final Component[] messages = new Component[]{(Component) Component.EMPTY, (Component) Component.EMPTY, (Component) Component.EMPTY, (Component) Component.EMPTY};
-    private final Component[] filteredMessages = new Component[]{(Component) Component.EMPTY, (Component) Component.EMPTY, (Component) Component.EMPTY, (Component) Component.EMPTY};
+    private final Component[] messages = new MutableComponent[]{Component.literal(""),Component.literal(""),Component.literal(""),Component.literal("")};
+    private final Component[] filteredMessages = new MutableComponent[]{Component.literal(""),Component.literal(""),Component.literal(""),Component.literal("")};
     private static final String[] RAW_TEXT_FIELD_NAMES = new String[]{"Text1", "Text2", "Text3", "Text4"};
     private static final String[] FILTERED_TEXT_FIELD_NAMES = new String[]{"FilteredText1", "FilteredText2", "FilteredText3", "FilteredText4"};
     public ItemSorterBlockEntity(BlockPos pWorldPosition, BlockState pBlockState) {

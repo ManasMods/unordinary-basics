@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#  ",
-    "## ",
-    "###"
-  ],
   "key": {
     "#": {
       "item": "minecraft:soul_soil"
     }
   },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
   "result": {
-    "item": "unordinary_basics:soul_soil_stairs",
-    "count": 8
+    "count": 8,
+    "item": "unordinary_basics:soul_soil_stairs"
   }
 }

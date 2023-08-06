@@ -1,13 +1,13 @@
 {
   "variants": {
-    "type=top": {
-      "model": "unordinary_basics:block/quartz_brick_slab_top"
-    },
     "type=bottom": {
       "model": "unordinary_basics:block/quartz_brick_slab"
     },
     "type=double": {
       "model": "minecraft:block/quartz_bricks"
+    },
+    "type=top": {
+      "model": "unordinary_basics:block/quartz_brick_slab_top"
     }
   }
 }

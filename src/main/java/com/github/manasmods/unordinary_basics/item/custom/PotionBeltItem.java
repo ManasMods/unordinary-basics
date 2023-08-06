@@ -5,7 +5,9 @@ import com.github.manasmods.unordinary_basics.capability.CapabilityUBInventory;
 import com.github.manasmods.unordinary_basics.capability.IUBInventoryItem;
 import com.github.manasmods.unordinary_basics.capability.ItemStackHandlerCapabilityProvider;
 import com.github.manasmods.unordinary_basics.client.gui.Unordinary_BasicsInventoryScreen;
+import com.github.manasmods.unordinary_basics.client.gui.Unordinary_BasicsItemInventoryScreen;
 import com.github.manasmods.unordinary_basics.menu.UBInventoryMenu;
+import com.github.manasmods.unordinary_basics.menu.UBItemInventoryMenu;
 import com.github.manasmods.unordinary_basics.utils.UBTags;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -18,6 +20,7 @@ import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.PotionItem;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
@@ -45,7 +48,7 @@ public class PotionBeltItem extends Item implements IUBInventoryItem {
     }
 
     @Override
-    public void renderUsed(PoseStack pPoseStack, int pMouseX, int pMouseY, float pPartialTick, Unordinary_BasicsInventoryScreen screen) {
+    public void renderUsed(PoseStack pPoseStack, int pMouseX, int pMouseY, float pPartialTick, Unordinary_BasicsItemInventoryScreen screen) {
         int imageWidth = 140;
         int imageHeight = 25;
 
@@ -57,8 +60,8 @@ public class PotionBeltItem extends Item implements IUBInventoryItem {
     }
 
     @Override
-    public void addSlots(int windowId, Inventory inventory, Player player, UBInventoryMenu menu, ItemStack stack) {
-        stack.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
+    public void addSlots(int windowId, Inventory inventory, Player player, UBItemInventoryMenu menu, ItemStack stack) {
+        stack.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
             if (handler instanceof ItemStackHandler){
                 ItemStackHandler stackHandler = (ItemStackHandler) handler;
                 int index = 0;

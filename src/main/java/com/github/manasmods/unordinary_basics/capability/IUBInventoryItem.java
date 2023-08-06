@@ -1,7 +1,9 @@
 package com.github.manasmods.unordinary_basics.capability;
 
 import com.github.manasmods.unordinary_basics.client.gui.Unordinary_BasicsInventoryScreen;
+import com.github.manasmods.unordinary_basics.client.gui.Unordinary_BasicsItemInventoryScreen;
 import com.github.manasmods.unordinary_basics.menu.UBInventoryMenu;
+import com.github.manasmods.unordinary_basics.menu.UBItemInventoryMenu;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -27,7 +29,7 @@ public interface IUBInventoryItem {
      * This will be rendered <b>over</b> all other rendered layers. <br> <br>
      * All parameters are directly transferred over from the given screen's native <b>renderBg</b> method.
      */
-    void renderUsed(PoseStack pPoseStack, int pMouseX, int pMouseY, float pPartialTick, Unordinary_BasicsInventoryScreen screen);
+    void renderUsed(PoseStack pPoseStack, int pMouseX, int pMouseY, float pPartialTick, Unordinary_BasicsItemInventoryScreen screen);
 
     /**
      * This method should be overridden in order to add slots that this item may contain. You should handle any item capabilities yourself, possibly using {@link ItemStackHandlerCapabilityProvider} <br> <br>
@@ -35,5 +37,5 @@ public interface IUBInventoryItem {
      * Method may be used to conduct other operations on the menu that'd usually be done in the constructor, however it is discouraged. <br> <br>
      * All parameters are directly transferred over.
      */
-    void addSlots(int windowId, Inventory inventory, Player player, UBInventoryMenu menu, ItemStack stack);
+    void addSlots(int windowId, Inventory inventory, Player player, UBItemInventoryMenu menu, ItemStack stack);
 }

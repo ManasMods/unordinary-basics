@@ -115,7 +115,7 @@ public class Unordinary_Basics {
         event.getGenerator().addProvider(event.includeServer(),new Unordinary_BasicsRecipeProvider(event));
         event.getGenerator().addProvider(event.includeServer(),new Unordinary_BasicsLootTableProvider(event));
         event.getGenerator().addProvider(event.includeServer(),new Unordinary_BasicsBlockTagProvider(event));
-        //event.getGenerator().addProvider(event.includeServer(),new Unordinary_BasicsFletchingRecipeProvider(event));
+        event.getGenerator().addProvider(event.includeServer(),new Unordinary_BasicsFletchingRecipeProvider(event));
         Unordinary_BasicsBlockTagProvider blockTagProvider = new Unordinary_BasicsBlockTagProvider(event);
         event.getGenerator().addProvider(event.includeServer(),blockTagProvider);
         event.getGenerator().addProvider(event.includeServer(),new Unordinary_BasicsItemTagProvider(event, blockTagProvider));

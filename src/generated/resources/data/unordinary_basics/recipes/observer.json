@@ -1,21 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "tag": "unordinary_basics:stone"
+    },
+    "Q": {
+      "item": "minecraft:quartz"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
   "pattern": [
     "###",
     "RRQ",
     "###"
   ],
-  "key": {
-    "#": {
-      "tag": "unordinary_basics:stone"
-    },
-    "R": {
-      "item": "minecraft:redstone"
-    },
-    "Q": {
-      "item": "minecraft:quartz"
-    }
-  },
   "result": {
     "item": "minecraft:observer"
   }

@@ -1,21 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "S S",
-    "LIL",
-    "S S"
-  ],
   "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
     "L": {
       "item": "minecraft:leather"
     },
     "S": {
       "item": "minecraft:string"
-    },
-    "I": {
-      "item": "minecraft:iron_ingot"
     }
   },
+  "pattern": [
+    "S S",
+    "LIL",
+    "S S"
+  ],
   "result": {
     "item": "minecraft:saddle"
   }

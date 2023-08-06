@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:orange_stained_glass_stairs"
+    },
+    {
+      "item": "unordinary_basics:orange_stained_glass_stairs"
+    },
+    {
+      "item": "unordinary_basics:orange_stained_glass_stairs"
+    },
+    {
+      "item": "unordinary_basics:orange_stained_glass_stairs"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "minecraft:orange_stained_glass"
+  }
+}

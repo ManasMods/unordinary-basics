@@ -1,24 +1,24 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "SES",
-    "WWW"
-  ],
   "key": {
     "#": {
       "tag": "forge:milk_bottle"
-    },
-    "W": {
-      "item": "minecraft:wheat"
     },
     "E": {
       "item": "minecraft:egg"
     },
     "S": {
       "item": "minecraft:sugar"
+    },
+    "W": {
+      "item": "minecraft:wheat"
     }
   },
+  "pattern": [
+    "###",
+    "SES",
+    "WWW"
+  ],
   "result": {
     "item": "minecraft:cake"
   }

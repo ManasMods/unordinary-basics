@@ -1,17 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#  ",
-    "## ",
-    "###"
-  ],
   "key": {
     "#": {
       "item": "minecraft:orange_terracotta"
     }
   },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
   "result": {
-    "item": "unordinary_basics:orange_terracotta_stairs",
-    "count": 8
+    "count": 8,
+    "item": "unordinary_basics:orange_terracotta_stairs"
   }
 }

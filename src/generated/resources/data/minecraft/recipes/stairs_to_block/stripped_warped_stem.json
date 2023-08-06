@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:stripped_warped_stem_stairs"
+    },
+    {
+      "item": "unordinary_basics:stripped_warped_stem_stairs"
+    },
+    {
+      "item": "unordinary_basics:stripped_warped_stem_stairs"
+    },
+    {
+      "item": "unordinary_basics:stripped_warped_stem_stairs"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "minecraft:stripped_warped_stem"
+  }
+}

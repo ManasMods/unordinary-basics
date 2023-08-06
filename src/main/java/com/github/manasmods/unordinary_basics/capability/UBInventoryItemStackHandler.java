@@ -89,6 +89,7 @@ public class UBInventoryItemStackHandler implements IUBInventoryHandler, INBTSer
     /**
      * Don't call this unless working on {@link UBInventoryMenu}
      */
+    @Deprecated(forRemoval = true)
     public void setMenu(UBInventoryMenu menu) {
         this.menu = menu;
     }
@@ -262,9 +263,6 @@ public class UBInventoryItemStackHandler implements IUBInventoryHandler, INBTSer
 
     protected void onContentsChanged(int slot)
     {
-        if (menu != null){
-            menu.resetScreen();
-        }
 
     }
 

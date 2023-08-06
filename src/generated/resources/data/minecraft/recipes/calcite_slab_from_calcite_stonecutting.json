@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
+  "count": 2,
   "ingredient": {
     "item": "minecraft:calcite"
   },
-  "result": "unordinary_basics:calcite_slab",
-  "count": 2
+  "result": "unordinary_basics:calcite_slab"
 }

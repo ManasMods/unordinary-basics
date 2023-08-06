@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
+  "count": 1,
   "ingredient": {
     "item": "minecraft:chiseled_deepslate"
   },
-  "result": "unordinary_basics:chiseled_deepslate_stairs",
-  "count": 1
+  "result": "unordinary_basics:chiseled_deepslate_stairs"
 }

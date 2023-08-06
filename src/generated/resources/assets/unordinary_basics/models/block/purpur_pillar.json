@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_column",
   "textures": {
-    "side": "minecraft:block/purpur_pillar",
-    "end": "minecraft:block/purpur_pillar_top"
+    "end": "minecraft:block/purpur_pillar_top",
+    "side": "minecraft:block/purpur_pillar"
   }
 }

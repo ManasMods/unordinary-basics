@@ -1,9 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "LLL",
-    "LWL"
-  ],
   "key": {
     "L": {
       "item": "minecraft:leather"
@@ -12,6 +8,10 @@
       "tag": "minecraft:wool"
     }
   },
+  "pattern": [
+    "LLL",
+    "LWL"
+  ],
   "result": {
     "item": "unordinary_basics:builders_glove"
   }

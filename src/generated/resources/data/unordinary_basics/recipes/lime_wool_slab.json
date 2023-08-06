@@ -1,15 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###"
-  ],
   "key": {
     "#": {
       "item": "minecraft:lime_wool"
     }
   },
+  "pattern": [
+    "###"
+  ],
   "result": {
-    "item": "unordinary_basics:lime_wool_slab",
-    "count": 6
+    "count": 6,
+    "item": "unordinary_basics:lime_wool_slab"
   }
 }

@@ -1,13 +1,13 @@
 {
   "variants": {
-    "type=top": {
-      "model": "unordinary_basics:block/spruce_log_slab_top"
-    },
     "type=bottom": {
       "model": "unordinary_basics:block/spruce_log_slab"
     },
     "type=double": {
       "model": "minecraft:block/spruce_log"
+    },
+    "type=top": {
+      "model": "unordinary_basics:block/spruce_log_slab_top"
     }
   }
 }

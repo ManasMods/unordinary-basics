@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:birch_stairs"
+    },
+    {
+      "item": "minecraft:birch_stairs"
+    },
+    {
+      "item": "minecraft:birch_stairs"
+    },
+    {
+      "item": "minecraft:birch_stairs"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "minecraft:birch_planks"
+  }
+}

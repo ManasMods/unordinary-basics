@@ -1,10 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###",
-    "# #",
-    "#R#"
-  ],
   "key": {
     "#": {
       "tag": "unordinary_basics:stone"
@@ -13,6 +8,11 @@
       "item": "minecraft:redstone"
     }
   },
+  "pattern": [
+    "###",
+    "# #",
+    "#R#"
+  ],
   "result": {
     "item": "minecraft:dropper"
   }

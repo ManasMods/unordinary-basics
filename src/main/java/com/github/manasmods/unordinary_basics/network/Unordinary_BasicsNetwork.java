@@ -8,7 +8,7 @@ import net.minecraftforge.network.NetworkRegistry;
 import net.minecraftforge.network.simple.SimpleChannel;
 
 public class Unordinary_BasicsNetwork {
-    private static final String PROTOCOL_VERSION = String.valueOf(4);
+    private static final String PROTOCOL_VERSION = String.valueOf(5);
     private static final SimpleChannel INSTANCE = NetworkRegistry.newSimpleChannel(
         new ResourceLocation(Unordinary_Basics.MOD_ID, "main"), () -> PROTOCOL_VERSION, PROTOCOL_VERSION::equals, PROTOCOL_VERSION::equals);
 
@@ -20,6 +20,7 @@ public class Unordinary_BasicsNetwork {
         INSTANCE.registerMessage(++messageId, RequestPlayerProneToggle.class, RequestPlayerProneToggle::toBytes, RequestPlayerProneToggle::new, RequestPlayerProneToggle::handle);
         INSTANCE.registerMessage(++messageId, UBInventoryClientSync.class, UBInventoryClientSync::toBytes, UBInventoryClientSync::new, UBInventoryClientSync::handle);
         INSTANCE.registerMessage(++messageId, SetItemSorterMessage.class, SetItemSorterMessage::toBytes, SetItemSorterMessage::new, SetItemSorterMessage::handle);
+        INSTANCE.registerMessage(++messageId, RequestUBItemInventoryMenu.class, RequestUBItemInventoryMenu::toBytes, RequestUBItemInventoryMenu::new, RequestUBItemInventoryMenu::handle);
     }
 
     public static SimpleChannel getInstance() {

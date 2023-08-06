@@ -6,6 +6,7 @@ import com.github.manasmods.unordinary_basics.client.ClientUBInventoryData;
 import net.minecraft.core.NonNullList;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.network.NetworkEvent;
@@ -24,7 +25,7 @@ public class UBInventoryClientSync {
             for (int i = 0; i < 2; ++i) {
                 ItemStack stack = buf.readItem();
 
-                stack.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(itemHandler -> {
+                stack.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(itemHandler -> {
                     if (itemHandler instanceof ItemStackHandler stackHandler) {
                         stackHandler.deserializeNBT(stack.getOrCreateTag().getCompound("inventory"));
                     }
@@ -37,7 +38,7 @@ public class UBInventoryClientSync {
         public void toBytes(FriendlyByteBuf buf) {
             for (int i = 0; i < 2; ++i) {
                 ItemStack place = handler.getStackInSlot(i);
-                place.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(itemHandler -> {
+                place.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(itemHandler -> {
                     if (itemHandler instanceof ItemStackHandler stackHandler) {
                         place.getOrCreateTag().put("inventory", stackHandler.serializeNBT());
                     }

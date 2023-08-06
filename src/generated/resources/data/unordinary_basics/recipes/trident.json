@@ -1,21 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "III",
-    "DPD",
-    " P "
-  ],
   "key": {
-    "I": {
-      "item": "minecraft:iron_ingot"
-    },
     "D": {
       "item": "minecraft:diamond"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
     },
     "P": {
       "item": "minecraft:prismarine_shard"
     }
   },
+  "pattern": [
+    "III",
+    "DPD",
+    " P "
+  ],
   "result": {
     "item": "minecraft:trident"
   }

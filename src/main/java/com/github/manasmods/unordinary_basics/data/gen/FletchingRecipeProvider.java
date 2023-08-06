@@ -3,7 +3,9 @@ package com.github.manasmods.unordinary_basics.data.gen;
 //TODO: FIX THE CACHING PART OF THIS
 
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.google.common.base.Preconditions;
 import com.google.common.collect.Sets;
+import com.google.common.hash.Hashing;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
@@ -26,7 +28,7 @@ import java.util.Objects;
 import java.util.Set;
 import java.util.function.Consumer;
 
-/*@RequiredArgsConstructor
+@RequiredArgsConstructor
 public abstract class FletchingRecipeProvider implements DataProvider {
     private static final Gson GSON = (new GsonBuilder()).setPrettyPrinting().create();
     private final DataGenerator generator;
@@ -47,36 +49,10 @@ public abstract class FletchingRecipeProvider implements DataProvider {
 
     private static void saveRecipe(CachedOutput pCache, JsonObject pRecipeJson, Path pPath) {
         try {
-            String s = GSON.toJson((JsonElement) pRecipeJson);
-            String s1 = SHA1.hashUnencodedChars(s).toString();
-            if (!Objects.equals(pCache.getHash(pPath), s1) || !Files.exists(pPath)) {
-                Files.createDirectories(pPath.getParent());
-                BufferedWriter bufferedwriter = Files.newBufferedWriter(pPath);
-
-                try {
-                    bufferedwriter.write(s);
-                } catch (Throwable throwable1) {
-                    if (bufferedwriter != null) {
-                        try {
-                            bufferedwriter.close();
-                        } catch (Throwable throwable) {
-                            throwable1.addSuppressed(throwable);
-                        }
-                    }
-
-                    throw throwable1;
-                }
-
-                if (bufferedwriter != null) {
-                    bufferedwriter.close();
-                }
-            }
-
-            pCache.putNew(pPath, s1);
-        } catch (IOException ioexception) {
-            Unordinary_Basics.getLogger().error("Couldn't save recipe {}", pPath, ioexception);
+            DataProvider.saveStable(pCache, pRecipeJson, pPath);
+        } catch (IOException e) {
+            Unordinary_Basics.getLogger().error("Couldn't save fletching recipe to {}", pPath, e);
         }
-
     }
 
     protected abstract void buildCraftingRecipes(Consumer<FinishedRecipe> pFinishedRecipeConsumer);
@@ -93,4 +69,4 @@ public abstract class FletchingRecipeProvider implements DataProvider {
     protected FletchingRecipeBuilder fletch(ItemStack stack) {
         return FletchingRecipeBuilder.create(stack);
     }
-}*/
+}

@@ -5,7 +5,9 @@ import com.github.manasmods.unordinary_basics.capability.CapabilityUBInventory;
 import com.github.manasmods.unordinary_basics.capability.IUBInventoryItem;
 import com.github.manasmods.unordinary_basics.capability.ItemStackHandlerCapabilityProvider;
 import com.github.manasmods.unordinary_basics.client.gui.Unordinary_BasicsInventoryScreen;
+import com.github.manasmods.unordinary_basics.client.gui.Unordinary_BasicsItemInventoryScreen;
 import com.github.manasmods.unordinary_basics.menu.UBInventoryMenu;
+import com.github.manasmods.unordinary_basics.menu.UBItemInventoryMenu;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.nbt.CompoundTag;
@@ -16,6 +18,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ProjectileWeaponItem;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
@@ -40,7 +43,7 @@ public class QuiverItem extends Item implements IUBInventoryItem {
     }
 
     @Override
-    public void renderUsed(PoseStack pPoseStack, int pMouseX, int pMouseY, float pPartialTick, Unordinary_BasicsInventoryScreen screen) {
+    public void renderUsed(PoseStack pPoseStack, int pMouseX, int pMouseY, float pPartialTick, Unordinary_BasicsItemInventoryScreen screen) {
         int imageWidth = 46;
         int imageHeight = 67;
 
@@ -52,8 +55,8 @@ public class QuiverItem extends Item implements IUBInventoryItem {
     }
 
     @Override
-    public void addSlots(int windowId, Inventory inventory, Player player, UBInventoryMenu menu, ItemStack stack) {
-        stack.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
+    public void addSlots(int windowId, Inventory inventory, Player player, UBItemInventoryMenu menu, ItemStack stack) {
+        stack.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
             if (handler instanceof ItemStackHandler stackHandler){
                 int index = 0;
                 for (int col = 0; col < 2; ++col){

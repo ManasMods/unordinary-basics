@@ -4,14 +4,18 @@ import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.capability.CapabilityUBInventory;
 import com.github.manasmods.unordinary_basics.capability.IUBInventoryItem;
 import com.github.manasmods.unordinary_basics.capability.UBInventoryItemStackHandler;
+import com.github.manasmods.unordinary_basics.client.ClientUBInventoryData;
 import com.github.manasmods.unordinary_basics.menu.slot.SlotUBInventory;
 import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
 import com.github.manasmods.unordinary_basics.network.toserver.RequestUBInventoryMenu;
 import com.mojang.datafixers.util.Pair;
+import net.minecraft.core.NonNullList;
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.game.ClientboundContainerSetSlotPacket;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.Container;
+import net.minecraft.world.SimpleMenuProvider;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Inventory;
@@ -24,11 +28,12 @@ import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.wrapper.InvWrapper;
 import net.minecraftforge.items.wrapper.PlayerArmorInvWrapper;
 import net.minecraftforge.items.wrapper.PlayerOffhandInvWrapper;
+import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
@@ -70,14 +75,17 @@ public class UBInventoryMenu extends RecipeBookMenu<CraftingContainer> {
         this.inventory = inventory;
         this.windowId = windowId;
 
-        player.getCapability(CapabilityUBInventory.UB_INVENTORY_CAPABILITY).ifPresent(handler -> {
-            this.stackHandler = (UBInventoryItemStackHandler) handler;
-        });
-
-        this.externalSlotCount = getExternalSlotCount();
+        if (player.level.isClientSide) {
+            this.stackHandler = (UBInventoryItemStackHandler) ClientUBInventoryData.getHandler();
+        } else {
+            player.getCapability(CapabilityUBInventory.UB_INVENTORY_CAPABILITY).ifPresent(handler -> {
+                this.stackHandler = (UBInventoryItemStackHandler) handler;
+            });
+        }
 
         addPlayerInventorySlots();
-        stackHandler.setMenu(this);
+
+        this.externalSlotCount = getExternalSlotCount();
     }
 
     public Slot addSlotEx(Slot slot){
@@ -98,38 +106,10 @@ public class UBInventoryMenu extends RecipeBookMenu<CraftingContainer> {
         return slotCount;
     }
 
-    public void addSlots(){
-        //RUNNING THIS CRASHES THE GAME WHYYYYY
-        /*List<Slot> removeList = new ArrayList<>();
-        for (Slot slot : slots){
-            if (slot instanceof IUBItemSlot){
-                removeList.add(slot);
-            }
-        }
-
-        slots.removeAll(removeList);*/
-
-        for (int i = 0; i < stackHandler.getSlots(); ++i){
-            if (stackHandler.getStackInSlot(i).isEmpty() || !(stackHandler.getStackInSlot(i).getItem() instanceof IUBInventoryItem)) continue;
-            IUBInventoryItem item = (IUBInventoryItem)stackHandler.getStackInSlot(i).getItem();
-            item.addSlots(windowId,inventory,player,this,stackHandler.getStackInSlot(i));
-        }
-    }
-
-    /*
-    This implementation creates a weird 'flinching effect' when replacing UBInv items, but I almost went crazy trying to remove slots dynamically.
-    WHICH IS NOT SUPPOSED TO BE DONE.
-    If anyone has any idea on how to make the above code work without the game throwing an error that literally doesn't point out any part of this code for whatever reason,
-    GO FOR IT. I WILL NOT. rant over
-    */
-    public void resetScreen(){
-        Unordinary_BasicsNetwork.getInstance().sendToServer(new RequestUBInventoryMenu());
-    }
-
     private void addPlayerInventorySlots() {
         int index = 0;
 
-        //Indexes are provided in format (INCLUSIVE - EXCLUSIVE)
+        //Indexes are provided in format [INCLUSIVE - EXCLUDED)
 
         //0 - 9
         //Hotbar
@@ -190,11 +170,8 @@ public class UBInventoryMenu extends RecipeBookMenu<CraftingContainer> {
         });
         addSlot(new SlotUBInventory(stackHandler,CapabilityUBInventory.SLOT_INDEX.get(CapabilityUBInventory.UBSlot.WAIST),77,44,Pair.of(InventoryMenu.BLOCK_ATLAS,EMPTY_ARMOR_SLOT_WAIST)));
 
-        // 42 - 42 + external slot count
-        //Custom Items' Slots
-        addSlots();
 
-        //42 + external slot count - 43 + external slot count
+        //42 - 43
         //Offhand
         addSlot(new SlotItemHandler(offhandHelper,0,77,62){
             @Nullable
@@ -204,7 +181,7 @@ public class UBInventoryMenu extends RecipeBookMenu<CraftingContainer> {
             }
         });
 
-        //43 + external slot count - 48 + external slot count
+        //43 - 48
         //Crafting
         for(int col = 0; col < 2; ++col){
             for (int row = 0; row < 2; ++row){
@@ -226,7 +203,7 @@ public class UBInventoryMenu extends RecipeBookMenu<CraftingContainer> {
         for (int i = 0; i < stackHandler.getSlots(); i++) {
             if (stackHandler.isItemValid(stack,0) || stackHandler.isItemValid(stack,1)) return true;
             AtomicBoolean shouldReturn = new AtomicBoolean(false);
-            stackHandler.getStackInSlot(i).getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
+            stackHandler.getStackInSlot(i).getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
                 if (handler.isItemValid(0,stack)) {
                     shouldReturn.set(true);
                 }
@@ -264,15 +241,15 @@ public class UBInventoryMenu extends RecipeBookMenu<CraftingContainer> {
                 if (!moveItemStackTo(itemstack1, 0, 9, false)) {
                     return ItemStack.EMPTY;
                 }
-            } else if (index < 9 && applicableForUBSlots(itemstack1) && !isArmor(itemstack1,pPlayer)) {
+            } else if (index < 9 && applicableForUBSlots(itemstack1) && !isArmor(itemstack1, pPlayer)) {
                 if (!moveItemStackTo(itemstack1, 36, 42 + externalSlotCount, true)) {
                     return ItemStack.EMPTY;
                 }
-            } else if (index < 9 && !applicableForUBSlots(itemstack1) && !isArmor(itemstack1,pPlayer)) {
+            } else if (index < 9 && !applicableForUBSlots(itemstack1) && !isArmor(itemstack1, pPlayer)) {
                 if (!moveItemStackTo(itemstack1, 9, 40, false)) {
                     return ItemStack.EMPTY;
                 }
-            } else if (index < 9 && !applicableForUBSlots(itemstack1) && isArmor(itemstack1,pPlayer)) {
+            } else if (index < 9 && !applicableForUBSlots(itemstack1) && isArmor(itemstack1, pPlayer)) {
                 if (!moveItemStackTo(itemstack1, 36, 40, true)) {
                     return ItemStack.EMPTY;
                 }
@@ -288,13 +265,13 @@ public class UBInventoryMenu extends RecipeBookMenu<CraftingContainer> {
 
             slot.onTake(pPlayer, itemstack1);
         }
+
         return itemstack;
     }
 
     @Override
     public void removed(Player pPlayer) {
         super.removed(pPlayer);
-        stackHandler.setMenu(null);
         resultSlots.clearContent();
         if (!pPlayer.level.isClientSide) {
             this.clearContainer(pPlayer, this.craftSlots);
