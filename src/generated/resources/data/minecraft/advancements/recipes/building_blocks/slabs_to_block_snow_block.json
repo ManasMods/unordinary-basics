@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "minecraft:stairs_to_block_snow"
+      "minecraft:slabs_to_block_snow_block"
     ]
   },
   "criteria": {
@@ -12,7 +12,7 @@
         "items": [
           {
             "items": [
-              "unordinary_basics:snow_stairs"
+              "unordinary_basics:snow_slab"
             ]
           }
         ]
@@ -21,7 +21,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "minecraft:stairs_to_block_snow"
+        "recipe": "minecraft:slabs_to_block_snow_block"
       }
     }
   },
