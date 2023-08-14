@@ -4,6 +4,7 @@
   "itemGroup.unordinary_basics.tab3": "Objetos UB",
   "block.unordinary_basics.enchantment_library": "Biblioteca de encantamientos §c(WIP)§",
   "block.unordinary_basics.item_sorter": "Ordenador de objetos",
+  "block.unordinary_basics.item_sorter.desc": "Sneak and Right Click to Open GUI. Right Click to move items from your inventory to block inventory according to what is in the Item Sorters Filters",
   "item.minecraft.milk_bucket": "Cubo de leche de vaca",
   "item.unordinary_basics.animal_bait": "Cebo Animal",
   "item.unordinary_basics.glider": "Ala delta",
