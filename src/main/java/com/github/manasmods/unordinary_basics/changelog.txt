@@ -5,5 +5,6 @@
 TODO:
  - Fix Redstone Pouch bug. In jar file (we think), placing down redstone will crash the game.
  - Update Master Miner to only mine blocks of a same or similar hardness (to avoid cheesing mining long to mine blocks)
+ - Fix Rendering of Glider in Off Hand.
 
 == End of Change Log ==
