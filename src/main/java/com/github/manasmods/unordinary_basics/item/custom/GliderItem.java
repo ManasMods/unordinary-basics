@@ -17,11 +17,11 @@ public class GliderItem extends Item {
     /**
      * Changes the level of the slow falling effect, the higher this is, the slower the player will fall
      */
-    private static int FALL_SPEED_MODIFIER = 4;
+    private static int FALL_SPEED_MODIFIER = 6;
     /**
      * Changes the glider's automatic movement forward's speed, the higher this is, the slower the glider will move
      */
-    private static int GLIDE_SPEED_MODIFIER = 4;
+    private static int GLIDE_SPEED_MODIFIER = 0;
 
     private static final MobEffectInstance SLOW_FALLING = new MobEffectInstance(MobEffects.SLOW_FALLING, 1, FALL_SPEED_MODIFIER, false, false);
 
