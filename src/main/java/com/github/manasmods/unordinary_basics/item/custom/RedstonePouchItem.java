@@ -18,6 +18,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
@@ -39,6 +40,8 @@ public class RedstonePouchItem extends Item {
     @Override
     public InteractionResult useOn(UseOnContext pContext) {
 
+        if ((pContext.getLevel().isClientSide)) return InteractionResult.sidedSuccess(true);
+
         AtomicReference<InteractionResult> result = new AtomicReference<>(InteractionResult.FAIL);
 
         //Block Place Function - from builder's glove
@@ -48,8 +51,8 @@ public class RedstonePouchItem extends Item {
 
                 BlockHitResult hitResult = null;
                 try {
-                    hitResult = (BlockHitResult) ObfuscationReflectionHelper.findMethod(pContext.getClass(),"getHitResult").invoke(pContext);
-                } catch (IllegalAccessException | InvocationTargetException e) {
+                    hitResult = ObfuscationReflectionHelper.getPrivateValue(UseOnContext.class,pContext,"f_43705_");
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
 
@@ -58,7 +61,10 @@ public class RedstonePouchItem extends Item {
                     UseOnContext customContext = new UseOnContext(pContext.getLevel(), pContext.getPlayer(), pContext.getHand(), blockStack, hitResult);
                     result.set(blockStack.getItem().useOn(customContext));
 
-                    if (result.get() != InteractionResult.FAIL) handler.extractItem(RedstonePouchCapabilityProvider.getFirstNonEmptySlot(handler),1,false);
+                    /*if (result.get() != InteractionResult.FAIL) {
+                        handler.extractItem(RedstonePouchCapabilityProvider.getFirstNonEmptySlot(handler),1,false);
+                        System.out.println("he");
+                    }*/
 
                     pouchItem.getOrCreateTag().put("inventory", ((ItemStackHandler) handler).serializeNBT());
                 } else {

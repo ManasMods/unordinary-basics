@@ -103,7 +103,7 @@ public class ItemSorterScreen extends AbstractContainerScreen<ItemSorterMenu> {
             this.minecraft.player.closeContainer();
         }
 
-        return !this.text.keyPressed(pKeyCode, pScanCode, pModifiers) && !this.text.canConsumeInput() ? super.keyPressed(pKeyCode, pScanCode, pModifiers) : true;
+        return this.text.keyPressed(pKeyCode, pScanCode, pModifiers) || this.text.canConsumeInput() || super.keyPressed(pKeyCode, pScanCode, pModifiers);
     }
 
     public void renderFg(PoseStack pPoseStack, int pMouseX, int pMouseY, float pPartialTick) {

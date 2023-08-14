@@ -123,8 +123,8 @@ public class BuildersGloveItem extends Item {
                     int toPlace = (int) (Math.random() * (slotList.size()));
                     BlockHitResult hitResult = null;
                     try {
-                        hitResult = (BlockHitResult) ObfuscationReflectionHelper.findMethod(pContext.getClass(), "getHitResult").invoke(pContext);
-                    } catch (IllegalAccessException | InvocationTargetException e) {
+                        hitResult = ObfuscationReflectionHelper.getPrivateValue(UseOnContext.class,pContext,"f_43705_");
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
 
