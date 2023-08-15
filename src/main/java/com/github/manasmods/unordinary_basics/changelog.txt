@@ -2,13 +2,14 @@
 
 - Updated to 1.19.2
  - Updated dependencies
+- Changed Item Sorter use from holding shift down, to crouching.
+
 
 TODO:
  - Add Patchouli Integration
  - Fix Builders Glove crashing in the .jar file
  - Fix Redstone Pouching crashing in the .jar file
  - Add Tool Tip to Item Sorter Block to make it simpler to use.
- - Change Item Sorter use from holding shift down, to crouching.
  - Update Master Miner to only mine blocks of a same or similar hardness (to avoid cheesing mining long to mine blocks)
  - Fix Rendering of Glider in Off Hand.
 

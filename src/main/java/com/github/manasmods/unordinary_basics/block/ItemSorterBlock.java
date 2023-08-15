@@ -1,7 +1,6 @@
 package com.github.manasmods.unordinary_basics.block;
 
 import com.github.manasmods.unordinary_basics.block.entity.ItemSorterBlockEntity;
-import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
@@ -11,7 +10,11 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.BaseEntityBlock;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Mirror;
+import net.minecraft.world.level.block.RenderShape;
+import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -75,7 +78,7 @@ public class ItemSorterBlock extends BaseEntityBlock {
         if (!pLevel.isClientSide()) {
             BlockEntity entity = pLevel.getBlockEntity(pPos);
             if (entity instanceof ItemSorterBlockEntity itemSorterBlockEntity) {
-                if (Screen.hasShiftDown() && pPlayer.getMainHandItem().isEmpty()) {
+                if (pPlayer.isCrouching() && pPlayer.getMainHandItem().isEmpty()) {
                     NetworkHooks.openScreen(((ServerPlayer) pPlayer), itemSorterBlockEntity, pPos);
                 } else {
                     itemSorterBlockEntity.filterItemsOfPlayer(pPlayer,pPos,pState,pLevel);
