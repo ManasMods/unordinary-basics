@@ -1,0 +1,11 @@
+{
+  "name": "Test Entry",
+  "icon": "unordinary_basics:a_very_ordinary_book",
+  "category": "a_very_ordinary_book:test_category",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "This is a test entry, but it should show up!"
+    }
+  ]
+}
