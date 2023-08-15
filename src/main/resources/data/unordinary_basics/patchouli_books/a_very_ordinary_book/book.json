@@ -2,6 +2,9 @@
   "name": "A Very Ordinary Book",
   "landing_text": "A Guide to all things Unordinary",
   "version": 1,
-  "creative_tab": "unordinary_basics:items",
+  "creative_tab": "unordinary_basics.tab3",
+  "model": "unordinary_basics:a_very_ordinary_book",
+  "book_texture": "unordinary_basics:textures/gui/a_very_ordinary_book.png",
+  "show_progress": false,
   "use_resource_pack": true
 }

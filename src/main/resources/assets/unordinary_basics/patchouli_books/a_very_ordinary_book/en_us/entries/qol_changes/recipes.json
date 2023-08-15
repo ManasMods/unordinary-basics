@@ -1,0 +1,17 @@
+{
+  "name": "Recipes",
+  "icon": "minecraft:crafting_table",
+  "category": "unordinary_basics:qol_changes",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:hopper",
+      "text": "Recipe changed to include barrels."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:furnace",
+      "text": "Recipe changed to include more stone types."
+    }
+  ]
+}
