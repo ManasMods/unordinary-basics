@@ -1,9 +1,14 @@
 == Change Log ==
 
-¬ Added Tool Tip to Item Sorter Block
+- Fixes
+ - Fixed Builders Glove crashing in the .jar file
+ - Fixed Redstone Pouching crashing in the .jar file
+
+- Misc Changes
+ - Added Tool Tip to Item Sorter Block to make it simpler to use.
+ - Changed Item Sorter use from holding shift down, to crouching.
 
 TODO:
- - Fix Redstone Pouch bug. In jar file (we think), placing down redstone will crash the game.
  - Update Master Miner to only mine blocks of a same or similar hardness (to avoid cheesing mining long to mine blocks)
  - Fix Rendering of Glider in Off Hand.
 
