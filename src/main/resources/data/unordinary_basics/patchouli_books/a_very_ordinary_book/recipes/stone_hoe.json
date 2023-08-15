@@ -3,14 +3,17 @@
   "key": {
     "#": {
       "tag": "unordinary_basics:stone"
+    },
+    "S": {
+      "item": "minecraft:stick"
     }
   },
   "pattern": [
-    "###",
-    "# #",
-    "###"
+    "## ",
+    " S ",
+    " S "
   ],
   "result": {
-    "item": "minecraft:furnace"
+    "item": "minecraft:stone_hoe"
   }
 }

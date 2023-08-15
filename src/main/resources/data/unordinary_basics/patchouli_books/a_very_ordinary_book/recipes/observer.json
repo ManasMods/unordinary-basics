@@ -3,14 +3,20 @@
   "key": {
     "#": {
       "tag": "unordinary_basics:stone"
+    },
+    "Q": {
+      "item": "minecraft:quartz"
+    },
+    "R": {
+      "item": "minecraft:redstone"
     }
   },
   "pattern": [
     "###",
-    "# #",
+    "RRQ",
     "###"
   ],
   "result": {
-    "item": "minecraft:furnace"
+    "item": "minecraft:observer"
   }
 }

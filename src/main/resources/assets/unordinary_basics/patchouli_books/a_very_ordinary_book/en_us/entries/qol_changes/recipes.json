@@ -3,15 +3,149 @@
   "icon": "minecraft:crafting_table",
   "category": "unordinary_basics:qol_changes",
   "pages": [
+
+
+
     {
       "type": "patchouli:crafting",
-      "recipe": "minecraft:hopper",
-      "text": "Recipe changed to include barrels."
+      "recipe": "unordinary_basics:hopper",
+
+      "type2": "patchouli:crafting",
+      "recipe2": "unordinary_basics:furnace"
     },
     {
       "type": "patchouli:crafting",
-      "recipe": "unordinary_basics:furnace",
-      "text": "Recipe changed to include more stone types."
+      "recipe": "unordinary_basics:dispenser",
+
+      "type2": "patchouli:crafting",
+      "recipe2": "unordinary_basics:dropper"
+    },
+
+
+
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:observer",
+
+      "type2": "patchouli:crafting",
+      "recipe2": "unordinary_basics:piston"
+    },
+    {
+      "type": "patchouli:empty"
+    },
+
+
+
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:stone_sword",
+
+      "type2": "patchouli:crafting",
+      "recipe2": "unordinary_basics:stone_pickaxe"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:stone_axe",
+
+      "type2": "patchouli:crafting",
+      "recipe2": "unordinary_basics:stone_shovel"
+    },
+
+
+
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:stone_hoe",
+
+      "type2": "patchouli:crafting",
+      "recipe2": "unordinary_basics:saddle"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:name_tag",
+
+      "type2": "patchouli:crafting",
+      "recipe2": "unordinary_basics:trident"
+    },
+
+
+
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:chainmail_helmet",
+
+      "type2": "patchouli:crafting",
+      "recipe2": "unordinary_basics:chainmail_chestplate"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:chainmail_leggings",
+
+      "type2": "patchouli:crafting",
+      "recipe2": "unordinary_basics:chainmail_boots"
+    },
+
+
+
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:leather_horse_armor",
+
+      "type2": "patchouli:crafting",
+      "recipe2": "unordinary_basics:golden_horse_armor"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:iron_horse_armor",
+
+      "type2": "patchouli:crafting",
+      "recipe2": "unordinary_basics:diamond_horse_armor"
+    },
+
+
+
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:enchanted_golden_apple",
+
+      "type2": "patchouli:crafting",
+      "recipe2": "unordinary_basics:black_dye"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:green_dye",
+
+      "type2": "patchouli:empty"
+    },
+
+
+
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:red_mushroom_block",
+
+      "type2": "patchouli:crafting",
+      "recipe2": "unordinary_basics:brown_mushroom_block"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:mushroom_stem",
+
+      "type2": "patchouli:empty"
+    },
+
+
+
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:cake",
+
+      "type2": "patchouli:empty"
+    },
+    {
+      "type": "patchouli:empty",
+
+      "type2": "patchouli:empty"
     }
   ]
 }

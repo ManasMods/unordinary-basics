@@ -1,19 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "key": {
-    "#": {
-      "tag": "forge:storage_wooden"
-    },
     "I": {
       "item": "minecraft:iron_ingot"
+    },
+    "N": {
+      "item": "minecraft:iron_nugget"
     }
   },
   "pattern": [
+    "NIN",
     "I I",
-    "I#I",
-    " I "
+    "N N"
   ],
   "result": {
-    "item": "minecraft:hopper"
+    "item": "minecraft:chainmail_leggings"
   }
 }
