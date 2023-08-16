@@ -143,6 +143,9 @@ repositories {
     }
     maven { url 'https://jitpack.io' }
 
+    maven { url 'https://maven.blamejared.com' }
+
+
     /*
     flatDir {
         dir 'libs'
