@@ -50,14 +50,14 @@ public class BuildersGloveItem extends Item {
         //Block Replace Function
 
         if (pContext.getPlayer().getInventory().offhand.get(0).getItem() instanceof BlockItem blockItem) {
+            if (level.isClientSide) return result.get();
+
             if (pContext.getLevel().getBlockState(pContext.getClickedPos()).getBlock() != Blocks.AIR){
                 Block clickedOn = level.getBlockState(pContext.getClickedPos()).getBlock();
                 BlockState clickedOnState = level.getBlockState(pContext.getClickedPos());
 
                 boolean canBreakBlock = false;
-
                 List<DiggerItem> diggerItems = getDiggerItems(pContext);
-
                 DiggerItem correctItem = null;
 
                 for (DiggerItem diggerItem : diggerItems) {
@@ -70,8 +70,6 @@ public class BuildersGloveItem extends Item {
 
                 //Check if the player has the right item to be able to break the block, or if the block is really easy to break
                 if (canBreakBlock || clickedOnState.getDestroySpeed(pContext.getLevel(),pContext.getClickedPos()) <= 1 || pContext.getPlayer().getAbilities().instabuild){
-
-                    if (level.isClientSide) return result.get();
 
                     if (clickedOn != blockItem.getBlock()) {
 
@@ -94,8 +92,6 @@ public class BuildersGloveItem extends Item {
                                 ItemEntity entity = new ItemEntity(level,spawnPos.getX(),spawnPos.getY(),spawnPos.getZ(),itemStack);
                                 level.addFreshEntity(entity);
                             });
-
-                            pContext.getPlayer().getInventory().offhand.get(0).shrink(1);
                         }
 
                         pContext.getPlayer().swing(pContext.getHand());
@@ -144,9 +140,10 @@ public class BuildersGloveItem extends Item {
                 diggerItems.add((DiggerItem) inv.getItem(i).getItem());
             }
         }
+
         for (int i = 0; diggerItems.size() > i; ++i){
             DiggerItem compareAgainst = diggerItems.get(i);
-            for (int j = 0; diggerItems.size() > i; ++i){
+            for (int j = 0; diggerItems.size() > j; ++j){
                 DiggerItem compareTo = diggerItems.get(j);
                 if (i != j) {
                     if (compareTo.getClass().equals(compareAgainst.getClass()) && compareAgainst.getTier().getSpeed() >= compareTo.getTier().getSpeed()) {
@@ -180,26 +177,6 @@ public class BuildersGloveItem extends Item {
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
         pTooltipComponents.add(Component.translatable("tooltip.unordinary_basics.builders_glove"));
-    }
-
-    @Override
-    public void inventoryTick(ItemStack pStack, Level pLevel, Entity pEntity, int pSlotId, boolean pIsSelected) {
-        /*pStack.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
-            for (int i = 0; i < handler.getSlots(); ++i){
-                if (handler.getStackInSlot(i).getItem() instanceof BlockItem && pEntity instanceof Player && ((Player) pEntity).getInventory().contains(handler.getStackInSlot(i))) {
-                    ((ItemStackHandler) handler).deserializeNBT(pStack.getOrCreateTag().getCompound("inventory"));
-                    ItemStack stack = handler.getStackInSlot(i);
-                    if (((Player) pEntity).getInventory().findSlotMatchingItem(stack) >= 0) {
-                        ItemStack playerStack = ((Player) pEntity).getInventory().getItem(((Player) pEntity).getInventory().findSlotMatchingItem(stack));
-                        while (playerStack.getCount() > 0 && stack.getCount() < 64) {
-                            playerStack.shrink(1);
-                            stack.grow(1);
-                            pStack.getOrCreateTag().put("inventory", ((ItemStackHandler) handler).serializeNBT());
-                        }
-                    }
-                }
-            }
-        });*/
     }
 
     private void refillItems(ItemStack pStack, Entity pEntity) {
