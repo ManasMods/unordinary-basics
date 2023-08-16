@@ -5,7 +5,8 @@
   "pages": [
     {
       "type": "patchouli:spotlight",
-      "item": "enchantment.unordinary_basics:tree_feller",
+      "title": "Tree Feller",
+      "item": "minecraft:enchanted_book{StoredEnchantments:[{id:\"unordinary_basics:tree_feller\",lvl:1}]}",
       "text": "Tree Feller will allow you to chop down Trees in one fell swoop!",
 
       "type2": "patchouli:empty"

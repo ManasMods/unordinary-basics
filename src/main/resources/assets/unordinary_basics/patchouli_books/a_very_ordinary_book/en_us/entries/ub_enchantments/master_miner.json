@@ -5,12 +5,17 @@
   "pages": [
     {
       "type": "patchouli:spotlight",
-      "item": "unordinary_basics:master_miner",
-      "text": "Master Miner is the perfect enchantment for mining your own mineshafts or clearing large areas with ease!"
+      "title": "Master Miner",
+      "item": "minecraft:enchanted_book{StoredEnchantments:[{id:\"unordinary_basics:master_miner\",lvl:2}]}",
+      "text": "Master Miner is the perfect enchantment for mining your own mineshafts or clearing large areas with ease!",
+
+      "type2": "patchouli:empty"
     },
     {
       "type": "patchouli:text",
-      "text": "Vein Miner and Master Miner are mutually exclusive! We recommend Vein Miner going with your Fortune Pickaxe, and Master Miner going with your Silk Touch Pickaxe!"
+      "text": "Vein Miner and Master Miner are mutually exclusive! We recommend Vein Miner going with your Fortune Pickaxe, and Master Miner going with your Silk Touch Pickaxe!",
+
+      "type2": "patchouli:empty"
     }
   ]
 }
