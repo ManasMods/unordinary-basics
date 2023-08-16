@@ -13,28 +13,30 @@
     "MixinBedBlock",
     "MixinBedBlockEntity",
     "MixinDestroySpeed",
+    "MixinDonkey",
     "MixinFireworkRocket",
     "MixinFletchingTableBlock",
     "MixinFrostWalker",
     "MixinGoat",
     "MixinHorse",
+    "MixinItemEntity",
     "MixinItemStack",
     "MixinJukeBoxBlock",
     "MixinLadder",
-    "NBTIngredientAccessor",
-    "MixinItemEntity",
+    "MixinLivingEntity",
+    "MixinMule",
     "MixinPlayer",
     "MixinPotionItem",
     "MixinThrowablePotionItem",
-    "MixinLivingEntity"
+    "NBTIngredientAccessor"
   ],
   "client": [
     "AbstractContainerScreenAccessor",
     "MixinBedRenderer",
     "MixinClipContext",
-    "MixinPlayerModel",
     "MixinElytraLayer",
-    "MixinLocalPlayer"
+    "MixinLocalPlayer",
+    "MixinPlayerModel"
   ],
   "injectors": {
     "defaultRequire": 1
