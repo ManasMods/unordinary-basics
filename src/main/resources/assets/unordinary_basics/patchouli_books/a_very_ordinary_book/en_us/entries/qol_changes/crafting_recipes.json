@@ -1,11 +1,8 @@
 {
-  "name": "Recipes",
+  "name": "Crafting Recipes",
   "icon": "minecraft:crafting_table",
   "category": "unordinary_basics:qol_changes",
   "pages": [
-
-
-
     {
       "type": "patchouli:crafting",
       "recipe": "unordinary_basics:hopper",
