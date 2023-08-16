@@ -15,8 +15,7 @@
       "title": " ",
       "recipe": "unordinary_basics:redstone_pouch",
 
-      "type2": "patchouli:text",
-      "text2": "Throw to throw a piece of Redstone, Control + Throw to throw a stack of Redstone, and Crouch + Throw to throw the Redstone Pouch."
+      "type2": "patchouli:empty"
     }
   ]
 }
