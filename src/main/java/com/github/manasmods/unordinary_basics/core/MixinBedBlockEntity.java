@@ -56,6 +56,7 @@ public class MixinBedBlockEntity extends BlockEntity implements IFromItem, IPatt
 
     @Override
     public void load(CompoundTag pTag) {
+        System.out.println("load - " + pTag.toString());
         try {
             super.load(pTag);
 
@@ -63,18 +64,22 @@ public class MixinBedBlockEntity extends BlockEntity implements IFromItem, IPatt
             this.patterns = null;
             this.color = DyeColor.byId(pTag.getInt("Color"));
         } catch (ConcurrentModificationException e) {
+            System.out.println("concurrentModificationException");
             e.printStackTrace();
         }
     }
 
     @Override
     public void fromItem(ItemStack pItem) {
+        System.out.println("fromItem");
         if (pItem == null) {
+            System.out.println("fromItem - null");
             this.itemPatterns = null;
             this.patterns = null;
 
             this.color = ((BedBlock) this.getBlockState().getBlock()).getColor();
         } else {
+            System.out.println("fromItem - notnull");
             this.itemPatterns = BannerBlockEntity.getItemPatterns(pItem);
             this.patterns = null;
 
@@ -121,6 +126,7 @@ public class MixinBedBlockEntity extends BlockEntity implements IFromItem, IPatt
 
     //TODO: Fix this. The patterns aren't loaded so this also doesn't work
     public List<Pair<BannerPattern, DyeColor>> createPatterns(DyeColor pColor, @Nullable ListTag pListTag) {
+        System.out.println("createPatterns");
         List<Pair<BannerPattern, DyeColor>> list = Lists.newArrayList();
         if (pListTag != null) {
             for (int i = 0; i < pListTag.size(); ++i) {
