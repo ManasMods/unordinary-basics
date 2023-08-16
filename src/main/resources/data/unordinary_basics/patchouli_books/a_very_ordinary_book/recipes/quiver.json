@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "L": {
+      "item": "minecraft:leather"
+    },
+    "S": {
+      "tag": "forge:string"
+    }
+  },
+  "pattern": [
+    "LS",
+    "LS",
+    "LS"
+  ],
+  "result": {
+    "item": "unordinary_basics:quiver"
+  }
+}

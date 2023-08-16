@@ -14,6 +14,7 @@
     {
       "type": "patchouli:crafting",
       "recipe": "unordinary_basics:item_sorter",
+      "title": " ",
       "text": "The Item Sorter is the perfect block to quickly sort your items after a long journey. Come home, right click the Item Sorter(s) and boom, your inventory is tidier!"
     }
   ]

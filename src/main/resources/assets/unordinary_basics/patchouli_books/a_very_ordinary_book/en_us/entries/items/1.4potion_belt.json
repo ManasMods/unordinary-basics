@@ -1,0 +1,21 @@
+{
+  "name": "1.4 - Potion Belt",
+  "icon": "unordinary_basics:potion_belt",
+  "category": "unordinary_basics:items",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "unordinary_basics:potion_belt",
+      "text": "The Item to make Potions Viable! Equip in your waist slot. If you have the same potion in your belt as in your hotbar, upon drinking, it will replenish. Upon drinking a potion, it will also put the bottle in the Belt.",
+
+      "type2": "patchouli:empty"
+    },
+    {
+      "type": "patchouli:crafting",
+      "title": " ",
+      "recipe": "unordinary_basics:potion_belt",
+
+      "type2": "empty"
+    }
+  ]
+}
