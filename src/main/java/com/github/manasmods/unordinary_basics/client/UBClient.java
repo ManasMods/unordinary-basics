@@ -106,7 +106,6 @@ public class UBClient {
 
     private static void registerKeybinds(){
         KeybindingRegistry.register(
-                UBKeybindings.SET_PRONE,
                 UBKeybindings.OPEN_UB_INV
         );
     }
