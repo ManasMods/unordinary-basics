@@ -3,17 +3,23 @@ package com.github.manasmods.unordinary_basics.registry;
 import com.github.manasmods.unordinary_basics.block.*;
 import com.github.manasmods.unordinary_basics.item.templates.CustomBlockItem;
 import com.github.manasmods.unordinary_basics.item.templates.SimpleBlockItem;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Collection;
+import java.util.List;
 
 public class BlockRegistry {
     /**
@@ -421,7 +427,12 @@ public class BlockRegistry {
         registry.register("hay_block", () -> new BlockItem(Unordinary_BasicsBlocks.HAY_BLOCK, new Item.Properties()));
 
         registry.register("enchantment_library", () -> new CustomBlockItem(Unordinary_BasicsBlocks.ENCHANTMENT_LIBRARY));
-        registry.register("item_sorter", () -> new CustomBlockItem(Unordinary_BasicsBlocks.ITEM_SORTER));
+        registry.register("item_sorter", () -> new CustomBlockItem(Unordinary_BasicsBlocks.ITEM_SORTER) {
+            @Override
+            public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltip, TooltipFlag pFlag) {
+                pTooltip.add(Component.translatable("block.unordinary_basics.item_sorter.desc"));
+            }
+        });
     }
 
 }
