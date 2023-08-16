@@ -17,7 +17,6 @@ public class Unordinary_BasicsNetwork {
         INSTANCE.registerMessage(++messageId, RequestJukeboxUpdate.class, RequestJukeboxUpdate::toBytes, RequestJukeboxUpdate::new, RequestJukeboxUpdate::handle);
         INSTANCE.registerMessage(++messageId, RequestMenuChange.class, RequestMenuChange::toBytes, RequestMenuChange::new, RequestMenuChange::handle);
         INSTANCE.registerMessage(++messageId, RequestUBInventoryMenu.class, RequestUBInventoryMenu::toBytes, RequestUBInventoryMenu::new, RequestUBInventoryMenu::handle);
-        INSTANCE.registerMessage(++messageId, RequestPlayerProneToggle.class, RequestPlayerProneToggle::toBytes, RequestPlayerProneToggle::new, RequestPlayerProneToggle::handle);
         INSTANCE.registerMessage(++messageId, UBInventoryClientSync.class, UBInventoryClientSync::toBytes, UBInventoryClientSync::new, UBInventoryClientSync::handle);
         INSTANCE.registerMessage(++messageId, SetItemSorterMessage.class, SetItemSorterMessage::toBytes, SetItemSorterMessage::new, SetItemSorterMessage::handle);
         INSTANCE.registerMessage(++messageId, RequestUBItemInventoryMenu.class, RequestUBItemInventoryMenu::toBytes, RequestUBItemInventoryMenu::new, RequestUBItemInventoryMenu::handle);
