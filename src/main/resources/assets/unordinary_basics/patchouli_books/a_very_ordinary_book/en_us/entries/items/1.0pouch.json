@@ -1,5 +1,5 @@
 {
-  "name": "Pouch",
+  "name": "1.0 - Pouch",
   "icon": "unordinary_basics:pouch",
   "category": "unordinary_basics:items",
   "pages": [
@@ -17,10 +17,17 @@
 
       "type2": "empty"
     },
+
+
+
     {
-      "type2": "patchouli:relations",
-      "title2": "Items which require the Pouch",
-      "entries": "animal_bait"
+      "type": "patchouli:relations",
+      "entries": [
+        "unordinary_basics:items/1.1animal_bait",
+        "unordinary_basics:items/1.2redstone_pouch",
+        "unordinary_basics:items/1.4potion_belt"
+        ],
+      "title": "Pouch Items"
     }
   ]
 }

@@ -1,0 +1,22 @@
+{
+  "name": "1.2 - Redstone Pouch",
+  "icon": "unordinary_basics:redstone_pouch",
+  "category": "unordinary_basics:items",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "unordinary_basics:redstone_pouch",
+      "text": "The Redstone Pouch is the perfect item for Redstoners. You can store vast amounts of redstone, while still able to place and throw down redstone from its pouch.",
+
+      "type2": "patchouli:empty"
+    },
+    {
+      "type": "patchouli:crafting",
+      "title": " ",
+      "recipe": "unordinary_basics:redstone_pouch",
+
+      "type2": "patchouli:text",
+      "text2": "Throw to throw a piece of Redstone, Control + Throw to throw a stack of Redstone, and Crouch + Throw to throw the Redstone Pouch."
+    }
+  ]
+}
