@@ -27,9 +27,7 @@ public class ClientUtils {
     }
 
     public static Material getTexture(BannerPattern pattern) {
-        //TODO: Fix this aswell
-        //return new Material(Sheets.BANNER_SHEET, new ResourceLocation(Unordinary_Basics.MOD_ID, "entity/banner/" + pattern.getFilename()));
-        return null;
+        return new Material(Sheets.BANNER_SHEET, new ResourceLocation(Unordinary_Basics.MOD_ID, "entity/banner/" + pattern.getHashname()));
     }
 
     public static Material getBedTexture() {
