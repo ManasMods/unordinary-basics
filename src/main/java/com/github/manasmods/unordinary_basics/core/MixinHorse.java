@@ -36,9 +36,7 @@ public abstract class MixinHorse extends LivingEntity {
 
     @Inject(method = "mobInteract", at = @At("HEAD"), cancellable = true)
     public void mobInteract(Player player, InteractionHand hand, CallbackInfoReturnable<InteractionResult> callback) {
-        System.out.println("Called mixin method");
         if (player.level.isClientSide && player.getItemInHand(hand).is(Unordinary_BasicsItems.EQUINE_TRACKER)) {
-            System.out.println("Client side and holding equine tracker");
             Component nameComponent = this.getCustomName();
             String name = nameComponent == null ? "No name" : nameComponent.getString();
             double maxHealth = this.getAttribute(Attributes.MAX_HEALTH).getValue();

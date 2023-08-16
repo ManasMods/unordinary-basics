@@ -21,9 +21,7 @@ public abstract class MixinMule extends Animal {
 
     @Override
     public InteractionResult mobInteract(Player player, InteractionHand hand) {
-        System.out.println("Called mixin method");
         if (player.level.isClientSide && player.getItemInHand(hand).is(Unordinary_BasicsItems.EQUINE_TRACKER)) {
-            System.out.println("Client side and holding equine tracker");
             Component nameComponent = this.getCustomName();
             String name = nameComponent == null ? "No name" : nameComponent.getString();
             double maxHealth = this.getAttribute(Attributes.MAX_HEALTH).getValue();
