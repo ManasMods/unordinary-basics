@@ -124,6 +124,7 @@ public class BuildersGloveItem extends Item {
 
                     //Part that actually places the block
                     placeBlockNativeMethod(pContext,handler.getStackInSlot(slotList.get(toPlace)),result);
+                    refillItems(gloveItem,pContext.getPlayer());
                     gloveItem.getOrCreateTag().put("inventory", ((ItemStackHandler) handler).serializeNBT());
                 }
             });
@@ -163,7 +164,7 @@ public class BuildersGloveItem extends Item {
     private void placeBlockNativeMethod(UseOnContext pContext, ItemStack blockStack, AtomicReference<InteractionResult> result){
         BlockHitResult hitResult = null;
         try {
-            hitResult = (BlockHitResult) ObfuscationReflectionHelper.findMethod(pContext.getClass(), "getHitResult").invoke(pContext);
+            hitResult = (BlockHitResult) ObfuscationReflectionHelper.findMethod(pContext.getClass(), "m_43718_").invoke(pContext);
         } catch (IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
         }
@@ -183,7 +184,7 @@ public class BuildersGloveItem extends Item {
 
     @Override
     public void inventoryTick(ItemStack pStack, Level pLevel, Entity pEntity, int pSlotId, boolean pIsSelected) {
-        pStack.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
+        /*pStack.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
             for (int i = 0; i < handler.getSlots(); ++i){
                 if (handler.getStackInSlot(i).getItem() instanceof BlockItem && pEntity instanceof Player && ((Player) pEntity).getInventory().contains(handler.getStackInSlot(i))) {
                     ((ItemStackHandler) handler).deserializeNBT(pStack.getOrCreateTag().getCompound("inventory"));
@@ -198,7 +199,23 @@ public class BuildersGloveItem extends Item {
                     }
                 }
             }
+        });*/
+    }
 
+    private void refillItems(ItemStack pStack, Entity pEntity) {
+        pStack.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
+            for (int i = 0; i < handler.getSlots(); ++i){
+                if (handler.getStackInSlot(i).getItem() instanceof BlockItem && pEntity instanceof Player && ((Player) pEntity).getInventory().contains(handler.getStackInSlot(i))) {
+                    ItemStack stack = handler.getStackInSlot(i);
+                    if (((Player) pEntity).getInventory().findSlotMatchingItem(stack) >= 0) {
+                        ItemStack playerStack = ((Player) pEntity).getInventory().getItem(((Player) pEntity).getInventory().findSlotMatchingItem(stack));
+                        while (playerStack.getCount() > 0 && stack.getCount() < 64) {
+                            playerStack.shrink(1);
+                            stack.grow(1);
+                        }
+                    }
+                }
+            }
         });
     }
 
