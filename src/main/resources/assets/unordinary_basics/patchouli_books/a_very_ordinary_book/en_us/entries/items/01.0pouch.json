@@ -4,22 +4,12 @@
   "category": "unordinary_basics:items",
   "pages": [
     {
-      "type": "patchouli:spotlight",
-      "item": "unordinary_basics:pouch",
-      "text": "The Pouch may look like the Bundle however has no use by itself - and is instead used to craft items with great usefulness.",
-
-      "type2": "patchouli:empty"
-    },
-    {
       "type": "patchouli:crafting",
-      "title": " ",
       "recipe": "unordinary_basics:pouch",
+      "text": "The Pouch may look like the Bundle however has no use by itself - and is instead used to craft items with great usefulness.",
 
       "type2": "empty"
     },
-
-
-
     {
       "type": "patchouli:relations",
       "entries": [
