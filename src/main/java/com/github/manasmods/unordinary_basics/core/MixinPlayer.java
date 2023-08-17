@@ -15,7 +15,7 @@ import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -45,7 +45,7 @@ public abstract class MixinPlayer extends LivingEntity implements net.minecraftf
 
             ItemStack quiver = stackHandler.findFirstInstanceOf(Unordinary_BasicsItems.QUIVER);
 
-            quiver.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(itemHandler -> {
+            quiver.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(itemHandler -> {
                 for (int i = 0; i < itemHandler.getSlots(); ++i){
                     if (!itemHandler.getStackInSlot(i).isEmpty()) {
                         returnValue.set(itemHandler.getStackInSlot(i));
@@ -64,10 +64,11 @@ public abstract class MixinPlayer extends LivingEntity implements net.minecraftf
         cir.cancel();
         boolean returnValue = false;
 
+        AtomicReference<ItemStack> stackAtomicReference = new AtomicReference<>();
+
         if (!this.onGround && !this.isFallFlying() && !this.isInWater() && !this.hasEffect(MobEffects.LEVITATION)) {
             ItemStack itemstack = this.getItemBySlot(EquipmentSlot.CHEST);
             if (!itemstack.is(Items.ELYTRA)) {
-                AtomicReference<ItemStack> stackAtomicReference = new AtomicReference<>();
 
                 AtomicReference<IUBInventoryHandler> handler = new AtomicReference<>();
 
@@ -78,17 +79,14 @@ public abstract class MixinPlayer extends LivingEntity implements net.minecraftf
                 } else handler.set(ClientUBInventoryData.getHandler());
 
                 stackAtomicReference.set(handler.get().getStackInSlot(CapabilityUBInventory.SLOT_INDEX.get(CapabilityUBInventory.UBSlot.BACK)));
+            }
 
-                if (stackAtomicReference.get().is(Items.ELYTRA)) {
-                    itemstack = stackAtomicReference.get();
-                    if (itemstack.canElytraFly(player)) {
-                        player.startFallFlying();
-                        returnValue = true;
-                    }
-                }
+            if (stackAtomicReference.get() != null && stackAtomicReference.get().is(Items.ELYTRA)) itemstack = stackAtomicReference.get();
+            if (itemstack.canElytraFly(player)) {
+                player.startFallFlying();
+                returnValue = true;
             }
         }
         cir.setReturnValue(returnValue);
     }
-
 }
