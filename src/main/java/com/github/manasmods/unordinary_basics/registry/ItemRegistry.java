@@ -26,6 +26,7 @@ class ItemRegistry {
     }
 
     private static void registerMisc(DeferredRegister<Item> registry) {
+        registry.register("equine_tracker", () -> new Item(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS)));
         registry.register("pouch", () -> new Item(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS)));
         registry.register("animal_bait", () -> new Item(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
         registry.register("potion_belt", () -> new PotionBeltItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));

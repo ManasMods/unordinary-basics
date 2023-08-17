@@ -7,6 +7,8 @@ import net.minecraftforge.registries.ObjectHolder;
 @SuppressWarnings("unused")
 
 public class Unordinary_BasicsItems {
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:equine_tracker")
+    public static final Item EQUINE_TRACKER = null;
     @ObjectHolder(registryName = "item", value = "unordinary_basics:animal_bait")
     public static final Item ANIMAL_BAIT = null;
     @ObjectHolder(registryName = "item", value = "unordinary_basics:goat_milk_bottle")
