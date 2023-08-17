@@ -1,0 +1,25 @@
+{
+  "name": "03.0 - Horse Changes",
+  "icon": "minecraft:saddle",
+  "category": "unordinary_basics:qol_changes",
+  "pages": [
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:horse",
+      "scale": "0.6",
+      "text": "You are able to ride on a horse while it is in water as you can in real life! Making River Crossings that much easier.",
+
+      "type2": "patchouli:empty"
+    },
+    {
+      "type": "patchouli:image",
+      "images": [
+        "unordinary_basics:patchouli_books/images/horse_double.png"
+      ],
+      "text": "2 Players can even ride on the same horse - like you can in real life!",
+
+      "type2": "empty"
+    }
+
+  ]
+}

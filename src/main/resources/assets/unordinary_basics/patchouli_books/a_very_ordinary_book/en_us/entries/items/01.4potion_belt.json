@@ -6,6 +6,7 @@
     {
       "type": "patchouli:crafting",
       "recipe": "unordinary_basics:potion_belt",
+
       "type2": "empty"
     },
     {

@@ -1,6 +1,7 @@
 package com.github.manasmods.unordinary_basics.core;
 
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -28,7 +29,7 @@ public abstract class MixinDonkey extends Animal {
             double speed = this.getAttribute(Attributes.MOVEMENT_SPEED).getValue() * 42.17d;
             double jumpStrength = this.getAttribute(Attributes.JUMP_STRENGTH).getValue();
             jumpStrength = 7.38 * jumpStrength - 2.13;
-            player.sendSystemMessage(Component.literal("%s - %.0fhp - %.2fm/s - %.2f blocks".formatted(name, maxHealth, speed, jumpStrength)));
+            player.sendSystemMessage(Component.literal("%s - %.0fhp - %.2fm/s - %.2f blocks".formatted(name, maxHealth, speed, jumpStrength)).withStyle(ChatFormatting.DARK_PURPLE));
             return InteractionResult.SUCCESS;
         }
         return InteractionResult.PASS;
