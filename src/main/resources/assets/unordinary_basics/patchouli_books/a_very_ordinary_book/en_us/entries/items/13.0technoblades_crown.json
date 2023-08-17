@@ -1,0 +1,20 @@
+{
+  "name": "13.0 - Technoblade's Crown",
+  "icon": "unordinary_basics:technoblade_crown",
+  "category": "unordinary_basics:items",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "unordinary_basics:technoblade_crown",
+      "text": "A Crown to remember the Anarchist who never dies!",
+
+      "type2": "patchouli:empty"
+    },
+    {
+      "type": "patchouli:smithing",
+      "recipe": "minecraft:technoblade_crown_smithing",
+
+      "type2": "patchouli:empty"
+    }
+  ]
+}
