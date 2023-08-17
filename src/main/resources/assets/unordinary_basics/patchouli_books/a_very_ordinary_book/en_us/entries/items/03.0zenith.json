@@ -1,5 +1,5 @@
 {
-  "name": "3.0 - Zenith",
+  "name": "03.0 - Zenith",
   "icon": "unordinary_basics:zenith",
   "category": "unordinary_basics:items",
   "pages": [
@@ -8,7 +8,26 @@
       "item": "unordinary_basics:zenith",
       "text": "The Zenith is the ultimate sword which you get by completing the major challenges in one's run.",
 
-      "type2": "patchouli:empty"
+      "type2": "unordinary_basics:multi_spotlight",
+      "items2": [
+        "unordinary_basics:unknown_blade_fragment",
+        "unordinary_basics:unknown_sword_handle_fragment",
+        "unordinary_basics:unknown_hilt_fragment",
+        "minecraft:nether_star"
+      ],
+      "title2": " ",
+      "text2": "To craft the Zenith, you must acquire its 4 ingredients shown above, and then throw them together."
+    },
+    {
+      "type": "unordinary_basics:multi_spotlight",
+      "items": [
+        "unordinary_basics:unknown_blade_fragment",
+        "unordinary_basics:unknown_sword_handle_fragment",
+        "unordinary_basics:unknown_hilt_fragment",
+        "minecraft:nether_star"
+      ],
+      "title": " ",
+      "text": "To craft the Zenith, you must acquire its 4 ingredients shown above, and then throw them together."
     }
 
   ]
