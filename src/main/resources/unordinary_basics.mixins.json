@@ -6,6 +6,7 @@
   "refmap": "unordinary_basics.refmap.json",
   "mixins": [
     "FletchingContainerAccessor",
+    "MixinAbstractChestedHorse",
     "MixinAbstractHorse",
     "MixinAnvilScreen",
     "MixinApothFletchingBlock",
@@ -13,7 +14,6 @@
     "MixinBedBlock",
     "MixinBedBlockEntity",
     "MixinDestroySpeed",
-    "MixinDonkey",
     "MixinFireworkRocket",
     "MixinFletchingTableBlock",
     "MixinFrostWalker",
@@ -24,7 +24,6 @@
     "MixinJukeBoxBlock",
     "MixinLadder",
     "MixinLivingEntity",
-    "MixinMule",
     "MixinPlayer",
     "MixinPotionItem",
     "MixinThrowablePotionItem",

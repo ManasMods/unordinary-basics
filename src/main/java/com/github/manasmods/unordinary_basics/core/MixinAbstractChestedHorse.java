@@ -5,22 +5,25 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.animal.Animal;
-import net.minecraft.world.entity.animal.horse.Mule;
+import net.minecraft.world.entity.animal.horse.AbstractChestedHorse;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-@Mixin(Mule.class)
-public abstract class MixinMule extends Animal {
+@Mixin(AbstractChestedHorse.class)
+public abstract class MixinAbstractChestedHorse extends LivingEntity {
 
-    protected MixinMule(EntityType<? extends Animal> pEntityType, Level pLevel) {
+    protected MixinAbstractChestedHorse(EntityType<? extends LivingEntity> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
     }
 
-    @Override
-    public InteractionResult mobInteract(Player player, InteractionHand hand) {
+    @Inject(method="mobInteract", at=@At("HEAD"), cancellable = true)
+    public void mobInteract(Player player, InteractionHand hand, CallbackInfoReturnable<InteractionResult> callback) {
         if (player.level.isClientSide && player.getItemInHand(hand).is(Unordinary_BasicsItems.EQUINE_TRACKER)) {
             Component nameComponent = this.getCustomName();
             String name = nameComponent == null ? "No name" : nameComponent.getString();
@@ -29,8 +32,7 @@ public abstract class MixinMule extends Animal {
             double jumpStrength = this.getAttribute(Attributes.JUMP_STRENGTH).getValue();
             jumpStrength = 7.38 * jumpStrength - 2.13;
             player.sendSystemMessage(Component.literal("%s - %.0fhp - %.2fm/s - %.2f blocks".formatted(name, maxHealth, speed, jumpStrength)));
-            return InteractionResult.SUCCESS;
+            callback.setReturnValue(InteractionResult.SUCCESS);
         }
-        return InteractionResult.PASS;
     }
 }
