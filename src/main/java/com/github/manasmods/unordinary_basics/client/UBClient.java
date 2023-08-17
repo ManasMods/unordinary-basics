@@ -10,6 +10,7 @@ import com.github.manasmods.unordinary_basics.client.block_entity_renderer.ItemS
 import com.github.manasmods.unordinary_basics.client.gui.*;
 import com.github.manasmods.unordinary_basics.client.keybind.UBKeybindings;
 import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisIntegrationClient;
+import com.github.manasmods.unordinary_basics.integration.patchouli.PageDoubleSpotlight;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
 import com.github.manasmods.unordinary_basics.item.custom.SlimeCompassItem;
 import com.github.manasmods.unordinary_basics.menu.Unordinary_BasicsMenuTypes;
@@ -48,6 +49,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import vazkii.patchouli.client.book.ClientBookRegistry;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -64,6 +66,9 @@ public class UBClient {
 
     @SubscribeEvent
     public static void init(final FMLClientSetupEvent e) {
+        // Patchouli custom page
+        ClientBookRegistry.INSTANCE.pageTypes.put(new ResourceLocation(Unordinary_Basics.MOD_ID, "double_spotlight"), PageDoubleSpotlight.class);
+
         e.enqueueWork(UBClient::registerBlockTransparencies);
         e.enqueueWork(UBClient::registerEntityRenderer);
         e.enqueueWork(UBClient::registerMenuScreens);
