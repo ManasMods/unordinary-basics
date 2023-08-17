@@ -1,9 +1,7 @@
 package com.github.manasmods.unordinary_basics.integration.patchouli;
 
 import com.google.gson.annotations.SerializedName;
-import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
-import net.minecraft.client.gui.GuiComponent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -13,59 +11,58 @@ import vazkii.patchouli.client.book.BookEntry;
 import vazkii.patchouli.client.book.gui.GuiBook;
 import vazkii.patchouli.client.book.page.abstr.PageWithText;
 
-public class PageDoubleSpotlight extends PageWithText {
+import java.util.ArrayList;
+import java.util.List;
 
-    IVariable item1;
-    IVariable item2;
+public class PageMultiSpotlight extends PageWithText {
+
+    List<IVariable> items;
     String title;
     @SerializedName("link_recipe") boolean linkRecipe;
-    transient Ingredient ingredient1;
-    transient Ingredient ingredient2;
+    transient List<Ingredient> ingredients = new ArrayList<>();
 
     @Override
     public void build(BookEntry entry, BookContentsBuilder builder, int pageNum) {
         super.build(entry, builder, pageNum);
-        ingredient1 = item1.as(Ingredient.class);
-        ingredient2 = item2.as(Ingredient.class);
+        items.forEach(item -> ingredients.add(item.as(Ingredient.class)));
 
         if (linkRecipe) {
-            for (ItemStack stack : ingredient1.getItems()) {
-                entry.addRelevantStack(builder, stack, pageNum);
-            }
-            for (ItemStack stack : ingredient2.getItems()) {
-                entry.addRelevantStack(builder, stack, pageNum);
+            for (Ingredient ingredient : ingredients) {
+                for (ItemStack stack : ingredient.getItems()) {
+                    entry.addRelevantStack(builder, stack, pageNum);
+                }
             }
         }
     }
 
     @Override
     public void render(PoseStack ms, int mouseX, int mouseY, float ticks) {
-        int w = 66;
-        int h = 26;
-
-        RenderSystem.setShaderTexture(0, book.craftingTexture);
-        RenderSystem.enableBlend();
-        GuiComponent.blit(ms, GuiBook.PAGE_WIDTH / 2 - w / 2, 10, 0, 128 - h, w, h, 128, 256);
-        GuiComponent.blit(ms, GuiBook.PAGE_WIDTH / 2 - w / 2, 35, 0, 128 - h, w, h, 128, 256);
-
         // Title
         Component toDraw;
         if (title != null && !title.isEmpty()) {
             toDraw = i18nText(title);
         } else {
-            toDraw = ingredient1.getItems()[0].getHoverName();
+            toDraw = ingredients.get(0).getItems()[0].getHoverName();
         }
         parent.drawCenteredStringNoShadow(ms, toDraw.getVisualOrderText(), GuiBook.PAGE_WIDTH / 2, 0, book.headerColor);
 
         // Items
-        parent.renderIngredient(ms, GuiBook.PAGE_WIDTH / 2 - 8, 15, mouseX, mouseY, ingredient1);
-        parent.renderIngredient(ms, GuiBook.PAGE_WIDTH / 2 - 8, 40, mouseX, mouseY, ingredient2);
+        for (int done = 0, row = 0; done < ingredients.size(); done += 5, row++) {
+            int todo = Math.min(ingredients.size() - done, 5);
+            for (int i = 0; i < todo; i++) {
+                int x = GuiBook.PAGE_WIDTH / 2 - todo * 8 + i * 16;
+                int y = 15 + row * 16;
+                parent.renderIngredient(ms, x, y, mouseX, mouseY, ingredients.get(done + i));
+            }
+        }
 
+        // Text
         super.render(ms, mouseX, mouseY, ticks);
     }
 
     @Override
     public int getTextHeight() {
-        return 65;
+        int numRows = (int) Math.ceil(ingredients.size() / 5f);
+        return 20 + numRows * 16;
     }
 }

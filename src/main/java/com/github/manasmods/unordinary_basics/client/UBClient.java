@@ -10,7 +10,7 @@ import com.github.manasmods.unordinary_basics.client.block_entity_renderer.ItemS
 import com.github.manasmods.unordinary_basics.client.gui.*;
 import com.github.manasmods.unordinary_basics.client.keybind.UBKeybindings;
 import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisIntegrationClient;
-import com.github.manasmods.unordinary_basics.integration.patchouli.PageDoubleSpotlight;
+import com.github.manasmods.unordinary_basics.integration.patchouli.PageMultiSpotlight;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
 import com.github.manasmods.unordinary_basics.item.custom.SlimeCompassItem;
 import com.github.manasmods.unordinary_basics.menu.Unordinary_BasicsMenuTypes;
@@ -20,7 +20,6 @@ import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.item.ClampedItemPropertyFunction;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.core.BlockPos;
@@ -37,7 +36,6 @@ import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.entity.BannerPattern;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -67,7 +65,7 @@ public class UBClient {
     @SubscribeEvent
     public static void init(final FMLClientSetupEvent e) {
         // Patchouli custom page
-        ClientBookRegistry.INSTANCE.pageTypes.put(new ResourceLocation(Unordinary_Basics.MOD_ID, "double_spotlight"), PageDoubleSpotlight.class);
+        ClientBookRegistry.INSTANCE.pageTypes.put(new ResourceLocation(Unordinary_Basics.MOD_ID, "multi_spotlight"), PageMultiSpotlight.class);
 
         e.enqueueWork(UBClient::registerBlockTransparencies);
         e.enqueueWork(UBClient::registerEntityRenderer);
