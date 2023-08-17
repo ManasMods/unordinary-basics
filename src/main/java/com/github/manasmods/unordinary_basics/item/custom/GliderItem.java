@@ -28,7 +28,7 @@ public class GliderItem extends Item {
 
         Level level = entity.getLevel();
 
-        return level.getBlockState(entity.getOnPos()).is(Blocks.AIR) && level.getBlockState(entity.getOnPos().below()).is(Blocks.AIR);
+        return level.getBlockState(entity.getOnPos()).is(Blocks.AIR) && level.getBlockState(entity.getOnPos().below()).is(Blocks.AIR) && entity instanceof LivingEntity livingEntity && !livingEntity.isFallFlying();
     }
 
     @Override
@@ -40,7 +40,6 @@ public class GliderItem extends Item {
         LivingEntity livingEntity = (LivingEntity) pEntity;
 
         livingEntity.addEffect(SLOW_FALLING);
-        System.out.println("Moved");
 
     }
 }
