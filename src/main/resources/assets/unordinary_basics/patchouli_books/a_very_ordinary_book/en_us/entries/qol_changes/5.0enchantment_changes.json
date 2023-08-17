@@ -1,0 +1,20 @@
+{
+  "name": "05.0 - Enchantment Recipes",
+  "icon": "minecraft:enchanted_book",
+  "category": "unordinary_basics:qol_changes",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:enchanted_book",
+      "title": "Enchantment Changes",
+      "text": "Armour Pieces which give an effect when wearing it, such as the Rabbit Boots or Technoblades Crown, will mix with other Armour Pieces to give a higher effect. For example, both of the mentioned pieces give Speed 1 - but when wearing both together, you are given Speed 2!",
+
+      "type2": "patchouli:empty"
+    },
+    {
+      "type": "patchouli:empty",
+
+      "type2": "patchouli:empty"
+    }
+  ]
+}

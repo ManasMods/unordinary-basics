@@ -1,0 +1,17 @@
+{
+  "name": "07.0 - Glider",
+  "icon": "unordinary_basics:glider",
+  "category": "unordinary_basics:items",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:glider",
+      "text": "The Glider from Breath of the Wild reimagined in Minecraft!",
+
+      "type2": "patchouli:empty"
+    },
+    {
+      "type": "patchouli:empty"
+    }
+  ]
+}

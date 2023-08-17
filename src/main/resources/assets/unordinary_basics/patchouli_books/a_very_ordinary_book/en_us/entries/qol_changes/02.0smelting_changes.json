@@ -6,7 +6,7 @@
     {
       "type": "patchouli:spotlight",
       "item": "minecraft:lava_bucket",
-      "text": "Lava Bucket smelt time has been increased from 20000 to 38400. So from 1.28 stacks to 3 stacks in a Furnace",
+      "text": "Lava Bucket smelt time has been increased from 20000 to 38400. So from 1.28 stacks to 3 stacks in a Furnace.",
 
       "type2": "patchouli:empty"
     },

@@ -501,6 +501,16 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .save(consumer);
 
         crownSmithing(consumer, Items.NETHERITE_HELMET, Unordinary_BasicsItems.TECHNOBLADE_CROWN);
+
+        ShapedRecipeBuilder.shaped(Unordinary_BasicsItems.EQUINE_TRACKER)
+                .define('A', Items.AMETHYST_SHARD)
+                .define('I', Items.IRON_INGOT)
+                .pattern(" I ")
+                .pattern("IAI")
+                .pattern(" I ")
+                .unlockedBy("has_amethyst_shard", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.AMETHYST_SHARD).build()))
+                .save(consumer);
     }
 
     private void vanillaQOLSmelting(Consumer<FinishedRecipe> consumer) {

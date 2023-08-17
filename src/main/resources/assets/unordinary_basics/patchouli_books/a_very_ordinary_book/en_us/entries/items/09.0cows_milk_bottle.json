@@ -1,0 +1,17 @@
+{
+  "name": "09.0 - Bottle of Cows Milk",
+  "icon": "unordinary_basics:milk_bottle",
+  "category": "unordinary_basics:items",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:milk_bottle",
+      "text": "Can also use an empty bottle on a Cow!",
+
+      "type2": "patchouli:empty"
+    },
+    {
+      "type": "patchouli:empty"
+    }
+  ]
+}

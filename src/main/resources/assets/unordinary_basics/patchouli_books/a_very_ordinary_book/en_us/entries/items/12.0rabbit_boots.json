@@ -1,0 +1,17 @@
+{
+  "name": "11.0 - Rabbit Boots",
+  "icon": "unordinary_basics:rabbit_boots",
+  "category": "unordinary_basics:items",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:rabbit_boots",
+      "text": "Gives the player a permanent Jump Boost 2, Speed 1, and Luck 1.",
+
+      "type2": "patchouli:empty"
+    },
+    {
+      "type": "patchouli:empty"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "10.0 - Quiver",
+  "icon": "unordinary_basics:quiver",
+  "category": "unordinary_basics:items",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:quiver",
+      "text": "Used to store 6 stacks of arrows. When holding a Bow with a Quiver equipped, you will also see the arrow you will fire before you fire it!",
+
+      "type2": "patchouli:empty"
+    },
+    {
+      "type": "patchouli:empty"
+    }
+  ]
+}
