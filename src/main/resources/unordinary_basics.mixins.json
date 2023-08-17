@@ -6,6 +6,7 @@
   "refmap": "unordinary_basics.refmap.json",
   "mixins": [
     "FletchingContainerAccessor",
+    "MixinAbstractChestedHorse",
     "MixinAbstractHorse",
     "MixinAnvilScreen",
     "MixinApothFletchingBlock",
@@ -18,23 +19,23 @@
     "MixinFrostWalker",
     "MixinGoat",
     "MixinHorse",
+    "MixinItemEntity",
     "MixinItemStack",
     "MixinJukeBoxBlock",
     "MixinLadder",
-    "NBTIngredientAccessor",
-    "MixinItemEntity",
+    "MixinLivingEntity",
     "MixinPlayer",
     "MixinPotionItem",
     "MixinThrowablePotionItem",
-    "MixinLivingEntity"
+    "NBTIngredientAccessor"
   ],
   "client": [
     "AbstractContainerScreenAccessor",
     "MixinBedRenderer",
     "MixinClipContext",
-    "MixinPlayerModel",
     "MixinElytraLayer",
-    "MixinLocalPlayer"
+    "MixinLocalPlayer",
+    "MixinPlayerModel"
   ],
   "injectors": {
     "defaultRequire": 1

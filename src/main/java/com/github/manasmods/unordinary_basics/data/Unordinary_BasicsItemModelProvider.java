@@ -29,6 +29,7 @@ public class Unordinary_BasicsItemModelProvider extends ItemModelProvider {
         singleTexture(Unordinary_BasicsItems.REDSTONE_POUCH);
         singleTexture(Unordinary_BasicsItems.BARREL_BACKPACK);
         singleTexture(Unordinary_BasicsItems.CHEST_BACKPACK);
+        singleTexture(Unordinary_BasicsItems.EQUINE_TRACKER);
 
         singleTexture(Unordinary_BasicsItems.UNKNOWN_BLADE_FRAGMENT);
         singleTexture(Unordinary_BasicsItems.UNKNOWN_SWORD_HANDLE_FRAGMENT);
