@@ -234,7 +234,7 @@ repositories {
         it.from(sourceSets.main.resources) {
             def forgeLoaderVersion = forgeVersion.substring(0, forgeVersion.indexOf('.'))
             def manasVersionCheck = "[${manasCoreVersion},)"
-            def patchouliVersionCheck = "[${patchouliVersionCheck},)"
+            def patchouliVersionCheck = "${patchouliVersionCheck}"
 
             include "META-INF/mods.toml"
             expand 'modVersion': "${modVersion}", 'forgeLoaderVersion': "[${forgeLoaderVersion},)", 'minecraftVersionCheck': "${minecraftVersionCheck}", 'manasVersionCheck': "${manasVersionCheck}", 'patchouliVersionCheck': "${patchouliVersionCheck}"
