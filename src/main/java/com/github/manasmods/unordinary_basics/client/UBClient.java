@@ -65,7 +65,11 @@ public class UBClient {
     @SubscribeEvent
     public static void init(final FMLClientSetupEvent e) {
         // Patchouli custom page
-        ClientBookRegistry.INSTANCE.pageTypes.put(new ResourceLocation(Unordinary_Basics.MOD_ID, "multi_spotlight"), PageMultiSpotlight.class);
+        try {
+            ClientBookRegistry.INSTANCE.pageTypes.put(new ResourceLocation(Unordinary_Basics.MOD_ID, "multi_spotlight"), PageMultiSpotlight.class);
+        } catch (Exception ex) {
+            Unordinary_Basics.LOGGER.info("Patchouli not found");
+        }
 
         e.enqueueWork(UBClient::registerBlockTransparencies);
         e.enqueueWork(UBClient::registerEntityRenderer);

@@ -64,7 +64,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Mod(Unordinary_Basics.MOD_ID)
 public class Unordinary_Basics {
     public static final String MOD_ID = "unordinary_basics";
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public static Unordinary_Basics getInstance() {
         return instance;
