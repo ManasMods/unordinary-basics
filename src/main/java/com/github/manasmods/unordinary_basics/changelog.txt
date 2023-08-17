@@ -3,6 +3,7 @@
 - Updated to 1.19.2
  - Updated dependencies
  - Added Patchouli as an optional dependency
+- Added Patchouli Integration
 - Changed Item Sorter use from holding shift down, to crouching
 - Gave the Item Sorter a tooltip to make it simpler to use
 
@@ -13,9 +14,10 @@
 
 
 TODO:
- - Add Patchouli Integration
  - Update Master Miner to only mine blocks of a same or similar hardness (to avoid cheesing mining long to mine blocks)
  - Fix Rendering of Glider in Off Hand.
+ - Add Zenith Re-Work
+ - Add Master Sword and Decayed Master Sword
 
 TODO: Known Issues
  - Grass-type Stairs will often create a hole to the abyss when placed in some directions
