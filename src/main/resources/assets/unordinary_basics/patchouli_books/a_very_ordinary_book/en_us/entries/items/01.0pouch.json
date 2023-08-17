@@ -15,6 +15,7 @@
       "entries": [
         "unordinary_basics:items/01.1animal_bait",
         "unordinary_basics:items/01.2redstone_pouch",
+        "unordinary_basics:items/01.3emerald_pouch",
         "unordinary_basics:items/01.4potion_belt"
         ],
       "title": "Pouch Items"

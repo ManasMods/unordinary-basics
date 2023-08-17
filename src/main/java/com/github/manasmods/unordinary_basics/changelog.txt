@@ -18,6 +18,7 @@ TODO:
  - Fix Rendering of Glider in Off Hand.
  - Add Zenith Re-Work
  - Add Master Sword and Decayed Master Sword
+ - Add Patchouli Pages for Juke Box Changes, and Fletching Table Changes
 
 TODO: Known Issues
  - Grass-type Stairs will often create a hole to the abyss when placed in some directions
