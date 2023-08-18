@@ -5,7 +5,7 @@
   "pages": [
     {
       "type": "patchouli:spotlight",
-      "title": "Tree Feller",
+      "title": "Curse of Breaking",
       "item": "minecraft:enchanted_book{StoredEnchantments:[{id:\"unordinary_basics:breaking_curse\",lvl:1}]}",
       "text": "Makes your gear break twice as fast!",
 

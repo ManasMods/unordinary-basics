@@ -5,7 +5,7 @@
   "pages": [
     {
       "type": "patchouli:spotlight",
-      "title": "Tree Feller",
+      "title": "Curse of Fatigue",
       "item": "minecraft:enchanted_book{StoredEnchantments:[{id:\"unordinary_basics:fatigue_curse\",lvl:1}]}",
       "text": "Makes you move, mine, and hit slower!",
 
