@@ -1,5 +1,5 @@
 {
-  "name": "02.0 - Tree Feller",
+  "name": "03.0 - Tree Feller",
   "icon": "minecraft:diamond_axe",
   "category": "unordinary_basics:ub_enchantments",
   "pages": [
@@ -12,7 +12,21 @@
       "type2": "patchouli:empty"
     },
     {
-      "type": "patchouli:empty",
+      "type": "unordinary_basics:multi_spotlight",
+      "title": "Works On",
+      "items": [
+        "minecraft:oak_log",
+        "minecraft:dark_oak_log",
+        "minecraft:birch_log",
+        "minecraft:spruce_log",
+        "minecraft:jungle_log",
+        "minecraft:acacia_log",
+        "minecraft:mushroom_stem",
+        "minecraft:red_mushroom_block",
+        "minecraft:brown_mushroom_block",
+        "minecraft:warped_stem",
+        "minecraft:crimson_stem"
+      ],
 
       "type2": "patchouli:empty"
     }
