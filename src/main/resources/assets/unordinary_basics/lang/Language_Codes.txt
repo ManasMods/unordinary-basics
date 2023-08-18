@@ -1,0 +1,48 @@
+This is a guide to understand which set of codes goes to what language. Feel free to add to the list.
+If the lang file does not exist, only create it if you or someone else can add to it. (No need for an extra lang file)
+Please keep list A-Z
+
+Afrikaans - af_za
+Arabic - ar_sa
+Bosnian - bs_ba
+Chinese Simplified - zh_cn
+Chinese Traditional (Hong Kong) - zh_hk
+Chinese Traditional (Taiwan) - zh_tw
+Croatian - hr_hr
+Czech - cs_cz
+Danish - da_dk
+Dutch - nl_nl
+English - en_us
+Finnish - fi_fi
+French - fr_fr
+German (Austrian) - de_at
+German (Swiss) - de_ch
+German - de_de
+Greek - el_gr
+Hindi - hi_in
+Hungarian - hu_hu
+Indonesian - id_id
+Irish - ga_ie
+Italian - it_it
+Japanese - ja_jp
+Korean - ko_kr
+Norwegian (Bokmål) - nb_no
+Portuguese (Brazilian) - pt_br
+Portuguese - pt_pt
+Romanian - ro_ro
+Russian - ru_ru
+Scottish Gaelic - gd_gb
+Serbian - sr_rs
+Slovak - sk_sk
+Spanish (Catalan) - ca_es
+Spanish (Galician) - gl_es
+Spanish (Mexico) - es_mx
+Spanish - es_es
+Swedish - sv_se
+Tagalog - tl_ph
+Thai - th_th
+Ukrainian - uk_ua
+Vietnamese - vi_vn
+Welsh - cy_gb
+
+Site used - https://www.fincher.org/Utilities/CountryLanguageList.shtml
