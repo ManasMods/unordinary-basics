@@ -1,18 +1,41 @@
 {
-  "name": "02.0 - Tree Feller",
-  "icon": "minecraft:diamond_axe",
+  "name": "04.0 - Tree Feller",
+  "icon": "minecraft:shears",
   "category": "unordinary_basics:ub_enchantments",
   "pages": [
     {
       "type": "patchouli:spotlight",
-      "title": "Tree Feller",
-      "item": "minecraft:enchanted_book{StoredEnchantments:[{id:\"unordinary_basics:tree_feller\",lvl:1}]}",
-      "text": "Tree Feller will allow you to chop down Trees in one fell swoop!",
+      "title": "Trimmer",
+      "item": "minecraft:enchanted_book{StoredEnchantments:[{id:\"unordinary_basics:trimmer\",lvl:1}]}",
+      "text": "Trimmer will vein-mine any block the Shears are meant to mine!",
 
       "type2": "patchouli:empty"
     },
     {
-      "type": "patchouli:empty",
+      "type": "unordinary_basics:multi_spotlight",
+      "title": "Works On",
+      "items": [
+        "minecraft:cobweb",
+        "minecraft:dead_bush",
+        "minecraft:fern",
+        "minecraft:glow_lichen",
+        "minecraft:grass",
+        "minecraft:tall_grass",
+        "minecraft:hanging_roots",
+        "minecraft:large_fern",
+        "minecraft:nether_sprouts",
+        "minecraft:seagrass",
+        "minecraft:tall_seagrass",
+        "minecraft:tripwire",
+        "minecraft:twisting_vines",
+        "minecraft:weeping_vines",
+        "minecraft:oak_leaves",
+        "minecraft:dark_oak_leaves",
+        "minecraft:birch_leaves",
+        "minecraft:spruce_leaves",
+        "minecraft:jungle_leaves",
+        "minecraft:acacia_leaves"
+      ],
 
       "type2": "patchouli:empty"
     }

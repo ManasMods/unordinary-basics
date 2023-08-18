@@ -33,7 +33,6 @@ public class Unordinary_BasicsBlockTagProvider extends BlockTagProvider {
                 .add(Blocks.NETHER_WART_BLOCK)
                 .add(Blocks.SCULK)
                 .add(Blocks.SCULK_CATALYST)
-                .add(Blocks.SCULK_CATALYST)
                 .add(Blocks.SCULK_SENSOR)
                 .add(Blocks.SCULK_SHRIEKER)
                 .add(Blocks.SCULK_VEIN)
