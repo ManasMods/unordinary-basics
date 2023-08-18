@@ -1,0 +1,13 @@
+{
+  "type": "unordinary_basics:add_item",
+  "conditions": [
+    {
+        "condition": "minecraft:entity_properties",
+        "predicate": {
+          "type": "minecraft:ender_dragon"
+        },
+        "entity": "this"
+      }
+    ],
+  "item": "unordinary_basics:unknown_sword_handle_fragment"
+}

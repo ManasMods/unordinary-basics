@@ -1,0 +1,13 @@
+{
+  "type": "unordinary_basics:add_item",
+  "conditions": [
+    {
+        "condition": "minecraft:entity_properties",
+        "predicate": {
+          "type": "minecraft:warden"
+        },
+        "entity": "this"
+      }
+    ],
+  "item": "unordinary_basics:unknown_blade_fragment"
+}

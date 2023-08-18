@@ -8,6 +8,7 @@ import com.github.manasmods.unordinary_basics.data.*;
 import com.github.manasmods.unordinary_basics.handler.UBEntityHandler;
 import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisIntegration;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
+import com.github.manasmods.unordinary_basics.loot.ModLootModifiers;
 import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
 import com.github.manasmods.unordinary_basics.network.toclient.UBInventoryClientSync;
 import com.github.manasmods.unordinary_basics.painting.UBPaintings;
@@ -94,6 +95,7 @@ public class Unordinary_Basics {
         forgeBus.addGenericListener(Entity.class,this::attachCapabilities);
         modEventBus.addListener(UBEntityHandler::entityAttributeEvent);
         UBPaintings.register(modEventBus);
+        ModLootModifiers.register(modEventBus);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
