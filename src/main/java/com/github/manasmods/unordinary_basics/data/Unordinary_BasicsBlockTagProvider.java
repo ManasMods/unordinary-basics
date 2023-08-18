@@ -19,7 +19,13 @@ public class Unordinary_BasicsBlockTagProvider extends BlockTagProvider {
         tag(UBTags.Blocks.VEIN_MINER_VALID)
                 .addTag(Tags.Blocks.ORES);
         tag(UBTags.Blocks.TREE_FELLER_VALID)
-                .addTag(BlockTags.LOGS);
+                .addTag(BlockTags.LOGS)
+                .addTag(BlockTags.CRIMSON_STEMS)
+                .addTag(BlockTags.WARPED_STEMS)
+                .addTag(BlockTags.CRIMSON_STEMS)
+                .add(Blocks.MUSHROOM_STEM)
+                .add(Blocks.BROWN_MUSHROOM_BLOCK)
+                .add(Blocks.RED_MUSHROOM_BLOCK);
         tag(UBTags.Blocks.CROP_TENDER_VALID)
                 .add(Blocks.DRIED_KELP_BLOCK)
                 .add(Blocks.HAY_BLOCK)

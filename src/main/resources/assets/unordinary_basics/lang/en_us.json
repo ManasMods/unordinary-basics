@@ -56,7 +56,6 @@
   "enchantment.unordinary_basics.trimmer.desc": "Shears entire chunks of blocks! - Crouch + Right Click to toggle",
   "enchantment.unordinary_basics.crop_tender": "Crop-Tender",
   "enchantment.unordinary_basics.crop_tender.desc": "Tills and mines large chunks of blocks! - Crouch + Right Click to toggle",
-
   "enchantment.unordinary_basics.breaking_curse": "Curse of Breaking",
   "enchantment.unordinary_basics.breaking_curse.desc": "Gear breaks twice as fast",
   "enchantment.unordinary_basics.fatigue_curse": "Curse of Fatigue",
@@ -81,6 +80,8 @@
   "unordinary_basics.message.pet.follow": "%s is set to Follow.",
   "unordinary_basics.message.vein_miner_toggle": "Turned Vein Miner %s",
   "unordinary_basics.message.tree_feller_toggle": "Turned Tree Feller %s",
+  "unordinary_basics.message.trimmer_toggle": "Turned Trimmer %s",
+  "unordinary_basics.message.crop_tender_toggle": "Turned Crop Tender %s",
   "unordinary_basics.message.on": "on",
   "unordinary_basics.message.off": "off",
 

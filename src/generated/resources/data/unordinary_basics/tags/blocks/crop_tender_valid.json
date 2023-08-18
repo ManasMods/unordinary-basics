@@ -1,0 +1,21 @@
+{
+  "values": [
+    "minecraft:dried_kelp_block",
+    "minecraft:hay_block",
+    "minecraft:moss_block",
+    "minecraft:nether_wart_block",
+    "minecraft:sculk",
+    "minecraft:sculk_catalyst",
+    "minecraft:sculk_catalyst",
+    "minecraft:sculk_sensor",
+    "minecraft:sculk_shrieker",
+    "minecraft:sculk_vein",
+    "minecraft:shroomlight",
+    "minecraft:sponge",
+    "minecraft:target",
+    "minecraft:warped_wart_block",
+    "minecraft:wet_sponge",
+    "#minecraft:crops",
+    "#minecraft:leaves"
+  ]
+}

@@ -6,6 +6,7 @@
 - Added Patchouli Integration
 - Changed Item Sorter use from holding shift down, to crouching
 - Gave the Item Sorter a tooltip to make it simpler to use
+- Added a vein miner enchantment to Shears and Hoes
 
 - Bug Fixes
  - Fixed a bug causing the Builders Glove to crash in the .jar file

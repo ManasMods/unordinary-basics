@@ -16,7 +16,7 @@ public class CropTenderEnchantment extends Enchantment {
     @Override
     public boolean canEnchant(ItemStack stack) {
         return super.canEnchant(stack)
-                && EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.MASTER_MINER, stack) == 0
+                && EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.CROP_TENDER, stack) == 0
                 && (stack.getItem() instanceof HoeItem);
     }
 }
