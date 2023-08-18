@@ -20,7 +20,6 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ProjectileWeaponItem;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
-import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.SlotItemHandler;
 import org.jetbrains.annotations.NotNull;
@@ -51,7 +50,7 @@ public class QuiverItem extends Item implements IUBInventoryItem {
         int y = (screen.height - 166) / 2;
 
         RenderSystem.setShaderTexture(0,TEXTURE);
-        screen.blit(pPoseStack,x - imageWidth + 6,y + 32,0,0,imageWidth,imageHeight);
+        screen.blit(pPoseStack,x - imageWidth + 6,y + 76,0,0,imageWidth,imageHeight);
     }
 
     @Override
@@ -61,7 +60,7 @@ public class QuiverItem extends Item implements IUBInventoryItem {
                 int index = 0;
                 for (int col = 0; col < 2; ++col){
                     for (int row = 0; row < 3; ++row){
-                        menu.addSlotEx(new SlotItemHandler(stackHandler,index,8 + col * 18 - 40,8 + row * 18 + 32){
+                        menu.addSlotEx(new SlotItemHandler(stackHandler,index,8 + col * 18 - 40,8 + row * 18 + 76){
                             @Override
                             public boolean mayPlace(@NotNull ItemStack stack) {
                                 if (((ProjectileWeaponItem)Items.BOW).getSupportedHeldProjectiles().test(stack)) {

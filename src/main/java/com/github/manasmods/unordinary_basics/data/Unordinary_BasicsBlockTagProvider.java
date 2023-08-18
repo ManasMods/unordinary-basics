@@ -22,7 +22,6 @@ public class Unordinary_BasicsBlockTagProvider extends BlockTagProvider {
                 .addTag(BlockTags.LOGS)
                 .addTag(BlockTags.CRIMSON_STEMS)
                 .addTag(BlockTags.WARPED_STEMS)
-                .addTag(BlockTags.CRIMSON_STEMS)
                 .add(Blocks.MUSHROOM_STEM)
                 .add(Blocks.BROWN_MUSHROOM_BLOCK)
                 .add(Blocks.RED_MUSHROOM_BLOCK);

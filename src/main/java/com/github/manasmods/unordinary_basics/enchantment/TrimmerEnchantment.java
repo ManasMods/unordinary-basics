@@ -15,8 +15,6 @@ public class TrimmerEnchantment extends Enchantment {
 
     @Override
     public boolean canEnchant(ItemStack stack) {
-        return super.canEnchant(stack)
-                && EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.TRIMMER, stack) == 0
-                && (stack.getItem() instanceof ShearsItem);
+        return (stack.getItem() instanceof ShearsItem);
     }
 }
