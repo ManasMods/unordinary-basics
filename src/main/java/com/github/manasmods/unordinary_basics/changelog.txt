@@ -3,6 +3,7 @@
 - Updated to 1.19.2
  - Updated dependencies
  - Added Patchouli as an optional dependency
+ - Fixed crash rendering banner patterns on beds
 - Added Patchouli Integration
 - Changed Item Sorter use from holding shift down, to crouching
 - Gave the Item Sorter a tooltip to make it simpler to use
