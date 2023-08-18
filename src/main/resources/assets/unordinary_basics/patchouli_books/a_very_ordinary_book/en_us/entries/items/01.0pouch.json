@@ -1,0 +1,24 @@
+{
+  "name": "01.0 - Pouch",
+  "icon": "unordinary_basics:pouch",
+  "category": "unordinary_basics:items",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:pouch",
+      "text": "The Pouch may look like the Bundle however has no use by itself - and is instead used to craft items with great usefulness.",
+
+      "type2": "empty"
+    },
+    {
+      "type": "patchouli:relations",
+      "entries": [
+        "unordinary_basics:items/01.1animal_bait",
+        "unordinary_basics:items/01.2redstone_pouch",
+        "unordinary_basics:items/01.3emerald_pouch",
+        "unordinary_basics:items/01.4potion_belt"
+        ],
+      "title": "Pouch Items"
+    }
+  ]
+}

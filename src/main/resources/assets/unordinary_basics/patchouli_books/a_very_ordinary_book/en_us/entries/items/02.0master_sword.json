@@ -1,0 +1,14 @@
+{
+  "name": "02.0 - Master Sword",
+  "icon": "minecraft:barrier",
+  "category": "unordinary_basics:items",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "This Item is a Work In Progress which has not yet been added."
+    },
+    {
+      "type": "patchouli:empty"
+    }
+  ]
+}

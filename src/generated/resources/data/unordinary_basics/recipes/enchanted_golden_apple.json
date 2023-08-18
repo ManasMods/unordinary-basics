@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "A": {
+      "item": "minecraft:golden_apple"
+    },
+    "B": {
+      "item": "minecraft:gold_block"
+    },
+    "S": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "pattern": [
+    "BAB",
+    "ASA",
+    "BAB"
+  ],
+  "result": {
+    "count": 2,
+    "item": "minecraft:enchanted_golden_apple"
+  }
+}

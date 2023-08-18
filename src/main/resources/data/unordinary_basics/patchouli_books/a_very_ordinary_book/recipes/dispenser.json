@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "tag": "unordinary_basics:stone"
+    },
+    "B": {
+      "item": "minecraft:bow"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "###",
+    "#B#",
+    "#R#"
+  ],
+  "result": {
+    "item": "minecraft:dispenser"
+  }
+}

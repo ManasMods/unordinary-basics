@@ -1,0 +1,28 @@
+{
+  "type": "unordinary_basics:fletching_recipe",
+  "key": {
+    "A": {
+      "type": "forge:nbt",
+      "count": 32,
+      "item": "minecraft:arrow"
+    },
+    "P": {
+      "type": "forge:nbt",
+      "count": 1,
+      "item": "minecraft:lingering_potion",
+      "nbt": "{Potion:\"minecraft:water\"}"
+    }
+  },
+  "pattern": [
+    " P",
+    " A",
+    "  "
+  ],
+  "result": {
+    "count": 32,
+    "item": "minecraft:tipped_arrow",
+    "nbt": {
+      "Potion": "minecraft:water"
+    }
+  }
+}

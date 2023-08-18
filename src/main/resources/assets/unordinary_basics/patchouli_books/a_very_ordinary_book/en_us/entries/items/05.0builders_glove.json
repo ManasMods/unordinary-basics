@@ -1,0 +1,20 @@
+{
+  "name": "05.0 - Builders Glove",
+  "icon": "unordinary_basics:builders_glove",
+  "category": "unordinary_basics:items",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:builders_glove",
+      "text": "The Builders Glove allows you to randomly place blocks according to what is in the Gloves Inventory. For example, 2 stacks of stone, and 1 stack of cobblestone. Stone will place 2 out of 3 times.",
+
+      "type2": "empty"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "You are also able to block swap. Hold the block of your choice in your offhand with the Glove in your main, simply look at the block you want to swap, and then click your interact key. However, you will need to have a tool capable of mining the block you wish to swap.",
+
+      "type2": "patchouli:empty"
+    }
+  ]
+}

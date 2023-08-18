@@ -1,0 +1,29 @@
+== Change Log ==
+
+- Updated to 1.19.2
+ - Updated dependencies
+ - Added Patchouli as an optional dependency
+ - Fixed crash rendering banner patterns on beds
+- Added Patchouli Integration
+- Changed Item Sorter use from holding shift down, to crouching
+- Gave the Item Sorter a tooltip to make it simpler to use
+
+- Bug Fixes
+ - Fixed a bug causing the Builders Glove to crash in the .jar file
+ - Fixed a bug causing the Builders Glove to not replace blocks
+ - Fixed a bug causing the Redstone Pouch to crash in the .jar file
+
+
+TODO:
+ - Update Master Miner to only mine blocks of a same or similar hardness (to avoid cheesing mining long to mine blocks)
+ - Fix Rendering of Glider in Off Hand.
+ - Add Zenith Re-Work
+ - Add Master Sword and Decayed Master Sword
+ - Add Patchouli Pages for Juke Box Changes, and Fletching Table Changes
+
+TODO: Known Issues
+ - Grass-type Stairs will often create a hole to the abyss when placed in some directions
+ - Breaking the Jukebox while a disc is playing will cause it to continue playing the song till it ends.
+
+
+== End of Change Log ==

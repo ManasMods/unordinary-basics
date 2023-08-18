@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:stripped_oak_log_stairs"
+    },
+    {
+      "item": "unordinary_basics:stripped_oak_log_stairs"
+    },
+    {
+      "item": "unordinary_basics:stripped_oak_log_stairs"
+    },
+    {
+      "item": "unordinary_basics:stripped_oak_log_stairs"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "minecraft:stripped_oak_log"
+  }
+}

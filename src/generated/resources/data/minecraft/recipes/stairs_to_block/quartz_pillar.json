@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unordinary_basics:quartz_pillar_stairs"
+    },
+    {
+      "item": "unordinary_basics:quartz_pillar_stairs"
+    },
+    {
+      "item": "unordinary_basics:quartz_pillar_stairs"
+    },
+    {
+      "item": "unordinary_basics:quartz_pillar_stairs"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "minecraft:quartz_pillar"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "01.0 - Item Sorter",
+  "icon": "unordinary_basics:item_sorter",
+  "category": "unordinary_basics:blocks",
+  "pages": [
+    {
+      "type": "patchouli:image",
+      "title": "Item Sorter",
+      "images": [
+        "unordinary_basics:patchouli_books/images/item_sorter.png"
+      ],
+      "text": "Crouch + Right Click to Open GUI. Right Click to move Items from Inventory to Block."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:item_sorter",
+      "title": " ",
+      "text": "The Item Sorter is the perfect block to quickly sort your items after a long journey. Come home, right click the Item Sorter(s) and boom, your inventory is tidier!"
+    }
+  ]
+}

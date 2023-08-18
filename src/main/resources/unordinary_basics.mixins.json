@@ -1,0 +1,43 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.github.manasmods.unordinary_basics.core",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "unordinary_basics.refmap.json",
+  "mixins": [
+    "FletchingContainerAccessor",
+    "MixinAbstractChestedHorse",
+    "MixinAbstractHorse",
+    "MixinAnvilScreen",
+    "MixinApothFletchingBlock",
+    "MixinArmorTooltips",
+    "MixinBedBlock",
+    "MixinBedBlockEntity",
+    "MixinDestroySpeed",
+    "MixinFireworkRocket",
+    "MixinFletchingTableBlock",
+    "MixinFrostWalker",
+    "MixinGoat",
+    "MixinHorse",
+    "MixinItemEntity",
+    "MixinItemStack",
+    "MixinJukeBoxBlock",
+    "MixinLadder",
+    "MixinLivingEntity",
+    "MixinPlayer",
+    "MixinPotionItem",
+    "MixinThrowablePotionItem",
+    "NBTIngredientAccessor"
+  ],
+  "client": [
+    "AbstractContainerScreenAccessor",
+    "MixinBedRenderer",
+    "MixinClipContext",
+    "MixinElytraLayer",
+    "MixinLocalPlayer",
+    "MixinPlayerModel"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

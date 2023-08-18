@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "L": {
+      "item": "minecraft:leather"
+    },
+    "P": {
+      "item": "unordinary_basics:pouch"
+    },
+    "S": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    " L ",
+    "LSL",
+    " LP"
+  ],
+  "result": {
+    "item": "unordinary_basics:potion_belt"
+  }
+}

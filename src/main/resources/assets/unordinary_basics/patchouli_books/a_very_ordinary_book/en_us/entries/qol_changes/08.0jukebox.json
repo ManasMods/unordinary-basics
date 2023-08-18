@@ -1,0 +1,39 @@
+{
+  "name": "08.0 - Jukebox Changes",
+  "icon": "minecraft:jukebox",
+  "category": "unordinary_basics:qol_changes",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:jukebox",
+      "title": "Jukebox Changes",
+      "text": "The Jukebox has been given 16 disc storage slots along with 1 main disc slot to mirror its real life counterpart.",
+
+      "type2": "patchouli:empty"
+    },
+    {
+      "type": "unordinary_basics:multi_spotlight",
+      "items": [
+        "minecraft:music_disc_13",
+        "minecraft:music_disc_cat",
+        "minecraft:music_disc_blocks",
+        "minecraft:music_disc_chirp",
+        "minecraft:music_disc_far",
+        "minecraft:music_disc_mall",
+        "minecraft:music_disc_mellohi",
+        "minecraft:music_disc_stal",
+        "minecraft:music_disc_strad",
+        "minecraft:music_disc_ward",
+        "minecraft:music_disc_11",
+        "minecraft:music_disc_wait",
+        "minecraft:music_disc_otherside",
+        "minecraft:music_disc_5",
+        "minecraft:music_disc_pigstep",
+        "unordinary_basics:music_disc_queen"
+      ],
+      "title": "Music Discs",
+
+      "type2": "patchouli:empty"
+    }
+  ]
+}

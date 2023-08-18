@@ -1,0 +1,23 @@
+{
+  "name": "06.0 - Proning Changes",
+  "icon": "minecraft:iron_boots",
+  "category": "unordinary_basics:qol_changes",
+  "pages": [
+    {
+      "type": "unordinary_basics:multi_spotlight",
+      "items": [
+        "minecraft:oak_trapdoor",
+        "minecraft:piston"
+      ],
+      "title": "Proning Changes",
+      "text": "Typically to enter a 1x1 gap, you need to push yourself down with a piston or a trapdoor and this can be annoying. Well we have changed it so all you need to do is to sneak while facing the 1x1 hole and you will go prone. You will need to enter the hole as otherwise you will just stand back up.",
+
+      "type2": "patchouli:empty"
+    },
+    {
+      "type": "patchouli:empty",
+
+      "type2": "patchouli:empty"
+    }
+  ]
+}

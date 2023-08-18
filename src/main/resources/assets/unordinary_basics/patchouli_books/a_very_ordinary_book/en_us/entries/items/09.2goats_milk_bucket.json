@@ -1,0 +1,17 @@
+{
+  "name": "09.2 - Bucket of Goats Milk",
+  "icon": "unordinary_basics:goat_milk_bucket",
+  "category": "unordinary_basics:items",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "unordinary_basics:goat_milk_bucket",
+      "text": "Use an empty bucket on a goat! Goats produce milk in real life so why shouldn't we be able to milk them in Minecraft?",
+
+      "type2": "patchouli:empty"
+    },
+    {
+      "type": "patchouli:empty"
+    }
+  ]
+}

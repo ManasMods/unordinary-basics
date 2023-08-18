@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "X": {
+      "item": "unordinary_basics:pouch"
+    }
+  },
+  "pattern": [
+    "RRR",
+    "RXR",
+    "RRR"
+  ],
+  "result": {
+    "item": "unordinary_basics:redstone_pouch"
+  }
+}

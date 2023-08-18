@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "H": {
+      "item": "minecraft:hopper"
+    },
+    "N": {
+      "item": "minecraft:iron_nugget"
+    },
+    "T": {
+      "tag": "minecraft:signs"
+    }
+  },
+  "pattern": [
+    "NTN",
+    " H "
+  ],
+  "result": {
+    "item": "unordinary_basics:item_sorter"
+  }
+}

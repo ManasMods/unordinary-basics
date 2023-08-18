@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:red_sandstone_stairs"
+    },
+    {
+      "item": "minecraft:red_sandstone_stairs"
+    },
+    {
+      "item": "minecraft:red_sandstone_stairs"
+    },
+    {
+      "item": "minecraft:red_sandstone_stairs"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "minecraft:red_sandstone"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "07.0 - Fletching Table",
+  "icon": "minecraft:fletching_table",
+  "category": "unordinary_basics:qol_changes",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:fletching_table",
+      "title": "Fletching Table Use",
+      "text": "The Fletching Table is the best way to craft any type of arrow. Crafting double the amount as you would with a Crafting Table and being even more efficient with the other types of arrows!",
+
+      "type2": "patchouli:empty"
+    },
+    {
+      "type": "patchouli:empty",
+
+      "type2": "patchouli:empty"
+    }
+  ]
+}

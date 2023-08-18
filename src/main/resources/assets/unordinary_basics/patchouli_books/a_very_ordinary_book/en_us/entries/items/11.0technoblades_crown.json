@@ -1,0 +1,17 @@
+{
+  "name": "11.0 - Technoblade's Crown",
+  "icon": "unordinary_basics:technoblade_crown",
+  "category": "unordinary_basics:items",
+  "pages": [
+    {
+      "type": "patchouli:smithing",
+      "recipe": "minecraft:technoblade_crown_smithing",
+      "text": "A Crown to remember the Anarchist who never dies! Gives the player a permanent Strength 1 and Speed 1.",
+
+      "type2": "patchouli:empty"
+    },
+    {
+      "type": "patchouli:empty"
+    }
+  ]
+}
