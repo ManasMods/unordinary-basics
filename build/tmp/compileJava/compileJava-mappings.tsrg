@@ -1,0 +1,5 @@
+com/github/manasmods/unordinary_basics/core/MixinAnvilScreen player f_169611_
+com/github/manasmods/unordinary_basics/core/MixinBedBlockEntity color f_58724_
+com/github/manasmods/unordinary_basics/core/MixinElytraLayer elytraModel f_116935_
+com/github/manasmods/unordinary_basics/core/MixinLivingEntity fallFlyTicks f_20937_
+com/github/manasmods/unordinary_basics/core/MixinPlayer freeAt (Lnet/minecraft/core/BlockPos;)Z m_36350_
