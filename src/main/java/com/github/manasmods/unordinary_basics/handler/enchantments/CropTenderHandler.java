@@ -17,7 +17,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = Unordinary_Basics.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
-public class TreeFellerHandler {
+public class CropTenderHandler {
 
     //If this isn't working, try rerunning data, as the tags may not be present
     @SubscribeEvent
@@ -25,26 +25,25 @@ public class TreeFellerHandler {
         Player player = event.getPlayer();
         ItemStack tool = player.getItemInHand(InteractionHand.MAIN_HAND);
         BlockPos pos = event.getPos();
-        int enchantLevel = EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.TREE_FELLER, tool);
-        if (enchantLevel > 0 && tool.getTag().getBoolean("treeFellerOn") && event.getLevel().getBlockState(pos).is(UBTags.Blocks.TREE_FELLER_VALID)) {
-            tool.getOrCreateTag().putBoolean("treeFellerOn",false);
+        int enchantLevel = EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.CROP_TENDER, tool);
+        if (enchantLevel > 0 && tool.getTag().getBoolean("cropTenderOn") && event.getLevel().getBlockState(pos).is(UBTags.Blocks.CROP_TENDER_VALID)) {
+            tool.getOrCreateTag().putBoolean("cropTenderOn",false);
             BlockBreakHelper.floodMineOnBlock(128 ,pos,player.getLevel(),player.getOnPos().above(),tool,player,event.getLevel().getBlockState(pos).getBlock(),true);
-            tool.getOrCreateTag().putBoolean("treeFellerOn",true);
+            tool.getOrCreateTag().putBoolean("cropTenderOn",true);
         }
     }
-
 
     @SubscribeEvent
     public static void onItemRightClick(final PlayerInteractEvent.RightClickItem event) {
         ItemStack stack = event.getItemStack();
         Player player = event.getEntity();
-        int maxLevel = EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.TREE_FELLER, stack);
+        int maxLevel = EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.CROP_TENDER, stack);
         CompoundTag tag = stack.getTag();
         if (maxLevel > 0 && tag != null && player.isCrouching()) {
-            boolean isOn = tag.getBoolean("treeFellerOn");
-            tag.putBoolean("treeFellerOn", !isOn);
-            player.displayClientMessage(Component.translatable("unordinary_basics.message.tree_feller_toggle",(isOn ? Component.translatable("unordinary_basics.message.off") :
-                    Component.translatable("unordinary_basics.message.on"))), true);
+            boolean isOn = tag.getBoolean("cropTenderOn");
+            tag.putBoolean("cropTenderOn", !isOn);
+            player.displayClientMessage((Component.translatable("unordinary_basics.message.crop_tender_toggle",isOn ?
+                    Component.translatable("unordinary_basics.message.off") : Component.translatable("unordinary_basics.message.on"))), true);
         }
     }
 }

@@ -28,7 +28,7 @@ public class VeinMinerHandler {
         int enchantLevel = EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.VEIN_MINER, tool);
         if (enchantLevel > 0 && tool.getTag().getBoolean("veinMinerOn") && event.getLevel().getBlockState(pos).is(UBTags.Blocks.VEIN_MINER_VALID)) {
             tool.getOrCreateTag().putBoolean("veinMinerOn",false);
-            BlockBreakHelper.floodMineOnBlock(128 ,pos,player.getLevel(),player.getOnPos().above(),tool,player,event.getLevel().getBlockState(pos).getBlock());
+            BlockBreakHelper.floodMineOnBlock(128 ,pos,player.getLevel(),player.getOnPos().above(),tool,player,event.getLevel().getBlockState(pos).getBlock(),true);
             tool.getOrCreateTag().putBoolean("veinMinerOn",true);
         }
     }
@@ -39,7 +39,7 @@ public class VeinMinerHandler {
         Player player = event.getEntity();
         int maxLevel = EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.VEIN_MINER, stack);
         CompoundTag tag = stack.getTag();
-        if (maxLevel > 0 && tag != null && player.isShiftKeyDown()) {
+        if (maxLevel > 0 && tag != null && player.isCrouching()) {
             boolean isOn = tag.getBoolean("veinMinerOn");
             tag.putBoolean("veinMinerOn", !isOn);
             player.displayClientMessage((Component.translatable("unordinary_basics.message.vein_miner_toggle",isOn ?

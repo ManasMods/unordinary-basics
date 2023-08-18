@@ -1,11 +1,11 @@
 {
-  "name": "Curse of Hallucination",
-  "icon": "minecraft:iron_helmet",
+  "name": "12.0 - Curse of Hallucination",
+  "icon": "minecraft:diamond_helmet",
   "category": "unordinary_basics:ub_enchantments",
   "pages": [
     {
       "type": "patchouli:spotlight",
-      "title": "Tree Feller",
+      "title": "Curse of Hallucination",
       "item": "minecraft:enchanted_book{StoredEnchantments:[{id:\"unordinary_basics:hallucination_curse\",lvl:1}]}",
       "text": "Makes you hear things which may or may not be there!",
 

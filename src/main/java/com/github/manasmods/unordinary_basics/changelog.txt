@@ -3,15 +3,17 @@
 - Updated to 1.19.2
  - Updated dependencies
  - Added Patchouli as an optional dependency
- - Fixed crash rendering banner patterns on beds
 - Added Patchouli Integration
 - Changed Item Sorter use from holding shift down, to crouching
 - Gave the Item Sorter a tooltip to make it simpler to use
+- Added a vein miner enchantment to Shears and Hoes
 
 - Bug Fixes
  - Fixed a bug causing the Builders Glove to crash in the .jar file
  - Fixed a bug causing the Builders Glove to not replace blocks
  - Fixed a bug causing the Redstone Pouch to crash in the .jar file
+ - Fixed a bug which caused a crash with the rendering of banner patterns on beds
+
 
 
 TODO:

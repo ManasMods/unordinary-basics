@@ -69,7 +69,7 @@ public class MasterMinerHandler {
         Player player = event.getEntity();
         int maxLevel = EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.MASTER_MINER, stack);
         CompoundTag tag = stack.getTag();
-        if (maxLevel > 0 && tag != null && player.isShiftKeyDown()) {
+        if (maxLevel > 0 && tag != null && player.isCrouching()) {
             int currentLevel = tag.getInt("masterMinerLevel");
             int newLevel = currentLevel == maxLevel ? 0 : currentLevel + 1;
             tag.putInt("masterMinerLevel", newLevel);

@@ -1,0 +1,49 @@
+{
+  "name": "05.0 - Crop Tender",
+  "icon": "minecraft:diamond_hoe",
+  "category": "unordinary_basics:ub_enchantments",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Crop Tender",
+      "item": "minecraft:enchanted_book{StoredEnchantments:[{id:\"unordinary_basics:crop_tender\",lvl:1}]}",
+      "text": "Crop Tender will vein-mine any blocks the Hoe is meant to mine, along with tilling vast amounts of dirt!",
+
+      "type2": "patchouli:empty"
+    },
+    {
+      "type": "unordinary_basics:multi_spotlight",
+      "title": "Works On",
+      "items": [
+        "minecraft:dried_kelp_block",
+        "minecraft:hay_block",
+        "minecraft:shroomlight",
+        "minecraft:nether_wart_block",
+        "minecraft:warped_wart_block",
+        "minecraft:sculk",
+        "minecraft:sculk_catalyst",
+        "minecraft:sculk_sensor",
+        "minecraft:sculk_shrieker",
+        "minecraft:sculk_vein",
+        "minecraft:sponge",
+        "minecraft:wet_sponge",
+        "minecraft:target",
+        "minecraft:moss_block",
+        "minecraft:beetroot",
+        "minecraft:carrot",
+        "minecraft:potato",
+        "minecraft:wheat",
+        "minecraft:melon",
+        "minecraft:pumpkin",
+        "minecraft:oak_leaves",
+        "minecraft:dark_oak_leaves",
+        "minecraft:birch_leaves",
+        "minecraft:spruce_leaves",
+        "minecraft:jungle_leaves",
+        "minecraft:acacia_leaves"
+      ],
+
+      "type2": "patchouli:empty"
+    }
+  ]
+}

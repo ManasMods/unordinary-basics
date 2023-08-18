@@ -1,6 +1,7 @@
 package com.github.manasmods.unordinary_basics.registry;
 
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.loot.ModLootModifiers;
 import net.minecraft.core.Registry;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.EntityType;

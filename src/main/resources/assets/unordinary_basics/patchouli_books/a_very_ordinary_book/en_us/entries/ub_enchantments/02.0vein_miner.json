@@ -1,0 +1,42 @@
+{
+  "name": "02.0 - Vein Miner",
+  "icon": "minecraft:diamond_pickaxe",
+  "category": "unordinary_basics:ub_enchantments",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Vein Miner",
+      "item": "minecraft:enchanted_book{StoredEnchantments:[{id:\"unordinary_basics:vein_miner\",lvl:1}]}",
+      "text": "Allows you to mine large veins of ore with ease! Vein Miner and Master Miner are mutually exclusive! We recommend Vein Miner going with your Fortune Pickaxe, and Master Miner going with your Silk Touch Pickaxe!",
+
+      "type2": "patchouli:empty"
+    },
+    {
+      "type": "unordinary_basics:multi_spotlight",
+      "title": "Works On",
+      "items": [
+        "minecraft:coal_ore",
+        "minecraft:deepslate_coal_ore",
+        "minecraft:copper_ore",
+        "minecraft:deepslate_copper_ore",
+        "minecraft:gold_ore",
+        "minecraft:deepslate_gold_ore",
+        "minecraft:nether_gold_ore",
+        "minecraft:iron_ore",
+        "minecraft:deepslate_iron_ore",
+        "minecraft:emerald_ore",
+        "minecraft:deepslate_emerald_ore",
+        "minecraft:lapis_ore",
+        "minecraft:deepslate_lapis_ore",
+        "minecraft:redstone_ore",
+        "minecraft:deepslate_redstone_ore",
+        "minecraft:diamond_ore",
+        "minecraft:deepslate_diamond_ore",
+        "minecraft:nether_quartz_ore",
+        "minecraft:ancient_debris"
+      ],
+
+      "type2": "patchouli:empty"
+    }
+  ]
+}
