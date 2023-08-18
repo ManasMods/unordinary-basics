@@ -16,4 +16,6 @@ public class Unordinary_BasicsMenuTypes {
     public static final MenuType<BuildersGloveMenu> BUILDERS_GLOVE_MENU = null;
     @ObjectHolder(registryName = "menu", value = "unordinary_basics:item_sorter_menu")
     public static final MenuType<ItemSorterMenu> ITEM_SORTER_MENU = null;
+    @ObjectHolder(registryName = "menu", value = "unordinary_basics:prismarine_smoker_menu")
+    public static final MenuType<PrismarineSmokerMenu> PRISMARINE_SMOKER_MENU = null;
 }

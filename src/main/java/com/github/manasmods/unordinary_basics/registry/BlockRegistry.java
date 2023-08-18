@@ -60,6 +60,7 @@ public class BlockRegistry {
                 .sound(SoundType.METAL)
                 .noOcclusion()
                 .requiresCorrectToolForDrops()));
+        registry.register("prismarine_smoker", () -> new PrismarineSmokerBlock(BlockBehaviour.Properties.copy(Blocks.SMOKER)));
 
 
         //BLOCKS FOR STAIRS + SLABS

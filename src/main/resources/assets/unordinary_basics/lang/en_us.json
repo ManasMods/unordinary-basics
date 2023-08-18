@@ -5,6 +5,9 @@
 
   "block.unordinary_basics.enchantment_library": "Enchantment Library §c(WIP)§",
   "block.unordinary_basics.item_sorter": "Item Sorter",
+  "block.unordinary_basics.prismarine_smoker": "Prismarine Smoker",
+
+  "container.unordinary_basics.prismarine_smoker": "Prismarine Smoker",
 
   "block.unordinary_basics.item_sorter.desc": "Sneak and Right Click to Open GUI. Right Click to move items from your inventory to block inventory according to what is in the Item Sorters Filters",
 

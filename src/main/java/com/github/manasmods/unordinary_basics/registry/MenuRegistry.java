@@ -40,5 +40,7 @@ class MenuRegistry {
         registry.register("builders_glove_menu", () -> IForgeMenuType.create(BuildersGloveMenu::new));
 
         registry.register("item_sorter_menu", () -> IForgeMenuType.create(ItemSorterMenu::new));
+
+        registry.register("prismarine_smoker_menu", () -> new PrismarineSmokerMenu());
     }
 }

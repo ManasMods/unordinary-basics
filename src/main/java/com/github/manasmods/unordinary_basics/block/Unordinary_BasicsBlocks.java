@@ -1,6 +1,5 @@
 package com.github.manasmods.unordinary_basics.block;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.ObjectHolder;
 
@@ -12,6 +11,8 @@ public class Unordinary_BasicsBlocks {
     public static final Block ENCHANTMENT_LIBRARY = null;
     @ObjectHolder(registryName = "block", value = "unordinary_basics:item_sorter")
     public static final Block ITEM_SORTER = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:prismarine_smoker")
+    public static final Block PRISMARINE_SMOKER = null;
 
     @ObjectHolder(registryName = "block", value = "unordinary_basics:calcite_bricks")
     public static final Block CALCITE_BRICKS = null;

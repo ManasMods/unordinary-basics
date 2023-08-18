@@ -1,0 +1,9 @@
+{
+  "type": "unordinary_basics:prismarine_smoking",
+  "cookingtime": 50,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "minecraft:cod"
+  },
+  "result": "minecraft:cooked_cod"
+}
