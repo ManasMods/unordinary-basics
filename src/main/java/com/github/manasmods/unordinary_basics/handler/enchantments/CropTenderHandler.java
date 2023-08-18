@@ -28,7 +28,7 @@ public class CropTenderHandler {
         int enchantLevel = EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.CROP_TENDER, tool);
         if (enchantLevel > 0 && tool.getTag().getBoolean("cropTenderOn") && event.getLevel().getBlockState(pos).is(UBTags.Blocks.CROP_TENDER_VALID)) {
             tool.getOrCreateTag().putBoolean("cropTenderOn",false);
-            BlockBreakHelper.floodMineOnBlock(128 ,pos,player.getLevel(),player.getOnPos().above(),tool,player,event.getLevel().getBlockState(pos).getBlock());
+            BlockBreakHelper.floodMineOnBlock(128 ,pos,player.getLevel(),player.getOnPos().above(),tool,player,event.getLevel().getBlockState(pos).getBlock(),true);
             tool.getOrCreateTag().putBoolean("cropTenderOn",true);
         }
     }

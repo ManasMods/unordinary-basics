@@ -28,7 +28,7 @@ public class TreeFellerHandler {
         int enchantLevel = EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.TREE_FELLER, tool);
         if (enchantLevel > 0 && tool.getTag().getBoolean("treeFellerOn") && event.getLevel().getBlockState(pos).is(UBTags.Blocks.TREE_FELLER_VALID)) {
             tool.getOrCreateTag().putBoolean("treeFellerOn",false);
-            BlockBreakHelper.floodMineOnBlock(128 ,pos,player.getLevel(),player.getOnPos().above(),tool,player,event.getLevel().getBlockState(pos).getBlock());
+            BlockBreakHelper.floodMineOnBlock(128 ,pos,player.getLevel(),player.getOnPos().above(),tool,player,event.getLevel().getBlockState(pos).getBlock(),true);
             tool.getOrCreateTag().putBoolean("treeFellerOn",true);
         }
     }

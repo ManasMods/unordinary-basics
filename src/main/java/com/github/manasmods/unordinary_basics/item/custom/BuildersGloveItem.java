@@ -76,7 +76,7 @@ public class BuildersGloveItem extends Item {
                         //Break the block
                         ItemStack tool = new ItemStack(correctItem);
                         List<ItemStack> drops = BlockBreakHelper.breakBlockAndReturnDrops(pContext.getClickedPos(),level,pContext.getPlayer().getOnPos().above(),
-                                pContext.getClickedPos(),tool,pContext.getPlayer());
+                                pContext.getClickedPos(),tool,pContext.getPlayer(),true);
                         level.destroyBlock(pContext.getClickedPos(), false);
 
                         //Place the new block

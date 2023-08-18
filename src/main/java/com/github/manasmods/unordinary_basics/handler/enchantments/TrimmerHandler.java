@@ -28,7 +28,7 @@ public class TrimmerHandler {
         int enchantLevel = EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.TRIMMER, tool);
         if (enchantLevel > 0 && tool.getTag().getBoolean("trimmerOn") && event.getLevel().getBlockState(pos).is(UBTags.Blocks.TRIMMER_VALID)) {
             tool.getOrCreateTag().putBoolean("trimmerOn",false);
-            BlockBreakHelper.floodMineOnBlock(128 ,pos,player.getLevel(),player.getOnPos().above(),tool,player,event.getLevel().getBlockState(pos).getBlock());
+            BlockBreakHelper.floodMineOnBlock(128 ,pos,player.getLevel(),player.getOnPos().above(),tool,player,event.getLevel().getBlockState(pos).getBlock(),false);
             tool.getOrCreateTag().putBoolean("trimmerOn",true);
         }
     }

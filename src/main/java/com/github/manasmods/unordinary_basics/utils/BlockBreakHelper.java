@@ -35,8 +35,9 @@ public class BlockBreakHelper {
      * @param pTool Tool that that was used to break the blocks
      * @param pEntity Entity that is breaking the blocks
      * @param pBlock Type of the blocks being broken
+     * @param doChecks Will check if the block being mined by the tool can actually be mined for the specific tool passed in - should usually be true
      */
-    public static void floodMineOnBlock(int pBlockLimit, BlockPos pPos, Level pLevel, BlockPos pSpawnPos, ItemStack pTool, LivingEntity pEntity, Block pBlock){
+    public static void floodMineOnBlock(int pBlockLimit, BlockPos pPos, Level pLevel, BlockPos pSpawnPos, ItemStack pTool, LivingEntity pEntity, Block pBlock, boolean doChecks){
         int blocksBroken = 0;
         Queue<BlockPos> positionQueue = new LinkedList<>();
         List<ItemStack> drops = new LinkedList<>();
@@ -55,7 +56,7 @@ public class BlockBreakHelper {
                         if (blocksBroken >= pBlockLimit){break floodBreak;}
                         BlockPos toProcess = startPos.offset(x,y,z);
                         if (pLevel.getBlockState(toProcess).getBlock() == pBlock){
-                            drops.addAll(breakBlockAndReturnDrops(toProcess,pLevel,pSpawnPos,startPos,pTool,pEntity));
+                            drops.addAll(breakBlockAndReturnDrops(toProcess,pLevel,pSpawnPos,startPos,pTool,pEntity,doChecks));
                             positionQueue.add(toProcess);
                             blocksBroken++;
                         }
@@ -76,7 +77,7 @@ public class BlockBreakHelper {
      * Under Apache 2.0 license <br>
      * https://www.apache.org/licenses/LICENSE-2.0.txt <br>
      */
-    public static List<ItemStack> breakBlockAndReturnDrops(BlockPos blockPos, Level pLevel, BlockPos spawnPos, BlockPos originPos, ItemStack pTool, LivingEntity pEntity){
+    public static List<ItemStack> breakBlockAndReturnDrops(BlockPos blockPos, Level pLevel, BlockPos spawnPos, BlockPos originPos, ItemStack pTool, LivingEntity pEntity, boolean doChecks){
         Player player = (Player) pEntity;
         LootContext.Builder lootContextBuilder =
                 (new LootContext.Builder((ServerLevel)pLevel)).withRandom(pLevel.random).withParameter(LootContextParams.ORIGIN, Vec3.atCenterOf(spawnPos))
@@ -84,7 +85,7 @@ public class BlockBreakHelper {
         List<ItemStack> list = pLevel.getBlockState(blockPos).getDrops(lootContextBuilder);
         BlockState state = pLevel.getBlockState(blockPos);
         if (!blockPos.equals(originPos)) {
-            if (pTool.isCorrectToolForDrops(state)) {
+            if (pTool.isCorrectToolForDrops(state) || !doChecks) {
                 ServerPlayer serverPlayer = (ServerPlayer) player;
                 if (player.getAbilities().instabuild) {
                     if (state.onDestroyedByPlayer(pLevel, blockPos, player, true, state.getFluidState()))
