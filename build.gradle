@@ -187,6 +187,13 @@ repositories {
 
         // Geckolib
         //implementation fg.deobf("software.bernie.geckolib:geckolib-forge-${minecraftVersion}:${geckolibVersion}")
+
+        // Worldedit for easier Building
+        runtimeOnly fg.deobf("curse.maven:worldedit-225608:3922622")
+
+        // MmmMmmMmmMmm (Target Dummy) for Attribute and DMG Tests
+        runtimeOnly fg.deobf("curse.maven:TargetDummy-225738:4410143")
+        runtimeOnly fg.deobf("curse.maven:TargetDummyLib-499980:4414538")
     }
 
 // Example for how to get properties into the manifest for reading at runtime.

@@ -1,0 +1,17 @@
+{
+  "name": "01.2 - Redstone Pouch",
+  "icon": "unordinary_basics:redstone_pouch",
+  "category": "unordinary_basics:items",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:redstone_pouch",
+      "text": "The Redstone Pouch is the perfect item for Redstoners. You can store vast amounts of redstone, while still able to place and throw down redstone.",
+
+      "type2": "patchouli:empty"
+    },
+    {
+      "type": "patchouli:empty"
+    }
+  ]
+}

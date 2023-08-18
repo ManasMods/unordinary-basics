@@ -47,8 +47,8 @@ public class PageMultiSpotlight extends PageWithText {
         parent.drawCenteredStringNoShadow(ms, toDraw.getVisualOrderText(), GuiBook.PAGE_WIDTH / 2, 0, book.headerColor);
 
         // Items
-        for (int done = 0, row = 0; done < ingredients.size(); done += 5, row++) {
-            int todo = Math.min(ingredients.size() - done, 5);
+        for (int done = 0, row = 0; done < ingredients.size(); done += 7, row++) {
+            int todo = Math.min(ingredients.size() - done, 7);
             for (int i = 0; i < todo; i++) {
                 int x = GuiBook.PAGE_WIDTH / 2 - todo * 8 + i * 16;
                 int y = 15 + row * 16;

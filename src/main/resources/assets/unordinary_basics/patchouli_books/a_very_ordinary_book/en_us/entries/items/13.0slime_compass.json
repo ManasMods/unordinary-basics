@@ -1,21 +1,17 @@
 {
-  "name": "Slime Compass",
+  "name": "13.0 - Slime Compass",
   "icon": "unordinary_basics:slime_compass",
   "category": "unordinary_basics:items",
   "pages": [
     {
-      "type": "patchouli:spotlight",
-      "item": "unordinary_basics:slime_compass",
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:slime_compass",
       "text": "The Slime Compass will point you towards the centre of the nearest Slime Chunk! Hold F3 and G to show Chunk Boundaries!",
 
       "type2": "patchouli:empty"
     },
     {
-      "type": "patchouli:crafting",
-      "title": " ",
-      "recipe": "unordinary_basics:slime_compass",
-
-      "type2": "patchouli:empty"
+      "type": "patchouli:empty"
     }
   ]
 }

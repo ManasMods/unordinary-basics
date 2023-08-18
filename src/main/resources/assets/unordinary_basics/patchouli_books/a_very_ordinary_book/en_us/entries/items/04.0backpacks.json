@@ -1,0 +1,21 @@
+{
+  "name": "04.0 - Backpacks",
+  "icon": "unordinary_basics:chest_backpack",
+  "category": "unordinary_basics:items",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:chest_backpack",
+      "text": "The Chest Backpack is a great way to store a chests worth of items while being different than other mods what add a backpack!",
+
+      "type2": "empty"
+    },
+    {
+    "type": "patchouli:crafting",
+    "recipe": "unordinary_basics:barrel_backpack",
+    "text": "Same premise as the Chest Backpack, however a Barrel!",
+
+    "type2": "empty"
+    }
+  ]
+}

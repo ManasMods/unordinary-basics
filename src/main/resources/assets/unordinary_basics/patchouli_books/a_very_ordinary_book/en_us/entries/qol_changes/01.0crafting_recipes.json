@@ -1,5 +1,5 @@
 {
-  "name": "Crafting Recipes",
+  "name": "01.0 - Crafting Recipes",
   "icon": "minecraft:crafting_table",
   "category": "unordinary_basics:qol_changes",
   "pages": [
@@ -140,7 +140,8 @@
       "type2": "patchouli:empty"
     },
     {
-      "type": "patchouli:empty",
+      "type": "patchouli:text",
+      "text": "All of the entries you see have either been tweaked or simply added. Most of the ones including stone have been given more stone options, while others have been missed by Mojang such as Blue Dye + Yellow Dye to make Green Dye.",
 
       "type2": "patchouli:empty"
     }

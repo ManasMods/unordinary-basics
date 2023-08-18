@@ -1,0 +1,17 @@
+{
+  "name": "06.0 - Equine Tracker",
+  "icon": "unordinary_basics:equine_tracker",
+  "category": "unordinary_basics:items",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:equine_tracker",
+      "text": "The Equine Tracker allows you to see the maximum stats of your Equine (Horse, Donkey, etc). Showing its Health, Speed, and Jump Height in Blocks!",
+
+      "type2": "empty"
+    },
+    {
+      "type": "patchouli:empty"
+    }
+  ]
+}

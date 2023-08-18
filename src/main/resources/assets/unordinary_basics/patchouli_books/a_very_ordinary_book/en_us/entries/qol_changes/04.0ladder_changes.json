@@ -1,0 +1,23 @@
+{
+  "name": "04.0 - Ladder Changes",
+  "icon": "minecraft:ladder",
+  "category": "unordinary_basics:qol_changes",
+  "pages": [
+    {
+      "type": "patchouli:image",
+      "images": [
+        "unordinary_basics:patchouli_books/images/ladder.png"
+      ],
+      "title": "Ladder Changes",
+
+      "type2": "empty"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Ladders can now support eachother so making a tree house is way easier! 1 Fully Supported Ladder (On a block) can support 6 other ladders!",
+
+      "type2": "empty"
+    }
+
+  ]
+}

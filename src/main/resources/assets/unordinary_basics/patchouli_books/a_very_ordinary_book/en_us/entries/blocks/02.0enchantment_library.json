@@ -1,0 +1,15 @@
+{
+  "name": "02.0 - Enchantment Library",
+  "icon": "minecraft:barrier",
+  "category": "unordinary_basics:blocks",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Enchantment Library",
+      "text": "This Block is a Work In Progress which has not yet been added."
+    },
+    {
+      "type": "patchouli:empty"
+    }
+  ]
+}

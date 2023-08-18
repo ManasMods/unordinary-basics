@@ -1,0 +1,17 @@
+{
+  "name": "09.1 - Bottle of Goats Milk",
+  "icon": "unordinary_basics:goat_milk_bottle",
+  "category": "unordinary_basics:items",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:goat_milk_bottle",
+      "text": "Can also use an empty bottle on a goat! Goats produce milk in real life so why shouldn't we be able to milk them in Minecraft?",
+
+      "type2": "patchouli:empty"
+    },
+    {
+      "type": "patchouli:empty"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "01.1 - Animal Bait",
+  "icon": "unordinary_basics:animal_bait",
+  "category": "unordinary_basics:items",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:animal_bait",
+      "text": "Used to make several mobs follow at once. Cows, Sheep, Pigs, Chickens, Parrots, Horses, Donkeys, and Mules.",
+
+
+      "type2": "empty"
+    }
+  ]
+}
