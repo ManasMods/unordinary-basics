@@ -3,6 +3,47 @@
     "com/github/manasmods/unordinary_basics/core/MixinFletchingTableBlock": {
       "use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;": "Lnet/minecraft/world/level/block/FletchingTableBlock;m_6227_(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;"
     },
+    "com/github/manasmods/unordinary_basics/core/MixinGoat": {
+      "mobInteract(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;": "Lnet/minecraft/world/entity/animal/goat/Goat;m_6071_(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;"
+    },
+    "com/github/manasmods/unordinary_basics/core/MixinLivingEntity": {
+      "updateFallFlying": "Lnet/minecraft/world/entity/LivingEntity;m_21323_()V"
+    },
+    "com/github/manasmods/unordinary_basics/core/MixinFireworkRocket": {
+      "use(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResultHolder;": "Lnet/minecraft/world/item/FireworkRocketItem;m_7203_(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResultHolder;"
+    },
+    "com/github/manasmods/unordinary_basics/core/MixinLadder": {
+      "canSurvive(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;)Z": "Lnet/minecraft/world/level/block/LadderBlock;m_7898_(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;)Z"
+    },
+    "com/github/manasmods/unordinary_basics/core/MixinAbstractHorse": {
+      "travel(Lnet/minecraft/world/phys/Vec3;)V": "Lnet/minecraft/world/entity/animal/horse/AbstractHorse;m_7023_(Lnet/minecraft/world/phys/Vec3;)V",
+      "positionRider(Lnet/minecraft/world/entity/Entity;)V": "Lnet/minecraft/world/entity/animal/horse/AbstractHorse;m_7332_(Lnet/minecraft/world/entity/Entity;)V",
+      "Lnet/minecraft/world/entity/animal/horse/AbstractHorse;getSpeed()F": "Lnet/minecraft/world/entity/animal/horse/AbstractHorse;m_6113_()F"
+    },
+    "com/github/manasmods/unordinary_basics/core/MixinFrostWalker": {
+      "onEntityMoved(Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;I)V": "Lnet/minecraft/world/item/enchantment/FrostWalkerEnchantment;m_45018_(Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;I)V"
+    },
+    "com/github/manasmods/unordinary_basics/core/MixinPotionItem": {
+      "finishUsingItem": "Lnet/minecraft/world/item/PotionItem;m_5922_(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;)Lnet/minecraft/world/item/ItemStack;"
+    },
+    "com/github/manasmods/unordinary_basics/core/MixinThrowablePotionItem": {
+      "Lnet/minecraft/world/item/ItemStack;shrink(I)V": "Lnet/minecraft/world/item/ItemStack;m_41774_(I)V",
+      "use": "Lnet/minecraft/world/item/ThrowablePotionItem;m_7203_(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResultHolder;"
+    },
+    "com/github/manasmods/unordinary_basics/core/MixinArmorTooltips": {
+      "appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V": "Lnet/minecraft/world/item/Item;m_7373_(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V"
+    },
+    "com/github/manasmods/unordinary_basics/core/AbstractContainerScreenAccessor": {
+      "imageWidth": "f_97726_:I"
+    },
+    "com/github/manasmods/unordinary_basics/core/MixinPlayerModel": {
+      "Lnet/minecraft/client/model/HumanoidModel;setupAnim(Lnet/minecraft/world/entity/LivingEntity;FFFFF)V": "Lnet/minecraft/client/model/HumanoidModel;m_6973_(Lnet/minecraft/world/entity/LivingEntity;FFFFF)V",
+      "setupAnim(Lnet/minecraft/world/entity/LivingEntity;FFFFF)V": "Lnet/minecraft/client/model/PlayerModel;m_6973_(Lnet/minecraft/world/entity/LivingEntity;FFFFF)V"
+    },
+    "com/github/manasmods/unordinary_basics/core/MixinBedRenderer": {
+      "Lnet/minecraft/client/renderer/blockentity/BedRenderer;renderPiece(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/core/Direction;Lnet/minecraft/client/resources/model/Material;IIZ)V": "Lnet/minecraft/client/renderer/blockentity/BedRenderer;m_173541_(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/core/Direction;Lnet/minecraft/client/resources/model/Material;IIZ)V",
+      "render(Lnet/minecraft/world/level/block/entity/BedBlockEntity;FLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;II)V": "Lnet/minecraft/client/renderer/blockentity/BedRenderer;m_6922_(Lnet/minecraft/world/level/block/entity/BedBlockEntity;FLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;II)V"
+    },
     "com/github/manasmods/unordinary_basics/core/MixinHorse": {
       "mobInteract": "Lnet/minecraft/world/entity/animal/horse/Horse;m_6071_(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;",
       "Lnet/minecraft/world/entity/animal/horse/Horse;isVehicle()Z": "Lnet/minecraft/world/entity/animal/horse/Horse;m_20160_()Z"
@@ -10,9 +51,6 @@
     "com/github/manasmods/unordinary_basics/core/MixinLocalPlayer": {
       "aiStep": "Lnet/minecraft/client/player/LocalPlayer;m_8107_()V",
       "Lnet/minecraft/client/player/LocalPlayer;getItemBySlot(Lnet/minecraft/world/entity/EquipmentSlot;)Lnet/minecraft/world/item/ItemStack;": "Lnet/minecraft/client/player/LocalPlayer;m_6844_(Lnet/minecraft/world/entity/EquipmentSlot;)Lnet/minecraft/world/item/ItemStack;"
-    },
-    "com/github/manasmods/unordinary_basics/core/MixinLivingEntity": {
-      "updateFallFlying": "Lnet/minecraft/world/entity/LivingEntity;m_21323_()V"
     },
     "com/github/manasmods/unordinary_basics/core/MixinPlayer": {
       "getProjectile": "Lnet/minecraft/world/entity/player/Player;m_6298_(Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;",
@@ -25,21 +63,30 @@
       "onRemove": "Lnet/minecraft/world/level/block/JukeboxBlock;m_6810_(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Z)V",
       "use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;": "Lnet/minecraft/world/level/block/JukeboxBlock;m_6227_(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;"
     },
+    "com/github/manasmods/unordinary_basics/core/MixinDestroySpeed": {
+      "getDestroySpeed(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/block/state/BlockState;)F": "Lnet/minecraft/world/item/DiggerItem;m_8102_(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/block/state/BlockState;)F"
+    },
     "com/github/manasmods/unordinary_basics/core/MixinAbstractChestedHorse": {
       "mobInteract": "Lnet/minecraft/world/entity/animal/horse/AbstractChestedHorse;m_6071_(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;"
     },
+    "com/github/manasmods/unordinary_basics/core/MixinItemStack": {
+      "use(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResultHolder;": "Lnet/minecraft/world/item/ItemStack;m_41682_(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResultHolder;"
+    },
     "com/github/manasmods/unordinary_basics/core/MixinClipContext": {
       "getBlockShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/shapes/VoxelShape;": "Lnet/minecraft/world/level/ClipContext;m_45694_(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/shapes/VoxelShape;"
-    },
-    "com/github/manasmods/unordinary_basics/core/MixinPotionItem": {
-      "finishUsingItem": "Lnet/minecraft/world/item/PotionItem;m_5922_(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;)Lnet/minecraft/world/item/ItemStack;"
     },
     "com/github/manasmods/unordinary_basics/core/MixinApothFletchingBlock": {
       "Lnet/minecraft/world/entity/player/Player;openMenu(Lnet/minecraft/world/MenuProvider;)Ljava/util/OptionalInt;": "Lnet/minecraft/world/entity/player/Player;m_5893_(Lnet/minecraft/world/MenuProvider;)Ljava/util/OptionalInt;",
       "use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;": "Lshadows/apotheosis/village/fletching/ApothFletchingBlock;m_6227_(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;"
     },
-    "com/github/manasmods/unordinary_basics/core/MixinArmorTooltips": {
-      "appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V": "Lnet/minecraft/world/item/Item;m_7373_(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V"
+    "com/github/manasmods/unordinary_basics/core/MixinItemEntity": {
+      "tick": "Lnet/minecraft/world/entity/item/ItemEntity;m_8119_()V",
+      "hurt": "Lnet/minecraft/world/entity/item/ItemEntity;m_6469_(Lnet/minecraft/world/damagesource/DamageSource;F)Z"
+    },
+    "com/github/manasmods/unordinary_basics/core/MixinBedBlock": {
+      "Lnet/minecraft/world/level/Level;blockUpdated(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;)V": "Lnet/minecraft/world/level/Level;m_6289_(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;)V",
+      "setPlacedBy(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;)V": "Lnet/minecraft/world/level/block/BedBlock;m_6402_(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;)V",
+      "use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;": "Lnet/minecraft/world/level/block/BedBlock;m_6227_(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;"
     },
     "com/github/manasmods/unordinary_basics/core/MixinAnvilScreen": {
       "renderLabels(Lcom/mojang/blaze3d/vertex/PoseStack;II)V": "Lnet/minecraft/client/gui/screens/inventory/AnvilScreen;m_7027_(Lcom/mojang/blaze3d/vertex/PoseStack;II)V",
@@ -54,6 +101,47 @@
       "com/github/manasmods/unordinary_basics/core/MixinFletchingTableBlock": {
         "use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;": "Lnet/minecraft/world/level/block/FletchingTableBlock;m_6227_(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;"
       },
+      "com/github/manasmods/unordinary_basics/core/MixinGoat": {
+        "mobInteract(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;": "Lnet/minecraft/world/entity/animal/goat/Goat;m_6071_(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;"
+      },
+      "com/github/manasmods/unordinary_basics/core/MixinLivingEntity": {
+        "updateFallFlying": "Lnet/minecraft/world/entity/LivingEntity;m_21323_()V"
+      },
+      "com/github/manasmods/unordinary_basics/core/MixinFireworkRocket": {
+        "use(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResultHolder;": "Lnet/minecraft/world/item/FireworkRocketItem;m_7203_(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResultHolder;"
+      },
+      "com/github/manasmods/unordinary_basics/core/MixinLadder": {
+        "canSurvive(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;)Z": "Lnet/minecraft/world/level/block/LadderBlock;m_7898_(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/LevelReader;Lnet/minecraft/core/BlockPos;)Z"
+      },
+      "com/github/manasmods/unordinary_basics/core/MixinAbstractHorse": {
+        "travel(Lnet/minecraft/world/phys/Vec3;)V": "Lnet/minecraft/world/entity/animal/horse/AbstractHorse;m_7023_(Lnet/minecraft/world/phys/Vec3;)V",
+        "positionRider(Lnet/minecraft/world/entity/Entity;)V": "Lnet/minecraft/world/entity/animal/horse/AbstractHorse;m_7332_(Lnet/minecraft/world/entity/Entity;)V",
+        "Lnet/minecraft/world/entity/animal/horse/AbstractHorse;getSpeed()F": "Lnet/minecraft/world/entity/animal/horse/AbstractHorse;m_6113_()F"
+      },
+      "com/github/manasmods/unordinary_basics/core/MixinFrostWalker": {
+        "onEntityMoved(Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;I)V": "Lnet/minecraft/world/item/enchantment/FrostWalkerEnchantment;m_45018_(Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;I)V"
+      },
+      "com/github/manasmods/unordinary_basics/core/MixinPotionItem": {
+        "finishUsingItem": "Lnet/minecraft/world/item/PotionItem;m_5922_(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;)Lnet/minecraft/world/item/ItemStack;"
+      },
+      "com/github/manasmods/unordinary_basics/core/MixinThrowablePotionItem": {
+        "Lnet/minecraft/world/item/ItemStack;shrink(I)V": "Lnet/minecraft/world/item/ItemStack;m_41774_(I)V",
+        "use": "Lnet/minecraft/world/item/ThrowablePotionItem;m_7203_(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResultHolder;"
+      },
+      "com/github/manasmods/unordinary_basics/core/MixinArmorTooltips": {
+        "appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V": "Lnet/minecraft/world/item/Item;m_7373_(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V"
+      },
+      "com/github/manasmods/unordinary_basics/core/AbstractContainerScreenAccessor": {
+        "imageWidth": "f_97726_:I"
+      },
+      "com/github/manasmods/unordinary_basics/core/MixinPlayerModel": {
+        "Lnet/minecraft/client/model/HumanoidModel;setupAnim(Lnet/minecraft/world/entity/LivingEntity;FFFFF)V": "Lnet/minecraft/client/model/HumanoidModel;m_6973_(Lnet/minecraft/world/entity/LivingEntity;FFFFF)V",
+        "setupAnim(Lnet/minecraft/world/entity/LivingEntity;FFFFF)V": "Lnet/minecraft/client/model/PlayerModel;m_6973_(Lnet/minecraft/world/entity/LivingEntity;FFFFF)V"
+      },
+      "com/github/manasmods/unordinary_basics/core/MixinBedRenderer": {
+        "Lnet/minecraft/client/renderer/blockentity/BedRenderer;renderPiece(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/core/Direction;Lnet/minecraft/client/resources/model/Material;IIZ)V": "Lnet/minecraft/client/renderer/blockentity/BedRenderer;m_173541_(Lcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;Lnet/minecraft/client/model/geom/ModelPart;Lnet/minecraft/core/Direction;Lnet/minecraft/client/resources/model/Material;IIZ)V",
+        "render(Lnet/minecraft/world/level/block/entity/BedBlockEntity;FLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;II)V": "Lnet/minecraft/client/renderer/blockentity/BedRenderer;m_6922_(Lnet/minecraft/world/level/block/entity/BedBlockEntity;FLcom/mojang/blaze3d/vertex/PoseStack;Lnet/minecraft/client/renderer/MultiBufferSource;II)V"
+      },
       "com/github/manasmods/unordinary_basics/core/MixinHorse": {
         "mobInteract": "Lnet/minecraft/world/entity/animal/horse/Horse;m_6071_(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;",
         "Lnet/minecraft/world/entity/animal/horse/Horse;isVehicle()Z": "Lnet/minecraft/world/entity/animal/horse/Horse;m_20160_()Z"
@@ -61,9 +149,6 @@
       "com/github/manasmods/unordinary_basics/core/MixinLocalPlayer": {
         "aiStep": "Lnet/minecraft/client/player/LocalPlayer;m_8107_()V",
         "Lnet/minecraft/client/player/LocalPlayer;getItemBySlot(Lnet/minecraft/world/entity/EquipmentSlot;)Lnet/minecraft/world/item/ItemStack;": "Lnet/minecraft/client/player/LocalPlayer;m_6844_(Lnet/minecraft/world/entity/EquipmentSlot;)Lnet/minecraft/world/item/ItemStack;"
-      },
-      "com/github/manasmods/unordinary_basics/core/MixinLivingEntity": {
-        "updateFallFlying": "Lnet/minecraft/world/entity/LivingEntity;m_21323_()V"
       },
       "com/github/manasmods/unordinary_basics/core/MixinPlayer": {
         "getProjectile": "Lnet/minecraft/world/entity/player/Player;m_6298_(Lnet/minecraft/world/item/ItemStack;)Lnet/minecraft/world/item/ItemStack;",
@@ -76,21 +161,30 @@
         "onRemove": "Lnet/minecraft/world/level/block/JukeboxBlock;m_6810_(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Z)V",
         "use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;": "Lnet/minecraft/world/level/block/JukeboxBlock;m_6227_(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;"
       },
+      "com/github/manasmods/unordinary_basics/core/MixinDestroySpeed": {
+        "getDestroySpeed(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/block/state/BlockState;)F": "Lnet/minecraft/world/item/DiggerItem;m_8102_(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/block/state/BlockState;)F"
+      },
       "com/github/manasmods/unordinary_basics/core/MixinAbstractChestedHorse": {
         "mobInteract": "Lnet/minecraft/world/entity/animal/horse/AbstractChestedHorse;m_6071_(Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResult;"
       },
+      "com/github/manasmods/unordinary_basics/core/MixinItemStack": {
+        "use(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResultHolder;": "Lnet/minecraft/world/item/ItemStack;m_41682_(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResultHolder;"
+      },
       "com/github/manasmods/unordinary_basics/core/MixinClipContext": {
         "getBlockShape(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/shapes/VoxelShape;": "Lnet/minecraft/world/level/ClipContext;m_45694_(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/BlockGetter;Lnet/minecraft/core/BlockPos;)Lnet/minecraft/world/phys/shapes/VoxelShape;"
-      },
-      "com/github/manasmods/unordinary_basics/core/MixinPotionItem": {
-        "finishUsingItem": "Lnet/minecraft/world/item/PotionItem;m_5922_(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/LivingEntity;)Lnet/minecraft/world/item/ItemStack;"
       },
       "com/github/manasmods/unordinary_basics/core/MixinApothFletchingBlock": {
         "Lnet/minecraft/world/entity/player/Player;openMenu(Lnet/minecraft/world/MenuProvider;)Ljava/util/OptionalInt;": "Lnet/minecraft/world/entity/player/Player;m_5893_(Lnet/minecraft/world/MenuProvider;)Ljava/util/OptionalInt;",
         "use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;": "Lshadows/apotheosis/village/fletching/ApothFletchingBlock;m_6227_(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;"
       },
-      "com/github/manasmods/unordinary_basics/core/MixinArmorTooltips": {
-        "appendHoverText(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V": "Lnet/minecraft/world/item/Item;m_7373_(Lnet/minecraft/world/item/ItemStack;Lnet/minecraft/world/level/Level;Ljava/util/List;Lnet/minecraft/world/item/TooltipFlag;)V"
+      "com/github/manasmods/unordinary_basics/core/MixinItemEntity": {
+        "tick": "Lnet/minecraft/world/entity/item/ItemEntity;m_8119_()V",
+        "hurt": "Lnet/minecraft/world/entity/item/ItemEntity;m_6469_(Lnet/minecraft/world/damagesource/DamageSource;F)Z"
+      },
+      "com/github/manasmods/unordinary_basics/core/MixinBedBlock": {
+        "Lnet/minecraft/world/level/Level;blockUpdated(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;)V": "Lnet/minecraft/world/level/Level;m_6289_(Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/Block;)V",
+        "setPlacedBy(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;)V": "Lnet/minecraft/world/level/block/BedBlock;m_6402_(Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/entity/LivingEntity;Lnet/minecraft/world/item/ItemStack;)V",
+        "use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;": "Lnet/minecraft/world/level/block/BedBlock;m_6227_(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;"
       },
       "com/github/manasmods/unordinary_basics/core/MixinAnvilScreen": {
         "renderLabels(Lcom/mojang/blaze3d/vertex/PoseStack;II)V": "Lnet/minecraft/client/gui/screens/inventory/AnvilScreen;m_7027_(Lcom/mojang/blaze3d/vertex/PoseStack;II)V",
