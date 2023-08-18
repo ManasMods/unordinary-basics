@@ -1,5 +1,5 @@
 {
-  "name": "04.0 - Tree Feller",
+  "name": "04.0 - Trimmer",
   "icon": "minecraft:shears",
   "category": "unordinary_basics:ub_enchantments",
   "pages": [
@@ -25,8 +25,7 @@
         "minecraft:large_fern",
         "minecraft:nether_sprouts",
         "minecraft:seagrass",
-        "minecraft:tall_seagrass",
-        "minecraft:tripwire",
+        "minecraft:string",
         "minecraft:twisting_vines",
         "minecraft:weeping_vines",
         "minecraft:oak_leaves",
