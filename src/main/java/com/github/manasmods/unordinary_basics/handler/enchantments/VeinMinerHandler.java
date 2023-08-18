@@ -39,7 +39,7 @@ public class VeinMinerHandler {
         Player player = event.getEntity();
         int maxLevel = EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.VEIN_MINER, stack);
         CompoundTag tag = stack.getTag();
-        if (maxLevel > 0 && tag != null && player.isShiftKeyDown()) {
+        if (maxLevel > 0 && tag != null && player.isCrouching()) {
             boolean isOn = tag.getBoolean("veinMinerOn");
             tag.putBoolean("veinMinerOn", !isOn);
             player.displayClientMessage((Component.translatable("unordinary_basics.message.vein_miner_toggle",isOn ?

@@ -15,6 +15,9 @@ public class UBTags {
     public static class Blocks {
         public static TagKey<Block> VEIN_MINER_VALID = modTag("vein_miner_valid");
         public static TagKey<Block> TREE_FELLER_VALID = modTag("tree_feller_valid");
+        public static TagKey<Block> CROP_TENDER_VALID = modTag("crop_tender_valid");
+        public static TagKey<Block> TRIMMER_VALID = modTag("trimmer_valid");
+
         public static TagKey<Block> GRASS_BLOCKS = forgeTag("grass_block");
         public static TagKey<Block> MYCELIUM_BLOCKS = forgeTag("mycelium");
         public static TagKey<Block> PODZOL_BLOCKS = forgeTag("podzol");

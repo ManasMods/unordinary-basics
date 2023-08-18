@@ -1,6 +1,5 @@
 package com.github.manasmods.unordinary_basics.enchantment;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraftforge.registries.ObjectHolder;
 
@@ -14,6 +13,10 @@ public class UnordinaryBasicsEnchantments {
     public static final Enchantment TREE_FELLER = null;
     @ObjectHolder(registryName = "enchantment", value = "unordinary_basics:vein_miner")
     public static final Enchantment VEIN_MINER = null;
+    @ObjectHolder(registryName = "enchantment", value = "unordinary_basics:trimmer")
+    public static final Enchantment TRIMMER = null;
+    @ObjectHolder(registryName = "enchantment", value = "unordinary_basics:crop_tender")
+    public static final Enchantment CROP_TENDER = null;
 
     //CURSES
 
