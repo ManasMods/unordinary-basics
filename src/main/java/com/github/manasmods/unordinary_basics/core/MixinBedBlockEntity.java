@@ -119,7 +119,6 @@ public class MixinBedBlockEntity extends BlockEntity implements IFromItem, IPatt
         return this.patterns;
     }
 
-    //TODO: Fix this. The patterns aren't loaded so this also doesn't work
     public List<Pair<BannerPattern, DyeColor>> createPatterns(DyeColor pColor, @Nullable ListTag pListTag) {
         List<Pair<BannerPattern, DyeColor>> list = Lists.newArrayList();
         if (pListTag != null) {

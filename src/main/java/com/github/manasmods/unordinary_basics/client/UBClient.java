@@ -20,6 +20,7 @@ import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.item.ClampedItemPropertyFunction;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.core.BlockPos;
@@ -36,6 +37,8 @@ import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.entity.BannerPattern;
+import net.minecraft.world.level.block.entity.BannerPatterns;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -50,11 +53,16 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import vazkii.patchouli.client.book.ClientBookRegistry;
 
 import javax.annotation.Nullable;
-import java.util.List;
+import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
+import java.util.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 @Mod.EventBusSubscriber(modid = Unordinary_Basics.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class UBClient {
+
+    private static final List<String> BANNER_PATTERN_HASHES = Arrays.asList("b", "bl", "bo", "br", "bri", "bs", "bt", "bts", "cbo", "cr", "cre", "cs", "dls", "drs", "flo", "glb", "gra", "gru", "hh", "hhb", "ld", "ls", "lud", "mc", "moj", "mr", "ms", "pig", "rd", "rs", "rud", "sc", "sku", "ss", "tl", "tr", "ts", "tt", "tts", "vh", "vhr");
+
     @SubscribeEvent
     public void init(FMLCommonSetupEvent event) {
         Unordinary_Basics.getInstance().getApotheosisIntegration().ifPresent(apotheosisIntegration -> {
@@ -89,12 +97,11 @@ public class UBClient {
 
     @SubscribeEvent
     public static void onTextureStitch(TextureStitchEvent.Pre event) {
-        //TODO: FIX THIS, I don't know what the point of this is, but the methods it uses seem to be gone
-        /*if(event.getAtlas().location() == Sheets.BANNER_SHEET) {
-            for(BannerPattern pattern : BannerPattern.values()) {
-                event.addSprite(new ResourceLocation(Unordinary_Basics.MOD_ID, "entity/banner/" + pattern.getFilename()));
+        if (event.getAtlas().location() == Sheets.BANNER_SHEET) {
+            for (String hash : BANNER_PATTERN_HASHES) {
+                event.addSprite(new ResourceLocation(Unordinary_Basics.MOD_ID, "entity/banner/" + hash));
             }
-        }*/
+        }
 
         if (event.getAtlas().location() == InventoryMenu.BLOCK_ATLAS) {
             List<String> registerValues = List.of(
