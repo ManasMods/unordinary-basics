@@ -1,5 +1,33 @@
 {
   "bookGuiScale": 0,
   "clickedVisualize": false,
-  "bookData": {}
+  "bookData": {
+    "unordinary_basics:a_very_ordinary_book": {
+      "viewedEntries": [
+        "unordinary_basics:blocks/01.0item_sorter",
+        "unordinary_basics:blocks/02.0enchantment_library",
+        "unordinary_basics:items/05.0builders_glove",
+        "unordinary_basics:items/08.0map_book",
+        "unordinary_basics:items/01.0pouch",
+        "unordinary_basics:items/13.0slime_compass",
+        "unordinary_basics:items/09.2goats_milk_bucket",
+        "unordinary_basics:items/11.0technoblades_crown",
+        "unordinary_basics:items/01.1animal_bait",
+        "unordinary_basics:items/09.1goats_milk_bottle",
+        "unordinary_basics:items/02.0master_sword",
+        "unordinary_basics:items/04.0backpacks",
+        "unordinary_basics:items/06.0equine_tracker",
+        "unordinary_basics:items/01.3emerald_pouch",
+        "unordinary_basics:items/07.0glider",
+        "unordinary_basics:items/01.4potion_belt",
+        "unordinary_basics:items/09.0cows_milk_bottle",
+        "unordinary_basics:items/03.0zenith",
+        "unordinary_basics:items/10.0quiver",
+        "unordinary_basics:items/12.0rabbit_boots",
+        "unordinary_basics:items/01.2redstone_pouch"
+      ],
+      "bookmarks": [],
+      "completedManualQuests": []
+    }
+  }
 }
