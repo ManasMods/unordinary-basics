@@ -9,11 +9,13 @@ import com.github.manasmods.unordinary_basics.block.entity.Unordinary_BasicsBloc
 import com.github.manasmods.unordinary_basics.client.block_entity_renderer.ItemSorterBlockEntityRenderer;
 import com.github.manasmods.unordinary_basics.client.gui.*;
 import com.github.manasmods.unordinary_basics.client.keybind.UBKeybindings;
+import com.github.manasmods.unordinary_basics.entity.client.NonExplosiveWitherSkullRenderer;
 import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisIntegrationClient;
 import com.github.manasmods.unordinary_basics.integration.patchouli.PageMultiSpotlight;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
 import com.github.manasmods.unordinary_basics.item.custom.SlimeCompassItem;
 import com.github.manasmods.unordinary_basics.menu.Unordinary_BasicsMenuTypes;
+import com.github.manasmods.unordinary_basics.registry.UBEntityTypes;
 import com.github.manasmods.unordinary_basics.tab.Unordinary_BasicsInventoryTab;
 import com.github.manasmods.unordinary_basics.tab.Unordinary_BasicsItemInventoryTab;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -21,6 +23,7 @@ import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.item.ClampedItemPropertyFunction;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.core.BlockPos;
@@ -127,6 +130,7 @@ public class UBClient {
     private static void registerEntityRenderer() {
 //        EntityRenderers.register(UBEntityTypes.GROLAR_BEAR.get(), GrolarBearRenderer::new);
 //        EntityRenderers.register(UBEntityTypes.GRIZZLY_BEAR.get(), GrizzlyBearRenderer::new);
+        EntityRenderers.register(UBEntityTypes.NON_EXPLOSIVE_WITHER_SKULL.get(), NonExplosiveWitherSkullRenderer::new);
     }
 
     private static void registerMenuScreens() {
@@ -302,6 +306,8 @@ public class UBClient {
 
             return isFilled.get() ? 1.0F : 0F;
         });
+
+        ItemProperties.register(Unordinary_BasicsItems.ZENITH,new ResourceLocation("active"),(stack,level,entity,seed) -> stack.getOrCreateTag().getInt("activated_timer") > 0 ? 1.0F : 0F);
     }
 
     private static void cutoutMipped(Block block) {
