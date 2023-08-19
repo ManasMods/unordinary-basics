@@ -1,4 +1,4 @@
-// 1.19.2	2023-08-17T14:57:04.7560436	Item Models: unordinary_basics
+// 1.19.2	2023-08-19T12:57:22.6712531	Item Models: unordinary_basics
 5ce567547fddda86908f7d8019ae022837bf1d93 assets/unordinary_basics/models/item/animal_bait.json
 3fa35354859867f37932c7a7447b24132918cc78 assets/unordinary_basics/models/item/barrel_backpack.json
 fa77afdd737e5e1ca27f8a23decd2bc5224a359f assets/unordinary_basics/models/item/builders_glove_gui.json
@@ -52,4 +52,3 @@ c1bb4b04b401c2cb22a7f44b356713edfb7095e0 assets/unordinary_basics/models/item/sl
 c29b365f9bbd9ed496cfb32f513a6b37efe7fc37 assets/unordinary_basics/models/item/unknown_blade_fragment.json
 e8684dcc5ae9f64900fdcf818454228dfaa7af4c assets/unordinary_basics/models/item/unknown_hilt_fragment.json
 252206acf00072e0bf52c7634d350b8c70ea137f assets/unordinary_basics/models/item/unknown_sword_handle_fragment.json
-b2948e60dd890f2862d84e27d33e06f3e641239b assets/unordinary_basics/models/item/zenith.json
