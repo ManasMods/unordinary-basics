@@ -1,0 +1,7 @@
+
+[anvil]
+	#Max EXP a survival player can spend in an anvil recipe
+	#-1 = unlimited
+	#Range: -1 ~ 1000000
+	expLimit = 40
+
