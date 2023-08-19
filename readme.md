@@ -14,14 +14,19 @@ Most of the ideas for the mod came about from playthroughs the devs have made. F
 
 **Credits**
 
-- Contrabass26
-- GenMedia2
-- Herrane
-- JustSomebody
-- Kohaku
-- MinhEragon
-- Nexoner
-- Nieadni
-- Professor
-- [Vanilla Tweaks](https://vanillatweaks.net/) - For resources used in the Improved Textures Pack
-- VeganNatureQueen
+Coders - 
+* Contrabass26
+* Nexoner
+* Nieadni
+* MinhEragon
+* Professor
+
+Asset Makers - 
+* Gen / GenMedia2 / DataPackGen
+* Herrane
+* Kohaku
+* [Vanilla Tweaks](https://vanillatweaks.net/) - For resources used in the Improved Textures Pack
+* VeganNatureQueen
+
+Testers - 
+* Fafa
