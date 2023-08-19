@@ -34,7 +34,6 @@ public class Unordinary_BasicsItemModelProvider extends ItemModelProvider {
         singleTexture(Unordinary_BasicsItems.UNKNOWN_BLADE_FRAGMENT);
         singleTexture(Unordinary_BasicsItems.UNKNOWN_SWORD_HANDLE_FRAGMENT);
         singleTexture(Unordinary_BasicsItems.UNKNOWN_HILT_FRAGMENT);
-        handheldSingleTexture(Unordinary_BasicsItems.ZENITH);
 
         singleTexture(Unordinary_BasicsItems.MUSIC_DISC_QUEEN);
 
