@@ -21,7 +21,6 @@ public class Unordinary_BasicsBlockStateProvider extends BlockStateProvider {
     }
 
         private void modStairs() {
-        
             stairs(Unordinary_BasicsBlocks.CALCITE_STAIRS, Blocks.CALCITE);
             stairs(Unordinary_BasicsBlocks.TUFF_STAIRS, Blocks.TUFF);
             stairs(Unordinary_BasicsBlocks.DRIPSTONE_STAIRS, Blocks.DRIPSTONE_BLOCK);
@@ -182,7 +181,6 @@ public class Unordinary_BasicsBlockStateProvider extends BlockStateProvider {
         }
         
         private void modSlabs() {
-        
         slab(Unordinary_BasicsBlocks.CALCITE_SLAB, Blocks.CALCITE);
         slab(Unordinary_BasicsBlocks.TUFF_SLAB, Blocks.TUFF);
         slab(Unordinary_BasicsBlocks.DRIPSTONE_SLAB, Blocks.DRIPSTONE_BLOCK);

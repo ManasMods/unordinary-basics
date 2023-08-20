@@ -1,6 +1,18 @@
 package com.github.manasmods.unordinary_basics.registry;
 
-import com.github.manasmods.unordinary_basics.block.*;
+import com.github.manasmods.unordinary_basics.block.DirtPathSlab;
+import com.github.manasmods.unordinary_basics.block.DirtWiltableSlabBlock;
+import com.github.manasmods.unordinary_basics.block.DirtWiltableStairBlock;
+import com.github.manasmods.unordinary_basics.block.EnchantmentLibraryBlock;
+import com.github.manasmods.unordinary_basics.block.FallingSlabBlock;
+import com.github.manasmods.unordinary_basics.block.FallingStairBlock;
+import com.github.manasmods.unordinary_basics.block.GrassSproutableSlabBlock;
+import com.github.manasmods.unordinary_basics.block.GrassSproutableStairBlock;
+import com.github.manasmods.unordinary_basics.block.ItemSorterBlock;
+import com.github.manasmods.unordinary_basics.block.PathableSlabBlock;
+import com.github.manasmods.unordinary_basics.block.PathableStairBlock;
+import com.github.manasmods.unordinary_basics.block.SimpleBlock;
+import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
 import com.github.manasmods.unordinary_basics.item.templates.CustomBlockItem;
 import com.github.manasmods.unordinary_basics.item.templates.SimpleBlockItem;
 import net.minecraft.network.chat.Component;
@@ -10,7 +22,11 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -60,7 +76,6 @@ public class BlockRegistry {
                 .sound(SoundType.METAL)
                 .noOcclusion()
                 .requiresCorrectToolForDrops()));
-
 
         //BLOCKS FOR STAIRS + SLABS
 

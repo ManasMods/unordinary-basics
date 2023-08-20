@@ -1,6 +1,5 @@
 package com.github.manasmods.unordinary_basics.block;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.ObjectHolder;
 
@@ -12,58 +11,6 @@ public class Unordinary_BasicsBlocks {
     public static final Block ENCHANTMENT_LIBRARY = null;
     @ObjectHolder(registryName = "block", value = "unordinary_basics:item_sorter")
     public static final Block ITEM_SORTER = null;
-
-    @ObjectHolder(registryName = "block", value = "unordinary_basics:calcite_bricks")
-    public static final Block CALCITE_BRICKS = null;
-    @ObjectHolder(registryName = "block", value = "unordinary_basics:tuff_bricks")
-    public static final Block TUFF_BRICKS = null;
-    @ObjectHolder(registryName = "block", value = "unordinary_basics:polished_tuff")
-    public static final Block POLISHED_TUFF = null;
-    @ObjectHolder(registryName = "block", value = "unordinary_basics:dripstone_bricks")
-    public static final Block DRIPSTONE_BRICKS = null;
-    @ObjectHolder(registryName = "block", value = "unordinary_basics:soul_sandstone")
-    public static final Block SOUL_SANDSTONE = null;
-    @ObjectHolder(registryName = "block", value = "unordinary_basics:chiseled_soul_sandstone")
-    public static final Block CHISELLED_SOUL_SANDSTONE = null;
-    @ObjectHolder(registryName = "block", value = "unordinary_basics:cut_soul_sandstone")
-    public static final Block CUT_SOUL_SANDSTONE = null;
-    @ObjectHolder(registryName = "block", value = "unordinary_basics:smooth_soul_sandstone")
-    public static final Block SMOOTH_SOUL_SANDSTONE = null;
-
-    @ObjectHolder(registryName = "block", value = "unordinary_basics:calcite_bricks_slab")
-    public static final Block CALCITE_BRICK_SLAB = null;
-    @ObjectHolder(registryName = "block", value = "unordinary_basics:tuff_bricks_slab")
-    public static final Block TUFF_BRICK_SLAB = null;
-    @ObjectHolder(registryName = "block", value = "unordinary_basics:polished_tuff_slab")
-    public static final Block POLISHED_TUFF_SLAB = null;
-    @ObjectHolder(registryName = "block", value = "unordinary_basics:dripstone_bricks_slab")
-    public static final Block DRIPSTONE_BRICK_SLAB = null;
-    @ObjectHolder(registryName = "block", value = "unordinary_basics:soul_sandstone_slab")
-    public static final Block SOUL_SANDSTONE_SLAB = null;
-    @ObjectHolder(registryName = "block", value = "unordinary_basics:chiseled_soul_sandstone_slab")
-    public static final Block CHISELLED_SOUL_SANDSTONE_SLAB = null;
-    @ObjectHolder(registryName = "block", value = "unordinary_basics:cut_soul_sandstone_slab")
-    public static final Block CUT_SOUL_SANDSTONE_SLAB = null;
-    @ObjectHolder(registryName = "block", value = "unordinary_basics:smooth_soul_sandstone_slab")
-    public static final Block SMOOTH_SOUL_SANDSTONE_SLAB = null;
-
-    @ObjectHolder(registryName = "block", value = "unordinary_basics:calcite_bricks_stairs")
-    public static final Block CALCITE_BRICK_STAIRS = null;
-    @ObjectHolder(registryName = "block", value = "unordinary_basics:tuff_bricks_stairs")
-    public static final Block TUFF_BRICK_STAIRS = null;
-    @ObjectHolder(registryName = "block", value = "unordinary_basics:polished_tuff_stairs")
-    public static final Block POLISHED_TUFF_STAIRS = null;
-    @ObjectHolder(registryName = "block", value = "unordinary_basics:dripstone_bricks_stairs")
-    public static final Block DRIPSTONE_BRICK_STAIRS = null;
-    @ObjectHolder(registryName = "block", value = "unordinary_basics:soul_sandstone_stairs")
-    public static final Block SOUL_SANDSTONE_STAIRS = null;
-    @ObjectHolder(registryName = "block", value = "unordinary_basics:chiseled_soul_sandstone_stairs")
-    public static final Block CHISELLED_SOUL_SANDSTONE_STAIRS = null;
-    @ObjectHolder(registryName = "block", value = "unordinary_basics:cut_soul_sandstone_stairs")
-    public static final Block CUT_SOUL_SANDSTONE_STAIRS = null;
-    @ObjectHolder(registryName = "block", value = "unordinary_basics:smooth_soul_sandstone_stairs")
-    public static final Block SMOOTH_SOUL_SANDSTONE_STAIRS = null;
-
 
     //STAIRS
 
