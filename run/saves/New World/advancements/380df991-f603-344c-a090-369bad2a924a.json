@@ -239,6 +239,12 @@
     },
     "done": true
   },
+  "unordinary_basics:recipes/unordinary_basics.tab2/dirt_stairs": {
+    "criteria": {
+      "has_has_dirt": "2023-08-20 14:01:37 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/smooth_sandstone_stairs_from_smooth_sandstone_stonecutting": {
     "criteria": {
       "has_smooth_sandstone": "2023-08-19 23:38:04 +0100"
@@ -614,6 +620,12 @@
   "unordinary_basics:recipes/unordinary_basics.tab3/milk_bottle": {
     "criteria": {
       "has_milk_bucket": "2023-08-20 12:06:13 +0100"
+    },
+    "done": true
+  },
+  "minecraft:story/enchant_item": {
+    "criteria": {
+      "enchanted_item": "2023-08-20 14:04:37 +0100"
     },
     "done": true
   },
@@ -1067,6 +1079,12 @@
     },
     "done": true
   },
+  "unordinary_basics:recipes/unordinary_basics.tab2/dirt_slab": {
+    "criteria": {
+      "has_dirt": "2023-08-20 14:01:37 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/blue_terracotta": {
     "criteria": {
       "has_terracotta": "2023-08-19 23:42:56 +0100"
@@ -1196,6 +1214,12 @@
   "minecraft:recipes/decorations/deepslate_brick_wall": {
     "criteria": {
       "has_deepslate_bricks": "2023-08-19 23:43:17 +0100"
+    },
+    "done": true
+  },
+  "apotheosis:enchanting/enchanter": {
+    "criteria": {
+      "enchanting_table": "2023-08-20 14:03:19 +0100"
     },
     "done": true
   },
@@ -2303,9 +2327,21 @@
     },
     "done": true
   },
+  "apotheosis:enchanting/30ench": {
+    "criteria": {
+      "enchanted_item": "2023-08-20 14:04:37 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/chiseled_polished_blackstone_from_blackstone_stonecutting": {
     "criteria": {
       "has_blackstone": "2023-08-19 23:49:52 +0100"
+    },
+    "done": true
+  },
+  "apotheosis:enchanting/bookshelf": {
+    "criteria": {
+      "bookshelf": "2023-08-20 14:03:33 +0100"
     },
     "done": true
   },

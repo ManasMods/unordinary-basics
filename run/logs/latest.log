@@ -1,493 +1,78 @@
-[20Aug2023 13:43:40.983] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 1.19, --assetsDir, C:\Users\diabl\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 43.2.0, --fml.mcVersion, 1.19.2, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20220805.130853, --mixin.config, unordinary_basics.mixins.json]
-[20Aug2023 13:43:40.994] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.2 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0
-[20Aug2023 13:43:41.589] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/diabl/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23126!/ Service=ModLauncher Env=CLIENT
-[20Aug2023 13:43:43.091] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\diabl\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.19.2-43.2.0\5713dfd49576886a7ffc353f14f067ad42369592\javafmllanguage-1.19.2-43.2.0.jar is missing mods.toml file
-[20Aug2023 13:43:43.097] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\diabl\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.19.2-43.2.0\51c88985dd125457fb8b6c2c58a4f3b9349a6b57\lowcodelanguage-1.19.2-43.2.0.jar is missing mods.toml file
-[20Aug2023 13:43:43.102] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\diabl\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.19.2-43.2.0\f4fa83ef8129c7f7cc5847fbafb07f7ae86c1bb\mclanguage-1.19.2-43.2.0.jar is missing mods.toml file
-[20Aug2023 13:43:43.107] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\diabl\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.19.2-43.2.0\d4dcb5b809b7f035ac22b058941cf81f84451545\fmlcore-1.19.2-43.2.0.jar is missing mods.toml file
-[20Aug2023 13:43:43.607] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
-[20Aug2023 13:43:51.936] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
-[20Aug2023 13:43:52.254] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\diabl\.gradle\caches\forge_gradle\assets, --assetIndex, 1.19]
-[20Aug2023 13:43:52.863] [main/WARN] [mixin/]: Reference map 'unordinary_basics.refmap.json' for unordinary_basics.mixins.json could not be read. If this is a development environment you can ignore this message
-[20Aug2023 13:43:53.386] [main/INFO] [mixin/]: Remapping refMap moonlight-common-refmap.json using C:\Users\diabl\Desktop\unordinary-basics\build\createSrgToMcp\output.srg
-[20Aug2023 13:43:53.388] [main/INFO] [mixin/]: Remapping refMap moonlight-forge-refmap.json using C:\Users\diabl\Desktop\unordinary-basics\build\createSrgToMcp\output.srg
-[20Aug2023 13:43:53.389] [main/INFO] [mixin/]: Remapping refMap bookshelf.refmap.json using C:\Users\diabl\Desktop\unordinary-basics\build\createSrgToMcp\output.srg
-[20Aug2023 13:43:53.391] [main/INFO] [mixin/]: Remapping refMap bookshelf.refmap.json using C:\Users\diabl\Desktop\unordinary-basics\build\createSrgToMcp\output.srg
-[20Aug2023 13:43:53.402] [main/INFO] [com.github.manasmods.manascore.core.ManasCoreMixinPlugin/]: Initializing MixinExtras
-[20Aug2023 13:43:53.501] [main/INFO] [com.github.manasmods.manascore.core.ManasCoreMixinPlugin/]: MixinExtras initialized in 99ms
-[20Aug2023 13:43:53.503] [main/INFO] [mixin/]: Remapping refMap manascore.refmap.json using C:\Users\diabl\Desktop\unordinary-basics\build\createSrgToMcp\output.srg
-[20Aug2023 13:43:53.505] [main/INFO] [mixin/]: Remapping refMap apotheosis.refmap.json using C:\Users\diabl\Desktop\unordinary-basics\build\createSrgToMcp\output.srg
-[20Aug2023 13:43:53.506] [main/INFO] [mixin/]: Remapping refMap dummmmmmy-common-refmap.json using C:\Users\diabl\Desktop\unordinary-basics\build\createSrgToMcp\output.srg
-[20Aug2023 13:43:53.511] [main/WARN] [mixin/]: Reference map 'dummmmmmy-forge-refmap.json' for dummmmmmy.mixins.json could not be read. If this is a development environment you can ignore this message
-[20Aug2023 13:43:53.513] [main/INFO] [mixin/]: Remapping refMap patchouli.refmap.json using C:\Users\diabl\Desktop\unordinary-basics\build\createSrgToMcp\output.srg
-[20Aug2023 13:43:53.515] [main/INFO] [mixin/]: Remapping refMap placebo.refmap.json using C:\Users\diabl\Desktop\unordinary-basics\build\createSrgToMcp\output.srg
-[20Aug2023 13:43:53.943] [main/INFO] [net.minecraftforge.coremod.CoreMod.placebo/COREMODLOG]: Patching IForgeItemStack#getEnchantmentLevel
-[20Aug2023 13:43:54.021] [main/INFO] [net.minecraftforge.coremod.CoreMod.placebo/COREMODLOG]: Patching IForgeItemStack#getEnchantmentLevel
-[20Aug2023 13:43:54.991] [main/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Replaced 2 calls to Enchantment#getMaxLevel() in net/minecraft/world/inventory/AnvilMenu
-[20Aug2023 13:43:55.107] [main/WARN] [mixin/]: Error loading class: com/hollingsworth/arsnouveau/common/items/SpellCrossbow (java.lang.ClassNotFoundException: com.hollingsworth.arsnouveau.common.items.SpellCrossbow)
-[20Aug2023 13:43:55.111] [main/INFO] [net.minecraftforge.coremod.CoreMod.placebo/COREMODLOG]: Patching IForgeItemStack#getEnchantmentLevel
-[20Aug2023 13:43:55.113] [main/INFO] [net.minecraftforge.coremod.CoreMod.placebo/COREMODLOG]: Patching IForgeItemStack#getEnchantmentLevel
-[20Aug2023 13:43:55.207] [main/WARN] [mixin/]: Error loading class: vazkii/quark/content/client/tooltip/AttributeTooltips (java.lang.ClassNotFoundException: vazkii.quark.content.client.tooltip.AttributeTooltips)
-[20Aug2023 13:43:57.926] [main/INFO] [mixin/]: BeforeConstant is searching for constants in method with descriptor (Lnet/minecraft/network/chat/Component;Z)V
-[20Aug2023 13:43:57.926] [main/INFO] [mixin/]:   BeforeConstant found INTEGER constant: value = 0, intValue = null
-[20Aug2023 13:43:57.926] [main/INFO] [mixin/]:     BeforeConstant found a matching constant TYPE at ordinal 0
-[20Aug2023 13:43:57.927] [main/INFO] [mixin/]:       BeforeConstant found Insn [ICONST_0] 
-[20Aug2023 13:43:57.927] [main/INFO] [mixin/]:   BeforeConstant found INTEGER constant: value = 60, intValue = null
-[20Aug2023 13:43:57.927] [main/INFO] [mixin/]:     BeforeConstant found a matching constant TYPE at ordinal 1
-[20Aug2023 13:43:57.927] [main/INFO] [mixin/]:       BeforeConstant found IntInsn 60
-[20Aug2023 13:44:04.398] [pool-3-thread-1/INFO] [net.minecraftforge.coremod.CoreMod.placebo/COREMODLOG]: Patching IForgeItemStack#getEnchantmentLevel
-[20Aug2023 13:44:04.399] [pool-3-thread-1/INFO] [net.minecraftforge.coremod.CoreMod.placebo/COREMODLOG]: Patching IForgeItemStack#getEnchantmentLevel
-[20Aug2023 13:44:04.707] [pool-3-thread-1/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Replaced 2 calls to Enchantment#getMaxLevel() in net/minecraft/world/inventory/AnvilMenu
-[20Aug2023 13:44:04.728] [pool-3-thread-1/WARN] [mixin/]: @ModifyConstant conflict. Skipping apotheosis.mixins.json:AnvilMenuMixin->@ModifyConstant::apoth_removeLevelCap(I)I with priority 1000, already redirected by manascore.mixins.json:MixinAnvilMenu->@ModifyConstant::maxEnchantmentLevel(I)I with priority 1000
-[20Aug2023 13:44:06.577] [pool-3-thread-1/INFO] [net.minecraft.util.datafix.DataFixers/]: Building unoptimized datafixer
-[20Aug2023 13:44:07.406] [pool-3-thread-1/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Patching FishingHook#catchingFish
-[20Aug2023 13:44:08.814] [pool-3-thread-1/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Replaced 2 calls to Enchantment#getMaxLevel() in net/minecraft/world/item/EnchantedBookItem
-[20Aug2023 13:44:10.066] [pool-3-thread-1/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Replaced 1 calls to Enchantment#getMaxLevel() in net/minecraft/world/level/storage/loot/functions/EnchantRandomlyFunction
-[20Aug2023 13:44:10.066] [pool-3-thread-1/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Replaced 1 calls to Enchantment#isDiscoverable() in net/minecraft/world/level/storage/loot/functions/EnchantRandomlyFunction
-[20Aug2023 13:44:10.747] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/C:/Users/diabl/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.19.2-43.2.0_mapped_parchment_2022.11.27-1.19.2/forge-1.19.2-43.2.0_mapped_parchment_2022.11.27-1.19.2-recomp.jar%23188!/assets/.mcassetsroot' uses unexpected schema
-[20Aug2023 13:44:10.747] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/C:/Users/diabl/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.19.2-43.2.0_mapped_parchment_2022.11.27-1.19.2/forge-1.19.2-43.2.0_mapped_parchment_2022.11.27-1.19.2-recomp.jar%23188!/data/.mcassetsroot' uses unexpected schema
-[20Aug2023 13:44:10.804] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
-[20Aug2023 13:44:10.818] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[20Aug2023 13:44:11.148] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.1 build 7
-[20Aug2023 13:44:12.614] [modloading-worker-0/INFO] [Enchantment Descriptions/]: Loaded config file.
-[20Aug2023 13:44:12.664] [modloading-worker-0/INFO] [Enchantment Descriptions/]: Saved config file.
-[20Aug2023 13:44:12.804] [modloading-worker-0/INFO] [Bookshelf/]: Fixing MC-151457. Crafting remainder for minecraft:pufferfish_bucket is now minecraft:bucket.
-[20Aug2023 13:44:12.804] [modloading-worker-0/INFO] [Bookshelf/]: Fixing MC-151457. Crafting remainder for minecraft:salmon_bucket is now minecraft:bucket.
-[20Aug2023 13:44:12.804] [modloading-worker-0/INFO] [Bookshelf/]: Fixing MC-151457. Crafting remainder for minecraft:cod_bucket is now minecraft:bucket.
-[20Aug2023 13:44:12.805] [modloading-worker-0/INFO] [Bookshelf/]: Fixing MC-151457. Crafting remainder for minecraft:tropical_fish_bucket is now minecraft:bucket.
-[20Aug2023 13:44:12.805] [modloading-worker-0/INFO] [Bookshelf/]: Fixing MC-151457. Crafting remainder for minecraft:axolotl_bucket is now minecraft:bucket.
-[20Aug2023 13:44:12.805] [modloading-worker-0/INFO] [Bookshelf/]: Fixing MC-151457. Crafting remainder for minecraft:powder_snow_bucket is now minecraft:bucket.
-[20Aug2023 13:44:12.805] [modloading-worker-0/INFO] [Bookshelf/]: Fixing MC-151457. Crafting remainder for minecraft:tadpole_bucket is now minecraft:bucket.
-[20Aug2023 13:44:13.449] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 43.2.0, for MC 1.19.2 with MCP 20220805.130853
-[20Aug2023 13:44:13.449] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v43.2.0 Initialized
-[20Aug2023 13:44:15.258] [Render thread/WARN] [net.minecraft.server.packs.repository.Pack/]: Couldn't get pack info for: net.minecraft.server.packs.ResourcePackFileNotFoundException: 'pack.mcmeta' in ResourcePack '.\resourcepacks\Improved Textures.zip'
-[20Aug2023 13:44:16.353] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: []
-[20Aug2023 13:44:17.419] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources
-[20Aug2023 13:44:21.153] [Worker-Main-3/INFO] [com.sk89q.worldedit.extension.platform.PlatformManager/]: Got request to register class com.sk89q.worldedit.forge.ForgePlatform with WorldEdit [com.sk89q.worldedit.extension.platform.PlatformManager@1986c72b]
-[20Aug2023 13:44:21.162] [Worker-Main-3/INFO] [com.sk89q.worldedit.forge.ForgeWorldEdit/]: WorldEdit for Forge (version 7.2.12+6240-87f4ae1) is loaded
-[20Aug2023 13:44:22.165] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [enchdesc] Starting version check at https://updates.blamejared.com/get?n=enchdesc&gv=1.19.2
-[20Aug2023 13:44:23.492] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [enchdesc] Found status: BETA Current: 13.0.14 Target: 13.0.14
-[20Aug2023 13:44:23.492] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [moonlight] Starting version check at https://raw.githubusercontent.com/MehVahdJukaar/Moonlight/multi-loader/forge/update.json
-[20Aug2023 13:44:23.616] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [moonlight] Found status: OUTDATED Current: 1.19.2-2.2.13 Target: 1.19.2-2.2.44
-[20Aug2023 13:44:23.616] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [bookshelf] Starting version check at https://updates.blamejared.com/get?n=bookshelf&gv=1.19.2
-[20Aug2023 13:44:23.667] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [bookshelf] Found status: BETA Current: 16.3.20 Target: 16.3.20
-[20Aug2023 13:44:23.667] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [manascore] Starting version check at https://api.modrinth.com/updates/wRRSWpd1/forge_updates.json
-[20Aug2023 13:44:24.112] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [manascore] Found status: AHEAD Current: 2.0.15.0 Target: null
-[20Aug2023 13:44:24.112] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
-[20Aug2023 13:44:24.450] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: UP_TO_DATE Current: 43.2.0 Target: null
-[20Aug2023 13:44:34.622] [Worker-Main-3/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:item/sword_display' referenced from: unordinary_basics:zenith#inventory: java.io.FileNotFoundException: minecraft:models/item/sword_display.json
-[20Aug2023 13:44:34.624] [Worker-Main-3/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'unordinary_basics:leaper#inventory' referenced from: unordinary_basics:leaper#inventory: java.io.FileNotFoundException: unordinary_basics:models/item/leaper.json
-[20Aug2023 13:44:35.199] [Worker-Main-3/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'minecraft:builders_glove_hand' referenced from: unordinary_basics:item/builders_glove_hand: java.io.FileNotFoundException: minecraft:models/builders_glove_hand.json
-[20Aug2023 13:44:36.688] [Worker-Main-5/ERROR] [net.minecraft.client.renderer.texture.TextureAtlas/]: Using missing texture, file minecraft:textures/glider_texture.png not found
-[20Aug2023 13:44:37.083] [Worker-Main-5/ERROR] [net.minecraft.client.renderer.texture.TextureAtlas/]: Using missing texture, file minecraft:textures/sword.png not found
-[20Aug2023 13:44:42.842] [Render thread/INFO] [moonlight/]: Initialized color sets in 77ms
-[20Aug2023 13:44:42.924] [Render thread/INFO] [com.github.manasmods.unordinary_basics.Unordinary_Basics/]: Apotheosis integration automatically enabled!
-[20Aug2023 13:44:43.090] [Placebo Patreon Trail Loader/INFO] [placebo/]: Loading patreon trails data...
-[20Aug2023 13:44:43.143] [Placebo Patreon Wing Loader/INFO] [placebo/]: Loading patreon wing data...
-[20Aug2023 13:44:43.347] [Placebo Patreon Trail Loader/INFO] [placebo/]: Loaded 27 patreon trails.
-[20Aug2023 13:44:43.347] [Placebo Patreon Wing Loader/INFO] [placebo/]: Loaded 24 patreon wings.
-[20Aug2023 13:44:43.367] [Render thread/WARN] [mixin/]: @ModifyConstant conflict. Skipping apotheosis.mixins.json:AnvilScreenMixin->@ModifyConstant::apoth_removeLevelCap(I)I with priority 1000, already redirected by manascore.mixins.json:MixinAnvilScreen->@ModifyConstant::maxEnchantmentLevel(I)I with priority 1000
-[20Aug2023 13:44:45.184] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
-[20Aug2023 13:44:45.184] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
-[20Aug2023 13:44:45.284] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Speakers (HyperX Quadcast)
-[20Aug2023 13:44:45.284] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
-[20Aug2023 13:44:45.464] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
-[20Aug2023 13:44:45.470] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x4 minecraft:textures/atlas/signs.png-atlas
-[20Aug2023 13:44:45.474] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[20Aug2023 13:44:45.475] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[20Aug2023 13:44:45.476] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[20Aug2023 13:44:45.478] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[20Aug2023 13:44:45.478] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[20Aug2023 13:44:46.276] [Render thread/WARN] [net.minecraftforge.client.model.SeparateTransformsModel/]: Model "unordinary_basics:builders_glove#inventory" is using the deprecated loader "forge:separate-perspective" instead of "forge:separate_transforms". This loader will be removed in 1.20.
-[20Aug2023 13:44:46.852] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
-[20Aug2023 13:44:47.199] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[20Aug2023 13:44:47.201] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[20Aug2023 13:44:47.201] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[20Aug2023 13:44:47.207] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 jei:textures/atlas/gui.png-atlas
-[20Aug2023 13:44:47.208] [Render thread/INFO] [patchouli/]: BookContentResourceListenerLoader preloaded 41 jsons
-[20Aug2023 13:44:47.208] [Render thread/INFO] [patchouli/]: Not reloading resource pack-based books as client world is missing
-[20Aug2023 13:44:47.500] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
-[20Aug2023 13:44:58.394] [Render thread/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Replaced 2 calls to Enchantment#getMaxLevel() in net/minecraft/server/commands/EnchantCommand
-[20Aug2023 13:44:58.757] [Render thread/INFO] [com.sk89q.worldedit.extension.platform.PlatformCommandManager/]: Registering commands with com.sk89q.worldedit.forge.ForgePlatform
-[20Aug2023 13:45:01.108] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 12 recipes
-[20Aug2023 13:45:03.120] [Render thread/INFO] [placebo/]: Registered 24 additional loot tables.
-[20Aug2023 13:45:03.363] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 2024 advancements
-[20Aug2023 13:45:03.398] [Render thread/INFO] [placebo/]: Registered 29 additional recipes.
-[20Aug2023 13:45:03.422] [Render thread/INFO] [Apotheosis : Enchantment/]: Registered 23 enchanting_stats.
-[20Aug2023 13:45:03.468] [Render thread/INFO] [Apotheosis : Adventure/]: Registered 66 affixes.
-[20Aug2023 13:45:03.482] [Render thread/INFO] [Apotheosis : Adventure/]: Registered 16 gems.
-[20Aug2023 13:45:03.504] [Render thread/INFO] [Apotheosis : Adventure/]: Registered 75 affix_loot_entries.
-[20Aug2023 13:45:03.508] [Render thread/INFO] [Apotheosis : Adventure/]: Registered 16 boss_gear.
-[20Aug2023 13:45:03.525] [Render thread/INFO] [Apotheosis : Adventure/]: Registered 17 bosses.
-[20Aug2023 13:45:03.541] [Render thread/INFO] [Apotheosis : Adventure/]: Registered 8 random_spawners.
-[20Aug2023 13:45:03.542] [Render thread/INFO] [Apotheosis : Adventure/]: Registered 6 rarities.
-[20Aug2023 13:45:03.567] [Render thread/INFO] [Apotheosis : Adventure/]: Registered 5 minibosses.
-[20Aug2023 13:45:03.572] [Render thread/INFO] [Apotheosis : Village/]: Registered 45 wanderer_trades.
-[20Aug2023 13:45:04.997] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.19.2
-[20Aug2023 13:45:04.998] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
-[20Aug2023 13:45:05.143] [Server thread/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Replaced 1 calls to Enchantment#getMaxLevel() in net/minecraft/world/entity/npc/VillagerTrades$EnchantBookForEmeralds
-[20Aug2023 13:45:05.143] [Server thread/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Replaced 1 calls to Enchantment#isTreasureOnly() in net/minecraft/world/entity/npc/VillagerTrades$EnchantBookForEmeralds
-[20Aug2023 13:45:05.143] [Server thread/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Replaced 1 calls to Enchantment#isTradeable() in net/minecraft/world/entity/npc/VillagerTrades$EnchantBookForEmeralds
-[20Aug2023 13:45:05.442] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[20Aug2023 13:45:08.313] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[20Aug2023 13:45:08.314] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[20Aug2023 13:45:08.314] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[20Aug2023 13:45:08.314] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[20Aug2023 13:45:08.314] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[20Aug2023 13:45:08.314] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[20Aug2023 13:45:08.454] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[20Aug2023 13:45:09.116] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Preparing spawn area: 0%
-[20Aug2023 13:45:10.109] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
-[20Aug2023 13:45:10.123] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 4673 ms
-[20Aug2023 13:45:12.769] [Server thread/INFO] [patchouli/]: Sending reload packet to clients
-[20Aug2023 13:45:12.900] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
-[20Aug2023 13:45:12.903] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
-[20Aug2023 13:45:13.051] [Render thread/WARN] [io.netty.util.internal.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
-[20Aug2023 13:45:14.334] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
-[20Aug2023 13:45:15.027] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.server.PlayerAdvancements@632f41
-[20Aug2023 13:45:15.070] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:6725a2e4] logged in with entity id 33 at (5.770179793707253, -60.0, 20.37587187142421)
-[20Aug2023 13:45:15.230] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
-[20Aug2023 13:45:15.901] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.ClientPlayerNetworkEvent$LoggingIn
-[20Aug2023 13:45:15.901] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from DISABLED to ENABLED
-[20Aug2023 13:45:15.919] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: apotheosis:fletching/apotheosis:fletching/arrow
-[20Aug2023 13:45:15.921] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: apotheosis:fletching/apotheosis:fletching/spectral_arrow
-[20Aug2023 13:45:15.924] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: apotheosis:fletching/apotheosis:fletching/explosive_arrow
-[20Aug2023 13:45:15.926] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: apotheosis:fletching/apotheosis:fletching/iron_mining_arrow
-[20Aug2023 13:45:15.926] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: apotheosis:fletching/apotheosis:fletching/broadhead_arrow
-[20Aug2023 13:45:15.930] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: apotheosis:fletching/apotheosis:fletching/diamond_mining_arrow
-[20Aug2023 13:45:15.931] [Render thread/WARN] [net.minecraft.client.ClientRecipeBook/]: Unknown recipe category: apotheosis:fletching/apotheosis:fletching/obsidian_arrow
-[20Aug2023 13:45:16.418] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.client.event.RecipesUpdatedEvent
-[20Aug2023 13:45:16.914] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver received class net.minecraftforge.event.TagsUpdatedEvent
-[20Aug2023 13:45:16.914] [Render thread/INFO] [mezz.jei.forge.startup.StartEventObserver/]: JEI StartEventObserver transitioning state from ENABLED to JEI_STARTED
-[20Aug2023 13:45:16.915] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Starting JEI...
-[20Aug2023 13:45:16.960] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes: jei:minecraft ...
-[20Aug2023 13:45:16.965] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes: jei:minecraft took 4.778 ms
-[20Aug2023 13:45:16.965] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes: apotheosis:village_module ...
-[20Aug2023 13:45:16.966] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes: apotheosis:village_module took 9.199 μs
-[20Aug2023 13:45:16.966] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes: apotheosis:spawner ...
-[20Aug2023 13:45:16.966] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes: apotheosis:spawner took 8.499 μs
-[20Aug2023 13:45:16.966] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes: apotheosis:potion ...
-[20Aug2023 13:45:16.967] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes: apotheosis:potion took 669.3 μs
-[20Aug2023 13:45:16.967] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes: apotheosis:garden ...
-[20Aug2023 13:45:16.967] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes: apotheosis:garden took 10.40 μs
-[20Aug2023 13:45:16.968] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes: apotheosis:enchantment ...
-[20Aug2023 13:45:16.968] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes: apotheosis:enchantment took 6.600 μs
-[20Aug2023 13:45:16.968] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes: apotheosis:adventure_module ...
-[20Aug2023 13:45:16.969] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes: apotheosis:adventure_module took 613.4 μs
-[20Aug2023 13:45:16.969] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes: jei:gui ...
-[20Aug2023 13:45:16.969] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes: jei:gui took 11.10 μs
-[20Aug2023 13:45:16.969] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes: jei:debug ...
-[20Aug2023 13:45:16.969] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes: jei:debug took 9.600 μs
-[20Aug2023 13:45:16.969] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes: jei:forge_gui ...
-[20Aug2023 13:45:16.969] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes: jei:forge_gui took 7.800 μs
-[20Aug2023 13:45:16.969] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes: unordinary_basics:jei_plugin ...
-[20Aug2023 13:45:16.969] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes: unordinary_basics:jei_plugin took 6.000 μs
-[20Aug2023 13:45:16.970] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes: patchouli:patchouli ...
-[20Aug2023 13:45:16.970] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes: patchouli:patchouli took 268.9 μs
-[20Aug2023 13:45:16.970] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes: jei:internal ...
-[20Aug2023 13:45:16.970] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering item subtypes: jei:internal took 7.000 μs
-[20Aug2023 13:45:16.971] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes: jei:minecraft ...
-[20Aug2023 13:45:16.971] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes: jei:minecraft took 48.70 μs
-[20Aug2023 13:45:16.972] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes: apotheosis:village_module ...
-[20Aug2023 13:45:16.972] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes: apotheosis:village_module took 18.10 μs
-[20Aug2023 13:45:16.972] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes: apotheosis:spawner ...
-[20Aug2023 13:45:16.972] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes: apotheosis:spawner took 13.50 μs
-[20Aug2023 13:45:16.972] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes: apotheosis:potion ...
-[20Aug2023 13:45:16.972] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes: apotheosis:potion took 5.500 μs
-[20Aug2023 13:45:16.972] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes: apotheosis:garden ...
-[20Aug2023 13:45:16.972] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes: apotheosis:garden took 7.001 μs
-[20Aug2023 13:45:16.972] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes: apotheosis:enchantment ...
-[20Aug2023 13:45:16.972] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes: apotheosis:enchantment took 5.700 μs
-[20Aug2023 13:45:16.973] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes: apotheosis:adventure_module ...
-[20Aug2023 13:45:16.973] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes: apotheosis:adventure_module took 9.600 μs
-[20Aug2023 13:45:16.973] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes: jei:gui ...
-[20Aug2023 13:45:16.973] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes: jei:gui took 6.100 μs
-[20Aug2023 13:45:16.973] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes: jei:debug ...
-[20Aug2023 13:45:16.981] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes: jei:debug took 1.544 ms
-[20Aug2023 13:45:16.981] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes: jei:forge_gui ...
-[20Aug2023 13:45:16.981] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes: jei:forge_gui took 10.40 μs
-[20Aug2023 13:45:16.981] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes: unordinary_basics:jei_plugin ...
-[20Aug2023 13:45:16.981] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes: unordinary_basics:jei_plugin took 5.400 μs
-[20Aug2023 13:45:16.981] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes: patchouli:patchouli ...
-[20Aug2023 13:45:16.982] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes: patchouli:patchouli took 5.199 μs
-[20Aug2023 13:45:16.982] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes: jei:internal ...
-[20Aug2023 13:45:16.982] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering fluid subtypes: jei:internal took 5.000 μs
-[20Aug2023 13:45:16.984] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients: jei:minecraft ...
-[20Aug2023 13:45:17.156] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients: jei:minecraft took 171.9 ms
-[20Aug2023 13:45:17.157] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients: apotheosis:village_module ...
-[20Aug2023 13:45:17.157] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients: apotheosis:village_module took 13.60 μs
-[20Aug2023 13:45:17.157] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients: apotheosis:spawner ...
-[20Aug2023 13:45:17.157] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients: apotheosis:spawner took 7.701 μs
-[20Aug2023 13:45:17.157] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients: apotheosis:potion ...
-[20Aug2023 13:45:17.157] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients: apotheosis:potion took 7.600 μs
-[20Aug2023 13:45:17.157] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients: apotheosis:garden ...
-[20Aug2023 13:45:17.157] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients: apotheosis:garden took 6.399 μs
-[20Aug2023 13:45:17.158] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients: apotheosis:enchantment ...
-[20Aug2023 13:45:17.158] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients: apotheosis:enchantment took 11.80 μs
-[20Aug2023 13:45:17.158] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients: apotheosis:adventure_module ...
-[20Aug2023 13:45:17.158] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients: apotheosis:adventure_module took 8.300 μs
-[20Aug2023 13:45:17.158] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients: jei:gui ...
-[20Aug2023 13:45:17.158] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients: jei:gui took 6.400 μs
-[20Aug2023 13:45:17.158] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients: jei:debug ...
-[20Aug2023 13:45:17.160] [Render thread/INFO] [mezz.jei.core.config.file.ConfigSerializer/]: Loading config file: C:\Users\diabl\Desktop\unordinary-basics\run\config\jei\jei-debug.ini
-[20Aug2023 13:45:17.163] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients: jei:debug took 3.320 ms
-[20Aug2023 13:45:17.164] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients: jei:forge_gui ...
-[20Aug2023 13:45:17.164] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients: jei:forge_gui took 18.00 μs
-[20Aug2023 13:45:17.164] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients: unordinary_basics:jei_plugin ...
-[20Aug2023 13:45:17.164] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients: unordinary_basics:jei_plugin took 8.101 μs
-[20Aug2023 13:45:17.164] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients: patchouli:patchouli ...
-[20Aug2023 13:45:17.164] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients: patchouli:patchouli took 10.90 μs
-[20Aug2023 13:45:17.164] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients: jei:internal ...
-[20Aug2023 13:45:17.165] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering ingredients: jei:internal took 6.499 μs
-[20Aug2023 13:45:17.210] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories: jei:minecraft ...
-[20Aug2023 13:45:17.241] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories: jei:minecraft took 30.92 ms
-[20Aug2023 13:45:17.241] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories: apotheosis:village_module ...
-[20Aug2023 13:45:17.269] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories: apotheosis:village_module took 27.14 ms
-[20Aug2023 13:45:17.269] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories: apotheosis:spawner ...
-[20Aug2023 13:45:17.271] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories: apotheosis:spawner took 1.922 ms
-[20Aug2023 13:45:17.271] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories: apotheosis:potion ...
-[20Aug2023 13:45:17.271] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories: apotheosis:potion took 12.30 μs
-[20Aug2023 13:45:17.271] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories: apotheosis:garden ...
-[20Aug2023 13:45:17.272] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories: apotheosis:garden took 7.700 μs
-[20Aug2023 13:45:17.272] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories: apotheosis:enchantment ...
-[20Aug2023 13:45:17.274] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories: apotheosis:enchantment took 2.068 ms
-[20Aug2023 13:45:17.274] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories: apotheosis:adventure_module ...
-[20Aug2023 13:45:17.276] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories: apotheosis:adventure_module took 2.264 ms
-[20Aug2023 13:45:17.277] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories: jei:gui ...
-[20Aug2023 13:45:17.278] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories: jei:gui took 31.40 μs
-[20Aug2023 13:45:17.278] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories: jei:debug ...
-[20Aug2023 13:45:17.278] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories: jei:debug took 28.30 μs
-[20Aug2023 13:45:17.278] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories: jei:forge_gui ...
-[20Aug2023 13:45:17.278] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories: jei:forge_gui took 7.100 μs
-[20Aug2023 13:45:17.278] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories: unordinary_basics:jei_plugin ...
-[20Aug2023 13:45:17.281] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories: unordinary_basics:jei_plugin took 1.938 ms
-[20Aug2023 13:45:17.281] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories: patchouli:patchouli ...
-[20Aug2023 13:45:17.281] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories: patchouli:patchouli took 7.700 μs
-[20Aug2023 13:45:17.281] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories: jei:internal ...
-[20Aug2023 13:45:17.283] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering categories: jei:internal took 1.821 ms
-[20Aug2023 13:45:17.284] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions: jei:minecraft ...
-[20Aug2023 13:45:17.287] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions: jei:minecraft took 2.571 ms
-[20Aug2023 13:45:17.287] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions: apotheosis:village_module ...
-[20Aug2023 13:45:17.288] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions: apotheosis:village_module took 24.60 μs
-[20Aug2023 13:45:17.288] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions: apotheosis:spawner ...
-[20Aug2023 13:45:17.288] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions: apotheosis:spawner took 7.000 μs
-[20Aug2023 13:45:17.288] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions: apotheosis:potion ...
-[20Aug2023 13:45:17.290] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions: apotheosis:potion took 1.967 ms
-[20Aug2023 13:45:17.290] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions: apotheosis:garden ...
-[20Aug2023 13:45:17.290] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions: apotheosis:garden took 11.60 μs
-[20Aug2023 13:45:17.290] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions: apotheosis:enchantment ...
-[20Aug2023 13:45:17.291] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions: apotheosis:enchantment took 5.600 μs
-[20Aug2023 13:45:17.291] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions: apotheosis:adventure_module ...
-[20Aug2023 13:45:17.291] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions: apotheosis:adventure_module took 5.200 μs
-[20Aug2023 13:45:17.291] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions: jei:gui ...
-[20Aug2023 13:45:17.291] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions: jei:gui took 4.400 μs
-[20Aug2023 13:45:17.291] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions: jei:debug ...
-[20Aug2023 13:45:17.291] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions: jei:debug took 5.001 μs
-[20Aug2023 13:45:17.291] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions: jei:forge_gui ...
-[20Aug2023 13:45:17.291] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions: jei:forge_gui took 11.30 μs
-[20Aug2023 13:45:17.291] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions: unordinary_basics:jei_plugin ...
-[20Aug2023 13:45:17.291] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions: unordinary_basics:jei_plugin took 10.20 μs
-[20Aug2023 13:45:17.291] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions: patchouli:patchouli ...
-[20Aug2023 13:45:17.292] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions: patchouli:patchouli took 5.501 μs
-[20Aug2023 13:45:17.292] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions: jei:internal ...
-[20Aug2023 13:45:17.292] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering vanilla category extensions: jei:internal took 4.800 μs
-[20Aug2023 13:45:17.296] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts: jei:minecraft ...
-[20Aug2023 13:45:17.298] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts: jei:minecraft took 1.681 ms
-[20Aug2023 13:45:17.299] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts: apotheosis:village_module ...
-[20Aug2023 13:45:17.299] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts: apotheosis:village_module took 87.50 μs
-[20Aug2023 13:45:17.299] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts: apotheosis:spawner ...
-[20Aug2023 13:45:17.299] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts: apotheosis:spawner took 46.10 μs
-[20Aug2023 13:45:17.299] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts: apotheosis:potion ...
-[20Aug2023 13:45:17.299] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts: apotheosis:potion took 6.499 μs
-[20Aug2023 13:45:17.299] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts: apotheosis:garden ...
-[20Aug2023 13:45:17.299] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts: apotheosis:garden took 4.401 μs
-[20Aug2023 13:45:17.299] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts: apotheosis:enchantment ...
-[20Aug2023 13:45:17.299] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts: apotheosis:enchantment took 41.50 μs
-[20Aug2023 13:45:17.300] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts: apotheosis:adventure_module ...
-[20Aug2023 13:45:17.300] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts: apotheosis:adventure_module took 57.10 μs
-[20Aug2023 13:45:17.300] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts: jei:gui ...
-[20Aug2023 13:45:17.300] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts: jei:gui took 6.499 μs
-[20Aug2023 13:45:17.300] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts: jei:debug ...
-[20Aug2023 13:45:17.300] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts: jei:debug took 10.70 μs
-[20Aug2023 13:45:17.300] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts: jei:forge_gui ...
-[20Aug2023 13:45:17.300] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts: jei:forge_gui took 4.499 μs
-[20Aug2023 13:45:17.300] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts: unordinary_basics:jei_plugin ...
-[20Aug2023 13:45:17.300] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts: unordinary_basics:jei_plugin took 50.00 μs
-[20Aug2023 13:45:17.300] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts: patchouli:patchouli ...
-[20Aug2023 13:45:17.301] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts: patchouli:patchouli took 4.800 μs
-[20Aug2023 13:45:17.301] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts: jei:internal ...
-[20Aug2023 13:45:17.301] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipe catalysts: jei:internal took 4.200 μs
-[20Aug2023 13:45:17.302] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins: jei:minecraft ...
-[20Aug2023 13:45:17.303] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins: jei:minecraft took 35.00 μs
-[20Aug2023 13:45:17.303] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins: apotheosis:village_module ...
-[20Aug2023 13:45:17.303] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins: apotheosis:village_module took 12.60 μs
-[20Aug2023 13:45:17.303] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins: apotheosis:spawner ...
-[20Aug2023 13:45:17.303] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins: apotheosis:spawner took 6.401 μs
-[20Aug2023 13:45:17.303] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins: apotheosis:potion ...
-[20Aug2023 13:45:17.303] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins: apotheosis:potion took 4.600 μs
-[20Aug2023 13:45:17.303] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins: apotheosis:garden ...
-[20Aug2023 13:45:17.332] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins: apotheosis:garden took 33.30 μs
-[20Aug2023 13:45:17.333] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins: apotheosis:enchantment ...
-[20Aug2023 13:45:17.333] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins: apotheosis:enchantment took 11.70 μs
-[20Aug2023 13:45:17.333] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins: apotheosis:adventure_module ...
-[20Aug2023 13:45:17.333] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins: apotheosis:adventure_module took 8.200 μs
-[20Aug2023 13:45:17.333] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins: jei:gui ...
-[20Aug2023 13:45:17.333] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins: jei:gui took 5.401 μs
-[20Aug2023 13:45:17.333] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins: jei:debug ...
-[20Aug2023 13:45:17.333] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins: jei:debug took 5.201 μs
-[20Aug2023 13:45:17.333] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins: jei:forge_gui ...
-[20Aug2023 13:45:17.333] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins: jei:forge_gui took 4.900 μs
-[20Aug2023 13:45:17.334] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins: unordinary_basics:jei_plugin ...
-[20Aug2023 13:45:17.334] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins: unordinary_basics:jei_plugin took 4.900 μs
-[20Aug2023 13:45:17.334] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins: patchouli:patchouli ...
-[20Aug2023 13:45:17.334] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins: patchouli:patchouli took 5.101 μs
-[20Aug2023 13:45:17.334] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins: jei:internal ...
-[20Aug2023 13:45:17.334] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering advanced plugins: jei:internal took 4.300 μs
-[20Aug2023 13:45:17.334] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Building recipe registry...
-[20Aug2023 13:45:17.349] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Building recipe registry took 15.13 ms
-[20Aug2023 13:45:17.352] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes: jei:minecraft ...
-[20Aug2023 13:45:18.113] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes: jei:minecraft took 761.0 ms
-[20Aug2023 13:45:18.113] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes: apotheosis:village_module ...
-[20Aug2023 13:45:18.147] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes: apotheosis:village_module took 33.33 ms
-[20Aug2023 13:45:18.147] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes: apotheosis:spawner ...
-[20Aug2023 13:45:18.186] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes: apotheosis:spawner took 38.88 ms
-[20Aug2023 13:45:18.186] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes: apotheosis:potion ...
-[20Aug2023 13:45:18.186] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes: apotheosis:potion took 35.50 μs
-[20Aug2023 13:45:18.186] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes: apotheosis:garden ...
-[20Aug2023 13:45:18.187] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes: apotheosis:garden took 358.4 μs
-[20Aug2023 13:45:18.187] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes: apotheosis:enchantment ...
-[20Aug2023 13:45:18.197] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes: apotheosis:enchantment took 10.38 ms
-[20Aug2023 13:45:18.198] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes: apotheosis:adventure_module ...
-[20Aug2023 13:45:18.268] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes: apotheosis:adventure_module took 70.59 ms
-[20Aug2023 13:45:18.269] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes: jei:gui ...
-[20Aug2023 13:45:18.269] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes: jei:gui took 14.00 μs
-[20Aug2023 13:45:18.269] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes: jei:debug ...
-[20Aug2023 13:45:18.269] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes: jei:debug took 10.50 μs
-[20Aug2023 13:45:18.269] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes: jei:forge_gui ...
-[20Aug2023 13:45:18.269] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes: jei:forge_gui took 4.500 μs
-[20Aug2023 13:45:18.269] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes: unordinary_basics:jei_plugin ...
-[20Aug2023 13:45:18.274] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes: unordinary_basics:jei_plugin took 5.019 ms
-[20Aug2023 13:45:18.274] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes: patchouli:patchouli ...
-[20Aug2023 13:45:18.275] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes: patchouli:patchouli took 9.700 μs
-[20Aug2023 13:45:18.275] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes: jei:internal ...
-[20Aug2023 13:45:18.275] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes: jei:internal took 5.500 μs
-[20Aug2023 13:45:18.281] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers: jei:minecraft ...
-[20Aug2023 13:45:18.284] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers: jei:minecraft took 3.098 ms
-[20Aug2023 13:45:18.284] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers: apotheosis:village_module ...
-[20Aug2023 13:45:18.284] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers: apotheosis:village_module took 40.40 μs
-[20Aug2023 13:45:18.284] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers: apotheosis:spawner ...
-[20Aug2023 13:45:18.284] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers: apotheosis:spawner took 7.099 μs
-[20Aug2023 13:45:18.284] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers: apotheosis:potion ...
-[20Aug2023 13:45:18.285] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers: apotheosis:potion took 4.900 μs
-[20Aug2023 13:45:18.285] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers: apotheosis:garden ...
-[20Aug2023 13:45:18.285] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers: apotheosis:garden took 4.500 μs
-[20Aug2023 13:45:18.285] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers: apotheosis:enchantment ...
-[20Aug2023 13:45:18.285] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers: apotheosis:enchantment took 4.301 μs
-[20Aug2023 13:45:18.285] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers: apotheosis:adventure_module ...
-[20Aug2023 13:45:18.285] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers: apotheosis:adventure_module took 4.100 μs
-[20Aug2023 13:45:18.285] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers: jei:gui ...
-[20Aug2023 13:45:18.285] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers: jei:gui took 3.900 μs
-[20Aug2023 13:45:18.285] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers: jei:debug ...
-[20Aug2023 13:45:18.285] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers: jei:debug took 3.999 μs
-[20Aug2023 13:45:18.285] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers: jei:forge_gui ...
-[20Aug2023 13:45:18.285] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers: jei:forge_gui took 3.900 μs
-[20Aug2023 13:45:18.285] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers: unordinary_basics:jei_plugin ...
-[20Aug2023 13:45:18.286] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers: unordinary_basics:jei_plugin took 1.047 ms
-[20Aug2023 13:45:18.287] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers: patchouli:patchouli ...
-[20Aug2023 13:45:18.287] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers: patchouli:patchouli took 6.001 μs
-[20Aug2023 13:45:18.287] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers: jei:internal ...
-[20Aug2023 13:45:18.287] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering recipes transfer handlers: jei:internal took 5.500 μs
-[20Aug2023 13:45:18.288] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Building runtime...
-[20Aug2023 13:45:18.310] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers: jei:minecraft ...
-[20Aug2023 13:45:18.314] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers: jei:minecraft took 3.354 ms
-[20Aug2023 13:45:18.314] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers: apotheosis:village_module ...
-[20Aug2023 13:45:18.314] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers: apotheosis:village_module took 16.60 μs
-[20Aug2023 13:45:18.314] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers: apotheosis:spawner ...
-[20Aug2023 13:45:18.314] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers: apotheosis:spawner took 5.399 μs
-[20Aug2023 13:45:18.314] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers: apotheosis:potion ...
-[20Aug2023 13:45:18.314] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers: apotheosis:potion took 7.600 μs
-[20Aug2023 13:45:18.314] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers: apotheosis:garden ...
-[20Aug2023 13:45:18.314] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers: apotheosis:garden took 4.400 μs
-[20Aug2023 13:45:18.314] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers: apotheosis:enchantment ...
-[20Aug2023 13:45:18.315] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers: apotheosis:enchantment took 4.100 μs
-[20Aug2023 13:45:18.315] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers: apotheosis:adventure_module ...
-[20Aug2023 13:45:18.315] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers: apotheosis:adventure_module took 9.901 μs
-[20Aug2023 13:45:18.315] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers: jei:gui ...
-[20Aug2023 13:45:18.321] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers: jei:gui took 6.341 ms
-[20Aug2023 13:45:18.321] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers: jei:debug ...
-[20Aug2023 13:45:18.322] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers: jei:debug took 13.20 μs
-[20Aug2023 13:45:18.322] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers: jei:forge_gui ...
-[20Aug2023 13:45:18.322] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers: jei:forge_gui took 6.401 μs
-[20Aug2023 13:45:18.322] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers: unordinary_basics:jei_plugin ...
-[20Aug2023 13:45:18.322] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers: unordinary_basics:jei_plugin took 8.000 μs
-[20Aug2023 13:45:18.322] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers: patchouli:patchouli ...
-[20Aug2023 13:45:18.322] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers: patchouli:patchouli took 4.601 μs
-[20Aug2023 13:45:18.322] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers: jei:internal ...
-[20Aug2023 13:45:18.322] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering gui handlers: jei:internal took 3.900 μs
-[20Aug2023 13:45:18.329] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime: jei:minecraft ...
-[20Aug2023 13:45:18.329] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime: jei:minecraft took 65.00 μs
-[20Aug2023 13:45:18.330] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime: apotheosis:village_module ...
-[20Aug2023 13:45:18.330] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime: apotheosis:village_module took 7.200 μs
-[20Aug2023 13:45:18.330] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime: apotheosis:spawner ...
-[20Aug2023 13:45:18.330] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime: apotheosis:spawner took 7.600 μs
-[20Aug2023 13:45:18.330] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime: apotheosis:potion ...
-[20Aug2023 13:45:18.330] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime: apotheosis:potion took 5.199 μs
-[20Aug2023 13:45:18.330] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime: apotheosis:garden ...
-[20Aug2023 13:45:18.330] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime: apotheosis:garden took 4.200 μs
-[20Aug2023 13:45:18.330] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime: apotheosis:enchantment ...
-[20Aug2023 13:45:18.330] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime: apotheosis:enchantment took 3.900 μs
-[20Aug2023 13:45:18.330] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime: apotheosis:adventure_module ...
-[20Aug2023 13:45:18.330] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime: apotheosis:adventure_module took 18.30 μs
-[20Aug2023 13:45:18.331] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime: jei:gui ...
-[20Aug2023 13:45:18.331] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime: jei:gui took 6.000 μs
-[20Aug2023 13:45:18.331] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime: jei:debug ...
-[20Aug2023 13:45:18.331] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime: jei:debug took 4.200 μs
-[20Aug2023 13:45:18.331] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime: jei:forge_gui ...
-[20Aug2023 13:45:18.334] [Render thread/INFO] [mezz.jei.gui.startup.JeiGuiStarter/]: Starting JEI GUI
-[20Aug2023 13:45:18.335] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Building ingredient list...
-[20Aug2023 13:45:18.341] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Building ingredient list took 6.364 ms
-[20Aug2023 13:45:18.341] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Building ingredient filter...
-[20Aug2023 13:45:18.434] [Render thread/INFO] [mezz.jei.core.config.file.ConfigSerializer/]: Loading config file: C:\Users\diabl\Desktop\unordinary-basics\run\config\jei\jei-client.ini
-[20Aug2023 13:45:18.442] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Adding 2221 ingredients
-[20Aug2023 13:45:18.885] [Render thread/INFO] [mezz.jei.gui.ingredients.IngredientFilter/]: Added 2221 ingredients
-[20Aug2023 13:45:18.887] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Building ingredient filter took 545.4 ms
-[20Aug2023 13:45:18.980] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime: jei:forge_gui took 648.7 ms
-[20Aug2023 13:45:18.980] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime: unordinary_basics:jei_plugin ...
-[20Aug2023 13:45:18.980] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime: unordinary_basics:jei_plugin took 10.40 μs
-[20Aug2023 13:45:18.980] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime: patchouli:patchouli ...
-[20Aug2023 13:45:18.980] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime: patchouli:patchouli took 5.001 μs
-[20Aug2023 13:45:18.980] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime: jei:internal ...
-[20Aug2023 13:45:18.980] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Registering Runtime: jei:internal took 4.300 μs
-[20Aug2023 13:45:18.981] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Building runtime took 692.4 ms
-[20Aug2023 13:45:18.982] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime: jei:minecraft ...
-[20Aug2023 13:45:18.982] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime: jei:minecraft took 18.50 μs
-[20Aug2023 13:45:18.982] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime: apotheosis:village_module ...
-[20Aug2023 13:45:18.982] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime: apotheosis:village_module took 5.201 μs
-[20Aug2023 13:45:18.982] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime: apotheosis:spawner ...
-[20Aug2023 13:45:18.982] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime: apotheosis:spawner took 4.399 μs
-[20Aug2023 13:45:18.982] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime: apotheosis:potion ...
-[20Aug2023 13:45:18.982] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime: apotheosis:potion took 4.100 μs
-[20Aug2023 13:45:18.982] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime: apotheosis:garden ...
-[20Aug2023 13:45:18.982] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime: apotheosis:garden took 4.999 μs
-[20Aug2023 13:45:18.982] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime: apotheosis:enchantment ...
-[20Aug2023 13:45:18.982] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime: apotheosis:enchantment took 3.800 μs
-[20Aug2023 13:45:18.982] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime: apotheosis:adventure_module ...
-[20Aug2023 13:45:18.982] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime: apotheosis:adventure_module took 3.900 μs
-[20Aug2023 13:45:18.983] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime: jei:gui ...
-[20Aug2023 13:45:18.983] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime: jei:gui took 4.100 μs
-[20Aug2023 13:45:18.983] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime: jei:debug ...
-[20Aug2023 13:45:18.983] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime: jei:debug took 14.60 μs
-[20Aug2023 13:45:18.983] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime: jei:forge_gui ...
-[20Aug2023 13:45:18.983] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime: jei:forge_gui took 6.801 μs
-[20Aug2023 13:45:18.983] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime: unordinary_basics:jei_plugin ...
-[20Aug2023 13:45:18.983] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime: unordinary_basics:jei_plugin took 6.600 μs
-[20Aug2023 13:45:18.983] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime: patchouli:patchouli ...
-[20Aug2023 13:45:18.983] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime: patchouli:patchouli took 10.40 μs
-[20Aug2023 13:45:18.983] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime: jei:internal ...
-[20Aug2023 13:45:18.983] [Render thread/INFO] [mezz.jei.library.load.PluginCaller/]: Sending Runtime: jei:internal took 3.800 μs
-[20Aug2023 13:45:18.983] [Render thread/INFO] [mezz.jei.common.util.LoggedTimer/]: Starting JEI took 2.068 s
-[20Aug2023 13:45:19.069] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 440 advancements
-[20Aug2023 13:45:19.202] [Render thread/INFO] [patchouli/]: BookContentResourceListenerLoader: Files found in 146.2 μs
-[20Aug2023 13:45:19.203] [Render thread/INFO] [patchouli/]: BookContentResourceListenerLoader: Files found in 154.8 μs
-[20Aug2023 13:45:19.214] [Render thread/INFO] [patchouli/]: BookContentResourceListenerLoader: Files found in 116.8 μs
-[20Aug2023 13:45:45.027] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 2649ms or 52 ticks behind
+[20Aug2023 14:48:15.484] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 1.19, --assetsDir, C:\Users\diabl\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 43.2.0, --fml.mcVersion, 1.19.2, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20220805.130853, --mod, unordinary_basics, --all, --output, C:\Users\diabl\Desktop\unordinary-basics\src\generated\resources, --existing, C:\Users\diabl\Desktop\unordinary-basics\src\main\resources, --existing-mod, manascore, --mixin.config, unordinary_basics.mixins.json]
+[20Aug2023 14:48:15.490] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.2 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0
+[20Aug2023 14:48:15.700] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/diabl/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23126!/ Service=ModLauncher Env=CLIENT
+[20Aug2023 14:48:16.275] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\diabl\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.19.2-43.2.0\5713dfd49576886a7ffc353f14f067ad42369592\javafmllanguage-1.19.2-43.2.0.jar is missing mods.toml file
+[20Aug2023 14:48:16.280] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\diabl\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.19.2-43.2.0\51c88985dd125457fb8b6c2c58a4f3b9349a6b57\lowcodelanguage-1.19.2-43.2.0.jar is missing mods.toml file
+[20Aug2023 14:48:16.284] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\diabl\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.19.2-43.2.0\f4fa83ef8129c7f7cc5847fbafb07f7ae86c1bb\mclanguage-1.19.2-43.2.0.jar is missing mods.toml file
+[20Aug2023 14:48:16.289] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\diabl\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.19.2-43.2.0\d4dcb5b809b7f035ac22b058941cf81f84451545\fmlcore-1.19.2-43.2.0.jar is missing mods.toml file
+[20Aug2023 14:48:16.886] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: Found 1 dependencies adding them to mods collection
+[20Aug2023 14:48:22.846] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[20Aug2023 14:48:22.941] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\diabl\.gradle\caches\forge_gradle\assets, --assetIndex, 1.19, --mod, unordinary_basics, --all, --output, C:\Users\diabl\Desktop\unordinary-basics\src\generated\resources, --existing, C:\Users\diabl\Desktop\unordinary-basics\src\main\resources, --existing-mod, manascore]
+[20Aug2023 14:48:23.224] [main/WARN] [mixin/]: Reference map 'unordinary_basics.refmap.json' for unordinary_basics.mixins.json could not be read. If this is a development environment you can ignore this message
+[20Aug2023 14:48:23.611] [main/INFO] [mixin/]: Remapping refMap moonlight-common-refmap.json using C:\Users\diabl\Desktop\unordinary-basics\build\createSrgToMcp\output.srg
+[20Aug2023 14:48:23.629] [main/INFO] [mixin/]: Remapping refMap moonlight-forge-refmap.json using C:\Users\diabl\Desktop\unordinary-basics\build\createSrgToMcp\output.srg
+[20Aug2023 14:48:23.631] [main/INFO] [mixin/]: Remapping refMap bookshelf.refmap.json using C:\Users\diabl\Desktop\unordinary-basics\build\createSrgToMcp\output.srg
+[20Aug2023 14:48:23.631] [main/INFO] [mixin/]: Remapping refMap bookshelf.refmap.json using C:\Users\diabl\Desktop\unordinary-basics\build\createSrgToMcp\output.srg
+[20Aug2023 14:48:23.639] [main/INFO] [com.github.manasmods.manascore.core.ManasCoreMixinPlugin/]: Initializing MixinExtras
+[20Aug2023 14:48:23.740] [main/INFO] [com.github.manasmods.manascore.core.ManasCoreMixinPlugin/]: MixinExtras initialized in 101ms
+[20Aug2023 14:48:23.741] [main/INFO] [mixin/]: Remapping refMap manascore.refmap.json using C:\Users\diabl\Desktop\unordinary-basics\build\createSrgToMcp\output.srg
+[20Aug2023 14:48:23.744] [main/INFO] [mixin/]: Remapping refMap apotheosis.refmap.json using C:\Users\diabl\Desktop\unordinary-basics\build\createSrgToMcp\output.srg
+[20Aug2023 14:48:23.749] [main/INFO] [mixin/]: Remapping refMap dummmmmmy-common-refmap.json using C:\Users\diabl\Desktop\unordinary-basics\build\createSrgToMcp\output.srg
+[20Aug2023 14:48:23.751] [main/WARN] [mixin/]: Reference map 'dummmmmmy-forge-refmap.json' for dummmmmmy.mixins.json could not be read. If this is a development environment you can ignore this message
+[20Aug2023 14:48:23.752] [main/INFO] [mixin/]: Remapping refMap patchouli.refmap.json using C:\Users\diabl\Desktop\unordinary-basics\build\createSrgToMcp\output.srg
+[20Aug2023 14:48:23.754] [main/INFO] [mixin/]: Remapping refMap placebo.refmap.json using C:\Users\diabl\Desktop\unordinary-basics\build\createSrgToMcp\output.srg
+[20Aug2023 14:48:24.043] [main/INFO] [net.minecraftforge.coremod.CoreMod.placebo/COREMODLOG]: Patching IForgeItemStack#getEnchantmentLevel
+[20Aug2023 14:48:24.141] [main/INFO] [net.minecraftforge.coremod.CoreMod.placebo/COREMODLOG]: Patching IForgeItemStack#getEnchantmentLevel
+[20Aug2023 14:48:24.853] [main/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Replaced 2 calls to Enchantment#getMaxLevel() in net/minecraft/world/inventory/AnvilMenu
+[20Aug2023 14:48:24.945] [main/WARN] [mixin/]: Error loading class: com/hollingsworth/arsnouveau/common/items/SpellCrossbow (java.lang.ClassNotFoundException: com.hollingsworth.arsnouveau.common.items.SpellCrossbow)
+[20Aug2023 14:48:24.951] [main/INFO] [net.minecraftforge.coremod.CoreMod.placebo/COREMODLOG]: Patching IForgeItemStack#getEnchantmentLevel
+[20Aug2023 14:48:24.952] [main/INFO] [net.minecraftforge.coremod.CoreMod.placebo/COREMODLOG]: Patching IForgeItemStack#getEnchantmentLevel
+[20Aug2023 14:48:25.003] [main/WARN] [mixin/]: Error loading class: vazkii/quark/content/client/tooltip/AttributeTooltips (java.lang.ClassNotFoundException: vazkii.quark.content.client.tooltip.AttributeTooltips)
+[20Aug2023 14:48:25.298] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [unordinary_basics]
+[20Aug2023 14:48:28.521] [main/INFO] [net.minecraftforge.coremod.CoreMod.placebo/COREMODLOG]: Patching IForgeItemStack#getEnchantmentLevel
+[20Aug2023 14:48:28.524] [main/INFO] [net.minecraftforge.coremod.CoreMod.placebo/COREMODLOG]: Patching IForgeItemStack#getEnchantmentLevel
+[20Aug2023 14:48:28.668] [main/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Replaced 2 calls to Enchantment#getMaxLevel() in net/minecraft/world/inventory/AnvilMenu
+[20Aug2023 14:48:28.685] [main/WARN] [mixin/]: @ModifyConstant conflict. Skipping apotheosis.mixins.json:AnvilMenuMixin->@ModifyConstant::apoth_removeLevelCap(I)I with priority 1000, already redirected by manascore.mixins.json:MixinAnvilMenu->@ModifyConstant::maxEnchantmentLevel(I)I with priority 1000
+[20Aug2023 14:48:30.248] [main/INFO] [net.minecraft.util.datafix.DataFixers/]: Building unoptimized datafixer
+[20Aug2023 14:48:31.091] [main/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Patching FishingHook#catchingFish
+[20Aug2023 14:48:32.441] [main/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Replaced 2 calls to Enchantment#getMaxLevel() in net/minecraft/world/item/EnchantedBookItem
+[20Aug2023 14:48:32.963] [main/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Replaced 1 calls to Enchantment#getMaxLevel() in net/minecraft/world/level/storage/loot/functions/EnchantRandomlyFunction
+[20Aug2023 14:48:32.964] [main/INFO] [net.minecraftforge.coremod.CoreMod.apotheosis/COREMODLOG]: Replaced 1 calls to Enchantment#isDiscoverable() in net/minecraft/world/level/storage/loot/functions/EnchantRandomlyFunction
+[20Aug2023 14:48:33.351] [modloading-worker-0/INFO] [Enchantment Descriptions/]: Loaded config file.
+[20Aug2023 14:48:33.360] [modloading-worker-0/INFO] [Enchantment Descriptions/]: Saved config file.
+[20Aug2023 14:48:33.636] [modloading-worker-0/INFO] [Bookshelf/]: Fixing MC-151457. Crafting remainder for minecraft:pufferfish_bucket is now minecraft:bucket.
+[20Aug2023 14:48:33.636] [modloading-worker-0/INFO] [Bookshelf/]: Fixing MC-151457. Crafting remainder for minecraft:salmon_bucket is now minecraft:bucket.
+[20Aug2023 14:48:33.636] [modloading-worker-0/INFO] [Bookshelf/]: Fixing MC-151457. Crafting remainder for minecraft:cod_bucket is now minecraft:bucket.
+[20Aug2023 14:48:33.636] [modloading-worker-0/INFO] [Bookshelf/]: Fixing MC-151457. Crafting remainder for minecraft:tropical_fish_bucket is now minecraft:bucket.
+[20Aug2023 14:48:33.636] [modloading-worker-0/INFO] [Bookshelf/]: Fixing MC-151457. Crafting remainder for minecraft:axolotl_bucket is now minecraft:bucket.
+[20Aug2023 14:48:33.637] [modloading-worker-0/INFO] [Bookshelf/]: Fixing MC-151457. Crafting remainder for minecraft:powder_snow_bucket is now minecraft:bucket.
+[20Aug2023 14:48:33.637] [modloading-worker-0/INFO] [Bookshelf/]: Fixing MC-151457. Crafting remainder for minecraft:tadpole_bucket is now minecraft:bucket.
+[20Aug2023 14:48:33.769] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 43.2.0, for MC 1.19.2 with MCP 20220805.130853
+[20Aug2023 14:48:33.769] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v43.2.0 Initialized
+[20Aug2023 14:48:34.064] [modloading-worker-0/INFO] [mixin/]: BeforeConstant is searching for constants in method with descriptor (Lnet/minecraft/network/chat/Component;Z)V
+[20Aug2023 14:48:34.064] [modloading-worker-0/INFO] [mixin/]:   BeforeConstant found INTEGER constant: value = 0, intValue = null
+[20Aug2023 14:48:34.065] [modloading-worker-0/INFO] [mixin/]:     BeforeConstant found a matching constant TYPE at ordinal 0
+[20Aug2023 14:48:34.065] [modloading-worker-0/INFO] [mixin/]:       BeforeConstant found Insn [ICONST_0] 
+[20Aug2023 14:48:34.065] [modloading-worker-0/INFO] [mixin/]:   BeforeConstant found INTEGER constant: value = 60, intValue = null
+[20Aug2023 14:48:34.065] [modloading-worker-0/INFO] [mixin/]:     BeforeConstant found a matching constant TYPE at ordinal 1
+[20Aug2023 14:48:34.065] [modloading-worker-0/INFO] [mixin/]:       BeforeConstant found IntInsn 60
+[20Aug2023 14:48:35.331] [main/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/C:/Users/diabl/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.19.2-43.2.0_mapped_parchment_2022.11.27-1.19.2/forge-1.19.2-43.2.0_mapped_parchment_2022.11.27-1.19.2-recomp.jar%23188!/assets/.mcassetsroot' uses unexpected schema
+[20Aug2023 14:48:35.332] [main/WARN] [net.minecraft.server.packs.VanillaPackResources/]: Assets URL 'union:/C:/Users/diabl/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.19.2-43.2.0_mapped_parchment_2022.11.27-1.19.2/forge-1.19.2-43.2.0_mapped_parchment_2022.11.27-1.19.2-recomp.jar%23188!/data/.mcassetsroot' uses unexpected schema
+[20Aug2023 14:48:36.336] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: unordinary_basics
+[20Aug2023 14:48:40.414] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: unordinary_basics finished after 4078 ms
+[20Aug2023 14:48:40.415] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: unordinary_basics
+[20Aug2023 14:48:40.461] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: unordinary_basics finished after 45 ms
+[20Aug2023 14:48:40.461] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[20Aug2023 14:48:40.779] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 318 ms
+[20Aug2023 14:48:40.780] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: LootTables
+[20Aug2023 14:48:40.876] [main/INFO] [net.minecraft.data.DataGenerator/]: LootTables finished after 95 ms
+[20Aug2023 14:48:40.876] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block
+[20Aug2023 14:48:40.909] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block finished after 32 ms
+[20Aug2023 14:48:40.909] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: unordinary_basics:fletching
+[20Aug2023 14:48:40.953] [main/INFO] [net.minecraft.data.DataGenerator/]: unordinary_basics:fletching finished after 44 ms
+[20Aug2023 14:48:40.953] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block
+[20Aug2023 14:48:40.981] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block finished after 26 ms
+[20Aug2023 14:48:40.981] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item
+[20Aug2023 14:48:40.985] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item finished after 4 ms
+[20Aug2023 14:48:40.985] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 4650 ms
+[20Aug2023 14:48:41.274] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 3507, old count: 3524, new count: 3508, removed stale: 0, written: 0
