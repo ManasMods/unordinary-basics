@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_granite": {
+    "has_quartz_block": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:granite"
+              "minecraft:quartz_block"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "unordinary_basics:granite"
+        "recipe": "unordinary_basics:quartz_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_granite",
+      "has_quartz_block",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "unordinary_basics:granite"
+      "unordinary_basics:quartz_block"
     ]
   }
 }

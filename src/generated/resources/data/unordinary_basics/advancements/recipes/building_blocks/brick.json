@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_andesite": {
+    "has_brick": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:andesite"
+              "minecraft:brick"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "unordinary_basics:andesite"
+        "recipe": "unordinary_basics:brick"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_andesite",
+      "has_brick",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "unordinary_basics:andesite"
+      "unordinary_basics:brick"
     ]
   }
 }

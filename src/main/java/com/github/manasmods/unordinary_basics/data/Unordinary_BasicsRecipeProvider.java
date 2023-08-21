@@ -361,32 +361,32 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
 
         // Polished Blocks
 
-        ShapedRecipeBuilder.shaped(Blocks.POLISHED_ANDESITE, 9)
+        ShapedRecipeBuilder.shaped(Blocks.BRICKS, 2)
+                .define('#', Items.BRICK)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###")
+                .unlockedBy("has_brick", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.BRICK).build()))
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.BRICK).getPath()));
+
+        ShapedRecipeBuilder.shaped(Blocks.STONE_BRICKS, 9)
                 .define('#', Blocks.ANDESITE)
                 .pattern("###")
                 .pattern("###")
                 .pattern("###")
-                .unlockedBy("has_andesite", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Blocks.ANDESITE).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Item.byBlock(Blocks.ANDESITE)).getPath()));
+                .unlockedBy("has_stone", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.STONE).build()))
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Item.byBlock(Blocks.STONE)).getPath()));
 
-        ShapedRecipeBuilder.shaped(Blocks.POLISHED_GRANITE, 9)
-                .define('#', Blocks.GRANITE)
+        ShapedRecipeBuilder.shaped(Blocks.QUARTZ_BRICKS, 9)
+                .define('#', Blocks.QUARTZ_BLOCK)
                 .pattern("###")
                 .pattern("###")
                 .pattern("###")
-                .unlockedBy("has_granite", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Blocks.GRANITE).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Item.byBlock(Blocks.GRANITE)).getPath()));
-
-        ShapedRecipeBuilder.shaped(Blocks.POLISHED_DIORITE, 9)
-                .define('#', Blocks.DIORITE)
-                .pattern("###")
-                .pattern("###")
-                .pattern("###")
-                .unlockedBy("has_diorite", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Blocks.DIORITE).build()))
-                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Item.byBlock(Blocks.DIORITE)).getPath()));
+                .unlockedBy("has_quartz_block", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.QUARTZ_BLOCK).build()))
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Item.byBlock(Blocks.QUARTZ_BLOCK)).getPath()));
 
     }
 
@@ -542,10 +542,11 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                         .of(Items.AMETHYST_SHARD).build()))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(Unordinary_BasicsBlocks.ANDESITE_BRICKS, 4)
+        ShapedRecipeBuilder.shaped(Unordinary_BasicsBlocks.ANDESITE_BRICKS, 9)
                 .define('#', Blocks.ANDESITE)
-                .pattern("##")
-                .pattern("##")
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
                 .unlockedBy("has_andesite", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Blocks.ANDESITE).build()))
                 .save(consumer);

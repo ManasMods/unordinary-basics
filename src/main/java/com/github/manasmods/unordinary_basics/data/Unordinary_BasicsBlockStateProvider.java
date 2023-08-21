@@ -15,11 +15,17 @@ public class Unordinary_BasicsBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void generate() {
+        modBlocks();
         modStairs();
         modSlabs();
         modMisc();
     }
+    
+        private void modBlocks() {
+            defaultBlock(Unordinary_BasicsBlocks.ANDESITE_BRICKS);
 
+
+        }
         private void modStairs() {
             stairs(Unordinary_BasicsBlocks.CALCITE_STAIRS, Blocks.CALCITE);
             stairs(Unordinary_BasicsBlocks.TUFF_STAIRS, Blocks.TUFF);

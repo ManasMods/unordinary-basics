@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_diorite": {
+    "has_andesite": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:diorite"
+              "minecraft:andesite"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "unordinary_basics:diorite"
+        "recipe": "unordinary_basics:andesite_bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_diorite",
+      "has_andesite",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "unordinary_basics:diorite"
+      "unordinary_basics:andesite_bricks"
     ]
   }
 }

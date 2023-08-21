@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "item": "minecraft:diorite"
+      "item": "minecraft:quartz_block"
     }
   },
   "pattern": [
@@ -12,6 +12,6 @@
   ],
   "result": {
     "count": 9,
-    "item": "minecraft:polished_diorite"
+    "item": "minecraft:quartz_bricks"
   }
 }
