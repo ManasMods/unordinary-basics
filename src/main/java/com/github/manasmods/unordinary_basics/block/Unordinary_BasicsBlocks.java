@@ -12,6 +12,9 @@ public class Unordinary_BasicsBlocks {
     @ObjectHolder(registryName = "block", value = "unordinary_basics:item_sorter")
     public static final Block ITEM_SORTER = null;
 
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:andesite_bricks")
+    public static final Block ANDESITE_BRICKS = null;
+
     //STAIRS
 
     @ObjectHolder(registryName = "block", value = "unordinary_basics:calcite_stairs")

@@ -76,7 +76,8 @@ public class Unordinary_BasicsBlockTagProvider extends BlockTagProvider {
 
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(Unordinary_BasicsBlocks.ENCHANTMENT_LIBRARY)
-                .add(Unordinary_BasicsBlocks.ITEM_SORTER);
+                .add(Unordinary_BasicsBlocks.ITEM_SORTER)
+                .add(Unordinary_BasicsBlocks.ANDESITE_BRICKS);
         tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(Unordinary_BasicsBlocks.ITEM_SORTER);
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
@@ -220,7 +221,10 @@ public class Unordinary_BasicsBlockTagProvider extends BlockTagProvider {
                 Unordinary_BasicsBlocks.LIME_CONCRETE_POWDER_STAIRS, Unordinary_BasicsBlocks.PINK_CONCRETE_POWDER_STAIRS, Unordinary_BasicsBlocks.GRAY_CONCRETE_POWDER_STAIRS,
                 Unordinary_BasicsBlocks.LIGHT_GRAY_CONCRETE_POWDER_STAIRS, Unordinary_BasicsBlocks.CYAN_CONCRETE_POWDER_STAIRS, Unordinary_BasicsBlocks.PURPLE_CONCRETE_POWDER_STAIRS,
                 Unordinary_BasicsBlocks.BLUE_CONCRETE_POWDER_STAIRS, Unordinary_BasicsBlocks.BROWN_CONCRETE_POWDER_STAIRS, Unordinary_BasicsBlocks.GREEN_CONCRETE_POWDER_STAIRS,
-                Unordinary_BasicsBlocks.RED_CONCRETE_POWDER_STAIRS, Unordinary_BasicsBlocks.BLACK_CONCRETE_POWDER_STAIRS);
+                Unordinary_BasicsBlocks.RED_CONCRETE_POWDER_STAIRS, Unordinary_BasicsBlocks.BLACK_CONCRETE_POWDER_STAIRS)
+
+            .add(Unordinary_BasicsBlocks.ANDESITE_BRICKS);
+
 
         tag(BlockTags.NEEDS_STONE_TOOL)
             .add(Unordinary_BasicsBlocks.BLOCK_OF_RAW_IRON_STAIRS, Unordinary_BasicsBlocks.BLOCK_OF_RAW_COPPER_STAIRS, Unordinary_BasicsBlocks.BLOCK_OF_RAW_GOLD_STAIRS)
@@ -263,7 +267,9 @@ public class Unordinary_BasicsBlockTagProvider extends BlockTagProvider {
                 Unordinary_BasicsBlocks.LIGHT_GRAY_CONCRETE_SLAB, Unordinary_BasicsBlocks.CYAN_CONCRETE_SLAB, Unordinary_BasicsBlocks.PURPLE_CONCRETE_SLAB, Unordinary_BasicsBlocks.BLUE_CONCRETE_SLAB,
                 Unordinary_BasicsBlocks.BROWN_CONCRETE_SLAB, Unordinary_BasicsBlocks.GREEN_CONCRETE_SLAB, Unordinary_BasicsBlocks.RED_CONCRETE_SLAB, Unordinary_BasicsBlocks.BLACK_CONCRETE_SLAB)
             .add(Unordinary_BasicsBlocks.BLOCK_OF_RAW_IRON_SLAB, Unordinary_BasicsBlocks.BLOCK_OF_RAW_COPPER_SLAB, Unordinary_BasicsBlocks.BLOCK_OF_RAW_GOLD_SLAB)
-            .add(Unordinary_BasicsBlocks.OBSIDIAN_SLAB, Unordinary_BasicsBlocks.CRYING_OBSIDIAN_SLAB);
+            .add(Unordinary_BasicsBlocks.OBSIDIAN_SLAB, Unordinary_BasicsBlocks.CRYING_OBSIDIAN_SLAB)
+
+            .add(Unordinary_BasicsBlocks.ANDESITE_BRICKS);
 
         tag(BlockTags.MINEABLE_WITH_AXE).add(Unordinary_BasicsBlocks.OAK_LOG_STAIRS, Unordinary_BasicsBlocks.BIRCH_LOG_STAIRS, Unordinary_BasicsBlocks.SPRUCE_LOG_STAIRS, Unordinary_BasicsBlocks.ACACIA_LOG_STAIRS,
             Unordinary_BasicsBlocks.DARK_OAK_LOG_STAIRS, Unordinary_BasicsBlocks.JUNGLE_LOG_STAIRS, Unordinary_BasicsBlocks.STRIPPED_OAK_LOG_STAIRS, Unordinary_BasicsBlocks.STRIPPED_BIRCH_LOG_STAIRS,

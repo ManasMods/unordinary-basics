@@ -1,7 +1,8 @@
-// 1.19.2	2023-08-20T11:51:31.8103769	LootTables
+// 1.19.2	2023-08-21T19:53:55.0737601	LootTables
 2d891dd38aebe5d06ea2a6b4c9a1533a97324ea2 data/unordinary_basics/loot_tables/blocks/acacia_log.json
 fab1894dc8e69c683171e47b29a645e6e97cd770 data/unordinary_basics/loot_tables/blocks/acacia_log_slab.json
 c5c5610df3573a30e467de223f0974f2a88fda06 data/unordinary_basics/loot_tables/blocks/acacia_log_stairs.json
+c27b6bc127efe3159633573ad06b9d753cdf249f data/unordinary_basics/loot_tables/blocks/andesite_bricks.json
 1de7b2f8293e581e8bb3485c4660687ab66c02f3 data/unordinary_basics/loot_tables/blocks/basalt_slab.json
 b6f0f43bf5729278b9e9f83cf08ec22522d14bd4 data/unordinary_basics/loot_tables/blocks/basalt_stairs.json
 6097be1d3e971a36bd45f7c494efbda3947e3f21 data/unordinary_basics/loot_tables/blocks/birch_log.json

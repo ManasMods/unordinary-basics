@@ -40,6 +40,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
         vanillaRecipes(consumer);
         modRecipes(consumer);
         vanillaQOLSmelting(consumer);
+        modImprovedRecipes(consumer);
         modStairsAndSlabs(consumer);
         modBlockToBlock(consumer);
     }
@@ -358,6 +359,35 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                         .of(Unordinary_BasicsItems.MILK_BOTTLE).build()))
                 .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.CAKE).getPath()));
 
+        // Polished Blocks
+
+        ShapedRecipeBuilder.shaped(Blocks.POLISHED_ANDESITE, 9)
+                .define('#', Blocks.ANDESITE)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .unlockedBy("has_andesite", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.ANDESITE).build()))
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Item.byBlock(Blocks.ANDESITE)).getPath()));
+
+        ShapedRecipeBuilder.shaped(Blocks.POLISHED_GRANITE, 9)
+                .define('#', Blocks.GRANITE)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .unlockedBy("has_granite", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.GRANITE).build()))
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Item.byBlock(Blocks.GRANITE)).getPath()));
+
+        ShapedRecipeBuilder.shaped(Blocks.POLISHED_DIORITE, 9)
+                .define('#', Blocks.DIORITE)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .unlockedBy("has_diorite", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.DIORITE).build()))
+                .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Item.byBlock(Blocks.DIORITE)).getPath()));
+
     }
 
     private void modRecipes(Consumer<FinishedRecipe> consumer) {
@@ -510,6 +540,14 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .pattern(" I ")
                 .unlockedBy("has_amethyst_shard", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.AMETHYST_SHARD).build()))
+                .save(consumer);
+
+        ShapedRecipeBuilder.shaped(Unordinary_BasicsBlocks.ANDESITE_BRICKS, 4)
+                .define('#', Blocks.ANDESITE)
+                .pattern("##")
+                .pattern("##")
+                .unlockedBy("has_andesite", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Blocks.ANDESITE).build()))
                 .save(consumer);
     }
 

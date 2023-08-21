@@ -2,6 +2,7 @@
   "values": [
     "unordinary_basics:enchantment_library",
     "unordinary_basics:item_sorter",
+    "unordinary_basics:andesite_bricks",
     "unordinary_basics:calcite_stairs",
     "unordinary_basics:tuff_stairs",
     "unordinary_basics:dripstone_stairs",
@@ -127,6 +128,7 @@
     "unordinary_basics:block_of_raw_copper_slab",
     "unordinary_basics:block_of_raw_gold_slab",
     "unordinary_basics:obsidian_slab",
-    "unordinary_basics:crying_obsidian_slab"
+    "unordinary_basics:crying_obsidian_slab",
+    "unordinary_basics:andesite_bricks"
   ]
 }

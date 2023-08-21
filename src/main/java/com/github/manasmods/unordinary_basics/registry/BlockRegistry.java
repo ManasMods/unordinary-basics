@@ -77,6 +77,8 @@ public class BlockRegistry {
                 .noOcclusion()
                 .requiresCorrectToolForDrops()));
 
+        RegistryObject<Block> andesite_bricks = registry.register("andesite_bricks", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+
         //BLOCKS FOR STAIRS + SLABS
 
         RegistryObject<Block> oak_log = registry.register("oak_log", () -> new SimpleBlock(Material.WOOD, properties -> properties.strength(2.0F).sound(SoundType.WOOD).requiresCorrectToolForDrops()));
@@ -440,6 +442,8 @@ public class BlockRegistry {
         registry.register("purpur_pillar", () -> new BlockItem(Unordinary_BasicsBlocks.PURPUR_PILLAR, new Item.Properties()));
         registry.register("quartz_pillar", () -> new BlockItem(Unordinary_BasicsBlocks.QUARTZ_PILLAR, new Item.Properties()));
         registry.register("hay_block", () -> new BlockItem(Unordinary_BasicsBlocks.HAY_BLOCK, new Item.Properties()));
+
+        registry.register("andesite_bricks", () -> new CustomBlockItem(Unordinary_BasicsBlocks.ANDESITE_BRICKS));
 
         registry.register("enchantment_library", () -> new CustomBlockItem(Unordinary_BasicsBlocks.ENCHANTMENT_LIBRARY));
         registry.register("item_sorter", () -> new CustomBlockItem(Unordinary_BasicsBlocks.ITEM_SORTER) {

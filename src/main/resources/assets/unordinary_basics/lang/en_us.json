@@ -46,6 +46,8 @@
   "unordinary_basics.menu.fletching_table.switch.apotheosis": "Open Apotheosis Menu",
   "unordinary_basics.menu.fletching_table.switch.ub": "Open Unordinary Basics Menu",
 
+  "block.unordinary_basics.andesite_bricks": "Andesite Bricks",
+
   "enchantment.unordinary_basics.master_miner": "Master Miner",
   "enchantment.unordinary_basics.master_miner.desc": "Mines multiple blocks at once! - Crouch + Right Click to change level",
   "enchantment.unordinary_basics.vein_miner": "Vein-Miner",
