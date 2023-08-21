@@ -11,7 +11,7 @@
       "type2": "empty"
     },
     {
-      "type": "patchouli:text"
+      "type": "patchouli:text",
       "text": "The maximum stats for a Horse are: 30HP - 14.5m/s - 5 Blocks. Donkeys and Mules always have the same speed and jump strength, but their health varies like a Horse's."
     }
   ]
