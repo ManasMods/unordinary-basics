@@ -20,9 +20,25 @@ public class Unordinary_BasicsBlockStateProvider extends BlockStateProvider {
         modSlabs();
         modMisc();
     }
-    
+
         private void modBlocks() {
             defaultBlock(Unordinary_BasicsBlocks.ANDESITE_BRICKS);
+            defaultBlock(Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICKS);
+            defaultBlock(Unordinary_BasicsBlocks.CALCITE_BRICKS);
+            defaultBlock(Unordinary_BasicsBlocks.DIORITE_BRICKS);
+            defaultBlock(Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICKS);
+            defaultBlock(Unordinary_BasicsBlocks.DRIPSTONE_BRICKS);
+            defaultBlock(Unordinary_BasicsBlocks.GRANITE_BRICKS);
+            defaultBlock(Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICKS);
+            defaultBlock(Unordinary_BasicsBlocks.TUFF_BRICKS);
+            defaultBlock(Unordinary_BasicsBlocks.POLISHED_TUFF);
+            defaultBlock(Unordinary_BasicsBlocks.POLISHED_TUFF_BRICKS);
+            //defaultBlock(Unordinary_BasicsBlocks.SOUL_SANDSTONE);
+            //defaultBlock(Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE);
+            //defaultBlock(Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE);
+            defaultBlock(Unordinary_BasicsBlocks.SANDSTONE_BRICKS);
+            defaultBlock(Unordinary_BasicsBlocks.RED_SANDSTONE_BRICKS);
+            defaultBlock(Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICKS);
 
 
         }

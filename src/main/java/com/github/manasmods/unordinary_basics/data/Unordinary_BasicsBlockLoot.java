@@ -17,6 +17,22 @@ public class Unordinary_BasicsBlockLoot extends BlockLoot {
         this.dropSelf(Unordinary_BasicsBlocks.ITEM_SORTER);
 
         this.dropSelf(Unordinary_BasicsBlocks.ANDESITE_BRICKS);
+        this.dropSelf(Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICKS);
+        this.dropSelf(Unordinary_BasicsBlocks.CALCITE_BRICKS);
+        this.dropSelf(Unordinary_BasicsBlocks.DIORITE_BRICKS);
+        this.dropSelf(Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICKS);
+        this.dropSelf(Unordinary_BasicsBlocks.DRIPSTONE_BRICKS);
+        this.dropSelf(Unordinary_BasicsBlocks.GRANITE_BRICKS);
+        this.dropSelf(Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICKS);
+        this.dropSelf(Unordinary_BasicsBlocks.TUFF_BRICKS);
+        this.dropSelf(Unordinary_BasicsBlocks.POLISHED_TUFF);
+        this.dropSelf(Unordinary_BasicsBlocks.POLISHED_TUFF_BRICKS);
+        //this.dropSelf(Unordinary_BasicsBlocks.SOUL_SANDSTONE);
+        //this.dropSelf(Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE);
+        //this.dropSelf(Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE);
+        this.dropSelf(Unordinary_BasicsBlocks.SANDSTONE_BRICKS);
+        this.dropSelf(Unordinary_BasicsBlocks.RED_SANDSTONE_BRICKS);
+        this.dropSelf(Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICKS);
 
         this.dropSelf(Unordinary_BasicsBlocks.CALCITE_STAIRS);
         this.dropSelf(Unordinary_BasicsBlocks.CALCITE_SLAB);

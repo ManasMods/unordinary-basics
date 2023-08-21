@@ -129,6 +129,19 @@
     "unordinary_basics:block_of_raw_gold_slab",
     "unordinary_basics:obsidian_slab",
     "unordinary_basics:crying_obsidian_slab",
-    "unordinary_basics:andesite_bricks"
+    "unordinary_basics:andesite_bricks",
+    "unordinary_basics:polished_andesite_bricks",
+    "unordinary_basics:calcite_bricks",
+    "unordinary_basics:diorite_bricks",
+    "unordinary_basics:polished_diorite_bricks",
+    "unordinary_basics:dripstone_bricks",
+    "unordinary_basics:granite_bricks",
+    "unordinary_basics:polished_granite_bricks",
+    "unordinary_basics:tuff_bricks",
+    "unordinary_basics:polished_tuff",
+    "unordinary_basics:polished_tuff_bricks",
+    "unordinary_basics:sandstone_bricks",
+    "unordinary_basics:red_sandstone_bricks",
+    "unordinary_basics:soul_sandstone_bricks"
   ]
 }

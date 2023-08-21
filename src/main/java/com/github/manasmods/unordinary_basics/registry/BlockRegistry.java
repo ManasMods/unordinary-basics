@@ -78,6 +78,22 @@ public class BlockRegistry {
                 .requiresCorrectToolForDrops()));
 
         RegistryObject<Block> andesite_bricks = registry.register("andesite_bricks", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+        RegistryObject<Block> polished_andesite_bricks = registry.register("polished_andesite_bricks", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+        RegistryObject<Block> calcite_bricks = registry.register("calcite_bricks", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(0.75F).sound(SoundType.CALCITE).requiresCorrectToolForDrops()));
+        RegistryObject<Block> diorite_bricks = registry.register("diorite_bricks", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+        RegistryObject<Block> polished_diorite_bricks = registry.register("polished_diorite_bricks", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+        RegistryObject<Block> dripstone_bricks = registry.register("dripstone_bricks", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 1.0F).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops()));
+        RegistryObject<Block> granite_bricks = registry.register("granite_bricks", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+        RegistryObject<Block> polished_granite_bricks = registry.register("polished_granite_bricks", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+        RegistryObject<Block> tuff_bricks = registry.register("tuff_bricks", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+        RegistryObject<Block> polished_tuff = registry.register("polished_tuff", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+        RegistryObject<Block> polished_tuff_bricks = registry.register("polished_tuff_bricks", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+        //RegistryObject<Block> soul_sandstone = registry.register("soul_sandstone", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(0.8F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+        //RegistryObject<Block> smooth_soul_sandstone = registry.register("smooth_soul_sandstone", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(0.8F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+        //RegistryObject<Block> cut_soul_sandstone = registry.register("cut_soul_sandstone", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+        RegistryObject<Block> sandstone_bricks = registry.register("sandstone_bricks", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(0.8F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+        RegistryObject<Block> red_sandstone_bricks = registry.register("red_sandstone_bricks", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(0.8F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+        RegistryObject<Block> soul_sandstone_bricks = registry.register("soul_sandstone_bricks", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(0.8F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
         //BLOCKS FOR STAIRS + SLABS
 
@@ -444,6 +460,23 @@ public class BlockRegistry {
         registry.register("hay_block", () -> new BlockItem(Unordinary_BasicsBlocks.HAY_BLOCK, new Item.Properties()));
 
         registry.register("andesite_bricks", () -> new CustomBlockItem(Unordinary_BasicsBlocks.ANDESITE_BRICKS));
+        registry.register("polished_andesite_bricks", () -> new CustomBlockItem(Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICKS));
+        registry.register("calcite_bricks", () -> new CustomBlockItem(Unordinary_BasicsBlocks.CALCITE_BRICKS));
+        registry.register("diorite_bricks", () -> new CustomBlockItem(Unordinary_BasicsBlocks.DIORITE_BRICKS));
+        registry.register("polished_diorite_bricks", () -> new CustomBlockItem(Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICKS));
+        registry.register("dripstone_bricks", () -> new CustomBlockItem(Unordinary_BasicsBlocks.DRIPSTONE_BRICKS));
+        registry.register("granite_bricks", () -> new CustomBlockItem(Unordinary_BasicsBlocks.GRANITE_BRICKS));
+        registry.register("polished_granite_bricks", () -> new CustomBlockItem(Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICKS));
+        registry.register("tuff_bricks", () -> new CustomBlockItem(Unordinary_BasicsBlocks.TUFF_BRICKS));
+        registry.register("polished_tuff", () -> new CustomBlockItem(Unordinary_BasicsBlocks.POLISHED_TUFF));
+        registry.register("polished_tuff_bricks", () -> new CustomBlockItem(Unordinary_BasicsBlocks.POLISHED_TUFF_BRICKS));
+        //registry.register("soul_sandstone", () -> new CustomBlockItem(Unordinary_BasicsBlocks.SOUL_SANDSTONE));
+        //registry.register("smooth_soul_sandstone", () -> new CustomBlockItem(Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE));
+        //registry.register("cut_soul_sandstone", () -> new CustomBlockItem(Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE));
+        registry.register("sandstone_bricks", () -> new CustomBlockItem(Unordinary_BasicsBlocks.SANDSTONE_BRICKS));
+        registry.register("red_sandstone_bricks", () -> new CustomBlockItem(Unordinary_BasicsBlocks.RED_SANDSTONE_BRICKS));
+        registry.register("soul_sandstone_bricks", () -> new CustomBlockItem(Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICKS));
+
 
         registry.register("enchantment_library", () -> new CustomBlockItem(Unordinary_BasicsBlocks.ENCHANTMENT_LIBRARY));
         registry.register("item_sorter", () -> new CustomBlockItem(Unordinary_BasicsBlocks.ITEM_SORTER) {

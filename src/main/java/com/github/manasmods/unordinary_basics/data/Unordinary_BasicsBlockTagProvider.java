@@ -223,8 +223,23 @@ public class Unordinary_BasicsBlockTagProvider extends BlockTagProvider {
                 Unordinary_BasicsBlocks.BLUE_CONCRETE_POWDER_STAIRS, Unordinary_BasicsBlocks.BROWN_CONCRETE_POWDER_STAIRS, Unordinary_BasicsBlocks.GREEN_CONCRETE_POWDER_STAIRS,
                 Unordinary_BasicsBlocks.RED_CONCRETE_POWDER_STAIRS, Unordinary_BasicsBlocks.BLACK_CONCRETE_POWDER_STAIRS)
 
-            .add(Unordinary_BasicsBlocks.ANDESITE_BRICKS);
-
+                .add(Unordinary_BasicsBlocks.ANDESITE_BRICKS)
+                .add(Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICKS)
+                .add(Unordinary_BasicsBlocks.CALCITE_BRICKS)
+                .add(Unordinary_BasicsBlocks.DIORITE_BRICKS)
+                .add(Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICKS)
+                .add(Unordinary_BasicsBlocks.DRIPSTONE_BRICKS)
+                .add(Unordinary_BasicsBlocks.GRANITE_BRICKS)
+                .add(Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICKS)
+                .add(Unordinary_BasicsBlocks.TUFF_BRICKS)
+                .add(Unordinary_BasicsBlocks.POLISHED_TUFF)
+                .add(Unordinary_BasicsBlocks.POLISHED_TUFF_BRICKS)
+                //.add(Unordinary_BasicsBlocks.SOUL_SANDSTONE)
+                //.add(Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE)
+                //.add(Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE)
+                .add(Unordinary_BasicsBlocks.SANDSTONE_BRICKS)
+                .add(Unordinary_BasicsBlocks.RED_SANDSTONE_BRICKS)
+                .add(Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICKS);
 
         tag(BlockTags.NEEDS_STONE_TOOL)
             .add(Unordinary_BasicsBlocks.BLOCK_OF_RAW_IRON_STAIRS, Unordinary_BasicsBlocks.BLOCK_OF_RAW_COPPER_STAIRS, Unordinary_BasicsBlocks.BLOCK_OF_RAW_GOLD_STAIRS)
@@ -269,7 +284,23 @@ public class Unordinary_BasicsBlockTagProvider extends BlockTagProvider {
             .add(Unordinary_BasicsBlocks.BLOCK_OF_RAW_IRON_SLAB, Unordinary_BasicsBlocks.BLOCK_OF_RAW_COPPER_SLAB, Unordinary_BasicsBlocks.BLOCK_OF_RAW_GOLD_SLAB)
             .add(Unordinary_BasicsBlocks.OBSIDIAN_SLAB, Unordinary_BasicsBlocks.CRYING_OBSIDIAN_SLAB)
 
-            .add(Unordinary_BasicsBlocks.ANDESITE_BRICKS);
+            .add(Unordinary_BasicsBlocks.ANDESITE_BRICKS)
+            .add(Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICKS)
+            .add(Unordinary_BasicsBlocks.CALCITE_BRICKS)
+            .add(Unordinary_BasicsBlocks.DIORITE_BRICKS)
+            .add(Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICKS)
+            .add(Unordinary_BasicsBlocks.DRIPSTONE_BRICKS)
+            .add(Unordinary_BasicsBlocks.GRANITE_BRICKS)
+            .add(Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICKS)
+            .add(Unordinary_BasicsBlocks.TUFF_BRICKS)
+            .add(Unordinary_BasicsBlocks.POLISHED_TUFF)
+            .add(Unordinary_BasicsBlocks.POLISHED_TUFF_BRICKS)
+            //.add(Unordinary_BasicsBlocks.SOUL_SANDSTONE)
+            //.add(Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE)
+            //.add(Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE)
+            .add(Unordinary_BasicsBlocks.SANDSTONE_BRICKS)
+            .add(Unordinary_BasicsBlocks.RED_SANDSTONE_BRICKS)
+            .add(Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICKS);
 
         tag(BlockTags.MINEABLE_WITH_AXE).add(Unordinary_BasicsBlocks.OAK_LOG_STAIRS, Unordinary_BasicsBlocks.BIRCH_LOG_STAIRS, Unordinary_BasicsBlocks.SPRUCE_LOG_STAIRS, Unordinary_BasicsBlocks.ACACIA_LOG_STAIRS,
             Unordinary_BasicsBlocks.DARK_OAK_LOG_STAIRS, Unordinary_BasicsBlocks.JUNGLE_LOG_STAIRS, Unordinary_BasicsBlocks.STRIPPED_OAK_LOG_STAIRS, Unordinary_BasicsBlocks.STRIPPED_BIRCH_LOG_STAIRS,
