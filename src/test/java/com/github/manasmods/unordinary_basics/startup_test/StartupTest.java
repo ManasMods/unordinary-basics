@@ -18,7 +18,7 @@ public class StartupTest {
     @GameTest(template = "empty_1x1", batch = TestBatches.CREATIVE_TAB_ICONS)
     public static void checkCreativeTabIcon(final GameTestHelper helper) {
         List<CreativeModeTab> tabs = List.of(
-                Unordinary_BasicsCreativeTab.BLOCKS
+                Unordinary_BasicsCreativeTab.CUSTOM_BLOCKS
         );
 
 
