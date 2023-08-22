@@ -14,38 +14,122 @@ public class Unordinary_BasicsBlocks {
 
     @ObjectHolder(registryName = "block", value = "unordinary_basics:andesite_bricks")
     public static final Block ANDESITE_BRICKS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:andesite_brick_stairs")
+    public static final Block ANDESITE_BRICK_STAIRS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:andesite_brick_slab")
+    public static final Block ANDESITE_BRICK_SLAB = null;
+
     @ObjectHolder(registryName = "block", value = "unordinary_basics:polished_andesite_bricks")
     public static final Block POLISHED_ANDESITE_BRICKS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:polished_andesite_brick_stairs")
+    public static final Block POLISHED_ANDESITE_BRICK_STAIRS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:polished_andesite_brick_slab")
+    public static final Block POLISHED_ANDESITE_BRICK_SLAB = null;
+
     @ObjectHolder(registryName = "block", value = "unordinary_basics:calcite_bricks")
     public static final Block CALCITE_BRICKS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:calcite_brick_stairs")
+    public static final Block CALCITE_BRICK_STAIRS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:calcite_brick_slab")
+    public static final Block CALCITE_BRICK_SLAB = null;
+
     @ObjectHolder(registryName = "block", value = "unordinary_basics:diorite_bricks")
     public static final Block DIORITE_BRICKS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:diorite_brick_stairs")
+    public static final Block DIORITE_BRICK_STAIRS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:diorite_brick_slab")
+    public static final Block DIORITE_BRICK_SLAB = null;
+
     @ObjectHolder(registryName = "block", value = "unordinary_basics:polished_diorite_bricks")
     public static final Block POLISHED_DIORITE_BRICKS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:polished_diorite_brick_stairs")
+    public static final Block POLISHED_DIORITE_BRICK_STAIRS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:polished_diorite_brick_slab")
+    public static final Block POLISHED_DIORITE_BRICK_SLAB = null;
+
     @ObjectHolder(registryName = "block", value = "unordinary_basics:dripstone_bricks")
     public static final Block DRIPSTONE_BRICKS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:dripstone_brick_stairs")
+    public static final Block DRIPSTONE_BRICK_STAIRS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:dripstone_brick_slab")
+    public static final Block DRIPSTONE_BRICK_SLAB = null;
+
     @ObjectHolder(registryName = "block", value = "unordinary_basics:granite_bricks")
     public static final Block GRANITE_BRICKS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:granite_brick_stairs")
+    public static final Block GRANITE_BRICK_STAIRS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:granite_brick_slab")
+    public static final Block GRANITE_BRICK_SLAB = null;
+
     @ObjectHolder(registryName = "block", value = "unordinary_basics:polished_granite_bricks")
     public static final Block POLISHED_GRANITE_BRICKS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:polished_granite_brick_stairs")
+    public static final Block POLISHED_GRANITE_BRICK_STAIRS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:polished_granite_brick_slab")
+    public static final Block POLISHED_GRANITE_BRICK_SLAB = null;
+
     @ObjectHolder(registryName = "block", value = "unordinary_basics:tuff_bricks")
     public static final Block TUFF_BRICKS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:tuff_brick_stairs")
+    public static final Block TUFF_BRICK_STAIRS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:tuff_brick_slab")
+    public static final Block TUFF_BRICK_SLAB = null;
+
     @ObjectHolder(registryName = "block", value = "unordinary_basics:polished_tuff")
     public static final Block POLISHED_TUFF = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:polished_tuff_stairs")
+    public static final Block POLISHED_TUFF_STAIRS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:polished_tuff_slab")
+    public static final Block POLISHED_TUFF_SLAB = null;
+
     @ObjectHolder(registryName = "block", value = "unordinary_basics:polished_tuff_bricks")
     public static final Block POLISHED_TUFF_BRICKS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:polished_tuff_brick_stairs")
+    public static final Block POLISHED_TUFF_BRICK_STAIRS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:polished_tuff_brick_slab")
+    public static final Block POLISHED_TUFF_BRICK_SLAB = null;
+
     @ObjectHolder(registryName = "block", value = "unordinary_basics:soul_sandstone")
     public static final Block SOUL_SANDSTONE = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:soul_sandstone_stairs")
+    public static final Block SOUL_SANDSTONE_STAIRS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:soul_sandstone_slab")
+    public static final Block SOUL_SANDSTONE_SLAB = null;
+
     @ObjectHolder(registryName = "block", value = "unordinary_basics:smooth_soul_sandstone")
     public static final Block SMOOTH_SOUL_SANDSTONE = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:smooth_soul_sandstone_stairs")
+    public static final Block SMOOTH_SOUL_SANDSTONE_STAIRS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:smooth_soul_sandstone_slab")
+    public static final Block SMOOTH_SOUL_SANDSTONE_SLAB = null;
+
     @ObjectHolder(registryName = "block", value = "unordinary_basics:cut_soul_sandstone")
     public static final Block CUT_SOUL_SANDSTONE = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:cut_soul_sandstone_stairs")
+    public static final Block CUT_SOUL_SANDSTONE_STAIRS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:cut_soul_sandstone_slab")
+    public static final Block CUT_SOUL_SANDSTONE_SLAB = null;
+
     @ObjectHolder(registryName = "block", value = "unordinary_basics:sandstone_bricks")
     public static final Block SANDSTONE_BRICKS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:sandstone_brick_stairs")
+    public static final Block SANDSTONE_BRICK_STAIRS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:sandstone_brick_slab")
+    public static final Block SANDSTONE_BRICK_SLAB = null;
+
     @ObjectHolder(registryName = "block", value = "unordinary_basics:red_sandstone_bricks")
     public static final Block RED_SANDSTONE_BRICKS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:red_sandstone_brick_stairs")
+    public static final Block RED_SANDSTONE_BRICK_STAIRS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:red_sandstone_brick_slab")
+    public static final Block RED_SANDSTONE_BRICK_SLAB = null;
+
     @ObjectHolder(registryName = "block", value = "unordinary_basics:soul_sandstone_bricks")
     public static final Block SOUL_SANDSTONE_BRICKS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:soul_sandstone_brick_stairs")
+    public static final Block SOUL_SANDSTONE_BRICK_STAIRS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:soul_sandstone_brick_slab")
+    public static final Block SOUL_SANDSTONE_BRICK_SLAB = null;
 
     //STAIRS
 
