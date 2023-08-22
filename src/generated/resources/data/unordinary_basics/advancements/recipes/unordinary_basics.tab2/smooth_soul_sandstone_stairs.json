@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_andesite": {
+    "has_has_smooth_soul_sandstone": {
       "conditions": {
         "items": [
           {
             "items": [
-              "minecraft:andesite"
+              "unordinary_basics:smooth_soul_sandstone"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "unordinary_basics:andesite_bricks"
+        "recipe": "unordinary_basics:smooth_soul_sandstone_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_andesite",
+      "has_has_smooth_soul_sandstone",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "unordinary_basics:andesite_bricks"
+      "unordinary_basics:smooth_soul_sandstone_stairs"
     ]
   }
 }

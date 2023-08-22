@@ -42,6 +42,7 @@ public class Unordinary_BasicsBlockStateProvider extends BlockStateProvider {
             defaultBlock(Unordinary_BasicsBlocks.POLISHED_TUFF_BRICKS);
             nonRotatableColumn(Unordinary_BasicsBlocks.SOUL_SANDSTONE, mcLoc("unordinary_basics:block/soul_sandstone_top"), mcLoc("unordinary_basics:block/soul_sandstone"), mcLoc("unordinary_basics:block/soul_sandstone_bottom"));
             nonRotatableColumn(Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE, mcLoc("unordinary_basics:block/soul_sandstone_top"), mcLoc("unordinary_basics:block/soul_sandstone_top"), mcLoc("unordinary_basics:block/soul_sandstone_top"));
+            nonRotatableColumn(Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE, mcLoc("unordinary_basics:block/soul_sandstone_top"), mcLoc("unordinary_basics:block/chiseled_soul_sandstone"), mcLoc("unordinary_basics:block/soul_sandstone_top"));
             nonRotatableColumn(Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE, mcLoc("unordinary_basics:block/soul_sandstone_top"), mcLoc("unordinary_basics:block/cut_soul_sandstone"), mcLoc("unordinary_basics:block/soul_sandstone_top"));
             defaultBlock(Unordinary_BasicsBlocks.SANDSTONE_BRICKS);
             defaultBlock(Unordinary_BasicsBlocks.RED_SANDSTONE_BRICKS);
@@ -63,6 +64,7 @@ public class Unordinary_BasicsBlockStateProvider extends BlockStateProvider {
             stairs(Unordinary_BasicsBlocks.POLISHED_TUFF_BRICK_STAIRS, Unordinary_BasicsBlocks.POLISHED_TUFF_BRICKS);
             stairs(Unordinary_BasicsBlocks.SOUL_SANDSTONE_STAIRS, Unordinary_BasicsBlocks.SOUL_SANDSTONE);
             stairs(Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE_STAIRS, Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE);
+            stairs(Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE_STAIRS, Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE);
             stairs(Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE_STAIRS, Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE);
             stairs(Unordinary_BasicsBlocks.SANDSTONE_BRICK_STAIRS, Unordinary_BasicsBlocks.SANDSTONE_BRICKS);
             stairs(Unordinary_BasicsBlocks.RED_SANDSTONE_BRICK_STAIRS, Unordinary_BasicsBlocks.RED_SANDSTONE_BRICKS);
@@ -241,6 +243,7 @@ public class Unordinary_BasicsBlockStateProvider extends BlockStateProvider {
             slab(Unordinary_BasicsBlocks.POLISHED_TUFF_BRICK_SLAB, Unordinary_BasicsBlocks.POLISHED_TUFF_BRICKS);
             slab(Unordinary_BasicsBlocks.SOUL_SANDSTONE_SLAB, Unordinary_BasicsBlocks.SOUL_SANDSTONE);
             slab(Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE_SLAB, Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE);
+            slab(Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE_SLAB, Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE);
             slab(Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE_SLAB, Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE);
             slab(Unordinary_BasicsBlocks.SANDSTONE_BRICK_SLAB, Unordinary_BasicsBlocks.SANDSTONE_BRICKS);
             slab(Unordinary_BasicsBlocks.RED_SANDSTONE_BRICK_SLAB, Unordinary_BasicsBlocks.RED_SANDSTONE_BRICKS);

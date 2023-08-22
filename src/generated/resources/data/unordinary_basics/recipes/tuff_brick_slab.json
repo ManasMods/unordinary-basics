@@ -2,16 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "item": "minecraft:andesite"
+      "item": "unordinary_basics:tuff_bricks"
     }
   },
   "pattern": [
-    "###",
-    "###",
     "###"
   ],
   "result": {
-    "count": 9,
-    "item": "unordinary_basics:andesite_bricks"
+    "count": 6,
+    "item": "unordinary_basics:tuff_brick_slab"
   }
 }

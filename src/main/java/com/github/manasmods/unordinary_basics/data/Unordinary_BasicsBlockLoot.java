@@ -55,6 +55,9 @@ public class Unordinary_BasicsBlockLoot extends BlockLoot {
         this.dropSelf(Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE);
         this.dropSelf(Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE_STAIRS);
         this.dropSelf(Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE_SLAB);
+        this.dropSelf(Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE);
+        this.dropSelf(Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE_STAIRS);
+        this.dropSelf(Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE_SLAB);
         this.dropSelf(Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE);
         this.dropSelf(Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE_STAIRS);
         this.dropSelf(Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE_SLAB);

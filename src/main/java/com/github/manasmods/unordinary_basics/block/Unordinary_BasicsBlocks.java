@@ -103,6 +103,13 @@ public class Unordinary_BasicsBlocks {
     @ObjectHolder(registryName = "block", value = "unordinary_basics:smooth_soul_sandstone_slab")
     public static final Block SMOOTH_SOUL_SANDSTONE_SLAB = null;
 
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:chiseled_soul_sandstone")
+    public static final Block CHISELED_SOUL_SANDSTONE = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:chiseled_soul_sandstone_stairs")
+    public static final Block CHISELED_SOUL_SANDSTONE_STAIRS = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:chiseled_soul_sandstone_slab")
+    public static final Block CHISELED_SOUL_SANDSTONE_SLAB = null;
+
     @ObjectHolder(registryName = "block", value = "unordinary_basics:cut_soul_sandstone")
     public static final Block CUT_SOUL_SANDSTONE = null;
     @ObjectHolder(registryName = "block", value = "unordinary_basics:cut_soul_sandstone_stairs")

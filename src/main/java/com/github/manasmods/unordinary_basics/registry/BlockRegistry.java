@@ -133,6 +133,10 @@ public class BlockRegistry {
         registry.register("smooth_soul_sandstone_stairs", () -> new StairBlock(smooth_soul_sandstone.get()::defaultBlockState, (BlockBehaviour.Properties.copy(smooth_soul_sandstone.get()).requiresCorrectToolForDrops())));
         registry.register("smooth_soul_sandstone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(smooth_soul_sandstone.get()).requiresCorrectToolForDrops()));
 
+        RegistryObject<Block> chiseled_soul_sandstone = registry.register("chiseled_soul_sandstone", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+        registry.register("chiseled_soul_sandstone_stairs", () -> new StairBlock(chiseled_soul_sandstone.get()::defaultBlockState, (BlockBehaviour.Properties.copy(chiseled_soul_sandstone.get()).requiresCorrectToolForDrops())));
+        registry.register("chiseled_soul_sandstone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(chiseled_soul_sandstone.get()).requiresCorrectToolForDrops()));
+
         RegistryObject<Block> cut_soul_sandstone = registry.register("cut_soul_sandstone", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
         registry.register("cut_soul_sandstone_stairs", () -> new StairBlock(cut_soul_sandstone.get()::defaultBlockState, (BlockBehaviour.Properties.copy(cut_soul_sandstone.get()).requiresCorrectToolForDrops())));
         registry.register("cut_soul_sandstone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(cut_soul_sandstone.get()).requiresCorrectToolForDrops()));

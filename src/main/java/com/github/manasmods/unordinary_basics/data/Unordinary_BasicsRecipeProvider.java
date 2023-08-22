@@ -359,7 +359,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                         .of(Unordinary_BasicsItems.MILK_BOTTLE).build()))
                 .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.CAKE).getPath()));
 
-        // Polished Blocks
+        // Brick Blocks
 
         ShapedRecipeBuilder.shaped(Blocks.BRICKS, 2)
                 .define('#', Items.BRICK)
@@ -371,7 +371,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .save(consumer,new ResourceLocation(Unordinary_Basics.MOD_ID,ForgeRegistries.ITEMS.getKey(Items.BRICK).getPath()));
 
         ShapedRecipeBuilder.shaped(Blocks.STONE_BRICKS, 9)
-                .define('#', Blocks.ANDESITE)
+                .define('#', Blocks.STONE)
                 .pattern("###")
                 .pattern("###")
                 .pattern("###")
@@ -542,14 +542,94 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                         .of(Items.AMETHYST_SHARD).build()))
                 .save(consumer);
 
-        ShapedRecipeBuilder.shaped(Unordinary_BasicsBlocks.ANDESITE_BRICKS, 9)
-                .define('#', Blocks.ANDESITE)
-                .pattern("###")
-                .pattern("###")
-                .pattern("###")
-                .unlockedBy("has_andesite", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Blocks.ANDESITE).build()))
+        nineStorage(consumer, Items.ANDESITE, Unordinary_BasicsBlocks.ANDESITE_BRICKS);
+        stairs(consumer, Unordinary_BasicsBlocks.ANDESITE_BRICK_STAIRS, Unordinary_BasicsBlocks.ANDESITE_BRICKS);
+        slab(consumer, Unordinary_BasicsBlocks.ANDESITE_BRICK_SLAB, Unordinary_BasicsBlocks.ANDESITE_BRICKS);
+
+        nineStorage(consumer, Items.POLISHED_ANDESITE, Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICKS);
+        stairs(consumer, Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICK_STAIRS, Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICKS);
+        slab(consumer, Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICK_SLAB, Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICKS);
+
+        nineStorage(consumer, Items.CALCITE, Unordinary_BasicsBlocks.CALCITE_BRICKS);
+        stairs(consumer, Unordinary_BasicsBlocks.CALCITE_BRICK_STAIRS, Unordinary_BasicsBlocks.CALCITE_BRICKS);
+        slab(consumer, Unordinary_BasicsBlocks.CALCITE_BRICK_SLAB, Unordinary_BasicsBlocks.CALCITE_BRICKS);
+
+        nineStorage(consumer, Items.DIORITE, Unordinary_BasicsBlocks.DIORITE_BRICKS);
+        stairs(consumer, Unordinary_BasicsBlocks.DIORITE_BRICK_STAIRS, Unordinary_BasicsBlocks.DIORITE_BRICKS);
+        slab(consumer, Unordinary_BasicsBlocks.DIORITE_BRICK_SLAB, Unordinary_BasicsBlocks.DIORITE_BRICKS);
+
+        nineStorage(consumer, Items.POLISHED_DIORITE, Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICKS);
+        stairs(consumer, Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICK_STAIRS, Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICKS);
+        slab(consumer, Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICK_SLAB, Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICKS);
+
+        nineStorage(consumer, Items.DRIPSTONE_BLOCK, Unordinary_BasicsBlocks.DRIPSTONE_BRICKS);
+        stairs(consumer, Unordinary_BasicsBlocks.DRIPSTONE_BRICK_STAIRS, Unordinary_BasicsBlocks.DRIPSTONE_BRICKS);
+        slab(consumer, Unordinary_BasicsBlocks.DRIPSTONE_BRICK_SLAB, Unordinary_BasicsBlocks.DRIPSTONE_BRICKS);
+
+        nineStorage(consumer, Items.GRANITE, Unordinary_BasicsBlocks.GRANITE_BRICKS);
+        stairs(consumer, Unordinary_BasicsBlocks.GRANITE_BRICK_STAIRS, Unordinary_BasicsBlocks.GRANITE_BRICKS);
+        slab(consumer, Unordinary_BasicsBlocks.GRANITE_BRICK_SLAB, Unordinary_BasicsBlocks.GRANITE_BRICKS);
+
+        nineStorage(consumer, Items.POLISHED_GRANITE, Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICKS);
+        stairs(consumer, Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICK_STAIRS, Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICKS);
+        slab(consumer, Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICK_SLAB, Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICKS);
+
+        nineStorage(consumer, Items.TUFF, Unordinary_BasicsBlocks.TUFF_BRICKS);
+        stairs(consumer, Unordinary_BasicsBlocks.TUFF_BRICK_STAIRS, Unordinary_BasicsBlocks.TUFF_BRICKS);
+        slab(consumer, Unordinary_BasicsBlocks.TUFF_BRICK_SLAB, Unordinary_BasicsBlocks.TUFF_BRICKS);
+
+        ShapedRecipeBuilder.shaped(Unordinary_BasicsBlocks.POLISHED_TUFF)
+                .define('#', Items.TUFF)
+                .pattern("##")
+                .pattern("##")
+                .unlockedBy("has_tuff", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Items.TUFF).build()))
                 .save(consumer);
+        nineStorage(consumer, Unordinary_BasicsBlocks.POLISHED_TUFF, Unordinary_BasicsBlocks.POLISHED_TUFF_BRICKS);
+        stairs(consumer, Unordinary_BasicsBlocks.POLISHED_TUFF_BRICK_STAIRS, Unordinary_BasicsBlocks.POLISHED_TUFF);
+        slab(consumer, Unordinary_BasicsBlocks.POLISHED_TUFF_BRICK_SLAB, Unordinary_BasicsBlocks.POLISHED_TUFF);
+
+        nineStorage(consumer, Items.SOUL_SAND, Unordinary_BasicsBlocks.SOUL_SANDSTONE);
+        stairs(consumer, Unordinary_BasicsBlocks.SOUL_SANDSTONE_STAIRS, Unordinary_BasicsBlocks.SOUL_SANDSTONE);
+        slab(consumer, Unordinary_BasicsBlocks.SOUL_SANDSTONE_SLAB, Unordinary_BasicsBlocks.SOUL_SANDSTONE);
+
+        smeltingRecipe(consumer, Ingredient.of(Unordinary_BasicsBlocks.SOUL_SANDSTONE), Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE, 0.1F, 200);
+        stairs(consumer, Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE_STAIRS, Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE);
+        slab(consumer, Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE_SLAB, Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE);
+
+        ShapedRecipeBuilder.shaped(Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE)
+                .define('#', Unordinary_BasicsBlocks.SOUL_SANDSTONE)
+                .pattern("##")
+                .pattern("##")
+                .unlockedBy("has_soul_sandstone", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Unordinary_BasicsBlocks.SOUL_SANDSTONE).build()))
+                .save(consumer);
+        stairs(consumer, Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE_STAIRS, Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE);
+        slab(consumer, Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE_SLAB, Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE);
+
+        ShapedRecipeBuilder.shaped(Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE)
+                .define('#', Unordinary_BasicsBlocks.SOUL_SANDSTONE_SLAB)
+                .pattern("#")
+                .pattern("#")
+                .unlockedBy("has_soul_sandstone", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(Unordinary_BasicsBlocks.SOUL_SANDSTONE).build()))
+                .save(consumer);        
+        stairs(consumer, Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE_STAIRS, Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE);
+        slab(consumer, Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE_SLAB, Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE);
+
+        nineStorage(consumer, Items.SANDSTONE, Unordinary_BasicsBlocks.SANDSTONE_BRICKS);
+        stairs(consumer, Unordinary_BasicsBlocks.SANDSTONE_BRICK_STAIRS, Unordinary_BasicsBlocks.SANDSTONE_BRICKS);
+        slab(consumer, Unordinary_BasicsBlocks.SANDSTONE_BRICK_SLAB, Unordinary_BasicsBlocks.SANDSTONE_BRICKS);
+
+        nineStorage(consumer, Items.RED_SANDSTONE, Unordinary_BasicsBlocks.RED_SANDSTONE_BRICKS);
+        stairs(consumer, Unordinary_BasicsBlocks.RED_SANDSTONE_BRICK_STAIRS, Unordinary_BasicsBlocks.RED_SANDSTONE_BRICKS);
+        slab(consumer, Unordinary_BasicsBlocks.RED_SANDSTONE_BRICK_SLAB, Unordinary_BasicsBlocks.RED_SANDSTONE_BRICKS);
+
+        nineStorage(consumer, Unordinary_BasicsBlocks.SOUL_SANDSTONE, Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICKS);
+        stairs(consumer, Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICK_STAIRS, Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICKS);
+        slab(consumer, Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICK_SLAB, Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICKS);
+
+        //TODO: Stonecutter Recipes
     }
 
     private void vanillaQOLSmelting(Consumer<FinishedRecipe> consumer) {
