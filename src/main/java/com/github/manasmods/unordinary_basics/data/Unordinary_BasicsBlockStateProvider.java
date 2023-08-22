@@ -3,8 +3,15 @@ package com.github.manasmods.unordinary_basics.data;
 import com.github.manasmods.manascore.api.data.gen.BlockStateProvider;
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
+import net.minecraftforge.client.model.generators.ItemModelBuilder;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.data.event.GatherDataEvent;
+
+import java.util.Objects;
 
 
 public class Unordinary_BasicsBlockStateProvider extends BlockStateProvider {
@@ -33,9 +40,9 @@ public class Unordinary_BasicsBlockStateProvider extends BlockStateProvider {
             defaultBlock(Unordinary_BasicsBlocks.TUFF_BRICKS);
             defaultBlock(Unordinary_BasicsBlocks.POLISHED_TUFF);
             defaultBlock(Unordinary_BasicsBlocks.POLISHED_TUFF_BRICKS);
-            //defaultBlock(Unordinary_BasicsBlocks.SOUL_SANDSTONE);
-            //defaultBlock(Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE);
-            //defaultBlock(Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE);
+            nonRotatableColumn(Unordinary_BasicsBlocks.SOUL_SANDSTONE, mcLoc("unordinary_basics:block/soul_sandstone_top"), mcLoc("unordinary_basics:block/soul_sandstone"), mcLoc("unordinary_basics:block/soul_sandstone_bottom"));
+            nonRotatableColumn(Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE, mcLoc("unordinary_basics:block/soul_sandstone_top"), mcLoc("unordinary_basics:block/soul_sandstone_top"), mcLoc("unordinary_basics:block/soul_sandstone_top"));
+            nonRotatableColumn(Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE, mcLoc("unordinary_basics:block/soul_sandstone_top"), mcLoc("unordinary_basics:block/cut_soul_sandstone"), mcLoc("unordinary_basics:block/soul_sandstone_top"));
             defaultBlock(Unordinary_BasicsBlocks.SANDSTONE_BRICKS);
             defaultBlock(Unordinary_BasicsBlocks.RED_SANDSTONE_BRICKS);
             defaultBlock(Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICKS);
@@ -381,5 +388,15 @@ public class Unordinary_BasicsBlockStateProvider extends BlockStateProvider {
         nonRotatablePillar(Unordinary_BasicsBlocks.QUARTZ_PILLAR, mcLoc("block/quartz_pillar_top"), mcLoc("block/quartz_pillar"));
         nonRotatablePillar(Unordinary_BasicsBlocks.HAY_BLOCK, mcLoc("block/hay_block_top"), mcLoc("block/hay_block_side"));
     }
+
+    protected void nonRotatableColumn(Block block, ResourceLocation textureTop, ResourceLocation textureSides, ResourceLocation textureBottom) {
+        this.getVariantBuilder(block).forAllStates((blockState) -> {
+            return ConfiguredModel.builder().modelFile(this.models().cubeBottomTop(this.name(block), textureSides, textureBottom, textureTop)).build();
+        });
+        ItemModelBuilder var10000 = (ItemModelBuilder)this.itemModels().getBuilder(((ResourceLocation) Objects.requireNonNull(this.rl(block))).getPath());
+        String var10004 = this.name(block);
+        var10000.parent(new ModelFile.UncheckedModelFile(this.modLoc("block/" + var10004)));
+    }
+
 }
 

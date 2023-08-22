@@ -295,9 +295,9 @@ public class Unordinary_BasicsBlockTagProvider extends BlockTagProvider {
             .add(Unordinary_BasicsBlocks.TUFF_BRICKS)
             .add(Unordinary_BasicsBlocks.POLISHED_TUFF)
             .add(Unordinary_BasicsBlocks.POLISHED_TUFF_BRICKS)
-            //.add(Unordinary_BasicsBlocks.SOUL_SANDSTONE)
-            //.add(Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE)
-            //.add(Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE)
+            .add(Unordinary_BasicsBlocks.SOUL_SANDSTONE)
+            .add(Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE)
+            .add(Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE)
             .add(Unordinary_BasicsBlocks.SANDSTONE_BRICKS)
             .add(Unordinary_BasicsBlocks.RED_SANDSTONE_BRICKS)
             .add(Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICKS);

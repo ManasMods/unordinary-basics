@@ -34,12 +34,12 @@ public class Unordinary_BasicsBlocks {
     public static final Block POLISHED_TUFF = null;
     @ObjectHolder(registryName = "block", value = "unordinary_basics:polished_tuff_bricks")
     public static final Block POLISHED_TUFF_BRICKS = null;
-    //@ObjectHolder(registryName = "block", value = "unordinary_basics:soul_sandstone")
-    //public static final Block SOUL_SANDSTONE = null;
-    //@ObjectHolder(registryName = "block", value = "unordinary_basics:smooth_soul_sandstone")
-    //public static final Block SMOOTH_SOUL_SANDSTONE = null;
-    //@ObjectHolder(registryName = "block", value = "unordinary_basics:cut_soul_sandstone")
-    //public static final Block CUT_SOUL_SANDSTONE = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:soul_sandstone")
+    public static final Block SOUL_SANDSTONE = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:smooth_soul_sandstone")
+    public static final Block SMOOTH_SOUL_SANDSTONE = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:cut_soul_sandstone")
+    public static final Block CUT_SOUL_SANDSTONE = null;
     @ObjectHolder(registryName = "block", value = "unordinary_basics:sandstone_bricks")
     public static final Block SANDSTONE_BRICKS = null;
     @ObjectHolder(registryName = "block", value = "unordinary_basics:red_sandstone_bricks")

@@ -1,10 +1,10 @@
-// 1.19.2	2023-08-21T21:53:53.4446503	Tags for minecraft:block
+// 1.19.2	2023-08-22T14:19:00.7800702	Tags for minecraft:block
 99a33f6ad9ed31c940e2715e44f7c0510bcce3e8 data/forge/tags/blocks/grass_block.json
 2cb1f8a97277e1624430faacd7204a7ca3dcd91a data/forge/tags/blocks/mycelium.json
 99f922c326225036c9587af15791c65c86b8609e data/forge/tags/blocks/needs_wood_tool.json
 027510f58c5205cb164ef48e9a37cc9ccf806eb7 data/forge/tags/blocks/podzol.json
 9a76dd2e6b81be3681fba050659449ffad17ef17 data/minecraft/tags/blocks/mineable/axe.json
-c707fdb6cfa47c3baa17ee016a9c50ebb49b7a9e data/minecraft/tags/blocks/mineable/pickaxe.json
+53f88246cd89c2f962b2732ed4da7e603b81bc63 data/minecraft/tags/blocks/mineable/pickaxe.json
 1c9b128a44ae3b064c616e6c5bb212febef3cd72 data/minecraft/tags/blocks/mineable/shovel.json
 bb026fe84dd7d1b4eaea0a2d167878b0704c094f data/minecraft/tags/blocks/needs_diamond_tool.json
 d7d1f6d9e56de24449b51dd7577469b26d4c602e data/minecraft/tags/blocks/needs_stone_tool.json
