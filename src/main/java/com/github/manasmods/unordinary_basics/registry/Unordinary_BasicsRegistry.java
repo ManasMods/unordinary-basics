@@ -1,7 +1,6 @@
 package com.github.manasmods.unordinary_basics.registry;
 
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
-import com.github.manasmods.unordinary_basics.loot.ModLootModifiers;
 import net.minecraft.core.Registry;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.EntityType;
@@ -40,8 +39,8 @@ public class Unordinary_BasicsRegistry {
      * @param modEventBus needs to be the modEventbus!
      */
     public static void register(IEventBus modEventBus) {
-        BlockRegistry.register(ITEMS, BLOCKS); //Register Blocks with their BlockItems
         ItemRegistry.register(ITEMS); //Register Items to our Registry
+        BlockRegistry.register(ITEMS, BLOCKS); //Register Blocks with their BlockItems
         MenuRegistry.register(MENUS);
         BlockEntityRegistry.register(BLOCK_ENTITIES);
         RecipeSerializerRegistry.register(RECIPE_SERIALIZERS);
