@@ -27,6 +27,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.WallBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -84,74 +85,92 @@ public class BlockRegistry {
         RegistryObject<Block> andesite_bricks = registry.register("andesite_bricks", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
         registry.register("andesite_brick_stairs", () -> new StairBlock(andesite_bricks.get()::defaultBlockState, (BlockBehaviour.Properties.copy(andesite_bricks.get()).requiresCorrectToolForDrops())));
         registry.register("andesite_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(andesite_bricks.get()).requiresCorrectToolForDrops()));
+        registry.register("andesite_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(andesite_bricks.get()).requiresCorrectToolForDrops()));
 
         RegistryObject<Block> polished_andesite_bricks = registry.register("polished_andesite_bricks", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
         registry.register("polished_andesite_brick_stairs", () -> new StairBlock(polished_andesite_bricks.get()::defaultBlockState, (BlockBehaviour.Properties.copy(polished_andesite_bricks.get()).requiresCorrectToolForDrops())));
         registry.register("polished_andesite_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(polished_andesite_bricks.get()).requiresCorrectToolForDrops()));
+        registry.register("polished_andesite_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(polished_andesite_bricks.get()).requiresCorrectToolForDrops()));
 
         RegistryObject<Block> calcite_bricks = registry.register("calcite_bricks", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(0.75F).sound(SoundType.CALCITE).requiresCorrectToolForDrops()));
         registry.register("calcite_brick_stairs", () -> new StairBlock(calcite_bricks.get()::defaultBlockState, (BlockBehaviour.Properties.copy(calcite_bricks.get()).requiresCorrectToolForDrops())));
         registry.register("calcite_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(calcite_bricks.get()).requiresCorrectToolForDrops()));
+        registry.register("calcite_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(calcite_bricks.get()).requiresCorrectToolForDrops()));
 
         RegistryObject<Block> diorite_bricks = registry.register("diorite_bricks", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
         registry.register("diorite_brick_stairs", () -> new StairBlock(diorite_bricks.get()::defaultBlockState, (BlockBehaviour.Properties.copy(diorite_bricks.get()).requiresCorrectToolForDrops())));
         registry.register("diorite_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(diorite_bricks.get()).requiresCorrectToolForDrops()));
+        registry.register("diorite_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(diorite_bricks.get()).requiresCorrectToolForDrops()));
 
         RegistryObject<Block> polished_diorite_bricks = registry.register("polished_diorite_bricks", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
         registry.register("polished_diorite_brick_stairs", () -> new StairBlock(polished_diorite_bricks.get()::defaultBlockState, (BlockBehaviour.Properties.copy(polished_diorite_bricks.get()).requiresCorrectToolForDrops())));
         registry.register("polished_diorite_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(polished_diorite_bricks.get()).requiresCorrectToolForDrops()));
+        registry.register("polished_diorite_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(polished_diorite_bricks.get()).requiresCorrectToolForDrops()));
 
         RegistryObject<Block> dripstone_bricks = registry.register("dripstone_bricks", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 1.0F).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops()));
         registry.register("dripstone_brick_stairs", () -> new StairBlock(dripstone_bricks.get()::defaultBlockState, (BlockBehaviour.Properties.copy(dripstone_bricks.get()).requiresCorrectToolForDrops())));
         registry.register("dripstone_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(dripstone_bricks.get()).requiresCorrectToolForDrops()));
+        registry.register("dripstone_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(dripstone_bricks.get()).requiresCorrectToolForDrops()));
 
         RegistryObject<Block> granite_bricks = registry.register("granite_bricks", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
         registry.register("granite_brick_stairs", () -> new StairBlock(granite_bricks.get()::defaultBlockState, (BlockBehaviour.Properties.copy(granite_bricks.get()).requiresCorrectToolForDrops())));
         registry.register("granite_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(granite_bricks.get()).requiresCorrectToolForDrops()));
+        registry.register("granite_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(granite_bricks.get()).requiresCorrectToolForDrops()));
 
         RegistryObject<Block> polished_granite_bricks = registry.register("polished_granite_bricks", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
         registry.register("polished_granite_brick_stairs", () -> new StairBlock(polished_granite_bricks.get()::defaultBlockState, (BlockBehaviour.Properties.copy(polished_granite_bricks.get()).requiresCorrectToolForDrops())));
         registry.register("polished_granite_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(polished_granite_bricks.get()).requiresCorrectToolForDrops()));
+        registry.register("polished_granite_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(polished_granite_bricks.get()).requiresCorrectToolForDrops()));
 
         RegistryObject<Block> tuff_bricks = registry.register("tuff_bricks", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
         registry.register("tuff_brick_stairs", () -> new StairBlock(tuff_bricks.get()::defaultBlockState, (BlockBehaviour.Properties.copy(tuff_bricks.get()).requiresCorrectToolForDrops())));
         registry.register("tuff_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(tuff_bricks.get()).requiresCorrectToolForDrops()));
+        registry.register("tuff_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(tuff_bricks.get()).requiresCorrectToolForDrops()));
 
         RegistryObject<Block> polished_tuff = registry.register("polished_tuff", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
         registry.register("polished_tuff_stairs", () -> new StairBlock(polished_tuff.get()::defaultBlockState, (BlockBehaviour.Properties.copy(polished_tuff.get()).requiresCorrectToolForDrops())));
         registry.register("polished_tuff_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(polished_tuff.get()).requiresCorrectToolForDrops()));
+        registry.register("polished_tuff_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(polished_tuff.get()).requiresCorrectToolForDrops()));
 
         RegistryObject<Block> polished_tuff_bricks = registry.register("polished_tuff_bricks", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
         registry.register("polished_tuff_brick_stairs", () -> new StairBlock(polished_tuff_bricks.get()::defaultBlockState, (BlockBehaviour.Properties.copy(polished_tuff_bricks.get()).requiresCorrectToolForDrops())));
         registry.register("polished_tuff_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(polished_tuff_bricks.get()).requiresCorrectToolForDrops()));
+        registry.register("polished_tuff_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(polished_tuff_bricks.get()).requiresCorrectToolForDrops()));
 
         RegistryObject<Block> soul_sandstone = registry.register("soul_sandstone", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(0.8F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
         registry.register("soul_sandstone_stairs", () -> new StairBlock(soul_sandstone.get()::defaultBlockState, (BlockBehaviour.Properties.copy(soul_sandstone.get()).requiresCorrectToolForDrops())));
         registry.register("soul_sandstone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(soul_sandstone.get()).requiresCorrectToolForDrops()));
+        registry.register("soul_sandstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(soul_sandstone.get()).requiresCorrectToolForDrops()));
 
         RegistryObject<Block> smooth_soul_sandstone = registry.register("smooth_soul_sandstone", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(0.8F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
         registry.register("smooth_soul_sandstone_stairs", () -> new StairBlock(smooth_soul_sandstone.get()::defaultBlockState, (BlockBehaviour.Properties.copy(smooth_soul_sandstone.get()).requiresCorrectToolForDrops())));
         registry.register("smooth_soul_sandstone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(smooth_soul_sandstone.get()).requiresCorrectToolForDrops()));
+        registry.register("smooth_soul_sandstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(smooth_soul_sandstone.get()).requiresCorrectToolForDrops()));
 
         RegistryObject<Block> chiseled_soul_sandstone = registry.register("chiseled_soul_sandstone", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
         registry.register("chiseled_soul_sandstone_stairs", () -> new StairBlock(chiseled_soul_sandstone.get()::defaultBlockState, (BlockBehaviour.Properties.copy(chiseled_soul_sandstone.get()).requiresCorrectToolForDrops())));
         registry.register("chiseled_soul_sandstone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(chiseled_soul_sandstone.get()).requiresCorrectToolForDrops()));
+        registry.register("chiseled_soul_sandstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(chiseled_soul_sandstone.get()).requiresCorrectToolForDrops()));
 
         RegistryObject<Block> cut_soul_sandstone = registry.register("cut_soul_sandstone", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(1.5F, 6.0F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
         registry.register("cut_soul_sandstone_stairs", () -> new StairBlock(cut_soul_sandstone.get()::defaultBlockState, (BlockBehaviour.Properties.copy(cut_soul_sandstone.get()).requiresCorrectToolForDrops())));
         registry.register("cut_soul_sandstone_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(cut_soul_sandstone.get()).requiresCorrectToolForDrops()));
+        registry.register("cut_soul_sandstone_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(cut_soul_sandstone.get()).requiresCorrectToolForDrops()));
 
         RegistryObject<Block> sandstone_bricks = registry.register("sandstone_bricks", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(0.8F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
         registry.register("sandstone_brick_stairs", () -> new StairBlock(sandstone_bricks.get()::defaultBlockState, (BlockBehaviour.Properties.copy(sandstone_bricks.get()).requiresCorrectToolForDrops())));
         registry.register("sandstone_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(sandstone_bricks.get()).requiresCorrectToolForDrops()));
+        registry.register("sandstone_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(sandstone_bricks.get()).requiresCorrectToolForDrops()));
 
         RegistryObject<Block> red_sandstone_bricks = registry.register("red_sandstone_bricks", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(0.8F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
         registry.register("red_sandstone_brick_stairs", () -> new StairBlock(red_sandstone_bricks.get()::defaultBlockState, (BlockBehaviour.Properties.copy(red_sandstone_bricks.get()).requiresCorrectToolForDrops())));
         registry.register("red_sandstone_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(red_sandstone_bricks.get()).requiresCorrectToolForDrops()));
+        registry.register("red_sandstone_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(red_sandstone_bricks.get()).requiresCorrectToolForDrops()));
 
         RegistryObject<Block> soul_sandstone_bricks = registry.register("soul_sandstone_bricks", () -> new SimpleBlock(Material.STONE, properties -> properties.strength(0.8F).sound(SoundType.STONE).requiresCorrectToolForDrops()));
         registry.register("soul_sandstone_brick_stairs", () -> new StairBlock(soul_sandstone_bricks.get()::defaultBlockState, (BlockBehaviour.Properties.copy(soul_sandstone_bricks.get()).requiresCorrectToolForDrops())));
         registry.register("soul_sandstone_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(soul_sandstone_bricks.get()).requiresCorrectToolForDrops()));
+        registry.register("soul_sandstone_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(soul_sandstone_bricks.get()).requiresCorrectToolForDrops()));
 
         //BLOCKS FOR STAIRS + SLABS
 

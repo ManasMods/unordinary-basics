@@ -6,6 +6,7 @@ import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.WallBlock;
 import net.minecraftforge.client.model.generators.ConfiguredModel;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ModelFile;
@@ -25,6 +26,7 @@ public class Unordinary_BasicsBlockStateProvider extends BlockStateProvider {
         modBlocks();
         modStairs();
         modSlabs();
+        modWalls();
         modMisc();
     }
 
@@ -403,6 +405,32 @@ public class Unordinary_BasicsBlockStateProvider extends BlockStateProvider {
         slab(Unordinary_BasicsBlocks.GREEN_CONCRETE_POWDER_SLAB, Blocks.GREEN_CONCRETE_POWDER);
         slab(Unordinary_BasicsBlocks.RED_CONCRETE_POWDER_SLAB, Blocks.RED_CONCRETE_POWDER);
         slab(Unordinary_BasicsBlocks.BLACK_CONCRETE_POWDER_SLAB, Blocks.BLACK_CONCRETE_POWDER);
+        }
+
+
+        private void modWalls() {
+        System.out.println("ModWalls");
+
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.ANDESITE_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.ANDESITE_BRICKS));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICKS));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.CALCITE_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.CALCITE_BRICKS));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.DIORITE_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.DIORITE_BRICKS));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICKS));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.DRIPSTONE_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.DRIPSTONE_BRICKS));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.GRANITE_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.GRANITE_BRICKS));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICKS));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.TUFF_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.TUFF_BRICKS));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.POLISHED_TUFF_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.POLISHED_TUFF_BRICKS));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.SOUL_SANDSTONE_WALL, blockTexture(Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICKS));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE_WALL, blockTexture(Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE_WALL, blockTexture(Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE_WALL, blockTexture(Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.SANDSTONE_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.SANDSTONE_BRICKS));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.RED_SANDSTONE_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.RED_SANDSTONE_BRICKS));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICKS));
+
+        //TODO: Walls for vanilla blocks
+
         }
 
         private void modMisc() {

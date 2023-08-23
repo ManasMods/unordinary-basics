@@ -71,6 +71,25 @@ public class Unordinary_BasicsBlockLoot extends BlockLoot {
         this.dropSelf(Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICK_STAIRS);
         this.dropSelf(Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICK_SLAB);
 
+        this.dropSelf(Unordinary_BasicsBlocks.ANDESITE_BRICK_WALL);
+        this.dropSelf(Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICK_WALL);
+        this.dropSelf(Unordinary_BasicsBlocks.CALCITE_BRICK_WALL);
+        this.dropSelf(Unordinary_BasicsBlocks.DIORITE_BRICK_WALL);
+        this.dropSelf(Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICK_WALL);
+        this.dropSelf(Unordinary_BasicsBlocks.DRIPSTONE_BRICK_WALL);
+        this.dropSelf(Unordinary_BasicsBlocks.GRANITE_BRICK_WALL);
+        this.dropSelf(Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICK_WALL);
+        this.dropSelf(Unordinary_BasicsBlocks.TUFF_BRICK_WALL);
+        this.dropSelf(Unordinary_BasicsBlocks.POLISHED_TUFF_WALL);
+        this.dropSelf(Unordinary_BasicsBlocks.POLISHED_TUFF_BRICK_WALL);
+        this.dropSelf(Unordinary_BasicsBlocks.SOUL_SANDSTONE_WALL);
+        this.dropSelf(Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE_WALL);
+        this.dropSelf(Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE_WALL);
+        this.dropSelf(Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE_WALL);
+        this.dropSelf(Unordinary_BasicsBlocks.SANDSTONE_BRICK_WALL);
+        this.dropSelf(Unordinary_BasicsBlocks.RED_SANDSTONE_BRICK_WALL);
+        this.dropSelf(Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICK_WALL);
+
         this.dropSelf(Unordinary_BasicsBlocks.CALCITE_STAIRS);
         this.dropSelf(Unordinary_BasicsBlocks.CALCITE_SLAB);
         this.dropSelf(Unordinary_BasicsBlocks.TUFF_STAIRS);
