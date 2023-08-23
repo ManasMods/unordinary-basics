@@ -1,15 +1,16 @@
-// 1.19.2	2023-08-22T14:19:00.7800702	Tags for minecraft:block
+// 1.19.2	2023-08-23T21:27:40.4827724	Tags for minecraft:block
 99a33f6ad9ed31c940e2715e44f7c0510bcce3e8 data/forge/tags/blocks/grass_block.json
 2cb1f8a97277e1624430faacd7204a7ca3dcd91a data/forge/tags/blocks/mycelium.json
-99f922c326225036c9587af15791c65c86b8609e data/forge/tags/blocks/needs_wood_tool.json
+6b77a9a32a826975d65cbed737c3ebd6abc1b69f data/forge/tags/blocks/needs_wood_tool.json
 027510f58c5205cb164ef48e9a37cc9ccf806eb7 data/forge/tags/blocks/podzol.json
 9a76dd2e6b81be3681fba050659449ffad17ef17 data/minecraft/tags/blocks/mineable/axe.json
 53f88246cd89c2f962b2732ed4da7e603b81bc63 data/minecraft/tags/blocks/mineable/pickaxe.json
 1c9b128a44ae3b064c616e6c5bb212febef3cd72 data/minecraft/tags/blocks/mineable/shovel.json
 bb026fe84dd7d1b4eaea0a2d167878b0704c094f data/minecraft/tags/blocks/needs_diamond_tool.json
 d7d1f6d9e56de24449b51dd7577469b26d4c602e data/minecraft/tags/blocks/needs_stone_tool.json
-c12262fb2ddb73c69c49b36b965ef7d837d6b69a data/minecraft/tags/blocks/slabs.json
-ad66bfa86df71982c591f1a4000bf76265a1106d data/minecraft/tags/blocks/stairs.json
+0c5d72bbfc9629cec4bae397eac60c0faeae39c0 data/minecraft/tags/blocks/slabs.json
+cdad571019a7760898badcfa5a6835919a86957a data/minecraft/tags/blocks/stairs.json
+da79b63aa6198cfa883f692df1bc3252028988da data/minecraft/tags/blocks/walls.json
 a891075e145aee3f542889f9e20dfdc93ce691c7 data/minecraft/tags/blocks/wooden_slabs.json
 4e68fcbd401a09525dd27fc5e339da57e84749ca data/minecraft/tags/blocks/wooden_stairs.json
 93f7fca1c775597943ecd53274ed48d480573e64 data/unordinary_basics/tags/blocks/crop_tender_valid.json
