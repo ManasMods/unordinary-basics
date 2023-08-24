@@ -1,10 +1,12 @@
 package com.github.manasmods.unordinary_basics.utils;
 
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
@@ -52,6 +54,16 @@ public class UBTags {
 
         static TagKey<Item> forgeTag(String name) {
             return ItemTags.create(new ResourceLocation("forge", name));
+        }
+    }
+
+    public static class EntityTypes {
+        public static TagKey<EntityType<?>> SCULK_ENEMIES = forgeTag("entity_types/sculk_enemies");
+        static TagKey<EntityType<?>> forgeTag(String name) {
+            return create(new ResourceLocation("forge", name));
+        }
+        static TagKey<EntityType<?>> create(final ResourceLocation name) {
+            return TagKey.create(Registry.ENTITY_TYPE_REGISTRY, name);
         }
     }
 }

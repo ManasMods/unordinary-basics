@@ -30,6 +30,9 @@
   "item.unordinary_basics.chest_backpack": "Chest Backpack",
   "item.unordinary_basics.equine_tracker": "Equine Tracker",
 
+  "item.unordinary_basics.decayed_master_sword": "Decayed Master Sword",
+  "item.unordinary_basics.master_sword": "Master Sword",
+
   "item.unordinary_basics.unknown_blade_fragment": "Unknown Blade Fragment",
   "item.unordinary_basics.unknown_sword_handle_fragment": "Unknown Handle Fragment",
   "item.unordinary_basics.unknown_hilt_fragment": "Unknown Hilt Fragment",
@@ -144,6 +147,8 @@
   "tooltip.unordinary_basics.unknown_sword_handle_fragment": "Obtained by slaying the §5Ender Dragon",
   "tooltip.unordinary_basics.unknown_blade_fragment": "Obtained by slaying the §bWarden",
   "tooltip.unordinary_basics.unknown_hilt_fragment": "Obtained by slaying the §cWither",
+
+  "entity.unordinary_basics.master_sword_warden": "Master Sword Warden",
 
   "entity.unordinary_basics.grizzly_bear": "Grizzly Bear",
   "item.unordinary_basics.grizzly_bear_spawn_egg": "Grizzly Bear Spawn Egg",

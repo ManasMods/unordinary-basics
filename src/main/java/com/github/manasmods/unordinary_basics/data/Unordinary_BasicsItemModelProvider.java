@@ -42,6 +42,9 @@ public class Unordinary_BasicsItemModelProvider extends ItemModelProvider {
 
         singleTexture(Item.byBlock(Unordinary_BasicsBlocks.ITEM_SORTER));
 
+        handheldSingleTexture(Unordinary_BasicsItems.DECAYED_MASTER_SWORD);
+        handheldSingleTexture(Unordinary_BasicsItems.MASTER_SWORD);
+
         basicItem(new ResourceLocation(Unordinary_Basics.MOD_ID,"quiver_no_items"));
         basicItem(new ResourceLocation(Unordinary_Basics.MOD_ID,"quiver_has_items"));
 

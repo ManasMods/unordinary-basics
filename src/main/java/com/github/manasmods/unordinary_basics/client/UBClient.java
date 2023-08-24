@@ -7,8 +7,14 @@ import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
 import com.github.manasmods.unordinary_basics.block.entity.Unordinary_BasicsBlockEntities;
 import com.github.manasmods.unordinary_basics.client.block_entity_renderer.ItemSorterBlockEntityRenderer;
-import com.github.manasmods.unordinary_basics.client.gui.*;
+import com.github.manasmods.unordinary_basics.client.gui.BuildersGloveScreen;
+import com.github.manasmods.unordinary_basics.client.gui.FletchingTableScreen;
+import com.github.manasmods.unordinary_basics.client.gui.ItemSorterScreen;
+import com.github.manasmods.unordinary_basics.client.gui.JukeBoxScreen;
+import com.github.manasmods.unordinary_basics.client.gui.Unordinary_BasicsInventoryScreen;
+import com.github.manasmods.unordinary_basics.client.gui.Unordinary_BasicsItemInventoryScreen;
 import com.github.manasmods.unordinary_basics.client.keybind.UBKeybindings;
+import com.github.manasmods.unordinary_basics.entity.client.MasterSwordWardenRenderer;
 import com.github.manasmods.unordinary_basics.entity.client.NonExplosiveWitherSkullRenderer;
 import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisIntegrationClient;
 import com.github.manasmods.unordinary_basics.integration.patchouli.PageMultiSpotlight;
@@ -40,8 +46,6 @@ import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.entity.BannerPattern;
-import net.minecraft.world.level.block.entity.BannerPatterns;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -56,9 +60,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import vazkii.patchouli.client.book.ClientBookRegistry;
 
 import javax.annotation.Nullable;
-import java.lang.reflect.Field;
-import java.lang.reflect.Modifier;
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 @Mod.EventBusSubscriber(modid = Unordinary_Basics.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -131,6 +134,7 @@ public class UBClient {
 //        EntityRenderers.register(UBEntityTypes.GROLAR_BEAR.get(), GrolarBearRenderer::new);
 //        EntityRenderers.register(UBEntityTypes.GRIZZLY_BEAR.get(), GrizzlyBearRenderer::new);
         EntityRenderers.register(UBEntityTypes.NON_EXPLOSIVE_WITHER_SKULL.get(), NonExplosiveWitherSkullRenderer::new);
+        EntityRenderers.register(UBEntityTypes.MASTER_SWORD_WARDEN.get(), MasterSwordWardenRenderer::new);
     }
 
     private static void registerMenuScreens() {
