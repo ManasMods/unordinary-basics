@@ -58,9 +58,9 @@ public class ZenithItem extends SwordItem {
             }
         }
 
-        pPlayer.getCooldowns().addCooldown(this, 20);
+        pPlayer.getCooldowns().addCooldown(this, 60);
 
-        itemstack.getOrCreateTag().putInt("activated_timer",10);
+        itemstack.getOrCreateTag().putInt("activated_timer",30);
 
         return InteractionResultHolder.sidedSuccess(itemstack, pLevel.isClientSide());
     }
@@ -72,7 +72,7 @@ public class ZenithItem extends SwordItem {
         int timer = pStack.getOrCreateTag().getInt("activated_timer");
 
         if (timer > 0){
-            pStack.getOrCreateTag().putInt("activated_timer",timer - 1);
+            pStack.getOrCreateTag().putInt("activated_timer",timer - 2);
             System.out.println("timer ticked");
         }
     }

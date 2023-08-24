@@ -137,6 +137,23 @@
     "unordinary_basics:brown_concrete_powder_stairs",
     "unordinary_basics:green_concrete_powder_stairs",
     "unordinary_basics:red_concrete_powder_stairs",
-    "unordinary_basics:black_concrete_powder_stairs"
+    "unordinary_basics:black_concrete_powder_stairs",
+    "unordinary_basics:andesite_brick_stairs",
+    "unordinary_basics:polished_andesite_brick_stairs",
+    "unordinary_basics:calcite_brick_stairs",
+    "unordinary_basics:diorite_brick_stairs",
+    "unordinary_basics:polished_diorite_brick_stairs",
+    "unordinary_basics:dripstone_brick_stairs",
+    "unordinary_basics:granite_brick_stairs",
+    "unordinary_basics:polished_granite_brick_stairs",
+    "unordinary_basics:tuff_brick_stairs",
+    "unordinary_basics:polished_tuff_stairs",
+    "unordinary_basics:polished_tuff_brick_stairs",
+    "unordinary_basics:soul_sandstone_stairs",
+    "unordinary_basics:smooth_soul_sandstone_stairs",
+    "unordinary_basics:cut_soul_sandstone_stairs",
+    "unordinary_basics:sandstone_brick_stairs",
+    "unordinary_basics:red_sandstone_brick_stairs",
+    "unordinary_basics:soul_sandstone_brick_stairs"
   ]
 }

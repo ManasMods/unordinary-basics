@@ -21,4 +21,5 @@ public class MasterMinerEnchantment extends Enchantment {
     public boolean canEnchant(ItemStack stack) {
         return super.canEnchant(stack) && EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.VEIN_MINER, stack) == 0;
     }
+
 }

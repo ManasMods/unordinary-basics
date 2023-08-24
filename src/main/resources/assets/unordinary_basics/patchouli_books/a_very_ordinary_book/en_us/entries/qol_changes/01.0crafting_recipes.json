@@ -141,9 +141,26 @@
     },
     {
       "type": "patchouli:text",
-      "text": "All of the entries you see have either been tweaked or simply added. Most of the ones including stone have been given more stone options, while others have been missed by Mojang such as Blue Dye + Yellow Dye to make Green Dye.",
+      "text": "All of the entries you see have either been tweaked or simply added. Most of the ones including stone have been given more stone options, while others have been missed by Mojang such as Blue Dye + Yellow Dye to make Green Dye. The following 3 entries are to make the vanilla recipes match the UB ones!",
 
       "type2": "patchouli:empty"
+    },
+
+
+
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:brick",
+
+      "type2": "patchouli:crafting",
+      "recipe2": "unordinary_basics:stone"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:quartz_block",
+
+      "type2": "patchouli:empty"
+
     }
   ]
 }

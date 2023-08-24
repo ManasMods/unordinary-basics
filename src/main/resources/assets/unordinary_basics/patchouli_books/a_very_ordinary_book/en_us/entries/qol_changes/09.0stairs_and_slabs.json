@@ -1,0 +1,24 @@
+{
+  "name": "08.0 - Jukebox Changes",
+  "icon": "minecraft:jukebox",
+  "category": "unordinary_basics:qol_changes",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:oak_stairs",
+      "title": "Stair Recipe Change",
+      "text": "The stair recipe has been updated to include more per block. If you count each quarter of a block, you will end up with 8 stairs instead of the vanilla 4! Another change we have made is stairs and slabs into blocks!",
+
+      "type2": "patchouli:empty"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:stairs_to_block/oak_planks",
+      "title": " ",
+
+      "type2": "patchouli:crafting",
+      "recipe2": "unordinary_basics:slabs_to_block/oak_planks",
+      "title2": " "
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "unordinary_basics:block/calcite_brick_slab"
+    },
+    "type=double": {
+      "model": "unordinary_basics:block/calcite_bricks"
+    },
+    "type=top": {
+      "model": "unordinary_basics:block/calcite_brick_slab_top"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "unordinary_basics:block/soul_sandstone",
+    "side": "unordinary_basics:block/soul_sandstone",
+    "top": "unordinary_basics:block/soul_sandstone"
+  }
+}

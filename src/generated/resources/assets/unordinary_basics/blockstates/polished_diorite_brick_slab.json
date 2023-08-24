@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "unordinary_basics:block/polished_diorite_brick_slab"
+    },
+    "type=double": {
+      "model": "unordinary_basics:block/polished_diorite_bricks"
+    },
+    "type=top": {
+      "model": "unordinary_basics:block/polished_diorite_brick_slab_top"
+    }
+  }
+}

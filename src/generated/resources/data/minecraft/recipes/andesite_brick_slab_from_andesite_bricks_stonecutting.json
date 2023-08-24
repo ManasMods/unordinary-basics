@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "unordinary_basics:andesite_bricks"
+  },
+  "result": "unordinary_basics:andesite_brick_slab"
+}

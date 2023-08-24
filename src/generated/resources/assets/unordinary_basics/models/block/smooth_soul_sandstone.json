@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "unordinary_basics:block/soul_sandstone_top",
+    "side": "unordinary_basics:block/soul_sandstone_top",
+    "top": "unordinary_basics:block/soul_sandstone_top"
+  }
+}

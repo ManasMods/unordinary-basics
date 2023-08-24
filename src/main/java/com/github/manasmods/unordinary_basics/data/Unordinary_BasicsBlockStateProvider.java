@@ -3,8 +3,16 @@ package com.github.manasmods.unordinary_basics.data;
 import com.github.manasmods.manascore.api.data.gen.BlockStateProvider;
 import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.WallBlock;
+import net.minecraftforge.client.model.generators.ConfiguredModel;
+import net.minecraftforge.client.model.generators.ItemModelBuilder;
+import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.data.event.GatherDataEvent;
+
+import java.util.Objects;
 
 
 public class Unordinary_BasicsBlockStateProvider extends BlockStateProvider {
@@ -15,12 +23,54 @@ public class Unordinary_BasicsBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void generate() {
+        modBlocks();
         modStairs();
         modSlabs();
+        modWalls();
         modMisc();
     }
 
+        private void modBlocks() {
+            defaultBlock(Unordinary_BasicsBlocks.ANDESITE_BRICKS);
+            defaultBlock(Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICKS);
+            defaultBlock(Unordinary_BasicsBlocks.CALCITE_BRICKS);
+            defaultBlock(Unordinary_BasicsBlocks.DIORITE_BRICKS);
+            defaultBlock(Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICKS);
+            defaultBlock(Unordinary_BasicsBlocks.DRIPSTONE_BRICKS);
+            defaultBlock(Unordinary_BasicsBlocks.GRANITE_BRICKS);
+            defaultBlock(Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICKS);
+            defaultBlock(Unordinary_BasicsBlocks.TUFF_BRICKS);
+            defaultBlock(Unordinary_BasicsBlocks.POLISHED_TUFF);
+            defaultBlock(Unordinary_BasicsBlocks.POLISHED_TUFF_BRICKS);
+            nonRotatableColumn(Unordinary_BasicsBlocks.SOUL_SANDSTONE, mcLoc("unordinary_basics:block/soul_sandstone_top"), mcLoc("unordinary_basics:block/soul_sandstone"), mcLoc("unordinary_basics:block/soul_sandstone_bottom"));
+            nonRotatableColumn(Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE, mcLoc("unordinary_basics:block/soul_sandstone_top"), mcLoc("unordinary_basics:block/soul_sandstone_top"), mcLoc("unordinary_basics:block/soul_sandstone_top"));
+            nonRotatableColumn(Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE, mcLoc("unordinary_basics:block/soul_sandstone_top"), mcLoc("unordinary_basics:block/chiseled_soul_sandstone"), mcLoc("unordinary_basics:block/soul_sandstone_top"));
+            nonRotatableColumn(Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE, mcLoc("unordinary_basics:block/soul_sandstone_top"), mcLoc("unordinary_basics:block/cut_soul_sandstone"), mcLoc("unordinary_basics:block/soul_sandstone_top"));
+            defaultBlock(Unordinary_BasicsBlocks.SANDSTONE_BRICKS);
+            defaultBlock(Unordinary_BasicsBlocks.RED_SANDSTONE_BRICKS);
+            defaultBlock(Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICKS);
+
+
+        }
         private void modStairs() {
+            stairs(Unordinary_BasicsBlocks.ANDESITE_BRICK_STAIRS, Unordinary_BasicsBlocks.ANDESITE_BRICKS);
+            stairs(Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICK_STAIRS, Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICKS);
+            stairs(Unordinary_BasicsBlocks.CALCITE_BRICK_STAIRS, Unordinary_BasicsBlocks.CALCITE_BRICKS);
+            stairs(Unordinary_BasicsBlocks.DIORITE_BRICK_STAIRS, Unordinary_BasicsBlocks.DIORITE_BRICKS);
+            stairs(Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICK_STAIRS, Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICKS);
+            stairs(Unordinary_BasicsBlocks.DRIPSTONE_BRICK_STAIRS, Unordinary_BasicsBlocks.DRIPSTONE_BRICKS);
+            stairs(Unordinary_BasicsBlocks.GRANITE_BRICK_STAIRS, Unordinary_BasicsBlocks.GRANITE_BRICKS);
+            stairs(Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICK_STAIRS, Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICKS);
+            stairs(Unordinary_BasicsBlocks.TUFF_BRICK_STAIRS, Unordinary_BasicsBlocks.TUFF_BRICKS);
+            stairs(Unordinary_BasicsBlocks.POLISHED_TUFF_STAIRS, Unordinary_BasicsBlocks.POLISHED_TUFF);
+            stairs(Unordinary_BasicsBlocks.POLISHED_TUFF_BRICK_STAIRS, Unordinary_BasicsBlocks.POLISHED_TUFF_BRICKS);
+            stairs(Unordinary_BasicsBlocks.SOUL_SANDSTONE_STAIRS, Unordinary_BasicsBlocks.SOUL_SANDSTONE);
+            stairs(Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE_STAIRS, Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE);
+            stairs(Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE_STAIRS, Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE);
+            stairs(Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE_STAIRS, Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE);
+            stairs(Unordinary_BasicsBlocks.SANDSTONE_BRICK_STAIRS, Unordinary_BasicsBlocks.SANDSTONE_BRICKS);
+            stairs(Unordinary_BasicsBlocks.RED_SANDSTONE_BRICK_STAIRS, Unordinary_BasicsBlocks.RED_SANDSTONE_BRICKS);
+            stairs(Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICK_STAIRS, Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICKS);
         
             stairs(Unordinary_BasicsBlocks.CALCITE_STAIRS, Blocks.CALCITE);
             stairs(Unordinary_BasicsBlocks.TUFF_STAIRS, Blocks.TUFF);
@@ -182,7 +232,25 @@ public class Unordinary_BasicsBlockStateProvider extends BlockStateProvider {
         }
         
         private void modSlabs() {
-        
+            slab(Unordinary_BasicsBlocks.ANDESITE_BRICK_SLAB, Unordinary_BasicsBlocks.ANDESITE_BRICKS);
+            slab(Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICK_SLAB, Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICKS);
+            slab(Unordinary_BasicsBlocks.CALCITE_BRICK_SLAB, Unordinary_BasicsBlocks.CALCITE_BRICKS);
+            slab(Unordinary_BasicsBlocks.DIORITE_BRICK_SLAB, Unordinary_BasicsBlocks.DIORITE_BRICKS);
+            slab(Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICK_SLAB, Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICKS);
+            slab(Unordinary_BasicsBlocks.DRIPSTONE_BRICK_SLAB, Unordinary_BasicsBlocks.DRIPSTONE_BRICKS);
+            slab(Unordinary_BasicsBlocks.GRANITE_BRICK_SLAB, Unordinary_BasicsBlocks.GRANITE_BRICKS);
+            slab(Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICK_SLAB, Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICKS);
+            slab(Unordinary_BasicsBlocks.TUFF_BRICK_SLAB, Unordinary_BasicsBlocks.TUFF_BRICKS);
+            slab(Unordinary_BasicsBlocks.POLISHED_TUFF_SLAB, Unordinary_BasicsBlocks.POLISHED_TUFF);
+            slab(Unordinary_BasicsBlocks.POLISHED_TUFF_BRICK_SLAB, Unordinary_BasicsBlocks.POLISHED_TUFF_BRICKS);
+            slab(Unordinary_BasicsBlocks.SOUL_SANDSTONE_SLAB, Unordinary_BasicsBlocks.SOUL_SANDSTONE);
+            slab(Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE_SLAB, Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE);
+            slab(Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE_SLAB, Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE);
+            slab(Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE_SLAB, Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE);
+            slab(Unordinary_BasicsBlocks.SANDSTONE_BRICK_SLAB, Unordinary_BasicsBlocks.SANDSTONE_BRICKS);
+            slab(Unordinary_BasicsBlocks.RED_SANDSTONE_BRICK_SLAB, Unordinary_BasicsBlocks.RED_SANDSTONE_BRICKS);
+            slab(Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICK_SLAB, Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICKS);
+            
         slab(Unordinary_BasicsBlocks.CALCITE_SLAB, Blocks.CALCITE);
         slab(Unordinary_BasicsBlocks.TUFF_SLAB, Blocks.TUFF);
         slab(Unordinary_BasicsBlocks.DRIPSTONE_SLAB, Blocks.DRIPSTONE_BLOCK);
@@ -339,6 +407,32 @@ public class Unordinary_BasicsBlockStateProvider extends BlockStateProvider {
         slab(Unordinary_BasicsBlocks.BLACK_CONCRETE_POWDER_SLAB, Blocks.BLACK_CONCRETE_POWDER);
         }
 
+
+        private void modWalls() {
+        System.out.println("ModWalls");
+
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.ANDESITE_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.ANDESITE_BRICKS));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICKS));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.CALCITE_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.CALCITE_BRICKS));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.DIORITE_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.DIORITE_BRICKS));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICKS));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.DRIPSTONE_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.DRIPSTONE_BRICKS));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.GRANITE_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.GRANITE_BRICKS));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICKS));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.TUFF_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.TUFF_BRICKS));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.POLISHED_TUFF_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.POLISHED_TUFF_BRICKS));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.SOUL_SANDSTONE_WALL, blockTexture(Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICKS));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE_WALL, blockTexture(Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE_WALL, blockTexture(Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE_WALL, blockTexture(Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.SANDSTONE_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.SANDSTONE_BRICKS));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.RED_SANDSTONE_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.RED_SANDSTONE_BRICKS));
+        wallBlock((WallBlock) Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICKS));
+
+        //TODO: Walls for vanilla blocks
+
+        }
+
         private void modMisc() {
 
         nonRotatablePillar(Unordinary_BasicsBlocks.OAK_LOG, mcLoc("block/oak_log_top"), mcLoc("block/oak_log"));
@@ -361,5 +455,15 @@ public class Unordinary_BasicsBlockStateProvider extends BlockStateProvider {
         nonRotatablePillar(Unordinary_BasicsBlocks.QUARTZ_PILLAR, mcLoc("block/quartz_pillar_top"), mcLoc("block/quartz_pillar"));
         nonRotatablePillar(Unordinary_BasicsBlocks.HAY_BLOCK, mcLoc("block/hay_block_top"), mcLoc("block/hay_block_side"));
     }
+
+    protected void nonRotatableColumn(Block block, ResourceLocation textureTop, ResourceLocation textureSides, ResourceLocation textureBottom) {
+        this.getVariantBuilder(block).forAllStates((blockState) -> {
+            return ConfiguredModel.builder().modelFile(this.models().cubeBottomTop(this.name(block), textureSides, textureBottom, textureTop)).build();
+        });
+        ItemModelBuilder var10000 = (ItemModelBuilder)this.itemModels().getBuilder(((ResourceLocation) Objects.requireNonNull(this.rl(block))).getPath());
+        String var10004 = this.name(block);
+        var10000.parent(new ModelFile.UncheckedModelFile(this.modLoc("block/" + var10004)));
+    }
+
 }
 

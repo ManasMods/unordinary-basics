@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "unordinary_basics:block/chiseled_soul_sandstone",
+    "side": "unordinary_basics:block/chiseled_soul_sandstone",
+    "top": "unordinary_basics:block/chiseled_soul_sandstone"
+  }
+}

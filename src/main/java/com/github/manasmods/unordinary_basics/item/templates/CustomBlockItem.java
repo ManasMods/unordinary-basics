@@ -12,6 +12,6 @@ public class CustomBlockItem extends BlockItem {
      * @param pBlock Parent Block
      */
     public CustomBlockItem(Block pBlock) {
-        super(pBlock, new Properties().tab(Unordinary_BasicsCreativeTab.BLOCKS));
+        super(pBlock, new Properties().tab(Unordinary_BasicsCreativeTab.CUSTOM_BLOCKS));
     }
 }
