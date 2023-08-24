@@ -6,16 +6,11 @@ import com.github.manasmods.unordinary_basics.capability.IUBInventoryItem;
 import com.github.manasmods.unordinary_basics.capability.UBInventoryItemStackHandler;
 import com.github.manasmods.unordinary_basics.client.ClientUBInventoryData;
 import com.github.manasmods.unordinary_basics.menu.slot.SlotUBInventory;
-import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
-import com.github.manasmods.unordinary_basics.network.toserver.RequestUBInventoryMenu;
 import com.mojang.datafixers.util.Pair;
-import net.minecraft.core.NonNullList;
-import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.game.ClientboundContainerSetSlotPacket;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.Container;
-import net.minecraft.world.SimpleMenuProvider;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Inventory;
@@ -33,7 +28,6 @@ import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.wrapper.InvWrapper;
 import net.minecraftforge.items.wrapper.PlayerArmorInvWrapper;
 import net.minecraftforge.items.wrapper.PlayerOffhandInvWrapper;
-import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
@@ -232,7 +226,7 @@ public class UBInventoryMenu extends RecipeBookMenu<CraftingContainer> {
             final ItemStack itemstack1 = slot.getItem();
             itemstack = itemstack1.copy();
 
-            if (index == 42 + externalSlotCount + 5) {
+            if (index == 47) {
                 if (!this.moveItemStackTo(itemstack1, 1, 36, true)) {
                     return ItemStack.EMPTY;
                 }
@@ -242,7 +236,7 @@ public class UBInventoryMenu extends RecipeBookMenu<CraftingContainer> {
                     return ItemStack.EMPTY;
                 }
             } else if (index < 9 && applicableForUBSlots(itemstack1) && !isArmor(itemstack1, pPlayer)) {
-                if (!moveItemStackTo(itemstack1, 36, 42 + externalSlotCount, true)) {
+                if (!moveItemStackTo(itemstack1, 36, 42, true)) {
                     return ItemStack.EMPTY;
                 }
             } else if (index < 9 && !applicableForUBSlots(itemstack1) && !isArmor(itemstack1, pPlayer)) {

@@ -1,11 +1,9 @@
 package com.github.manasmods.unordinary_basics.menu;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.capability.CapabilityUBInventory;
 import com.github.manasmods.unordinary_basics.capability.IUBInventoryItem;
 import com.github.manasmods.unordinary_basics.capability.UBInventoryItemStackHandler;
 import com.github.manasmods.unordinary_basics.client.ClientUBInventoryData;
-import com.github.manasmods.unordinary_basics.menu.slot.SlotUBInventory;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.network.protocol.game.ClientboundContainerSetSlotPacket;
 import net.minecraft.resources.ResourceLocation;
@@ -205,32 +203,21 @@ public class UBItemInventoryMenu extends RecipeBookMenu<CraftingContainer> {
 
     @Override
     public ItemStack quickMoveStack(Player pPlayer, int index) {
+        //TODO: write a functional quickmovestack for this menu
         ItemStack itemstack = ItemStack.EMPTY;
         final Slot slot = slots.get(index);
 
-        if (slot != null && slot.hasItem()) {
+        /*if (slot != null && slot.hasItem()) {
             final ItemStack itemstack1 = slot.getItem();
             itemstack = itemstack1.copy();
 
-            if (index == 42 + externalSlotCount + 5) {
+            if (index == 40 + externalSlotCount + 5) {
                 if (!this.moveItemStackTo(itemstack1, 1, 36, true)) {
                     return ItemStack.EMPTY;
                 }
                 slot.onQuickCraft(itemstack1, itemstack);
             } else if (index < 36 && index > 8) {
                 if (!moveItemStackTo(itemstack1, 0, 9, false)) {
-                    return ItemStack.EMPTY;
-                }
-            } else if (index < 9 && applicableForUBSlots(itemstack1) && !isArmor(itemstack1, pPlayer)) {
-                if (!moveItemStackTo(itemstack1, 36, 42 + externalSlotCount, true)) {
-                    return ItemStack.EMPTY;
-                }
-            } else if (index < 9 && !applicableForUBSlots(itemstack1) && !isArmor(itemstack1, pPlayer)) {
-                if (!moveItemStackTo(itemstack1, 9, 40, false)) {
-                    return ItemStack.EMPTY;
-                }
-            } else if (index < 9 && !applicableForUBSlots(itemstack1) && isArmor(itemstack1, pPlayer)) {
-                if (!moveItemStackTo(itemstack1, 36, 40, true)) {
                     return ItemStack.EMPTY;
                 }
             } else if (!moveItemStackTo(itemstack1, 0, 36, false)) {
@@ -244,7 +231,7 @@ public class UBItemInventoryMenu extends RecipeBookMenu<CraftingContainer> {
             }
 
             slot.onTake(pPlayer, itemstack1);
-        }
+        }*/
 
         return itemstack;
     }
