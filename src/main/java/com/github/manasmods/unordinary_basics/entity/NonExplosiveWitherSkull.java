@@ -94,13 +94,6 @@ public class NonExplosiveWitherSkull extends AbstractHurtingProjectile {
         }
     }
 
-    protected void onHit(HitResult pResult) {
-        super.onHit(pResult);
-        if (!this.level.isClientSide) {
-            this.discard();
-        }
-    }
-
     /**
      *  Called when this EntityFireball hits a block or entity.
      **/
