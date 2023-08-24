@@ -94,14 +94,9 @@ public class NonExplosiveWitherSkull extends AbstractHurtingProjectile {
         }
     }
 
-    /**
-     *  Called when this EntityFireball hits a block or entity.
-     **/
     protected void onHit(HitResult pResult) {
         super.onHit(pResult);
         if (!this.level.isClientSide) {
-            Explosion.BlockInteraction explosion$blockinteraction = net.minecraftforge.event.ForgeEventFactory.getMobGriefingEvent(this.level, this.getOwner()) ? Explosion.BlockInteraction.NONE : Explosion.BlockInteraction.NONE;
-            this.level.explode(this, this.getX(), this.getY(), this.getZ(), 0.0F, false, explosion$blockinteraction);
             this.discard();
         }
 
