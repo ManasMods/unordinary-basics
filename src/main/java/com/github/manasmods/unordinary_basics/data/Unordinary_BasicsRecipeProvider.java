@@ -545,38 +545,47 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
         nineStorage(consumer, Items.ANDESITE, Unordinary_BasicsBlocks.ANDESITE_BRICKS);
         stairs(consumer, Unordinary_BasicsBlocks.ANDESITE_BRICK_STAIRS, Unordinary_BasicsBlocks.ANDESITE_BRICKS);
         slab(consumer, Unordinary_BasicsBlocks.ANDESITE_BRICK_SLAB, Unordinary_BasicsBlocks.ANDESITE_BRICKS);
+        wall(consumer, Unordinary_BasicsBlocks.ANDESITE_BRICK_WALL, Unordinary_BasicsBlocks.ANDESITE_BRICKS);
 
         nineStorage(consumer, Items.POLISHED_ANDESITE, Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICKS);
         stairs(consumer, Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICK_STAIRS, Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICKS);
         slab(consumer, Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICK_SLAB, Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICKS);
+        wall(consumer, Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICK_WALL, Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICKS);
 
         nineStorage(consumer, Items.CALCITE, Unordinary_BasicsBlocks.CALCITE_BRICKS);
         stairs(consumer, Unordinary_BasicsBlocks.CALCITE_BRICK_STAIRS, Unordinary_BasicsBlocks.CALCITE_BRICKS);
         slab(consumer, Unordinary_BasicsBlocks.CALCITE_BRICK_SLAB, Unordinary_BasicsBlocks.CALCITE_BRICKS);
+        wall(consumer, Unordinary_BasicsBlocks.CALCITE_BRICK_WALL, Unordinary_BasicsBlocks.CALCITE_BRICKS);
 
         nineStorage(consumer, Items.DIORITE, Unordinary_BasicsBlocks.DIORITE_BRICKS);
         stairs(consumer, Unordinary_BasicsBlocks.DIORITE_BRICK_STAIRS, Unordinary_BasicsBlocks.DIORITE_BRICKS);
         slab(consumer, Unordinary_BasicsBlocks.DIORITE_BRICK_SLAB, Unordinary_BasicsBlocks.DIORITE_BRICKS);
+        wall(consumer, Unordinary_BasicsBlocks.DIORITE_BRICK_WALL, Unordinary_BasicsBlocks.DIORITE_BRICKS);
 
         nineStorage(consumer, Items.POLISHED_DIORITE, Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICKS);
         stairs(consumer, Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICK_STAIRS, Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICKS);
         slab(consumer, Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICK_SLAB, Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICKS);
+        wall(consumer, Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICK_WALL, Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICKS);
 
         nineStorage(consumer, Items.DRIPSTONE_BLOCK, Unordinary_BasicsBlocks.DRIPSTONE_BRICKS);
         stairs(consumer, Unordinary_BasicsBlocks.DRIPSTONE_BRICK_STAIRS, Unordinary_BasicsBlocks.DRIPSTONE_BRICKS);
         slab(consumer, Unordinary_BasicsBlocks.DRIPSTONE_BRICK_SLAB, Unordinary_BasicsBlocks.DRIPSTONE_BRICKS);
+        wall(consumer, Unordinary_BasicsBlocks.DRIPSTONE_BRICK_WALL, Unordinary_BasicsBlocks.DRIPSTONE_BRICKS);
 
         nineStorage(consumer, Items.GRANITE, Unordinary_BasicsBlocks.GRANITE_BRICKS);
         stairs(consumer, Unordinary_BasicsBlocks.GRANITE_BRICK_STAIRS, Unordinary_BasicsBlocks.GRANITE_BRICKS);
         slab(consumer, Unordinary_BasicsBlocks.GRANITE_BRICK_SLAB, Unordinary_BasicsBlocks.GRANITE_BRICKS);
+        wall(consumer, Unordinary_BasicsBlocks.GRANITE_BRICK_WALL, Unordinary_BasicsBlocks.GRANITE_BRICKS);
 
         nineStorage(consumer, Items.POLISHED_GRANITE, Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICKS);
         stairs(consumer, Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICK_STAIRS, Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICKS);
         slab(consumer, Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICK_SLAB, Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICKS);
+        wall(consumer, Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICK_WALL, Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICKS);
 
         nineStorage(consumer, Items.TUFF, Unordinary_BasicsBlocks.TUFF_BRICKS);
         stairs(consumer, Unordinary_BasicsBlocks.TUFF_BRICK_STAIRS, Unordinary_BasicsBlocks.TUFF_BRICKS);
         slab(consumer, Unordinary_BasicsBlocks.TUFF_BRICK_SLAB, Unordinary_BasicsBlocks.TUFF_BRICKS);
+        wall(consumer, Unordinary_BasicsBlocks.TUFF_BRICK_WALL, Unordinary_BasicsBlocks.TUFF_BRICKS);
 
         ShapedRecipeBuilder.shaped(Unordinary_BasicsBlocks.POLISHED_TUFF)
                 .define('#', Items.TUFF)
@@ -588,14 +597,17 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
         nineStorage(consumer, Unordinary_BasicsBlocks.POLISHED_TUFF, Unordinary_BasicsBlocks.POLISHED_TUFF_BRICKS);
         stairs(consumer, Unordinary_BasicsBlocks.POLISHED_TUFF_BRICK_STAIRS, Unordinary_BasicsBlocks.POLISHED_TUFF);
         slab(consumer, Unordinary_BasicsBlocks.POLISHED_TUFF_BRICK_SLAB, Unordinary_BasicsBlocks.POLISHED_TUFF);
+        wall(consumer, Unordinary_BasicsBlocks.POLISHED_TUFF_BRICK_WALL, Unordinary_BasicsBlocks.POLISHED_TUFF);
 
         nineStorage(consumer, Items.SOUL_SAND, Unordinary_BasicsBlocks.SOUL_SANDSTONE);
         stairs(consumer, Unordinary_BasicsBlocks.SOUL_SANDSTONE_STAIRS, Unordinary_BasicsBlocks.SOUL_SANDSTONE);
         slab(consumer, Unordinary_BasicsBlocks.SOUL_SANDSTONE_SLAB, Unordinary_BasicsBlocks.SOUL_SANDSTONE);
+        wall(consumer, Unordinary_BasicsBlocks.SOUL_SANDSTONE_WALL, Unordinary_BasicsBlocks.SOUL_SANDSTONE);
 
         smeltingRecipe(consumer, Ingredient.of(Unordinary_BasicsBlocks.SOUL_SANDSTONE), Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE, 0.1F, 200);
         stairs(consumer, Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE_STAIRS, Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE);
         slab(consumer, Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE_SLAB, Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE);
+        slab(consumer, Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE_WALL, Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE);
 
         ShapedRecipeBuilder.shaped(Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE)
                 .define('#', Unordinary_BasicsBlocks.SOUL_SANDSTONE)
@@ -606,6 +618,7 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .save(consumer);
         stairs(consumer, Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE_STAIRS, Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE);
         slab(consumer, Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE_SLAB, Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE);
+        wall(consumer, Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE_WALL, Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE);
 
         ShapedRecipeBuilder.shaped(Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE)
                 .define('#', Unordinary_BasicsBlocks.SOUL_SANDSTONE_SLAB)
@@ -616,20 +629,94 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
                 .save(consumer);        
         stairs(consumer, Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE_STAIRS, Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE);
         slab(consumer, Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE_SLAB, Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE);
+        wall(consumer, Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE_WALL, Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE);
 
         nineStorage(consumer, Items.SANDSTONE, Unordinary_BasicsBlocks.SANDSTONE_BRICKS);
         stairs(consumer, Unordinary_BasicsBlocks.SANDSTONE_BRICK_STAIRS, Unordinary_BasicsBlocks.SANDSTONE_BRICKS);
         slab(consumer, Unordinary_BasicsBlocks.SANDSTONE_BRICK_SLAB, Unordinary_BasicsBlocks.SANDSTONE_BRICKS);
+        wall(consumer, Unordinary_BasicsBlocks.SANDSTONE_BRICK_WALL, Unordinary_BasicsBlocks.SANDSTONE_BRICKS);
 
         nineStorage(consumer, Items.RED_SANDSTONE, Unordinary_BasicsBlocks.RED_SANDSTONE_BRICKS);
         stairs(consumer, Unordinary_BasicsBlocks.RED_SANDSTONE_BRICK_STAIRS, Unordinary_BasicsBlocks.RED_SANDSTONE_BRICKS);
         slab(consumer, Unordinary_BasicsBlocks.RED_SANDSTONE_BRICK_SLAB, Unordinary_BasicsBlocks.RED_SANDSTONE_BRICKS);
+        wall(consumer, Unordinary_BasicsBlocks.RED_SANDSTONE_BRICK_WALL, Unordinary_BasicsBlocks.RED_SANDSTONE_BRICKS);
 
         nineStorage(consumer, Unordinary_BasicsBlocks.SOUL_SANDSTONE, Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICKS);
         stairs(consumer, Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICK_STAIRS, Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICKS);
         slab(consumer, Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICK_SLAB, Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICKS);
+        wall(consumer, Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICK_WALL, Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICKS);
 
-        //TODO: Stonecutter Recipes
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.ANDESITE_BRICK_STAIRS, Unordinary_BasicsBlocks.ANDESITE_BRICKS);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.ANDESITE_BRICK_SLAB, Unordinary_BasicsBlocks.ANDESITE_BRICKS, 2);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.ANDESITE_BRICK_WALL, Unordinary_BasicsBlocks.ANDESITE_BRICKS);
+
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICK_STAIRS, Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICKS);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICK_SLAB, Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICKS, 2);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICK_WALL, Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICKS);
+
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.CALCITE_BRICK_STAIRS, Unordinary_BasicsBlocks.CALCITE_BRICKS);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.CALCITE_BRICK_SLAB, Unordinary_BasicsBlocks.CALCITE_BRICKS, 2);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.CALCITE_BRICK_WALL, Unordinary_BasicsBlocks.CALCITE_BRICKS);
+
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.DIORITE_BRICK_STAIRS, Unordinary_BasicsBlocks.DIORITE_BRICKS);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.DIORITE_BRICK_SLAB, Unordinary_BasicsBlocks.DIORITE_BRICKS, 2);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.DIORITE_BRICK_WALL, Unordinary_BasicsBlocks.DIORITE_BRICKS);
+
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICK_STAIRS, Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICKS);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICK_SLAB, Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICKS, 2);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICK_WALL, Unordinary_BasicsBlocks.POLISHED_DIORITE_BRICKS);
+
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.DRIPSTONE_BRICK_STAIRS, Unordinary_BasicsBlocks.DRIPSTONE_BRICKS);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.DRIPSTONE_BRICK_SLAB, Unordinary_BasicsBlocks.DRIPSTONE_BRICKS, 2);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.DRIPSTONE_BRICK_WALL, Unordinary_BasicsBlocks.DRIPSTONE_BRICKS);
+
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.GRANITE_BRICK_STAIRS, Unordinary_BasicsBlocks.GRANITE_BRICKS);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.GRANITE_BRICK_SLAB, Unordinary_BasicsBlocks.GRANITE_BRICKS, 2);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.GRANITE_BRICK_WALL, Unordinary_BasicsBlocks.GRANITE_BRICKS);
+
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICK_STAIRS, Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICKS);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICK_SLAB, Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICKS, 2);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICK_WALL, Unordinary_BasicsBlocks.POLISHED_GRANITE_BRICKS);
+
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.TUFF_BRICK_STAIRS, Unordinary_BasicsBlocks.TUFF_BRICKS);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.TUFF_BRICK_SLAB, Unordinary_BasicsBlocks.TUFF_BRICKS, 2);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.TUFF_BRICK_WALL, Unordinary_BasicsBlocks.TUFF_BRICKS);
+
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.POLISHED_TUFF_STAIRS, Unordinary_BasicsBlocks.POLISHED_TUFF);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.POLISHED_TUFF_SLAB, Unordinary_BasicsBlocks.POLISHED_TUFF, 2);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.POLISHED_TUFF_WALL, Unordinary_BasicsBlocks.POLISHED_TUFF);
+
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.POLISHED_TUFF_BRICK_STAIRS, Unordinary_BasicsBlocks.POLISHED_TUFF_BRICKS);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.POLISHED_TUFF_BRICK_SLAB, Unordinary_BasicsBlocks.POLISHED_TUFF_BRICKS, 2);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.POLISHED_TUFF_BRICK_WALL, Unordinary_BasicsBlocks.POLISHED_TUFF_BRICKS);
+
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.SOUL_SANDSTONE_STAIRS, Unordinary_BasicsBlocks.SOUL_SANDSTONE);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.SOUL_SANDSTONE_SLAB, Unordinary_BasicsBlocks.SOUL_SANDSTONE, 2);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.SOUL_SANDSTONE_WALL, Unordinary_BasicsBlocks.SOUL_SANDSTONE);
+
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE_STAIRS, Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE_SLAB, Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE, 2);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE_WALL, Unordinary_BasicsBlocks.SMOOTH_SOUL_SANDSTONE);
+
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE_STAIRS, Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE_SLAB, Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE, 2);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE_WALL, Unordinary_BasicsBlocks.CHISELED_SOUL_SANDSTONE);
+
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE_STAIRS, Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE_SLAB, Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE, 2);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE_WALL, Unordinary_BasicsBlocks.CUT_SOUL_SANDSTONE);
+
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.SANDSTONE_BRICK_STAIRS, Unordinary_BasicsBlocks.SANDSTONE_BRICKS);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.SANDSTONE_BRICK_SLAB, Unordinary_BasicsBlocks.SANDSTONE_BRICKS, 2);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.SANDSTONE_BRICK_WALL, Unordinary_BasicsBlocks.SANDSTONE_BRICKS);
+
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.RED_SANDSTONE_BRICK_STAIRS, Unordinary_BasicsBlocks.RED_SANDSTONE_BRICKS);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.RED_SANDSTONE_BRICK_SLAB, Unordinary_BasicsBlocks.RED_SANDSTONE_BRICKS, 2);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.RED_SANDSTONE_BRICK_WALL, Unordinary_BasicsBlocks.RED_SANDSTONE_BRICKS);
+
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICK_STAIRS, Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICKS);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICK_SLAB, Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICKS, 2);
+        stonecutterResultFromBase(consumer, Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICK_WALL, Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICKS);
 
 
     }

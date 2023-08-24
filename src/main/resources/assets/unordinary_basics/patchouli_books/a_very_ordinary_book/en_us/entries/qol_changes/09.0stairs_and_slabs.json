@@ -12,11 +12,11 @@
       "type2": "patchouli:empty"
     },
     {
-      "type": "patchouli:recipe",
+      "type": "patchouli:crafting",
       "recipe": "unordinary_basics:stairs_to_block/oak_planks",
       "title": " ",
 
-      "type2": "patchouli:recipe",
+      "type2": "patchouli:crafting",
       "recipe2": "unordinary_basics:slabs_to_block/oak_planks",
       "title2": " "
     }

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "unordinary_basics:polished_diorite_bricks"
+  },
+  "result": "unordinary_basics:polished_diorite_brick_slab"
+}
