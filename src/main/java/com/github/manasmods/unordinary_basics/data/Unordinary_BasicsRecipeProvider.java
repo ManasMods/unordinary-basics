@@ -630,6 +630,8 @@ public class Unordinary_BasicsRecipeProvider extends RecipeProvider {
         slab(consumer, Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICK_SLAB, Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICKS);
 
         //TODO: Stonecutter Recipes
+
+
     }
 
     private void vanillaQOLSmelting(Consumer<FinishedRecipe> consumer) {
