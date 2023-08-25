@@ -9,7 +9,6 @@ import net.minecraftforge.fml.common.Mod;
 
 @Mod.EventBusSubscriber(modid = Unordinary_Basics.MOD_ID)
 public class UBWeaponHandler {
-
     @SubscribeEvent
     public static void onDamageEntity(LivingDamageEvent event) {
         LivingEntity entity = event.getEntity();
