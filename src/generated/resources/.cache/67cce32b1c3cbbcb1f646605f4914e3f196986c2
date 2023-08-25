@@ -1,4 +1,4 @@
-// 1.19.2	2023-08-24T19:17:02.0472531	LootTables
+// 1.19.2	2023-08-25T14:50:06.3037511	LootTables
 2d891dd38aebe5d06ea2a6b4c9a1533a97324ea2 data/unordinary_basics/loot_tables/blocks/acacia_log.json
 fab1894dc8e69c683171e47b29a645e6e97cd770 data/unordinary_basics/loot_tables/blocks/acacia_log_slab.json
 c5c5610df3573a30e467de223f0974f2a88fda06 data/unordinary_basics/loot_tables/blocks/acacia_log_stairs.json
@@ -400,4 +400,3 @@ e23f925365566aacc4ee96a729a7c728f2b4ef2a data/unordinary_basics/loot_tables/bloc
 bb287f48162f24a5039ca2cdfdf4ac421f80022e data/unordinary_basics/loot_tables/blocks/yellow_terracotta_stairs.json
 9e7d48fe3f2facfe63b8b29c0f2b808731944ccb data/unordinary_basics/loot_tables/blocks/yellow_wool_slab.json
 df869b469c8144b64a276784b081834fe934e9ef data/unordinary_basics/loot_tables/blocks/yellow_wool_stairs.json
-2c7b7451f0dc16edcc329f2e29c43e841f3fcd93 data/unordinary_basics/loot_tables/entities/master_sword_warden.json

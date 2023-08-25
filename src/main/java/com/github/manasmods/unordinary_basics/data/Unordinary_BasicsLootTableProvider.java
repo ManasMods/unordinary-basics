@@ -27,8 +27,7 @@ public class Unordinary_BasicsLootTableProvider extends LootTableProvider {
 
     @Override
     protected List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>>, LootContextParamSet>> getTables() {
-        return ImmutableList.of(Pair.of(Unordinary_BasicsBlockLoot::new, LootContextParamSets.BLOCK),
-                Pair.of(Unordinary_BasicsEntityLoot::new, LootContextParamSets.ENTITY));
+        return ImmutableList.of(Pair.of(Unordinary_BasicsBlockLoot::new, LootContextParamSets.BLOCK));
     }
 
     @Override

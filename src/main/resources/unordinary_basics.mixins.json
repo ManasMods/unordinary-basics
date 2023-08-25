@@ -26,9 +26,7 @@
     "MixinLivingEntity",
     "MixinPlayer",
     "MixinPotionItem",
-    "MixinSculkSensor",
     "MixinThrowablePotionItem",
-    "MixinWarden",
     "NBTIngredientAccessor"
   ],
   "client": [

@@ -52,6 +52,11 @@ public class FletchingRecipeBuilder implements RecipeBuilder {
     }
 
     @Override
+    public Item getResult() {
+        return result;
+    }
+
+    @Override
     public void save(Consumer<FinishedRecipe> pFinishedRecipeConsumer, ResourceLocation pRecipeId) {
         this.ensureValid(pRecipeId);
         pFinishedRecipeConsumer.accept(new Result(pRecipeId, this.result, this.count, this.tags, this.rows, this.key));

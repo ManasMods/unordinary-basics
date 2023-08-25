@@ -4,7 +4,6 @@ import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.entity.GrizzlyBearEntity;
 import com.github.manasmods.unordinary_basics.entity.GrolarBearEntity;
 import com.github.manasmods.unordinary_basics.entity.NonExplosiveWitherSkull;
-import com.github.manasmods.unordinary_basics.entity.MasterSwordWardenEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -15,7 +14,6 @@ public class UBEntityTypes {
     public static RegistryObject<EntityType<GrolarBearEntity>> GROLAR_BEAR;
     public static RegistryObject<EntityType<GrizzlyBearEntity>> GRIZZLY_BEAR;
     public static RegistryObject<EntityType<NonExplosiveWitherSkull>> NON_EXPLOSIVE_WITHER_SKULL;
-    public static RegistryObject<EntityType<MasterSwordWardenEntity>> MASTER_SWORD_WARDEN;
 
     static void register(DeferredRegister<EntityType<?>> registry) {
 //      GRIZZLY_BEAR = registry.register("grizzly_bear",
@@ -31,11 +29,5 @@ public class UBEntityTypes {
                         .sized(0.3125F, 0.3125F)
                         .clientTrackingRange(4).updateInterval(10)
                         .build(new ResourceLocation(Unordinary_Basics.MOD_ID,"non_explosive_wither_skull").toString()));
-
-        MASTER_SWORD_WARDEN = registry.register("master_sword_warden",
-                () -> EntityType.Builder.<MasterSwordWardenEntity>of(MasterSwordWardenEntity::new, MobCategory.MONSTER)
-                        .sized(0.9F, 2.9F)
-                        .clientTrackingRange(16).fireImmune()
-                        .build(new ResourceLocation(Unordinary_Basics.MOD_ID,"master_sword_warden").toString()));
     }
 }
