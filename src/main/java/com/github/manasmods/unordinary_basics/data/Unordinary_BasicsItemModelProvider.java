@@ -19,6 +19,7 @@ public class Unordinary_BasicsItemModelProvider extends ItemModelProvider {
     }
 
     @Override
+    @SuppressWarnings("ConstantConditions")
     protected void generate() {
         singleTexture(Unordinary_BasicsItems.ANIMAL_BAIT);
         singleTexture(Unordinary_BasicsItems.GOAT_MILK_BOTTLE);
@@ -69,6 +70,8 @@ public class Unordinary_BasicsItemModelProvider extends ItemModelProvider {
         wallItem(Unordinary_BasicsBlocks.RED_SANDSTONE_BRICK_WALL, Unordinary_BasicsBlocks.RED_SANDSTONE_BRICKS);
         wallItem(Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICK_WALL, Unordinary_BasicsBlocks.SOUL_SANDSTONE_BRICKS);
 
+        blockItem(Unordinary_BasicsBlocks.MASTER_SWORD_SHRINE);
+
         //generate models for slime compass
         for (int i = 0; i < 32; ++i){
             if (i >= 10) {
@@ -109,5 +112,10 @@ public class Unordinary_BasicsItemModelProvider extends ItemModelProvider {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(Unordinary_Basics.MOD_ID,"item/" + item.getId().getPath()));
+    }
+
+    private ItemModelBuilder blockItem(Block block) {
+        return withExistingParent(ForgeRegistries.BLOCKS.getKey(block).getPath(),
+                new ResourceLocation(Unordinary_Basics.MOD_ID,"block/" + ForgeRegistries.BLOCKS.getKey(block).getPath()));
     }
 }

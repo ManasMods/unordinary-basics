@@ -3,9 +3,9 @@
 	"parent": "master_sword_shrine",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "master_sword",
-		"2": "pedestal",
-		"particle": "master_sword"
+		"0": "unordinary_basics:item/master_sword",
+		"2": "unordinary_basics:block/pedestal",
+		"particle": "unordinary_basics:item/master_sword"
 	},
 	"elements": [
 		{
@@ -467,6 +467,44 @@
 			}
 		}
 	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, -180, -180],
+			"translation": [0, 4, 0.5],
+			"scale": [0.85, 0.85, 0.85]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, -180, -180],
+			"translation": [0, 4, 0.5],
+			"scale": [0.85, 0.85, 0.85]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, -180, -180],
+			"translation": [0, 4, 0.5],
+			"scale": [0.85, 0.85, 0.85]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, -180, -180],
+			"translation": [0, 4, 0.5],
+			"scale": [0.85, 0.85, 0.85]
+		},
+		"ground": {
+			"translation": [0, 2, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"gui": {
+			"rotation": [90, 45, 90],
+			"translation": [0, 0, 0.5],
+			"scale": [0.85, 0.85, 0.85]
+		},
+		"head": {
+			"rotation": [-43.5, 0, 0],
+			"translation": [0, 7.5, -6.25]
+		},
+		"fixed": {
+			"rotation": [0, -90, 0]
+		}
+	},
 	"groups": [
 		{
 			"name": "pedestal",

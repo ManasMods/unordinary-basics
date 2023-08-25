@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=west": { "model": "unordinary_basics:block/master_sword_shrine" },
+    "facing=south": { "model": "unordinary_basics:block/master_sword_shrine", "y": 90 },
+    "facing=east": { "model": "unordinary_basics:block/master_sword_shrine", "y": 180 },
+    "facing=north": { "model": "unordinary_basics:block/master_sword_shrine", "y": 270 }
+  }
+}

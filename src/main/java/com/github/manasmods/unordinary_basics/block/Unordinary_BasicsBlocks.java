@@ -11,6 +11,8 @@ public class Unordinary_BasicsBlocks {
     public static final Block ENCHANTMENT_LIBRARY = null;
     @ObjectHolder(registryName = "block", value = "unordinary_basics:item_sorter")
     public static final Block ITEM_SORTER = null;
+    @ObjectHolder(registryName = "block", value = "unordinary_basics:master_sword_shrine")
+    public static final Block MASTER_SWORD_SHRINE = null;
 
     @ObjectHolder(registryName = "block", value = "unordinary_basics:andesite_bricks")
     public static final Block ANDESITE_BRICKS = null;

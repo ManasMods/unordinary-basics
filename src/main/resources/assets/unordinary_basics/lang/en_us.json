@@ -143,13 +143,11 @@
   "tooltip.unordinary_basics.technoblade_crown": "A crown fit for a king, and for a legend who never really dies",
   "tooltip.unordinary_basics.chainmail_armor": "When wearing a full set, take 25% less damage from arrows",
   "tooltip.unordinary_basics.netherite_armor": "When wearing a full set, take 30% less damage from fire",
-  "tooltip.unordinary_basics.builders_glove": "Places blocks randomly, press §e[SHIFT]§r + §e[RMB]§r to open its inventory. \nRight click a block while you have another block in your offhand to replace that block.",
+  "tooltip.unordinary_basics.builders_glove": "Places blocks randomly, press §e[CROUCH]§r + §e[RMB]§r to open its inventory. \nRight click a block while you have another block in your offhand to replace that block.",
   "tooltip.unordinary_basics.redstone_pouch": "§l§4Redstone:§r %s",
   "tooltip.unordinary_basics.unknown_sword_handle_fragment": "Obtained by slaying the §5Ender Dragon",
   "tooltip.unordinary_basics.unknown_blade_fragment": "Obtained by slaying the §bWarden",
   "tooltip.unordinary_basics.unknown_hilt_fragment": "Obtained by slaying the §cWither",
-
-  "entity.unordinary_basics.master_sword_warden": "Master Sword Warden",
 
   "entity.unordinary_basics.grizzly_bear": "Grizzly Bear",
   "item.unordinary_basics.grizzly_bear_spawn_egg": "Grizzly Bear Spawn Egg",
@@ -163,6 +161,7 @@
   "unordinary_basics.message.crop_tender_toggle": "Turned Crop Tender %s",
   "unordinary_basics.message.on": "on",
   "unordinary_basics.message.off": "off",
+  "unordinary_basics.message.master_sword_deny": "You have not proved yourself yet",
 
   "warning.unordinary_basics.tool_not_strong_enough": "Your tool isn't strong enough to replace that block!",
   "warning.unordinary_basics.no_slime_chunk_found": "§4Compass wasn't able to locate a slime chunk!",

@@ -4,7 +4,6 @@ import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.capability.ItemStackHandlerCapabilityProvider;
 import com.github.manasmods.unordinary_basics.menu.BuildersGloveMenu;
 import com.github.manasmods.unordinary_basics.utils.BlockBreakHelper;
-import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
@@ -198,7 +197,7 @@ public class BuildersGloveItem extends Item {
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
-        if (!pLevel.isClientSide && !(pPlayer.getInventory().offhand.get(0).getItem() instanceof BlockItem) && Screen.hasShiftDown()) {
+        if (!pLevel.isClientSide && !(pPlayer.getInventory().offhand.get(0).getItem() instanceof BlockItem) && pPlayer.isCrouching()) {
             pPlayer.getItemInHand(pUsedHand).getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> ((ItemStackHandler) handler).deserializeNBT(pPlayer.getItemInHand(pUsedHand).getOrCreateTag().getCompound("inventory")));
             NetworkHooks.openScreen((ServerPlayer) pPlayer, new SimpleMenuProvider((id, inv, p) -> new BuildersGloveMenu(id, inv, pPlayer.getInventory().selected), Component.translatable("item.unordinary_basics.builders_glove")),
                     buf -> buf.writeVarInt(pPlayer.getInventory().selected));

@@ -409,7 +409,6 @@ public class Unordinary_BasicsBlockStateProvider extends BlockStateProvider {
 
 
         private void modWalls() {
-        System.out.println("ModWalls");
 
         wallBlock((WallBlock) Unordinary_BasicsBlocks.ANDESITE_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.ANDESITE_BRICKS));
         wallBlock((WallBlock) Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICKS));

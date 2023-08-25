@@ -3,6 +3,7 @@ package com.github.manasmods.unordinary_basics.data;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
 import com.github.manasmods.unordinary_basics.registry.Unordinary_BasicsRegistry;
 import net.minecraft.data.loot.BlockLoot;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 
 public class Unordinary_BasicsBlockLoot extends BlockLoot {
@@ -12,9 +13,11 @@ public class Unordinary_BasicsBlockLoot extends BlockLoot {
         return Unordinary_BasicsRegistry.getKnownBlocks();
     }
 
+    @SuppressWarnings("ConstantConditions")
     protected void addTables() {
         this.dropSelf(Unordinary_BasicsBlocks.ENCHANTMENT_LIBRARY);
         this.dropSelf(Unordinary_BasicsBlocks.ITEM_SORTER);
+        this.dropOther(Unordinary_BasicsBlocks.MASTER_SWORD_SHRINE, Items.AIR);
 
         this.dropSelf(Unordinary_BasicsBlocks.ANDESITE_BRICKS);
         this.dropSelf(Unordinary_BasicsBlocks.ANDESITE_BRICK_STAIRS);
