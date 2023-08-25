@@ -32,6 +32,7 @@
 
   "item.unordinary_basics.decayed_master_sword": "Decayed Master Sword",
   "item.unordinary_basics.master_sword": "Master Sword",
+  "item.unordinary_basics.master_sword.recharge": "Master Sword recharges in: %s:%s",
 
   "item.unordinary_basics.unknown_blade_fragment": "Unknown Blade Fragment",
   "item.unordinary_basics.unknown_sword_handle_fragment": "Unknown Handle Fragment",
