@@ -1,0 +1,17 @@
+{
+  "structures": [
+    {
+      "structure": "unordinary_basics:master_sword_shrine",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 8254961037,
+
+    "spacing": 60,
+
+    "separation": 6,
+
+    "type": "minecraft:random_spread"
+  }
+}
