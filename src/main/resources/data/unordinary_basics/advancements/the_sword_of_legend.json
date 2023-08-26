@@ -1,0 +1,31 @@
+{
+  "display": {
+    "icon": {
+      "item": "unordinary_basics:master_sword"
+    },
+    "title": {
+      "translate": "advancements.unordinary_basics.the_sword_of_legend.title"
+    },
+    "description": {
+      "translate": "advancements.unordinary_basics.the_sword_of_legend.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "unordinary_basics:a_heroes_sword",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "unordinary_basics:master_sword"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
