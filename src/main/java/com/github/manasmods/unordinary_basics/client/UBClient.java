@@ -9,6 +9,8 @@ import com.github.manasmods.unordinary_basics.block.entity.Unordinary_BasicsBloc
 import com.github.manasmods.unordinary_basics.client.block_entity_renderer.ItemSorterBlockEntityRenderer;
 import com.github.manasmods.unordinary_basics.client.gui.*;
 import com.github.manasmods.unordinary_basics.client.keybind.UBKeybindings;
+import com.github.manasmods.unordinary_basics.entity.client.MasterSwordBeamModel;
+import com.github.manasmods.unordinary_basics.entity.client.MasterSwordBeamRenderer;
 import com.github.manasmods.unordinary_basics.entity.client.NonExplosiveWitherSkullRenderer;
 import com.github.manasmods.unordinary_basics.integration.apotheosis.ApotheosisIntegrationClient;
 import com.github.manasmods.unordinary_basics.integration.patchouli.PageMultiSpotlight;
@@ -96,6 +98,11 @@ public class UBClient {
     }
 
     @SubscribeEvent
+    public static void registerLayerDefinitons(final EntityRenderersEvent.RegisterLayerDefinitions event) {
+        event.registerLayerDefinition(MasterSwordBeamModel.LAYER_LOCATION, MasterSwordBeamModel::createBodyLayer);
+    }
+
+    @SubscribeEvent
     public static void onTextureStitch(TextureStitchEvent.Pre event) {
         if (event.getAtlas().location() == Sheets.BANNER_SHEET) {
             for (String hash : BANNER_PATTERN_HASHES) {
@@ -128,6 +135,7 @@ public class UBClient {
 //        EntityRenderers.register(UBEntityTypes.GROLAR_BEAR.get(), GrolarBearRenderer::new);
 //        EntityRenderers.register(UBEntityTypes.GRIZZLY_BEAR.get(), GrizzlyBearRenderer::new);
         EntityRenderers.register(UBEntityTypes.NON_EXPLOSIVE_WITHER_SKULL.get(), NonExplosiveWitherSkullRenderer::new);
+        EntityRenderers.register(UBEntityTypes.MASTER_SWORD_BEAM.get(), MasterSwordBeamRenderer::new);
     }
 
     private static void registerMenuScreens() {
