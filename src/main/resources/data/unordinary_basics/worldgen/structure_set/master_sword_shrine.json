@@ -5,8 +5,9 @@
       "weight": 1
     }
   ],
+  //SALT MUST BE UNIQUE AND LESS THAN 2147483647
   "placement": {
-    "salt": 8254961037,
+    "salt": 1839264758,
 
     "spacing": 60,
 
