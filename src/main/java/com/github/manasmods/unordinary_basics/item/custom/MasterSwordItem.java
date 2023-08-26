@@ -9,18 +9,43 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 
+import java.util.function.Consumer;
+
 public class MasterSwordItem extends SwordItem {
     public MasterSwordItem() {
         super(UBToolTiers.MASTER, 11, -2.4F,
                 new Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).fireResistant().rarity(Rarity.RARE));
+    }
+
+    public boolean shouldCauseReequipAnimation(ItemStack oldStack, ItemStack newStack, boolean slotChanged) {
+        return false;
+    }
+
+    public  <T extends LivingEntity> int damageItem(ItemStack pStack, int amount, T pEntity, Consumer<T> onBroken) {
+        if (pStack.getDamageValue() + amount >= pStack.getMaxDamage()) {
+            ItemStack decay = new ItemStack(Unordinary_BasicsItems.DECAYED_MASTER_SWORD);
+            decay.setTag(pStack.getOrCreateTag().copy());
+
+            if (pEntity.getMainHandItem().is(pStack.getItem())) {
+                pEntity.setItemInHand(InteractionHand.MAIN_HAND, decay);
+            } else if (pEntity.getOffhandItem().is(pStack.getItem())) {
+                pEntity.setItemInHand(InteractionHand.OFF_HAND, decay);
+            }
+
+            pEntity.getLevel().playSound(null, pEntity.blockPosition(), SoundEvents.ITEM_BREAK, SoundSource.PLAYERS, 1.0F, 10f);
+            return 0;
+        }
+        return amount;
     }
 
     public void inventoryTick(ItemStack pStack, Level pLevel, Entity pEntity, int pSlotId, boolean pIsSelected) {

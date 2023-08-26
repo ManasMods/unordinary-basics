@@ -29,8 +29,14 @@ public class DecayedMasterSwordItem extends SwordItem {
     }
 
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
-        pTooltipComponents.add(Component.translatable("item.unordinary_basics.master_sword.recharge",
-                calculateMin(pStack), calculateSec(pStack)).withStyle(ChatFormatting.DARK_AQUA));
+        int sec = calculateSec(pStack);
+        if (sec < 10) {
+            pTooltipComponents.add(Component.translatable("item.unordinary_basics.master_sword.recharge_second",
+                    calculateMin(pStack), sec).withStyle(ChatFormatting.DARK_AQUA));
+        } else {
+            pTooltipComponents.add(Component.translatable("item.unordinary_basics.master_sword.recharge",
+                    calculateMin(pStack), sec).withStyle(ChatFormatting.DARK_AQUA));
+        }
     }
 
     private int calculateMin(ItemStack pStack) {
@@ -44,6 +50,10 @@ public class DecayedMasterSwordItem extends SwordItem {
     }
 
     public boolean canBeDepleted() {
+        return false;
+    }
+
+    public boolean shouldCauseReequipAnimation(ItemStack oldStack, ItemStack newStack, boolean slotChanged) {
         return false;
     }
 
