@@ -1,0 +1,22 @@
+{
+  "display": {
+    "icon": {
+      "item": "unordinary_basics:pouch"
+    },
+    "title": {
+      "translate": "advancements.unordinary_basics.a_very_ordinary_advancement.title"
+    },
+    "description": " ",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "background": "unordinary_basics:textures/block/andesite_bricks.png"
+  },
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+      }
+    }
+  }
+}
