@@ -14,10 +14,10 @@ import net.minecraft.resources.ResourceLocation;
 public class MasterSwordBeamModel<T extends MasterSwordBeam> extends EntityModel<T> {
     // This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
     public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(UnordinaryBasics.MOD_ID, "master_sword_beam"), "main");
-    private final ModelPart bone;
+    private final ModelPart beam;
 
     public MasterSwordBeamModel(ModelPart root) {
-        this.bone = root.getChild("bone");
+        this.beam = root.getChild("bone");
     }
 
     public static LayerDefinition createBodyLayer() {
@@ -35,7 +35,7 @@ public class MasterSwordBeamModel<T extends MasterSwordBeam> extends EntityModel
 
     @Override
     public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
-        bone.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
+        beam.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
     }
 
     @Override
@@ -44,6 +44,11 @@ public class MasterSwordBeamModel<T extends MasterSwordBeam> extends EntityModel
     }
 
     public void rotate(MasterSwordBeam pEntity){
-        bone.yRot = pEntity.getLevel().getGameTime() % 360;
+        beam.yRot = pEntity.getLevel().getGameTime() % 360;
+    }
+
+    public void rotBeam(float p_103812_, float p_103813_) {
+        this.beam.yRot = p_103812_ * ((float)Math.PI / 180F);
+        this.beam.xRot = p_103813_ * ((float)Math.PI / 180F);
     }
 }

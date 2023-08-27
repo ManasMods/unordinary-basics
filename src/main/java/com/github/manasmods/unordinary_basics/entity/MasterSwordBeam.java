@@ -10,6 +10,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.AbstractHurtingProjectile;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.phys.HitResult;
 
 public class MasterSwordBeam extends AbstractHurtingProjectile {
 
@@ -60,6 +61,14 @@ public class MasterSwordBeam extends AbstractHurtingProjectile {
                 entity.hurt(DamageSource.MAGIC, 5.0F);
             }
         }
+    }
+
+    protected void onHit(HitResult pResult) {
+        super.onHit(pResult);
+        if (!this.level.isClientSide) {
+            this.discard();
+        }
+
     }
 
     public boolean isPickable() {

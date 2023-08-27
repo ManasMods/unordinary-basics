@@ -139,10 +139,8 @@ public class UnordinaryBasics {
     }
 
     private void villagerTradesEvent(final VillagerTradesEvent event){
-        System.out.println("hello");
         if (event.getType().equals(VillagerProfession.CARTOGRAPHER)) {
-            System.out.println("hello2");
-            event.getTrades().get(1).add(new TreasureMapForEmeralds(12, UBTags.Structures.MASTER_SWORD_SHRINE,"filled_map.unordinary_basics.master_sword_shrine", MapDecoration.Type.RED_X,2,5));
+            event.getTrades().get(3).add(new TreasureMapForEmeralds(12, UBTags.Structures.MASTER_SWORD_SHRINE,"filled_map.unordinary_basics.master_sword_shrine", MapDecoration.Type.RED_X,2,5));
         }
     }
 

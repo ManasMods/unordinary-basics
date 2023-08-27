@@ -8,6 +8,7 @@ import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.Mth;
 
 public class MasterSwordBeamRenderer extends EntityRenderer<MasterSwordBeam> {
     private static final ResourceLocation TEXTURE_LOCATION = new ResourceLocation("unordinary_basics:textures/entity/master_sword_beam.png");
@@ -30,7 +31,9 @@ public class MasterSwordBeamRenderer extends EntityRenderer<MasterSwordBeam> {
         pMatrixStack.scale(-1.0F, -1.0F, 1.0F);
         pMatrixStack.translate(0d,0d,0d);
         VertexConsumer vertexconsumer = pBuffer.getBuffer(this.model.renderType(this.getTextureLocation(pEntity)));
-
+        float f = Mth.rotlerp(pEntity.yRotO, pEntity.getYRot(), pPartialTick);
+        float f1 = Mth.lerp(pPartialTick, pEntity.xRotO, pEntity.getXRot());
+        this.model.rotBeam(f,f1);
         this.model.rotate(pEntity);
         this.model.renderToBuffer(pMatrixStack, vertexconsumer, pPackedLight, OverlayTexture.NO_OVERLAY, 1.0F, 1.0F, 1.0F, 1.0F);
         pMatrixStack.popPose();
