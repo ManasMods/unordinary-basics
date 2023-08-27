@@ -1,6 +1,6 @@
 package com.github.manasmods.unordinary_basics.registry;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.entity.GrizzlyBearEntity;
 import com.github.manasmods.unordinary_basics.entity.GrolarBearEntity;
 import com.github.manasmods.unordinary_basics.entity.MasterSwordBeam;
@@ -30,11 +30,11 @@ public class UBEntityTypes {
                 () -> EntityType.Builder.<NonExplosiveWitherSkull>of(NonExplosiveWitherSkull::new, MobCategory.MISC)
                         .sized(0.3125F, 0.3125F)
                         .clientTrackingRange(4).updateInterval(10)
-                        .build(new ResourceLocation(Unordinary_Basics.MOD_ID,"non_explosive_wither_skull").toString()));
+                        .build(new ResourceLocation(UnordinaryBasics.MOD_ID,"non_explosive_wither_skull").toString()));
         MASTER_SWORD_BEAM = registry.register("master_sword_beam",
                 () -> EntityType.Builder.<MasterSwordBeam>of(MasterSwordBeam::new, MobCategory.MISC)
                         .sized(1f, 0.3125F)
                         .clientTrackingRange(4).updateInterval(10)
-                        .build(new ResourceLocation(Unordinary_Basics.MOD_ID,"master_sword_beam").toString()));
+                        .build(new ResourceLocation(UnordinaryBasics.MOD_ID,"master_sword_beam").toString()));
     }
 }

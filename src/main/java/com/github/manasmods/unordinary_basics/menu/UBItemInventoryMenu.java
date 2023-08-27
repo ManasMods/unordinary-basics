@@ -1,11 +1,9 @@
 package com.github.manasmods.unordinary_basics.menu;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.capability.CapabilityUBInventory;
 import com.github.manasmods.unordinary_basics.capability.IUBInventoryItem;
 import com.github.manasmods.unordinary_basics.capability.UBInventoryItemStackHandler;
 import com.github.manasmods.unordinary_basics.client.ClientUBInventoryData;
-import com.github.manasmods.unordinary_basics.menu.slot.SlotUBInventory;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.network.protocol.game.ClientboundContainerSetSlotPacket;
 import net.minecraft.resources.ResourceLocation;

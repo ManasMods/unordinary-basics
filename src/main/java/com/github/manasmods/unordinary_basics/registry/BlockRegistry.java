@@ -24,7 +24,7 @@ import java.util.List;
 public class BlockRegistry {
     /**
      * This Method will register all Blocks with their BlockItems to Forge.
-     * It is called though the {@link Unordinary_BasicsRegistry#register(IEventBus)} Method.
+     * It is called though the {@link UBRegistry#register(IEventBus)} Method.
      */
     static void register(DeferredRegister<Item> itemRegistry, DeferredRegister<Block> blockRegistry) {
         registerBlocks(blockRegistry); // Registers all Blocks

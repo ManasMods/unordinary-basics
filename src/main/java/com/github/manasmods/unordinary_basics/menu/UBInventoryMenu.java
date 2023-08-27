@@ -1,21 +1,16 @@
 package com.github.manasmods.unordinary_basics.menu;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.capability.CapabilityUBInventory;
 import com.github.manasmods.unordinary_basics.capability.IUBInventoryItem;
 import com.github.manasmods.unordinary_basics.capability.UBInventoryItemStackHandler;
 import com.github.manasmods.unordinary_basics.client.ClientUBInventoryData;
 import com.github.manasmods.unordinary_basics.menu.slot.SlotUBInventory;
-import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
-import com.github.manasmods.unordinary_basics.network.toserver.RequestUBInventoryMenu;
 import com.mojang.datafixers.util.Pair;
-import net.minecraft.core.NonNullList;
-import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.game.ClientboundContainerSetSlotPacket;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.Container;
-import net.minecraft.world.SimpleMenuProvider;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Inventory;
@@ -33,7 +28,6 @@ import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.wrapper.InvWrapper;
 import net.minecraftforge.items.wrapper.PlayerArmorInvWrapper;
 import net.minecraftforge.items.wrapper.PlayerOffhandInvWrapper;
-import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
@@ -57,10 +51,10 @@ public class UBInventoryMenu extends RecipeBookMenu<CraftingContainer> {
     public static final ResourceLocation EMPTY_ARMOR_SLOT_LEGGINGS = new ResourceLocation("item/empty_armor_slot_leggings");
     public static final ResourceLocation EMPTY_ARMOR_SLOT_BOOTS = new ResourceLocation("item/empty_armor_slot_boots");
     public static final ResourceLocation EMPTY_ARMOR_SLOT_SHIELD = new ResourceLocation("item/empty_armor_slot_shield");
-    public static final ResourceLocation EMPTY_ARMOR_SLOT_BACK_PACK = new ResourceLocation(Unordinary_Basics.MOD_ID,"item/empty_slots/empty_armor_slot_back_pack");
-    public static final ResourceLocation EMPTY_ARMOR_SLOT_BACK_WINGS = new ResourceLocation(Unordinary_Basics.MOD_ID,"item/empty_slots/empty_armor_slot_back_wings");
-    public static final ResourceLocation EMPTY_ARMOR_SLOT_BACK_QUIVER = new ResourceLocation(Unordinary_Basics.MOD_ID,"item/empty_slots/empty_armor_slot_back_quiver");
-    public static final ResourceLocation EMPTY_ARMOR_SLOT_WAIST = new ResourceLocation(Unordinary_Basics.MOD_ID,"item/empty_slots/empty_armor_slot_waist");
+    public static final ResourceLocation EMPTY_ARMOR_SLOT_BACK_PACK = new ResourceLocation(UnordinaryBasics.MOD_ID,"item/empty_slots/empty_armor_slot_back_pack");
+    public static final ResourceLocation EMPTY_ARMOR_SLOT_BACK_WINGS = new ResourceLocation(UnordinaryBasics.MOD_ID,"item/empty_slots/empty_armor_slot_back_wings");
+    public static final ResourceLocation EMPTY_ARMOR_SLOT_BACK_QUIVER = new ResourceLocation(UnordinaryBasics.MOD_ID,"item/empty_slots/empty_armor_slot_back_quiver");
+    public static final ResourceLocation EMPTY_ARMOR_SLOT_WAIST = new ResourceLocation(UnordinaryBasics.MOD_ID,"item/empty_slots/empty_armor_slot_waist");
     static final ResourceLocation[] TEXTURE_EMPTY_SLOTS = new ResourceLocation[]{EMPTY_ARMOR_SLOT_BOOTS, EMPTY_ARMOR_SLOT_LEGGINGS, EMPTY_ARMOR_SLOT_CHESTPLATE, EMPTY_ARMOR_SLOT_HELMET};
 
     private final int windowId;

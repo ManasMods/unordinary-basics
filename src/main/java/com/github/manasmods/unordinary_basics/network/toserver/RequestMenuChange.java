@@ -1,6 +1,6 @@
 package com.github.manasmods.unordinary_basics.network.toserver;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import lombok.RequiredArgsConstructor;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.server.level.ServerPlayer;
@@ -25,10 +25,10 @@ public class RequestMenuChange {
             ServerPlayer player = ctx.get().getSender();
 
             switch (targetMenu) {
-                case UB_FLETCHING -> Unordinary_Basics.getInstance().getApotheosisIntegration().ifPresent(apotheosisIntegration -> {
+                case UB_FLETCHING -> UnordinaryBasics.getInstance().getApotheosisIntegration().ifPresent(apotheosisIntegration -> {
                     apotheosisIntegration.openUnordinaryBasicsFletchingMenu(player);
                 });
-                case APOTHEOSIS_FLETCHING -> Unordinary_Basics.getInstance().getApotheosisIntegration().ifPresent(apotheosisIntegration -> {
+                case APOTHEOSIS_FLETCHING -> UnordinaryBasics.getInstance().getApotheosisIntegration().ifPresent(apotheosisIntegration -> {
                     apotheosisIntegration.openApotheosisFletchingMenu(player);
                 });
             }

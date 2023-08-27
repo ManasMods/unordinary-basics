@@ -3,7 +3,7 @@ package com.github.manasmods.unordinary_basics.client;
 import com.github.manasmods.manascore.client.keybinding.KeybindingRegistry;
 import com.github.manasmods.manascore.tab.InventoryTabRegistry;
 import com.github.manasmods.manascore.tab.TabPosition;
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
 import com.github.manasmods.unordinary_basics.block.entity.Unordinary_BasicsBlockEntities;
 import com.github.manasmods.unordinary_basics.client.block_entity_renderer.ItemSorterBlockEntityRenderer;
@@ -60,14 +60,14 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-@Mod.EventBusSubscriber(modid = Unordinary_Basics.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@Mod.EventBusSubscriber(modid = UnordinaryBasics.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class UBClient {
 
     private static final List<String> BANNER_PATTERN_HASHES = Arrays.asList("b", "bl", "bo", "br", "bri", "bs", "bt", "bts", "cbo", "cr", "cre", "cs", "dls", "drs", "flo", "glb", "gra", "gru", "hh", "hhb", "ld", "ls", "lud", "mc", "moj", "mr", "ms", "pig", "rd", "rs", "rud", "sc", "sku", "ss", "tl", "tr", "ts", "tt", "tts", "vh", "vhr");
 
     @SubscribeEvent
     public void init(FMLCommonSetupEvent event) {
-        Unordinary_Basics.getInstance().getApotheosisIntegration().ifPresent(apotheosisIntegration -> {
+        UnordinaryBasics.getInstance().getApotheosisIntegration().ifPresent(apotheosisIntegration -> {
             event.enqueueWork(() -> MinecraftForge.EVENT_BUS.addListener(ApotheosisIntegrationClient::onOpenApotheosisMenu));
         });
     }
@@ -76,9 +76,9 @@ public class UBClient {
     public static void init(final FMLClientSetupEvent e) {
         // Patchouli custom page
         try {
-            ClientBookRegistry.INSTANCE.pageTypes.put(new ResourceLocation(Unordinary_Basics.MOD_ID, "multi_spotlight"), PageMultiSpotlight.class);
+            ClientBookRegistry.INSTANCE.pageTypes.put(new ResourceLocation(UnordinaryBasics.MOD_ID, "multi_spotlight"), PageMultiSpotlight.class);
         } catch (Exception ex) {
-            Unordinary_Basics.LOGGER.info("Patchouli not found");
+            UnordinaryBasics.LOGGER.info("Patchouli not found");
         }
 
         e.enqueueWork(UBClient::registerBlockTransparencies);
@@ -106,7 +106,7 @@ public class UBClient {
     public static void onTextureStitch(TextureStitchEvent.Pre event) {
         if (event.getAtlas().location() == Sheets.BANNER_SHEET) {
             for (String hash : BANNER_PATTERN_HASHES) {
-                event.addSprite(new ResourceLocation(Unordinary_Basics.MOD_ID, "entity/banner/" + hash));
+                event.addSprite(new ResourceLocation(UnordinaryBasics.MOD_ID, "entity/banner/" + hash));
             }
         }
 
@@ -120,7 +120,7 @@ public class UBClient {
             );
 
             for (String s : registerValues) {
-                event.addSprite(new ResourceLocation(Unordinary_Basics.MOD_ID, "item/empty_slots/empty_armor_slot_" + s));
+                event.addSprite(new ResourceLocation(UnordinaryBasics.MOD_ID, "item/empty_slots/empty_armor_slot_" + s));
             }
         }
     }

@@ -1,12 +1,10 @@
 package com.github.manasmods.unordinary_basics.item.custom;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.capability.CapabilityUBInventory;
 import com.github.manasmods.unordinary_basics.capability.IUBInventoryItem;
 import com.github.manasmods.unordinary_basics.capability.ItemStackHandlerCapabilityProvider;
-import com.github.manasmods.unordinary_basics.client.gui.Unordinary_BasicsInventoryScreen;
 import com.github.manasmods.unordinary_basics.client.gui.Unordinary_BasicsItemInventoryScreen;
-import com.github.manasmods.unordinary_basics.menu.UBInventoryMenu;
 import com.github.manasmods.unordinary_basics.menu.UBItemInventoryMenu;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -26,7 +24,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class QuiverItem extends Item implements IUBInventoryItem {
-    public static final ResourceLocation TEXTURE = new ResourceLocation(Unordinary_Basics.MOD_ID, "textures/gui/quiver_slots.png");
+    public static final ResourceLocation TEXTURE = new ResourceLocation(UnordinaryBasics.MOD_ID, "textures/gui/quiver_slots.png");
     public QuiverItem(Properties pProperties) {
         super(pProperties);
     }

@@ -1,6 +1,6 @@
 package com.github.manasmods.unordinary_basics.utils;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
@@ -9,6 +9,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.levelgen.structure.Structure;
 
 public class UBTags {
 
@@ -26,7 +27,7 @@ public class UBTags {
 
 
         static TagKey<Block> modTag(String name) {
-            return BlockTags.create(new ResourceLocation(Unordinary_Basics.MOD_ID, name));
+            return BlockTags.create(new ResourceLocation(UnordinaryBasics.MOD_ID, name));
         }
 
         static TagKey<Block> forgeTag(String name) {
@@ -49,7 +50,7 @@ public class UBTags {
 
 
         static TagKey<Item> modTag(String name) {
-            return ItemTags.create(new ResourceLocation(Unordinary_Basics.MOD_ID, name));
+            return ItemTags.create(new ResourceLocation(UnordinaryBasics.MOD_ID, name));
         }
 
         static TagKey<Item> forgeTag(String name) {
@@ -58,12 +59,24 @@ public class UBTags {
     }
 
     public static class EntityTypes {
-        public static TagKey<EntityType<?>> SCULK_ENEMIES = forgeTag("entity_types/sculk_enemies");
+        public static TagKey<EntityType<?>> SCULK_ENEMIES = forgeTag("sculk_enemies");
         static TagKey<EntityType<?>> forgeTag(String name) {
             return create(new ResourceLocation("forge", name));
         }
         static TagKey<EntityType<?>> create(final ResourceLocation name) {
             return TagKey.create(Registry.ENTITY_TYPE_REGISTRY, name);
+        }
+    }
+
+    public static class Structures {
+
+        public static TagKey<Structure> MASTER_SWORD_SHRINE = create(new ResourceLocation(UnordinaryBasics.MOD_ID,"master_sword_shrine"));
+
+        static TagKey<Structure> forgeTag(String name) {
+            return create(new ResourceLocation("forge", name));
+        }
+        static TagKey<Structure> create(final ResourceLocation name) {
+            return TagKey.create(Registry.STRUCTURE_REGISTRY, name);
         }
     }
 }

@@ -1,15 +1,13 @@
 package com.github.manasmods.unordinary_basics.handler;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
-import net.minecraft.core.BlockPos;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid= Unordinary_Basics.MOD_ID)
+@Mod.EventBusSubscriber(modid= UnordinaryBasics.MOD_ID)
 public class UBProneHandler {
 
     @SubscribeEvent

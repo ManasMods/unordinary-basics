@@ -1,6 +1,6 @@
 package com.github.manasmods.unordinary_basics.entity.client;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.entity.MasterSwordBeam;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
@@ -13,7 +13,7 @@ import net.minecraft.resources.ResourceLocation;
 
 public class MasterSwordBeamModel<T extends MasterSwordBeam> extends EntityModel<T> {
     // This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
-    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(Unordinary_Basics.MOD_ID, "master_sword_beam"), "main");
+    public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(UnordinaryBasics.MOD_ID, "master_sword_beam"), "main");
     private final ModelPart bone;
 
     public MasterSwordBeamModel(ModelPart root) {

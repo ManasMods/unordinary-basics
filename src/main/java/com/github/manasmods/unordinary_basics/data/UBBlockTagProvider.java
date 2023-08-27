@@ -1,7 +1,7 @@
 package com.github.manasmods.unordinary_basics.data;
 
 import com.github.manasmods.manascore.api.data.gen.BlockTagProvider;
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
 import com.github.manasmods.unordinary_basics.utils.UBTags;
 import net.minecraft.tags.BlockTags;
@@ -9,9 +9,9 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.data.event.GatherDataEvent;
 
-public class Unordinary_BasicsBlockTagProvider extends BlockTagProvider {
-    public Unordinary_BasicsBlockTagProvider(GatherDataEvent gatherDataEvent) {
-        super(gatherDataEvent, Unordinary_Basics.MOD_ID);
+public class UBBlockTagProvider extends BlockTagProvider {
+    public UBBlockTagProvider(GatherDataEvent gatherDataEvent) {
+        super(gatherDataEvent, UnordinaryBasics.MOD_ID);
     }
 
     @Override

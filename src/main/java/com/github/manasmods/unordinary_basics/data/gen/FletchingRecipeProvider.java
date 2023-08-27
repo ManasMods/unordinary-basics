@@ -1,6 +1,6 @@
 package com.github.manasmods.unordinary_basics.data.gen;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.google.common.collect.Sets;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -42,7 +42,7 @@ public abstract class FletchingRecipeProvider implements DataProvider {
         try {
             DataProvider.saveStable(pCache, pRecipeJson, pPath);
         } catch (IOException e) {
-            Unordinary_Basics.getLogger().error("Couldn't save fletching recipe to {}", pPath, e);
+            UnordinaryBasics.getLogger().error("Couldn't save fletching recipe to {}", pPath, e);
         }
     }
 
@@ -50,7 +50,7 @@ public abstract class FletchingRecipeProvider implements DataProvider {
 
     @Override
     public String getName() {
-        return Unordinary_Basics.MOD_ID + ":fletching";
+        return UnordinaryBasics.MOD_ID + ":fletching";
     }
 
     protected FletchingRecipeBuilder fletch(ItemLike result, int amount) {

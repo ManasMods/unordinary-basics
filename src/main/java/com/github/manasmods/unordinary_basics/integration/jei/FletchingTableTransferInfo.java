@@ -1,12 +1,11 @@
 package com.github.manasmods.unordinary_basics.integration.jei;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.menu.FletchingTableMenu;
 import com.github.manasmods.unordinary_basics.menu.Unordinary_BasicsMenuTypes;
 import com.github.manasmods.unordinary_basics.recipe.FletchingRecipe;
 import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.recipe.transfer.IRecipeTransferInfo;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.inventory.Slot;
 
@@ -26,7 +25,7 @@ public class FletchingTableTransferInfo implements IRecipeTransferInfo<Fletching
 
     @Override
     public RecipeType<FletchingRecipe> getRecipeType() {
-        return RecipeType.create(Unordinary_Basics.MOD_ID,"fletching",FletchingRecipe.class);
+        return RecipeType.create(UnordinaryBasics.MOD_ID,"fletching",FletchingRecipe.class);
     }
 
     @Override

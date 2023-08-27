@@ -1,7 +1,7 @@
 package com.github.manasmods.unordinary_basics.data;
 
 import com.github.manasmods.manascore.api.data.gen.ItemModelProvider;
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
 import net.minecraft.resources.ResourceLocation;
@@ -13,9 +13,9 @@ import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-public class Unordinary_BasicsItemModelProvider extends ItemModelProvider {
-    public Unordinary_BasicsItemModelProvider(GatherDataEvent gatherDataEvent) {
-        super(gatherDataEvent, Unordinary_Basics.MOD_ID);
+public class UBItemModelProvider extends ItemModelProvider {
+    public UBItemModelProvider(GatherDataEvent gatherDataEvent) {
+        super(gatherDataEvent, UnordinaryBasics.MOD_ID);
     }
 
     @Override
@@ -46,10 +46,10 @@ public class Unordinary_BasicsItemModelProvider extends ItemModelProvider {
         handheldSingleTexture(Unordinary_BasicsItems.DECAYED_MASTER_SWORD);
         handheldSingleTexture(Unordinary_BasicsItems.MASTER_SWORD);
 
-        basicItem(new ResourceLocation(Unordinary_Basics.MOD_ID,"quiver_no_items"));
-        basicItem(new ResourceLocation(Unordinary_Basics.MOD_ID,"quiver_has_items"));
+        basicItem(new ResourceLocation(UnordinaryBasics.MOD_ID,"quiver_no_items"));
+        basicItem(new ResourceLocation(UnordinaryBasics.MOD_ID,"quiver_has_items"));
 
-        basicItem(new ResourceLocation(Unordinary_Basics.MOD_ID,"builders_glove_gui"));
+        basicItem(new ResourceLocation(UnordinaryBasics.MOD_ID,"builders_glove_gui"));
         
         wallItem(Unordinary_BasicsBlocks.ANDESITE_BRICK_WALL, Unordinary_BasicsBlocks.ANDESITE_BRICKS);
         wallItem(Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICK_WALL, Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICKS);
@@ -75,8 +75,8 @@ public class Unordinary_BasicsItemModelProvider extends ItemModelProvider {
         //generate models for slime compass
         for (int i = 0; i < 32; ++i){
             if (i >= 10) {
-                basicItem(new ResourceLocation(Unordinary_Basics.MOD_ID, "slime_compass/slime_compass_" + i),new ResourceLocation("unordinary_basics", "item/slime_compass/slime_compass_" + i));
-            } else basicItem(new ResourceLocation(Unordinary_Basics.MOD_ID, "slime_compass/slime_compass_0" + i),new ResourceLocation("unordinary_basics", "item/slime_compass/slime_compass_0" + i));
+                basicItem(new ResourceLocation(UnordinaryBasics.MOD_ID, "slime_compass/slime_compass_" + i),new ResourceLocation("unordinary_basics", "item/slime_compass/slime_compass_" + i));
+            } else basicItem(new ResourceLocation(UnordinaryBasics.MOD_ID, "slime_compass/slime_compass_0" + i),new ResourceLocation("unordinary_basics", "item/slime_compass/slime_compass_0" + i));
         }
     }
 
@@ -95,27 +95,27 @@ public class Unordinary_BasicsItemModelProvider extends ItemModelProvider {
 
     public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
-                .texture("texture",  new ResourceLocation(Unordinary_Basics.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+                .texture("texture",  new ResourceLocation(UnordinaryBasics.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
 
     public void buttonItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))
-                .texture("texture",  new ResourceLocation(Unordinary_Basics.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+                .texture("texture",  new ResourceLocation(UnordinaryBasics.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
 
     public void wallItem(Block block, Block baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block).getPath(), mcLoc("block/wall_inventory"))
-                .texture("wall",  new ResourceLocation(Unordinary_Basics.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock).getPath()));
+                .texture("wall",  new ResourceLocation(UnordinaryBasics.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock).getPath()));
     }
 
     private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(Unordinary_Basics.MOD_ID,"item/" + item.getId().getPath()));
+                new ResourceLocation(UnordinaryBasics.MOD_ID,"item/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder blockItem(Block block) {
         return withExistingParent(ForgeRegistries.BLOCKS.getKey(block).getPath(),
-                new ResourceLocation(Unordinary_Basics.MOD_ID,"block/" + ForgeRegistries.BLOCKS.getKey(block).getPath()));
+                new ResourceLocation(UnordinaryBasics.MOD_ID,"block/" + ForgeRegistries.BLOCKS.getKey(block).getPath()));
     }
 }

@@ -21,7 +21,7 @@ public class MixinItemStack {
 
     @Inject(method = "use(Lnet/minecraft/world/level/Level;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;)Lnet/minecraft/world/InteractionResultHolder;", at = @At("HEAD"), cancellable = true)
     public void onUse(Level level, Player player, InteractionHand hand, CallbackInfoReturnable<InteractionResultHolder<ItemStack>> callback) {
-        if (player.isShiftKeyDown()) {
+        if (!player.isCrouching()) {
             ItemStack stack = player.getItemInHand(hand);
             Map<Enchantment, Integer> enchantmentMap = EnchantmentHelper.getEnchantments(stack);
             if (stack.getItem().canBeDepleted() && player.experienceLevel >= 1 && enchantmentMap.containsKey(Enchantments.MENDING) && stack.getDamageValue() > 0) {

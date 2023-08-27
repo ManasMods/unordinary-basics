@@ -1,6 +1,6 @@
 package com.github.manasmods.unordinary_basics.item.custom;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.capability.ItemStackHandlerCapabilityProvider;
 import com.github.manasmods.unordinary_basics.menu.BuildersGloveMenu;
 import com.github.manasmods.unordinary_basics.utils.BlockBreakHelper;
@@ -169,7 +169,7 @@ public class BuildersGloveItem extends Item {
             UseOnContext customContext = new UseOnContext(pContext.getLevel(), pContext.getPlayer(), pContext.getHand(), blockStack, hitResult);
             result.set(blockStack.getItem().useOn(customContext));
         } else {
-            Unordinary_Basics.getLogger().error("Couldn't get hit result! Unable to place block.");
+            UnordinaryBasics.getLogger().error("Couldn't get hit result! Unable to place block.");
         }
     }
 

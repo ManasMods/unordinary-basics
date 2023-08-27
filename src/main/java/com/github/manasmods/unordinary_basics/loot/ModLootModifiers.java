@@ -1,6 +1,6 @@
 package com.github.manasmods.unordinary_basics.loot;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.mojang.serialization.Codec;
 import net.minecraftforge.common.loot.IGlobalLootModifier;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -10,7 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModLootModifiers {
     public static final DeferredRegister<Codec<? extends IGlobalLootModifier>> LOOT_MODIFIER_SERIALIZERS =
-            DeferredRegister.create(ForgeRegistries.Keys.GLOBAL_LOOT_MODIFIER_SERIALIZERS, Unordinary_Basics.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.Keys.GLOBAL_LOOT_MODIFIER_SERIALIZERS, UnordinaryBasics.MOD_ID);
 
     public static final RegistryObject<Codec<? extends IGlobalLootModifier>> ADD_ITEM =
             LOOT_MODIFIER_SERIALIZERS.register("add_item", AddItemModifier.CODEC);

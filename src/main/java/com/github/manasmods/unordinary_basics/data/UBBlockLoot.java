@@ -1,16 +1,16 @@
 package com.github.manasmods.unordinary_basics.data;
 
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
-import com.github.manasmods.unordinary_basics.registry.Unordinary_BasicsRegistry;
+import com.github.manasmods.unordinary_basics.registry.UBRegistry;
 import net.minecraft.data.loot.BlockLoot;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 
-public class Unordinary_BasicsBlockLoot extends BlockLoot {
+public class UBBlockLoot extends BlockLoot {
 
     @Override
     protected Iterable<Block> getKnownBlocks() {
-        return Unordinary_BasicsRegistry.getKnownBlocks();
+        return UBRegistry.getKnownBlocks();
     }
 
     @SuppressWarnings("ConstantConditions")

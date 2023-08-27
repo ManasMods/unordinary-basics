@@ -2,20 +2,7 @@ package com.github.manasmods.unordinary_basics.registry;
 
 
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsCreativeTab;
-import com.github.manasmods.unordinary_basics.item.custom.BackpackItem;
-import com.github.manasmods.unordinary_basics.item.custom.BuildersGloveItem;
-import com.github.manasmods.unordinary_basics.item.custom.DecayedMasterSwordItem;
-import com.github.manasmods.unordinary_basics.item.custom.EffectCurativeItem;
-import com.github.manasmods.unordinary_basics.item.custom.GliderItem;
-import com.github.manasmods.unordinary_basics.item.custom.LeaperItem;
-import com.github.manasmods.unordinary_basics.item.custom.MasterSwordItem;
-import com.github.manasmods.unordinary_basics.item.custom.PotionBeltItem;
-import com.github.manasmods.unordinary_basics.item.custom.QuiverItem;
-import com.github.manasmods.unordinary_basics.item.custom.RabbitBootsItem;
-import com.github.manasmods.unordinary_basics.item.custom.RedstonePouchItem;
-import com.github.manasmods.unordinary_basics.item.custom.SlimeCompassItem;
-import com.github.manasmods.unordinary_basics.item.custom.TechnobladeCrownItem;
-import com.github.manasmods.unordinary_basics.item.custom.ZenithItem;
+import com.github.manasmods.unordinary_basics.item.custom.*;
 import com.github.manasmods.unordinary_basics.item.templates.MusicDiscItem;
 import com.github.manasmods.unordinary_basics.item.templates.TooltipItem;
 import com.github.manasmods.unordinary_basics.sound.UBSounds;
@@ -29,7 +16,7 @@ import net.minecraftforge.registries.DeferredRegister;
 class ItemRegistry {
     /**
      * This Method will register all Items to Forge.
-     * It is called though the {@link Unordinary_BasicsRegistry#register(IEventBus)} Method.
+     * It is called though the {@link UBRegistry#register(IEventBus)} Method.
      */
     static void register(DeferredRegister<Item> registry) {
         registerMisc(registry);

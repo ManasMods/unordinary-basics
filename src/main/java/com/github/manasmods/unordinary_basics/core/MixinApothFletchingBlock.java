@@ -1,6 +1,6 @@
 package com.github.manasmods.unordinary_basics.core;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.menu.FletchingTableMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -31,7 +31,7 @@ public class MixinApothFletchingBlock extends FletchingTableBlock {
 
     @Inject(method = "use(Lnet/minecraft/world/level/block/state/BlockState;Lnet/minecraft/world/level/Level;Lnet/minecraft/core/BlockPos;Lnet/minecraft/world/entity/player/Player;Lnet/minecraft/world/InteractionHand;Lnet/minecraft/world/phys/BlockHitResult;)Lnet/minecraft/world/InteractionResult;", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/player/Player;openMenu(Lnet/minecraft/world/MenuProvider;)Ljava/util/OptionalInt;"), cancellable = true)
     private void onGetMenuProvider(BlockState state, Level worldIn, BlockPos pos, Player player, InteractionHand handIn, BlockHitResult hit, CallbackInfoReturnable<InteractionResult> cir) {
-        NetworkHooks.openScreen((ServerPlayer) player, new SimpleMenuProvider((pContainerId, pInventory, pPlayer1) -> new FletchingTableMenu(pContainerId, ContainerLevelAccess.create(worldIn, pos), pPlayer1.getInventory(),pos), Component.translatable(Unordinary_Basics.MOD_ID + ".menu.fletching_table.title")), buffer -> {
+        NetworkHooks.openScreen((ServerPlayer) player, new SimpleMenuProvider((pContainerId, pInventory, pPlayer1) -> new FletchingTableMenu(pContainerId, ContainerLevelAccess.create(worldIn, pos), pPlayer1.getInventory(),pos), Component.translatable(UnordinaryBasics.MOD_ID + ".menu.fletching_table.title")), buffer -> {
             buffer.writeBlockPos(pos);
             buffer.writeResourceLocation(worldIn.dimension().location());
         });

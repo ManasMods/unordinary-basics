@@ -1,6 +1,6 @@
 package com.github.manasmods.unordinary_basics.data;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.utils.UBTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.EntityTypeTagsProvider;
@@ -10,13 +10,13 @@ import net.minecraftforge.data.event.GatherDataEvent;
 
 import javax.annotation.Nullable;
 
-public class Unordinary_BasicsEntityTypeTagProvider extends EntityTypeTagsProvider {
-    public Unordinary_BasicsEntityTypeTagProvider(DataGenerator generator, String modId, @Nullable ExistingFileHelper existingFileHelper) {
+public class UBEntityTypeTagProvider extends EntityTypeTagsProvider {
+    public UBEntityTypeTagProvider(DataGenerator generator, String modId, @Nullable ExistingFileHelper existingFileHelper) {
         super(generator, modId, existingFileHelper);
     }
 
-    public Unordinary_BasicsEntityTypeTagProvider(GatherDataEvent gatherDataEvent) {
-        this(gatherDataEvent.getGenerator(), Unordinary_Basics.MOD_ID, gatherDataEvent.getExistingFileHelper());
+    public UBEntityTypeTagProvider(GatherDataEvent gatherDataEvent) {
+        this(gatherDataEvent.getGenerator(), UnordinaryBasics.MOD_ID, gatherDataEvent.getExistingFileHelper());
     }
 
     @Override

@@ -4,7 +4,7 @@ import com.github.manasmods.unordinary_basics.menu.container.FletchingContainer;
 import com.github.manasmods.unordinary_basics.menu.slot.FilteredSlot;
 import com.github.manasmods.unordinary_basics.menu.slot.FletchingResultSlot;
 import com.github.manasmods.unordinary_basics.recipe.FletchingRecipe;
-import com.github.manasmods.unordinary_basics.registry.Unordinary_BasicsRecipeTypeRegistry;
+import com.github.manasmods.unordinary_basics.registry.UBRecipeTypeRegistry;
 import lombok.Getter;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.protocol.game.ClientboundContainerSetSlotPacket;
@@ -12,7 +12,10 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.Container;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.*;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerLevelAccess;
+import net.minecraft.world.inventory.ResultContainer;
+import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
@@ -177,7 +180,7 @@ public class FletchingTableMenu extends AbstractContainerMenu {
         if (player instanceof ServerPlayer serverPlayer) {
             ItemStack itemstack = ItemStack.EMPTY;
 
-            Optional<FletchingRecipe> optional = level.getServer().getRecipeManager().getRecipeFor(Unordinary_BasicsRecipeTypeRegistry.FLETCHING_RECIPE.get(), craftingContainer, level);
+            Optional<FletchingRecipe> optional = level.getServer().getRecipeManager().getRecipeFor(UBRecipeTypeRegistry.FLETCHING_RECIPE.get(), craftingContainer, level);
             if (optional.isPresent()) {
                 FletchingRecipe fletchingRecipe = optional.get();
                 if (resultContainer.setRecipeUsed(level, serverPlayer, fletchingRecipe)) {

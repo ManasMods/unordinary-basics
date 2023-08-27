@@ -1,12 +1,12 @@
 package com.github.manasmods.unordinary_basics.client.gui.overlay;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RenderGuiOverlayEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(value = Dist.CLIENT, modid = Unordinary_Basics.MOD_ID)
+@Mod.EventBusSubscriber(value = Dist.CLIENT, modid = UnordinaryBasics.MOD_ID)
 public class OverlayEventHandler {
 
     private static final QuiverArrowHudOverlay quiverOverlay = new QuiverArrowHudOverlay();

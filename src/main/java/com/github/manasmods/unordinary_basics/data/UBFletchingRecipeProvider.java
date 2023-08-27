@@ -15,8 +15,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.function.Consumer;
 
-public class Unordinary_BasicsFletchingRecipeProvider extends FletchingRecipeProvider {
-    public Unordinary_BasicsFletchingRecipeProvider(GatherDataEvent gatherDataEvent) {
+public class UBFletchingRecipeProvider extends FletchingRecipeProvider {
+    public UBFletchingRecipeProvider(GatherDataEvent gatherDataEvent) {
         super(gatherDataEvent.getGenerator());
     }
 

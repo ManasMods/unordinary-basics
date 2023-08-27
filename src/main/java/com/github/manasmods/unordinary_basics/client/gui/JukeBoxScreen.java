@@ -1,7 +1,7 @@
 package com.github.manasmods.unordinary_basics.client.gui;
 
 import com.github.manasmods.manascore.api.client.gui.widget.ImagePredicateButton;
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.menu.JukeBoxMenu;
 import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
 import com.github.manasmods.unordinary_basics.network.toserver.RequestJukeboxUpdate;
@@ -16,9 +16,9 @@ import net.minecraft.world.entity.player.Inventory;
 
 public class JukeBoxScreen extends AbstractContainerScreen<JukeBoxMenu> {
     private final ImagePredicateButton playButton, stopButton;
-    private static final ResourceLocation BACKGROUND = new ResourceLocation(Unordinary_Basics.MOD_ID, "textures/gui/jukebox.png");
-    private static final ResourceLocation PLAY_BUTTON = new ResourceLocation(Unordinary_Basics.MOD_ID, "textures/gui/play_button.png");
-    private static final ResourceLocation STOP_BUTTON = new ResourceLocation(Unordinary_Basics.MOD_ID, "textures/gui/stop_button.png");
+    private static final ResourceLocation BACKGROUND = new ResourceLocation(UnordinaryBasics.MOD_ID, "textures/gui/jukebox.png");
+    private static final ResourceLocation PLAY_BUTTON = new ResourceLocation(UnordinaryBasics.MOD_ID, "textures/gui/play_button.png");
+    private static final ResourceLocation STOP_BUTTON = new ResourceLocation(UnordinaryBasics.MOD_ID, "textures/gui/stop_button.png");
 
     public JukeBoxScreen(JukeBoxMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);

@@ -1,9 +1,8 @@
 package com.github.manasmods.unordinary_basics.integration.jei;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.menu.container.FletchingContainer;
 import com.github.manasmods.unordinary_basics.recipe.FletchingRecipe;
-import com.github.manasmods.unordinary_basics.utils.Translation;
 import lombok.Getter;
 import lombok.extern.log4j.Log4j2;
 import mezz.jei.api.constants.VanillaTypes;
@@ -26,10 +25,10 @@ import javax.annotation.Nonnull;
 
 @Log4j2
 public class FletchingTableRecipeCategory implements IRecipeCategory<FletchingRecipe> {
-    public final static ResourceLocation UID = new ResourceLocation(Unordinary_Basics.MOD_ID, "fletching");
+    public final static ResourceLocation UID = new ResourceLocation(UnordinaryBasics.MOD_ID, "fletching");
     public final static ResourceLocation TEXTURE =
-        new ResourceLocation(Unordinary_Basics.MOD_ID, "textures/gui/fletching_table.png");
-    public static final RecipeType<FletchingRecipe> TYPE = RecipeType.create(Unordinary_Basics.MOD_ID, "fletching", FletchingRecipe.class);
+        new ResourceLocation(UnordinaryBasics.MOD_ID, "textures/gui/fletching_table.png");
+    public static final RecipeType<FletchingRecipe> TYPE = RecipeType.create(UnordinaryBasics.MOD_ID, "fletching", FletchingRecipe.class);
 
     @Getter
     private final IDrawable background;
@@ -45,7 +44,7 @@ public class FletchingTableRecipeCategory implements IRecipeCategory<FletchingRe
 
     @Override
     public RecipeType<FletchingRecipe> getRecipeType() {
-        return RecipeType.create(Unordinary_Basics.MOD_ID,"fletching",FletchingRecipe.class);
+        return RecipeType.create(UnordinaryBasics.MOD_ID,"fletching",FletchingRecipe.class);
     }
 
     @Override
