@@ -1,4 +1,4 @@
-// 1.19.2	2023-08-23T21:27:40.4597567	Item Models: unordinary_basics
+// 1.19.2	2023-08-25T15:56:37.4346909	Item Models: unordinary_basics
 c591a65ab6847e5ed4e223cb18d37d8c12c9502c assets/unordinary_basics/models/item/andesite_brick_wall.json
 5ce567547fddda86908f7d8019ae022837bf1d93 assets/unordinary_basics/models/item/animal_bait.json
 3fa35354859867f37932c7a7447b24132918cc78 assets/unordinary_basics/models/item/barrel_backpack.json
@@ -7,6 +7,7 @@ fa77afdd737e5e1ca27f8a23decd2bc5224a359f assets/unordinary_basics/models/item/bu
 bf17d078bb82d81df6832bd253b54d653efde40e assets/unordinary_basics/models/item/chest_backpack.json
 9772ab6e4ab1b878b167551cade62b90fee43fa3 assets/unordinary_basics/models/item/chiseled_soul_sandstone_wall.json
 01dcce72c146a1e60af4d996c5f00d54aa04a8bb assets/unordinary_basics/models/item/cut_soul_sandstone_wall.json
+c83445154d310a9407b1ff73f58251fe0d66e579 assets/unordinary_basics/models/item/decayed_master_sword.json
 7e79e3447f2a6ce7ef01b13eccfa1959f1a1949e assets/unordinary_basics/models/item/diorite_brick_wall.json
 592af3fce7e2806bb6a5bb657025d5f3501e7801 assets/unordinary_basics/models/item/dripstone_brick_wall.json
 4c1a65d0658434951780fbc0e73e81a6395e91dc assets/unordinary_basics/models/item/equine_tracker.json
@@ -15,6 +16,8 @@ bf17d078bb82d81df6832bd253b54d653efde40e assets/unordinary_basics/models/item/ch
 47517d7c241cf49f8409d444d91b392faa04ba08 assets/unordinary_basics/models/item/granite_brick_wall.json
 6baf37e2a4a314d83da934d5196b3180dbfe36f3 assets/unordinary_basics/models/item/item_sorter.json
 7aeb40e3fc8a63220b899dc85b6ed634a2d54a9d assets/unordinary_basics/models/item/map_book.json
+688db9238fd4601381b9097bf84cc9fff118044a assets/unordinary_basics/models/item/master_sword.json
+2cd877cc4df1e44e3e2f2dcf754f845646b6b88c assets/unordinary_basics/models/item/master_sword_shrine.json
 3d2ab708f1fd998245fcf681300da04d4753c74a assets/unordinary_basics/models/item/milk_bottle.json
 59cf1bbbc6cf48622bf2b4e92b3e75b762011c59 assets/unordinary_basics/models/item/music_disc_queen.json
 30f10936ad54d4371665d9bd0a4565654d1713c9 assets/unordinary_basics/models/item/polished_andesite_brick_wall.json

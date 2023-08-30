@@ -1,0 +1,35 @@
+{
+  "display": {
+    "icon": {
+      "item": "unordinary_basics:master_sword"
+    },
+    "title": {
+      "translate": "advancements.unordinary_basics.a_heroes_sword.title"
+    },
+    "description": {
+      "translate": "advancements.unordinary_basics.a_heroes_sword.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "parent": "unordinary_basics:a_very_ordinary_advancement",
+  "criteria": {
+    "in_shrine": {
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "structure": "unordinary_basics:master_sword_shrine"
+              }
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:location"
+    }
+  }
+}

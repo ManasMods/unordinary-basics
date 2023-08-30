@@ -1,7 +1,7 @@
 package com.github.manasmods.unordinary_basics.data;
 
 import com.github.manasmods.manascore.api.data.gen.BlockStateProvider;
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
@@ -15,10 +15,10 @@ import net.minecraftforge.data.event.GatherDataEvent;
 import java.util.Objects;
 
 
-public class Unordinary_BasicsBlockStateProvider extends BlockStateProvider {
+public class UBBlockStateProvider extends BlockStateProvider {
 
-    public Unordinary_BasicsBlockStateProvider(GatherDataEvent gatherDataEvent) {
-        super(gatherDataEvent, Unordinary_Basics.MOD_ID);
+    public UBBlockStateProvider(GatherDataEvent gatherDataEvent) {
+        super(gatherDataEvent, UnordinaryBasics.MOD_ID);
     }
 
     @Override
@@ -409,7 +409,6 @@ public class Unordinary_BasicsBlockStateProvider extends BlockStateProvider {
 
 
         private void modWalls() {
-        System.out.println("ModWalls");
 
         wallBlock((WallBlock) Unordinary_BasicsBlocks.ANDESITE_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.ANDESITE_BRICKS));
         wallBlock((WallBlock) Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICK_WALL, blockTexture(Unordinary_BasicsBlocks.POLISHED_ANDESITE_BRICKS));

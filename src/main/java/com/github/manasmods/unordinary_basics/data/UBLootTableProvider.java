@@ -17,17 +17,17 @@ import java.util.function.BiConsumer;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
 
-public class Unordinary_BasicsLootTableProvider extends LootTableProvider {
+public class UBLootTableProvider extends LootTableProvider {
 
 
-    public Unordinary_BasicsLootTableProvider(GatherDataEvent gatherDataEvent) {
+    public UBLootTableProvider(GatherDataEvent gatherDataEvent) {
         super(gatherDataEvent.getGenerator());
 
     }
 
     @Override
     protected List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, LootTable.Builder>>>, LootContextParamSet>> getTables() {
-        return ImmutableList.of(Pair.of(Unordinary_BasicsBlockLoot::new, LootContextParamSets.BLOCK));
+        return ImmutableList.of(Pair.of(UBBlockLoot::new, LootContextParamSets.BLOCK));
     }
 
     @Override

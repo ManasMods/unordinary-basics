@@ -11,6 +11,7 @@ import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
@@ -25,7 +26,7 @@ public class ZenithItem extends SwordItem {
         super(UBToolTiers.ZENITH, 15, -2.5F,
                 new Properties().tab(Unordinary_BasicsCreativeTab.ITEMS)
                         .durability(3000)
-                        .fireResistant());
+                        .fireResistant().rarity(Rarity.EPIC));
     }
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {

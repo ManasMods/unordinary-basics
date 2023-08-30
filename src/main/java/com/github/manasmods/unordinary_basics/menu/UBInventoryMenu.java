@@ -1,6 +1,6 @@
 package com.github.manasmods.unordinary_basics.menu;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.capability.CapabilityUBInventory;
 import com.github.manasmods.unordinary_basics.capability.IUBInventoryItem;
 import com.github.manasmods.unordinary_basics.capability.UBInventoryItemStackHandler;
@@ -51,10 +51,10 @@ public class UBInventoryMenu extends RecipeBookMenu<CraftingContainer> {
     public static final ResourceLocation EMPTY_ARMOR_SLOT_LEGGINGS = new ResourceLocation("item/empty_armor_slot_leggings");
     public static final ResourceLocation EMPTY_ARMOR_SLOT_BOOTS = new ResourceLocation("item/empty_armor_slot_boots");
     public static final ResourceLocation EMPTY_ARMOR_SLOT_SHIELD = new ResourceLocation("item/empty_armor_slot_shield");
-    public static final ResourceLocation EMPTY_ARMOR_SLOT_BACK_PACK = new ResourceLocation(Unordinary_Basics.MOD_ID,"item/empty_slots/empty_armor_slot_back_pack");
-    public static final ResourceLocation EMPTY_ARMOR_SLOT_BACK_WINGS = new ResourceLocation(Unordinary_Basics.MOD_ID,"item/empty_slots/empty_armor_slot_back_wings");
-    public static final ResourceLocation EMPTY_ARMOR_SLOT_BACK_QUIVER = new ResourceLocation(Unordinary_Basics.MOD_ID,"item/empty_slots/empty_armor_slot_back_quiver");
-    public static final ResourceLocation EMPTY_ARMOR_SLOT_WAIST = new ResourceLocation(Unordinary_Basics.MOD_ID,"item/empty_slots/empty_armor_slot_waist");
+    public static final ResourceLocation EMPTY_ARMOR_SLOT_BACK_PACK = new ResourceLocation(UnordinaryBasics.MOD_ID,"item/empty_slots/empty_armor_slot_back_pack");
+    public static final ResourceLocation EMPTY_ARMOR_SLOT_BACK_WINGS = new ResourceLocation(UnordinaryBasics.MOD_ID,"item/empty_slots/empty_armor_slot_back_wings");
+    public static final ResourceLocation EMPTY_ARMOR_SLOT_BACK_QUIVER = new ResourceLocation(UnordinaryBasics.MOD_ID,"item/empty_slots/empty_armor_slot_back_quiver");
+    public static final ResourceLocation EMPTY_ARMOR_SLOT_WAIST = new ResourceLocation(UnordinaryBasics.MOD_ID,"item/empty_slots/empty_armor_slot_waist");
     static final ResourceLocation[] TEXTURE_EMPTY_SLOTS = new ResourceLocation[]{EMPTY_ARMOR_SLOT_BOOTS, EMPTY_ARMOR_SLOT_LEGGINGS, EMPTY_ARMOR_SLOT_CHESTPLATE, EMPTY_ARMOR_SLOT_HELMET};
 
     private final int windowId;

@@ -1,12 +1,10 @@
 package com.github.manasmods.unordinary_basics.item.custom;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.capability.CapabilityUBInventory;
 import com.github.manasmods.unordinary_basics.capability.IUBInventoryItem;
 import com.github.manasmods.unordinary_basics.capability.ItemStackHandlerCapabilityProvider;
-import com.github.manasmods.unordinary_basics.client.gui.Unordinary_BasicsInventoryScreen;
 import com.github.manasmods.unordinary_basics.client.gui.Unordinary_BasicsItemInventoryScreen;
-import com.github.manasmods.unordinary_basics.menu.UBInventoryMenu;
 import com.github.manasmods.unordinary_basics.menu.UBItemInventoryMenu;
 import com.github.manasmods.unordinary_basics.utils.UBTags;
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -22,7 +20,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.PotionItem;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
-import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.SlotItemHandler;
 import org.jetbrains.annotations.NotNull;
@@ -30,8 +27,8 @@ import org.jetbrains.annotations.Nullable;
 
 public class PotionBeltItem extends Item implements IUBInventoryItem {
 
-    public static final ResourceLocation TEXTURE = new ResourceLocation(Unordinary_Basics.MOD_ID, "textures/gui/potion_belt_slots.png");
-    public static final ResourceLocation EMPTY_ARMOR_SLOT_POTION_BELT = new ResourceLocation(Unordinary_Basics.MOD_ID,"item/empty_slots/empty_armor_slot_potion_belt");
+    public static final ResourceLocation TEXTURE = new ResourceLocation(UnordinaryBasics.MOD_ID, "textures/gui/potion_belt_slots.png");
+    public static final ResourceLocation EMPTY_ARMOR_SLOT_POTION_BELT = new ResourceLocation(UnordinaryBasics.MOD_ID,"item/empty_slots/empty_armor_slot_potion_belt");
 
     public PotionBeltItem(Properties pProperties) {
         super(pProperties);

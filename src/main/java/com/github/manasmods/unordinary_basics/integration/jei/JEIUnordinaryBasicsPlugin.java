@@ -1,8 +1,8 @@
 package com.github.manasmods.unordinary_basics.integration.jei;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.recipe.FletchingRecipe;
-import com.github.manasmods.unordinary_basics.registry.Unordinary_BasicsRecipeTypeRegistry;
+import com.github.manasmods.unordinary_basics.registry.UBRecipeTypeRegistry;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.recipe.RecipeType;
@@ -23,7 +23,7 @@ import java.util.Objects;
 public class JEIUnordinaryBasicsPlugin implements IModPlugin {
     @Override
     public ResourceLocation getPluginUid() {
-        return new ResourceLocation(Unordinary_Basics.MOD_ID, "jei_plugin");
+        return new ResourceLocation(UnordinaryBasics.MOD_ID, "jei_plugin");
     }
 
     @Override
@@ -34,7 +34,7 @@ public class JEIUnordinaryBasicsPlugin implements IModPlugin {
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
         RecipeManager rm = Objects.requireNonNull(Minecraft.getInstance().level).getRecipeManager();
-        List<FletchingRecipe> recipes = rm.getAllRecipesFor(Unordinary_BasicsRecipeTypeRegistry.FLETCHING_RECIPE.get());
+        List<FletchingRecipe> recipes = rm.getAllRecipesFor(UBRecipeTypeRegistry.FLETCHING_RECIPE.get());
         registration.addRecipes(new RecipeType<>(FletchingTableRecipeCategory.UID, FletchingRecipe.class), recipes);
     }
 

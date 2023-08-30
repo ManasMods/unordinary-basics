@@ -1,4 +1,4 @@
-// 1.19.2	2023-08-23T20:23:54.8788866	LootTables
+// 1.19.2	2023-08-25T15:56:37.4286904	LootTables
 2d891dd38aebe5d06ea2a6b4c9a1533a97324ea2 data/unordinary_basics/loot_tables/blocks/acacia_log.json
 fab1894dc8e69c683171e47b29a645e6e97cd770 data/unordinary_basics/loot_tables/blocks/acacia_log_slab.json
 c5c5610df3573a30e467de223f0974f2a88fda06 data/unordinary_basics/loot_tables/blocks/acacia_log_stairs.json
@@ -213,6 +213,7 @@ e20499cc7ff92f8ef8d1e3904906702423a8a332 data/unordinary_basics/loot_tables/bloc
 1f35f00e62f74aef6b416a330fd79f2cedd40470 data/unordinary_basics/loot_tables/blocks/magenta_wool_stairs.json
 bf5ba560db458b7de0d8cbb2ac01c9e4a4e10d99 data/unordinary_basics/loot_tables/blocks/magma_block_slab.json
 d14144e813e323be20dbaa16a47584335908af6b data/unordinary_basics/loot_tables/blocks/magma_block_stairs.json
+2b2a4bde1a1c86393b28fa3ff9b81ef1ddeed22d data/unordinary_basics/loot_tables/blocks/master_sword_shrine.json
 6265ae596de7368904e9e860f5d644582c771c48 data/unordinary_basics/loot_tables/blocks/melon_slab.json
 2280212b13c15a43ad36dba64f85f1493755f41f data/unordinary_basics/loot_tables/blocks/melon_stairs.json
 ea161257a464b2f22b461876078dab4febcdec76 data/unordinary_basics/loot_tables/blocks/mycelium_slab.json

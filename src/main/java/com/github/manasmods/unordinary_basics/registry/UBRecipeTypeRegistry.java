@@ -5,7 +5,7 @@ import net.minecraft.world.item.crafting.RecipeType;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
-public class Unordinary_BasicsRecipeTypeRegistry {
+public class UBRecipeTypeRegistry {
     public static RegistryObject<RecipeType<FletchingRecipe>> FLETCHING_RECIPE;
 
     public static void register(DeferredRegister<RecipeType<?>> registry) {

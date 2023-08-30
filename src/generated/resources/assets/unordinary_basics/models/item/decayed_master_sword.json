@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "unordinary_basics:item/decayed_master_sword"
+  }
+}

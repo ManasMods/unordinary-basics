@@ -12,7 +12,9 @@ import com.github.manasmods.unordinary_basics.loot.ModLootModifiers;
 import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
 import com.github.manasmods.unordinary_basics.network.toclient.UBInventoryClientSync;
 import com.github.manasmods.unordinary_basics.painting.UBPaintings;
-import com.github.manasmods.unordinary_basics.registry.Unordinary_BasicsRegistry;
+import com.github.manasmods.unordinary_basics.registry.UBRegistry;
+import com.github.manasmods.unordinary_basics.utils.TreasureMapForEmeralds;
+import com.github.manasmods.unordinary_basics.utils.UBTags;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.Direction;
@@ -21,12 +23,14 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.saveddata.maps.MapDecoration;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.capabilities.*;
 import net.minecraftforge.common.util.LazyOptional;
@@ -38,6 +42,7 @@ import net.minecraftforge.event.entity.item.ItemTossEvent;
 import net.minecraftforge.event.entity.living.LivingDropsEvent;
 import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
 import net.minecraftforge.event.level.BlockEvent;
+import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModList;
@@ -50,7 +55,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.openjdk.nashorn.internal.objects.annotations.Getter;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -62,12 +66,12 @@ import java.util.Optional;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
 
-@Mod(Unordinary_Basics.MOD_ID)
-public class Unordinary_Basics {
+@Mod(UnordinaryBasics.MOD_ID)
+public class UnordinaryBasics {
     public static final String MOD_ID = "unordinary_basics";
     public static final Logger LOGGER = LogManager.getLogger();
 
-    public static Unordinary_Basics getInstance() {
+    public static UnordinaryBasics getInstance() {
         return instance;
     }
 
@@ -75,14 +79,14 @@ public class Unordinary_Basics {
         return apotheosisIntegration;
     }
 
-    private static Unordinary_Basics instance;
+    private static UnordinaryBasics instance;
     private Optional<ApotheosisIntegration> apotheosisIntegration = Optional.empty();
 
-    public Unordinary_Basics() {
+    public UnordinaryBasics() {
         instance = this;
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         IEventBus forgeBus = MinecraftForge.EVENT_BUS;
-        Unordinary_BasicsRegistry.register(modEventBus);
+        UBRegistry.register(modEventBus);
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::generateData);
         modEventBus.addListener(this::registerCapabilities);
@@ -92,6 +96,7 @@ public class Unordinary_Basics {
         forgeBus.addListener(this::handleUBInventoryDrops);
         forgeBus.addListener(this::playerJoinWorld);
         forgeBus.addListener(this::playerTick);
+        forgeBus.addListener(this::villagerTradesEvent);
         forgeBus.addGenericListener(Entity.class,this::attachCapabilities);
         modEventBus.addListener(UBEntityHandler::entityAttributeEvent);
         UBPaintings.register(modEventBus);
@@ -112,15 +117,17 @@ public class Unordinary_Basics {
     }
 
     private void generateData(final GatherDataEvent event) {
-        event.getGenerator().addProvider(event.includeClient(),new Unordinary_BasicsBlockStateProvider(event));
-        event.getGenerator().addProvider(event.includeClient(),new Unordinary_BasicsItemModelProvider(event));
-        event.getGenerator().addProvider(event.includeServer(),new Unordinary_BasicsRecipeProvider(event));
-        event.getGenerator().addProvider(event.includeServer(),new Unordinary_BasicsLootTableProvider(event));
-        event.getGenerator().addProvider(event.includeServer(),new Unordinary_BasicsBlockTagProvider(event));
-        event.getGenerator().addProvider(event.includeServer(),new Unordinary_BasicsFletchingRecipeProvider(event));
-        Unordinary_BasicsBlockTagProvider blockTagProvider = new Unordinary_BasicsBlockTagProvider(event);
+        event.getGenerator().addProvider(event.includeClient(),new UBBlockStateProvider(event));
+        event.getGenerator().addProvider(event.includeClient(),new UBItemModelProvider(event));
+        event.getGenerator().addProvider(event.includeServer(),new UBRecipeProvider(event));
+        event.getGenerator().addProvider(event.includeServer(),new UBLootTableProvider(event));
+        event.getGenerator().addProvider(event.includeServer(),new UBBlockTagProvider(event));
+        event.getGenerator().addProvider(event.includeServer(),new UBEntityTypeTagProvider(event));
+        event.getGenerator().addProvider(event.includeServer(),new UBFletchingRecipeProvider(event));
+        UBBlockTagProvider blockTagProvider = new UBBlockTagProvider(event);
         event.getGenerator().addProvider(event.includeServer(),blockTagProvider);
-        event.getGenerator().addProvider(event.includeServer(),new Unordinary_BasicsItemTagProvider(event, blockTagProvider));
+        event.getGenerator().addProvider(event.includeServer(),new UBItemTagProvider(event, blockTagProvider));
+        event.getGenerator().addProvider(event.includeServer(), new UBStructureTagProvider(event.getGenerator(),event.getExistingFileHelper()));
     }
 
     private void entityPlaceEvent(final BlockEvent.EntityPlaceEvent event){
@@ -128,6 +135,12 @@ public class Unordinary_Basics {
                 ((Player) event.getEntity()).getMainHandItem().getItem() == Unordinary_BasicsItems.BUILDERS_GLOVE
                 && ((Player) event.getEntity()).getInventory().offhand.get(0).getItem() instanceof BlockItem){
             event.setCanceled(true);
+        }
+    }
+
+    private void villagerTradesEvent(final VillagerTradesEvent event){
+        if (event.getType().equals(VillagerProfession.CARTOGRAPHER)) {
+            event.getTrades().get(3).add(new TreasureMapForEmeralds(12, UBTags.Structures.MASTER_SWORD_SHRINE,"filled_map.unordinary_basics.master_sword_shrine", MapDecoration.Type.RED_X,2,5));
         }
     }
 
@@ -183,7 +196,7 @@ public class Unordinary_Basics {
             }
         };
 
-        event.addCapability(new ResourceLocation(Unordinary_Basics.MOD_ID,"ub_inventory"),provider);
+        event.addCapability(new ResourceLocation(UnordinaryBasics.MOD_ID,"ub_inventory"),provider);
     }
 
     private void handleUBInventoryDrops(final LivingDropsEvent event){
@@ -277,7 +290,7 @@ public class Unordinary_Basics {
         if(!target.exists())
             try {
                 dir.mkdirs();
-                InputStream in = Unordinary_Basics.class.getResourceAsStream("/assets/unordinary_basics/improved_textures.zip");
+                InputStream in = UnordinaryBasics.class.getResourceAsStream("/assets/unordinary_basics/improved_textures.zip");
                 FileOutputStream out = new FileOutputStream(target);
 
                 byte[] buf = new byte[16384];

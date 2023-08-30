@@ -1,7 +1,7 @@
 package com.github.manasmods.unordinary_basics.startup_test;
 
 import com.github.manasmods.unordinary_basics.TestBatches;
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsCreativeTab;
 import net.minecraft.gametest.framework.GameTest;
 import net.minecraft.gametest.framework.GameTestHelper;
@@ -13,7 +13,7 @@ import net.minecraftforge.gametest.PrefixGameTestTemplate;
 import java.util.List;
 
 @PrefixGameTestTemplate(false)
-@GameTestHolder(Unordinary_Basics.MOD_ID)
+@GameTestHolder(UnordinaryBasics.MOD_ID)
 public class StartupTest {
     @GameTest(template = "empty_1x1", batch = TestBatches.CREATIVE_TAB_ICONS)
     public static void checkCreativeTabIcon(final GameTestHelper helper) {

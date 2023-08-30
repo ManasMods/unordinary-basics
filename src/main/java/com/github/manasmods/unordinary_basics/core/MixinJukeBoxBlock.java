@@ -1,6 +1,6 @@
 package com.github.manasmods.unordinary_basics.core;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.block.entity.JukeboxBlockEntity;
 import com.github.manasmods.unordinary_basics.menu.JukeBoxMenu;
 import net.minecraft.core.BlockPos;
@@ -49,7 +49,7 @@ public abstract class MixinJukeBoxBlock extends BaseEntityBlock {
         if (tag.contains("isPlaying")) {
             pLevel.setBlock(pPos, pState.setValue(JukeboxBlock.HAS_RECORD, tag.getBoolean("isPlaying")), 2);
         } else {
-            Unordinary_Basics.getLogger().error("Missing nbt data on {}. No isPlaying value found.", pStack);
+            UnordinaryBasics.getLogger().error("Missing nbt data on {}. No isPlaying value found.", pStack);
         }
         ci.cancel();
     }
@@ -60,7 +60,7 @@ public abstract class MixinJukeBoxBlock extends BaseEntityBlock {
             NetworkHooks.openScreen((ServerPlayer) pPlayer, new SimpleMenuProvider((pContainerId, pInventory, pPlayer1) -> {
                 JukeboxBlockEntity blockEntity = (JukeboxBlockEntity) pLevel.getBlockEntity(pPos);
                 return new JukeBoxMenu(pContainerId, pPlayer1.getInventory(), blockEntity, ContainerLevelAccess.create(pLevel, pPos));
-            }, Component.translatable(Unordinary_Basics.MOD_ID + ".menu.jukebox.title")), buffer -> {
+            }, Component.translatable(UnordinaryBasics.MOD_ID + ".menu.jukebox.title")), buffer -> {
                 buffer.writeBlockPos(pPos);
                 buffer.writeResourceLocation(pLevel.dimension().location());
             });

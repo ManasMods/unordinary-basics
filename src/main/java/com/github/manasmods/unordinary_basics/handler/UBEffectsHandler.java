@@ -1,6 +1,6 @@
 package com.github.manasmods.unordinary_basics.handler;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -10,7 +10,7 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = Unordinary_Basics.MOD_ID)
+@Mod.EventBusSubscriber(modid = UnordinaryBasics.MOD_ID)
 public class UBEffectsHandler {
 
     @SubscribeEvent

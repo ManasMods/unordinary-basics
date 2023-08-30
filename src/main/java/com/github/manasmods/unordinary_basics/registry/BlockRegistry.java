@@ -1,18 +1,6 @@
 package com.github.manasmods.unordinary_basics.registry;
 
-import com.github.manasmods.unordinary_basics.block.DirtPathSlab;
-import com.github.manasmods.unordinary_basics.block.DirtWiltableSlabBlock;
-import com.github.manasmods.unordinary_basics.block.DirtWiltableStairBlock;
-import com.github.manasmods.unordinary_basics.block.EnchantmentLibraryBlock;
-import com.github.manasmods.unordinary_basics.block.FallingSlabBlock;
-import com.github.manasmods.unordinary_basics.block.FallingStairBlock;
-import com.github.manasmods.unordinary_basics.block.GrassSproutableSlabBlock;
-import com.github.manasmods.unordinary_basics.block.GrassSproutableStairBlock;
-import com.github.manasmods.unordinary_basics.block.ItemSorterBlock;
-import com.github.manasmods.unordinary_basics.block.PathableSlabBlock;
-import com.github.manasmods.unordinary_basics.block.PathableStairBlock;
-import com.github.manasmods.unordinary_basics.block.SimpleBlock;
-import com.github.manasmods.unordinary_basics.block.Unordinary_BasicsBlocks;
+import com.github.manasmods.unordinary_basics.block.*;
 import com.github.manasmods.unordinary_basics.item.templates.CustomBlockItem;
 import com.github.manasmods.unordinary_basics.item.templates.SimpleBlockItem;
 import net.minecraft.network.chat.Component;
@@ -22,12 +10,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.StairBlock;
-import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -41,7 +24,7 @@ import java.util.List;
 public class BlockRegistry {
     /**
      * This Method will register all Blocks with their BlockItems to Forge.
-     * It is called though the {@link Unordinary_BasicsRegistry#register(IEventBus)} Method.
+     * It is called though the {@link UBRegistry#register(IEventBus)} Method.
      */
     static void register(DeferredRegister<Item> itemRegistry, DeferredRegister<Block> blockRegistry) {
         registerBlocks(blockRegistry); // Registers all Blocks
@@ -52,15 +35,12 @@ public class BlockRegistry {
                 .stream()
                 .map(RegistryObject::getId)
                 .toList();
-        System.out.println("Loaded List of Block Items");
 
         //Creates a SimpleBlockItems for all Block which didn't get a BlockItem yet
         blockRegistry.getEntries().forEach(registryObject -> {
             if (!registeredItems.contains(registryObject.getId())) {
                 itemRegistry.register(registryObject.getId().getPath(), () -> new SimpleBlockItem(registryObject.get()));
-                System.out.println(registryObject.getId());
             }
-        System.out.println("Created Block Item");
         });
     }
 
@@ -79,6 +59,11 @@ public class BlockRegistry {
         registry.register("item_sorter", () -> new ItemSorterBlock(BlockBehaviour.Properties.of(Material.METAL)
                 .strength(1F)
                 .sound(SoundType.METAL)
+                .noOcclusion()
+                .requiresCorrectToolForDrops()));
+        registry.register("master_sword_shrine", () -> new MasterSwordShrine(BlockBehaviour.Properties.of(Material.STONE)
+                .strength(1000F)
+                .sound(SoundType.STONE)
                 .noOcclusion()
                 .requiresCorrectToolForDrops()));
 
@@ -690,6 +675,8 @@ public class BlockRegistry {
 
 
         registry.register("enchantment_library", () -> new CustomBlockItem(Unordinary_BasicsBlocks.ENCHANTMENT_LIBRARY));
+
+        registry.register("master_sword_shrine", () -> new CustomBlockItem(Unordinary_BasicsBlocks.MASTER_SWORD_SHRINE));
         registry.register("item_sorter", () -> new CustomBlockItem(Unordinary_BasicsBlocks.ITEM_SORTER) {
             @Override
             public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltip, TooltipFlag pFlag) {

@@ -1,6 +1,6 @@
 package com.github.manasmods.unordinary_basics.item.custom;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.capability.RedstonePouchCapabilityProvider;
 import com.google.common.util.concurrent.AtomicDouble;
 import net.minecraft.nbt.CompoundTag;
@@ -60,7 +60,7 @@ public class RedstonePouchItem extends Item {
 
                     pouchItem.getOrCreateTag().put("inventory", ((ItemStackHandler) handler).serializeNBT());
                 } else {
-                    Unordinary_Basics.getLogger().error("Couldn't get hit result! Unable to place block.");
+                    UnordinaryBasics.getLogger().error("Couldn't get hit result! Unable to place block.");
                 }
             });
             return result.get();

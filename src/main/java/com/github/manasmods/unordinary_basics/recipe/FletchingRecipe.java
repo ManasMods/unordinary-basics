@@ -2,7 +2,7 @@ package com.github.manasmods.unordinary_basics.recipe;
 
 import com.github.manasmods.unordinary_basics.core.NBTIngredientAccessor;
 import com.github.manasmods.unordinary_basics.menu.container.FletchingContainer;
-import com.github.manasmods.unordinary_basics.registry.Unordinary_BasicsRecipeTypeRegistry;
+import com.github.manasmods.unordinary_basics.registry.UBRecipeTypeRegistry;
 import com.google.common.collect.Lists;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
@@ -69,7 +69,7 @@ public class FletchingRecipe implements Recipe<FletchingContainer> {
 
     @Override
     public RecipeType<?> getType() {
-        return Unordinary_BasicsRecipeTypeRegistry.FLETCHING_RECIPE.get();
+        return UBRecipeTypeRegistry.FLETCHING_RECIPE.get();
     }
 
     @Override

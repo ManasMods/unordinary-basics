@@ -1,6 +1,5 @@
 package com.github.manasmods.unordinary_basics.item;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.ObjectHolder;
 
@@ -21,6 +20,10 @@ public class Unordinary_BasicsItems {
     public static final Item LEAPER = null;
     @ObjectHolder(registryName = "item", value = "unordinary_basics:map_book")
     public static final Item MAP_BOOK = null;
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:decayed_master_sword")
+    public static final Item DECAYED_MASTER_SWORD = null;
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:master_sword")
+    public static final Item MASTER_SWORD = null;
     @ObjectHolder(registryName = "item", value = "unordinary_basics:milk_bottle")
     public static final Item MILK_BOTTLE = null;
     @ObjectHolder(registryName = "item", value = "unordinary_basics:potion_belt")

@@ -1,0 +1,43 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "master_sword_shrine",
+	"texture_size": [32, 32],
+	"textures": {
+		"2": "pedestal"
+	},
+	"elements": [
+		{
+			"from": [4, 1, 4],
+			"to": [12, 2, 12],
+			"faces": {
+				"north": {"uv": [6, 3.5, 10, 4], "texture": "#2"},
+				"east": {"uv": [6, 0, 6.5, 4], "rotation": 270, "texture": "#2"},
+				"south": {"uv": [6, 0, 10, 0.5], "rotation": 180, "texture": "#2"},
+				"west": {"uv": [9.5, 0, 10, 4], "rotation": 90, "texture": "#2"},
+				"up": {"uv": [10, 4, 6, 0], "texture": "#2"},
+				"down": {"uv": [10, 4, 6, 8], "texture": "#2"}
+			}
+		},
+		{
+			"from": [2, 0, 2],
+			"to": [14, 1, 14],
+			"faces": {
+				"north": {"uv": [0, 5.5, 6, 6], "texture": "#2"},
+				"east": {"uv": [0, 0, 0.5, 6], "rotation": 90, "texture": "#2"},
+				"south": {"uv": [0, 0, 6, 0.5], "rotation": 180, "texture": "#2"},
+				"west": {"uv": [5.5, 0, 6, 6], "rotation": 90, "texture": "#2"},
+				"up": {"uv": [6, 6, 0, 0], "texture": "#2"},
+				"down": {"uv": [6, 6, 0, 12], "texture": "#2"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "pedestal",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"nbt": "{}",
+			"children": [0, 1]
+		}
+	]
+}

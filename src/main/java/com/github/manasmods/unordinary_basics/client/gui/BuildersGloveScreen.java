@@ -1,6 +1,6 @@
 package com.github.manasmods.unordinary_basics.client.gui;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.menu.BuildersGloveMenu;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -12,7 +12,7 @@ import net.minecraft.world.entity.player.Inventory;
 
 public class BuildersGloveScreen extends AbstractContainerScreen<BuildersGloveMenu> {
     private static final ResourceLocation TEXTURE =
-            new ResourceLocation(Unordinary_Basics.MOD_ID, "textures/gui/glove_inventory.png");
+            new ResourceLocation(UnordinaryBasics.MOD_ID, "textures/gui/glove_inventory.png");
 
     public BuildersGloveScreen(BuildersGloveMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);
