@@ -226,7 +226,7 @@ public class UBInventoryMenu extends RecipeBookMenu<CraftingContainer> {
             final ItemStack itemstack1 = slot.getItem();
             itemstack = itemstack1.copy();
 
-            if (index == 42 + externalSlotCount + 5) {
+            if (index == 47) {
                 if (!this.moveItemStackTo(itemstack1, 1, 36, true)) {
                     return ItemStack.EMPTY;
                 }
@@ -236,7 +236,7 @@ public class UBInventoryMenu extends RecipeBookMenu<CraftingContainer> {
                     return ItemStack.EMPTY;
                 }
             } else if (index < 9 && applicableForUBSlots(itemstack1) && !isArmor(itemstack1, pPlayer)) {
-                if (!moveItemStackTo(itemstack1, 36, 42 + externalSlotCount, true)) {
+                if (!moveItemStackTo(itemstack1, 36, 42, true)) {
                     return ItemStack.EMPTY;
                 }
             } else if (index < 9 && !applicableForUBSlots(itemstack1) && !isArmor(itemstack1, pPlayer)) {

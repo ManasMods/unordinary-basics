@@ -24,7 +24,6 @@ import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.Nullable;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -47,8 +46,8 @@ public class RedstonePouchItem extends Item {
 
                 BlockHitResult hitResult = null;
                 try {
-                    hitResult = (BlockHitResult) ObfuscationReflectionHelper.findMethod(pContext.getClass(),"getHitResult").invoke(pContext);
-                } catch (IllegalAccessException | InvocationTargetException e) {
+                    hitResult = (BlockHitResult) ObfuscationReflectionHelper.findField(pContext.getClass(),"f_43705_").get(pContext);
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
 
@@ -75,7 +74,7 @@ public class RedstonePouchItem extends Item {
 
         if (!pSlot.allowModification(pPlayer)) return false;
 
-            if (pClickedWith.getItem().equals(Items.REDSTONE)) {
+        if (pClickedWith.getItem().equals(Items.REDSTONE)) {
                 pClicked.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
                     ((ItemStackHandler)handler).deserializeNBT(pClicked.getOrCreateTag().getCompound("inventory"));
 
