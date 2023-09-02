@@ -1,6 +1,6 @@
 package com.github.manasmods.unordinary_basics.item.custom;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.capability.RedstonePouchCapabilityProvider;
 import com.google.common.util.concurrent.AtomicDouble;
 import net.minecraft.nbt.CompoundTag;
@@ -24,7 +24,6 @@ import net.minecraftforge.fml.util.ObfuscationReflectionHelper;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.Nullable;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -47,8 +46,8 @@ public class RedstonePouchItem extends Item {
 
                 BlockHitResult hitResult = null;
                 try {
-                    hitResult = (BlockHitResult) ObfuscationReflectionHelper.findMethod(pContext.getClass(),"getHitResult").invoke(pContext);
-                } catch (IllegalAccessException | InvocationTargetException e) {
+                    hitResult = (BlockHitResult) ObfuscationReflectionHelper.findField(pContext.getClass(),"f_43705_").get(pContext);
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
 
@@ -61,7 +60,7 @@ public class RedstonePouchItem extends Item {
 
                     pouchItem.getOrCreateTag().put("inventory", ((ItemStackHandler) handler).serializeNBT());
                 } else {
-                    Unordinary_Basics.getLogger().error("Couldn't get hit result! Unable to place block.");
+                    UnordinaryBasics.getLogger().error("Couldn't get hit result! Unable to place block.");
                 }
             });
             return result.get();
@@ -75,7 +74,7 @@ public class RedstonePouchItem extends Item {
 
         if (!pSlot.allowModification(pPlayer)) return false;
 
-            if (pClickedWith.getItem().equals(Items.REDSTONE)) {
+        if (pClickedWith.getItem().equals(Items.REDSTONE)) {
                 pClicked.getCapability(ForgeCapabilities.ITEM_HANDLER).ifPresent(handler -> {
                     ((ItemStackHandler)handler).deserializeNBT(pClicked.getOrCreateTag().getCompound("inventory"));
 

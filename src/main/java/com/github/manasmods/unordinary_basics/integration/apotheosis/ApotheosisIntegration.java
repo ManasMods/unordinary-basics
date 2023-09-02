@@ -1,6 +1,6 @@
 package com.github.manasmods.unordinary_basics.integration.apotheosis;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.core.FletchingContainerAccessor;
 import com.github.manasmods.unordinary_basics.menu.FletchingTableMenu;
 import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
@@ -18,7 +18,7 @@ import shadows.apotheosis.village.fletching.FletchingContainer;
 public class ApotheosisIntegration {
     
     public ApotheosisIntegration() {
-        Unordinary_Basics.getLogger().info("Apotheosis integration automatically enabled!");
+        UnordinaryBasics.getLogger().info("Apotheosis integration automatically enabled!");
     }
 
     public void requestApotheosisFletchingMenu() {
@@ -31,7 +31,7 @@ public class ApotheosisIntegration {
 
     public void openApotheosisFletchingMenu(ServerPlayer player) {
         if (!(player.containerMenu instanceof FletchingTableMenu fletchingTableMenu)) {
-            Unordinary_Basics.getLogger()
+            UnordinaryBasics.getLogger()
                     .error("Player {} tried to open Apotheosis Fletching Menu using MenuChange Packet but he wasn't able to send that packet. He might Cheat!", player.getStringUUID());
             return;
         }
@@ -43,13 +43,13 @@ public class ApotheosisIntegration {
 
     public void openUnordinaryBasicsFletchingMenu(ServerPlayer player) {
         if (!(player.containerMenu instanceof FletchingContainer fletchingContainer)) {
-            Unordinary_Basics.getLogger().error("Player {} tried to open UB Fletching Menu using MenuChange Packet but he wasn't able to send that packet. He might Cheat!", player.getStringUUID());
+            UnordinaryBasics.getLogger().error("Player {} tried to open UB Fletching Menu using MenuChange Packet but he wasn't able to send that packet. He might Cheat!", player.getStringUUID());
             return;
         }
 
         BlockPos pos = ((FletchingContainerAccessor) fletchingContainer).getPos();
         NetworkHooks.openScreen(player, new SimpleMenuProvider((pContainerId, pInventory, pPlayer1) -> new FletchingTableMenu(pContainerId, ContainerLevelAccess.create(player.level, pos), pPlayer1.getInventory(), pos),
-                Component.translatable(Unordinary_Basics.MOD_ID + ".menu.fletching_table.title")), buffer -> {
+                Component.translatable(UnordinaryBasics.MOD_ID + ".menu.fletching_table.title")), buffer -> {
             buffer.writeBlockPos(pos);
             buffer.writeResourceLocation(player.level.dimension().location());
         });

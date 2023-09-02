@@ -1,8 +1,7 @@
 package com.github.manasmods.unordinary_basics.client.gui;
 
 import com.github.manasmods.manascore.api.tab.annotation.ScreenForTab;
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
-import com.github.manasmods.unordinary_basics.capability.IUBInventoryItem;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.menu.UBInventoryMenu;
 import com.github.manasmods.unordinary_basics.tab.Unordinary_BasicsInventoryTab;
 import com.mojang.blaze3d.platform.Lighting;
@@ -26,7 +25,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 @OnlyIn(Dist.CLIENT)
 public class Unordinary_BasicsInventoryScreen extends AbstractContainerScreen<UBInventoryMenu> {
 
-    public static final ResourceLocation UB_INVENTORY_LOCATION = new ResourceLocation(Unordinary_Basics.MOD_ID, "textures/gui/ub_inventory.png");
+    public static final ResourceLocation UB_INVENTORY_LOCATION = new ResourceLocation(UnordinaryBasics.MOD_ID, "textures/gui/ub_inventory.png");
     private float xMouse;
     private float yMouse;
 

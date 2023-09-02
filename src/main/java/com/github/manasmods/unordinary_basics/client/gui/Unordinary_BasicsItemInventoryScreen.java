@@ -1,11 +1,8 @@
 package com.github.manasmods.unordinary_basics.client.gui;
 
 import com.github.manasmods.manascore.api.tab.annotation.ScreenForTab;
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import com.github.manasmods.unordinary_basics.capability.IUBInventoryItem;
-import com.github.manasmods.unordinary_basics.menu.UBInventoryMenu;
 import com.github.manasmods.unordinary_basics.menu.UBItemInventoryMenu;
-import com.github.manasmods.unordinary_basics.tab.Unordinary_BasicsInventoryTab;
 import com.github.manasmods.unordinary_basics.tab.Unordinary_BasicsItemInventoryTab;
 import com.mojang.blaze3d.platform.Lighting;
 import com.mojang.blaze3d.systems.RenderSystem;

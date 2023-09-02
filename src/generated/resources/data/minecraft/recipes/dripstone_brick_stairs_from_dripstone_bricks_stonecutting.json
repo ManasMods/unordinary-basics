@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "unordinary_basics:dripstone_bricks"
+  },
+  "result": "unordinary_basics:dripstone_brick_stairs"
+}

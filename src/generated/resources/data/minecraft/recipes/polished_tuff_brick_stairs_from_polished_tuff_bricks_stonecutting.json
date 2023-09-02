@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "unordinary_basics:polished_tuff_bricks"
+  },
+  "result": "unordinary_basics:polished_tuff_brick_stairs"
+}

@@ -1,6 +1,6 @@
 package com.github.manasmods.unordinary_basics.network.toserver;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.menu.UBInventoryMenu;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.chat.Component;
@@ -27,7 +27,7 @@ public class RequestUBInventoryMenu {
     public void handle(Supplier<NetworkEvent.Context> ctx) {
         ctx.get().enqueueWork(() -> {
             //No checks since opening is always possible
-            NetworkHooks.openScreen(ctx.get().getSender(), new SimpleMenuProvider(UBInventoryMenu::new, Component.translatable(Unordinary_Basics.MOD_ID + ".inventory.title")));
+            NetworkHooks.openScreen(ctx.get().getSender(), new SimpleMenuProvider(UBInventoryMenu::new, Component.translatable(UnordinaryBasics.MOD_ID + ".inventory.title")));
         });
         ctx.get().setPacketHandled(true);
     }

@@ -1,6 +1,6 @@
 package com.github.manasmods.unordinary_basics.network;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.network.toclient.UBInventoryClientSync;
 import com.github.manasmods.unordinary_basics.network.toserver.*;
 import net.minecraft.resources.ResourceLocation;
@@ -10,7 +10,7 @@ import net.minecraftforge.network.simple.SimpleChannel;
 public class Unordinary_BasicsNetwork {
     private static final String PROTOCOL_VERSION = String.valueOf(5);
     private static final SimpleChannel INSTANCE = NetworkRegistry.newSimpleChannel(
-        new ResourceLocation(Unordinary_Basics.MOD_ID, "main"), () -> PROTOCOL_VERSION, PROTOCOL_VERSION::equals, PROTOCOL_VERSION::equals);
+        new ResourceLocation(UnordinaryBasics.MOD_ID, "main"), () -> PROTOCOL_VERSION, PROTOCOL_VERSION::equals, PROTOCOL_VERSION::equals);
 
     public static void registerPackets() {
         int messageId = 0;

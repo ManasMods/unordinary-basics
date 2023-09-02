@@ -1,7 +1,7 @@
 package com.github.manasmods.unordinary_basics.menu.slot;
 
 import com.github.manasmods.unordinary_basics.menu.container.FletchingContainer;
-import com.github.manasmods.unordinary_basics.registry.Unordinary_BasicsRecipeTypeRegistry;
+import com.github.manasmods.unordinary_basics.registry.UBRecipeTypeRegistry;
 import net.minecraft.core.NonNullList;
 import net.minecraft.world.Container;
 import net.minecraft.world.entity.player.Player;
@@ -24,7 +24,7 @@ public class FletchingResultSlot extends ResultSlot {
     public void onTake(Player pPlayer, ItemStack pStack) {
         this.checkTakeAchievements(pStack);
         ForgeHooks.setCraftingPlayer(pPlayer);
-        NonNullList<ItemStack> remainingItems = pPlayer.level.getRecipeManager().getRemainingItemsFor(Unordinary_BasicsRecipeTypeRegistry.FLETCHING_RECIPE.get(), this.container, pPlayer.level);
+        NonNullList<ItemStack> remainingItems = pPlayer.level.getRecipeManager().getRemainingItemsFor(UBRecipeTypeRegistry.FLETCHING_RECIPE.get(), this.container, pPlayer.level);
         ForgeHooks.setCraftingPlayer(null);
 
         for (int i = 0; i < remainingItems.size(); i++) {
@@ -39,18 +39,18 @@ public class FletchingResultSlot extends ResultSlot {
         ItemStack craftResult = pStack.copy();
 
         ForgeHooks.setCraftingPlayer(player);
-        NonNullList<ItemStack> remainingItems = player.level.getRecipeManager().getRemainingItemsFor(Unordinary_BasicsRecipeTypeRegistry.FLETCHING_RECIPE.get(), this.container, player.level);
+        NonNullList<ItemStack> remainingItems = player.level.getRecipeManager().getRemainingItemsFor(UBRecipeTypeRegistry.FLETCHING_RECIPE.get(), this.container, player.level);
         ForgeHooks.setCraftingPlayer(null);
 
         for (int i = 0; i < remainingItems.size(); i++) {
             container.setItem(i, remainingItems.get(i));
         }
 
-        while (player.level.getRecipeManager().getRecipeFor(Unordinary_BasicsRecipeTypeRegistry.FLETCHING_RECIPE.get(), container, player.level).isPresent() &&
+        while (player.level.getRecipeManager().getRecipeFor(UBRecipeTypeRegistry.FLETCHING_RECIPE.get(), container, player.level).isPresent() &&
             player.getInventory().add(craftResult.copy()) && pStack.getCount() + pAmount < 65) {
 
             ForgeHooks.setCraftingPlayer(player);
-            remainingItems = player.level.getRecipeManager().getRemainingItemsFor(Unordinary_BasicsRecipeTypeRegistry.FLETCHING_RECIPE.get(), this.container, player.level);
+            remainingItems = player.level.getRecipeManager().getRemainingItemsFor(UBRecipeTypeRegistry.FLETCHING_RECIPE.get(), this.container, player.level);
             ForgeHooks.setCraftingPlayer(null);
 
             for (int i = 0; i < remainingItems.size(); i++) {

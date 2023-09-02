@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "unordinary_basics:block/polished_andesite_bricks"
+  }
+}

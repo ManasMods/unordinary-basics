@@ -1,12 +1,12 @@
 package com.github.manasmods.unordinary_basics.handler;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.event.furnace.FurnaceFuelBurnTimeEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = Unordinary_Basics.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
+@Mod.EventBusSubscriber(modid = UnordinaryBasics.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class UBFurnaceFuelHandler {
     @SubscribeEvent
     public static void onFurnaceFuelBurnTimeEvent(final FurnaceFuelBurnTimeEvent event) {

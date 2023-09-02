@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "unordinary_basics:chiseled_soul_sandstone"
+  },
+  "result": "unordinary_basics:chiseled_soul_sandstone_wall"
+}

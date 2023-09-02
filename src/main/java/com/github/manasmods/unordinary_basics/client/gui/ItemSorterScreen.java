@@ -1,6 +1,6 @@
 package com.github.manasmods.unordinary_basics.client.gui;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.menu.ItemSorterMenu;
 import com.github.manasmods.unordinary_basics.menu.slot.GhostSlot;
 import com.github.manasmods.unordinary_basics.network.Unordinary_BasicsNetwork;
@@ -19,7 +19,7 @@ import net.minecraft.world.item.ItemStack;
 
 public class ItemSorterScreen extends AbstractContainerScreen<ItemSorterMenu> {
     private static final ResourceLocation TEXTURE =
-            new ResourceLocation(Unordinary_Basics.MOD_ID, "textures/gui/item_sorter.png");
+            new ResourceLocation(UnordinaryBasics.MOD_ID, "textures/gui/item_sorter.png");
     private EditBox text;
 
     public ItemSorterScreen(ItemSorterMenu pMenu, Inventory pPlayerInventory, Component pTitle) {

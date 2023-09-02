@@ -135,6 +135,23 @@
     "unordinary_basics:brown_concrete_powder_slab",
     "unordinary_basics:green_concrete_powder_slab",
     "unordinary_basics:red_concrete_powder_slab",
-    "unordinary_basics:black_concrete_powder_slab"
+    "unordinary_basics:black_concrete_powder_slab",
+    "unordinary_basics:andesite_brick_slab",
+    "unordinary_basics:polished_andesite_brick_slab",
+    "unordinary_basics:calcite_brick_slab",
+    "unordinary_basics:diorite_brick_slab",
+    "unordinary_basics:polished_diorite_brick_slab",
+    "unordinary_basics:dripstone_brick_slab",
+    "unordinary_basics:granite_brick_slab",
+    "unordinary_basics:polished_granite_brick_slab",
+    "unordinary_basics:tuff_brick_slab",
+    "unordinary_basics:polished_tuff_slab",
+    "unordinary_basics:polished_tuff_brick_slab",
+    "unordinary_basics:soul_sandstone_slab",
+    "unordinary_basics:smooth_soul_sandstone_slab",
+    "unordinary_basics:cut_soul_sandstone_slab",
+    "unordinary_basics:sandstone_brick_slab",
+    "unordinary_basics:red_sandstone_brick_slab",
+    "unordinary_basics:soul_sandstone_brick_slab"
   ]
 }

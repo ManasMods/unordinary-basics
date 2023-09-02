@@ -1,13 +1,11 @@
 package com.github.manasmods.unordinary_basics.item.custom;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.capability.CapabilityUBInventory;
 import com.github.manasmods.unordinary_basics.capability.IUBInventoryItem;
 import com.github.manasmods.unordinary_basics.capability.ItemStackHandlerCapabilityProvider;
-import com.github.manasmods.unordinary_basics.client.gui.Unordinary_BasicsInventoryScreen;
 import com.github.manasmods.unordinary_basics.client.gui.Unordinary_BasicsItemInventoryScreen;
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsItems;
-import com.github.manasmods.unordinary_basics.menu.UBInventoryMenu;
 import com.github.manasmods.unordinary_basics.menu.UBItemInventoryMenu;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -19,7 +17,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
-import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.SlotItemHandler;
 import org.jetbrains.annotations.NotNull;
@@ -27,7 +24,7 @@ import org.jetbrains.annotations.Nullable;
 
 @SuppressWarnings({"ConstantConditions"})
 public class BackpackItem extends Item implements IUBInventoryItem {
-    public static final ResourceLocation TEXTURE = new ResourceLocation(Unordinary_Basics.MOD_ID, "textures/gui/backpack_slots.png");
+    public static final ResourceLocation TEXTURE = new ResourceLocation(UnordinaryBasics.MOD_ID, "textures/gui/backpack_slots.png");
     public BackpackItem(Properties pProperties) {
         super(pProperties);
     }

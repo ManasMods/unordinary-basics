@@ -1,6 +1,5 @@
 package com.github.manasmods.unordinary_basics.recipe;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraftforge.registries.ObjectHolder;
 

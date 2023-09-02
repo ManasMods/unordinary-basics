@@ -8,7 +8,7 @@ import net.minecraftforge.registries.DeferredRegister;
 class SoundEventRegistry {
     /**
      * This Method will register all SoundEvents to Forge.
-     * It is called though the {@link Unordinary_BasicsRegistry#register(IEventBus)} Method.
+     * It is called though the {@link UBRegistry#register(IEventBus)} Method.
      */
     static void register(DeferredRegister<SoundEvent> registry) {
         registry.register("queen", () -> new UBSoundEvent("queen"));

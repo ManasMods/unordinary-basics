@@ -1,6 +1,6 @@
 package com.github.manasmods.unordinary_basics.handler.enchantments;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.enchantment.UnordinaryBasicsEnchantments;
 import com.github.manasmods.unordinary_basics.utils.BlockBreakHelper;
 import com.github.manasmods.unordinary_basics.utils.UBTags;
@@ -16,7 +16,7 @@ import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = Unordinary_Basics.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
+@Mod.EventBusSubscriber(modid = UnordinaryBasics.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class TrimmerHandler {
 
     //If this isn't working, try rerunning data, as the tags may not be present

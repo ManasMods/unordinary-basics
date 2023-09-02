@@ -7,6 +7,7 @@
 - Changed Item Sorter use from holding shift down, to crouching
 - Gave the Item Sorter a tooltip to make it simpler to use
 - Added a vein miner enchantment to Shears and Hoes
+- Reworked the Zenith
 
 - Bug Fixes
  - Fixed a bug causing the Builders Glove to crash in the .jar file
@@ -14,14 +15,10 @@
  - Fixed a bug causing the Redstone Pouch to crash in the .jar file
  - Fixed a bug which caused a crash with the rendering of banner patterns on beds
 
-
-
 TODO:
  - Update Master Miner to only mine blocks of a same or similar hardness (to avoid cheesing mining long to mine blocks)
  - Fix Rendering of Glider in Off Hand.
- - Add Zenith Re-Work
  - Add Master Sword and Decayed Master Sword
- - Add Patchouli Pages for Juke Box Changes, and Fletching Table Changes
 
 TODO: Known Issues
  - Grass-type Stairs will often create a hole to the abyss when placed in some directions

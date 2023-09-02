@@ -1,0 +1,86 @@
+{
+  "name": "01.0 - Blocks",
+  "icon": "unordinary_basics:andesite_bricks",
+  "category": "unordinary_basics:blocks",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:storage/pack/andesite_bricks",
+
+      "type2": "patchouli:crafting",
+      "recipe2": "unordinary_basics:storage/pack/polished_andesite_bricks"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:storage/pack/diorite_bricks",
+
+      "type2": "patchouli:crafting",
+      "recipe2": "unordinary_basics:storage/pack/polished_diorite_bricks"
+    },
+
+
+
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:storage/pack/calcite_bricks",
+
+      "type2": "patchouli:crafting",
+      "recipe2": "unordinary_basics:storage/pack/dripstone_bricks"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:storage/pack/granite_bricks",
+
+      "type2": "patchouli:crafting",
+      "recipe2": "unordinary_basics:storage/pack/polished_granite_bricks"
+    },
+
+
+
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:storage/pack/tuff_bricks",
+
+      "type2": "patchouli:empty"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:polished_tuff",
+
+      "type2": "patchouli:crafting",
+      "recipe2": "unordinary_basics:storage/pack/polished_tuff_bricks"
+    },
+
+
+
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:storage/pack/soul_sandstone",
+
+      "type2": "patchouli:crafting",
+      "recipe2": "unordinary_basics:cut_soul_sandstone"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:chiseled_soul_sandstone",
+
+      "type2": "patchouli:empty"
+    },
+
+
+
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:storage/pack/sandstone_bricks",
+
+      "type2": "patchouli:crafting",
+      "recipe2": "unordinary_basics:storage/pack/red_sandstone_bricks"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "unordinary_basics:storage/pack/soul_sandstone_bricks",
+
+      "type2": "patchouli:empty"
+    }
+  ]
+}

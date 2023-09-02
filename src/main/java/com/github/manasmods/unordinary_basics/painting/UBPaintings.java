@@ -1,7 +1,6 @@
 package com.github.manasmods.unordinary_basics.painting;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
-import net.minecraft.world.entity.decoration.Painting;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import net.minecraft.world.entity.decoration.PaintingVariant;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -10,7 +9,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class UBPaintings {
     public static final DeferredRegister<PaintingVariant> PAINTING_MOVTIES =
-            DeferredRegister.create(ForgeRegistries.PAINTING_VARIANTS, Unordinary_Basics.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.PAINTING_VARIANTS, UnordinaryBasics.MOD_ID);
 
     /** **/
 

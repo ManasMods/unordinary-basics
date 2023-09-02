@@ -1,0 +1,24 @@
+{
+  "name": "09.0 - Stairs and Slabs",
+  "icon": "minecraft:oak_stairs",
+  "category": "unordinary_basics:qol_changes",
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:oak_stairs",
+      "title": "Stair Recipe Change",
+      "text": "The stair recipe has been updated to include more per block. If you count each quarter of a block, you will end up with 8 stairs instead of the vanilla 4! Another change we have made is stairs and slabs into blocks!",
+
+      "type2": "patchouli:empty"
+    },
+    {
+      "type": "patchouli:crafting",
+      "title": " ",
+      "recipe": "minecraft:stairs_to_block/oak_planks",
+
+      "type2": "patchouli:crafting",
+      "title2": " ",
+      "recipe2": "minecraft:slabs_to_block/oak_planks"
+    }
+  ]
+}

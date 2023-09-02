@@ -1,8 +1,6 @@
 package com.github.manasmods.unordinary_basics.block.entity;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ObjectHolder;
 
 public class Unordinary_BasicsBlockEntities {

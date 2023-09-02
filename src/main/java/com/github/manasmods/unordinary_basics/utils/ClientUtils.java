@@ -1,6 +1,6 @@
 package com.github.manasmods.unordinary_basics.utils;
 
-import com.github.manasmods.unordinary_basics.Unordinary_Basics;
+import com.github.manasmods.unordinary_basics.UnordinaryBasics;
 import com.github.manasmods.unordinary_basics.block.IColorable;
 import com.github.manasmods.unordinary_basics.block.IPatternable;
 import com.mojang.blaze3d.vertex.PoseStack;
@@ -27,7 +27,7 @@ public class ClientUtils {
     }
 
     public static Material getTexture(BannerPattern pattern) {
-        return new Material(Sheets.BANNER_SHEET, new ResourceLocation(Unordinary_Basics.MOD_ID, "entity/banner/" + pattern.getHashname()));
+        return new Material(Sheets.BANNER_SHEET, new ResourceLocation(UnordinaryBasics.MOD_ID, "entity/banner/" + pattern.getHashname()));
     }
 
     public static Material getBedTexture() {
