@@ -11,6 +11,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
+import net.minecraftforge.common.ToolActions;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.level.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -31,6 +32,25 @@ public class CropTenderHandler {
             BlockBreakHelper.floodMineOnBlock(128 ,pos,player.getLevel(),player.getOnPos().above(),tool,player,event.getLevel().getBlockState(pos).getBlock(),true);
             tool.getOrCreateTag().putBoolean("cropTenderOn",true);
         }
+    }
+
+    @SubscribeEvent
+    public static void onBlockTill(BlockEvent.BlockToolModificationEvent event) {
+        if (!event.getToolAction().equals(ToolActions.HOE_TILL)) return;
+        Player player = event.getPlayer();
+        if (player == null) return;
+
+        ItemStack tool = player.getItemInHand(InteractionHand.MAIN_HAND);
+        BlockPos pos = event.getPos();
+        int enchantLevel = EnchantmentHelper.getItemEnchantmentLevel(UnordinaryBasicsEnchantments.CROP_TENDER, tool);
+
+        boolean shouldTill = enchantLevel > 0 && tool.getTag().getBoolean("cropTenderOn")
+                && event.getLevel().getBlockState(pos).is(UBTags.Blocks.CROP_TENDER_TILL_VALID);
+        if (!shouldTill) return;
+
+        tool.getOrCreateTag().putBoolean("cropTenderOn",false);
+        BlockBreakHelper.floodTillOnBlock(400 , pos, event.getContext(), event.getLevel().getBlockState(pos).getBlock());
+        tool.getOrCreateTag().putBoolean("cropTenderOn",true);
     }
 
     @SubscribeEvent

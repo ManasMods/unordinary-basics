@@ -42,6 +42,12 @@ public class Unordinary_BasicsBlockTagProvider extends BlockTagProvider {
                 .add(Blocks.WET_SPONGE)
                 .addTag(BlockTags.CROPS)
                 .addTag(BlockTags.LEAVES);
+        tag(UBTags.Blocks.CROP_TENDER_TILL_VALID)
+                .add(Blocks.DIRT)
+                .add(Blocks.DIRT_PATH)
+                .add(Blocks.GRASS_BLOCK)
+                .add(Blocks.COARSE_DIRT)
+                .add(Blocks.ROOTED_DIRT);
         tag(UBTags.Blocks.TRIMMER_VALID)
                 .add(Blocks.COBWEB)
                 .add(Blocks.DEAD_BUSH)

@@ -6,7 +6,6 @@
     "minecraft:nether_wart_block",
     "minecraft:sculk",
     "minecraft:sculk_catalyst",
-    "minecraft:sculk_catalyst",
     "minecraft:sculk_sensor",
     "minecraft:sculk_shrieker",
     "minecraft:sculk_vein",
@@ -16,6 +15,11 @@
     "minecraft:warped_wart_block",
     "minecraft:wet_sponge",
     "#minecraft:crops",
-    "#minecraft:leaves"
+    "#minecraft:leaves",
+    "minecraft:dirt",
+    "minecraft:dirt_path",
+    "minecraft:grass_block",
+    "minecraft:coarse_dirt",
+    "minecraft:rooted_dirt"
   ]
 }
