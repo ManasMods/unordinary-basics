@@ -6,7 +6,7 @@
     "title": {
       "translate": "advancements.unordinary_basics.a_very_ordinary_advancement.title"
     },
-    "description": " ",
+    "description": "advancements.unordinary_basics.a_very_ordinary_advancement.description",
     "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,

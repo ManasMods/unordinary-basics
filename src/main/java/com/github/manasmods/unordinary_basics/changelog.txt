@@ -8,6 +8,8 @@
 - Gave the Item Sorter a tooltip to make it simpler to use
 - Added a vein miner enchantment to Shears and Hoes
 - Reworked the Zenith
+- Added the Master Sword
+ - Added the Master Sword Shrine
 
 - Bug Fixes
  - Fixed a bug causing the Builders Glove to crash in the .jar file
@@ -18,7 +20,7 @@
 TODO:
  - Update Master Miner to only mine blocks of a same or similar hardness (to avoid cheesing mining long to mine blocks)
  - Fix Rendering of Glider in Off Hand.
- - Add Master Sword and Decayed Master Sword
+ - Fix Crop Tender duping dirt when mining it with hoe.
 
 TODO: Known Issues
  - Grass-type Stairs will often create a hole to the abyss when placed in some directions
