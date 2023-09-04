@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:netherite_ingot"
+    }
+  ],
+  "result": {
+    "item": "unordinary_basics:netherite_coin"
+  }
+}

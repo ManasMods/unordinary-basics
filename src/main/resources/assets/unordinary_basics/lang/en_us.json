@@ -38,6 +38,11 @@
   "item.unordinary_basics.barrel_backpack": "Barrel Backpack",
   "item.unordinary_basics.chest_backpack": "Chest Backpack",
   "item.unordinary_basics.equine_tracker": "Equine Tracker",
+  "item.unordinary_basics.copper_coin": "Copper Coin",
+  "item.unordinary_basics.iron_coin": "Iron Coin",
+  "item.unordinary_basics.gold_coin": "Gold Coin",
+  "item.unordinary_basics.diamond_coin": "Diamond Coin",
+  "item.unordinary_basics.netherite_coin": "Netherite Coin",
 
   "item.unordinary_basics.decayed_master_sword": "Decayed Master Sword",
   "item.unordinary_basics.master_sword": "Master Sword",

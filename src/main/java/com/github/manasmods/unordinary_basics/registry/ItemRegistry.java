@@ -2,7 +2,20 @@ package com.github.manasmods.unordinary_basics.registry;
 
 
 import com.github.manasmods.unordinary_basics.item.Unordinary_BasicsCreativeTab;
-import com.github.manasmods.unordinary_basics.item.custom.*;
+import com.github.manasmods.unordinary_basics.item.custom.BackpackItem;
+import com.github.manasmods.unordinary_basics.item.custom.BuildersGloveItem;
+import com.github.manasmods.unordinary_basics.item.custom.DecayedMasterSwordItem;
+import com.github.manasmods.unordinary_basics.item.custom.EffectCurativeItem;
+import com.github.manasmods.unordinary_basics.item.custom.GliderItem;
+import com.github.manasmods.unordinary_basics.item.custom.LeaperItem;
+import com.github.manasmods.unordinary_basics.item.custom.MasterSwordItem;
+import com.github.manasmods.unordinary_basics.item.custom.PotionBeltItem;
+import com.github.manasmods.unordinary_basics.item.custom.QuiverItem;
+import com.github.manasmods.unordinary_basics.item.custom.RabbitBootsItem;
+import com.github.manasmods.unordinary_basics.item.custom.RedstonePouchItem;
+import com.github.manasmods.unordinary_basics.item.custom.SlimeCompassItem;
+import com.github.manasmods.unordinary_basics.item.custom.TechnobladeCrownItem;
+import com.github.manasmods.unordinary_basics.item.custom.ZenithItem;
 import com.github.manasmods.unordinary_basics.item.templates.MusicDiscItem;
 import com.github.manasmods.unordinary_basics.item.templates.TooltipItem;
 import com.github.manasmods.unordinary_basics.sound.UBSounds;
@@ -48,6 +61,12 @@ class ItemRegistry {
         registry.register("redstone_pouch", () -> new RedstonePouchItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
         registry.register("barrel_backpack", () -> new BackpackItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
         registry.register("chest_backpack", () -> new BackpackItem(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(1)));
+
+        registry.register("copper_coin", () -> new Item(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(100)));
+        registry.register("iron_coin", () -> new Item(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(100)));
+        registry.register("gold_coin", () -> new Item(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(100)));
+        registry.register("diamond_coin", () -> new Item(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(100)));
+        registry.register("netherite_coin", () -> new Item(new Item.Properties().tab(Unordinary_BasicsCreativeTab.ITEMS).stacksTo(100)));
 
         registry.register("music_disc_queen", () -> new MusicDiscItem((() -> UBSounds.QUEEN),2700));
 

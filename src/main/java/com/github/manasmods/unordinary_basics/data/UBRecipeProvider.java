@@ -553,29 +553,11 @@ public class UBRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_copper_ingot", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.IRON_INGOT).build()))
                 .save(consumer);
-        ShapedRecipeBuilder.shaped(Unordinary_BasicsItems.IRON_COIN)
-                .define('C', Unordinary_BasicsItems.COPPER_COIN)
-                .define('I', Items.IRON_INGOT)
-                .pattern("III")
-                .pattern("ICI")
-                .pattern("III")
-                .unlockedBy("has_copper_coin", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Unordinary_BasicsItems.COPPER_COIN).build()))
-                .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(Unordinary_BasicsItems.GOLD_COIN)
                 .requires(Items.GOLD_INGOT)
                 .unlockedBy("has_gold_ingot", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.GOLD_INGOT).build()))
-                .save(consumer);
-        ShapedRecipeBuilder.shaped(Unordinary_BasicsItems.GOLD_COIN)
-                .define('C', Unordinary_BasicsItems.IRON_COIN)
-                .define('I', Items.IRON_INGOT)
-                .pattern("III")
-                .pattern("ICI")
-                .pattern("III")
-                .unlockedBy("has_iron_coin", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Unordinary_BasicsItems.IRON_COIN).build()))
                 .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(Unordinary_BasicsItems.DIAMOND_COIN)
@@ -583,29 +565,11 @@ public class UBRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_diamond", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.DIAMOND).build()))
                 .save(consumer);
-        ShapedRecipeBuilder.shaped(Unordinary_BasicsItems.DIAMOND_COIN)
-                .define('C', Unordinary_BasicsItems.GOLD_COIN)
-                .define('I', Items.DIAMOND)
-                .pattern("III")
-                .pattern("ICI")
-                .pattern("III")
-                .unlockedBy("has_gold_coin", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Unordinary_BasicsItems.GOLD_COIN).build()))
-                .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(Unordinary_BasicsItems.NETHERITE_COIN)
                 .requires(Items.NETHERITE_INGOT)
                 .unlockedBy("has_netherite_ingot", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(Items.NETHERITE_INGOT).build()))
-                .save(consumer);
-        ShapedRecipeBuilder.shaped(Unordinary_BasicsItems.NETHERITE_COIN)
-                .define('C', Unordinary_BasicsItems.DIAMOND_COIN)
-                .define('I', Items.NETHERITE_INGOT)
-                .pattern("III")
-                .pattern("ICI")
-                .pattern("III")
-                .unlockedBy("has_diamond_coin", inventoryTrigger(ItemPredicate.Builder.item()
-                        .of(Unordinary_BasicsItems.DIAMOND_COIN).build()))
                 .save(consumer);
 
         nineStorage(consumer, Items.ANDESITE, Unordinary_BasicsBlocks.ANDESITE_BRICKS);
