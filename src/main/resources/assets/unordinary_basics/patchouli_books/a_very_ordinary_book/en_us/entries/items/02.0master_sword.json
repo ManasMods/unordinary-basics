@@ -11,7 +11,7 @@
     {
       "type": "patchouli:spotlight",
       "title": " ",
-      "item": "minecraft:map",
+      "item": "minecraft:filled_map",
       "text": "You can find the Master Sword at Master Sword Shrines, and to pull the sword, you must have slew the Ender Dragon."
     }
   ]

@@ -10,6 +10,7 @@
 - Reworked the Zenith
 - Added the Master Sword
  - Added the Master Sword Shrine
+- Added Coins
 
 - Bug Fixes
  - Fixed a bug causing the Builders Glove to crash in the .jar file

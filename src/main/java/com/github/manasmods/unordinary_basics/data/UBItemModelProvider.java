@@ -39,6 +39,12 @@ public class UBItemModelProvider extends ItemModelProvider {
         singleTexture(Unordinary_BasicsItems.UNKNOWN_SWORD_HANDLE_FRAGMENT);
         singleTexture(Unordinary_BasicsItems.UNKNOWN_HILT_FRAGMENT);
 
+        singleTexture(Unordinary_BasicsItems.COPPER_COIN);
+        singleTexture(Unordinary_BasicsItems.IRON_COIN);
+        singleTexture(Unordinary_BasicsItems.GOLD_COIN);
+        singleTexture(Unordinary_BasicsItems.DIAMOND_COIN);
+        singleTexture(Unordinary_BasicsItems.NETHERITE_COIN);
+
         singleTexture(Unordinary_BasicsItems.MUSIC_DISC_QUEEN);
 
         singleTexture(Item.byBlock(Unordinary_BasicsBlocks.ITEM_SORTER));

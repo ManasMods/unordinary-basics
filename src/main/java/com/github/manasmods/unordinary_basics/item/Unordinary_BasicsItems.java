@@ -56,4 +56,15 @@ public class Unordinary_BasicsItems {
     public static final Item BARREL_BACKPACK = null;
     @ObjectHolder(registryName = "item", value = "unordinary_basics:chest_backpack")
     public static final Item CHEST_BACKPACK = null;
+
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:copper_coin")
+    public static final Item COPPER_COIN = null;
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:iron_coin")
+    public static final Item IRON_COIN = null;
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:gold_coin")
+    public static final Item GOLD_COIN = null;
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:diamond_coin")
+    public static final Item DIAMOND_COIN = null;
+    @ObjectHolder(registryName = "item", value = "unordinary_basics:netherite_coin")
+    public static final Item NETHERITE_COIN = null;
 }

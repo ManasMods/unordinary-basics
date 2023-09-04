@@ -1,0 +1,25 @@
+{
+  "name": "14.0 - Coins",
+  "icon": "unordinary_basics:gold_coin",
+  "category": "unordinary_basics:items",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "Coins",
+      "text": "The coins added in Unordinary Basics serve no use, and are meant to be used by mod and modpack makers, along with people running economy servers with the mod. We simply add a recipe so they are attainable, but we recommend you change it.",
+
+      "type2": "patchouli:empty"
+    },
+    {
+      "type": "unordinary_basics:multi_spotlight",
+      "items": [
+        "unordinary_basics:copper_coin",
+        "unordinary_basics:iron_coin",
+        "unordinary_basics:gold_coin",
+        "unordinary_basics:diamond_coin",
+        "unordinary_basics:netherite_coin"
+      ]
+    }
+
+  ]
+}
