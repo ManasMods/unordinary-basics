@@ -15,6 +15,11 @@
     "minecraft:warped_wart_block",
     "minecraft:wet_sponge",
     "#minecraft:crops",
-    "#minecraft:leaves"
+    "#minecraft:leaves",
+    "minecraft:dirt",
+    "minecraft:dirt_path",
+    "minecraft:grass_block",
+    "minecraft:coarse_dirt",
+    "minecraft:rooted_dirt"
   ]
 }
