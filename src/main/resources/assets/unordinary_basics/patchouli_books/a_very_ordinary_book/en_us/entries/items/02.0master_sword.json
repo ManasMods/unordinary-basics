@@ -6,13 +6,30 @@
     {
       "type": "patchouli:spotlight",
       "item": "unordinary_basics:master_sword",
-      "text": "The Master Sword comes from the world of Breath of the Wild, and Tears of the Kingdom. With it being heavily inspired from how it works in Breath of the Wild though with the Decayed Master Sword from Tears of the Kingdom."
+      "text": "You can find the Master Sword at Master Sword Shrines which you can find via Locator Maps, and to pull the sword, you must have slew the Ender Dragon."
     },
     {
-      "type": "patchouli:spotlight",
-      "title": " ",
-      "item": "minecraft:filled_map",
-      "text": "You can find the Master Sword at Master Sword Shrines, and to pull the sword, you must have slew the Ender Dragon."
+      "type": "patchouli:image",
+      "images": [
+        "unordinary_basics:patchouli_books/images/master_sword_shrine.png"
+      ]
+    },
+
+
+
+    {
+      "type": "patchouli:text",
+      "title": "More Info",
+      "text": "The Master Sword comes from the world of Breath of the Wild, and Tears of the Kingdom. With it being heavily inspired from how it works in Breath of the Wild though with the Decayed Master Sword from Tears of the Kingdom. Right Click when full health to fire a Sword Beam!"
+    },
+    {
+      "type": "unordinary_basics:multi_spotlight",
+      "items": [
+        "unordinary_basics:master_sword",
+        "unordinary_basics:decayed_master_sword"
+      ],
+      "title": " "
     }
+
   ]
 }

@@ -18,6 +18,15 @@
     "requirement": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:dirt",
+              "minecraft:grass_block",
+              "minecraft:cobblestone"
+            ]
+          }
+        ]
       }
     }
   }
