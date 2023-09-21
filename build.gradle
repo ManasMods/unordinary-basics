@@ -157,8 +157,8 @@ repositories {
         minecraft "net.minecraftforge:forge:${minecraftVersion}-${forgeVersion}"
 
         //Lombok
-        compileOnly 'org.projectlombok:lombok:1.18.28'
-        annotationProcessor 'org.projectlombok:lombok:1.18.28'
+        compileOnly 'org.projectlombok:lombok:1.18.30'
+        annotationProcessor 'org.projectlombok:lombok:1.18.30'
 
         implementation("com.github.LlamaLad7:MixinExtras:0.1.1")
         //annotationProcessor("com.github.LlamaLad7:MixinExtras:0.1.1")
