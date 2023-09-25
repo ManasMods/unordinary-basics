@@ -5,6 +5,7 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/b659e6afad474179a81579681ff34ccf)](https://www.codacy.com/gh/ManasMods/unordinary_basics/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ManasMods/reincarnated_mod&amp;utm_campaign=Badge_Grade)
 [![DownloadCount](https://cf.way2muchnoise.eu/full_620821_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/unordinary-basics)
 [![Discord](https://img.shields.io/discord/982644537031811102.svg?color=7289DA&label=discord&logo=discord&logoColor=FFFFFF)](https://discord.gg/frqHUnJeVg)
+[![Crowdin](https://badges.crowdin.net/unordinary-basics/localized.svg)](https://crowdin.com/project/unordinary-basics)
 
 **About**
 
@@ -30,3 +31,11 @@ Asset Makers -
 
 Testers - 
 * Fafa
+
+**Translators -**
+
+* DataPackGen - Spanish [es_es]
+* DataPackGen - Spanish (Mexican) [es_mx]
+* Nexoner - Turkish [tr_tr]
+* Herrane - Simplified Chinese [zh_cn]
+* aledawizard - French [fr_fr]
