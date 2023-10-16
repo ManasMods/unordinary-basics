@@ -160,7 +160,7 @@ repositories {
         compileOnly 'org.projectlombok:lombok:1.18.28'
         annotationProcessor 'org.projectlombok:lombok:1.18.28'
 
-        implementation("com.github.LlamaLad7:MixinExtras:0.1.1")
+        implementation("com.github.LlamaLad7:MixinExtras:0.2.0")
         //annotationProcessor("com.github.LlamaLad7:MixinExtras:0.1.1")
 
         //ManasCore
